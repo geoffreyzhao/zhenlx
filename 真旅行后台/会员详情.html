@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="renderer" content="webkit|ie-comp|ie-stand">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 会员详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
-	<link rel="stylesheet" type="text/css" href="../css/common.css">
-	<link rel="stylesheet" type="text/css" href="../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/maintain/memberManagement.css">
 
-	<script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../js/maintain/common.js"></script>
+    <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/maintain/common.js"></script>
 
-	<!--[if lte IE 9]>
+    <!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
-	<script type="text/javascript" src="../js/base/respond.js"></script>
+    <script type="text/javascript" src="../js/base/respond.js"></script>
     <![endif]-->
-
-	<title>公共部分</title>
+        
 </head>
 <body>
-	<div class="wrapper">
+    <div class="wrapper">
         <header class="main-header">
             <div class="stairMenuContent">
                 <div class="wrap clearfix">
@@ -171,11 +172,116 @@
             </div>
             <div class="headSecondLevel"></div>
         </header>
-
-		<div class="main-container">
-			这里是正文内容哟！！！！！！！！！
-		</div>
-		<footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
-	</div>	
+        <div class="main-container clearfix">
+            <aside class="leftMenu">  <!--leftMenu 开始-->
+                <ul class="menuChange">
+                    <li class="firstLi">
+                        <a href="javascript:void(0);"><i class="commonIcon returnIcon"></i>返回列表</a>
+                    </li>
+                    <li class="current">
+                        <a href="javascript:void(0);">基本详情</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">会员订单</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">常旅客信息</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                </ul>
+            </aside> <!--leftMenu 结束-->
+            <section class="rightModelContent">
+                <div class="detailsModel">
+                    <h3 class="titleFonts">用户基本详情</h3>
+                    <div class="headPortrait">
+                        <img src="../images/headPortrait.png" class="headPortraitImg">
+                        <div>头 像</div>
+                    </div>
+                    <table class="detailsTab">
+                        <colgroup>
+                            <col width="12%">
+                            <col width="88%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>会员 ID：</td>
+                            <td>YY1258</td>
+                        </tr>
+                        <tr>
+                            <td><span class="adjaceney">昵称</span>：</td>
+                            <td>都教授</td>
+                        </tr>
+                        <tr>
+                            <td><span class="adjaceney">性别</span>：</td>
+                            <td>男</td>
+                        </tr>
+                        <tr>
+                            <td>手机号：</td>
+                            <td class="pinkFonts">13917765432</td>
+                        </tr>
+                        <tr>
+                            <td><span class="adjaceney">邮箱</span>：</td>
+                            <td class="pinkFonts">dmj@hotmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>真实姓名：</td>
+                            <td>都敏俊</td>
+                        </tr>
+                        <tr>
+                            <td>通信地址：</td>
+                            <td>上海市   黄浦区   樱花大街889号</td>
+                        </tr>
+                        <tr>
+                            <td>注册时间：</td>
+                            <td>2015-03-12  12:32:00</td>
+                        </tr>
+                        <tr>
+                            <td>最近登录时间：</td>
+                            <td>2015-03-12  12:32:00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="lightBlueLine"></div>
+                <div class="detailsModel">
+                    <h3 class="titleFonts">其他</h3>
+                    <table class="detailsTab">
+                        <colgroup>
+                            <col width="11%">
+                            <col width="11%">
+                            <col width="78%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td><span class="adjaceney">积 分</span>：</td>
+                            <td>1500</td>
+                            <td>
+                                <a href="javascript:void(0);" class="lookLink">查看”积分”使用日志</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>代金券总额：</td>
+                            <td>2000</td>
+                            <td>
+                                <a href="javascript:void(0);" class="lookLink">查看”代金券”使用日志</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>消费总额：</td>
+                            <td>￥3000.00</td>
+                            <td>
+                                <a href="javascript:void(0);" class="lookLink">查看”消费”使用日志</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+    
 </body>
 </html>

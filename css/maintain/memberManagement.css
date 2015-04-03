@@ -1,0 +1,114 @@
+/*  真旅行后台管理  会员管理样式  */
+@charset "utf-8";
+
+/*  会员详情页 start  */
+.leftMenu{
+    float: left;
+    background-color: #fff;
+    margin: 0 10px;
+    width: 20%;
+    border: 1px solid #e3ecf0;
+}
+.leftMenu .menuChange li{
+    text-align: center;
+    position: relative;
+}
+.menuChange li a{
+    color: #666;
+    display: block;
+    padding: 12px 10px;
+}
+.menuChange li a:hover{
+    color: #59aad7;
+}
+.menuChange li.current a{
+    color: #fff;
+    background-color: #59aad7;
+}
+.menuChange li.firstLi{
+    border-bottom: 1px solid #e3ecf0;
+}
+.menuChange li.firstLi a{
+    color: #59aad7;
+}
+.menuChange li.firstLi a:hover{
+    color: #59aad7;
+}
+.menuChange li.firstLi.current a{
+    background-color: #fff;
+    color: #59aad7;
+}
+.commonIcon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.firstLi .returnIcon{
+    width: 20px;
+    height: 14px;
+    background: url("../../images/commonIcon.png") no-repeat 0 0;
+}
+.menuChange li.current .rightArrow{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 11px;
+    height: 18px;
+    background: url("../../images/commonIcon.png") no-repeat 0 -20px;
+    position: absolute;
+    right: 5px;
+    top: 30%;
+}
+.rightModelContent{
+    float: left;
+    background-color: #fff;
+    border: 1px solid #e3ecf0;
+    width: 77.5%;
+}
+.rightModelContent .titleFonts{
+    font-size: 18px;
+    color: #434343;
+    padding: 13px 40px 0;
+    margin: 0;
+}
+.detailsTab{
+    width: 100%;
+    margin: 10px 40px;
+    color: #666666;
+}
+.detailsTab td{
+    padding: 8px 2px;
+}
+.detailsTab .adjaceney{
+    letter-spacing: 10px;
+}
+.detailsTab .pinkFonts{
+    color: #f78368;
+}
+.detailsTab .lookLink{
+    color: #9c9c9c;
+}
+.detailsTab .lookLink:hover{
+    color: #59aad7;
+}
+.lightBlueLine{
+    margin: 15px;
+    height: 1px;
+    border-bottom: 3px solid #d8ecf6;
+}
+.detailsModel{
+    position: relative;
+}
+.detailsModel .headPortrait{
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    text-align: center;
+}
+.headPortrait .headPortraitImg{
+    display: inline-block;
+    width: 119px;
+    height: 119px;
+    margin-bottom: 10px;
+}
+/*  会员详情页 end  */

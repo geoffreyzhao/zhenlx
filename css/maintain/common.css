@@ -19,3 +19,206 @@ footer {
 	font-size: 12px;
 	color: #808080;
 }
+
+
+/*  页面头 start */
+.navLeft{
+    width: 80%;
+    float: left;
+    margin-top: 12px;
+}
+.main-header{
+    position: relative;
+}
+.main-header .stairMenuContent{
+    background:#1e465f;
+}
+.wrap .logo{
+    float:left;
+    display:block;
+    width:119px;
+    height:32px;
+    background:url(../../images/backstageLogo.png) no-repeat;
+    margin: 0 30px 0 20px;
+}
+.wrap .stairMenu{
+    float: left;
+}
+.wrap .stairMenu li{
+    float: left;
+    min-width: 90px;
+    text-align: center;
+    margin: 0 5px;
+}
+.stairMenu li a{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+.stairMenu li a:hover{
+    background-color: #295673;
+}
+.stairMenu li.currentStairMenu a{
+    color: #fff;
+    background-color: #59aad7;
+}
+.main-header .headSecondLevel{
+    background-color: #59aad7;
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    bottom: -38px;
+}
+.headSecondLevel .secondLevelList{
+    width: 1100px;
+    margin: 0 auto;
+}
+.second-level-nav {
+    background-color: #59aad7;
+    position: absolute;
+    left: 0;
+    z-index: 2;    
+    bottom: -38px;
+}
+.second-level-nav .secondLevelList{
+    min-width: 400px;    
+    margin: 0 auto;
+}
+.second-level-nav .secondLevelList a {
+    color: #226388 !important;
+}
+.second-level-nav .secondLevelList a:hover {
+    background: none;
+}
+.second-level-nav .secondLevelList li {
+    padding: 7px 0;
+}
+.secondLevelList li{
+    float: left;
+    font-size: 16px;
+    margin-right: 30px;
+    min-width: 90px;
+    text-align: center;
+}
+.secondLevelList li:first-child{
+    margin-left: 250px;
+}
+.secondLevelList li a{
+    display: block;
+    color: #226388;
+    padding: 5px;
+}
+.secondLevelList li a:hover{
+    color: #fff !important;
+}
+.secondLevelList li.currentSecondLevelMenu a{
+    color: #fff !important;
+}
+.wrap .headRightOperate{
+    float: right;
+    margin: 20px 10px 0 5px;
+    font-size: 14px;
+}
+.headRightOperate .userContent{
+    margin-right: 10px;
+    color: #fff;
+    font-weight: normal;
+}
+.headRightOperate .exitFonts:hover{
+    color: #b2c9d8;
+    text-decoration: none;
+}
+.headRightOperate .exitFonts{
+    color: #7796aa;
+}
+.headRightOperate .emailContent{
+    display: inline-block;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 5px 8px;
+    margin-right: 20px;
+    min-width: 60px;
+    text-align: center;
+    line-height: 1;
+    background-color: #15374c;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+.emailContent .emailIcon{
+    display: inline-block;
+    width: 19px;
+    height: 12px;
+    background: url("../../images/emailIcon.png") no-repeat;
+    vertical-align: middle;
+}
+.emailContent .emailFonts{
+    color: #939393;
+}
+.main-container{
+    margin-top: 50px;
+}
+
+/* 媒体查询导航条 start */
+@media screen and (max-width: 800px),
+screen and (min-width:801px) and (max-width:1170px){
+    .wrap .logo{
+        margin: -5px 10px 0;
+    }
+    .wrap .stairMenu{
+        margin-bottom: -2px;
+    }
+    .wrap .stairMenu li{
+        min-width: 60px;
+    }
+    .stairMenu li a{
+        padding: 5px;;
+    }
+    .secondLevelList li:first-child{
+        margin-left: 215px;
+    }
+    .main-header .headSecondLevel,.second-level-nav{
+        bottom: 0;
+    }
+    .main-container{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 800px),
+screen and (min-width:801px) and (max-width:1020px){
+    .navLeft {
+        float: none;
+        width: 100%;
+        height: 80px;
+        margin-top: 40px;
+        white-space: nowrap;
+    }
+    .wrap .headRightOperate{
+        float: none;
+        margin: 0;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+}
+
+@media screen and (min-width:1021px) and (max-width:1170px){
+    .navLeft{
+        float: none;
+        width: 100%;
+        height: 80px;
+        margin-top: 15px;
+        white-space: nowrap;
+    }
+    .wrap .headRightOperate{
+        float: none;
+        margin: 0;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+    }
+}
+/* 媒体查询导航条 end */
+/*  页面头 end  */
