@@ -145,6 +145,7 @@ footer {
     border-radius: 20px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
+    cursor: pointer;
 }
 .emailContent .emailIcon{
     display: inline-block;

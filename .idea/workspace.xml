@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3a7145e-7653-42e3-82f1-e14434fc647e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/maintain/memberManagement.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/真旅行后台/base.html" afterPath="$PROJECT_DIR$/真旅行后台/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/maintain/common.css" afterPath="$PROJECT_DIR$/css/maintain/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/maintain/common.js" afterPath="$PROJECT_DIR$/js/maintain/common.js" />
     </list>
     <ignored path="B2C.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="会员详情.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="会员详情.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/真旅行后台/会员详情.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="39" selection-end="39" vertical-scroll-proportion="0.05882353" vertical-offset="0" max-vertical-offset="7592">
+            <state line="2" column="6" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.9285714" vertical-offset="0" max-vertical-offset="7592">
               <folding />
             </state>
           </provider>
@@ -46,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="common.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/maintain/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="189" column="25" selection-start="3611" selection-end="3611" vertical-scroll-proportion="-29.32" vertical-offset="4181" max-vertical-offset="5954">
+            <state line="146" column="32" selection-start="2744" selection-end="2744" vertical-scroll-proportion="0.40327868" vertical-offset="3427" max-vertical-offset="5980">
               <folding />
             </state>
           </provider>
@@ -77,11 +74,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/css/maintain/common.css" />
         <option value="$PROJECT_DIR$/js/maintain/common.js" />
         <option value="$PROJECT_DIR$/真旅行后台/会员详情.html" />
         <option value="$PROJECT_DIR$/css/maintain/memberManagement.css" />
         <option value="$PROJECT_DIR$/真旅行后台/base.html" />
+        <option value="$PROJECT_DIR$/css/maintain/common.css" />
       </list>
     </option>
   </component>
@@ -328,16 +325,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/maintain/common.css">
+    <entry file="file://$PROJECT_DIR$/真旅行后台/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="25" selection-start="3611" selection-end="3611" vertical-scroll-proportion="-29.32" vertical-offset="4181" max-vertical-offset="5954">
+        <state line="123" column="33" selection-start="6676" selection-end="6676" vertical-scroll-proportion="-14.225806" vertical-offset="2757" max-vertical-offset="4836">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/真旅行后台/base.html">
+    <entry file="file://$PROJECT_DIR$/真旅行后台/会员详情.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="33" selection-start="6676" selection-end="6676" vertical-scroll-proportion="-14.225806" vertical-offset="2757" max-vertical-offset="4836">
+        <state line="2" column="6" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.9285714" vertical-offset="0" max-vertical-offset="7592">
           <folding />
         </state>
       </provider>
@@ -349,9 +346,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/真旅行后台/会员详情.html">
+    <entry file="file://$PROJECT_DIR$/css/maintain/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="39" selection-end="39" vertical-scroll-proportion="0.05882353" vertical-offset="0" max-vertical-offset="7592">
+        <state line="146" column="32" selection-start="2744" selection-end="2744" vertical-scroll-proportion="0.40327868" vertical-offset="3427" max-vertical-offset="5980">
           <folding />
         </state>
       </provider>
