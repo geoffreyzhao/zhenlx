@@ -199,8 +199,7 @@ input[type="text"]:focus{
     background-color: #15374c;
     border-radius: 20px;
     -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    cursor: pointer;
+       cursor: pointer;
 }
 .emailContent .emailIcon{
     display: inline-block;
@@ -278,6 +277,7 @@ screen and (min-width:801px) and (max-width:1020px){
 }
 /* 媒体查询导航条 end */
 /*  页面头 end  */
+
 
 /*  翻页 start  */
 .pagination{
@@ -379,3 +379,53 @@ screen and (min-width:801px) and (max-width:1020px){
     background: url("../../images/commonIcon.png") no-repeat -64px -85px;
 }
 /*  翻页 end  */
+
+
+/* button S */
+.commonButton {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border:none;
+    height: 40px;
+    width:100px;
+    min-width: 100px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    cursor:pointer;
+    color:#fff;
+    font-size: 16px;
+    /*letter-spacing: 3px;*/
+}
+.red-fe6869Button {
+    background: #fe6869;
+}
+.red-fe6869Button:hover {
+    background: #f65253;
+}
+.blue-45c8dcButton {
+    background: #45c8dc;
+}
+.blue-45c8dcButton:hover {
+    background: #2ebacf;
+}
+.gray-bbbButton {
+    background: #bbb;
+}
+.gray-bbbButton:hover {
+    background: #a9a9a9;
+}
+.haveIconButton i {
+    background: url("../../images/haveIconButton.png") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.haveIconButton i.searchIcon {
+    width:20px;
+    height: 20px;
+    background-position: 0 0;
+}
+/* button E */
+
