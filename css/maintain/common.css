@@ -20,6 +20,61 @@ footer {
 	color: #808080;
 }
 
+input[type="text"]{
+    border: 1px solid #dadada;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 3px;
+}
+input[type="text"]:focus{
+    border: 1px solid #80d0ee !important;
+    outline: none;
+}
+.radio,
+.checkbox{
+    color: #666;
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.radio:first-child,
+.checkbox:first-child{
+    margin-left: 0;
+}
+.radio .radioIcon{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../../images/commonIcon.png") no-repeat -23px -42px;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+.active .radioIcon{
+    background-position: 0 -42px;
+}
+.radio .labelFonts,
+.checkbox .labelFonts{
+    font-size: 16px;
+    font-weight: normal;
+}
+.checkbox{
+    width: 18px;
+    height: 18px;
+    background: url("../../images/commonIcon.png") no-repeat -23px -62px;
+    margin: 0;
+}
+.checkbox.active{
+    background-position: 0 -62px;
+}
+.hasIcon{
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    background: url("../../images/datepicker.png") no-repeat 97% center;
+    vertical-align: middle;
+}
+
 
 /*  页面头 start */
 .navLeft{
@@ -223,3 +278,104 @@ screen and (min-width:801px) and (max-width:1020px){
 }
 /* 媒体查询导航条 end */
 /*  页面头 end  */
+
+/*  翻页 start  */
+.pagination{
+    float: right;
+    font-size: 14px;
+    text-align: right;
+    color: #808080;
+}
+.pagination .pageNum{
+    color: #464646;
+}
+.pageNum .pageNumIcon{
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    background: url("../../images/commonIcon.png") no-repeat -24px -8px;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+.pagination .pageSize{
+    color: #a6a6a6;
+    margin: 0 10px;
+}
+.pagination .pageArrow a{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 3px 7px;
+    cursor: default;
+    outline: none;
+}
+.pagination .pageArrow a.active:hover{
+    background-color: #f0f0f0;
+}
+.pagination .pageArrow a.active{
+    cursor: pointer;
+}
+.pagination .pageArrow a:focus,
+.pagination .pageTo:focus{
+    outline: none;
+}
+.pageArrow a i{
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../images/commonIcon.png") no-repeat;
+}
+.pagination .firstPage i,
+.pagination .lastPage i{
+    width: 14px;
+    height: 17px;
+}
+.pagination .firstPage i{
+    background-position: 0 -85px;
+}
+.pagination .firstPage.active i{
+    background-position: 0 -104px;
+}
+.pagination .lastPage i{
+    background-position: -18px -104px;
+}
+.pagination .lastPage.active i{
+    background-position: -18px -85px;
+}
+.pagination .prevPage i,
+.pagination .nextPage i{
+    width: 11px;
+    height: 17px;
+}
+.pagination .prevPage i{
+    background-position: -36px -85px;
+}
+.pagination .prevPage.active i{
+    background-position: -36px -104px;
+}
+.pagination .nextPage i{
+    background-position: -50px -104px;
+}
+.pagination .nextPage.active i{
+    background-position: -50px -85px;
+}
+.pagination .pageToNum{
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 3px;
+}
+.pagination .pageTo{
+    display: inline-block;
+    border: 1px solid #dadada;
+    width: 27px;
+    height: 25px;
+    vertical-align: middle;
+    text-align: center;
+}
+.pagination .pageTo i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 17px;
+    height: 12px;
+    background: url("../../images/commonIcon.png") no-repeat -64px -85px;
+}
+/*  翻页 end  */
