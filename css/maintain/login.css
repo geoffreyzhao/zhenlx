@@ -1,0 +1,165 @@
+/*  真旅行后台管理  登录页样式  */
+@charset "utf-8";
+
+.login-wrapper {
+    width:100%;
+    min-width: 800px;
+    height: 100%;
+    background-color: #1db2ec;
+    overflow: hidden;
+}
+.loginArea {
+    background: url("../../images/loginArea.jpg") no-repeat;
+    width:696px;
+    max-width:696px;
+    margin:5% auto;
+    height: 716px;
+    position:relative;
+}
+.loginBox {
+    position:absolute;
+    top:58px;
+    left:98px;
+    width:500px;    
+}
+.loginBoxRow {
+    width:100%;
+    text-align: center;
+}
+.logo-login {
+    background: url("../../images/logo-login.png") no-repeat;
+    width:95px;
+    height:96px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 97px auto 15px auto;
+}
+.fonts-title {
+    font-size: 18px;
+    color:#12a1d9; 
+    margin-bottom:36px;
+}
+.userName-field {
+    position:relative;
+    margin-bottom: 20px;
+}
+.pwd-field {
+    position:relative;
+    margin-bottom: 14px;
+}
+.authCode-field {
+    position: relative;
+    margin-bottom: 14px;
+}
+.userName-field .userIcon, .pwd-field .pwdIcon, .userName-field .delIcon {
+    background: url("../../images/loginIcon.png") no-repeat 0 0;
+    width:14px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    position:absolute;
+    left:118px;
+    top:12px;    
+}
+.pwd-field .pwdIcon {
+    background-position: 0 -21px;
+    height: 16px;
+}
+.userName-field .delIcon {
+    background-position:0 -41px;
+    width:11px;
+    height: 11px;
+    top:14px;
+    left:369px;
+}
+.errorBox-field {
+    position: relative;
+    margin-bottom: 10px;
+}
+.errorBox-field .errorBox {
+    border:1px solid #ff8080;
+    background: #fff2f2;
+    width:280px;
+    height: 38px;
+    line-height: 38px;
+    color:#444;
+    font-size: 14px;
+    padding:0 0 0 30px;
+    margin:0 auto;
+    text-align: left;
+}
+.errorBox-field .errorBox i {
+    background: url("../../images/loginIcon.png") no-repeat 0 -72px;
+    width:16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    position:absolute;
+    left:118px;
+    top:12px;
+}
+.authCode-field .authCodeImg {
+    background: url("../../images/authCode.jpg") no-repeat;
+    width:93px;
+    height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    position:absolute;
+    top:1px;
+    right: 112px;
+}
+.userName-field .userName, .pwd-field .userPwd, .authCode-field .authCode {
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border: 1px solid #76c4f7;
+    background: #e7f8fd;
+    height: 40px;
+    line-height: 40px;
+    width:280px;
+    font-size: 16px;
+    padding:0 0 0 30px;
+}
+.userName-field .userName:focus, .pwd-field .userPwd:focus, .authCode-field .authCode:focus {
+    border: 1px solid #40aee8!important;
+    background: #fff;
+    box-shadow:1px 1px 1px 1px #bde5f8;
+    -webkit-box-shadow: 1px 1px 1px 1px #bde5f8;
+    -moz-box-shadow: 1px 1px 1px 1px #bde5f8;
+}
+.authCode-field .authCode {
+    padding-left:9px;
+}
+.autoLogin {
+    text-align: left;
+    margin-bottom: 22px;
+    padding-left: 111px;
+}
+.autoLogin .checkedBox {
+    background: url("../../images/loginIcon.png") 0 -56px;
+    display: inline-block;
+    width:14px;
+    height: 14px;
+    vertical-align: middle;    
+}
+.autoLogin span {
+    font-size: 14px;
+    color:#11a5f3;
+    vertical-align: top;
+}
+.loginBtn {
+    background: #0f8aba;
+    height: 45px;
+    width:280px;
+    color:#fff;
+    font-size: 18px;
+    border: none;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+.loginBtn:hover {
+    background: #14ade9;
+}
+
+
