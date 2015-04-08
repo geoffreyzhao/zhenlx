@@ -168,7 +168,7 @@
 }
 .operationBtn a{
     font-size: 14px;
-    margin-right: 20px;
+    margin-right: 10px;
     color: #3287d6;
     display: inline-block;
     min-width: 50px;
@@ -242,5 +242,4 @@
     color: #b0b0b0;
     text-decoration: none;
 }
-
 /*  会员管理 end  */

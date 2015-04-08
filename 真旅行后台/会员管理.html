@@ -446,19 +446,41 @@
                     </table>
                     <div class="pagination">
                         <span class="countNum">共 331 条记录，</span>
-                        <span class="pageNum">每页 5 条 <i class="pageNumIcon"></i></span>
+                        <span class="pageNum">
+                            <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
+                            <ul class="paginationNum" style="display: none;">
+                                <li class="active">
+                                    <a href="javascript:void(0);">5</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">10</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">20</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">30</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">40</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">50</a>
+                                </li>
+                            </ul>
+                        </span>
                         <span class="pageSize">1/10</span>
                         <span class="pageArrow">
-                            <a href="javascript:void(0);" class="firstPage active">
+                            <a href="javascript:void(0);" class="firstPage disabled">
                                 <i></i>
                             </a>
-                            <a href="javascript:void(0);" class="prevPage active">
+                            <a href="javascript:void(0);" class="prevPage disabled">
                                 <i></i>
                             </a>
-                            <a href="javascript:void(0);" class="nextPage active">
+                            <a href="javascript:void(0);" class="nextPage">
                                 <i></i>
                             </a>
-                            <a href="javascript:void(0);" class="lastPage active">
+                            <a href="javascript:void(0);" class="lastPage">
                                 <i></i>
                             </a>
                         </span>
@@ -502,6 +524,10 @@
             } else {
                 $(this).parents("table").find(".checkbox").removeClass("active");
             }
+        });
+        
+        $(".pageNum .pageNumClick").click(function(){
+            $(this).siblings(".paginationNum").toggle();
         });
         
     });
