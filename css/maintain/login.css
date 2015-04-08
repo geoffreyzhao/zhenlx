@@ -7,6 +7,7 @@
     height: 100%;
     background-color: #1db2ec;
     overflow: hidden;
+    position:fixed;
 }
 .loginArea {
     background: url("../../images/loginArea.jpg") no-repeat;
