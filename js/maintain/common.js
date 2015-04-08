@@ -26,6 +26,18 @@ $(function() {
         });
     }
 
+    /*  默认日历初始化  */
+    $("input.datepicker.default").datepicker({
+      format: "yyyy-mm-dd",
+      language: "zh-CN",
+      autoclose: true,
+      todayHighlight: true,
+      weekStart: 0
+    }).on("show", function(){
+        $("div.datepicker table thead .prev").html("");
+        $("div.datepicker table thead .next").html("");
+    });
+
     // 翻页效果
     $(".pageNum .pageNumClick").click(function(){
         $(this).siblings(".paginationNum").toggle();

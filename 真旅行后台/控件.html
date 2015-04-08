@@ -9,9 +9,9 @@
 
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/maintain/common.css">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
 
     <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
@@ -26,19 +26,7 @@
 </head>
 <body>
 
-请选择日期： <input type="text" class="datepicker hasIcon">
-
-<script type="text/javascript">
-	$(function() {
-
-	    $(".datepicker").datepicker({
-	      format: "yyyy-mm-dd",
-		  language: "zh-CN",
-		  autoclose: true,
-		  todayHighlight: true
-	    });
-  	});
-</script>
+请选择日期： <input type="text" class="datepicker default hasIcon" readonly="readonly">
 	
 </body>
 </html>
