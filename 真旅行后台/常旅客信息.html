@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>B2C 真旅行后台 会员管理</title>
+    <title>B2C 真旅行后台 常旅客信息</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -172,30 +172,38 @@
             </div>
             <div class="headSecondLevel"></div>
         </header>
-        <div class="main-container">
-            <section class="whiteBg">
+        <div class="main-container clearfix">
+            <aside class="leftMenu">  <!--leftMenu 开始-->
+                <a href="会员管理.html" class="returnFonts">
+                    <i class="returnIcon"></i>会员列表
+                </a>
+                <ul class="menuChange">
+                    <li>
+                        <a href="javascript:void(0);">基本详情</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">会员订单</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                    <li class="current">
+                        <a href="javascript:void(0);">常旅客信息</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                </ul>
+            </aside> <!--leftMenu 结束-->
+            <section class="rightModelContent padding20">
+                <h3 class="titleFonts18">常用旅客信息</h3>
                 <ul class="searchList clearfix">
                     <li>
                         <table class="searchTab">
                             <colgroup>
-                                <col width="80">
+                                <col width="70">
                                 <col width="220">
                             </colgroup>
                             <tbody>
                             <tr>
-                                <th>真实姓名</th>
-                                <td>
-                                    <input type="text">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>手 机 号</th>
-                                <td>
-                                    <input type="text" value="13698524655">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>会员 ID</th>
+                                <th>旅客姓名</th>
                                 <td>
                                     <input type="text">
                                 </td>
@@ -211,32 +219,9 @@
                             </colgroup>
                             <tbody>
                             <tr>
-                                <th>昵  称</th>
+                                <th>手机号</th>
                                 <td>
                                     <input type="text">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>邮  箱</th>
-                                <td>
-                                    <input type="text">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>状  态</th>
-                                <td class="radioList">
-                                    <label class="radio active">
-                                        <span class="radioIcon"></span>
-                                        <span class="labelFonts">全部</span>
-                                    </label>
-                                    <label class="radio">
-                                        <span class="radioIcon"></span>
-                                        <span class="labelFonts">正常</span>
-                                    </label>
-                                    <label class="radio">
-                                        <span class="radioIcon"></span>
-                                        <span class="labelFonts">挂起</span>
-                                    </label>
                                 </td>
                             </tr>
                             </tbody>
@@ -245,200 +230,105 @@
                     <li>
                         <table class="searchTab">
                             <colgroup>
-                                <col width="80">
+                                <col width="70">
                                 <col width="280">
                                 <col width="110">
                             </colgroup>
                             <tbody>
                             <tr>
-                                <th>注册日期</th>
+                                <th>证件号</th>
                                 <td>
-                                    <input type="text" style="width: 110px;" class="datepicker hasIcon">
-                                    <em> 至 </em>
-                                    <input type="text" style="width: 110px;" class="datepicker hasIcon">
+                                    <input type="text">
                                 </td>
                                 <td>
                                     <a href="javascript:void(0);" class="lightBlueBtn"><i class="searchIcon"></i>搜 索</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>消费金额</th>
-                                <td>
-                                    <input type="text" style="width: 110px;">
-                                    <em> 至 </em>
-                                    <input type="text" style="width: 110px;">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>地  区</th>
-                                <td>
-                                    <select style="width: 110px;">
-                                        <option selected>全部</option>
-                                        <option>东南</option>
-                                    </select>
-                                    <em> 至 </em>
-                                    <select style="width: 110px;">
-                                        <option selected>全部</option>
-                                        <option>西北</option>
-                                    </select>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                     </li>
                 </ul>
+                <div class="lightGrayLine"></div>
                 <section class="clearfix">
-                    <div class="operationBtn">
-                        <a href="javascript:void(0);" class="active">挂起</a>
-                        <a href="javascript:void(0);">解挂</a>
-                    </div>
                     <table class="commonTab">
                         <colgroup>
-                            <col width="45px">
-                            <col width="9%">
-                            <col width="9%">
+                            <col width="15%">
+                            <col width="12%">
                             <col width="10%">
-                            <col width="11%">
-                            <col width="16%">
-                            <col width="11%">
-                            <col width="10%">
-                            <col width="11%">
+                            <col width="15%">
+                            <col width="18%">
+                            <col width="14%">
                             <col width="">
                         </colgroup>
                         <thead>
                         <tr>
-                            <th>
-                                <span class="checkbox allCheckbox"></span>
-                            </th>
-                            <th>会员ID</th>
-                            <th>昵称</th>
-                            <th>真实姓名</th>
+                            <th>旅客姓名</th>
+                            <th>旅客类型</th>
+                            <th>性别</th>
+                            <th>证件类型</th>
+                            <th>证件号码</th>
                             <th>手机号</th>
-                            <th>地区</th>
-                            <th>消费金额
-                                <i class="sortArrow upGray"></i>
-                                <!--箭头有以下几种情况-->
-                                <!--<i class="sortArrow downGray"></i>
-                                <i class="sortArrow allGray"></i>
-                                <i class="sortArrow allOrange"></i>-->
-                            </th>
-                            <th>心愿清单</th>
-                            <th>
-                                <select style="width: 123px;">
-                                    <option>最近登录时间</option>
-                                </select>
-                            </th>
                             <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>
-                                <span class="checkbox active"></span>
-                            </td>
-                            <td>12121</td>
                             <td>都教授</td>
-                            <td>都敏俊</td>
+                            <td>成人</td>
+                            <td>男</td>
+                            <td>身份证</td>
+                            <td>231231231235622</td>
                             <td>18622334587</td>
-                            <td>上海市</td>
-                            <td>1321.00</td>
                             <td>
-                                <a href="javascript:void(0);" class="greenFontsLink">查看</a>
-                            </td>
-                            <td>
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td>
-                                <a href="会员详情.html" class="greenFontsLink">查看</a>
+                                <a href="常旅客详情.html" class="greenFontsLink">查看</a>
                                 <a href="javascript:void(0);" class="grayFontsLink">挂起</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <span class="checkbox"></span>
-                            </td>
-                            <td>12121</td>
                             <td>颂伊</td>
-                            <td>千颂伊</td>
+                            <td>儿童</td>
+                            <td>女</td>
+                            <td>护照</td>
+                            <td>E65410323</td>
                             <td>18622334587</td>
-                            <td>广西-桂林市</td>
-                            <td>1321.00</td>
                             <td>
-                                <a href="javascript:void(0);" class="grayFontsNoLink">无</a>
-                            </td>
-                            <td>
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td>
-                                <a href="会员详情.html" class="greenFontsLink">查看</a>
+                                <a href="常旅客详情.html" class="greenFontsLink">查看</a>
                                 <a href="javascript:void(0);" class="grayFontsLink">挂起</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <span class="checkbox"></span>
-                            </td>
-                            <td>12121</td>
                             <td>都教授</td>
-                            <td>都敏俊</td>
+                            <td>成人</td>
+                            <td>男</td>
+                            <td>港澳通行证</td>
+                            <td>231231231235622</td>
                             <td>18622334587</td>
-                            <td>上海市</td>
-                            <td>1321.00</td>
                             <td>
-                                <a href="javascript:void(0);" class="greenFontsLink">查看</a>
-                            </td>
-                            <td>
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td>
-                                <a href="会员详情.html" class="greenFontsLink">查看</a>
+                                <a href="常旅客详情.html" class="greenFontsLink">查看</a>
                                 <a href="javascript:void(0);" class="grayFontsLink">挂起</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <span class="checkbox"></span>
-                            </td>
-                            <td>12121</td>
-                            <td>颂伊</td>
-                            <td>千颂伊</td>
+                            <td>Francis Everdeen</td>
+                            <td>成人</td>
+                            <td>女</td>
+                            <td>身份证</td>
+                            <td>231231231235622</td>
                             <td>18622334587</td>
-                            <td>广西-桂林市</td>
-                            <td>1321.00</td>
                             <td>
-                                <a href="javascript:void(0);" class="grayFontsNoLink">无</a>
-                            </td>
-                            <td>
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td>
-                                <a href="会员详情.html" class="greenFontsLink">查看</a>
+                                <a href="常旅客详情.html" class="greenFontsLink">查看</a>
                                 <a href="javascript:void(0);" class="grayFontsLink">挂起</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <span class="checkbox"></span>
-                            </td>
-                            <td>12121</td>
                             <td>飞天红猪</td>
-                            <td>袁静</td>
+                            <td>成人</td>
+                            <td>女</td>
+                            <td>身份证</td>
+                            <td>231231231235622</td>
                             <td>18622334587</td>
-                            <td>重庆市</td>
-                            <td>500.00</td>
                             <td>
-                                <a href="javascript:void(0);" class="grayFontsNoLink">无</a>
-                            </td>
-                            <td>
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td>
-                                <a href="会员详情.html" class="greenFontsLink">查看</a>
+                                <a href="常旅客详情.html" class="greenFontsLink">查看</a>
                                 <a href="javascript:void(0);" class="grayFontsLink">挂起</a>
                             </td>
                         </tr>
@@ -492,42 +382,11 @@
                             </a>
                         </span>
                     </div>
-                </section>
+                </section>                
             </section>
-            
         </div>
         <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
     </div>
-
-<script>
-    $(function(){
-        $(".radioList .radio").click(function(){
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-        });
-
-        $(".commonTab tbody .checkbox").click(function(){
-            $(this).toggleClass("active");
-            var $that = $(this);
-
-            if ($(".commonTab tbody .checkbox").not(".active").length > 0) {
-                $that.parents("table").find(".allCheckbox").removeClass("active");
-            } else {
-                $that.parents("table").find(".allCheckbox").addClass("active");
-            }
-        });
-        
-        $(".allCheckbox").click(function(){
-            $(this).toggleClass("active");
-            if ($(this).hasClass("active")) {
-                $(this).parents("table").find(".checkbox").addClass("active");
-            } else {
-                $(this).parents("table").find(".checkbox").removeClass("active");
-            }
-        });
-        
-    });
-</script>
 
 </body>
 </html>

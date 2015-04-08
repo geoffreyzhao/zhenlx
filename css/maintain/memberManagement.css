@@ -4,9 +4,11 @@
 /*  会员详情页 start  */
 .leftMenu{
     float: left;
-    background-color: #fff;
     margin: 0 10px;
     width: 20%;
+}
+.leftMenu .menuChange{
+    background-color: #fff;
     border: 1px solid #e3ecf0;
 }
 .leftMenu .menuChange li{
@@ -91,10 +93,10 @@
 .detailsTab .lookLink:hover{
     color: #59aad7;
 }
-.lightBlueLine{
+.lightGrayLine{
     margin: 15px;
     height: 1px;
-    border-bottom: 3px solid #d8ecf6;
+    border-bottom: 3px solid #f1f1f1;
 }
 .detailsModel{
     position: relative;
@@ -243,3 +245,37 @@
     text-decoration: none;
 }
 /*  会员管理 end  */
+
+/*  常旅客信息 start  */
+.padding20{
+    padding: 20px;
+}
+.padding20 .lightGrayLine{
+    margin: 15px 0;
+}
+.returnFonts{
+    color: #59aad7;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin: 15px 0;
+}
+.returnFonts:hover{
+    color: #59aad7;
+}
+.returnFonts .returnIcon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 21px;
+    height: 21px;
+    background: url("../../images/commonIcon.png") no-repeat -60px -17px;
+}
+.rightModelContent .titleFonts18{
+    font-size: 18px;
+    color: #434343;
+    margin: 0 0 20px;
+}
+
+
+/*  常旅客信息 end  */

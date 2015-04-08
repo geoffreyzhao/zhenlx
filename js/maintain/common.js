@@ -25,6 +25,11 @@ $(function() {
             }
         });
     }
-    
 
+    // 翻页效果
+    $(".pageNum .pageNumClick").click(function(){
+        $(this).siblings(".paginationNum").toggle();
+    });
+    
+    
 });
