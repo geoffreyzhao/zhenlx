@@ -271,11 +271,42 @@
     height: 21px;
     background: url("../../images/commonIcon.png") no-repeat -60px -17px;
 }
+.rightModelContent .titleContent{
+    margin: 0 0 15px;
+}
 .rightModelContent .titleFonts18{
     font-size: 18px;
     color: #434343;
-    margin: 0 0 20px;
+    margin: 0;
+    float: left;
 }
-
-
+.rightModelContent .returnTravelerList{
+    margin-right: 5%;
+    color: #59aad7;
+    font-size: 16px;
+    float: right;
+}
+.rightModelContent .returnTravelerList:hover{
+    color: #59aad7;
+    text-decoration: underline;
+}
+.noMargin{
+    margin: 0;
+}
+.grayTheadTab{
+    margin: 15px 0;
+}
+.grayTheadTab thead{
+    border: 1px solid #eaeaea;
+    background-color: #f5f5f5;
+}
+.grayTheadTab thead th,
+.grayTheadTab tbody td{
+    padding: 7px 10px;
+    color: #666666;
+}
+.addressFonts{
+    margin: 15px 0;
+    color: #666;
+}
 /*  常旅客信息 end  */
