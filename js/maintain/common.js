@@ -17,31 +17,34 @@ $(function() {
     });
     /*  头部导航交互  结束  */
 
-    function recoverCurrentNav() {
-        $(".second-level-nav").hide();
-        $(".first-level-nav").each(function(){
-            if ($(this).hasClass("currentStairMenu")) {
-                $(this).find(".second-level-nav").show();
-            }
-        });
-    }
+    
 
     /*  默认日历初始化  */
-    $("input.datepicker.default").datepicker({
-      format: "yyyy-mm-dd",
-      language: "zh-CN",
-      autoclose: true,
-      todayHighlight: true,
-      weekStart: 0
-    }).on("show", function(){
-        $("div.datepicker table thead .prev").html("");
-        $("div.datepicker table thead .next").html("");
-    });
+    if ($("input.datepicker.default").length > 0) {
+        $("input.datepicker.default").datepicker({
+          format: "yyyy-mm-dd",
+          language: "zh-CN",
+          autoclose: true,
+          todayHighlight: true,
+          weekStart: 0
+        }).on("show", function(){
+            $("div.datepicker table thead .prev").html("");
+            $("div.datepicker table thead .next").html("");
+        });
+    }
 
     // 翻页效果
     $(".pageNum .pageNumClick").click(function(){
         $(this).siblings(".paginationNum").toggle();
     });
     
-    
 });
+
+function recoverCurrentNav() {
+    $(".second-level-nav").hide();
+    $(".first-level-nav").each(function(){
+        if ($(this).hasClass("currentStairMenu")) {
+            $(this).find(".second-level-nav").show();
+        }
+    });
+}
