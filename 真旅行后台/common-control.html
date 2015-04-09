@@ -211,13 +211,13 @@
                 </div>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdown" style="width: 100px;">
                 <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                    <span class="activeVal">Dropdown trigger</span>
+                    <span class="activeFonts">全部</span>
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0);">全部</a></li>
+                    <li class="active"><a href="javascript:void(0);">全部</a></li>
                     <li><a href="javascript:void(0);">上海市</a></li>
                     <li><a href="javascript:void(0);">北京市</a></li>
                     <li><a href="javascript:void(0);">重庆市</a></li>
@@ -227,6 +227,20 @@
                     <li><a href="javascript:void(0);">河南</a></li>
                     <li><a href="javascript:void(0);">湖北</a></li>
                     <li><a href="javascript:void(0);">湖南</a></li>
+                </ul>
+            </div>
+<br>
+            <div class="dropdown" style="width: 200px;">
+                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                    <span class="activeFonts">全部</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="active"><a href="javascript:void(0);">全部</a></li>
+                    <li><a href="javascript:void(0);">天津市上海市天津市上海市天津市上海市</a></li>
+                    <li><a href="javascript:void(0);">北京天津市市</a></li>
+                    <li><a href="javascript:void(0);">重庆市北京市</a></li>
+                    <li><a href="javascript:void(0);">天津市</a></li>
                 </ul>
             </div>
 
@@ -245,21 +259,6 @@
     });
     });
 </script>-->
-
-<script>
-    $(function(){
-        $('.dropdown-toggle').dropdown();
-        
-        $(".dropdown-menu li a").each(function(){
-            $(this).click(function(){
-                var thisHtml = $(this).html();
-                $(".dropdownBtn .activeVal").html(thisHtml);
-            });
-        });
-        
-    });
-    
-</script>
 
 
 </body>

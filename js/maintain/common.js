@@ -38,6 +38,16 @@ $(function() {
         $(this).siblings(".paginationNum").toggle();
     });
     
+    // 下拉列表
+    $(".dropdown-menu li a").click(function(){
+        var thisHtml = $(this).html();
+        var $thisParents = $(this).parents(".dropdown-menu li");
+        $(this).parents(".dropdown-menu").siblings(".dropdownBtn").find(".activeFonts").html(thisHtml);
+        $thisParents.addClass("active");
+        $thisParents.siblings().removeClass("active");
+    });
+    
+    
 });
 
 function recoverCurrentNav() {
