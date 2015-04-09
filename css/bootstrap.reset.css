@@ -3,6 +3,17 @@
 @charset "utf-8";
 
 /* 弹窗重置 S */
+.modal.in{
+    display:-webkit-box !important;
+    display:-moz-box !important;
+    display:box !important;
+    box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+    box-pack:center;
+    -webkit-box-pack:center;
+    box-align:center;
+    -webkit-box-align:center;
+}
 .modal-content {
     border-radius: 0;
 }

@@ -623,11 +623,12 @@ div.datepicker table tr td span.active {
 /* 弹窗 E */
 
 /*  下拉菜单 start   */
+.dropdown{ display: inline-block;}
 .dropdownBtn{
     font-size: 14px;
     display: inline-block;
     width: 100%;
-    padding: 7px 5px;
+    padding: 5px;
     border: 1px solid #dadada;
     background-color: #ffffff;
     position: relative;
@@ -638,7 +639,7 @@ div.datepicker table tr td span.active {
 .dropdownBtn .caret{
     position: absolute;
     right: 7px;
-    top: 50%;
+    top: 45%;
 }
 .dropdownBtn .activeFonts{
     display: inline-block;
@@ -647,6 +648,7 @@ div.datepicker table tr td span.active {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    vertical-align: middle;
 }
 .dropdownBtn,
 .dropdownBtn .activeFonts,
@@ -665,6 +667,7 @@ div.datepicker table tr td span.active {
     max-height: 245px;
     overflow-y: auto;
 }
+.dropdown-menu>li{width: 100%;}
 .dropdown-menu>li>a{
     padding: 7px 5px;
     color: #666666;
@@ -680,3 +683,28 @@ div.datepicker table tr td span.active {
     background-color: #f2f2f2;
 }
 /*  下拉菜单 end   */
+
+/*  校验样式 start  */
+input[type="text"].verifyBox,
+input[type="text"].verifyBox:focus{
+    border: 1px solid #fcb596 !important;
+}
+.verifyStyle{
+    position: absolute;
+    background-color: #feefe9;
+    padding: 7px 0;
+}
+.verifyStyle .verifyIcon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../../images/commonIcon.png") no-repeat -43px -42px;
+    vertical-align: middle;
+    margin: 0 5px 0 8px;
+}
+.verifyStyle .verifyFonts{
+    color: #ff4e00;
+    font-size: 14px;
+}
+/*  校验样式 end  */
+
