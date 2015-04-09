@@ -210,10 +210,56 @@
                     </div>
                 </div>
             </div>
+
+            <div class="dropdown">
+                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                    <span class="activeVal">Dropdown trigger</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0);">全部</a></li>
+                    <li><a href="javascript:void(0);">上海市</a></li>
+                    <li><a href="javascript:void(0);">北京市</a></li>
+                    <li><a href="javascript:void(0);">重庆市</a></li>
+                    <li><a href="javascript:void(0);">天津市</a></li>
+                    <li><a href="javascript:void(0);">宁夏</a></li>
+                    <li><a href="javascript:void(0);">内蒙古</a></li>
+                    <li><a href="javascript:void(0);">河南</a></li>
+                    <li><a href="javascript:void(0);">湖北</a></li>
+                    <li><a href="javascript:void(0);">湖南</a></li>
+                </ul>
+            </div>
+
             
 		</div>
 		<footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
 	</div>
+
+
+<!--<script>
+    $(function () {
+      $("#example").modal({
+        backdrop:true,
+        keyboard:false,
+        show:false
+    });
+    });
+</script>-->
+
+<script>
+    $(function(){
+        $('.dropdown-toggle').dropdown();
+        
+        $(".dropdown-menu li a").each(function(){
+            $(this).click(function(){
+                var thisHtml = $(this).html();
+                $(".dropdownBtn .activeVal").html(thisHtml);
+            });
+        });
+        
+    });
+    
+</script>
 
 
 </body>
