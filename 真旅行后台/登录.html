@@ -14,7 +14,7 @@
 
 	<script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../js/maintain/common.js"></script>
+    <!--<script type="text/javascript" src="../js/maintain/common.js"></script>-->
 
 	<!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
@@ -59,5 +59,12 @@
 
         </div>
     </div>
+<script>
+    $(function(){
+        $(".autoLogin .checkedBox").click(function(){
+            $(this).toggleClass("noCheckedBox");
+        });
+    });
+</script>
 </body>
 </html>

@@ -137,12 +137,16 @@
     margin-bottom: 22px;
     padding-left: 111px;
 }
-.autoLogin .checkedBox {
+.autoLogin .checkedBox, .autoLogin .noCheckedBox {
     background: url("../../images/loginIcon.png") 0 -56px;
     display: inline-block;
     width:14px;
     height: 14px;
-    vertical-align: middle;    
+    vertical-align: middle;  
+    cursor: pointer;
+}
+.autoLogin .noCheckedBox {
+    background-position: -19px -56px;
 }
 .autoLogin span {
     font-size: 14px;
