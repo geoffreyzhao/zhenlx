@@ -291,10 +291,117 @@ header {
     background-color: #fff;
 }
 
-.head {
-    width: 1130px;
-    margin: 0 auto;
+header .head {
+	width: 1130px;
+	margin: 0 auto;
+	padding: 12px 0;
 }
 
+.logo {
+	display: inline-block;
+	width: 133px;
+	height: 47px;
+	background: url(../../images/client/logo.png) no-repeat;
+}
+
+.main-container {
+    background: #0d9193;   /* 一些不支持背景渐变的浏览器 */ 
+	background: -webkit-linear-gradient(top, #0b7e96, #0fa68f);  /* chrome, safari  */
+	background: -moz-linear-gradient(top, #0b7e96, #0fa68f);  /*  firefox  */
+	background: -o-linear-gradient(top, #0b7e96, #0fa68f);  /* opera */
+	background: -ms-linear-gradient(top, #0b7e96, #0fa68f);  /* IE 10 */
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#0b7e96, endColorstr=#0fa68f);/*IE<9>*/
+	-ms-filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#0b7e96, endColorstr=#0fa68f);/*IE8+*/
+}
+
+.main-wrapper {
+	width: 1130px;
+	margin: 0 auto;
+	background: url(../../images/client/body-bg-img.png) no-repeat center;
+	min-height: 562px;
+}
+
+.main-container .foot {
+	width: 1130px;
+	margin: 0 auto;
+	border-top: 1px solid #47b9a9;
+	padding: 22px 0;
+	color: #8efff5;
+	font-size: 12px;
+}
+
+.main-container .foot .service-tel {
+	float: right;
+}
+
+.main-container .foot .service-tel .telnum {
+	font-size: 15px;
+}
+
+.main-box {
+	background-color: #fff;
+	position: relative;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom: 1px solid #88b3af;
+	margin: 0 auto;
+}
+
+.main-box .top-border {
+	display: inline-block;
+	background: url(../../images/client/repeat-border.jpg) repeat-x;
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	top: -3px;
+}
+
+.main-box .top-border .clip {
+	display: inline-block;
+	background: url(../../images/client/spirit.png) no-repeat 0 0;
+	width: 24px;
+	height: 44px;
+	position: absolute;
+	left: 20px;
+	top: -10px;
+}
+
+.main-box .bottom-border {
+	width: 98%;
+	height: 2px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	background-color: #c2fff9;
+	margin: 0 auto;
+	position: absolute;
+	bottom: -3px;
+	left: 1%;
+}
+
+.main-box .box-container {
+	
+}
+
+.main-box .box-container .top-block {
+	text-align: center;
+	border-bottom: 1px dashed #bbdde1;
+	height: 82px;
+	line-height: 82px;
+}
+
+.main-box .box-container .top-block .earch-icon {
+	display: inline-block;
+	background: url(../../images/client/spirit.png) no-repeat;
+	background-position: -27px 0;
+	width: 26px;
+	height: 26px;
+	vertical-align: text-bottom;
+	margin-right: 8px;
+}
+
+.main-box .box-container .top-block .title {
+	font-size: 26px;
+	color: #11b9b7;
+}
 
 /*  头尾 背景 边框线  等公共样式   end   */

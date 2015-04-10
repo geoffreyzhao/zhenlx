@@ -21,3 +21,22 @@ $(function(){
     
 
 });
+
+
+/* 设置主体背景高度  start */
+
+/*
+function setWrapperHeight() {
+	document.getElementById("main-wrapper").style.cssText =
+			 "height:" + (document.documentElement.clientHeight - 142) + "px";
+}
+
+setWrapperHeight();
+
+
+window.onresize = function() {
+	setWrapperHeight();
+}
+*/
+
+/* 设置主体背景高度  end */

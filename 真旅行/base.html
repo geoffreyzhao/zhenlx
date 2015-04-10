@@ -17,6 +17,7 @@
     <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../js/client/common.js"></script>
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
@@ -26,18 +27,61 @@
 
 	<header>
 		<div class="head">
-			
+			<div class="logo"></div>
 		</div>
 	</header>
 
 	<div class="main-container">
-		
+		<div class="main-wrapper" id="main-wrapper">
+			<div class="main-box" id="main-box" style="width:500px;">
+				<div class="top-border"><span class="clip"></span></div>
+				<div class="box-container">
+					<div class="top-block">
+						<span class="earch-icon"></span>
+						<span class="title">欢迎加入真旅行</span>
+					</div>
+					<div class="cont-block">
+						<p>欢迎加入真旅行--文本</p>
+						<p>欢迎加入真旅行--文本</p>
+						<p>欢迎加入真旅行--文本</p>
+						<p>欢迎加入真旅行--文本</p>
+						<p>欢迎加入真旅行--文本</p>
+						<p>欢迎加入真旅行--文本</p>
+					</div>
+				</div>
+				<div class="bottom-border"></div>
+			</div>
+		</div>
 
+		<div class="foot clearfix">
+			<span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+		</div>
 	</div>
 
-	<footer>
-		
-	</footer>
+	<script type="text/javascript">
+		function setWrapperHeight() {
+			document.getElementById("main-wrapper").style.cssText =
+					 "height:" + (document.documentElement.clientHeight - 142) + "px";
+		}
+
+		setWrapperHeight();
+
+
+		window.onresize = function() {
+			setWrapperHeight();
+
+			$(".main-box").css({
+				"top": ($(".main-wrapper").height() - $(".main-box").height()) / 2 + "px"
+			});
+		}
+
+		$(function(){
+			$(".main-box").css({
+				"top": ($(".main-wrapper").height() - $(".main-box").height()) / 2 + "px"
+			});
+		});
+	</script>
 	
 </body>
 </html>
