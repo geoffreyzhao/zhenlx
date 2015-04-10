@@ -6,6 +6,7 @@ body {
 }
 
 /*  控件样式  start */
+
 a:focus{outline: none;}
 input[type="text"]{
     border: 1px solid #dadada;
@@ -39,4 +40,24 @@ input[type="text"]:focus{
     background-position: 0 0;
     margin-left: 5px;
 }
+
+
 /*  控件样式  end */
+
+
+
+/*  头尾 背景 边框线  等公共样式   start  */
+
+header {
+	width: 100%;
+	background-color: #fff;
+}
+
+.head {
+	width: 1130px;
+	margin: 0 auto;
+}
+
+
+/*  头尾 背景 边框线  等公共样式   end   */
+
