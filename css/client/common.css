@@ -8,22 +8,26 @@ body {
 /*  控件样式  start */
 
 a:focus{outline: none;}
-input[type="text"]{
+input[type="text"],
+input[type="password"]{
     border: 1px solid #dadada;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     padding-left: 3px;
 }
-input[type="text"]:focus{
-    border: 1px solid #80d0ee !important;
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border: 1px solid #11b9b7 !important;
     outline: none;
 }
 .errorBoxContent{
+    font-size: 15px;
     color: #fe7800;
     border: 1px solid #ffa200;
     display: inline-block;
     height: 40px;
     line-height: 40px;
+    background-color: #fff3de;
 }
 .errorBoxContent:focus{
     border: 1px solid #ffa200 !important;    
@@ -32,32 +36,265 @@ input[type="text"]:focus{
     display: inline-block;
     vertical-align: middle;
     background: url("../../images/client/commonIcon.png") no-repeat;
+    margin-left: 5px;
     margin-right: 10px;
 }
 .commonIcon.errorIcon{
     width: 18px;
     height: 18px;
     background-position: 0 0;
-    margin-left: 5px;
 }
+
+input[type="text"].verifyBox,
+input[type="text"].verifyBox:focus{
+    border: 1px solid #ffa200 !important;
+    background-color: #fff8eb;
+}
+.verifyStyle{
+    display: inline-block;
+    padding: 7px 0;
+    color: #fe7800;
+}
+
+.componentInput{
+    display: inline-block;
+    border: 1px solid #d0d0d0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+.componentInput.addBorder{
+    border: 1px solid #11b9b7 !important;
+}
+.componentInput .lockIcon{
+    width: 16px;
+    height: 20px;
+    background-position: 0 -24px;
+}
+.componentInput input[type="password"],
+.componentInput input[type="text"],
+.componentInput input[type="password"]:focus,
+.componentInput input[type="text"]:focus{
+    border: none !important;
+    background: none;
+    margin-top: -3px;
+    color: #484848;
+}
+.forgetPW .forgetPWFonts,
+.forgetPW .forgetPWFonts:hover{
+    color: #11b9b7;
+    margin-right: 10px;
+}
+.verificationCodeIcon{
+    width: 18px;
+    height: 18px;
+    background-position: -24px 0;
+}
+.verificationCode img{
+    display: inline-block;
+    width: 97px;
+    height: 37px;
+    margin: -6px 1px 0 0;
+}
+
+.componentInput .phoneNumberIcon{
+    width: 14px;
+    height: 20px;
+    background-position: -24px -24px;
+}
+.componentInput input[type="text"]:-moz-placeholder,
+.componentInput input[type="text"]::-webkit-input-placeholder{
+    color: #c1c1c1;
+}
+.componentInput .getVerificationCode{
+    display: inline-block;
+    background-color: #1be1df;
+    color: #fff;
+    height: 34px;
+    line-height: 37px;
+    text-align: center;
+    padding: 0 10px;
+    margin-right: 2px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor: pointer;
+}
+.componentInput .getVerificationCode.retry{
+    background-color: #baf6f5;
+    color: #11b9b7;
+}
+.PWStrong .strength{
+    display: inline-block;
+    width: 35px;
+    height: 34px;
+    line-height: 37px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    margin-right: 2px;
+}
+.PWStrong .strength.strong{
+    background-color: #2ad847;
+}
+.PWStrong .strength.weak{
+    background-color: #ff6c00;
+}
+.PWStrong .strength.centre{
+    background-color: #ffa200;
+}
+
+.bigOrangeBtn{
+    display: inline-block;
+    width: 340px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #ffda99;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.bigOrangeBtn:hover,
+.commonBtn:hover{
+    color: #fff;
+}
+.bigOrangeBtn.active{
+    background-color: #ffa200;
+}
+.bigOrangeBtn.active:hover{
+    background-color: #f19900;
+    color: #fff;
+}
+.bigOrangeBtn:focus,
+.bigOrangeBtn.active:focus,
+.commonBtn:focus{
+    color: #fff;
+}
+.commonBtn{
+    display: inline-block;
+    min-width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.commonBtn.blueBtn{
+    background-color: #11b9b7;
+}
+.commonBtn.blueBtn:hover{
+    background-color: #0c9c9a;
+}
+.commonBtn.grayBtn{
+    background-color: #b3b3b3;
+}
+.commonBtn.grayBtn:hover{
+    background-color:#9b9b9b ;
+}
+
+.commonIcon.bigEditIcon{
+    width: 47px;
+    height: 47px;
+    background-position: 0 -50px;
+    cursor: pointer;
+}
+.commonIcon.bigEditIcon:hover{
+    background-position: 0 -104px;
+}
+.commonIcon.bigDeleteIcon{
+    width: 47px;
+    height: 47px;
+    background-position: -53px -50px;
+    cursor: pointer;
+}
+.commonIcon.bigDeleteIcon:hover{
+    background-position: -53px -104px;
+}
+.commonIcon.smallEditIcon{
+    width: 26px;
+    height: 26px;
+    background-position: 0 -157px;
+    cursor: pointer;
+}
+.commonIcon.smallEditIcon:hover{
+    background-position: -33px -157px;
+}
+.commonIcon.refreshIcon{
+    width: 16px;
+    height: 16px;
+    background-position: -45px -24px;
+    cursor: pointer;
+}
+.commonIcon.refreshIcon:hover{
+    background-position: -66px -24px;
+}
+.changeViewpoints{
+    font-size: 18px;
+    color: #a3a3a3;
+    cursor: pointer;
+}
+.changeViewpoints .changeIcon{
+    width: 17px;
+    height: 18px;
+    background-position: -87px -24px;
+}
+.changeViewpoints:hover{
+    color: #11b9b7;
+}
+.changeViewpoints:hover .changeIcon{
+    background-position: -110px -24px;
+}
+
+.radio{color: #484848;}
+.radio,.checkbox{
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.radio:first-child,.checkbox:first-child{
+    margin-left: 0;
+}
+.commonIcon.radioIcon{
+    width: 18px;
+    height: 18px;
+    background-position: -70px 0;
+    margin-right: 5px;
+}
+.radio.active .radioIcon{
+    width: 18px;
+    height: 18px;
+    background-position: -48px 0;
+}
+.checkboxContent .checkbox{
+    color: #11b9b7;
+}
+
 
 
 /*  控件样式  end */
 
 
 
+
+
 /*  头尾 背景 边框线  等公共样式   start  */
 
 header {
-	width: 100%;
-	background-color: #fff;
+    width: 100%;
+    background-color: #fff;
 }
 
 .head {
-	width: 1130px;
-	margin: 0 auto;
+    width: 1130px;
+    margin: 0 auto;
 }
 
 
 /*  头尾 背景 边框线  等公共样式   end   */
-
