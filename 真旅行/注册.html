@@ -68,6 +68,13 @@
 	<footer>
 		
 	</footer>
-	
+<script>
+    $(function(){
+        $(".messageCodeRow .getCode").click(function(){
+            $(this).addClass("tryAgainCode");
+            $(this).html("<span>58</span>s后重新尝试")
+        });     
+    })
+</script>	
 </body>
 </html>
