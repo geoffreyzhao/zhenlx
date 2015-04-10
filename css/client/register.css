@@ -1,1 +1,146 @@
 @charset "utf-8";
+
+.registerArea {
+    background: url("../../images/client/registerArea.png") no-repeat;
+    width:504px;
+    height: 409px;
+    margin: 5% auto;
+}
+.registerBox {
+    width:500px;
+    height: 100%;
+    margin: 15px auto 0 auto;
+    position: relative;
+}
+.registgerTitle {
+    padding: 35px 0 25px 0;
+    border-bottom: 1px dashed #0c8694;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.registgerTitle i {
+    background: url("../../images/client/registerIconSprite.png") no-repeat 0 0;
+    width:26px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.registgerTitle span {
+    color: #11b9b7;
+    font-size: 26px;
+    vertical-align: middle;
+}
+.registerForm {
+    
+}
+.registerForm .regRow {
+    position: relative;
+    text-align: center;
+}
+.registerForm .mobileRow {
+    margin-bottom: 26px;
+    margin-top: 15px;
+}
+.registerForm .mobileIcon, .registerForm .messageCodeIcon {
+    background: url("../../images/client/registerIconSprite.png") no-repeat -32px 0;
+    width:14px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top:10px;
+    left:90px;
+}
+.registerForm .messageCodeIcon {
+    background-position: -51px 0;
+    width:18px;
+    height: 18px;    
+}
+.registerForm .mobileFile, .registerForm .messageCodeFile {
+    border: 1px solid #d0d0d0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: 40px;
+    line-height: 40px;
+    width:343px;
+    color: #c1c1c1;
+    font-size: 16px;
+    padding:0 3px 0 35px;
+}
+.registerForm .mobileFile:focus {
+    border: 1px solid #11b9b7;
+    color: #484848;
+}
+.registerForm input[type=text]:focus {
+    border: 1px solid #11b9b7;
+    color: #484848;
+}
+.registerForm .messageCodeRow {
+    margin-bottom: 26px;
+}
+.registerForm .getCode, .registerForm .tryAgainCode {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    top:3px;
+    right:81px;
+    background: #1be1df;
+    width:102px;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+.registerForm .tryAgainCode {
+    background: #baf6f5;
+    color: #11b9b7;
+}
+.registerBtn {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #fff;
+    font-size: 18px;
+    background: #ffa200;
+    border:none;
+    width:345px;
+    height: 43px;
+    line-height: 43px;
+}
+.registerBtn:hover {
+    background: #f19900;
+}
+.registerBtn.disabled {
+    background: #ffda99;
+    cursor: default;
+}
+.registerErrorRow {
+    
+}
+.registerErrorBox {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width:343px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ffa200;
+    background: #fff3de;
+    color: #fe7800;
+    font-size: 15px;
+    text-align: left;
+    margin: 0 auto;
+}
+.registerErrorBox .errorIcon {
+    background: url("../../images/client/registerIconSprite.png") no-repeat 0 -29px;
+    width:18px;
+    height: 18px;
+    display: inline-block;
+    margin: 0 7px 0 10px;
+    vertical-align: text-bottom;
+}
