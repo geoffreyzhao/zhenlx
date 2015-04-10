@@ -6,5 +6,37 @@ body {
 }
 
 /*  控件样式  start */
-
+a:focus{outline: none;}
+input[type="text"]{
+    border: 1px solid #dadada;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 3px;
+}
+input[type="text"]:focus{
+    border: 1px solid #80d0ee !important;
+    outline: none;
+}
+.errorBoxContent{
+    color: #fe7800;
+    border: 1px solid #ffa200;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+.errorBoxContent:focus{
+    border: 1px solid #ffa200 !important;    
+}
+.commonIcon{
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../images/client/commonIcon.png") no-repeat;
+    margin-right: 10px;
+}
+.commonIcon.errorIcon{
+    width: 18px;
+    height: 18px;
+    background-position: 0 0;
+    margin-left: 5px;
+}
 /*  控件样式  end */
