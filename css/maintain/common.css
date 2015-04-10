@@ -624,7 +624,7 @@ div.datepicker table tr td span.active {
 
 /*  下拉菜单 start   */
 .dropdown{ display: inline-block;}
-.dropdownBtn{
+.dropdown .dropdownBtn{
     font-size: 14px;
     display: inline-block;
     width: 100%;
@@ -633,15 +633,15 @@ div.datepicker table tr td span.active {
     background-color: #ffffff;
     position: relative;
 }
-.dropdownBtn:focus{
+.dropdown .dropdownBtn:focus{
     border: 1px solid #80d0ee;
 }
-.dropdownBtn .caret{
+.dropdown .dropdownBtn .caret{
     position: absolute;
     right: 7px;
     top: 45%;
 }
-.dropdownBtn .activeFonts{
+.dropdown .dropdownBtn .activeFonts{
     display: inline-block;
     text-align: left;
     width: 90%;
@@ -650,15 +650,15 @@ div.datepicker table tr td span.active {
     white-space: nowrap;
     vertical-align: middle;
 }
-.dropdownBtn,
-.dropdownBtn .activeFonts,
-.dropdownBtn:hover,
-.dropdownBtn .activeFonts:hover,
-.dropdownBtn .caret,
-.dropdownBtn .caret:hover{
+.dropdown .dropdownBtn,
+.dropdown .dropdownBtn .activeFonts,
+.dropdown .dropdownBtn:hover,
+.dropdown .dropdownBtn .activeFonts:hover,
+.dropdown .dropdownBtn .caret,
+.dropdown .dropdownBtn .caret:hover{
     color: #ababab;
 }
-.dropdown-menu{
+.dropdown .dropdown-menu{
     width: 100%;
     min-width: 100px;
     border-top: none;
@@ -667,18 +667,18 @@ div.datepicker table tr td span.active {
     max-height: 245px;
     overflow-y: auto;
 }
-.dropdown-menu>li{width: 100%;}
-.dropdown-menu>li>a{
+.dropdown .dropdown-menu>li{width: 100%;}
+.dropdown .dropdown-menu>li>a{
     padding: 7px 5px;
     color: #666666;
     white-space: inherit;
 }
-.dropdown-menu>.active>a,
-.dropdown-menu>.active>a:hover{
+.dropdown .dropdown-menu>.active>a,
+.dropdown .dropdown-menu>.active>a:hover{
     color: #333;
     background-color: #f2f2f2;
 }
-.dropdown-menu>li>a:hover{
+.dropdown .dropdown-menu>li>a:hover{
     color: #666;
     background-color: #f2f2f2;
 }
