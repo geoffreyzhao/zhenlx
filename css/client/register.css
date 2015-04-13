@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* 注册页面 S */
 .registerForm {
     text-align: center;
     position: relative;
@@ -231,3 +231,147 @@
 }
 
 /*  完善个人资料--选择头像  end  */
+
+/* 注册页面 E */
+
+/* 找回密码 S */
+.top-block .findPsw-icon {
+    background: url(../../images/client/registerIconSprite.png) no-repeat 0 -53px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    vertical-align: text-bottom;
+    margin-right: 8px;
+}
+.findPswBox {
+    text-align: center;
+    position: relative;
+    margin-top: 55px;
+    padding-bottom: 25px;
+}
+.findByMobile, .findByEmail {
+    border:1px solid #d0d0d0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    width:343px;
+    height: 66px;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    margin-bottom: 30px;
+}
+.findByEmail {
+    margin-bottom: 60px;
+}
+.findByMobile .byMobileIcon, .findByEmail .byEmailIcon {
+    background: url(../../images/client/registerIconSprite.png) no-repeat 0 -81px;
+    display: inline-block;
+    width: 26px;
+    height: 38px;
+    position: absolute;
+    left:21px;
+    top:15px;
+}
+.findByMobile span, .findByEmail span {
+    font-size: 18px;
+    color: #11b9b7;
+    border-left:1px solid #d0d0d0;
+    display: inline-block;
+    height: 64px;
+    line-height: 64px;
+    margin-left: 68px;
+    padding-left:20px;
+    display: inline-block;
+}
+.findByEmail .byEmailIcon {
+    background-position: 0 -121px;
+    width:31px;
+    height: 23px;
+    left:19px;
+    top:22px;
+}
+.findByMobile.current {
+     border:2px solid #11b9b7;
+}
+.findByMobile.current span {
+    border-left:1px solid #11b9b7;
+}
+.findPswBox .mobileRow {
+    margin-bottom: 26px;
+}
+.findPswBox .messageCodeRow {
+    margin-bottom: 22px;
+}
+.bigBlue11b9b7Btn {
+    display: inline-block;
+    width: 345px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #11b9b7;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.bigBlue11b9b7Btn:hover{
+    color: #fff;
+    background: #11b9b7;
+}
+.findPswBox .goBackRow {
+     margin-top: 50px;
+}
+.findPswBox .goBackIcon {
+    background: url(../../images/client/registerIconSprite.png) no-repeat 0 -146px;
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.findPswBox .goBackRow a {
+    color: #c1c1c1;
+    text-decoration: none;
+    font-size: 15px;
+    vertical-align: middle;
+}
+.componentInput .smallEmailIcon {
+    background: url(../../images/client/registerIconSprite.png) no-repeat 0 -162px;
+    width: 19px;
+    height: 15px;
+}
+.findPswBox .tipsIconRow {
+    text-align: center;
+}
+.findPswBox .bigSuccess {
+    background: url(../../images/client/registerIconSprite.png) no-repeat -33px -23px;
+    width: 67px;
+    height: 67px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.findPswBox .tipsFonts {
+    margin-top: 20px;
+}
+.findPswBox .fs18 {
+    font-size: 18px;
+}
+.findPswBox .fs14 {
+     font-size: 14px;
+}
+.findPswBox .fc484848 {
+    color: #484848;
+}
+.findPswBox .fc818181 {
+    color: #818181;
+}
+.fonts-innerInput {
+    display: inline-block;
+    color: #11b9b7;
+    font-size: 15px;
+    text-align: right;
+    width:70px;
+}
+/* 找回密码 E */
+
