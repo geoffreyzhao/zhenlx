@@ -14,9 +14,15 @@ $(function(){
         $(this).html("<span>58</span>s后重新尝试")
     });
 
+    //单选框
     $(".radioContent .radio").click(function(){
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
+    });
+
+    //复选框
+    $(".checkboxContent .checkbox").click(function(){
+        $(this).toggleClass("active");
     });
     
 
@@ -40,3 +46,4 @@ window.onresize = function() {
 */
 
 /* 设置主体背景高度  end */
+

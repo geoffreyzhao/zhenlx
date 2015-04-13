@@ -275,8 +275,14 @@ input[type="text"].verifyBox:focus{
 .checkboxContent .checkbox{
     color: #11b9b7;
 }
-
-
+.commonIcon.checkboxIcon{
+    width: 14px;
+    height: 14px;
+    background-position: -111px 0;
+}
+.checkbox.active .checkboxIcon{
+    background-position: -93px 0;
+}
 
 /*  控件样式  end */
 
