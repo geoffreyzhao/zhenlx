@@ -26,8 +26,10 @@ function setWrapperHeight() {
 
 function setMainBoxPosition() {
     if ($(".main-box").length !== 0) {
+        var top = ($(".main-wrapper").height() - $(".main-box").height()) / 2;
+        top = top < 30 ? 30 : top;   // top 最小值设为 30
         $(".main-box").eq(0).css({
-            "top": ($(".main-wrapper").height() - $(".main-box").height()) / 2 + "px"
+            "top": top + "px"
         });
     }
 }

@@ -21,3 +21,91 @@
 .registerForm .buttonRow {
    margin-bottom: 84px;
 }
+.registerErrorBox .errorIcon {
+    background: url("../../images/client/registerIconSprite.png") no-repeat 0 -29px;
+    width:18px;
+    height: 18px;
+    display: inline-block;
+    margin: 0 7px 0 10px;
+    vertical-align: text-bottom;
+}
+
+/*  完善个人资料  start   By:shuaigeng.zhao;   */
+
+.title-flight-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../../images/client/after-reg.png) no-repeat 0 -73px;
+    vertical-align: sub;
+    margin-right: 2px;
+}
+
+.skip-container {
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.skip-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/client/after-reg.png) no-repeat 0 0;
+    vertical-align: middle;
+}
+
+.skip-text {
+    font-size: 16px;
+    color: #c1c1c1;
+}
+
+.refine-info-block {
+    margin-top: 35px;
+}
+
+.refine-info-block .componentInput {
+    margin: 11px 0;
+}
+
+.refine-info-block .errorBoxContent {
+    margin-bottom: 10px;
+}
+
+.cont-block {
+    text-align: center;
+}
+
+.cont-block .sub-title {
+    margin: 25px 0;
+    font-size: 18px;
+    color: #858585;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar-container .smallEditIcon {
+    position: absolute;
+}
+
+.nickname {
+    position: relative;
+}
+
+.nickname .input-tip-pic {
+    position: absolute;
+    display: inline-block;
+    width: 144px;
+    height: 72px;
+    background: url(../../images/client/after-reg.png) no-repeat -56px 0;
+    right: -150px;
+    top: -47px;
+}
+
+.refine-info-block .bigOrangeBtn {
+    margin-top: 20px;
+}
+
+/*  完善个人资料  end  */
