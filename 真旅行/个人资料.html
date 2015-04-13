@@ -19,7 +19,8 @@
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="../js/client/common.js"></script>
-
+    <script type="text/javascript" src="../js/client/adjust.js"></script>
+    
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
     <![endif]-->
@@ -49,7 +50,7 @@
                                 </li>
                             </ul>
 						</aside>                        
-                        <section>
+                        <section class="rightContent">
                             <table class="dataTab">
                                 <colgroup>
                                     <col width="100">
@@ -59,17 +60,220 @@
                                 <tr>
                                     <th>头像:</th>
                                     <td>
-                                        <div class="headPortraitImg">
+                                        <span class="headPortraitImg">
                                             <img src="../images/client/headPortrait01.png" />
                                             <span class="commonIcon smallEditIcon editHeadPortrait"></span>
-                                        </div>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>昵称:</th>
                                     <td>
-                                        太平洋的鲸鱼
+                                        <spn class="nicknameContent">
+                                            <span class="nickname">太平洋的鲸鱼</span>
+                                            <span class="commonIcon editIcon"></span>
+                                        </spn>
+                                        <span class="editContent">
+                                            <input type="text" value="太平洋的鲸鱼" class="valContent" style="width: 220px;">
+                                            <span class="sureBtn">确定</span>
+                                            <span class="cancelBtn">取消</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>性别:</th>
+                                    <td>
+                                        <span class="genderContent">
+                                            <span class="genderFonts">男</span>
+                                            <span class="commonIcon editIcon"></span>
+                                        </span>
+                                        <span class="editContent">
+                                            <span class="radioContent">
+                                                <label class="radio active">
+                                                    <span class="commonIcon radioIcon"></span>
+                                                    <span class="genderSelect">男</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <span class="commonIcon radioIcon"></span>
+                                                    <span class="genderSelect">女</span>
+                                                </label>
+                                            </span>
+                                            <span class="sureBtn">确定</span>
+                                            <span class="cancelBtn">取消</span>
+                                        </span>                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>邮箱:</th>
+                                    <td>
+                                        <span>dorianzhou@126.com</span>
+                                    </td>
+                                </tr>
+                                <tr class="phoneNumberContent">
+                                    <th>手机号:</th>
+                                    <td>
+                                        <span>13859785522</span>
                                         <span class="commonIcon editIcon"></span>
+                                    </td>
+                                </tr>
+                                <tr class="editModelInfo editPhoneNumber" style="display: none;">
+                                    <td colspan="2" class="noPadding">
+                                        <table class="editModelTab">
+                                            <colgroup>
+                                                <col width="100">
+                                                <col width="">
+                                            </colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <th>原手机号:</th>
+                                                <td>
+                                                    <input type="text" value="" style="width: 220px;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>登录密码:</th>
+                                                <td>
+                                                    <input type="text" class="verifyBox" style="width: 220px;">
+                                                    <div class="verifyStyle">
+                                                        <i class="commonIcon errorIcon"></i>请输入登录密码
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>新手机号:</th>
+                                                <td>
+                                                    <input type="text" value="" style="width: 220px;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>验证码:</th>
+                                                <td>
+                                                    <div class="componentInput verificationCode">
+                                                        <input type="text" placeholder="请输入验证码" style="width: 108px;">
+                                                        <span class="getVerificationCode">获取短信验证码</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
+                                                    <a href="javascript:void(0);" class="commonBtn grayBtn">取消</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr class="PWContent">
+                                    <th>密码:</th>
+                                    <td>
+                                        <span>●●●●●●</span>
+                                        <span class="commonIcon editIcon"></span>
+                                    </td>
+                                </tr>
+                                <tr class="editModelInfo editPw" style="display: none;">
+                                    <td colspan="2" class="noPadding">
+                                        <table class="editModelTab">
+                                            <colgroup>
+                                                <col width="100">
+                                                <col width="">
+                                            </colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <th>原密码:</th>
+                                                <td>
+                                                    <input type="text" value="" style="width: 220px;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>新密码:</th>
+                                                <td>
+                                                    <div class="componentInput PWStrong">
+                                                        <input type="password" placeholder="23245220" style="width: 177px;">
+                                                        <span class="strength strong">强</span>
+                                                        <!--<span class="strength weak">弱</span>
+                                                        <span class="strength centre">中</span>-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>再次输入:</th>
+                                                <td>
+                                                    <input type="text" value="" style="width: 220px;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
+                                                    <a href="javascript:void(0);" class="commonBtn grayBtn">取消</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>真实姓名:</th>
+                                    <td>
+                                        <span class="realNameContent">
+                                            <span class="realNameFonts">安宝妮</span>
+                                            <span class="commonIcon editIcon"></span>
+                                        </span>
+                                        <span class="editContent">
+                                            <input type="text" value="安宝妮" class="editRealName" style="width: 220px;">
+                                            <span class="sureBtn">确定</span>
+                                            <span class="cancelBtn">取消</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>通信地址:</th>
+                                    <td>
+                                        <span class="addressContent">
+                                            <span>上海市宝山区天使路123号4号楼</span>
+                                            <span class="commonIcon editIcon"></span>
+                                        </span>
+                                        <span class="editContent">                                            
+                                            <div class="dropdown" style="width: 110px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                    <span class="activeFonts">选择省</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">上海市</a></li>
+                                                    <li><a href="javascript:void(0);">天津市</a></li>
+                                                    <li><a href="javascript:void(0);">北京市</a></li>
+                                                </ul>
+                                            </div>                                        
+                                            <div class="dropdown" style="width: 110px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                    <span class="activeFonts">选择市</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">上海市</a></li>
+                                                    <li><a href="javascript:void(0);">南京市</a></li>
+                                                    <li><a href="javascript:void(0);">北京市</a></li>
+                                                </ul>
+                                            </div>                                       
+                                            <div class="dropdown" style="width: 110px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                    <span class="activeFonts">选择区/县</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">闸北区</a></li>
+                                                    <li><a href="javascript:void(0);">普陀区</a></li>
+                                                    <li><a href="javascript:void(0);">宝山区</a></li>
+                                                    <li><a href="javascript:void(0);">虹口区</a></li>
+                                                </ul>
+                                            </div> 
+                                            <input type="text" value="上海市宝山区天使路123号4号楼" style="width: 300px;">
+                                            <span class="sureBtn">确定</span>
+                                            <span class="cancelBtn">取消</span>
+                                        </span>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -86,29 +290,92 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
-		function setWrapperHeight() {
-			document.getElementById("main-wrapper").style.cssText =
-					 "height:" + (document.documentElement.clientHeight - 142) + "px";
-		}
+<script>
+    $(function(){
+        
+        //编辑昵称
+        $(".nicknameContent .editIcon").click(function(){
+            $(this).parents(".nicknameContent").hide();
+            $(this).parents(".nicknameContent").siblings(".editContent").show();
+        });
+        $(".editContent .cancelBtn").click(function(){
+            $(this).parents(".editContent").hide();
+            $(this).parents(".editContent").siblings(".nicknameContent").show();
+        });
+        $(".editContent .sureBtn").click(function(){
+            var $inputVal = $(this).siblings(".valContent").val();
+            var $parents = $(this).parents(".editContent");
+            $parents.siblings(".nicknameContent").find(".nickname").html($inputVal);
+            $parents.hide();
+            $parents.siblings(".nicknameContent").show();
+        });
+        
+        //编辑性别
+        $(".genderContent .editIcon").click(function(){
+            $(this).parents(".genderContent").hide();
+            $(this).parents(".genderContent").siblings(".editContent").show();
+        });
+        $(".editContent .cancelBtn").click(function(){
+            $(this).parents(".editContent").hide();
+            $(this).parents(".editContent").siblings(".genderContent").show();
+        });
+        $(".editContent .sureBtn").click(function(){
+            var $genderVal = $(this).siblings(".radioContent").find(".active .genderSelect").html();
+            var $parents = $(this).parents(".editContent");
+            $parents.siblings(".genderContent").find(".genderFonts").html($genderVal);
+            $parents.hide();
+            $parents.siblings(".genderContent").show();
+        });
+        
+        //编辑手机号码
+        $(".phoneNumberContent .editIcon").click(function(){
+            $(this).hide();
+            $(this).parents(".phoneNumberContent").siblings(".editPhoneNumber").show();
+        });
+        $(".editPhoneNumber .grayBtn").click(function(){
+            $(this).parents(".editPhoneNumber").hide();
+            $(this).parents(".editPhoneNumber").siblings(".phoneNumberContent").find(".editIcon").show();
+        });
+        
+        //编辑密码
+        $(".PWContent .editIcon").click(function(){
+            $(this).hide();
+            $(this).parents(".PWContent").siblings(".editPw").show();
+        });
+        $(".editPw .grayBtn").click(function(){
+            $(this).parents(".editPw").hide();
+            $(this).parents(".editPw").siblings(".PWContent").find(".editIcon").show();
+        });
 
-		setWrapperHeight();
+        //编辑真实姓名
+        $(".realNameContent .editIcon").click(function(){
+            $(this).parents(".realNameContent").hide();
+            $(this).parents(".realNameContent").siblings(".editContent").show();
+        });
+        $(".editContent .cancelBtn").click(function(){
+            $(this).parents(".editContent").hide();
+            $(this).parents(".editContent").siblings(".realNameContent").show();
+        });
+        $(".editContent .sureBtn").click(function(){
+            var $realNameVal = $(this).siblings(".editRealName").val();
+            var $parents = $(this).parents(".editContent");
+            $parents.siblings(".realNameContent").find(".realNameFonts").html($realNameVal);
+            $parents.hide();
+            $parents.siblings(".realNameContent").show();
+        });
 
+        //编辑地址
+        $(".addressContent .editIcon").click(function(){
+            $(this).parents(".addressContent").hide();
+            $(this).parents(".addressContent").siblings(".editContent").show();
+        });
+        $(".editContent .cancelBtn,.editContent .sureBtn").click(function(){
+            $(this).parents(".editContent").hide();
+            $(this).parents(".editContent").siblings(".addressContent").show();
+        });
+        
+    });
+</script>
 
-		window.onresize = function() {
-			setWrapperHeight();
-
-			$(".main-box").css({
-				"top": ($(".main-wrapper").height() - $(".main-box").height()) / 2 + "px"
-			});
-		}
-
-		$(function(){
-			$(".main-box").css({
-				"top": ($(".main-wrapper").height() - $(".main-box").height()) / 2 + "px"
-			});
-		});
-	</script>
-	
 </body>
 </html>

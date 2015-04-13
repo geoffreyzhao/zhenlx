@@ -249,6 +249,7 @@ input[type="text"].verifyBox:focus{
     width: 14px;
     height: 14px;
     background-position: -130px 0;
+    cursor: pointer;
 }
 .changeViewpoints{
     font-size: 18px;
@@ -299,11 +300,72 @@ input[type="text"].verifyBox:focus{
 .checkbox.active .checkboxIcon{
     background-position: -93px 0;
 }
-
 /*  控件样式  end */
 
 
-
+/*  下拉菜单 start   */
+.dropdown{ display: inline-block;}
+.dropdown .dropdownBtn{
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+    padding: 8px 5px;
+    border: 1px solid #dadada;
+    background-color: #ffffff;
+    position: relative;
+}
+.dropdown .dropdownBtn:focus{
+    border: 1px solid #80d0ee;
+}
+.dropdown .dropdownBtn .caret{
+    position: absolute;
+    right: 7px;
+    top: 45%;
+}
+.dropdown .dropdownBtn .activeFonts{
+    display: inline-block;
+    text-align: left;
+    width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.dropdown .dropdownBtn,
+.dropdown .dropdownBtn .activeFonts,
+.dropdown .dropdownBtn:hover,
+.dropdown .dropdownBtn .activeFonts:hover{
+    color: #484848;
+}
+.dropdown .dropdownBtn .caret,
+.dropdown .dropdownBtn .caret:hover{
+    color: #11b9b7;
+}
+.dropdown .dropdown-menu{
+    width: 100%;
+    min-width: 100px;
+    border-top: none;
+    margin: 0;
+    padding: 0;
+    max-height: 245px;
+    overflow-y: auto;
+}
+.dropdown .dropdown-menu>li{width: 100%;}
+.dropdown .dropdown-menu>li>a{
+    padding: 8px 5px;
+    color: #666666;
+    white-space: inherit;
+}
+.dropdown .dropdown-menu>.active>a,
+.dropdown .dropdown-menu>.active>a:hover{
+    color: #333;
+    background-color: #f2f2f2;
+}
+.dropdown .dropdown-menu>li>a:hover{
+    color: #666;
+    background-color: #f2f2f2;
+}
+/*  下拉菜单 end   */
 
 
 /*  头尾 背景 边框线  等公共样式   start  */

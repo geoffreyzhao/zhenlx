@@ -11,7 +11,7 @@
     height: 100%;
     border-left: 1px dashed #bbdde1;
     position: absolute;
-    left: 215px;
+    left: 220px;
     top: 0;
 }
 .leftMenuContent{
@@ -38,6 +38,13 @@
     color: #fff;
     background-color: #11b9b7;
 }
+.rightContent{
+    padding: 20px 0;
+}
+.rightContent .dataTab{
+    margin: 15px 0;
+    width: 80.3%;
+}
 .dataTab th{
     padding: 15px 10px;
     text-align: right;
@@ -48,6 +55,7 @@
     padding: 15px 10px;
 }
 .headPortraitImg{
+    display: inline-block;
     position: relative;
 }
 .headPortraitImg img{
@@ -59,8 +67,33 @@
     left: 100px;
     top: 10px;
 }
-
-
+.dataTab .sureBtn{
+    color: #11b9b7;
+    margin: 20px;
+    cursor: pointer;
+}
+.dataTab .cancelBtn{
+    color: #818181;
+    cursor: pointer;
+}
+.dataTab .editContent{
+    display: none;
+}
+.dataTab .editModelInfo{
+    background-color: #f3fdfc;
+}
+.dataTab .getVerificationCode{
+    font-size: 12px;
+}
+.dataTab .editModelInfo .noPadding{
+    padding: 10px 0;
+    border-bottom: 1px solid #dfe9e8;
+    border-top: 1px solid #dfe9e8;
+}
+.dataTab .editModelTab th,
+.dataTab .editModelTab td{
+    padding: 10px;
+}
 
 
 /*  个人资料 end  */
