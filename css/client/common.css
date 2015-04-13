@@ -398,6 +398,7 @@ header .head {
 	border-bottom: 1px dashed #bbdde1;
 	height: 82px;
 	line-height: 82px;
+    margin-bottom: 25px;
 }
 
 .main-box .box-container .top-block .earch-icon {
