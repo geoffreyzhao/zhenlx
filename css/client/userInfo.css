@@ -1,2 +1,66 @@
 /*  个人资料、常用旅客信息  */
 @charset "utf-8";
+
+/*  个人资料 start  */
+.cont-block{
+    position: relative;
+}
+.cont-block .modelLine{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    border-left: 1px dashed #bbdde1;
+    position: absolute;
+    left: 215px;
+    top: 0;
+}
+.leftMenuContent{
+    width: 220px;
+    float: left;
+    margin-top: 50px;
+}
+.leftMenuContent ul{
+    margin: 10px 30px;
+}
+.leftMenuContent ul a{
+    font-size: 18px;
+    display: block;
+    min-width: 135px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #11b9b7;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.leftMenuContent li.active a{
+    color: #fff;
+    background-color: #11b9b7;
+}
+.dataTab th{
+    padding: 15px 10px;
+    text-align: right;
+    color: #9f9f9f;
+}
+.dataTab td{
+    color: #484848;
+    padding: 15px 10px;
+}
+.headPortraitImg{
+    position: relative;
+}
+.headPortraitImg img{
+    width: 95px;
+    height: 95px;
+}
+.headPortraitImg .editHeadPortrait{
+    position: absolute;
+    left: 100px;
+    top: 10px;
+}
+
+
+
+
+/*  个人资料 end  */

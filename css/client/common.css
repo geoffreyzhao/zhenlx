@@ -234,6 +234,11 @@ input[type="text"].verifyBox:focus{
 .commonIcon.refreshIcon:hover{
     background-position: -66px -24px;
 }
+.commonIcon.editIcon{
+    width: 14px;
+    height: 14px;
+    background-position: -130px 0;
+}
 .changeViewpoints{
     font-size: 18px;
     color: #a3a3a3;
