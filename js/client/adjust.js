@@ -16,7 +16,7 @@ $(function(){
 function setWrapperHeight() {
     if ($(".main-wrapper").length !== 0) {
     	$(".main-wrapper").eq(0).css({
-    		"height": (document.documentElement.clientHeight - 142) + "px"
+    		"min-height": (document.documentElement.clientHeight - 142) + "px"
     	});
     }
 }
