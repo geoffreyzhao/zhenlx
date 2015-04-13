@@ -187,9 +187,9 @@ input[type="text"].verifyBox:focus{
 }
 .commonBtn{
     display: inline-block;
-    min-width: 100px;
-    height: 40px;
-    line-height: 40px;
+    min-width: 108px;
+    height: 42px;
+    line-height: 42px;
     text-align: center;
     color: #fff;
     border-radius: 3px;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>头尾</title>
+	<title>完善个人资料--选择头像</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,6 +48,70 @@
 						</span>
 					</div>
 					<div class="cont-block">
+						<div class="sec-tab">
+							<span class="uploadBtn current">上传头像</span>
+							<span class="pickupBtn">选择头像</span>
+						</div>
+
+						<!--  上传头像  start  -->
+						<section class="upload-avatar">
+							<span class="upload-btn">
+								<input type="file" />
+							</span>
+							<span class="line"></span>
+							<div class="review-avatar">
+								<div class="title">预览</div>
+								<img src="../images/client/review-avatar-blank.jpg" alt="">
+							</div>
+							<div class="upload-tip-text">( 请使用小于2M的 png,jpg,gif 格式图片 )</div>
+						</section>
+						<!--  上传头像  end  -->
+
+						<!--  选择默认头像 start -->
+
+						<section class="pickup-default-avatar" style="display: none;">
+							<div class="default-avatar-list">
+								<span class="default-avatar-item current">
+									<img src="../images/client/avatar-01.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-02.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-03.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-04.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-05.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-06.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-07.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-08.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-09.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../images/client/avatar-10.jpg" alt="">
+								</span>
+							</div>
+							<span class="changeViewpoints">
+							    <span class="commonIcon changeIcon"></span>换一换
+							</span>
+						</section>
+
+						<!--  选择默认头像 end -->
+					</div>
+					<div class="bottom-block">
+						<a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
+						<a href="javascript:void(0);" class="commonBtn grayBtn">取消</a>
 					</div>
 				</div>
 			</div>
@@ -58,6 +122,28 @@
 			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".sec-tab span").click(function(){
+				$(".sec-tab span").removeClass("current");
+				$(this).addClass("current");
+
+				if ($(this).hasClass("uploadBtn")) {
+					$(".pickup-default-avatar").hide();
+					$(".upload-avatar").show();
+				} else if ($(this).hasClass("pickupBtn")) {
+					$(".upload-avatar").hide();
+					$(".pickup-default-avatar").show();
+				}
+			});
+
+			$(".default-avatar-item").click(function(){
+				$(".default-avatar-item").removeClass("current");
+				$(this).addClass("current");
+			});
+		});
+	</script>
 	
 </body>
 </html>
