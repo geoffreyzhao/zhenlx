@@ -43,10 +43,10 @@
 						<aside class="leftMenuContent">
                             <ul>
                                 <li class="active">
-                                    <a href="javascript:void(0);">个人资料</a>
+                                    <a href="个人资料.html">个人资料</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0);">常用旅客信息</a>
+                                    <a href="常旅客信息.html">常用旅客信息</a>
                                 </li>
                             </ul>
 						</aside>                        
@@ -331,20 +331,28 @@
         $(".phoneNumberContent .editIcon").click(function(){
             $(this).hide();
             $(this).parents(".phoneNumberContent").siblings(".editPhoneNumber").show();
+            setWrapperHeight();
+            setMainBoxPosition();
         });
         $(".editPhoneNumber .grayBtn").click(function(){
             $(this).parents(".editPhoneNumber").hide();
             $(this).parents(".editPhoneNumber").siblings(".phoneNumberContent").find(".editIcon").show();
+            setWrapperHeight();
+            setMainBoxPosition();
         });
         
         //编辑密码
         $(".PWContent .editIcon").click(function(){
             $(this).hide();
             $(this).parents(".PWContent").siblings(".editPw").show();
+            setWrapperHeight();
+            setMainBoxPosition();
         });
         $(".editPw .grayBtn").click(function(){
             $(this).parents(".editPw").hide();
             $(this).parents(".editPw").siblings(".PWContent").find(".editIcon").show();
+            setWrapperHeight();
+            setMainBoxPosition();
         });
 
         //编辑真实姓名

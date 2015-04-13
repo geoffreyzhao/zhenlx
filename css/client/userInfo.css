@@ -40,10 +40,12 @@
 }
 .rightContent{
     padding: 20px 0;
+    float: left;
+    width: 80.3%;
 }
 .rightContent .dataTab{
     margin: 15px 0;
-    width: 80.3%;
+    width: 100%;
 }
 .dataTab th{
     padding: 15px 10px;
@@ -95,5 +97,27 @@
     padding: 10px;
 }
 
-
 /*  个人资料 end  */
+
+/*  常旅客信息 start   */
+.titleContent{
+    margin: 10px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dfe9e8;
+}
+.titleContent .titleFonts{
+    color: #11b9b7;
+    font-size: 18px;
+    float: right;
+    margin-right: 15px;
+}
+.titleFonts .addIcon{
+    width: 17px;
+    height: 17px;
+    background-position: -132px -24px;
+    margin-right: 5px;
+}
+
+
+
+/*  常旅客信息 end   */
