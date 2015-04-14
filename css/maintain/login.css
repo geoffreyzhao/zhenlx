@@ -110,6 +110,15 @@
     top:1px;
     right: 112px;
 }
+.authCode-field img.authCodeImg {
+    width:93px;
+    height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    position:absolute;
+    top:1px;
+    right: 112px;
+}
 .userName-field .userName, .pwd-field .userPwd, .authCode-field .authCode {
     border-radius: 2px;
     -webkit-border-radius: 2px;

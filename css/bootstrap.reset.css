@@ -33,3 +33,7 @@
     border-top: none;
 }
 /* 弹窗重置 E */
+
+label {
+    font-weight: normal;
+}

@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+.right-nav-block {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 36px;
+	border-left: 1px solid #7ee8e8;
+	background-color: #d6eded;
+	height: 875px;
+}
+
+.main-nav {
+	text-align: center;
+}
+
+.bottom-nav {
+	text-align: center;
+	position: absolute;
+	bottom: 18px;
+}
+
+.right-nav-icon {
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../../images/client/right-nav-icon.png) no-repeat;
+	margin-bottom: 25px;
+}
+
+.right-nav-icon:last-child {
+	margin-bottom: 0;
+}
+
+.right-nav-info {
+	background-position: 0 0;
+	width: 25px;
+	height: 25px;
+}
+
+.right-nav-list {
+	background-position: 0 -28px;
+	width: 14px;
+	height: 18px;
+}
+
+.right-nav-favor {
+	background-position: 0 -52px;
+	width: 17px;
+	height: 16px;
+}
+
+.right-nav-asset {
+	background-position: 0 -72px;
+	width: 18px;
+	height: 18px;
+}
+
+.right-nav-notice {
+	background-position: 0 -115px;
+	width: 15px;
+	height: 19px;
+}
+
+.right-nav-contacts {
+	background-position: 0 -94px;
+	width: 17px;
+	height: 17px;
+}
+
+.right-nav-edit {
+	background-position: 0 -140px;
+	width: 16px;
+	height: 16px;
+}
+
+.right-nav-backToTop {	
+	background-position: 0 -161px;
+	width: 16px;
+	height: 16px;
+}
+
+.login-box {
+	padding: 25px 0;
+	width: 310px;
+	z-index: 2;
+	background-color: #fff;
+	border-radius: 3px;
+	text-align: center;
+	box-shadow: 0 1px 10px 2px #666;
+	display: none;
+}
+
+.box-relative-location {
+	position: fixed;
+	right: 36px;
+}
+
+.login-box .errorBoxContent,
+.login-box .componentInput {
+	margin-bottom: 15px;
+}
+
+.login-attach .checkbox {
+	font-size: 13px;
+	color: #11b9b7;
+	font-weight: normal;
+	margin-left: -128px;
+}
+
+.login-attach .checkboxIcon {
+	margin-top: -5px;
+}
+
+.login-attach .register-link {
+	font-size: 13px;
+	color: #11b9b7;
+	float: right;
+	margin-top: 10px;
+	margin-right: 23px;
+}
+
+.login-attach .register-link:hover {
+	cursor: pointer;
+}
+
+.login-box .arrow {
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background: url(../../images/client/white-border-arrow.png) no-repeat;
+    position: absolute;
+    top: 8px;
+    right: -6px;
+}

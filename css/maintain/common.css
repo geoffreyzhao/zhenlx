@@ -693,6 +693,7 @@ input[type="text"].verifyBox:focus{
     position: absolute;
     background-color: #feefe9;
     padding: 7px 0;
+    z-index: 2;
 }
 .verifyStyle .verifyIcon{
     display: inline-block;

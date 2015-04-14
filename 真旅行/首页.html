@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/indexPage.css">
+
+    <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../js/client/common.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<header>
+		<div class="head">
+			<div class="logo"></div>
+		</div>
+	</header>
+
+	<div class="main-container">
+		<div class="main-wrapper" id="main-wrapper">
+		</div>
+
+		<div class="foot clearfix">
+			<span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+		</div>
+	</div>
+
+	<div class="right-nav-block">
+		<div class="main-nav">
+			<div class="right-nav-icon right-nav-info"></div>
+			<div class="right-nav-icon right-nav-list"></div>
+			<div class="right-nav-icon right-nav-favor"></div>
+			<div class="right-nav-icon right-nav-asset"></div>
+			<div class="right-nav-icon right-nav-notice"></div>
+			<div class="right-nav-icon right-nav-contacts"></div>
+		</div>
+		<div class="bottom-nav">
+			<div class="right-nav-icon right-nav-edit"></div>
+			<div class="right-nav-icon right-nav-backToTop"></div>
+		</div>
+	</div>
+
+	<div class="login-box box-relative-location">
+		<div class="arrow"><div class="innerArrow"></div></div>
+		<!--<div style="width: 262px;" class="errorBoxContent">
+		    <i class="commonIcon errorIcon"></i>输入的用户名或密码有错
+		</div><br/>-->
+		<div class="componentInput">
+		    <i class="commonIcon personHeaderIcon"></i>
+		    <input type="text" placeholder="手机号/邮箱" style="width: 225px;">    
+		</div><br/>
+		<div class="componentInput forgetPW">
+		    <i class="commonIcon lockIcon"></i>
+		    <input type="password" placeholder="请输入密码" style="width: 143px;">
+		    <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
+		</div><br/>
+		<!--<div class="componentInput verificationCode">
+		    <i class="commonIcon verificationCodeIcon"></i>
+		    <input type="text" placeholder="请输入验证码" style="width: 120px;">
+		    <img src="../images/client/verificationCode.png">
+		</div><br/>-->
+		<a href="javascript:void(0);" class="commonBtn blueBtn" style="width:263px;">登 录</a>
+		<div class="login-attach">			
+			<label class="checkbox active">
+		        <span class="commonIcon checkboxIcon"></span>记住我
+		    </label>
+		    <a class="register-link" href="javascript:;">免费注册</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+
+			setRightNavHeight();
+			setWrapperHeight();
+
+			window.onresize = function(){
+				setRightNavHeight();
+			}
+
+			$(".main-nav .right-nav-icon").click(function(){
+				var $ele = $(this);
+				$(".box-relative-location").css({
+					"top": $ele.position().top + "px"
+				}).show();
+			});
+		});
+
+		function setRightNavHeight() {
+		    if ($(".right-nav-block").length !== 0) {
+		    	$(".right-nav-block").eq(0).css({
+		    		"height": document.documentElement.clientHeight + "px"
+		    		
+		    	});
+
+		    	$(".right-nav-block .main-nav").css({
+		    		"margin-top": ((document.documentElement.clientHeight - 450) / 2) + "px"
+		    	});
+		    }
+		}
+
+		function setWrapperHeight() {
+		    if ($(".main-wrapper").length !== 0) {
+		    	$(".main-wrapper").eq(0).css({
+		    		"min-height": (document.documentElement.clientHeight - 142) + "px"
+		    	});
+		    }
+		}
+	</script>
+	
+</body>
+</html>

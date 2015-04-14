@@ -82,6 +82,12 @@ input[type="text"].verifyBox:focus{
     height: 18px;
     background-position: 0 -212px;
 }
+.personHeaderIcon {
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    background: url(../../images/client/person-header-icon.png) no-repeat 0 0;
+}
 .componentInput input[type="password"],
 .componentInput input[type="text"],
 .componentInput input[type="password"]:focus,
