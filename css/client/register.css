@@ -317,7 +317,10 @@
 }
 .bigBlue11b9b7Btn:hover{
     color: #fff;
-    background: #11b9b7;
+    background: #0c9c9a;
+}
+.bigBlue11b9b7Btn:focus {
+    color: #fff;
 }
 .findPswBox .goBackRow {
      margin-top: 50px;
