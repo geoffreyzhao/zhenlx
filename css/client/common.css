@@ -35,7 +35,7 @@ input[type="password"]:focus{
 }
 .commonIcon{
     display: inline-block;
-    vertical-align: sub;
+    vertical-align: middle;
     background: url("../../images/client/commonIcon.png") no-repeat;
     margin-left: 5px;
     margin-right: 10px;
@@ -88,6 +88,24 @@ input[type="text"].verifyBox:focus{
     height: 20px;
     background: url(../../images/client/person-header-icon.png) no-repeat 0 0;
 }
+.commonIcon.ENIcon {
+    width: 15px;
+    height: 9px;
+    background-position: -149px 0;
+    vertical-align: middle;
+}
+.commonIcon.addRoundnessIcon {
+    width: 19px;
+    height: 19px;
+    background-position: -173px -24px;
+    cursor: pointer;
+}
+.commonIcon.delRoundnessIcon {
+    width: 19px;
+    height: 19px;
+    background-position: -173px 0;
+    cursor: pointer;
+}
 .componentInput input[type="password"],
 .componentInput input[type="text"],
 .componentInput input[type="password"]:focus,
@@ -114,7 +132,8 @@ input[type="text"].verifyBox:focus{
     margin: -6px 1px 0 0;
 }
 
-.componentInput .phoneNumberIcon{
+.componentInput .phoneNumberIcon,
+.commonIcon.phoneNumberIcon{
     width: 14px;
     height: 20px;
     background-position: -24px -24px;
@@ -257,6 +276,12 @@ input[type="text"].verifyBox:focus{
     background-position: -130px 0;
     cursor: pointer;
 }
+.commonIcon.userIcon{
+    width: 14px;
+    height: 18px;
+    background-position: -154px -24px;
+    cursor: pointer;
+}
 .changeViewpoints{
     font-size: 18px;
     color: #a3a3a3;
@@ -294,6 +319,9 @@ input[type="text"].verifyBox:focus{
     width: 18px;
     height: 18px;
     background-position: -48px 0;
+}
+.checkboxContent{
+    display: inline-block;
 }
 .checkboxContent .checkbox{
     color: #11b9b7;

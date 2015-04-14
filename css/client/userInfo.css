@@ -96,19 +96,18 @@
 .dataTab .editModelTab td{
     padding: 10px;
 }
-
 /*  个人资料 end  */
+
 
 /*  常旅客信息 start   */
 .titleContent{
-    margin: 10px 0;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 0 0 15px 20px;
     border-bottom: 1px solid #dfe9e8;
 }
 .titleContent .titleFonts{
     color: #11b9b7;
     font-size: 18px;
-    float: right;
     margin-right: 15px;
 }
 .titleFonts .addIcon{
@@ -117,7 +116,108 @@
     background-position: -132px -24px;
     margin-right: 5px;
 }
-
-
-
+.addTravelerBtn{
+    float: right;
+    cursor: pointer;
+}
+.travelInfoContent{
+    margin: 10px 25px;
+}
+.travelInfoContent li{
+    float: left;
+    width: 265px;
+    height: 115px;
+    margin: 10px;
+    border: 1px solid #d0d0d0;
+    padding-top: 20px;
+    color: #484848;
+    cursor: pointer;
+    position: relative;
+}
+.travelInfoContent li .leftImg,
+.travelInfoContent li .rightFonts{
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.travelInfoContent .leftImg img{
+    width: 72px;
+    height: 72px;
+    margin: 0 5px 0 13px;
+}
+.travelInfoContent .rightFonts div{
+    margin: 4px 0;
+    text-align: left;
+}
+.travelInfoContent .rightFonts div:first-child{
+    margin-top: 0;
+}
+.travelInfoContent .active{
+    border: 2px solid #11b9b7;
+}
+.travelInfoContent .defaultFonts{
+    display: none;
+}
+.travelInfoContent .active .defaultFonts,
+.travelInfoContent .active:hover .hoverContent .defaultFonts{
+    display: inline-block;
+    color: #fff;
+    background-color: #11b9b7;
+    min-width: 50px;
+    min-height: 23px;
+    line-height: 23px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.travelInfoContent li .hoverContent{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8ffffff,endColorstr=#c8ffffff);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.travelInfoContent .hoverContent .hoverBtn{
+    display: inline-block;
+    margin: 35px 0 0 80px;
+}
+.travelInfoContent li:hover .hoverContent{
+    display: block;
+}
+.addTravelerInfoModel{
+    display: none;
+}
+.travelerInfoTab{
+    margin: 10px 0 20px 0;
+    width: 100%;
+}
+.travelerInfoTab th{
+    text-align: right;
+    padding: 10px 5px;
+    color: #9f9f9f;
+}
+.travelerInfoTab th em{
+    font-size: 16px;
+    color: #11b9b7;
+    vertical-align: middle;
+}
+.travelerInfoTab td{
+    color: #484848;
+    padding: 10px 5px;
+}
+.addTrContent:last-child{
+    display: none;
+}
+.saveContentModel{
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid #dfe9e8;
+}
+.saveContentModel .blueBtn{
+    margin-right: 20px;
+}
 /*  常旅客信息 end   */
