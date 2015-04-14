@@ -221,3 +221,121 @@
     margin-right: 20px;
 }
 /*  常旅客信息 end   */
+
+
+/*  完善个人资料--选择头像  start  */
+.sec-tab {
+    padding: 10px 0 15px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dfe9e8;
+}
+.sec-tab span {
+    font-size: 18px;
+    color: #858585;
+    padding: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.sec-tab span.current {
+    color: #11b9b7;
+    border-bottom: 2px solid #11b9b7;
+}
+.default-avatar-list{
+    margin: 60px 50px;
+}
+.default-avatar-item {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    border: 2px solid #fff;
+    position: relative;
+    border-radius: 3px;
+    margin: 10px 8px;
+}
+.default-avatar-item:hover {
+    border-color: #ececec;
+    cursor: pointer;
+}
+.default-avatar-item.current {
+    border-color: #11b9b7;
+}
+.default-avatar-item.current:hover {
+    border-color: #11b9b7;
+}
+.default-avatar-item.current:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background: url(../../images/client/after-reg.png) no-repeat 0 -104px;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    bottom: 0;
+}
+.pickup-default-avatar .changeViewpoints {
+    display: inline-block;
+    margin: 30px 44%;
+}
+.bottom-block {
+    padding: 25px 0 10px;
+    border-top: 1px solid #dfe9e8;
+    text-align: center;
+}
+.bottom-block .commonBtn {
+    margin-right: 8px;
+}
+.upload-avatar .upload-btn input[type='file'] {
+    width: 181px;
+    height: 181px;
+    border-radius: 50%;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+.upload-avatar .upload-block {
+    width: 380px;
+    margin: 20px auto 80px;
+}
+.upload-avatar .upload-btn {
+    display: inline-block;
+    width: 181px;
+    height: 181px;
+    background: url(../../images/client/after-reg.png) no-repeat -119px -119px;
+    float: left
+}
+.upload-avatar .line {
+    display: inline-block;
+    width: 78px;
+    height: 10px;
+    background: url(../../images/client/after-reg.png) no-repeat -221px -91px;
+    margin: 0 10px;
+    float: left;
+    margin-top: 85px;
+}
+.upload-avatar .review-avatar {
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+}
+.upload-avatar .review-avatar .title {
+    font-size: 16px;
+    color: #a3a3a3;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.upload-avatar .review-avatar img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.upload-avatar .upload-tip-text {
+    font-size: 16px;
+    color: #a3a3a3;
+    margin: 10px 0 80px;
+    text-align: center;
+}
+.addHeadPortrait{display: none;}
+/*  完善个人资料--选择头像  end  */

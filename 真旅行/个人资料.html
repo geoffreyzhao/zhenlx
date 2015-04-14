@@ -50,7 +50,7 @@
                                 </li>
                             </ul>
 						</aside>                        
-                        <section class="rightContent">
+                        <section class="rightContent editHeadPortrait">
                             <table class="dataTab">
                                 <colgroup>
                                     <col width="100">
@@ -279,6 +279,72 @@
                                 </tbody>
                             </table>
                         </section>
+                        <section class="rightContent addHeadPortrait">
+                            <div class="sec-tab">
+                                <span class="uploadBtn current">上传头像</span>
+                                <span class="pickupBtn">选择头像</span>
+                            </div>
+
+                            <!--  上传头像  start  -->
+                            <section class="upload-avatar">
+                                <div class="upload-block clearfix">
+                                    <div class="upload-tip-text">( 请使用小于2M的 png,jpg,gif 格式图片 )</div>
+                                    <div class="upload-btn">
+                                        <input type="file" />
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="review-avatar">
+                                        <div class="title">预览</div>
+                                        <img src="../images/client/avatar-01.jpg" alt="">
+                                    </div>
+                                </div>                                
+                            </section>
+                            <!--  上传头像  end  -->
+
+                            <!--  选择默认头像 start -->
+                            <section class="pickup-default-avatar" style="display: none;">
+                                <div class="default-avatar-list">
+                                    <span class="default-avatar-item current">
+                                        <img src="../images/client/avatar-01.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-02.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-03.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-04.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-05.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-06.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-07.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-08.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-09.jpg" alt="">
+                                    </span>
+                                    <span class="default-avatar-item">
+                                        <img src="../images/client/avatar-10.jpg" alt="">
+                                    </span>
+                                </div>
+                                <span class="changeViewpoints">
+                                    <span class="commonIcon changeIcon"></span>换一换
+                                </span>
+                            </section>
+                            <!--  选择默认头像 end -->
+                            <div class="bottom-block">
+                                <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
+                                <a href="javascript:void(0);" class="commonBtn grayBtn">返回</a>
+                            </div>
+                        </section>
 					</div>
 				</div>
 			</div>
@@ -291,7 +357,12 @@
 	</div>
 
 <script>
-    $(function(){
+    $(function(){        
+        //编辑头像
+        $(".headPortraitImg .editHeadPortrait").click(function(){
+            $(this).parents(".editHeadPortrait").hide();
+            $(this).parents(".editHeadPortrait").siblings(".addHeadPortrait").show();
+        });
         
         //编辑昵称
         $(".nicknameContent .editIcon").click(function(){
@@ -380,6 +451,20 @@
         $(".editContent .cancelBtn,.editContent .sureBtn").click(function(){
             $(this).parents(".editContent").hide();
             $(this).parents(".editContent").siblings(".addressContent").show();
+        });
+        
+        //选择头像
+        $(".sec-tab span").click(function(){
+            $(".sec-tab span").removeClass("current");
+            $(this).addClass("current");
+
+            if ($(this).hasClass("uploadBtn")) {
+                $(".pickup-default-avatar").hide();
+                $(".upload-avatar").show();
+            } else if ($(this).hasClass("pickupBtn")) {
+                $(".upload-avatar").hide();
+                $(".pickup-default-avatar").show();
+            }
         });
         
     });
