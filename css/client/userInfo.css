@@ -108,6 +108,7 @@
 .titleContent .titleFonts{
     color: #11b9b7;
     font-size: 18px;
+    font-weight: normal;
     margin-right: 15px;
 }
 .titleFonts .addIcon{
