@@ -412,7 +412,7 @@ header {
 header .head {
 	width: 1130px;
 	margin: 0 auto;
-	padding: 12px 0;
+	padding: 7px 0;
 }
 
 .logo {
@@ -420,6 +420,8 @@ header .head {
 	width: 133px;
 	height: 47px;
 	background: url(../../images/client/logo.png) no-repeat;
+    float: left;
+    margin-top: 6px;
 }
 
 .main-container {
