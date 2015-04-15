@@ -524,3 +524,41 @@ header .head {
 }
 
 /*  头尾 背景 边框线  等公共样式   end   */
+
+
+/*  翻页样式 start */
+.pagination{
+    display: block;
+    font-size: 14px;
+    padding: 13px 15px 0;
+    margin: 15px 0 0;
+    border-top: 1px solid #dfe9e8;
+    text-align: right;
+}
+.pagination .countNumber{
+    margin: 0 15px;
+}
+.countNumber .blueFonts{
+    color: #11b9b7;
+    margin: 0 5px;
+}
+.pagination .pageSize{
+    margin-right: 20px;
+}
+.pagination .pageSize a{
+    display: inline-block;
+    min-width: 25px;
+    padding: 3px 5px;
+    margin: 0 3px;
+    text-align: center;
+    color: #676767;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.pagination .pageSize a:hover,
+.pagination .pageSize a.active{
+    background-color: #11b9b7;
+    color: #fff;
+}
+/*  翻页样式 end */
