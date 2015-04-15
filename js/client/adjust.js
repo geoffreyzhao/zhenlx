@@ -15,8 +15,18 @@ $(function(){
 
 function setWrapperHeight() {
     if ($(".main-wrapper").length !== 0) {
+
+        var wrapperHeight = document.documentElement.clientHeight - 142;
+        var mainBoxHeight = 0;
+
+        if ($(".main-box").length !== 0) {
+            mainBoxHeight = $(".main-box").height() + 60;
+        }
+
+        wrapperHeight = (wrapperHeight <= mainBoxHeight) ? mainBoxHeight : wrapperHeight;
+
     	$(".main-wrapper").eq(0).css({
-    		"min-height": (document.documentElement.clientHeight - 142) + "px"
+    		"min-height": wrapperHeight + "px"
     	});
     }
 }
