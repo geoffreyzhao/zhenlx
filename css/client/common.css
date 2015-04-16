@@ -539,19 +539,37 @@ header .head {
 .top-nav-item {
     font-size: 20px;
     color: #7f7f7f;
-    margin-right: 15px;
-    padding: 15px 8px 18px 8px;
+    padding: 15px 16px 18px 15px;
     float: left;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
+
+    -webkit-transition: color .25s ease;
+       -moz-transition: color .25s ease;
+        -ms-transition: color .25s ease;
+         -o-transition: color .25s ease;
+            transition: color .25s ease;
 }
 
-.top-nav-item.current {
-    background-color: #11b9b7;
+.top-nav-item:hover {
     color: #fff;
 }
 
-.top-nav .current-style {
-    background-color: #11b9b7;
+.top-nav-item.current {
+    color: #fff;
+}
+
+.top-nav-item.stay {
+    color: #7f7f7f;
+}
+
+.top-nav .slider {
+    background: #11b9b7; 
+    height: 61px;
+    z-index: 1;
+    position: absolute;
+    float: left;
 }
 
 /*  头尾 背景 边框线  等公共样式   end   */

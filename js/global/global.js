@@ -1,15 +1,23 @@
 /*   真旅行公共功能 （包含客户端及后台维护）   */
 
 (function($) {
-	$.fn.lavaLamp = function(o) {
-	    o = $.extend({ fx: "linear", speed: 500, click: function(){} }, o || {});
+	$.fn.slideNav = function(o) {
+	    o = $.extend({
+	    		fx: "linear", 
+	    		speed: 500, 
+	    		click: function(){
+
+	    		}
+	    	}, o || {});
 
 	    return this.each(function() {
-	        var me = $(this), noop = function(){},
-	            $back = $('<li class="back"><div class="left"></div></li>').appendTo(me),
-	            $li = $("li", this), curr = $("li.current", this)[0] || $($li[0]).addClass("current")[0];
+	        var me = $(this), 
+	        	noop = function(){},
+	            $slider = $(this).children('.slider'),
+	            $li = $("li", this), 
+	            curr = $("li.current", this)[0] || $($li[0]).addClass("current")[0];
 
-	        $li.not(".back").hover(function() {
+	        $li.not(".slider").hover(function() {
 	            move(this);
 	        }, noop);
 
@@ -25,17 +33,26 @@
 	        setCurr(curr);
 
 	        function setCurr(el) {
-	            $back.css({ "left": el.offsetLeft+"px", "width": el.offsetWidth+"px" });
+	            me.children('.stay').removeClass('stay');
+	            $slider.css({ "left": el.offsetLeft+"px", "width": el.offsetWidth+"px" });
 	            curr = el;
+	            me.children('li').removeClass('current');
+	            $(el).addClass("current");
 	        };
 
 	        function move(el) {
-	            $back.each(function() {
-	                $.dequeue(this, "fx"); }
-	            ).animate({
+	            $slider.each(function() {
+	                $(this).dequeue();
+	            }).animate({
 	                width: el.offsetWidth,
 	                left: el.offsetLeft
 	            }, o.speed, o.fx);
+
+	            if (!$(el).hasClass("current")) {
+	            	$(curr).addClass("stay");
+	            } else  {
+	            	$(curr).removeClass("stay");
+	            }
 	        };
 
 	    });
