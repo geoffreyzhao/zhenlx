@@ -9,11 +9,6 @@ $(function(){
         $(this).parents(".componentInput").removeClass("addBorder")
         });
     
-    $(".componentInput .getVerificationCode").click(function(){
-        $(this).addClass("retry");
-        $(this).html("<span>58</span>s后重新尝试")
-    });
-
     //单选框
     $(".radioContent .radio").click(function(){
         $(this).addClass("active");

@@ -13,13 +13,15 @@
 }
 .registerForm .mobileRow {
     margin-bottom: 26px;
-    margin-top: 15px;
 }
 .registerForm .messageCodeRow {
     margin-bottom: 26px;
 }
 .registerForm .buttonRow {
    margin-bottom: 84px;
+}
+.registerForm .errorBoxContent {
+    margin-bottom: 15px;
 }
 .registerErrorBox .errorIcon {
     background: url("../../images/client/registerIconSprite.png") no-repeat 0 -29px;
@@ -256,6 +258,9 @@
     position: relative;
     margin-top: 55px;
     padding-bottom: 25px;
+}
+.findPswBox .errorBoxContent {
+    margin-bottom: 15px;
 }
 .findByMobile, .findByEmail {
     border:1px solid #d0d0d0;
