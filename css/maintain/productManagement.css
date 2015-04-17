@@ -5,20 +5,28 @@
 .headSecondLevel .operationDiv {
     float: right;
     display: inline;
-    margin:5px 10px 0 0;
+    margin:7px 10px 0 0;
+    padding: 0 15px;
     height: 35px;
-    line-height: 35px;
+    line-height: 33px;
     background: #f1f1f1;
     border: 1px solid #337da6;
     color: #1ea483;
     font-size: 16px;
     text-align: center;
 }
-
-/* 产品列表 E */
-
-
-/*  会员管理 start  */
+.headSecondLevel .operationDiv:hover {
+    background: #fff;
+    cursor: pointer;
+}
+.headSecondLevel .plusIcon {
+    background: url("../../images/commonIcon.png") no-repeat 0 -131px;
+    width:14px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
 .whiteBg{
     background-color: #fff;
     padding: 10px;
@@ -67,48 +75,15 @@
     margin-right: 10px;
     vertical-align: middle;
 }
-.operationBtn{
-    margin-bottom: 10px;
+
+.searchList .searchTab .fitToTr td, .searchList .searchTab .fitToTr th {
+    padding-top:0px;
 }
-.operationBtn a{
-    font-size: 14px;
-    margin-right: 10px;
-    color: #3287d6;
-    display: inline-block;
-    min-width: 50px;
-    padding: 4px;
-    text-align: center;
+.productTab th {
+    color: #444;
 }
-.operationBtn a:hover,
-.operationBtn a.active{
-    background-color: #e5f6fe;
-    outline: none;
-}
-.operationBtn a:focus{
-    outline: none;
-}
-.commonTab{
-    width: 100%;
-}
-.commonTab .sortArrow{
-    display: inline-block;
-    width: 9px;
-    height: 13px;
-    vertical-align: middle;
-    margin-left: 5px;
-    background: url("../../images/commonIcon.png") no-repeat;
-}
-.sortArrow.upGray{
-    background-position: -38px 0;
-}
-.sortArrow.downGray{
-    background-position: -52px 0;
-}
-.sortArrow.allGray{
-    background-position: -65px 0;
-}
-.sortArrow.allOrange{
-    background-position: -78px 0;
+.productTab td {
+    color: #666;
 }
 .commonTab td,
 .commonTab th{
@@ -138,14 +113,18 @@
     color: #666666;
     text-decoration: underline;
 }
-.commonTab .grayFontsNoLink{
-    cursor: default;
-    color: #b0b0b0;
+.commonTab .fcf78c68 {
+    color: #f78c68;
 }
-.commonTab .grayFontsNoLink:hover{
-    color: #b0b0b0;
-    text-decoration: none;
+.commonTab .fcaaa {
+    color: #aaa;
 }
-/*  会员管理 end  */
+.commonTab .fs14 {
+    font-size: 14px;
+}
+/* 产品列表 E */
+
+
+
 
 

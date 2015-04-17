@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>B2C 真旅行后台 产品管理 产品列表</title>
+    <title>B2C 真旅行后台 产品管理 酒店资源</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="headSecondLevel">
-                <div class="operationDiv"><i class="plusIcon"></i>添加自由行</div>
+                <div class="operationDiv"><i class="plusIcon"></i>添加酒店</div>
             </div>
         </header>
         <div class="main-container">
@@ -182,69 +182,12 @@
                             </colgroup>
                             <tbody>
                             <tr>
-                                <th>产品标题</th>
+                                <th>酒店名称</th>
                                 <td>
                                     <input type="text"/>
                                 </td>
                             </tr>
                             <tr>
-                                <th>产品类型</th>
-                                <td>
-                                    <div class="dropdown" style="width: 200px;">
-                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                            <span class="activeFonts">全部</span>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="active"><a href="javascript:void(0);">全部</a></li>
-                                            <li><a href="javascript:void(0);">自由行</a></li>
-                                            <li><a href="javascript:void(0);">周边游</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <table class="searchTab">
-                            <colgroup>
-                                <col width="80">
-                                <col width="140">
-                            </colgroup>
-                            <tbody>
-                            <tr>
-                                <th>出 发 地</th>
-                                <td>
-                                    <div class="dropdown" style="width: 110px;">
-                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                            <span class="activeFonts">全部</span>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="active"><a href="javascript:void(0);">全部</a></li>
-                                            <li><a href="javascript:void(0);">上海</a></li>
-                                            <li><a href="javascript:void(0);">北京</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>产品主题</th>
-                                <td>
-                                    <div class="dropdown" style="width: 110px;">
-                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                            <span class="activeFonts">全部</span>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="active"><a href="javascript:void(0);">全部</a></li>
-                                            <li><a href="javascript:void(0);">轻度探险</a></li>
-                                            <li><a href="javascript:void(0);">冒险刺激</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
                             </tbody>
                         </table>
                     </li>
@@ -272,7 +215,7 @@
                                     </div>
                                     <div class="dropdown" style="width: 110px;">
                                     <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                        <span class="activeFonts">不限</span>
+                                        <span class="activeFonts">新加坡</span>
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -283,7 +226,7 @@
                                     </div>
                                     <div class="dropdown" style="width: 110px;">
                                         <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                            <span class="activeFonts">不限</span>
+                                            <span class="activeFonts">新加坡</span>
                                             <span class="caret"></span>
                                         </a>
                                         <ul class="dropdown-menu">
@@ -298,22 +241,6 @@
                                 </td>
                             </tr>
                             <tr class="fitToTr">
-                                <th>状  态</th>
-                                <td class="radioList">
-                                    <label class="radio active">
-                                        <span class="radioIcon"></span>
-                                        <span class="labelFonts">草稿</span>
-                                    </label>
-                                    <label class="radio">
-                                        <span class="radioIcon"></span>
-                                        <span class="labelFonts">上线</span>
-                                    </label>
-                                    <label class="radio">
-                                        <span class="radioIcon"></span>
-                                        <span class="labelFonts">关闭</span>
-                                    </label>
-                                </td>
-                            </tr>
                             </tbody>
                         </table>
                     </li>
@@ -322,133 +249,99 @@
                     <table class="commonTab productTab">
                         <colgroup>
                             <col width="9%">
-                            <col width="24%">
+                            <col width="11%">
                             <col width="8%">
                             <col width="8%">
                             <col width="6%">
+                            <col width="5%">
                             <col width="14%">
                             <col width="9%">
-                            <col width="9%">
-                            <col width="5%">
+                            <col width="24%">
                             <col width="">
                         </colgroup>
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>产品名称</th>
-                            <th>产品主题</th>
-                            <th>产品类型</th>
-                            <th>出发地</th>
-                            <th>目的地</th>
-                            <th>创建时间</th>
-                            <th>修改时间</th>
-                            <th>状态</th>
+                            <th>酒店名称</th>
+                            <th>国家</th>
+                            <th>城市/景点</th>
+                            <th>酒店类型</th>
+                            <th>星级</th>
+                            <th>卖点</th>
+                            <th>电话</th>
+                            <th>地址</th>
                             <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>23123123</td>
-                            <td class="fs14">&lt;冰岛7晚9日自由行&gt;极近天然，情迷北欧 上海出发</td>
-                            <td>轻度冒险</td>
-                            <td>自由行</td>
-                            <td>上海市</td>
-                            <td>欧洲/冰岛/雷克亚维克</td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td><span>上线</span></td>
-                            <td>
-                                <a href="javascript:void(0);" class="greenFontsLink">编辑</a>
-                                <a href="javascript:void(0);" class="greenFontsLink">下线</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>65410323</td>
-                            <td class="fs14">&lt;冰岛7晚9日自由行&gt;极近天然，情迷北欧 上海出发</td>
-                            <td>轻度冒险</td>
-                            <td>自由行</td>
-                            <td>上海市</td>
-                            <td>欧洲/冰岛/雷克亚维克</td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td><span class="fcf78c68">草稿</span></td>
+                            <td>J22222</td>
+                            <td>广岛王子酒店</td>
+                            <td>日本</td>
+                            <td>广岛</td>
+                            <td>星级酒店</td>
+                            <td>五星</td>
+                            <td>海岛/浪漫</td>
+                            <td>18622334587</td>
+                            <td class="fs14">北海道，旭川市，6-9-1Asahikawa City Hokkaido</td>
                             <td>
                                 <a href="javascript:void(0);" class="greenFontsLink">编辑</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>5656222</td>
-                            <td class="fs14">&lt;冰岛7晚9日自由行&gt;极近天然，情迷北欧 上海出发</td>
-                            <td>轻度冒险</td>
-                            <td>自由行</td>
-                            <td>上海市</td>
-                            <td>欧洲/冰岛/雷克亚维克</td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td><span>下线</span></td>
+                            <td>J22222</td>
+                            <td>神农架凯旋大酒店</td>
+                            <td>美国</td>
+                            <td>济州岛</td>
+                            <td>星级酒店</td>
+                            <td>五星</td>
+                            <td>早餐好/免费机场接送怕啥有可能比较多会回行</td>
+                            <td>18622334587</td>
+                            <td class="fs14">北海道，旭川市，6-9-1Asahikawa City Hokkaido</td>
                             <td>
                                 <a href="javascript:void(0);" class="greenFontsLink">编辑</a>
-                                <a href="javascript:void(0);" class="greenFontsLink ac-online">上线</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>23123123</td>
-                            <td class="fs14">&lt;冰岛7晚9日自由行&gt;极近天然，情迷北欧 上海出发</td>
-                            <td>轻度冒险</td>
-                            <td>自由行</td>
-                            <td>上海市</td>
-                            <td>欧洲/冰岛/雷克亚维克</td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td><span>上线</span></td>
+                            <td>J22222</td>
+                            <td>HOTEL GOOD INN</td>
+                            <td>墨尔本</td>
+                            <td>神龙架</td>
+                            <td>星级酒店</td>
+                            <td>五星</td>
+                            <td>早餐好/免费机场接送</td>
+                            <td>18622334587</td>
+                            <td class="fs14">海市呼兰西路123号4号楼</td>
                             <td>
                                 <a href="javascript:void(0);" class="greenFontsLink">编辑</a>
-                                <a href="javascript:void(0);" class="greenFontsLink">下线</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>23123123</td>
-                            <td class="fs14">&lt;冰岛7晚9日自由行&gt;极近天然，情迷北欧 上海出发</td>
-                            <td>轻度冒险</td>
-                            <td>自由行</td>
-                            <td>上海市</td>
-                            <td>欧洲/冰岛/雷克亚维克</td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td class="fs14">
-                                <div>2015-03-25</div>
-                                <div>12:23:26</div>
-                            </td>
-                            <td><span class="fcaaa">关闭</span></td>
+                            <td>J22222</td>
+                            <td>广岛酒店</td>
+                            <td>韩国</td>
+                            <td>神龙架</td>
+                            <td>星级酒店</td>
+                            <td>五星</td>
+                            <td>早餐好/免费机场接送</td>
+                            <td>18622334587</td>
+                            <td class="fs14">北海道，旭川市，6-9-1Asahikawa City Hokkaido</td>
                             <td>
                                 <a href="javascript:void(0);" class="greenFontsLink">编辑</a>
-                                <a href="javascript:void(0);" class="greenFontsLink ac-issue">发布</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>J22222</td>
+                            <td>快捷酒店</td>
+                            <td>韩国</td>
+                            <td>神龙架</td>
+                            <td>星级酒店</td>
+                            <td>五星</td>
+                            <td>早餐好</td>
+                            <td>18622334587</td>
+                            <td class="fs14">北海道，旭川市，6-9-1Asahikawa City Hokkaido</td>
+                            <td>
+                                <a href="javascript:void(0);" class="greenFontsLink">编辑</a>
                             </td>
                         </tr>
                         </tbody>
@@ -507,79 +400,6 @@
         </div>
         <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
     </div>
-
-    <div class="modal hide fade" id="ac-online">
-        <div class="modal-dialog" style="width: 500px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">操作提示</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="popupContainer">
-                        <i class="warnIcon"></i>
-                        <span class="popupContainer-fonts">确认将产品上线吗？</span>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="commonButton red-fe6869Button">确定</button>
-                    <button type="button" class="commonButton blue-45c8dcButton">取消</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal hide fade" id="ac-issue">
-        <div class="modal-dialog" style="width: 500px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">操作提示</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="popupContainer">
-                        <i class="warnIcon"></i>
-                        <span class="popupContainer-fonts">确认要发布产品吗？</span>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="commonButton red-fe6869Button">确定</button>
-                    <button type="button" class="commonButton blue-45c8dcButton">取消</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    $(function(){
-        $(".radioList .radio").click(function(){
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-        });
-        
-        $(".allCheckbox").click(function(){
-            $(this).toggleClass("active");
-            if ($(this).hasClass("active")) {
-                $(this).parents("table").find(".checkbox").addClass("active");
-            } else {
-                $(this).parents("table").find(".checkbox").removeClass("active");
-            }
-        });
-        
-        $(".ac-online").click(function(){
-            $("#ac-online").modal();
-        });
-
-        $(".ac-issue").click(function(){
-            $("#ac-issue").modal();
-        });
-        
-    });
-</script>
 
 </body>
 </html>
