@@ -85,6 +85,9 @@
 .productTab td {
     color: #666;
 }
+.commonTab {
+    width:100%;
+}
 .commonTab td,
 .commonTab th{
     border: 1px solid #eaeaea;
