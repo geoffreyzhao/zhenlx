@@ -1,9 +1,7 @@
 $(function(){
 
-    // setTimeout(function(){
-	   setWrapperHeight();
-	   setMainBoxPosition();
-    // }, 100)
+    setWrapperHeight();
+    setMainBoxPosition();
 
 	window.onresize = function(){
 		setWrapperHeight();
@@ -21,17 +19,11 @@ function setWrapperHeight() {
         var wrapperHeight = document.documentElement.clientHeight - 142;
         var mainBoxHeight = 0;
 
-        console.log(wrapperHeight);
-
         if ($(".main-box").length !== 0) {
             mainBoxHeight = $(".main-box").height() + 60;
         }
 
-        console.log(mainBoxHeight);
-
         wrapperHeight = (wrapperHeight <= mainBoxHeight) ? mainBoxHeight : wrapperHeight;
-
-        console.log(wrapperHeight);
 
     	$(".main-wrapper").eq(0).css({
     		"min-height": wrapperHeight + "px"
