@@ -128,6 +128,152 @@
 /* 产品列表 E */
 
 
+/*  添加酒店资源 start  */
+.noBorderCommonTab th{
+    padding: 10px 5px;
+    text-align: right;
+    color: #666666;
+}
+.noBorderCommonTab td{
+    padding: 10px 5px;
+}
+.noBorderCommonTab .horizontalLine{
+    display: inline-block;
+    margin: 10px 5px 0;
+    vertical-align: middle;
+}
+.noBorderCommonTab .mapLook{
+    margin-left: 20px;
+    color: #3896d0;
+}
+.noBorderCommonTab .replaceTh{
+    color: #666666;
+    display: inline-block;
+    width: 105px;
+    text-align: right;
+    margin-right: 5px;
+}
+.noBorderCommonTab th.verticalTop{
+    vertical-align: top;
+    padding-top: 20px;
+}
+.noBorderCommonTab th.verticalTop.paddingTop10{
+    padding-top: 10px;
+}
+.noBorderCommonTab td textarea{
+    padding: 10px;
+    resize: none;
+    border: 1px solid #dadada;
+    color: #666666;
+}
+.noBorderCommonTab input{
+    color: #666666;
+}
+.noBorderCommonTab .hotelDescribe{
+    width: 717px;
+    height: 140px;
+}
+.noBorderCommonTab .hotelImgList{
+    margin: 10px 0 -10px;
+}
+.noBorderCommonTab .hotelImgList{
+    max-width: 1100px;
+}
+.hotelImgList li{
+    float: left;
+    display: inline-block;
+    padding-bottom: 20px;
+    margin: 0 10px 10px 0;
+    position: relative;
+}
+.hotelImgList li img{
+    width: 210px;
+    height: 140px;
+}
+.hotelImgList .hoverDelete{
+    display: none;
+    color: #9c9c9c;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+}
+.hotelImgList li:hover .hoverDelete{
+    display: block;
+}
+.hoverDelete .delIcon{
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    background: url("../../images/commonIcon.png") no-repeat -85px -18px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.hotelImgList li .upLoading{
+    font-size: 0;
+    text-indent: -99999px;
+    width: 210px;
+    height: 140px;
+    background: #f5f5f5 url("../../images/uploadIcon.png") no-repeat 50%;
+    cursor: pointer;
+    outline: none;
+}
+.hotelImgList li .upLoading:hover{
+    background-color: #f1f1f1;
+}
+.hotelImgList li .upLoading:focus{
+    outline: none;
+}
+.hotelImgList .addImg{
+    display: inline-block;
+    width: 210px;
+    height: 140px;
+    background: #f9f9f9 url("../../images/bigAddIcon.png") no-repeat 50%;
+    cursor: pointer;
+}
+.hotelImgList .addImg:hover{
+    background: #f9f9f9 url("../../images/bigAddIconHover.png") no-repeat 50%;
+}
+.facilityContent textarea{
+    width: 870px;
+    height: 165px;
+}
+.noBorderCommonTab .facilityList{
+    margin: 0;
+}
+.facilityList li{
+    display: inline-block;
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #dadada;
+    border-left: none;
+    border-bottom: none;
+    background-color: #f1f1f1;
+    color: #666666;
+    cursor: pointer;
+}
+.facilityList li:first-child{
+    border-left: 1px solid #dadada;
+}
+.facilityList li:hover{
+    color: #666;
+    background-color: #fafafa;
+}
+.facilityList li.active{
+    color: #fff;
+    background-color: #428eb8;
+    border-top: 1px solid #428eb8;
+}
+.noBorderCommonTab .noticeTextarea{
+    width: 870px;
+    height: 100px;
+}
+/*  添加酒店资源 end  */
+
 
 
 
