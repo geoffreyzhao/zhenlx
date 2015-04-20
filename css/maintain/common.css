@@ -219,6 +219,15 @@ input[type="text"]:focus{
 .main-container{
     margin-top: 50px;
 }
+.main-header .headSecondLevel.headBtn{
+    padding: 7px 10px 0;
+    background-color: #e5f6fe;
+    bottom: -55px;
+    height: 55px;
+}
+.main-container.changeMainContent{
+    margin: 115px 10px 0;
+}
 
 /* 媒体查询导航条 start */
 @media screen and (max-width: 800px),
@@ -262,6 +271,12 @@ screen and (min-width:801px) and (max-width:1020px){
         top: 10px;
         right: 20px;
     }
+    .main-header .headSecondLevel.headBtn{
+        bottom: -20px;
+    }
+    .main-container.changeMainContent{
+        margin-top: 140px;
+    }
 }
 
 @media screen and (min-width:1021px) and (max-width:1170px){
@@ -278,6 +293,9 @@ screen and (min-width:801px) and (max-width:1020px){
         position: absolute;
         top: 18px;
         right: 20px;
+    }
+    .main-header .headSecondLevel.headBtn{
+        bottom: -20px;
     }
 }
 /* 媒体查询导航条 end */
@@ -722,10 +740,6 @@ input[type="text"].verifyBox:focus{
 
 
 /*  头部没有背景条的按钮 start  */
-.main-header .headSecondLevel.headBtn{
-    padding: 10px 10px 0;
-    background-color: #e5f6fe;
-}
 .headBtn .leftBtn{
     float: left;
 }
@@ -748,9 +762,5 @@ input[type="text"].verifyBox:focus{
 }
 .headBtn .rightBtn{
     float: right;
-}
-.main-container.changeMainContent{
-    margin-left: 10px;
-    margin-right: 10px;
 }
 /*  头部没有背景条的按钮 end  */
