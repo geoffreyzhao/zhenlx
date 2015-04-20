@@ -581,7 +581,7 @@
 
         $(".lightBlueBtn").click(function(){
             var validateResult = $("#searchConditionForm").customValidate({
-                validateAll: true  // default: true
+                validateAll: false  // default: true
             });
             console.log(validateResult);   //  表单验证通过返回 ture, 否则返回 false
         });

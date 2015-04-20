@@ -75,6 +75,9 @@
 					var $this = $ve;
 
 					if (!$this.find("li.active").attr('name')) {
+
+						result = false;
+						
 						$this.parent("div.dropdown").after($("<div class='verifyStyle' style='width: " + $this.outerWidth() + "px;'>" 
 						+"<i class='verifyIcon'></i><span class='verifyFonts'>"
 						+validatorTitle+"不能为空</span></div>"));

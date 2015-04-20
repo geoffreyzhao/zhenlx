@@ -1,7 +1,9 @@
 $(function(){
 
-	setWrapperHeight();
-	setMainBoxPosition();
+    setTimeout(function(){
+	   setWrapperHeight();
+	   setMainBoxPosition();
+    }, 100)
 
 	window.onresize = function(){
 		setWrapperHeight();
