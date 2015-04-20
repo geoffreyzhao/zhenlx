@@ -19,6 +19,7 @@
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="../js/maintain/common.js"></script>
+    <script type="text/javascript" src="../js/maintain/customValidator.js"></script>
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
@@ -177,6 +178,7 @@
         </header>
         <div class="main-container">
             <section class="whiteBg">
+            <form id="searchConditionForm">
                 <ul class="searchList clearfix">
                     <li>
                         <table class="searchTab">
@@ -188,19 +190,19 @@
                             <tr>
                                 <th>真实姓名</th>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" data-cv="required" data-ct="真实姓名">
                                 </td>
                             </tr>
                             <tr>
                                 <th>手 机 号</th>
                                 <td>
-                                    <input type="text" value="13698524655">
+                                    <input type="text" value="" data-cv="required,cellphone" data-ct="手机号">
                                 </td>
                             </tr>
                             <tr>
                                 <th>会员 ID</th>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" data-cv="required" data-ct="会员号">
                                 </td>
                             </tr>
                             </tbody>
@@ -216,13 +218,13 @@
                             <tr>
                                 <th>昵  称</th>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" data-cv="">
                                 </td>
                             </tr>
                             <tr>
                                 <th>邮  箱</th>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" data-cv="required,email" data-ct="邮箱">
                                 </td>
                             </tr>
                             <tr>
@@ -280,10 +282,10 @@
                                             <span class="activeFonts">全部</span>
                                             <span class="caret"></span>
                                         </a>
-                                        <ul class="dropdown-menu">
+                                        <ul class="dropdown-menu" data-cv="required" data-ct="省份">
                                             <li class="active"><a href="javascript:void(0);">全部</a></li>
-                                            <li><a href="javascript:void(0);">上海市</a></li>
-                                            <li><a href="javascript:void(0);">北京市</a></li>
+                                            <li name="11001"><a href="javascript:void(0);">上海市</a></li>
+                                            <li name="11002"><a href="javascript:void(0);">北京市</a></li>
                                         </ul>
                                     </div>
                                     <div class="dropdown" style="width: 110px;">
@@ -303,6 +305,7 @@
                         </table>
                     </li>
                 </ul>
+            </form>
                 <section class="clearfix">
                     <div class="operationBtn">
                         <a href="javascript:void(0);" class="active ac-hangUp">挂起</a>
@@ -575,6 +578,14 @@
         $(".ac-hangUp").click(function(){
             $("#ac-hangUp").modal();
         });
+
+        $(".lightBlueBtn").click(function(){
+            var validateResult = $("#searchConditionForm").customValidate({
+                validateAll: true  // default: true
+            });
+            console.log(validateResult);   //  表单验证通过返回 ture, 否则返回 false
+        });
+
         
     });
 </script>
