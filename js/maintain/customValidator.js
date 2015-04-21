@@ -51,7 +51,7 @@
 						}
 
 						if (validatorValues[j] == "cellphone") {  //  手机号验证
-							if (!cellphoneReg.test(val)) {
+							if (val != "" && !cellphoneReg.test(val)) {
 								geneErrorEle($this, "手机号格式错误");								
 								result = false;
 								break forValidatorValues;
@@ -61,7 +61,7 @@
 						}
 
 						if (validatorValues[j] == "email") {  //  邮箱验证
-							if (!emailReg.test(val)) {
+							if (val != "" && !emailReg.test(val)) {
 								geneErrorEle($this, "邮箱格式错误");								
 								result = false;
 								break forValidatorValues;

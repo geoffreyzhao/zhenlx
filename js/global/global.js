@@ -4,7 +4,8 @@
 	$.fn.slideNav = function(o) {
 	    o = $.extend({
 	    		fx: "linear", 
-	    		speed: 500, 
+	    		speed: 500,
+	    		changeTextColor: false,
 	    		click: function(){
 
 	    		}
@@ -15,7 +16,8 @@
 	        	noop = function(){},
 	            $slider = $(this).children('.slider'),
 	            $li = $("li", this), 
-	            curr = $("li.current", this)[0] || $($li[0]).addClass("current")[0];
+	            curr = $("li.current", this)[0] || $($li[0]).addClass("current")[0],
+	            liTextColor = $("li", this).not(".current").not(".slider").css("color");
 
 	        $li.not(".slider").hover(function() {
 	            move(this);
@@ -33,8 +35,7 @@
 	        setCurr(curr);
 
 	        function setCurr(el) {
-	            me.children('.stay').removeClass('stay');
-	            $slider.css({ "left": el.offsetLeft+"px", "width": el.offsetWidth+"px" });
+	            $slider.css({ "left": el.offsetLeft+"px" });
 	            curr = el;
 	            me.children('li').removeClass('current');
 	            $(el).addClass("current");
@@ -44,15 +45,20 @@
 	            $slider.each(function() {
 	                $(this).dequeue();
 	            }).animate({
-	                width: el.offsetWidth,
 	                left: el.offsetLeft
 	            }, o.speed, o.fx);
 
-	            if (!$(el).hasClass("current")) {
-	            	$(curr).addClass("stay");
-	            } else  {
-	            	$(curr).removeClass("stay");
+	            if (!!o.changeTextColor && typeof(o.changeTextColor) == "string") {
+
+		            $(el).animate({
+		            	color: o.changeTextColor
+		            }, o.speed).dequeue();
+
+		            $(el).siblings('li').not(".slider").animate({
+		            	color: liTextColor
+		            }, o.speed).dequeue();
 	            }
+
 	        };
 
 	    });

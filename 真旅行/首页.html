@@ -18,6 +18,7 @@
     <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/jquery.color-2.1.2.min.js"></script>
     <script type="text/javascript" src="../js/global/global.js"></script>
     <script type="text/javascript" src="../js/client/common.js"></script>
 
@@ -119,9 +120,7 @@
 			$(".top-nav-list").slideNav({
 				fx: "swing", 
 				speed: 300,
-				click: function(event, menuItem) {
-					return true;
-				}
+				changeTextColor: "#fff"
 			});
 		});
 
