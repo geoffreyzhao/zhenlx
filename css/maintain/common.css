@@ -64,7 +64,13 @@ input[type="text"]:focus{
     background: url("../../images/commonIcon.png") no-repeat -23px -62px;
     margin: 0;
 }
-.checkbox.active{
+.checkboxContent .checkbox .checkboxIcon{
+    width: 18px;
+    height: 18px;
+    background: url("../../images/commonIcon.png") no-repeat -23px -62px;
+}
+.checkbox.active,
+.checkboxContent .checkbox.active .checkboxIcon{
     background-position: 0 -62px;
 }
 .hasIcon{
@@ -74,7 +80,19 @@ input[type="text"]:focus{
     background: url("../../images/datepicker.png") no-repeat 97% center;
     vertical-align: middle;
 }
-
+.checkboxContent{
+    display: inline-block;
+}
+.checkboxContent .checkbox{
+    display: inline-block;
+    color: #666;
+    width: auto;
+    position: inherit;
+    background: none;
+}
+.checkboxContent .checkbox .commonIcon{
+    margin-right: 10px;
+}
 
 /*  页面头 start */
 .navLeft{
@@ -233,6 +251,53 @@ input[type="text"]:focus{
 }
 .main-container.changeMainContent{
     margin: 115px 10px 0;
+}
+.middleContent{
+    float: left;
+    margin-left: 60px;
+}
+.middleContent li{
+    display: inline-block;
+    position: relative;
+}
+.middleContent li a{
+    display: inline-block;
+    color: #598193;
+    min-width: 95px;
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    background-color: #d4ecf7;
+    border: 2px solid #d4ecf7;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.middleContent li a:hover{
+    color: #598193;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+.middleContent li.active a{
+    background-color: #fff;
+    border: 2px solid #57bff0;
+}
+.middleContent li.active .downArrowIcon{
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    background: url("../../images/commonIcon.png") no-repeat -91px 0;
+    vertical-align: middle;
+    position: absolute;
+    bottom: -8px;
+    left: 45%;
+}
+.hoveringModel{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 /* 媒体查询导航条 start */
@@ -475,6 +540,15 @@ screen and (min-width:801px) and (max-width:1020px){
 .blue-45c8dcButton:hover {
     background: #2ebacf;
 }
+.whiteAddIcon{
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    background: url("../../images/commonIcon.png") no-repeat -20px -131px;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -2px;
+}
 .gray-bbbButton {
     background: #bbb;
 }
@@ -497,6 +571,14 @@ screen and (min-width:801px) and (max-width:1020px){
 }
 .lightBlue-b6d7e7Btn:hover{
     background-color: #a5c7d8;
+}
+.whiteBtn{
+    background-color: #fff;
+    color: #d0d0d0;
+}
+.whiteBtn:hover{
+    background-color: #45c8dc;
+    color: #fff;
 }
 /* button E */
 

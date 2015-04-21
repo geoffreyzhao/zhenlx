@@ -46,6 +46,17 @@ $(function() {
         $thisParents.addClass("active");
         $thisParents.siblings().removeClass("active");
     });
+
+    //单选框
+    $(".radioContent .radio").click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+    });
+
+    //复选框
+    $(".checkboxContent .checkbox").click(function(){
+        $(this).toggleClass("active");
+    });
     
     
 });

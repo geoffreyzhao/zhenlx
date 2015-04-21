@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 产品管理 新增产品-基本信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.tagsinput.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/productManagement.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+    <script type="text/javascript" src="../../js/vendor/jquery.tagsinput.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+        
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header hoveringModel">
+            <div class="stairMenuContent">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel headBtn clearfix">
+                <span class="leftBtn">
+                    <a href="javascript:void(0);" class="returnBtn">< 返回</a>
+                </span>
+                <ul class="middleContent">
+                    <li class="active">
+                        <a href="javascript:void(0);">基本信息</a>
+                        <i class="downArrowIcon"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">底价维护</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">价格日历</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">推荐行程</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">附加信息</a>
+                    </li>
+                </ul>
+                <span class="rightBtn">
+                    <button class="commonButton red-fe6869Button">保 存</button>
+                    <button class="commonButton whiteBtn">发 布</button>
+                </span>
+            </div>
+        </header>
+        <div class="main-container changeMainContent">
+            <section class="whiteBg"> 
+                <table class="noBorderCommonTab">
+                    <colgroup>
+                        <col width="110">
+                        <col width="850">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>标 &nbsp; 题</th>
+                        <td>
+                            <input type="text" style="width: 700px;">                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>主 &nbsp; 题</th>
+                        <td>
+                            <div class="dropdown" style="width: 110px;">
+                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                    <span class="activeFonts">轻度探险</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="javascript:void(0);">轻度探险</a></li>
+                                    <li><a href="javascript:void(0);">深度控险</a></li>
+                                </ul>
+                            </div>
+                            <span class="replaceTh">天 &nbsp; 数</span>
+                            <span>
+                                <input type="text" style="width: 70px;"> 晚 &nbsp;
+                            </span>
+                            <span>
+                                <input type="text" style="width: 70px;"> 天
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>标 &nbsp;签</th>
+                        <td>
+                            <input type="text" id="form_tags_input" class="tagInput">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <div class="hotLabel clearfix">
+                                <div class="catalog">热门标签</div>
+                                <ul class="hotTag">
+                                    <li class="lightBlueTag">文化</li>
+                                    <li class="lightGreenTag">音乐之旅</li>
+                                    <li class="lightPinkTag">音乐之旅</li>
+                                    <li class="lightOrangeTag">文化</li>
+                                    <li class="lightBlueTag">文化</li>
+                                    <li class="lightGreenTag">文化</li>
+                                    <li class="lightPinkTag">音乐之旅</li>
+                                    <li class="lightOrangeTag">来个超长的标签</li>
+                                    <li class="lightBlueTag">第二行哟</li>
+                                </ul>
+                                <div id="hotTagSlideBtn-arrow" class="hotTagSlideShow">
+                                    <i class="hotTagSlideBtn"></i>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>出 发 地</th>
+                        <td>
+                            <div class="dropdown" style="width: 110px;">
+                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                    <span class="activeFonts">上海</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="javascript:void(0);">上海</a></li>
+                                    <li><a href="javascript:void(0);">北京</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="verticalTop" style="padding-top: 15px;">目 的 地</th>
+                        <td class="clearfix">
+                            <div class="pull-left">
+                                <div class="dropdown" style="width: 110px;">
+                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                        <span class="activeFonts">全部</span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a href="javascript:void(0);">全部</a></li>
+                                        <li><a href="javascript:void(0);">上海</a></li>
+                                        <li><a href="javascript:void(0);">北京</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown" style="width: 110px;">
+                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                        <span class="activeFonts">全部</span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a href="javascript:void(0);">全部</a></li>
+                                        <li><a href="javascript:void(0);">普陀区</a></li>
+                                        <li><a href="javascript:void(0);">闸北区</a></li>
+                                        <li><a href="javascript:void(0);">长宁区</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown" style="width: 110px;">
+                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                        <span class="activeFonts">全部</span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a href="javascript:void(0);">全部</a></li>
+                                        <li><a href="javascript:void(0);">张庙</a></li>
+                                        <li><a href="javascript:void(0);">庙行</a></li>
+                                    </ul>
+                                </div>
+                                <button class="commonButton blue-45c8dcButton"><i class="whiteAddIcon"></i>添 加</button>
+                            </div>
+                            <div class="smallTagModel">
+                                <label class="smallTagStyle">
+                                    <span class="closeFonts">葡萄牙</span>
+                                    <span class="closeIcon"></span>
+                                </label>
+                                <label class="smallTagStyle">
+                                    <span class="closeFonts">新加坡</span>
+                                    <span class="closeIcon"></span>
+                                </label>
+                                <label class="smallTagStyle">
+                                    <span class="closeFonts">西班牙</span>
+                                    <span class="closeIcon"></span>
+                                </label>
+                                <label class="smallTagStyle">
+                                    <span class="closeFonts">西班牙</span>
+                                    <span class="closeIcon"></span>
+                                </label>
+                                <label class="smallTagStyle">
+                                    <span class="closeFonts">新加坡</span>
+                                    <span class="closeIcon"></span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>产品性质</th>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="verticalTop paddingTop10">酒店图片</th>
+                        <td colspan="3">
+                            <div>至少5张高清（XXX*XXX）JPG/PNG图</div>
+                            <ul class="hotelImgList clearfix">
+                                <li>
+                                    <img src="../../images/hotelImg01.jpg">
+                                    <div class="hoverDelete">
+                                        <i class="delIcon"></i>删除
+                                    </div>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+        </div>
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+
+    <script>
+        $(function(){
+            var slideDownBtn = $("#hotTagSlideBtn-arrow").find("i");
+            var hotTag = $(".hotTag");
+            var h = hotTag.height();
+            hotTag.css("height", "35px");
+            var hotTagAll = $(".hotTag").find("li");
+            var tagInput = $(".tagInput");
+
+            var flag = 1;
+            slideDownBtn.on("click",function(){
+                if(1 == flag)
+                {
+                    hotTag.animate({
+                        height: h + "px"
+                    }, 500);
+                    $(this).removeClass();
+                    $(this).addClass("hotTagSlideUp");
+                    flag = 2;
+                }
+                else if(2 == flag){
+                    hotTag.animate({
+                        height: "35px"
+                    }, 500);
+                    $(this).removeClass();
+                    $(this).addClass("hotTagSlideBtn");
+                    flag = 1;
+                }
+            });
+            
+            var tagsPlugin = $("#form_tags_input").tagsInput({
+                "width":"700px",
+                "height":"35px",
+                "maxChars":"6",
+                placeholderColor:'#888',
+                "keySpace":"space"
+            });
+
+            var flag = 1;
+
+            hotTagAll.on("click", function(){
+                var tempVal = tagInput.val();
+                tagsPlugin.addTag($(this).text());
+            });
+
+        });
+    </script>
+
+</body>
+</html>

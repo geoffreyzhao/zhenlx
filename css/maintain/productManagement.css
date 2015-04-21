@@ -236,12 +236,6 @@
 /* 新增产品 推荐行程 E */
 
 /*  添加酒店资源 start  */
-.hoveringModel{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
 .noBorderCommonTab th{
     padding: 10px 5px;
     text-align: right;
@@ -249,6 +243,7 @@
 }
 .noBorderCommonTab td{
     padding: 10px 5px;
+    color: #666;
 }
 .noBorderCommonTab .horizontalLine{
     display: inline-block;
@@ -387,6 +382,133 @@
 }
 /*  添加酒店资源 end  */
 
-
+/*  新增产品-基本信息 start  */
+div.tagsinput{
+    overflow-y: inherit;
+}
+div.tagsinput span.tag{
+    padding: 3px 5px;
+    text-indent: 5px;
+    margin: -2px 5px 7px 0;
+}
+#form_tags_input_addTag{
+    margin-top: -3px;
+}
+input[type="text"].tagInput {
+    width: 700px;
+    float: left;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+}
+.hotLabel{
+    margin-top: -10px;
+}
+.catalog{
+    width: 75px;
+    height: 25px;
+    font-size: 14px;
+    float: left;
+    margin-right: 4px;
+    line-height: 25px;
+}
+.hotTag{
+    float: left;
+    width: 590px;
+    margin: 0 0 -10px;
+    overflow: hidden;
+}
+.hotTag li{
+    display: inline-block;
+    font-size: 14px;
+    min-width: 73px;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    margin: 0 5px 10px 0;
+    cursor: pointer;
+}
+.hotTag li.lightBlueTag{
+    background-color: #d3effc;
+}
+.hotTag li.lightGreenTag{
+    background-color: #bfefc3;
+}
+.hotTag li.lightPinkTag{
+    background-color: #f7e5ef;
+}
+.hotTag li.lightOrangeTag{
+    background-color: #fcebd3;
+}
+.hotTag li:hover{
+    background-color: #3b86ad;
+    color: #fff;
+}
+.hotTagSlideShow{
+     width: 25px;
+     height: 25px;
+     float: left;
+ }
+.hotTagSlideBtn{
+    background: url("../../images/commonIcon.png") no-repeat 0 -152px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.hotTagSlideBtn:hover{
+    background-position: -27px -152px;
+}
+.hotTagSlideUp{
+    background: url("../../images/commonIcon.png") no-repeat -55px -152px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.hotTagSlideUp:hover{
+    background-position: -80px -152px;
+}
+.smallTagModel{
+    float: left;
+    width: 365px;
+    margin: 7px 0 0 20px;
+}
+.smallTagModel .smallTagStyle{
+    margin: 0 8px 10px 0;
+    font-size: 14px;
+    display: inline-block;
+    background-color: #ebf6fe;
+    border: 1px solid #aad5f4;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 3px 5px;
+    min-width: 80px;
+    position: relative;
+}
+.smallTagStyle .closeFonts{
+    color: #666;
+    display: inline-block;
+    min-width: 60px;
+    text-align: left;
+}
+.smallTagStyle .closeIcon{
+    display: inline-block;
+    width: 10px;
+    height: 11px;
+    background: url("../../images/commonIcon.png") no-repeat -40px -132px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 32%;
+}
+/*  新增产品-基本信息 end  */
 
 
