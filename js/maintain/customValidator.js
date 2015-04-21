@@ -13,6 +13,14 @@
 		//  找到form下所有需要自定义验证的元素
 		var validatedEles = $curFormEle.find("*[data-cv]");
 
+		$curFormEle.find("input[data-cv]").each(function(){
+			$(this).bind("keyup", function(event) {
+				if ($.trim($(this).val()) != "") {
+					cleanErrorEle($(this));
+				}
+			});
+		});
+
 		for (var i = 0; i < validatedEles.length; i++) {
 			var $ve = $(validatedEles[i]);
 
@@ -31,15 +39,7 @@
 					forValidatorValues:  //  为内层循环定义名称，以便跳出循环
 					for (var j = 0; j < validatorValues.length; j++) {
 
-						if (validatorValues[j] == "required") {   //  非空验证
-
-							$this.bind("keydown", function(event) {
-								console.log($this.val());
-								if ($.trim($this.val()) != "") {
-									cleanErrorEle($this);
-								}
-								console.log(event.keyCode);
-							});
+						if (validatorValues[j] == "required") {   //  非空验证							
 
 							if (val == "") {								
 								geneErrorEle($this, validatorTitle+"不能为空");		//  生成报错信息DOM结构						
