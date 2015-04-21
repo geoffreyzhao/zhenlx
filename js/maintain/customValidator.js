@@ -2,7 +2,7 @@
 	$.fn.customValidate = function(options){
 
 		var opts = $.extend({
-	    	validateAll: true   //  是否验证form下所有需验证字段
+	    	validateAll: true   //  是否验证form下所有需验证字段(暂取消该属性配置)
 	    }, options);
 
 		var $curFormEle = $(this),
@@ -26,12 +26,21 @@
 				if ($ve.is("input")) {
 					
 					var $this = $ve,
-						val = $.trim($this.val());
+						val = $.trim($this.val());					
 
 					forValidatorValues:  //  为内层循环定义名称，以便跳出循环
 					for (var j = 0; j < validatorValues.length; j++) {
 
 						if (validatorValues[j] == "required") {   //  非空验证
+
+							$this.bind("keydown", function(event) {
+								console.log($this.val());
+								if ($.trim($this.val()) != "") {
+									cleanErrorEle($this);
+								}
+								console.log(event.keyCode);
+							});
+
 							if (val == "") {								
 								geneErrorEle($this, validatorTitle+"不能为空");		//  生成报错信息DOM结构						
 								result = false;
@@ -59,12 +68,14 @@
 							} else {
 								cleanErrorEle($this);
 							}
-						}						
+						}
+						
 					}
 
-					if (!opts.validateAll && !result) {  //  验证直到出现不符合的字段为止，之后字段不再验证
-						break;
-					}
+					//  验证直到出现不符合的字段为止，之后字段不再验证
+					// if (!opts.validateAll && !result) {  
+					// 	break;
+					// }
 					
 				}
 
@@ -72,17 +83,15 @@
 				//  当前验证元素为 dropdownlist 类型
 				if ($ve.hasClass("dropdown-menu")) {
 
-					var $this = $ve;
-
-					if (!$this.find("li.active").attr('name')) {
+					if (!$ve.find("li.active").attr('name')) {
 
 						result = false;
 						
-						$this.parent("div.dropdown").after($("<div class='verifyStyle' style='width: " + $this.outerWidth() + "px;'>" 
+						$ve.parent("div.dropdown").after($("<div class='verifyStyle' style='width: " + $ve.outerWidth() + "px;'>" 
 						+"<i class='verifyIcon'></i><span class='verifyFonts'>"
 						+validatorTitle+"不能为空</span></div>"));
 					} else {
-						$this.parent("div.dropdown").siblings('.verifyStyle').remove();
+						$ve.parent("div.dropdown").siblings('.verifyStyle').remove();
 					}
 				}
 			}

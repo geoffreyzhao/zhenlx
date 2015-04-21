@@ -580,10 +580,11 @@
         });
 
         $(".lightBlueBtn").click(function(){
-            var validateResult = $("#searchConditionForm").customValidate({
+            $("#searchConditionForm").customValidate({
                 validateAll: false  // default: true
             });
-            console.log(validateResult);   //  表单验证通过返回 ture, 否则返回 false
+               //  表单验证通过返回 ture, 否则返回 false
+            // console.log(validateResult);
         });
 
         

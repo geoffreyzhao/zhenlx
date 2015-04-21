@@ -32,9 +32,10 @@
 }
 
 .right-nav-info {
-	background-position: 0 0;
+	background: none;
 	width: 25px;
 	height: 25px;
+	border-radius: 50%;
 }
 
 .right-nav-list {
