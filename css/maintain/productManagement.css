@@ -127,6 +127,20 @@
 }
 /* 产品列表 E */
 
+/* 新增产品 附加信息 S */
+.additionInfoDiv {
+    margin: 20px 30px;
+}
+.additionInfoDiv .editorCommonModel {
+    margin:20px 0;
+}
+.additionInfoDiv .editorModelTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
+}
+/* 新增产品 附加信息 E */
+
 /* 新增产品 推荐行程 S */
 .routeBg {
     overflow: hidden;
@@ -135,6 +149,7 @@
     float: left;
     display: inline-block;
     /*width:226px;*/
+    min-width: 226px;
     width:20%;
 }
 .routeLeftSideNav ul {
@@ -200,8 +215,8 @@
 .routeRightContent {
     display: inline-block;
     float: left;
-    /*min-width: 765px;
-    width:765px;*/
+    min-width: 765px;
+    /*width:765px;*/
     width:78%;
     min-height: 400px;
 }
