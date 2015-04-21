@@ -127,6 +127,113 @@
 }
 /* 产品列表 E */
 
+/* 新增产品 推荐行程 S */
+.routeBg {
+    overflow: hidden;
+}
+.routeLeftSideNav {
+    float: left;
+    display: inline-block;
+    /*width:226px;*/
+    width:20%;
+}
+.routeLeftSideNav ul {
+    margin:10px 0;
+}
+.routeLeftSideNav li {
+    margin-bottom: 10px;
+    padding:5px;
+}
+.routeLeftSideNav li:hover, .routeLeftSideNav li.active {
+    background: #e4f7f0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.routeLeftSideNav li span {
+    font-size: 14px;
+    color: #666;
+    display: inline-block;
+    /*width:156px;
+    min-width: 156px; */ 
+    width:71%;
+    vertical-align: middle;
+}
+.routeLeftSideNav i {
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    width:50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.routeLeftSideNav i.overview {
+    background: #c7c6e5;
+    color: #fff;
+    font-size: 16px;
+    padding-top: 14px;
+}
+.routeLeftSideNav i.overview:hover {
+    background: #b0afd7;
+}
+.routeLeftSideNav i.routeDay {
+    background: #fff;
+    border: 2px solid #62c39e;
+    color: #53b791;
+    font-size: 18px;
+    padding-top: 11px;
+}
+.routeLeftSideNav i.routeDay:hover, .routeLeftSideNav i.addDay:hover {
+    background: #62c39e;
+    color: #fff;
+}
+.routeLeftSideNav i.addDay {
+    background: #fff;
+    border: 2px dashed #62c39e;
+    color: #62c39e;
+    font-size: 31px;
+}
+.routeRightContent {
+    display: inline-block;
+    float: left;
+    /*min-width: 765px;
+    width:765px;*/
+    width:78%;
+    min-height: 400px;
+}
+.routeRightContent .routeRightTit {
+    font-size: 20px;
+    color: #666;
+    border-bottom:1px solid #eaeaea;
+    padding: 10px 0 5px 0; 
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.noBorderCommonTab td .marginLR {
+    margin:0 8px 0 12px;
+}
+.overviewTab {
+    color: #666;
+}
+.overviewTab th {
+    color: #7e7cc7!important;
+    text-align: left!important;
+    font-size: 20px;
+}
+.overviewTab .fs16 {
+    font-size: 16px;
+}
+.overviewTab .fs14 {
+    font-size: 14px;
+}
+.overviewTab td p {
+    margin-bottom: 5px;
+}
+/* 新增产品 推荐行程 E */
 
 /*  添加酒店资源 start  */
 .hoveringModel{

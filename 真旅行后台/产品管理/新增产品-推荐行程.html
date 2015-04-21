@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 产品管理 新增产品-推荐行程</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/productManagement.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+       
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header hoveringModel">
+            <div class="stairMenuContent">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                        <ul class="stairMenu">
+                            <li class="editFonts">&lt;冰岛7晚9日自由行&gt; 极近天然，情迷北欧 多地出发</li>
+                            <li class="routeTipsFonts">编号:15041501</li>
+                            <li class="routeTipsFonts">类型：自由行</li>
+                        </ul>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel headBtn clearfix">
+                <span class="leftBtn">
+                    <a href="javascript:void(0);" class="returnBtn">< 返回</a>
+                </span>
+                <span class="rightBtn">
+                    <button class="commonButton red-fe6869Button">保 存</button>
+                    <button class="commonButton lightBlue-b6d7e7Btn">发 布</button>
+                </span>
+            </div>
+        </header>
+        <div class="main-container changeMainContent">
+            <section class="whiteBg routeBg"> 
+                <!-- left sideNav -->
+                <div class="routeLeftSideNav">
+                    <ul class="routeSideUl">
+                        <li class="active"><i class="overview">概览</i><span></span></li>
+                        <li><i class="routeDay">D1</i><span>开启旅行</span></li>
+                        <li><i class="routeDay">D2</i><span>巴厘岛游览--推荐海神庙，情人崖</span></li>
+                        <li><i class="routeDay">D3</i><span>巴厘岛游览--推荐海神庙，情人崖</span></li>
+                        <li><i class="addDay">+</i><span></span></li>
+                    </ul>
+                </div>
+                <!-- right routeContent -->
+                <div class="routeRightContent"><!-- overview -->
+                    <table class="noBorderCommonTab overviewTab">
+                        <colgroup>
+                            <col width="70">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>第1天</th>
+                            <td>
+                                <p class="fs16"><b>抵达暹粒</b></p>
+                                <p class="fs14">抵达暹粒机场，我们为您安排了贴心接机服务。办理酒店入住时间通常为下午14:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>第2天</th>
+                            <td>
+                                <p class="fs16"><b>微笑的高棉 （暹粒小圈游）</b></p>
+                                <p class="fs14">抵达暹粒机场，我们为您安排了贴心接机服务。办理酒店入住时间通常为下午14:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <th>第3天</th>
+                            <td>
+                                <p class="fs16"><b>微笑的高棉 （暹粒小圈游）</b></p>
+                                <p class="fs14">
+                                    我们为您安排了贴心接机服务。办理酒店入住时间通常为下午14:00，如果到的早我们为您安排了贴心接机服务。办理酒店入住时间通常为下午14:00，如果到的早我们为您安排了贴心接机服务。办理酒店入住时间通常为下午14:00，
+                                    如果到的早我们为您安排了贴心接机服务。办理酒店入住时间通常为下午14:00，如果到的早。</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>第4天</th>
+                            <td>
+                                <p class="fs16"><b>DN标题</b></p>
+                                <p class="fs14">相关描述</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="routeRightContent" style="display: none;"><!-- the first day -->
+                    <div class="routeRightTit">
+                        第1天
+                    </div>
+                    <table class="noBorderCommonTab">
+                        <colgroup>
+                            <col width="55">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>标  题</th>
+                            <td>
+                                <input type="text" style="width: 684px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="verticalTop">行  程</th>
+                            <td>
+                                <textarea style="width:684px;height: 210px;"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>用  餐</th>
+                            <td>
+                                <span class="marginLR">早餐</span><input type="text" style="width:173px;"/>
+                                <span class="marginLR">午餐</span><input type="text" style="width:173px;"/>
+                                <span class="marginLR">晚餐</span><input type="text" style="width:173px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="verticalTop paddingTop10">图片</th>
+                            <td>
+                                <div>（XXX*XXX）JPG/PNG图</div>
+                                <ul class="hotelImgList clearfix">
+                                    <li>
+                                        <img src="../../images/hotelImg01.jpg">
+                                        <div class="hoverDelete">
+                                            <i class="delIcon"></i>删除
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input type="file" class="upLoading">
+                                    </li>
+                                    <!--<li>
+                                        <div class="addImg"></div>
+                                    </li>-->
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="routeRightContent" style="display: none;"><!-- the second day -->
+                    <div class="routeRightTit">
+                        第2天
+                    </div>
+                    <table class="noBorderCommonTab">
+                        <colgroup>
+                            <col width="55">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>标  题</th>
+                            <td>
+                                <input type="text" style="width: 684px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="verticalTop">行  程</th>
+                            <td>
+                                <textarea style="width:684px;height: 210px;"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>用  餐</th>
+                            <td>
+                                <span class="marginLR">早餐</span><input type="text" style="width:173px;"/>
+                                <span class="marginLR">午餐</span><input type="text" style="width:173px;"/>
+                                <span class="marginLR">晚餐</span><input type="text" style="width:173px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="verticalTop paddingTop10">图片</th>
+                            <td>
+                                <div>（XXX*XXX）JPG/PNG图</div>
+                                <ul class="hotelImgList clearfix">
+                                    <li>
+                                        <img src="../../images/hotelImg01.jpg">
+                                        <div class="hoverDelete">
+                                            <i class="delIcon"></i>删除
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input type="file" class="upLoading">
+                                    </li>
+                                    <!--<li>
+                                        <div class="addImg"></div>
+                                    </li>-->
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="routeRightContent" style="display: none;"><!-- the third day -->
+                        <div class="routeRightTit">
+                           第3天 
+                        </div>
+                        <table class="noBorderCommonTab">
+                            <colgroup>
+                                <col width="55">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>标  题</th>
+                                <td>
+                                    <input type="text" style="width: 684px;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="verticalTop">行  程</th>
+                                <td>
+                                    <textarea style="width:684px;height: 210px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>用  餐</th>
+                                <td>
+                                    <span class="marginLR">早餐</span><input type="text" style="width:173px;"/>
+                                    <span class="marginLR">午餐</span><input type="text" style="width:173px;"/>
+                                    <span class="marginLR">晚餐</span><input type="text" style="width:173px;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="verticalTop paddingTop10">图片</th>
+                                <td>
+                                    <div>（XXX*XXX）JPG/PNG图</div>
+                                    <ul class="hotelImgList clearfix">
+                                        <li>
+                                            <img src="../../images/hotelImg01.jpg">
+                                            <div class="hoverDelete">
+                                                <i class="delIcon"></i>删除
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input type="file" class="upLoading">
+                                        </li>
+                                        <!--<li>
+                                            <div class="addImg"></div>
+                                        </li>-->
+                                    </ul>
+                                </td>
+                            </tr>
+                            <!--<tr>
+                                <th class="verticalTop">酒店设施</th>
+                                <td>
+                                    <ul class="facilityList clearfix">
+                                        <li class="active">综合设施</li>
+                                        <li>餐饮设施</li>
+                                        <li>网络设施</li>
+                                        <li>活动设施</li>
+                                        <li>服务项目</li>
+                                    </ul>
+                                    <div class="facilityContent">
+                                        <textarea class="facilityTextarea">第一个</textarea>
+                                        <textarea class="facilityTextarea" style="display: none;">第二个</textarea>
+                                        <textarea class="facilityTextarea" style="display: none;">第3个</textarea>
+                                        <textarea class="facilityTextarea" style="display: none;">第4个</textarea>
+                                        <textarea class="facilityTextarea" style="display: none;">第5个</textarea>
+                                    </div>
+                                </td>
+                            </tr>-->
+                            </tbody>
+                        </table>
+                </div>
+                
+                
+            </section>
+        </div>    
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+
+    <script>
+        $(function(){
+            $(".routeSideUl li").each(function(index){
+                $(this).click(function(){
+                    $(".routeRightContent").hide();
+                    $(".routeRightContent:eq(" + index + ")").show();
+                    $(".routeSideUl li").removeClass("active");
+                    $(this).addClass("active");
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
