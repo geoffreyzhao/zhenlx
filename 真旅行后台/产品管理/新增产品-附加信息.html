@@ -111,10 +111,8 @@
     <script>
         //        var editor;
         KindEditor.ready(function(K) {
-            K.options.items = ['fontsize', 'forecolor', 'insertorderedlist'];
+            K.options.items = ['forecolor', 'insertorderedlist'];
             K.create('textarea[name="content"]', {
-                //autoHeightMode : true,
-                uploadJson : "/upload_json.php",
                 afterCreate : function() {
                     this.loadPlugin('autoheight');
                 }
