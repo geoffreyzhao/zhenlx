@@ -150,15 +150,28 @@
 /* 新增产品 附加信息 E */
 
 /* 新增产品 推荐行程 S */
+.topMenuFonts {
+    padding-bottom:5px;
+    position: relative;
+}
+.haveTopFonts {
+    position: absolute;
+    left:160px;
+    width:650px;
+    min-width: 650px;
+}
 .routeBg {
-    overflow: hidden;
+    position: relative;
+    min-height: 400px;
 }
 .routeLeftSideNav {
-    float: left;
     display: inline-block;
-    /*width:226px;*/
+    width:226px;
     min-width: 226px;
-    width:20%;
+    height: 100%;
+    position: absolute;
+    left:10px;
+    top:0px;    
 }
 .routeLeftSideNav ul {
     margin:10px 0;
@@ -178,9 +191,9 @@
     font-size: 14px;
     color: #666;
     display: inline-block;
-    /*width:156px;
-    min-width: 156px; */ 
-    width:71%;
+    width:156px;
+    min-width: 156px;  
+    /*width:71%;*/
     vertical-align: middle;
 }
 .routeLeftSideNav i {
@@ -222,11 +235,11 @@
 }
 .routeRightContent {
     display: inline-block;
-    float: left;
-    min-width: 765px;
-    /*width:765px;*/
-    width:78%;
-    min-height: 400px;
+    /*min-width: 765px;
+    width:765px;*/
+    /*width:78%;*/
+    height: 100%;
+    margin-left: 226px;
 }
 .routeRightContent .routeRightTit {
     font-size: 20px;
