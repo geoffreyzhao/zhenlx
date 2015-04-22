@@ -139,9 +139,10 @@
     margin-bottom: 10px;
     color: #666;
 }
-.editorText{
-    width:900px;
-    height:90px;
+.additionInfoDiv .editorText{
+    border:1px solid #dadada;
+    width:776px;
+    height:150px;
     display: block;
     padding:5px;
     color: #666666;
