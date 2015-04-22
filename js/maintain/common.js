@@ -54,7 +54,7 @@ $(function() {
     });
 
     //复选框
-    $(".checkboxContent .checkbox").click(function(){
+    $(".checkboxContent .checkboxInfo").click(function(){
         $(this).toggleClass("active");
     });
     

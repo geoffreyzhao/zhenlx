@@ -531,6 +531,14 @@ input[type="text"].tagInput {
     right: 7px;
     top: 32%;
 }
+.noBorderCommonTab .marginBottom10 input{
+    margin-bottom: 10px;
+}
+.bigImgList li img{
+    width: auto;
+    max-width: 703px;
+    height: auto;
+}
 /*  新增产品-基本信息 end  */
 
 

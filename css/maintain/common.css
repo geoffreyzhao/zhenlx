@@ -58,19 +58,17 @@ input[type="text"]:focus{
     font-size: 16px;
     font-weight: normal;
 }
-.checkbox{
+.checkbox,
+.checkboxContent .checkboxIcon{
+    display: inline-block;
     width: 18px;
     height: 18px;
     background: url("../../images/commonIcon.png") no-repeat -23px -62px;
     margin: 0;
-}
-.checkboxContent .checkbox .checkboxIcon{
-    width: 18px;
-    height: 18px;
-    background: url("../../images/commonIcon.png") no-repeat -23px -62px;
+    vertical-align: middle;
 }
 .checkbox.active,
-.checkboxContent .checkbox.active .checkboxIcon{
+.checkboxContent .checkboxInfo.active .checkboxIcon{
     background-position: 0 -62px;
 }
 .hasIcon{
@@ -83,15 +81,13 @@ input[type="text"]:focus{
 .checkboxContent{
     display: inline-block;
 }
-.checkboxContent .checkbox{
+.checkboxContent .checkboxInfo{
     display: inline-block;
     color: #666;
-    width: auto;
-    position: inherit;
-    background: none;
+    margin-right: 20px;
 }
-.checkboxContent .checkbox .commonIcon{
-    margin-right: 10px;
+.checkboxContent .checkboxInfo .checkboxIcon{
+    margin-right: 5px;
 }
 
 /*  页面头 start */
