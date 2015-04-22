@@ -139,6 +139,13 @@
     margin-bottom: 10px;
     color: #666;
 }
+.editorText{
+    width:900px;
+    height:90px;
+    display: block;
+    padding:5px;
+    color: #666666;
+}
 /* 新增产品 附加信息 E */
 
 /* 新增产品 推荐行程 S */

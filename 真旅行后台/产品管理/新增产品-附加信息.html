@@ -107,20 +107,20 @@
         </div>    
         <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
     </div>
+    
     <script>
-        var editor;
+        //        var editor;
         KindEditor.ready(function(K) {
-            K.options.items = ['forecolor', 'insertorderedlist'];
+            K.options.items = ['fontsize', 'forecolor', 'insertorderedlist'];
             K.create('textarea[name="content"]', {
                 //autoHeightMode : true,
-                width: "900",
-                height: "310",
                 uploadJson : "/upload_json.php",
                 afterCreate : function() {
-
+                    this.loadPlugin('autoheight');
                 }
             });
         });
+
     </script>
     
 
