@@ -545,6 +545,12 @@ screen and (min-width:801px) and (max-width:1020px){
     margin-right: 10px;
     margin-top: -2px;
 }
+.orange-f79767Btn{
+    background-color: #f79767;
+}
+.orange-f79767Btn:hover{
+    background-color: #f68853;
+}
 .gray-bbbButton {
     background: #bbb;
 }
