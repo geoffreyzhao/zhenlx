@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+.calendar-operation-bar {
+    margin: 10px 0;
+    padding-left: 130px;
+}
+
+.cal-year-title,
+.cal-month-title {
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+
+.cal-year-title {
+    border-right: 1px dashed #afafaf;
+    padding-right: 35px;
+}
+
+.cal-month-title {
+    padding-left: 35px;
+}
+
+.cal-year-text,
+.cal-month-text {
+    display: inline-block;
+    width: 100px;
+    font-size: 16px;
+    color: #555;
+    line-height: 30px;
+}
+
+.cal-year-text .num,
+.cal-month-text .num {
+    font-family: Arial;
+    padding: 0 7px;
+}
+
+.cal-year-text .num.current,
+.cal-month-text .num.current {
+    font-size: 26px;
+    color: #3399cc;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.change-calendar-bigIcon-left {
+    background: url(../../images/big-turn-calendar-icon.png) no-repeat 0 0;
+    width: 29px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.change-calendar-bigIcon-left:hover {
+    background-position: 0 -74px;
+    cursor: pointer;
+}
+
+.change-calendar-bigIcon-right {
+    background: url(../../images/big-turn-calendar-icon.png) no-repeat 0 -37px;
+    width: 29px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.change-calendar-bigIcon-right:hover {
+    background-position: 0 -111px;
+    cursor: pointer;
+}
+
+.calendar-operation-bar .batch-oper-btn {
+    float: right;
+    margin-right: 10px;
+}
+
+.price-calendar .datepicker-inline {
+	width: auto;
+}
+
+div.datepicker table tr td.day:hover, div.datepicker table tr td.day.focused {
+	background-color: #f7f8ff;
+}
+
+.price-calendar div.datepicker {
+	background-color: #fff;
+}
+
+.price-calendar table thead tr:first-child {
+	display: none;
+}
+
+.price-calendar table thead th {
+	color: #555;
+}
+
+.price-calendar table tbody {
+	border: 1px solid #9ac8e7;
+}
+
+.price-calendar table tbody td {
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	height: 90px;
+	width: 90px;
+	color: #555;
+	text-align: left;
+	vertical-align: top;
+	padding: 0;
+}
+
+.price-calendar .tdCont {
+	border: 1px solid #fff;
+	width: 100%;
+	height: 89px;
+	position: relative;
+}
+
+.price-calendar .tdCont:hover,
+.price-calendar .tdCont.current {
+	border: 1px solid #6867ad;
+	background-color: #f7f8ff;
+}
+
+.price-calendar .tdCont span:hover {
+	background-color: #f7f8ff;
+}
+
+.price-calendar .tdCont span {  /*  重置 datepicker 默认 span 样式 */
+	display: inline-block;
+	width: auto;
+	height: auto;
+	line-height: normal;
+	float: none;
+	margin: 0;
+	padding: 0;
+	cursor: default;
+}
+
+.price-calendar .tdCont .top-block {
+	height: 20px;
+	margin-top: 3px;
+}
+
+.price-calendar .tdCont .top-block .day {
+	color: #555;
+	font-size: 14px;
+	float: left;
+	font-family: Arial;
+}
+
+.price-calendar .tdCont .top-block .stock {
+	float: right;
+	margin-right: 3px;
+}
+
+.price-calendar .tdCont .top-block .stock em {
+	color: #339900;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+.price-calendar .tdCont .top-block .stock-icon {
+	display: inline-block;
+	width: 30px;
+	height: 18px;
+	line-height: 16px;
+	border: 1px solid #ffa12d;
+	color: #ffa12d;
+	font-size: 12px;
+	text-align: center;	
+}
+
+.price-calendar .tdCont .top-block .closed-icon {
+	display: inline-block;
+	width: 30px;
+	height: 18px;
+	line-height: 16px;
+	border: 1px solid #fd4239;
+	color: #fd4239;
+	font-size: 12px;
+	text-align: center;
+	float: right;
+	margin-right: 3px;
+}
+
+.price-calendar .tdCont .middle-block {
+	font-size: 14px;
+	font-family: Arial;
+	color: #666;
+	text-align: right;
+	padding: 5px 3px;
+	height: 42px;
+}
+
+.price-calendar .tdCont .middle-block span {
+	display: block;
+	line-height: 16px;
+}
+
+.price-calendar .tdCont .bottom-block {
+	text-align: center;	
+	height: 24px;
+	line-height: 24px;
+}
+
+.price-calendar .tdCont .bottom-block .flight-icon {
+	display: inline-block;
+	background: url(../../images/flight-hotel-icon.png) no-repeat 0 0;
+	width: 20px;
+	height: 20px;
+	margin-right: 2px;
+}
+
+.price-calendar .tdCont .bottom-block .hotel-icon {
+	display: inline-block;
+	background: url(../../images/flight-hotel-icon.png) no-repeat 0 -22px;
+	width: 20px;
+	height: 20px;
+}
+
+.price-calendar .tdCont .bottom-block:hover .oper-btn {
+	display: block;
+}
+
+.price-calendar .tdCont .bottom-block .oper-btn {
+	display: none;
+	position: absolute;
+	bottom: 0;
+}
+
+.price-calendar .tdCont .bottom-block .oper-btn span {
+	color: #fff;
+	height: 24px;
+	line-height: 24px;
+	width: 43px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.price-calendar .tdCont .bottom-block .left-btn {
+	background-color: #209edd;
+}
+
+.price-calendar .tdCont .bottom-block .right-btn {
+	background-color: #ff8a00;
+	width: 44px!important;
+}
