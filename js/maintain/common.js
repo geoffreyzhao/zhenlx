@@ -33,6 +33,44 @@ $(function() {
         });
     }
 
+    /*  时间区间初始化
+        注意： 开始和结束时间input元素要放在同一父元素下，即二者要成为兄弟元素
+        并且同一父元素下，只能有一对开始-结束时间，否则会影响changeDate时间的赋值
+    */
+    //  开始时间
+    if ($("input.datepicker.startDate").length > 0) {
+        $("input.datepicker.startDate").datepicker({
+            format: "yyyy-mm-dd",
+            language: "zh-CN",
+            autoclose: true,
+            todayHighlight: true,
+            weekStart: 0
+        }).on("show", function(){
+            $("div.datepicker table thead .prev").html("");
+            $("div.datepicker table thead .next").html("");
+        }).on("changeDate", function(){
+            var startDate = $(this).datepicker("getDate");
+            $(this).siblings('input.datepicker.endDate').datepicker("setStartDate", startDate);
+        });
+    }
+
+    //  结束时间
+    if ($("input.datepicker.endDate").length > 0) {
+        $("input.datepicker.endDate").datepicker({
+            format: "yyyy-mm-dd",
+            language: "zh-CN",
+            autoclose: true,
+            todayHighlight: true,
+            weekStart: 0
+        }).on("show", function(){
+            $("div.datepicker table thead .prev").html("");
+            $("div.datepicker table thead .next").html("");
+        }).on("changeDate", function(){
+            var endDate = $(this).datepicker("getDate");
+            $(this).siblings('input.datepicker.startDate').datepicker("setEndDate", endDate);
+        });
+    }
+
     // 翻页效果
     $(".pageNum .pageNumClick").click(function(){
         $(this).siblings(".paginationNum").toggle();

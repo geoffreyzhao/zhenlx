@@ -2,7 +2,7 @@
 
 .calendar-operation-bar {
     margin: 10px 0;
-    padding-left: 130px;
+    padding-left: 100px;
 }
 
 .cal-year-title,
@@ -25,7 +25,7 @@
 .cal-year-text,
 .cal-month-text {
     display: inline-block;
-    width: 100px;
+    width: 90px;
     font-size: 16px;
     color: #555;
     line-height: 30px;
@@ -80,11 +80,17 @@
 	width: auto;
 }
 
-div.datepicker table tr td.day:hover, div.datepicker table tr td.day.focused {
+.price-calendar div.datepicker table tr td.day:hover,
+.price-calendar div.datepicker table tr td.day.focused {
 	background-color: #f7f8ff;
 }
 
 .price-calendar div.datepicker {
+	background-color: #ebf7ff;
+	padding: 0;
+}
+
+.price-calendar div.datepicker .datepicker-days {
 	background-color: #fff;
 }
 
@@ -93,7 +99,8 @@ div.datepicker table tr td.day:hover, div.datepicker table tr td.day.focused {
 }
 
 .price-calendar table thead th {
-	color: #555;
+	color: #333;
+	background-color: #ebf7ff;
 }
 
 .price-calendar table tbody {
@@ -111,6 +118,14 @@ div.datepicker table tr td.day:hover, div.datepicker table tr td.day.focused {
 	padding: 0;
 }
 
+.price-calendar table tbody td:last-child {
+	border-right-color: #9ac8e7;
+}
+
+.price-calendar table tbody tr:last-child td {
+	border-bottom-color: #9ac8e7;
+}
+
 .price-calendar .tdCont {
 	border: 1px solid #fff;
 	width: 100%;
@@ -118,8 +133,12 @@ div.datepicker table tr td.day:hover, div.datepicker table tr td.day.focused {
 	position: relative;
 }
 
-.price-calendar .tdCont:hover,
-.price-calendar .tdCont.current {
+.price-calendar .tdCont.add:hover {
+	background: url('../../images/calAddBgBtn.gif') center center no-repeat #fff;
+}
+
+.price-calendar .tdCont.edit:hover,
+.price-calendar .tdCont.edit.current {
 	border: 1px solid #6867ad;
 	background-color: #f7f8ff;
 }

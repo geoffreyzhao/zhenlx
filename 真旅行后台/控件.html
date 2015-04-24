@@ -28,7 +28,11 @@
 </head>
 <body>
 
+<div style="padding:50px;">
+
 请选择日期： <input type="text" class="datepicker default hasIcon" readonly="readonly">
+
+</div>
 
 <div>
     <span>价格日历：</span>
@@ -189,7 +193,9 @@
 
             $(".tdCont").click(function(event){
                 console.log('click tdCont');
-                event.stopPropagation();
+                $(this).parents("table").find(".tdCont").removeClass("current");
+                $(this).addClass("current");
+                event.stopPropagation();    //  同一个td内的很多元素都绑定点击事件，注意阻止事件冒泡
             });
 
             $(".tdCont .left-btn").click(function(event){
@@ -225,7 +231,7 @@
             var dayText = $(this).html();
 
             if ($(this).hasClass("old") || $(this).hasClass("new")) {
-                $(this).html("<div class='tdCont'></div>");
+                $(this).html("<div class='tdCont disabled'></div>");
             } else {
                 $(this).html(geneTdContTemplate(y, m, dayText, monthDataArr));
             }
@@ -236,16 +242,16 @@
     // year, month 参数只为了给当前td确定具体的日期值  "year-month-day"
     function geneTdContTemplate(year, month, day, monthDataArr) {
 
-        var template = "<div class='tdCont'>";
+        var template = "";
 
         var tmp = _.findWhere(monthDataArr, {day: day*1});
 
         if (tmp === undefined) {
 
-            template += "<div class='top-block clearfix'><span data-dayNum='" + year + "-" + month + "-" + day + "'>" + day +"</span></div>";
+            template += "<div class='tdCont add'><div class='top-block clearfix'><span data-dayNum='" + year + "-" + month + "-" + day + "'>" + day +"</span></div>";
         } else {
 
-            template += "<div class='top-block clearfix'><span class='day' data-dayNum='" + year + "-" + month + "-" + day + "'>" + day +"</span>";
+            template += "<div class='tdCont edit'><div class='top-block clearfix'><span class='day' data-dayNum='" + year + "-" + month + "-" + day + "'>" + day +"</span>";
 
             if (tmp.isClosed) {  //  显示关闭图标
                 template += "<span class='closed-icon'>关闭</span>";

@@ -634,7 +634,19 @@ div.datepicker table tr td.active.disabled:hover {
 div.datepicker table tr td.old,
 div.datepicker table tr td.new {
     color: #7ec0e7;
-}   
+}
+
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+    color: #7ec0e7;
+    background-color: #3c96ca!important;
+}
+
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+    color: #7ec0e7;
+    background-color: #3c96ca!important;
+}
 
 div.datepicker table thead .dow {
     font-size: 16px;

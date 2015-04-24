@@ -14,11 +14,13 @@
 		var validatedEles = $curFormEle.find("*[data-cv]");
 
 		$curFormEle.find("input[data-cv]").each(function(){
-			$(this).bind("keyup", function(event) {
-				if ($.trim($(this).val()) != "") {
-					cleanErrorEle($(this));
-				}
-			});
+			if ($(this).attr("readonly") !== "readonly") {
+				$(this).bind("keyup", function(event) {
+					if ($.trim($(this).val()) != "") {
+						cleanErrorEle($(this));
+					}
+				});
+			}
 		});
 
 		for (var i = 0; i < validatedEles.length; i++) {
@@ -29,9 +31,10 @@
 
 				var validatorValues = $ve.data("cv").split(',');  // 得到所有需要验证的类型[required,email,...]
 				var validatorTitle = $ve.data("ct");  // 得到验证字段名
+				validatorTitle = (validatorTitle == undefined) ? "" : validatorTitle;
 
 				//  当前验证元素为 input 类型
-				if ($ve.is("input")) {
+				if ($ve.is("input") && $ve.is(":visible") && $ve.attr("readonly") !== "readonly") {
 					
 					var $this = $ve,
 						val = $.trim($this.val());					
@@ -102,19 +105,20 @@
 
 	function geneErrorEle($this, msg) {
 		$this.addClass("verifyBox");
-		if ($this.siblings("div.verifyStyle").length == 0) {
-			$this.after($("<div class='verifyStyle' style='width: " + $this.outerWidth() + "px;'>" 
+		if ($this.next("div.verifyStyle").length == 0) {
+			$this.after($("<div class='verifyStyle' style='width:" + $this.outerWidth() + "px;left:"
+						+ $this.offset().left + "px'>" 
 						+"<i class='verifyIcon'></i><span class='verifyFonts'>"
 						+msg+"</span></div>"));
 		} else {
-			$this.siblings("div.verifyStyle").find(".verifyFonts").html(msg);
+			$this.next("div.verifyStyle").find(".verifyFonts").html(msg);
 		}
 	}
 
 	function cleanErrorEle($this) {
-		if ($this.siblings("div.verifyStyle").length != 0) {
+		if ($this.next("div.verifyStyle").length != 0) {
 			$this.removeClass('verifyBox');
-			$this.siblings('div.verifyStyle').remove();
+			$this.next('div.verifyStyle').remove();
 		}
 	}
 })(jQuery);

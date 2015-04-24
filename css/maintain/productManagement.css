@@ -556,3 +556,170 @@ input[type="text"].tagInput {
 /*  新增产品-基本信息 end  */
 
 
+/*  价格日历   start  */
+
+.price-calendar-container {
+    background-color: #ebf7ff;
+}
+
+.left-cal-block {
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.batch-set-btn {
+    background-color: #45c8dc;
+    font-size: 16px;
+    color: #fff;
+    float: right;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.default-tip {
+    margin-top: 120px;
+}
+
+.default-tip i.left-arrow {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: url(../../images/left-arrow.png) no-repeat;
+    position: relative;
+    top: 15px;
+    margin: 0 5px;
+}
+
+.default-tip span {
+    font-size: 30px;
+    color: #c3dcec;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.right-cont-block {
+    float: left;
+    margin-left: 10px;
+}
+
+.red-star {
+    color: red;
+}
+
+.set-price-container {
+    border: 1px solid #9bc9e7;
+    background-color: #fff;
+    font-size: 14px;
+    padding-left: 10px;
+    min-width: 320px;
+}
+
+.set-price-container .sub-title {
+    height: 28px;
+    line-height: 28px;
+    background-color: #eaeaea;
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 3px 0 3px -10px;
+    padding-left: 10px;
+}
+
+.set-price-container table th {
+    font-weight: bold;
+}
+
+.set-price-container table th,
+.set-price-container table td {
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+}
+
+.set-price-container .pro-type-title {
+    color: #666;
+    font-weight: bold;
+}
+
+.set-price-container .pro-type-radio span {
+    font-size: 14px;
+}
+
+.set-price-container .stock-table td {
+    height: 40px;
+    padding-left: 10px;
+}
+
+.set-price-container .stock-table td:first-child {
+    text-align: right;
+    padding-left: 0;
+}
+
+.set-price-container .stock-table input[type='text'] {
+    height: 30px;
+    line-height: 30px;
+}
+
+.set-price-container .stock-table .checkboxInfo {
+    margin: 0;
+}
+
+.set-price-container .stock-table .gray-font {
+    color: #999999;
+}
+
+.set-price-container .order-condition {
+    margin: 10px 0 10px 30px;
+}
+
+.set-price-container .order-condition input[type='text'] {
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+}
+
+.set-price-container .oper-btn {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.set-price-container .oper-btn .save {
+    background-color: #f8864e;
+    margin-right: 10px;
+}
+
+.set-price-container .oper-btn .cancel {
+    background-color: #bbb;
+}
+
+.set-price-container input[readonly='readonly'],
+.set-price-container input[readonly='readonly']:focus,
+.set-price-container input[readonly='readonly']:hover {
+    border: none!important;
+}
+
+.set-price-container .show-date {
+    color: #666;
+    font-size: 18px;
+    padding: 18px 0;
+    text-align: center;
+}
+
+.set-price-container .date-range {
+    padding-top: 10px;
+}
+
+.set-price-container .date-range .input-date-range {
+    margin: 5px 0;
+}
+
+.set-price-container .date-range .checkboxInfo {
+    margin-right: 0;
+}
+
+/*  价格日历   end  */

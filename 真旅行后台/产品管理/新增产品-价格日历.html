@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 产品管理 新增产品-价格日历</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/productManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/priceCalendar.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/underscore.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+    <script type="text/javascript" src="../../js/maintain/customValidator.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+       
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <header class="main-header hoveringModel">
+            <div class="stairMenuContent topMenuFonts">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                        <ul class="stairMenu haveTopFonts">
+                            <li class="editFonts">&lt;冰岛7晚9日自由行&gt; 极近天然，情迷北欧 多地出发</li>
+                            <li class="routeTipsFonts">编号:15041501</li>
+                            <li class="routeTipsFonts">类型：自由行</li>
+                        </ul>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel headBtn clearfix">
+                <span class="leftBtn">
+                    <a href="javascript:void(0);" class="returnBtn">< 返回</a>
+                </span>
+                <ul class="middleContent">
+                    <li>
+                        <a href="javascript:void(0);">基本信息</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">底价维护</a>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:void(0);">价格日历</a>
+                        <i class="downArrowIcon"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">推荐行程</a>                        
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">附加信息</a>
+                    </li>
+                </ul>
+                <span class="rightBtn">
+                    <button class="commonButton red-fe6869Button">保 存</button>
+                    <button class="commonButton whiteBtn">保存&下一步</button>
+                </span>
+            </div>
+        </header>
+        <div class="main-container changeMainContent">
+            <section class="whiteBg">
+                <div class="price-calendar-container clearfix">
+                    <div class="left-cal-block">
+                        <div class="price-calendar">
+                            <div class="calendar-operation-bar clearfix">
+                                <div class="cal-year-title">
+                                    <span class="change-calendar-bigIcon-left change-calendar prev-year"></span>
+                                    <span class="cal-year-text"><em class="num current">2015</em>年</span>
+                                    <span class="change-calendar-bigIcon-right change-calendar next-year"></span>
+                                </div>
+                                <div class="cal-month-title">
+                                    <span class="change-calendar-bigIcon-left change-calendar prev-month"></span>
+                                    <span class="cal-month-text"><em class="num">1</em>月</span>
+                                    <span class="change-calendar-bigIcon-right change-calendar next-month"></span>
+                                </div>
+                                <div class="batch-set-btn">批量设置</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-cont-block">
+                        <!-- <div class="default-tip">
+                            <i class="left-arrow"></i>
+                            <span>点击日历<br/>设定价格</span>
+                        </div> -->
+                        <div class="set-price-container">
+                            <!-- <div class="show-date">2015-04-24 周五</div> -->
+                            <div class="date-range">
+                                <div class="input-date-range">
+                                    <input type="text" class="datepicker startDate hasIcon" style="width:130px;" data-cv="required" data-ct="开始时间"/> 至 <input type="text" class="datepicker endDate hasIcon" style="width:130px;" data-cv="required" data-ct="结束时间"/>
+                                </div>
+                                <div class="checkboxContent week-days">
+                                    <label class="checkboxInfo active">
+                                        <span class="checkboxIcon"></span>一
+                                    </label>
+                                    <label class="checkboxInfo active">
+                                        <span class="checkboxIcon"></span>二
+                                    </label>
+                                    <label class="checkboxInfo active">
+                                        <span class="checkboxIcon"></span>三
+                                    </label>
+                                    <label class="checkboxInfo active">
+                                        <span class="checkboxIcon"></span>四
+                                    </label>
+                                    <label class="checkboxInfo active">
+                                        <span class="checkboxIcon"></span>五
+                                    </label>
+                                    <label class="checkboxInfo active">
+                                        <span class="checkboxIcon"></span>六
+                                    </label>
+                                    <label class="checkboxInfo active">
+                                        <span class="checkboxIcon"></span>日
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sub-title">机票成本</div>
+                            <table>
+                                <colgroup>
+                                    <col width="40"/>
+                                    <col width="70"/>
+                                    <col width="40"/>
+                                    <col width=""/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>成人</th>
+                                        <td>1850</td>
+                                        <th>儿童</th>
+                                        <td>850</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="sub-title">酒店成本</div>
+                            <table>
+                                <colgroup>
+                                    <col width="40"/>
+                                    <col width=""/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>房价</th>
+                                        <td>500</td>
+                                    </tr>
+                                    <tr>
+                                        <th>房型</th>
+                                        <td>豪华景观房，大床/双床（不定），含早</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="sub-title">售价与库存</div>
+                            <div class="pro-type-radio">
+                                <span class="pro-type-title">类型</span>
+                                <label class="radio active">
+                                    <span class="radioIcon"></span>
+                                    <span class="labelFonts">单人份</span>
+                                </label>
+                            </div>
+                            <table class="stock-table">
+                                <colgroup>
+                                    <col width="65"/>
+                                    <col width="110"/>
+                                    <col width=""/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td><em class="red-star">*</em>成人</td>
+                                        <td><input type="text" style="width:100px;" readonly="readonly" value="1350" /></td>
+                                        <td>
+                                            <div class="checkboxContent">
+                                                <label class="checkboxInfo active">
+                                                    <span class="checkboxIcon"></span>含税
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkboxContent">
+                                                <label class="checkboxInfo active">
+                                                    <span class="checkboxIcon"></span>儿童
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td><input type="text" style="width:100px;"/></td>
+                                        <td>
+                                            <div class="checkboxContent">
+                                                <label class="checkboxInfo active">
+                                                    <span class="checkboxIcon"></span>含税
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><em class="red-star">*</em>单房差</td>
+                                        <td><input type="text" style="width:100px;" data-cv="required" data-ct="单房差"/></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><em class="red-star">*</em>可用库存</td>
+                                        <td colspan="2">
+                                            <input type="text" style="width:100px;" data-cv="required" data-ct="可用库存"/>人
+                                            <span style="margin-left:10px;">已用<em>0</em>人</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><em class="red-star">*</em>市场价</td>
+                                        <td><input type="text" style="width:100px;" data-cv="required" data-ct="市场价"/></td>
+                                        <td>
+                                            <span class="gray-font">仅展示用</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="sub-title">预订条件</div>
+                            <div class="order-condition">
+                                <span><em class="red-star">*</em>提前</span>
+                                <input type="text" style="width:55px;" data-cv="required" data-ct="时间"/>天
+                                <input type="text" style="width:55px;" data-cv="required" />点前预订
+                            </div>
+                            <div class="oper-btn">
+                                <button class="commonButton save">保 存</button>
+                                <button class="commonButton cancel">取 消</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>    
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+
+    <script>
+        $(function(){
+
+            // 触发验证
+            $(".oper-btn .save").click(function(){
+                $(".set-price-container").customValidate();
+            });
+            
+            //  定义日期数据格式
+
+            var data = [{
+                month: "2015-04",
+                    monthData: [{
+                        day: 22,
+                        soldNum: 3,
+                        totalNum: 10,
+                        adultPrice: 1250,
+                        childPrice: 850,
+                        flightFlag: true,
+                        hotelFlag: true,
+                        isClosed: true
+                    }, {
+                        day: 23,
+                        soldNum: 10,
+                        totalNum: 10,
+                        adultPrice: 1250,
+                        childPrice: 850,
+                        flightFlag: false,
+                        hotelFlag: true,
+                        isClosed: true
+                    }, {
+                        day: 24,
+                        soldNum: 3,
+                        totalNum: 10,
+                        adultPrice: 1250,
+                        childPrice: null,
+                        flightFlag: true,
+                        hotelFlag: false,
+                        isClosed: false
+                    }, {
+                        day: 25,
+                        soldNum: 3,
+                        totalNum: 10,
+                        adultPrice: 1250,
+                        childPrice: 850,
+                        flightFlag: true,
+                        hotelFlag: true,
+                        isClosed: false
+                    }]
+                },
+                {
+                month: "2015-05",
+                monthData: [{
+                    day: 3,
+                    soldNum: 3,
+                    totalNum: 10,
+                    adultPrice: 1250,
+                    childPrice: 850,
+                    flightFlag: true,
+                    hotelFlag: true,
+                    isClosed: false
+                }, {
+                    day: 6,
+                    soldNum: 10,
+                    totalNum: 10,
+                    adultPrice: 1250,
+                    childPrice: 850,
+                    flightFlag: false,
+                    hotelFlag: true,
+                    isClosed: false
+                }]
+            }];
+
+            //  调用方法
+            //  param1: 包裹日历的外层容器元素;  param2: 填充日历所需要数据
+            //  以下独立出的 funntion 可自行封装在js文件中，引入js文件
+            genePriceCalendar(".price-calendar", data);            
+            
+        });
+
+    function genePriceCalendar(ele, data) {
+
+        $(ele).datepicker({
+            format: "yyyy-mm-dd",
+            language: "zh-CN",
+            weekStart: 0,
+            beforeShowDay: function(){
+                $(ele).find("td .active").removeClass("active");             
+            }
+        });
+
+        var date = new Date();
+
+        setCalendarTitle(ele, date);
+        geneCalendarTdContent(date, data);
+        
+        $(ele).find("tbody td").click(function(){
+            return false;  //  解除默认的td点击事件，否则会重写日历结构
+        });
+
+        $(".tdCont").click(function(event){
+            console.log('click tdCont');
+            $(this).parents("table").find(".tdCont").removeClass("current");
+            $(this).addClass("current");
+            event.stopPropagation();
+        });
+
+        $(".tdCont .left-btn").click(function(event){
+            console.log('delete');
+            event.stopPropagation();
+        });
+
+        $(".tdCont .right-btn").click(function(event){
+            console.log('open/close');
+            event.stopPropagation();
+        });
+
+        $(ele).find(".change-calendar").click(function(){
+            if ($(this).hasClass("prev-year")) {    //  前一年
+                date = moveMonth(date, -12);
+
+            } else if ($(this).hasClass("next-year")) {  //  后一年
+                date = moveMonth(date, 12);
+
+            } else if ($(this).hasClass("prev-month")) {  //  前一月
+                date = moveMonth(date, -1);
+
+            } else if ($(this).hasClass("next-month")) {  //  后一月
+                date = moveMonth(date, 1);
+
+            }
+
+            $(ele).datepicker("setDate", date);
+
+            /*  这部分代码可以封装成一个单独的方法， 初始化和每次日历翻动都需要用*/
+            /* wrap  start */
+            setCalendarTitle(ele, date);
+            geneCalendarTdContent(date, data);
+
+            $(ele).find("td.active").removeClass("active");  //  默认会选中日期，active会有样式
+            $(ele).find("tbody td").click(function(){
+                return false;  //  解除默认的td点击事件，否则会重写日历结构
+            });
+
+            $(".tdCont").click(function(event){
+                console.log('click tdCont');
+                $(this).parents("table").find(".tdCont").removeClass("current");
+                $(this).addClass("current");
+                event.stopPropagation();    //  同一个td内的很多元素都绑定点击事件，注意阻止事件冒泡
+            });
+
+            $(".tdCont .left-btn").click(function(event){
+                console.log('delete');
+                event.stopPropagation();
+            });
+
+            $(".tdCont .right-btn").click(function(event){
+                console.log('open/close');
+                event.stopPropagation();
+            });
+
+            /* wrap  end */
+        });
+    }
+
+    // 每次切换月份（含年份）都需要重新生成TD的内容
+    function geneCalendarTdContent(date, data) {  
+
+        var y = date.getFullYear(),
+            m = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1),
+            monthStr = y + "-" + m,
+            monthDataArr = [];
+
+        //  如果没有数据，返回undefined
+        var monthDataObject = _.findWhere(data, {month: monthStr}); 
+
+        if (!!monthDataObject) {
+            monthDataArr = _.findWhere(data, {month: monthStr}).monthData;
+        }
+
+        $(".price-calendar .datepicker-days").find("tbody td").each(function(){
+            var dayText = $(this).html();
+
+            if ($(this).hasClass("old") || $(this).hasClass("new")) {
+                $(this).html("<div class='tdCont disabled'></div>");
+            } else {
+                $(this).html(geneTdContTemplate(y, m, dayText, monthDataArr));
+            }
+        });        
+    }
+
+
+    // year, month 参数只为了给当前td确定具体的日期值  "year-month-day"
+    function geneTdContTemplate(year, month, day, monthDataArr) {
+
+        var template = "";
+
+        var tmp = _.findWhere(monthDataArr, {day: day*1});
+
+        if (tmp === undefined) {
+
+            template += "<div class='tdCont add'><div class='top-block clearfix'><span data-dayNum='" + year + "-" + month + "-" + day + "'>" + day +"</span></div>";
+        } else {
+
+            template += "<div class='tdCont edit'><div class='top-block clearfix'><span class='day' data-dayNum='" + year + "-" + month + "-" + day + "'>" + day +"</span>";
+
+            if (tmp.isClosed) {  //  显示关闭图标
+                template += "<span class='closed-icon'>关闭</span>";
+            } else {
+                template += "";
+            }
+
+            if (tmp.soldNum < tmp.totalNum) {  //  显示售卖数量
+                template += "<span class='stock'><em class='sold-num'>" + tmp.soldNum + "</em><em>/</em><em class='total-num'>" + tmp.totalNum +"</em></span></div>";
+            } else if (tmp.soldNum == tmp.totalNum) {  //  显示售完图标
+                template += "<span class='stock'><i class='stock-icon'>售完</i></span></div>";
+            }            
+
+            if (tmp.adultPrice != 0 && !!tmp.adultPrice) {  //  显示成人价格
+                template += "<div class='middle-block'><span class='adult-price'>￥" + tmp.adultPrice + "</span>";
+            } else {
+                template += "<div class='middle-block'><span class='adult-price'></span>";
+            }
+
+            if (tmp.childPrice != 0 && !!tmp.childPrice) {   //  显示儿童价格
+                template += "<span class='child-price'>￥" + tmp.childPrice + "</span></div>";
+            } else {
+                template += "<span class='child-price'></span></div>";
+            }
+
+            if (tmp.flightFlag) {   //  显示机票图标              
+                template += "<div class='bottom-block'><span class='flight-icon'></span>";
+            } else {
+                template += "<div class='bottom-block'>";
+            }
+
+            if (tmp.hotelFlag) {   //   显示酒店图标
+                template += "<span class='hotel-icon'></span>";
+            }
+
+            template += "<div class='oper-btn'><span class='left-btn'>删除</span><span class='right-btn'>";
+
+            if (tmp.isClosed) {
+                template += "开启</span></div></div>";
+            } else {
+                template += "关闭</span></div></div>";
+            }
+
+        }
+
+        template += "</div>";
+        return template;
+    }
+
+    function moveMonth(date, dir) {
+
+        if (!(date instanceof Date)) {   //  如果date不是日期类型
+            return undefined;
+        }
+
+        if (!dir) {   // 如果 dir 参数为空，返回date
+            return (date instanceof Date) ? date : undefined;
+        }
+
+        var dir_num = parseInt(dir),
+            dir_absNum = Math.abs(dir_num),
+            year = date.getFullYear(),
+            month = date.getMonth(),
+            day = date.getDate(),
+            result_date;
+
+        if (dir_num < 0) {   //  日期往前滚
+            result_date = new Date(year, month - dir_absNum);
+
+        } else if (dir_num > 0) {  // 日期往后滚
+            result_date = new Date(year, month + dir_absNum);
+        }
+        return result_date;
+    }
+
+    function setCalendarTitle(ele, date) {
+
+        $(ele).find(".cal-year-text .num").html(date.getFullYear());
+        if (date.getFullYear() == new Date().getFullYear()) {
+            $(ele).find(".cal-year-text .num").addClass("current");
+        } else {
+            $(ele).find(".cal-year-text .num").removeClass("current");
+        }
+
+        $(ele).find(".cal-month-text .num").html(date.getMonth() + 1);
+        if (date.getMonth() == new Date().getMonth()) {
+            $(ele).find(".cal-month-text .num").addClass("current");
+        } else {
+            $(ele).find(".cal-month-text .num").removeClass("current");
+        }
+    }
+    </script>
+
+</body>
+</html>
