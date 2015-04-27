@@ -31,6 +31,7 @@
 
 				var validatorValues = $ve.data("cv").split(',');  // 得到所有需要验证的类型[required,email,...]
 				var validatorTitle = $ve.data("ct");  // 得到验证字段名
+				var validatorPosition = $ve.data("cp");  //  得到错误消息显示位置，默认bottom
 				validatorTitle = (validatorTitle == undefined) ? "" : validatorTitle;
 
 				//  当前验证元素为 input 类型
@@ -75,10 +76,10 @@
 						
 					}
 
-					//  验证直到出现不符合的字段为止，之后字段不再验证
-					// if (!opts.validateAll && !result) {  
-					// 	break;
-					// }
+					// 验证直到出现不符合的字段为止，之后字段不再验证
+					if (!opts.validateAll && !result) {  
+						break;
+					}
 					
 				}
 
@@ -90,9 +91,11 @@
 
 						result = false;
 						
-						$ve.parent("div.dropdown").after($("<div class='verifyStyle' style='width: " + $ve.outerWidth() + "px;'>" 
+						$ve.parent("div.dropdown").after($("<div class='verifyStyle'>" 
 						+"<i class='verifyIcon'></i><span class='verifyFonts'>"
 						+validatorTitle+"不能为空</span></div>"));
+
+						setErrorElePosition($ve);
 					} else {
 						$ve.parent("div.dropdown").siblings('.verifyStyle').remove();
 					}
@@ -106,13 +109,13 @@
 	function geneErrorEle($this, msg) {
 		$this.addClass("verifyBox");
 		if ($this.next("div.verifyStyle").length == 0) {
-			$this.after($("<div class='verifyStyle' style='width:" + $this.outerWidth() + "px;left:"
-						+ $this.offset().left + "px'>" 
+			$this.after($("<div class='verifyStyle'>" 
 						+"<i class='verifyIcon'></i><span class='verifyFonts'>"
 						+msg+"</span></div>"));
 		} else {
 			$this.next("div.verifyStyle").find(".verifyFonts").html(msg);
 		}
+		setErrorElePosition($this);
 	}
 
 	function cleanErrorEle($this) {
@@ -121,4 +124,66 @@
 			$this.next('div.verifyStyle').remove();
 		}
 	}
+
+	function setErrorElePosition($this) {
+
+		var pos = $this.data("cp");
+
+		var height = $this.outerHeight(),
+			width = $this.outerWidth(),
+			offsetTop = $this.offset().top,
+			offsetLeft = $this.offset().left;
+
+		var $errEle = $this.next("div.verifyStyle"),
+			err_height = $errEle.height(),
+			err_outerHeight = $errEle.outerHeight(),
+			err_width = $errEle.width(),
+			err_outerWidth = $errEle.outerWidth();
+
+		console.log(err_height);
+
+		var w, left, top;
+
+		if (pos == "right") {
+
+			left = offsetLeft + width;
+			$errEle.css({
+				"width": err_outerWidth + "px",
+				"left": left + "px",
+				"top": offsetTop + "px",
+				"padding-top": (height - err_height)/2 + "px",
+				"padding-bottom": (height - err_height)/2 + "px"
+			});
+
+		} else if (pos == "top") {
+
+			w = (width >= err_outerWidth) ? width : err_outerWidth;
+			top = offsetTop - err_outerHeight;
+			$errEle.css({
+				"width": w + "px",
+				"left": offsetLeft + "px",
+				"top": top + "px"
+			});
+
+		} else if (pos == "left") {
+
+			left = offsetLeft - err_outerWidth;
+			$errEle.css({
+				"width": err_outerWidth + "px",
+				"left": left + "px",
+				"top": offsetTop + "px",
+				"padding-top": (height - err_height)/2 + "px",
+				"padding-bottom": (height - err_height)/2 + "px"
+			});
+
+		} else {  //  其他情况均视为默认在下方显示
+
+			w = (width >= err_outerWidth) ? width : err_outerWidth;
+			$errEle.css({
+				"width": w + "px",
+				"left": offsetLeft + "px"
+			});
+		}
+	}
+
 })(jQuery);

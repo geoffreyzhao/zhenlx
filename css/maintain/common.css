@@ -293,7 +293,7 @@ input[type="text"]:focus{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* 媒体查询导航条 start */
@@ -823,7 +823,7 @@ input[type="text"].verifyBox:focus{
 .verifyStyle{
     position: absolute;
     background-color: #feefe9;
-    padding: 7px 0;
+    padding: 7px 8px 7px 0;
     z-index: 2;
 }
 .verifyStyle .verifyIcon{

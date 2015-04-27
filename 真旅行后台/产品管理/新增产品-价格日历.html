@@ -214,19 +214,19 @@
                                     </tr>
                                     <tr>
                                         <td><em class="red-star">*</em>单房差</td>
-                                        <td><input type="text" style="width:100px;" data-cv="required" data-ct="单房差"/></td>
+                                        <td><input type="text" style="width:100px;" data-cv="required" data-ct="单房差" data-cp="right"/></td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <td><em class="red-star">*</em>可用库存</td>
                                         <td colspan="2">
-                                            <input type="text" style="width:100px;" data-cv="required" data-ct="可用库存"/>人
+                                            <input type="text" style="width:100px;" data-cv="required" data-ct="可用库存" data-cp="left"/>人
                                             <span style="margin-left:10px;">已用<em>0</em>人</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><em class="red-star">*</em>市场价</td>
-                                        <td><input type="text" style="width:100px;" data-cv="required" data-ct="市场价"/></td>
+                                        <td><input type="text" style="width:100px;" data-cv="required" data-ct="市场价" data-cp="top"/></td>
                                         <td>
                                             <span class="gray-font">仅展示用</span>
                                         </td>
@@ -236,12 +236,12 @@
                             <div class="sub-title">预订条件</div>
                             <div class="order-condition">
                                 <span><em class="red-star">*</em>提前</span>
-                                <input type="text" style="width:55px;" data-cv="required" data-ct="时间"/>天
+                                <input type="text" style="width:55px;" data-cv="required" data-ct="时间" data-cp="right"/>天
                                 <input type="text" style="width:55px;" data-cv="required" />点前预订
                             </div>
                             <div class="oper-btn">
-                                <button class="commonButton orange-f79767Btn">保 存</button>
-                                <button class="commonButton gray-bbbButton">取 消</button>
+                                <button class="commonButton orange-f79767Btn save">保 存</button>
+                                <button class="commonButton gray-bbbButton cancel">取 消</button>
                             </div>
 
                         </div>
@@ -257,7 +257,9 @@
 
             // 触发验证
             $(".oper-btn .save").click(function(){
-                $(".set-price-container").customValidate();
+                $(".set-price-container").customValidate({
+                    validateAll: true
+                });
             });
 
             //  定义日期数据格式
