@@ -354,6 +354,28 @@
     vertical-align: middle;
     margin-right: 10px;
 }
+.hotelImgList .moveLeft {
+    position: absolute;
+    left: 0;
+    color: #9c9c9c;
+    font-size: 14px;
+    cursor: pointer;
+    bottom: -3px;
+    display: none;
+}
+.hotelImgList .moveRight {
+    position: absolute;
+    left: 45px;
+    color: #9c9c9c;
+    font-size: 14px;
+    cursor: pointer;
+    bottom: -3px;
+    display: none;
+}
+.hotelImgList li:hover .moveLeft,
+.hotelImgList li:hover .moveRight {
+    display: block;
+}
 .hotelImgList li .upLoading{
     font-size: 0;
     text-indent: -99999px;
@@ -378,6 +400,11 @@
 }
 .hotelImgList .addImg:hover{
     background: #f9f9f9 url("../../images/bigAddIconHover.png") no-repeat 50%;
+}
+.hotelImgList .addImg input[type='file'] {
+    width: 210px;
+    height: 140px;
+    opacity: 0;
 }
 .facilityContent textarea{
     width: 870px;

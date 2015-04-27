@@ -140,8 +140,6 @@
 			err_width = $errEle.width(),
 			err_outerWidth = $errEle.outerWidth();
 
-		console.log(err_height);
-
 		var w, left, top;
 
 		if (pos == "right") {
