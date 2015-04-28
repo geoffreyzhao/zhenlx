@@ -761,6 +761,7 @@ input[type="text"].tagInput {
     line-height: 38px;
     color: #4cc3a5;
     margin-right: 8px;
+    font-size: 14px;
 }
 
 .add-product-oper .add-btn .add-icon {
@@ -826,6 +827,7 @@ input[type="text"].tagInput {
 
 .table-top-block .oper-link {
     float: right;
+    margin-top: 5px;
 }
 
 .table-top-block .oper-link a {
