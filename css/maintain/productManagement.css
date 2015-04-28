@@ -741,3 +741,266 @@ input[type="text"].tagInput {
 }
 
 /*  价格日历   end  */
+
+/* 价格双日历 start */
+
+/* 价格双日历 start */
+
+/*  新增产品-底价维护   start  */
+
+.add-product-oper {
+
+}
+
+.add-product-oper .add-btn {
+    display: inline-block;
+    width: 190px;
+    height: 38px;
+    border: 1px dashed #4cc3a5;
+    text-align: center;
+    line-height: 38px;
+    color: #4cc3a5;
+    margin-right: 8px;
+}
+
+.add-product-oper .add-btn .add-icon {
+    display: inline-block;
+    background: url(../../images/cir-add-icon.png) no-repeat 0 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+.add-product-oper .add-btn:hover {
+    background-color: #35c39f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-product-oper .add-btn:hover .add-icon{
+    background-position: 0 -18px;
+}
+
+.pm-info-module {
+    margin-top: 25px;
+    width: 975px;
+}
+
+.pm-info-module .sub-title {
+    font-size: 16px;
+    color: #484848;
+    margin-bottom: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.table-top-block .table-tab,
+.table-top-block .table-tab-switch {
+    float: left;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+.table-top-block .table-tab li,
+.table-top-block .table-tab-switch li {
+    float: left;
+    width: 160px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    border: 1px solid #dadada;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #666;
+    font-size: 16px;
+}
+
+.table-top-block .table-tab li span,
+.table-top-block .table-tab-switch li span {
+    line-height: 20px;
+    display: inline-block;
+    padding: 0 3px;
+}
+
+.table-top-block .oper-link {
+    float: right;
+}
+
+.table-top-block .oper-link a {
+    color: #666;
+    margin-right: 25px;
+}
+
+.table-top-block .oper-link a:last-child {
+    margin-right: 0;
+}
+
+.table-top-block .oper-link a:hover {
+    color: #3895cf;
+}
+
+.flight-info-table {
+    color: #555;
+    font-size: 14px;
+}
+
+.flight-info-table th {
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #dadada;
+}
+
+.flight-info-table th {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.flight-info-table td {
+    text-align: left;
+    padding-left: 7px;
+    border: 1px solid #dadada;
+}
+
+.flight-info-table th.boldTh {
+    font-weight: bold;
+}
+
+.flight-info-table td.go-air-range {
+    background-color: #01bee8;
+    color: #fff;
+    padding-left: 0;
+    text-align: center;
+    line-height: 20px;
+}
+
+.flight-info-table td .go-flight-icon {
+    display: inline-block;
+    background: url(../../images/air-range-icon.png) no-repeat 0 0;
+    width: 24px;
+    height: 11px;    
+}
+
+.flight-info-table td.back-air-range {
+    background-color: #42c175;
+    color: #fff;
+    padding-left: 0;
+    text-align: center;
+    line-height: 20px;
+}
+
+.flight-info-table td .back-flight-icon {
+    display: inline-block;
+    background: url(../../images/air-range-icon.png) no-repeat 0 -31px;
+    width: 24px;
+    height: 11px;    
+}
+
+.hotel-info-module .table-tab-switch li {
+    margin-right: 1px;
+}
+
+.hotel-info-module .table-tab-switch li:hover {
+    background-color: #f1f1fa;
+    cursor: pointer;
+}
+
+.hotel-info-module .table-tab-switch li.current {
+    background-color: #7b7abc;
+    color: #fff;
+}
+
+.hotel-info-table {
+    font-size: 14px;
+    color: #555;
+}
+
+.hotel-info-table th,
+.hotel-info-table td{
+    border: 1px solid #dadada;
+}
+
+.hotel-info-table th {
+    font-weight: bold;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color: #f4f4f4;
+}
+
+.hotel-info-table th.normal {
+    font-weight: normal;
+}
+
+.hotel-info-table td {
+    text-align: left;
+    padding-left: 7px;
+}
+
+.price-info-module {
+    font-size: 14px;
+    color: #555;
+}
+
+.pack-price-block,
+.vendor-info-block,
+.other-info-block {
+    padding: 25px 0;
+}
+
+.pack-price-block,
+.vendor-info-block {
+    border-bottom: 1px dashed #666666;
+}
+
+.vendor-info-block th {
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+}
+
+.vendor-info-block td {
+    padding-left: 10px;
+}
+
+.vendor-info-block input[type='text'] {
+    width: 390px;
+}
+
+.other-info-block th {
+    text-align: right;
+}
+
+.other-info-block td {
+    padding-left: 10px;
+}
+
+.price-maint-block .checkboxContent {
+    margin: 0 30px;
+}
+
+.price-maint-block .checkboxInfo {
+    margin-right: 5px;
+}
+
+.price-maint-block .oper-price-btn {
+    float: right;
+    margin-top: -6px;
+}
+
+.price-maint-block .price-line {
+    margin-left: 60px;
+    margin-top: 15px;
+}
+
+.price-maint-block .price-line .adult-price-text {
+    color: #ff4200;
+}
+
+.price-maint-block .price-line .child-price-text {
+    color: #008736;
+    margin-left: 20px;
+}
+
+/*  新增产品-底价维护   end  */
