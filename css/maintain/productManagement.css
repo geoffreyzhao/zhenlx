@@ -785,7 +785,6 @@ input[type="text"].tagInput {
 
 .pm-info-module {
     margin-top: 25px;
-    width: 975px;
 }
 
 .pm-info-module .sub-title {
@@ -954,7 +953,7 @@ input[type="text"].tagInput {
 
 .pack-price-block,
 .vendor-info-block {
-    border-bottom: 1px dashed #666666;
+    border-bottom: 1px dashed #dadada;
 }
 
 .vendor-info-block th {
@@ -1156,6 +1155,10 @@ input[type="text"].tagInput {
     margin-bottom: 12px;
 }
 
+.flight-form-module .pack-price-block {
+    padding: 0;
+}
+
 #hotel-list-popup .hotel-list-table {
     font-size: 16px;
     color: #666;
@@ -1269,6 +1272,27 @@ input[type="text"].tagInput {
     background-color: #fbfbfb;
     padding: 3px 14px;
     margin-bottom: 10px;
+}
+
+.hotel-form-module .pack-price-block {
+    border-bottom: none;
+    padding: 0;
+}
+
+.hotel-form-module .price-info-module {
+    border-top: 1px dashed #dadada;
+}
+
+.hotel-form-module .price-line {
+    margin-left: 0;
+}
+
+.hotel-form-module .price-line .tip-text {
+    color: #666;
+}
+
+.hotel-form-module .price-line .tip-text em {
+    font-weight: bold;
 }
 
 /*  新增产品-底价维护   end  */
