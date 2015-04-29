@@ -900,16 +900,16 @@ input[type="text"].tagInput {
     height: 11px;    
 }
 
-.hotel-info-module .table-tab-switch li {
+.table-tab-switch li {
     margin-right: 1px;
 }
 
-.hotel-info-module .table-tab-switch li:hover {
+.table-tab-switch li:hover {
     background-color: #f1f1fa;
     cursor: pointer;
 }
 
-.hotel-info-module .table-tab-switch li.current {
+.table-tab-switch li.current {
     background-color: #7b7abc;
     color: #fff;
 }
@@ -1154,6 +1154,121 @@ input[type="text"].tagInput {
 
 .flight-form-module .table-top-block {
     margin-bottom: 12px;
+}
+
+#hotel-list-popup .hotel-list-table {
+    font-size: 16px;
+    color: #666;
+}
+
+#hotel-list-popup .hotel-list-table th:last-child,
+#hotel-list-popup .hotel-list-table td:last-child {
+    text-align: center;
+}
+
+#hotel-list-popup .hotel-list-table th {
+    color: #444;
+    padding: 15px;
+}
+
+#hotel-list-popup .hotel-list-table td {
+    padding: 13px;
+}
+
+#hotel-list-popup .search-block {
+    margin: 16px 0;
+}
+
+#hotel-list-popup .search-block input {
+    margin: 0 10px;
+}
+
+.hotel-form-module .hotel-form-table {
+
+}
+
+.hotel-form-module .table-tab-switch {
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.hotel-form-module .hotel-form-table th {
+    color: #666;
+    font-weight: bold;
+}
+
+.hotel-form-module .hotel-form-table th,
+.hotel-form-module .hotel-form-table td {
+    padding: 6px 0;
+}
+
+.hotel-form-module .hotel-form-table textarea {
+    width: 893px;
+    resize: none;
+}
+
+.hotel-form-module .hotel-form-table .pick-up-night {
+    padding-left: 10px;
+}
+
+.hotel-form-module .hotel-form-table .day-item {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    width: 28px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    margin-right: 6px;
+}
+
+.hotel-form-module .hotel-form-table .day-item:hover {
+    background-color: #fff;
+    border-color: #45c8dc;
+    cursor: pointer;
+}
+
+.hotel-form-module .hotel-form-table .day-item.active {
+    background-color: #45c8dc;
+    border-color: #45c8dc;
+    color: #fff;
+}
+
+.hotel-form-module .hotel-form-table .day-item.disable {
+    background-color: #c7c7c7;
+    border-color: #c7c7c7;
+}
+
+.hotel-form-module .hotel-form-table .pick-all {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    width: 58px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    margin-left: 30px;
+}
+
+.hotel-form-module .hotel-form-table .pick-all:hover {
+    background-color: #fff;
+    border-color: #45c8dc;
+    cursor: pointer;
+}
+
+.hotel-form-module .hotel-form-table .pick-all.active {
+    background-color: #45c8dc;
+    border-color: #45c8dc;
+    color: #fff;
+}
+
+.hotel-form-module .hotel-form-table .view-hotel-detail {
+    display: inline-block;
+    color: #9ccae6;
+    border: 1px solid #9ccae6;
+    background-color: #fbfbfb;
+    padding: 3px 14px;
+    margin-bottom: 10px;
 }
 
 /*  新增产品-底价维护   end  */
