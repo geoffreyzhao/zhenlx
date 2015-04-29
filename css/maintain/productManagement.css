@@ -799,7 +799,7 @@ input[type="text"].tagInput {
 .table-top-block .table-tab,
 .table-top-block .table-tab-switch {
     float: left;
-    background-color: #f8f8f8;
+    background-color: #fff;
     margin: 0;
 }
 
@@ -816,6 +816,7 @@ input[type="text"].tagInput {
     border-top-right-radius: 5px;
     color: #666;
     font-size: 16px;
+    background-color: #f8f8f8;
 }
 
 .table-top-block .table-tab li span,
@@ -1003,6 +1004,156 @@ input[type="text"].tagInput {
 .price-maint-block .price-line .child-price-text {
     color: #008736;
     margin-left: 20px;
+}
+
+/* 弹窗样式 */
+.section-cont-wrapper {
+    width: 990px;
+    font-size: 14px;
+}
+
+.flight-form-module ul.table-tab {
+    border-bottom: 1px solid #dadada;
+    width: 100%;
+}
+
+.flight-form-module .title-flag {
+    display: inline-block;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.flight-form-module .go-flight {
+    background-color: #01bee8;
+}
+
+.flight-form-module .go-flight-icon {
+    display: inline-block;
+    background: url(../../images/air-range-icon.png) no-repeat 0 0;
+    width: 24px;
+    height: 11px; 
+}
+
+.flight-form-module .middle-flight {
+    background-color: #44c9bf;
+}
+
+.flight-form-module .middle-flight-icon {
+    display: inline-block;
+    background: url(../../images/air-range-icon.png) no-repeat 0 -13px;
+    width: 20px;
+    height: 16px; 
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+.flight-form-module .back-flight {
+    background-color: #42c173;
+}
+
+.flight-form-module .back-flight-icon {
+    display: inline-block;
+    background: url(../../images/air-range-icon.png) no-repeat 0 -31px;
+    width: 24px;
+    height: 11px; 
+}
+
+.flight-form-module .add-oper {
+    display: inline-block;
+    color: #3895cf;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 18px;
+}
+
+.flight-form-module .plus-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../../images/plus-del-icon.png) no-repeat -17px 0;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+.flight-form-module .table-top-title {
+    /*margin: 12px 0;*/
+    padding: 0;
+}
+
+.flight-form-table th,
+.flight-form-table td {
+    padding: 5px 0;
+}
+
+.flight-form-table th {
+    text-align: right;
+}
+
+.flight-form-table td {
+    padding-left: 5px;
+}
+
+.flight-form-module .long-split-line {
+    border-bottom: 1px dashed #dadada;
+    margin: 15px 0;
+}
+
+.flight-form-module .short-split-line {
+    border-bottom: 1px dashed #dadada;
+    width: 915px;
+    margin: 10px 0 10px 70px;
+}
+
+.flight-form-module .del-oper {
+    color: #3895cf;
+    font-size: 16px;
+    float: right;
+    margin: 15px 0 5px;
+    cursor: pointer;
+}
+
+.flight-form-module .del-icon {
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    background: url(../../images/plus-del-icon.png) no-repeat 0 0;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+.flight-form-module .remark-info {
+    margin-bottom: 10px;
+}
+
+.flight-form-module .remark-info .title {
+    font-weight: bold;
+    vertical-align: top;
+    margin-right: 15px;
+    padding-left: 5px;
+}
+
+.flight-form-module .remark-info .text-tip {
+    color: #999999;
+    margin-bottom: 8px;
+}
+
+.flight-form-module .remark-info .cont {
+    display: inline-block;
+}
+
+.flight-form-module .remark-info textarea {
+    resize: none;
+    width: 895px;
+    height: 60px;
+}
+
+.flight-form-module .table-top-block {
+    margin-bottom: 12px;
 }
 
 /*  新增产品-底价维护   end  */

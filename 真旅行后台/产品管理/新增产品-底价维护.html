@@ -209,8 +209,8 @@
                                     <td>大床房</td>
                                 </tr>
                                 <tr>
-                                    <th style="height:80px;">酒店卖点</th>
-                                    <td colspan="7" style="height:80px;">酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点酒店卖点</td>
+                                    <th style="height:80px;">酒店特色</th>
+                                    <td colspan="7" style="height:80px;">酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色酒店特色</td>
                                 </tr>
                                 <tr>
                                     <th>酒店成本</th>
@@ -350,28 +350,459 @@
 
     <!--  添加机票弹窗内容  -->
 
-    <div class="modal" id="add-flight-popup">
-        <div class="modal-dialog" style="width: 500px;">
+    <div class="modal hasHeaderBtn" id="add-flight-popup">
+        <div class="modal-dialog" style="width: 1040px;">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <div class="modal-header-oper">
+                        <button class="commonButton red-fe6869Button">保存</button>
+                        <button class="commonButton gray-bbbButton cancel">取消</button>
+                    </div>
                     <h4 class="modal-title">机票信息</h4>
                 </div>
-                <div class="modal-body">
-                    <div class="popupContainer">
-                        <i class="warnIcon"></i>
-                        <span class="popupContainer-fonts">确认要挂起选中的会员吗？</span>
+                <div class="modal-body" style="height:635px;overflow-y: auto;">
+                    <div class="section-cont-wrapper">
+                        <section class="flight-form-module">
+                            <div class="flight-info">
+                                <div class="table-top-block clearfix">
+                                    <ul class="table-tab">
+                                        <li class="">
+                                            <span>上海出发</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <section class="go-air-range-block">
+                                    <div class="table-top-title">
+                                        <span class="go-flight title-flag">
+                                            <span class="go-flight-icon"></span>
+                                            <span>去程</span>
+                                        </span>
+                                        <span class="add-oper add-transfer">
+                                            <span class="plus-icon"></span>
+                                            <span>添加中转</span>
+                                        </span>
+                                    </div>
+                                    <table class="flight-form-table">
+                                        <colgroup>
+                                            <col width="65" />
+                                            <col width="155" />
+                                            <col width="78" />
+                                            <col width="155" />
+                                            <col width="78" />
+                                            <col width="155" />
+                                            <col width="78" />
+                                            <col width="95" />
+                                            <col width="48" />
+                                            <col width="72" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>                                
+                                                <th><span class="red-star">*</span>第几天</th>
+                                                <td><input type="text" style="width:150px;" /></td>
+                                                <th><span class="red-star">*</span>航司名称</th>
+                                                <td><input type="text" style="width:150px;" /></td>
+                                                <th><span class="red-star">*</span>机票号</th>
+                                                <td><input type="text" style="width:150px;" /></td>
+                                                <th>舱位</th>
+                                                <td><input type="text" style="width:80px;" /></td>
+                                                <th>机型</th>
+                                                <td><input type="text" style="width:80px;" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="red-star">*</span>起飞机场</th>
+                                                <td><input type="text" style="width:150px;" /></td>
+                                                <th><span class="red-star">*</span>起飞时间</th>
+                                                <td><input type="text" style="width:150px;" class="datepicker hasIcon default" /></td>
+                                                <th><span class="red-star">*</span>到达机场</th>
+                                                <td><input type="text" style="width:150px;" /></td>
+                                                <th><span class="red-star">*</span>到达时间</th>
+                                                <td colspan="3">
+                                                    <input type="text" style="width:150px;" class="datepicker hasIcon default" />
+                                                    <div class="dropdown" style="width: 67px;top:1px;">
+                                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="true">
+                                                            <span class="activeFonts">+0日</span>
+                                                            <span class="caret"></span>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="active"><a href="javascript:void(0);">+0日</a></li>
+                                                            <li class="active"><a href="javascript:void(0);">+1日</a></li>
+                                                            <li class="active"><a href="javascript:void(0);">+2日</a></li>
+                                                            <li class="active"><a href="javascript:void(0);">+3日</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <section class="transfer-flight-block clearfix">
+                                        <div class="short-split-line"></div>
+                                        <table class="flight-form-table">
+                                            <colgroup>
+                                                <col width="65" />
+                                                <col width="155" />
+                                                <col width="78" />
+                                                <col width="155" />
+                                                <col width="78" />
+                                                <col width="155" />
+                                                <col width="78" />
+                                                <col width="95" />
+                                                <col width="48" />
+                                                <col width="72" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>                                
+                                                    <th><span class="red-star">*</span>第几天</th>
+                                                    <td><input type="text" style="width:150px;" /></td>
+                                                    <th><span class="red-star">*</span>航司名称</th>
+                                                    <td><input type="text" style="width:150px;" /></td>
+                                                    <th><span class="red-star">*</span>机票号</th>
+                                                    <td><input type="text" style="width:150px;" /></td>
+                                                    <th>舱位</th>
+                                                    <td><input type="text" style="width:80px;" /></td>
+                                                    <th>机型</th>
+                                                    <td><input type="text" style="width:80px;" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><span class="red-star">*</span>起飞机场</th>
+                                                    <td><input type="text" style="width:150px;" /></td>
+                                                    <th><span class="red-star">*</span>起飞时间</th>
+                                                    <td><input type="text" style="width:150px;" class="datepicker hasIcon default" /></td>
+                                                    <th><span class="red-star">*</span>到达机场</th>
+                                                    <td><input type="text" style="width:150px;" /></td>
+                                                    <th><span class="red-star">*</span>到达时间</th>
+                                                    <td colspan="3">
+                                                        <input type="text" style="width:150px;" class="datepicker hasIcon default" />
+                                                        <div class="dropdown" style="width: 67px;top:1px;">
+                                                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="true">
+                                                                <span class="activeFonts">+0日</span>
+                                                                <span class="caret"></span>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="active"><a href="javascript:void(0);">+0日</a></li>
+                                                                <li class="active"><a href="javascript:void(0);">+1日</a></li>
+                                                                <li class="active"><a href="javascript:void(0);">+2日</a></li>
+                                                                <li class="active"><a href="javascript:void(0);">+3日</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="del-oper del-transfer">
+                                            <span class="del-icon"></span>
+                                            <span>删除中转信息</span>
+                                        </div>
+                                    </section>
+                                </section>
+                                <section class="middle-air-range-container">
+                                    <div class="long-split-line"></div>
+                                    <section class="middle-air-range-block clearfix">
+                                        <div class="table-top-title">
+                                            <span class="middle-flight title-flag">
+                                                <span class="middle-flight-icon"></span>
+                                                <span class="flight-num">中间程</span>
+                                            </span>
+                                            <span class="add-oper add-middle-flight">
+                                                <span class="plus-icon"></span>
+                                                <span>添加航程</span>
+                                            </span>
+                                            <span class="add-oper add-transfer" style="display: none;">
+                                                <span class="plus-icon"></span>
+                                                <span>添加中转</span>
+                                            </span>
+                                        </div>
+                                    </section>                                   
+                                </section>
+                                <section class="back-air-range-block">
+                                    <div class="long-split-line"></div>
+                                    <div class="table-top-title">
+                                        <span class="back-flight title-flag">
+                                            <span class="back-flight-icon"></span>
+                                            <span>返程</span>
+                                        </span>
+                                        <span class="add-oper">
+                                            <span class="plus-icon"></span>
+                                            <span>添加中转</span>
+                                        </span>
+                                    </div>
+                                    <table class="flight-form-table">
+                                    <colgroup>
+                                        <col width="65" />
+                                        <col width="155" />
+                                        <col width="78" />
+                                        <col width="155" />
+                                        <col width="78" />
+                                        <col width="155" />
+                                        <col width="78" />
+                                        <col width="95" />
+                                        <col width="48" />
+                                        <col width="72" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>                                
+                                            <th><span class="red-star">*</span>第几天</th>
+                                            <td><input type="text" style="width:150px;" /></td>
+                                            <th><span class="red-star">*</span>航司名称</th>
+                                            <td><input type="text" style="width:150px;" /></td>
+                                            <th><span class="red-star">*</span>机票号</th>
+                                            <td><input type="text" style="width:150px;" /></td>
+                                            <th>舱位</th>
+                                            <td><input type="text" style="width:80px;" /></td>
+                                            <th>机型</th>
+                                            <td><input type="text" style="width:80px;" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="red-star">*</span>起飞机场</th>
+                                            <td><input type="text" style="width:150px;" /></td>
+                                            <th><span class="red-star">*</span>起飞时间</th>
+                                            <td><input type="text" style="width:150px;" class="datepicker hasIcon default" /></td>
+                                            <th><span class="red-star">*</span>到达机场</th>
+                                            <td><input type="text" style="width:150px;" /></td>
+                                            <th><span class="red-star">*</span>到达时间</th>
+                                            <td colspan="3">
+                                                <input type="text" style="width:150px;" class="datepicker hasIcon default" />
+                                                <div class="dropdown" style="width: 67px;top:1px;">
+                                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="true">
+                                                        <span class="activeFonts">+0日</span>
+                                                        <span class="caret"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="active"><a href="javascript:void(0);">+0日</a></li>
+                                                        <li class="active"><a href="javascript:void(0);">+1日</a></li>
+                                                        <li class="active"><a href="javascript:void(0);">+2日</a></li>
+                                                        <li class="active"><a href="javascript:void(0);">+3日</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </section>
+                                <div class="long-split-line"></div>
+                            </div>
+                            <div class="remark-info">
+                                <span class="title">航程备注</span>
+                                <span class="cont">
+                                    <div class="text-tip">前台页面展示</div>
+                                    <textarea></textarea>
+                                </span>
+                            </div>
+                            <div class="remark-info">
+                                <span class="title">内部备注</span>
+                                <span class="cont">
+                                    <textarea></textarea>
+                                </span>
+                            </div>
+                        </section>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="commonButton red-fe6869Button">确认挂起</button>
-                    <button type="button" class="commonButton blue-45c8dcButton">点错了</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--  第一个中间程内容模板  -->
+    <script type="text/html" id="first_middle_flight_template">
+        <section class="clearfix">
+            <table class="flight-form-table">
+                <colgroup>
+                    <col width="65" />
+                    <col width="155" />
+                    <col width="78" />
+                    <col width="155" />
+                    <col width="78" />
+                    <col width="155" />
+                    <col width="78" />
+                    <col width="95" />
+                    <col width="48" />
+                    <col width="72" />
+                </colgroup>
+                <tbody>
+                    <tr>                                
+                        <th><span class="red-star">*</span>第几天</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th><span class="red-star">*</span>航司名称</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th><span class="red-star">*</span>机票号</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th>舱位</th>
+                        <td><input type="text" style="width:80px;" /></td>
+                        <th>机型</th>
+                        <td><input type="text" style="width:80px;" /></td>
+                    </tr>
+                    <tr>
+                        <th><span class="red-star">*</span>起飞机场</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th><span class="red-star">*</span>起飞时间</th>
+                        <td><input type="text" style="width:150px;" class="datepicker hasIcon default" /></td>
+                        <th><span class="red-star">*</span>到达机场</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th><span class="red-star">*</span>到达时间</th>
+                        <td colspan="3">
+                            <input type="text" style="width:150px;" class="datepicker hasIcon default" />
+                            <div class="dropdown" style="width: 67px;top:1px;">
+                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="true">
+                                    <span class="activeFonts">+0日</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="javascript:void(0);">+0日</a></li>
+                                    <li class="active"><a href="javascript:void(0);">+1日</a></li>
+                                    <li class="active"><a href="javascript:void(0);">+2日</a></li>
+                                    <li class="active"><a href="javascript:void(0);">+3日</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="del-oper del-middle-flight">
+                <span class="del-icon"></span>
+                <span>删除中间程信息</span>
+            </div>
+        </section>
+    </script>    
+
+    <!--  正常中间程内容模板  -->
+    <script type="text/html" id="middle_flight_template">        
+        <section class="middle-air-range-block clearfix">
+            <div class="long-split-line"></div>
+            <div class="table-top-title">
+                <span class="middle-flight title-flag">
+                    <span class="middle-flight-icon"></span>
+                    <span class="flight-num"></span>
+                </span>
+                <span class="add-oper add-middle-flight">
+                    <span class="plus-icon"></span>
+                    <span>添加航程</span>
+                </span>
+                <span class="add-oper add-transfer">
+                    <span class="plus-icon"></span>
+                    <span>添加中转</span>
+                </span>
+            </div>
+            <section class="clearfix">
+                <table class="flight-form-table">
+                    <colgroup>
+                        <col width="65" />
+                        <col width="155" />
+                        <col width="78" />
+                        <col width="155" />
+                        <col width="78" />
+                        <col width="155" />
+                        <col width="78" />
+                        <col width="95" />
+                        <col width="48" />
+                        <col width="72" />
+                    </colgroup>
+                    <tbody>
+                        <tr>                                
+                            <th><span class="red-star">*</span>第几天</th>
+                            <td><input type="text" style="width:150px;" /></td>
+                            <th><span class="red-star">*</span>航司名称</th>
+                            <td><input type="text" style="width:150px;" /></td>
+                            <th><span class="red-star">*</span>机票号</th>
+                            <td><input type="text" style="width:150px;" /></td>
+                            <th>舱位</th>
+                            <td><input type="text" style="width:80px;" /></td>
+                            <th>机型</th>
+                            <td><input type="text" style="width:80px;" /></td>
+                        </tr>
+                        <tr>
+                            <th><span class="red-star">*</span>起飞机场</th>
+                            <td><input type="text" style="width:150px;" /></td>
+                            <th><span class="red-star">*</span>起飞时间</th>
+                            <td><input type="text" style="width:150px;" class="datepicker hasIcon default" /></td>
+                            <th><span class="red-star">*</span>到达机场</th>
+                            <td><input type="text" style="width:150px;" /></td>
+                            <th><span class="red-star">*</span>到达时间</th>
+                            <td colspan="3">
+                                <input type="text" style="width:150px;" class="datepicker hasIcon default" />
+                                <div class="dropdown" style="width: 67px;top:1px;">
+                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="true">
+                                        <span class="activeFonts">+0日</span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a href="javascript:void(0);">+0日</a></li>
+                                        <li class="active"><a href="javascript:void(0);">+1日</a></li>
+                                        <li class="active"><a href="javascript:void(0);">+2日</a></li>
+                                        <li class="active"><a href="javascript:void(0);">+3日</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="del-oper del-middle-flight">
+                    <span class="del-icon"></span>
+                    <span>删除中间程信息</span>
+                </div>
+            </section>
+        </section>
+    </script>
+
+    <!--  中转信息内容模板  -->
+    <script type="text/html" id="transfer_flight_template">
+        <section class="transfer-flight-block clearfix">
+            <div class="short-split-line"></div>
+            <table class="flight-form-table">
+                <colgroup>
+                    <col width="65" />
+                    <col width="155" />
+                    <col width="78" />
+                    <col width="155" />
+                    <col width="78" />
+                    <col width="155" />
+                    <col width="78" />
+                    <col width="95" />
+                    <col width="48" />
+                    <col width="72" />
+                </colgroup>
+                <tbody>
+                    <tr>                                
+                        <th><span class="red-star">*</span>第几天</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th><span class="red-star">*</span>航司名称</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th><span class="red-star">*</span>机票号</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th>舱位</th>
+                        <td><input type="text" style="width:80px;" /></td>
+                        <th>机型</th>
+                        <td><input type="text" style="width:80px;" /></td>
+                    </tr>
+                    <tr>
+                        <th><span class="red-star">*</span>起飞机场</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th><span class="red-star">*</span>起飞时间</th>
+                        <td><input type="text" style="width:150px;" class="datepicker hasIcon default" /></td>
+                        <th><span class="red-star">*</span>到达机场</th>
+                        <td><input type="text" style="width:150px;" /></td>
+                        <th><span class="red-star">*</span>到达时间</th>
+                        <td colspan="3">
+                            <input type="text" style="width:150px;" class="datepicker hasIcon default" />
+                            <div class="dropdown" style="width: 67px;top:1px;">
+                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="true">
+                                    <span class="activeFonts">+0日</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="javascript:void(0);">+0日</a></li>
+                                    <li class="active"><a href="javascript:void(0);">+1日</a></li>
+                                    <li class="active"><a href="javascript:void(0);">+2日</a></li>
+                                    <li class="active"><a href="javascript:void(0);">+3日</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="del-oper del-transfer">
+                <span class="del-icon"></span>
+                <span>删除中转信息</span>
+            </div>
+        </section>
+    </script>
 
     <script>
         $(function(){
@@ -381,14 +812,79 @@
                 show: false,
                 keyboard: false
             }).on("show.bs.modal", function(){
-                // 弹窗弹出前，绑定事件
+                // 如有需要，弹窗弹出前，可绑定事件
+                // 使用方法自行参考bootstrap官网
             });
 
             $(".add-flight-btn").click(function(){
                 $("#add-flight-popup").modal("show");
             });
 
+            $(".modal-header-oper .cancel").click(function(){
+               $("#add-flight-popup").modal("hide"); 
+            });
+
+            //  添加航程
+            $("body").delegate(".add-middle-flight", "click", function(){
+
+                var $container = $(".middle-air-range-container");
+
+                if ($container.find(".flight-form-table").length == 0) {
+                    $container.find(".middle-air-range-block:eq(0)").append($("#first_middle_flight_template").html());
+                    $container.find(".middle-air-range-block:eq(0)").find(".add-transfer").show();
+                } else {
+                    $container.append($("#middle_flight_template").html());
+                }
+                resetMiddleFlight();
+            });
+
+            //  删除航程
+            $("body").delegate(".del-middle-flight", "click", function(){
+
+                var $container = $(".middle-air-range-container");
+
+                if ($container.find(".middle-air-range-block").length == 1) {
+                    $(this).closest(".middle-air-range-block").find(".transfer-flight-block").remove();
+                    $(this).closest(".middle-air-range-block").find(".flight-form-table").remove();
+                    $(this).closest(".middle-air-range-block").find(".del-oper").remove();
+                } else {
+                    $(this).closest(".middle-air-range-block").remove();
+                }
+                resetMiddleFlight();
+            });
+
+            //  添加中转
+            $("body").delegate(".add-transfer", "click", function(){
+                $(this).closest("section").append($("#transfer_flight_template").html());
+            });
+
+            //  删除中转
+            $("body").delegate(".del-transfer", "click", function(){
+                $(this).closest(".transfer-flight-block").remove();
+            })
+
         });
+        
+        //  添加/删除 中间航程 调整页面展示元素
+        function resetMiddleFlight() {
+
+            var $container = $(".middle-air-range-container");
+            $container.children(".middle-air-range-block").find(".add-middle-flight").hide();
+            $container.children(".middle-air-range-block:eq(0)").find(".add-middle-flight").show();
+
+            $container.find(".middle-air-range-block").each(function(index){
+                $(this).find(".flight-num").html("第" + (index+2) + "程");
+            });
+
+            if ($container.find(".middle-air-range-block").length == 1) {
+                $container.find(".middle-air-range-block:eq(0)").find(".long-split-line").remove();
+            }
+
+            if ($container.find(".flight-form-table").length == 0) {
+                $container.find(".middle-air-range-block").find(".flight-num").html("中间程");
+            }
+        }
+
     </script>
 
 </body>

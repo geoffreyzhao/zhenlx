@@ -37,3 +37,24 @@ label {
     font-weight: normal;
     max-width: none;
 }
+
+/*  重置弹窗样式---头部有操作按钮   start */
+
+.modal.hasHeaderBtn .modal-header {
+    height: 50px;
+    padding: 0;
+}
+
+.modal.hasHeaderBtn .modal-title {
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.modal.hasHeaderBtn .modal-header-oper {
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/*  重置弹窗样式---头部有操作按钮   end */
