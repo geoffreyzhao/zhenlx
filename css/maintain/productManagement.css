@@ -742,9 +742,158 @@ input[type="text"].tagInput {
 
 /*  价格日历   end  */
 
-/* 价格双日历 start */
+/* 价格双日历--日历样式 start */
 
-/* 价格双日历 start */
+.double-price-calendar {
+    margin: 30px;
+}
+
+.double-price-calendar .left-calendar {
+    float: left;
+}
+
+.double-price-calendar .right-calendar {
+    float: left;
+}
+
+.double-price-calendar .datepicker-inline {
+    padding: 0;
+    background-color: #fff;
+    width: auto;
+}
+
+.double-price-calendar .datepicker-inline thead tr:first-child {
+    display: none;
+}
+
+.double-price-calendar .datepicker-inline thead .dow:first-child {
+    border-left: 1px solid #1986c5;
+}
+
+.double-price-calendar .datepicker-inline thead .dow:last-child {
+    border-right: 1px solid #1986c5;
+}
+
+.double-price-calendar .datepicker-inline thead .dow {
+    color: #666;
+    background-color: #e5f3fb;
+    font-size: 14px;
+    height: 40px;
+    border-top: 1px solid #1986c5;
+}
+
+.double-price-calendar .datepicker-inline td {
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0;
+}
+
+.double-price-calendar .datepicker-inline td:hover {
+    background-color: #fff!important;
+}
+
+.double-price-calendar .datepicker-inline tr:last-child td {
+    border-bottom: 1px solid #1986c5;
+}
+
+.double-price-calendar .datepicker-inline td:first-child {
+    border-left: 1px solid #1986c5;
+}
+
+.double-price-calendar .datepicker-inline td:last-child {
+    border-right: 1px solid #1986c5;
+}
+
+.double-price-calendar .right-calendar .datepicker-inline td:first-child {
+    border-left: none;
+}
+
+.double-price-calendar .right-calendar .datepicker-inline thead .dow:first-child {
+    border-left: none;
+}
+
+.double-price-calendar .datepicker-inline td .tdCont {
+    width: 64px;
+    height: 49px;
+    position: relative;
+    border: 1px solid #fff; 
+}
+
+.double-price-calendar .datepicker-inline td .tdCont.active,
+.double-price-calendar .datepicker-inline td .tdCont:hover {
+    background-color: #f7f8ff;
+    border-color: #6867ad;
+}
+
+.double-price-calendar .datepicker-inline td .tdCont.disabled:hover {
+    cursor: default;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.double-price-calendar .datepicker-inline td .tdCont .date {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #434343;
+}
+
+.double-price-calendar .datepicker-inline td .tdCont .price {
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    font-family: Arial;
+    text-align: right;
+    line-height: 14px;
+}
+
+.double-price-calendar .datepicker-inline td .tdCont .adultPrice,
+.double-price-calendar .datepicker-inline td .tdCont .hotelPrice {
+    color: #ff4200;
+    height: 14px;
+}
+
+.double-price-calendar .datepicker-inline td .tdCont .childPrice {
+    color: #008736;
+    height: 14px;
+}
+
+.double-price-calendar .calendar-title {
+    margin: 10px 0;
+    padding: 0 5px;
+}
+
+.double-price-calendar .calendar-title .cal-month {
+    width: 395px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+}
+
+.double-price-calendar .calendar-title .right-calendar-title {
+    margin-left: 50px;
+}
+
+.double-price-calendar .calendar-title .prev {
+    background: url(../../images/datepicker-change-icon.png) no-repeat 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.double-price-calendar .calendar-title .next {
+    background: url(../../images/datepicker-change-icon.png) no-repeat -26px 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* 价格双日历--日历样式 end */
 
 /*  新增产品-底价维护   start  */
 

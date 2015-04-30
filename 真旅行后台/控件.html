@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/maintain/common.css">
     <link rel="stylesheet" type="text/css" href="../css/maintain/priceCalendar.css">
+    <link rel="stylesheet" type="text/css" href="../css/maintain/productManagement.css">
 
     <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
@@ -134,7 +135,7 @@
             language: "zh-CN",
             weekStart: 0,
             beforeShowDay: function(){
-                $(ele).find("td .active").removeClass("active");             
+                $(ele).find("td.active").removeClass("active");             
             }
         });
 
@@ -346,6 +347,269 @@
 
 
 </script>
+
+
+<div>
+    <span>价格双日历：</span>
+    <div class="double-price-calendar clearfix">
+        <div class="calendar-title">
+            <span class="prev"></span>
+            <span class="cal-month left-calendar-title"></span>
+            <span class="cal-month right-calendar-title"></span>
+            <span class="next"></span>
+        </div>
+        <div class="left-calendar"></div>
+        <div class="right-calendar"></div>
+    </div>
+</div>
+
+
+<!--  双价格日历   start  -->
+
+<script type="text/javascript">
+    $(function(){
+
+        var flight_data = [
+            {
+                month: "2015-05",
+                monthData: [
+                    {
+                        day: 1,
+                        price: [1000, 600]   
+                        // price 先后顺序为成人价，儿童价，只写一个则默认为成人价，注意必须为数组类型，以便和酒店房价作区分
+                    }, {
+                        day: 2,
+                        price: [1000, 600] 
+                    },
+                    {
+                        day: 3,
+                        price: [1650, 850]
+                    },
+                    {
+                        day: 23,
+                        price: [950]
+                    }
+                ]
+            },
+            {
+                month: "2015-04",
+                monthData: [
+                    {
+                        day: 21,
+                        price: [1000, 600]
+                    }, {
+                        day: 22,
+                        price: [1000, 600] 
+                    },
+                    {
+                        day: 13,
+                        price: [1650, 850]
+                    },
+                    {
+                        day: 23,
+                        price: [1150, 950]
+                    }
+                ]
+            },
+            {
+                month: "2015-07",
+                monthData: [
+                    {
+                        day: 11,
+                        price: [1260, 600]
+                    }, {
+                        day: 12,
+                        price: [1340, 600] 
+                    },
+                    {
+                        day: 13,
+                        price: [1650, 850]
+                    },
+                    {
+                        day: 23,
+                        price: [1650, 950]
+                    }
+                ]
+            },
+        ];
+
+        var hotel_data = [
+            {
+                month: "2015-04",
+                monthData: [
+                    {
+                        day: 15,
+                        price: 600
+                    }, {
+                        day: 16,
+                        price: 700
+                    }
+                ]
+            },
+            {
+                month: "2015-05",
+                monthData: [
+                    {
+                        day: 9,
+                        price: 350
+                    },
+                    {
+                        day: 10,
+                        price: 550
+                    }
+                ]
+            },
+            {
+                month: "2015-07",
+                monthData: [
+                    {
+                        day: 11,
+                        price: 1350
+                    },
+                    {
+                        day: 12,
+                        price: 2550
+                    }
+                ]
+            }
+        ];     
+
+        //  data替换为 hotel_data,则显示酒店房价日历
+        geneDoublePriceCalendar(".double-price-calendar", flight_data);        
+    });
+
+    function geneDoublePriceCalendar(ele, data) {
+        var leftDate = new Date(),
+            rightDate = moveMonth(leftDate, 1);  //  moveDate() 方法为上面的价格日历中的方法，可通用
+
+        $(ele).find(".left-calendar").datepicker({
+            format: "yyyy-mm-dd",
+            language: "zh-CN",
+            weekStart: 0
+        });        
+        $(ele).find(".left-calendar").datepicker("setDate", leftDate);
+
+        $(ele).find(".right-calendar").datepicker({
+            format: "yyyy-mm-dd",
+            language: "zh-CN",
+            weekStart: 0
+        });
+        $(ele).find(".right-calendar").datepicker("setDate", rightDate);
+
+        resetDpCalendar(ele, leftDate, rightDate, data);        
+
+        $(ele).find(".prev").click(function(){
+
+            leftDate = moveMonth(leftDate, -2);
+            rightDate = moveMonth(rightDate, -2);
+
+            $(ele).find(".left-calendar").datepicker("setDate", leftDate);
+            $(ele).find(".right-calendar").datepicker("setDate", rightDate);
+
+            resetDpCalendar(ele, leftDate, rightDate, data);
+        });
+
+        $(ele).find(".next").click(function(){
+
+            leftDate = moveMonth(leftDate, 2);
+            rightDate = moveMonth(rightDate, 2);
+
+            $(ele).find(".left-calendar").datepicker("setDate", leftDate);
+            $(ele).find(".right-calendar").datepicker("setDate", rightDate);
+
+            resetDpCalendar(ele, leftDate, rightDate, data);
+        });        
+    };
+
+    function resetDpCalendar(ele, leftDate, rightDate, data) {
+
+        $(ele).find(".datepicker-inline td.active").removeClass("active");
+        $(ele).find(".datepicker-inline td").click(function(){
+            return false;
+        });
+       
+        geneTdCont($(ele).find(".left-calendar"), leftDate, data);  
+        geneTdCont($(ele).find(".right-calendar"), rightDate, data);
+
+        setDpCalendarTitle(ele, leftDate, rightDate);
+
+        $(ele).find(".tdCont").not(".disabled").click(function(){
+            $(ele).find(".tdCont").removeClass("active");
+            $(this).addClass("active");
+        });
+    }
+
+
+    //  方法生成每月的结构，左右日历分别调用
+    function geneTdCont($ele, date, data) {
+
+        var y = date.getFullYear(),
+            m = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1),
+            monthStr = y + "-" + m,
+            monthDataArr = [];
+
+        //  如果没有数据，返回undefined
+        var monthDataObject = _.findWhere(data, {month: monthStr}); 
+
+        if (!!monthDataObject) {
+            monthDataArr = _.findWhere(data, {month: monthStr}).monthData;
+        }
+
+        $ele.find(".datepicker-inline .datepicker-days").find("tbody td").each(function(){
+            var dayText = $(this).html();
+
+            if ($(this).hasClass("old") || $(this).hasClass("new")) {
+                $(this).html("<div class='tdCont disabled'></div>");
+            } else {
+                $(this).html(geneDpTdContTemplate(y, m, dayText, monthDataArr));
+            }
+        });
+    }
+
+    function geneDpTdContTemplate(year, month, day, monthDataArr) {
+
+        var template = "<div class='tdCont'>";
+
+        var priceObj = _.findWhere(monthDataArr, {day: day*1});
+
+        if (priceObj === undefined) {
+        
+            template += "<div class='date' data-dayNum='" + year + "-" + month + "-" + day + "'>" + day + "</div>";
+        } else {
+
+            template += "<div class='date' data-dayNum='" + year + "-" + month + "-" + day + "'>" + day + "</div>";
+
+            var price = priceObj.price;
+
+            if (typeof(price) == "number") {  //  数字类型为酒店房价
+
+                template += "<div class='price'><div class='hotelPrice'>" + price + "</div></div>";
+            } else {   //  数组类型为机票价格
+
+                var ap = (price[0] == undefined) ? "" : price[0],
+                    cp = (price[1] == undefined) ? "" : price[1];
+
+                template += "<div class='price'><div class='adultPrice'>" + ap + "</div><div class='childPrice'>" + cp + "</div></div>";
+            }
+        }
+
+        template += "</div>";
+        return template;
+
+    }
+
+    function setDpCalendarTitle(ele, leftDate, rightDate) {
+        var leftYear = leftDate.getFullYear(),
+            leftMonth = leftDate.getMonth(),
+            rightYear = rightDate.getFullYear(),
+            rightMonth = rightDate.getMonth();
+
+        $(ele).find(".left-calendar-title").html(leftYear + "年" + (leftMonth+1) + "月");
+        $(ele).find(".right-calendar-title").html(rightYear + "年" + (rightMonth+1) + "月");
+    }
+</script>
+
+<!--  双价格日历   end  -->
 	
 </body>
 </html>
