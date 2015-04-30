@@ -168,8 +168,12 @@
                                         <div>巴黎戴高乐国际机场<span class="fc11b9b7">A2</span></div>
                                     </td>
                                     <td>
-                                        <div class="adjustSpace">
-                                            <i class="stoppingPoint">经停</i>
+                                        <div class="adjustSpace haha">
+                                            <!--<i class="stoppingPoint">经停</i>-->
+                                            <!--<a href="#" data-toggle="tooltip" title=""><i class="stoppingPoint">经停</i></a>-->
+                                            <i class="stoppingPoint" data-toggle="tooltip" title="" viewport="#haha2">
+                                                经停
+                                            </i>
                                         </div>
                                         <div>
                                             <i class="pubFlights_MU flightsIcon"></i>
@@ -654,7 +658,7 @@
                                 </label>
                             </div>
                             <div class="buttonDiv">
-                                <a href="javascript:void(0);" class="bigOrangeBtn active" style="width:220px;">提交订单</a>
+                                <a href="在线支付.html" class="bigOrangeBtn active" style="width:220px;">提交订单</a>
                             </div>
                         </div>
                         
@@ -754,6 +758,13 @@
 		</div>
 	</div>
 
+    <div class="tooltip top" role="tooltip" id="haha2">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">
+            哈哈哈
+        </div>
+    </div>
+
     <script type="text/javascript">
         $(function(){
             $(".top-nav-list").slideNav({
@@ -761,6 +772,33 @@
                 speed: 300,
                 changeTextColor: "#fff"
             });
+        });
+    </script>
+
+    <!--<script>
+        $(function(){
+            $(".ac-hangUp").click(function(){
+                $("#ac-hangUp").modal({
+                    backdrop:"static",
+                    keyboard: false
+                });
+            });
+
+        });
+    </script>-->
+
+<script>
+    $(function () {
+        $(".haha").hover(function(){
+            $("#haha2").tooltip("show")
+            
+        });
+        
+    })
+</script>
+    <script>
+        $(function(){
+            $("[data-toggle='tooltip']").tooltip();
         });
     </script>
 	
