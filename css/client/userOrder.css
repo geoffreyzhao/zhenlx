@@ -1,0 +1,470 @@
+@charset "utf-8";
+
+/* 填写订单 S */
+.orderFlowBar {
+    width:100%;
+    height: 75px;
+    line-height: 75px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: -2px 0 3px #085869,2px 0 1px #085869,-2px 0 1px #085869;
+    position: relative;
+    top:30px;
+    padding:0 5px;
+}
+.orderFlowBar li {
+    float: left;
+    display: inline-block;
+    background: url("../../images/client/orderFlow-arrow.png") no-repeat right center;
+    width:280px;
+    text-align: center;
+}
+.orderFlowBar li:last-child {
+    background: none;
+}
+.orderFlowBar li i {
+    vertical-align: middle;
+    position: relative;
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.orderFlowBar li span {
+    vertical-align: middle;
+}
+.orderFlowBar li i.pastTenseIcon {
+    background: url("../../images/client/order-spirit.png") no-repeat 0 0;
+}
+.orderFlowBar li i.nowTenseIcon {
+    border-radius: 15px;
+    border: 3px solid #11b9b7;
+}
+.orderFlowBar li i.futureTenseIcon {
+    border-radius: 15px;
+    border: 3px solid #dfdfdf;
+}
+.orderFlowBar li i.nowTenseIcon em, .orderFlowBar li i.futureTenseIcon em {
+    color: #11b9b7;
+    font-weight: bold;
+    position: absolute;
+    top:-25px;
+    left:7px;
+    font-size: 18px;
+}
+.orderFlowBar li i.futureTenseIcon em {
+    color: #dedede;
+}
+.orderFlowBar li span.pastTenseFonts, .orderFlowBar li span.nowTenseFonts {
+     color: #11b9b7;
+     font-size: 20px;
+}
+.orderFlowBar li span.futureTenseFonts {
+    color: #dedede;
+    font-size: 20px;
+}
+
+
+.orderContent {
+    position:relative;
+    top:28px;
+}
+.left-orderContent {
+    /*box-shadow: -3px 0 5px #777,0 -3px 5px #777,3px 0 5px #666;*/
+    background-color: #fff;
+    position: relative;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom: 1px solid #88b3af;
+    margin: 10px 0 0 0;
+    width:825px;
+    float: left;
+    display: inline-block;
+}
+.left-orderContent .top-border {
+    display: inline-block;
+    background: url(../../images/client/repeat-border.jpg) repeat-x;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+}
+.order-titleBlock {
+    border-bottom:1px dashed #0c8694;
+    padding:10px 0 10px 70px;
+    position: relative;
+}
+.order-titleBlock h3 {
+    font-size: 22px;
+    color: #484848;
+    margin:10px 0 15px 0;
+}
+.order-titleBlock h3 i {
+    background: url("../../images/client/order-spirit.png") no-repeat 0 -112px;
+    display: inline-block;
+    width:19px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.order-titleBlock .order-titleTable {
+    font-size: 15px;
+}
+.order-titleBlock .order-titleTable th {
+    color: #9f9f9f;
+}
+.order-titleBlock .order-titleTable td span {
+    color: #11b9b7;
+}
+.order-titleTable .dropdown .dropdown-menu {
+    width: 100%;
+    min-width: 46px;
+}
+.order-titleBlock .left-semicircle {
+    position: absolute;
+    bottom:-6px;
+    left:0px;
+    width:6px;
+    height: 12px;
+    border-radius:0 6px 6px 0;
+    background: #0b7e96;
+}
+.order-titleBlock .right-semicircle {
+    position: absolute;
+    bottom:-6px;
+    right:0px;
+    width:6px;
+    height: 12px;
+    border-radius:6px 0 0 6px;
+    background: #0b7e96;
+}
+/* 机票 */
+.order-conBlock {
+    border-bottom:1px dashed #0c8694;
+    padding:3px 0 3px 0;
+    position: relative;
+}
+.order-conBlockTab td {
+     font-size: 12px;
+     padding:15px 0 15px 15px;
+     color: #9f9f9f;
+     border-bottom: 1px solid #cee7ea;
+}
+.order-ticketTable td {
+    padding:25px 0 0 15px;
+}
+.order-conBlockTab tr:last-child td {
+    border-bottom: none;
+}
+.order-conBlockTab .leftTd {
+    border-right: 1px solid #cee7ea;
+    border-bottom: none;
+    text-align: center;
+    vertical-align: middle;
+    color: #11b9b7;
+    font-size: 15px;
+    padding:0;
+}
+.order-conBlockTab .leftTd div {
+    height: 35px;
+}
+.order-conBlockTab .leftTd i {
+    background: url("../../images/client/order-spirit.png") no-repeat;
+    display: inline-block;
+}
+.order-conBlockTab .leftTd i.ticket {
+    background-position:0 -62px; ;
+    width:30px;
+    height: 30px;
+}
+.order-conBlockTab td div {
+    text-align: center;
+    height: 50px;
+}
+.order-conBlockTab td .adjustSpace {
+    padding-top:10px;
+}
+.colorBgIcon {
+    border-radius: 3px;
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    min-width: 50px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+}
+.order-conBlockTab .bg-green {
+    background: #0fd730;
+}
+.order-conBlockTab .bg-darkGreen {
+    background: #0bd582;
+}
+.order-conBlockTab .bg-blue {
+    background: #11b9b7;
+}
+.order-conBlockTab .bg-orange {
+    background: #fe7800;
+}
+.order-conBlockTab .fc11b9b7 {
+    color: #11b9b7;
+}
+.order-conBlockTab .fc484848 {
+    color: #484848;
+}
+.order-conBlockTab .timeFonts {
+    font-size: 30px;
+    font-weight: bold;
+    color: #484848;
+}
+.order-conBlockTab .planeIcon, .order-conBlockTab .clockIcon, .order-conBlockTab .houseIcon {
+    background: url("../../images/client/order-spirit.png") no-repeat 0 -35px;
+    display: inline-block;
+    width:23px;
+    height: 23px;
+}
+.order-conBlockTab .clockIcon {
+    background-position: -174px -62px;
+    width:18px;
+    height: 18px;
+}
+.order-conBlockTab .flightsIcon {
+    vertical-align: top;
+}
+.order-conBlockTab .limitFontsWidth {
+    width:128px;
+    max-width: 128px;
+    display: inline-block;
+}
+.order-conBlockTab .stoppingPoint {
+    background: url("../../images/client/order-spirit.png") no-repeat -33px 0;
+    display: inline-block;
+    width:92px;
+    height: 25px;
+    color: #11b9b7;
+    font-size: 12px;
+    padding:4px 0 0 0;
+}
+.order-conBlockTab .markDays {
+    position: relative;
+}
+.order-conBlockTab .markDays i {
+    position: absolute;
+    color: #fe7800;
+    font-size: 12px;
+    top:0px;
+    right: 12px;
+}
+/* 酒店 */
+.order-conBlockTab .leftTd i.hotel {
+    background-position:-33px -62px; ;
+    width:29px;
+    height: 26px;
+}
+.order-conBlockTab .dark14Fonts {
+    font-size: 14px;
+    color: #484848;
+}
+.order-conBlockTab .dark12Fonts {
+    font-size: 12px;
+    color: #484848;
+}
+.order-conBlockTab .houseIcon {
+    background-position: -195px -62px;
+    width:27px;
+    height: 20px;
+}
+.order-conBlockTab .haveleftBorder, .order-conBlockTab .sub-haveleftBorder {
+    position: relative;
+}
+.order-conBlockTab .haveleftBorder i, .order-conBlockTab .sub-haveleftBorder i {
+    position: absolute;
+    height: 90px;
+    width: 1px;
+    background: #cee7ea;
+    top: -34px;
+    left: -15px;
+}
+.order-conBlockTab .sub-haveleftBorder i {
+    top: -44px;
+}
+.order-conBlockTab .leftAlignTd div {
+    text-align: left;
+}
+.order-conBlockTab .fs14 {
+    font-size: 14px;
+}
+.order-hotelTable td div {
+    height: 40px;
+}
+.order-hotelTable td {
+    margin:10px 0;
+}
+/* 旅客信息 */
+.order-conBlockTitle {
+    border-bottom:1px dashed #0c8694;
+    padding:10px 0 10px 20px;
+    position: relative;
+    font-size: 20px;
+    color: #484848;
+    margin: 0 0 3px 0;
+}
+.order-conBlockTitle .guestIcon,
+.order-conBlockTitle .linkManIcon,
+.order-conBlockTitle .markIcon {
+    background: url("../../images/client/order-spirit.png") no-repeat -65px -62px;
+    display: inline-block;
+    vertical-align: middle;
+    width:28px;
+    height: 22px;
+}
+.order-conBlockTitle span {
+    margin-left: 28px;
+    vertical-align: middle;
+}
+.order-conBlockTab .adjustpadding {
+    padding-top:25px;
+}
+.order-guestTable td, .order-guestTable th,
+.order-linkManTable td, .order-linkManTable th,
+.order-demandMarkTable td, .order-demandMarkTable th,
+.order-favorableTable td, .order-favorableTable th {
+    font-size: 14px;
+    border-bottom: none;
+    padding:8px 0 8px 15px;
+}
+.order-guestTable th,
+.order-linkManTable th,
+.order-demandMarkTable th,
+.order-favorableTable th {
+    text-align: right;
+    color: #9f9f9f;
+}
+.order-guestTable td:first-child div {
+    text-align: center;
+}
+.order-guestTable td div,
+.order-linkManTable td div,
+.order-favorableTable td div {
+    text-align: left;
+    height: 40px;
+}
+.order-guestTable .checkboxContent .checkbox,
+.order-linkManTable .checkboxContent .checkbox,
+.order-favorableTable .checkboxContent .checkbox {
+    color: #484848;
+}
+.order-guestTable .leftTd div {
+    font-size: 36px;
+    font-weight: bold;
+}
+.order-guestTable .guestNameIcon {
+    background: url("../../images/client/order-spirit.png") no-repeat -96px -62px;
+    display: inline-block;
+    vertical-align: middle;
+    width:21px;
+    height: 21px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.guestInfo-item {
+    border-bottom:1px dashed #0c8694;
+    margin:3px 0 3px 0;
+    padding:3px 0 3px 0;
+    position: relative;
+}
+/* 联系人信息 */
+.order-conBlockTitle .linkManIcon {
+    background-position: -118px -62px;
+    width:26px;
+    height: 26px;
+}
+.order-conBlockTitle .titleTips {
+    font-size: 14px;
+    color: #11b9b7;
+}
+/* 需求备注 */
+.order-conBlockTitle .markIcon {
+    background-position: -147px -62px;
+    width:24px;
+    height: 24px;
+}
+.order-conBlockTab textarea {
+    padding:3px;
+    border: 1px solid #dadada;
+}
+.order-conBlockTab .fontsNumTips {
+    text-align: right;
+    color: #c6c6c6;
+    font-size: 12px;
+    padding: 0 75px 0 0;
+}
+.order-conBlockTab .fontsNumTips span {
+    color: #11b9b7;
+    margin: 0 3px;
+}
+
+.deductionFonts {
+    font-size: 14px;
+    color: #fe7800;
+    margin-left: 15px;
+}
+.order-favorableTable th {
+    text-align: left;
+    padding-left: 70px;
+}
+.order-favorableTable td.integralTipsFonts {
+    font-size: 12px;
+    color: #959595;
+}
+.integralTipsFonts span {
+    color: #fe7800;
+    font-weight: bold;
+}
+
+.order-conBlock .left-semicircle, 
+.order-conBlockTitle .left-semicircle, 
+.guestInfo-item .left-semicircle {
+    position: absolute;
+    bottom:-4px;
+    left:0px;
+    width:4px;
+    height: 8px;
+    border-radius:0 4px 4px 0;
+    background: #0b7e96;
+}
+.order-conBlock .right-semicircle, 
+.order-conBlockTitle .right-semicircle,
+.guestInfo-item .right-semicircle {
+    position: absolute;
+    bottom:-4px;
+    right:0px;
+    width:4px;
+    height: 8px;
+    border-radius:4px 0 0 4px;
+    background: #0b7e96;
+}
+
+.order-conBlock .radio, .order-conBlock .checkbox {
+    font-size: 14px;
+}
+
+.submitOrderBlock {
+    padding:20px 0 40px 0;
+    text-align: center;
+}
+.submitOrderBlock .fc484848 {
+    color: #484848;
+}
+.submitOrderBlock .checkbox {
+    font-size: 14px;
+}
+
+
+/* 填写订单 E */
+
+
+
+
+    
+    
