@@ -233,6 +233,15 @@ input[type="text"].verifyBox:focus{
 .commonBtn.grayBtn:hover{
     background-color:#9b9b9b ;
 }
+.commonBtn.orangeBtn{
+    background-color: #ffa200;
+}
+.commonBtn.orangeBtn:hover{
+    background-color: #f19900;
+}
+.commonBtn.width170{
+    width: 170px;
+}
 
 .commonIcon.bigEditIcon{
     width: 47px;
@@ -298,6 +307,7 @@ input[type="text"].verifyBox:focus{
 .changeViewpoints:hover .changeIcon{
     background-position: -110px -24px;
 }
+
 
 .radio{color: #484848;}
 .radio,.checkbox{

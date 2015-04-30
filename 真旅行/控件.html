@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/bootstrap.reset.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/client/common.css">
@@ -90,6 +90,7 @@
 <br>
 <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
 <a href="javascript:void(0);" class="commonBtn grayBtn">提交</a>
+<a href="javascript:void(0);" class="commonBtn orangeBtn">提交</a>
 <br>
 <br>
 <span class="commonIcon bigEditIcon"></span>
@@ -150,25 +151,22 @@
 
 <br>
 <section>
-    <a href="javascript:void(0);" class="ac-hangUp">用JS调用做弹窗</a>
-    <div class="modal hide fade" id="ac-hangUp">
-        <div class="modal-dialog" style="width: 500px;">
+    <a href="javascript:void(0);" class="ac-payHintWindow">用JS调用做弹窗</a>
+    <div class="modal hide fade" id="ac-payHintWindow">
+        <div class="modal-dialog" style="width: 450px;">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title">操作提示</h4>
+                    <h4 class="modal-title">支付提示</h4>
                 </div>
-                <div class="modal-body">
-                    <div class="popupContainer">
-                        <i class="warnIcon"></i>
-                        <span class="popupContainer-fonts">确认要挂起选中的会员吗？</span>
-                    </div>
+                <div class="modal-body">                    
+                    <p>请在新打开的页面中完成支付，支付完成前请不要关闭本窗口</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="commonButton red-fe6869Button">确认挂起</button>
-                    <button type="button" class="commonButton blue-45c8dcButton">点错了</button>
+                    <a href="javascript:void(0);" class="commonBtn blueBtn width170">支付成功</a>
+                    <a href="javascript:void(0);" class="commonBtn orangeBtn width170">支付失败,继续支付</a>
                 </div>
             </div>
         </div>
@@ -181,8 +179,8 @@
 
 <script>
     $(function(){
-        $(".ac-hangUp").click(function(){
-            $("#ac-hangUp").modal({
+        $(".ac-payHintWindow").click(function(){
+            $("#ac-payHintWindow").modal({
                 backdrop:"static",
                 keyboard: false
             });
