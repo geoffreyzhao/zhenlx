@@ -996,6 +996,7 @@ input[type="text"].tagInput {
 .flight-info-table {
     color: #555;
     font-size: 14px;
+    width: 100%;
 }
 
 .flight-info-table th {
@@ -1066,6 +1067,7 @@ input[type="text"].tagInput {
 .hotel-info-table {
     font-size: 14px;
     color: #555;
+    width: 100%;
 }
 
 .hotel-info-table th,

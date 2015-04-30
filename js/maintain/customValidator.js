@@ -127,12 +127,19 @@
 
 	function setErrorElePosition($this) {
 
-		var pos = $this.data("cp");
+		var pos = $this.data("cp"),
+			$modalEle = $this.parents(".modal-body"),
+			modalOffsetTop = 0,
+			modalOffsetLeft = 0;
+
+		if ($modalEle.length != 0) {  //  如果验证元素在modal内，需要考虑Modal本身的offset
+			modalOffsetLeft = $modalEle.offset().left;
+		}
 
 		var height = $this.outerHeight(),
 			width = $this.outerWidth(),
 			offsetTop = $this.offset().top,
-			offsetLeft = $this.offset().left;
+			offsetLeft = $this.offset().left - modalOffsetLeft;
 
 		var $errEle = $this.next("div.verifyStyle"),
 			err_height = $errEle.height(),
