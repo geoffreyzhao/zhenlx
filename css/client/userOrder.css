@@ -7,7 +7,9 @@
     line-height: 75px;
     border-radius: 4px;
     background: #fff;
-    box-shadow: -2px 0 3px #085869,2px 0 1px #085869,-2px 0 1px #085869;
+    -moz-box-shadow: 0 0 5px #085869;
+    -webkit-box-shadow: 0 0 5px #085869;
+    box-shadow: 0 0 5px #085869;
     position: relative;
     top:30px;
     padding:0 5px;
@@ -70,7 +72,9 @@
     top:28px;
 }
 .left-orderContent {
-    /*box-shadow: -3px 0 5px #777,0 -3px 5px #777,3px 0 5px #666;*/
+    -moz-box-shadow: 0 0 5px #085869;
+    -webkit-box-shadow: 0 0 5px #085869;
+    box-shadow: 0 0 5px #085869;
     background-color: #fff;
     position: relative;
     border-bottom-left-radius: 3px;
@@ -471,6 +475,9 @@
 
 /* 右侧 S */
 .right-orderPriceDetail {
+    -moz-box-shadow: 0 0 5px #085869;
+    -webkit-box-shadow: 0 0 5px #085869;
+    box-shadow: 0 0 5px #085869;
     background: #fff;
     width:300px;
     border-radius: 3px;
@@ -478,6 +485,10 @@
     float: right;
     margin-top: 7px;
     padding:3px;
+    position:fixed;
+    top: 180px;
+    right: 76px;
+    z-index: 4;
 }
 .orderPriceTitle {
     font-size: 18px;
