@@ -745,7 +745,7 @@ input[type="text"].tagInput {
 /* 价格双日历--日历样式 start */
 
 .double-price-calendar {
-    margin: 30px;
+    margin: 10px 0;
 }
 
 .double-price-calendar .left-calendar {
@@ -785,7 +785,7 @@ input[type="text"].tagInput {
 .double-price-calendar .datepicker-inline td {
     border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
-    padding: 0;
+    padding: 0!important;
 }
 
 .double-price-calendar .datepicker-inline td:hover {
@@ -934,6 +934,7 @@ input[type="text"].tagInput {
 
 .pm-info-module {
     margin-top: 25px;
+    width: 975px;
 }
 
 .pm-info-module .sub-title {
@@ -1158,6 +1159,11 @@ input[type="text"].tagInput {
 .section-cont-wrapper {
     width: 990px;
     font-size: 14px;
+}
+
+.flight-form-module .pm-info-module,
+.hotel-form-module .pm-info-module {
+    width: auto;
 }
 
 .flight-form-module ul.table-tab {
