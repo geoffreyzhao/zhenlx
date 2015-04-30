@@ -400,6 +400,11 @@
     padding:3px;
     border: 1px solid #dadada;
 }
+.order-conBlockTab textarea:focus {
+    border: 1px solid #11b9b7 !important;
+    outline: none;
+}
+
 .order-conBlockTab .fontsNumTips {
     text-align: right;
     color: #c6c6c6;
