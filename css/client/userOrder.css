@@ -450,7 +450,7 @@
 }
 
 .submitOrderBlock {
-    padding:20px 0 40px 0;
+    padding:20px 0 60px 0;
     text-align: center;
 }
 .submitOrderBlock .fc484848 {
@@ -459,7 +459,63 @@
 .submitOrderBlock .checkbox {
     font-size: 14px;
 }
+.submitOrderBlock .buttonDiv {
+    margin: 20px auto 0 auto;
+}
 
+
+/* 右侧 S */
+.right-orderPriceDetail {
+    background: #fff;
+    width:300px;
+    border-radius: 3px;
+    display: inline-block;
+    float: right;
+    margin-top: 7px;
+    padding:3px;
+}
+.orderPriceTitle {
+    font-size: 18px;
+    color: #fff;
+    background: #fe7800;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-bottom: 10px;
+}
+.right-orderPriceDetail .orderPriceItem {
+     margin-bottom: 15px;
+     color: #6e6e6e;
+     font-size: 12px;
+}
+.right-orderPriceDetail .orderPriceItemTit {
+    border-bottom: 1px dashed #c3dadd;
+    margin-bottom: 10px;
+    color: #484848;
+    font-size: 14px;
+    padding:0 0 8px 10px;
+}
+.right-orderPriceDetail .colorTd {
+    color: #fe7800;
+    text-align: right;
+    padding-right: 10px;
+}
+.right-orderPriceDetail table td {
+    padding:5px 0 5px 10px;
+}
+.right-orderPriceDetail .payTotalBlock {
+    border-top: 1px dashed #c3dadd;
+    padding:15px 0;
+}
+.right-orderPriceDetail .fs18 {
+    font-size: 18px;
+}
+.right-orderPriceDetail .fs24 {
+    font-size: 24px;
+}
+/* 右侧 E */
 
 /* 填写订单 E */
 
