@@ -317,13 +317,16 @@
     <script>
         $(function(){
             $(".ac-hangUp").click(function(){
-                $("#ac-hangUp").modal();
+                $("#ac-hangUp").modal({
+                    backdrop:"static",
+                    keyboard: false
+                });
             });
             
         });
     </script>
     
-
+ 
 
 </body>
 </html>
