@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>真旅行 在线支付</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/flight_logo.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/userOrder.css">
+
+    <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../js/client/common.js"></script>
+    <!--  渐变背景和mainbox 需要调整距离和位置，引入adjust.js  -->
+    <script type="text/javascript" src="../js/client/adjust.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<header>
+		<div class="head clearfix">
+			<div class="logo"></div>
+		</div>
+	</header>
+
+	<div class="main-container">
+		<div class="main-wrapper" id="main-wrapper">
+            <div class="orderFlowBar">
+                <ul class="clearfix">
+                    <li><i class="pastTenseIcon"></i><span class="pastTenseFonts">选择产品</span></li>
+                    <li><i class="pastTenseIcon"></i><span class="pastTenseFonts">填写订单</span></li>
+                    <li class="currentStatus"><i class="nowTenseIcon"><em>3</em></i><span class="nowTenseFonts">在线支付</span></li>
+                    <li><i class="futureTenseIcon"><em>4</em></i><span class="futureTenseFonts">支付完成</span></li>
+                </ul>
+            </div>
+            <section class="onLinePayContent">
+                <div class="top-border"></div>
+                <div class="commonOrderModel">
+                    <div class="aboutDivision clearfix">
+                        <div class="titleLeft">
+                            <div class="orderNumberFonts">订单号：1231325400315121</div>
+                            <h3>上海至巴黎五晚13天话色彩国度</h3>
+                        </div>
+                        <div class="titleRight">
+                            <div class="rental">
+                                <b class="fonts18">应付总额</b>
+                                <b class="orangeFonts33">￥12639</b>
+                            </div>
+                            <div class="rentalDetail">
+                                <label>产品总额: <span class="orangeFonts">￥13520</span></label>
+                                <label>优惠券: <span class="orangeFonts">-￥50</span></label>
+                                <label>积分: <span class="orangeFonts">-￥12.5</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payHintExplain">
+                        <i class="borderRadius left"></i>
+                        <span class="payHintFonts">请于30分钟内完成付款，否则订单将被取消</span>
+                        <i class="borderRadius right"></i>
+                    </div>
+                    <i class="left-semicircle"></i>
+                    <i class="right-semicircle"></i>
+                </div>
+                <div class="commonOrderModel">
+                    <div class="titleModel padding30">
+                        <i class="payTitleIcon"></i>选择支付方式
+                    </div>
+                    <div class="payWayContent">
+                        <div class="radioContent">
+                            <label class="radio active">
+                                <span class="commonIcon radioIcon"></span>
+                                <span class="commonPayWayIcon payWayIcon01"></span>
+                            </label>
+                            <label class="radio">
+                                <span class="commonIcon radioIcon"></span>
+                                <span class="commonPayWayIcon payWayIcon02"></span>
+                            </label>
+                            <label class="radio">
+                                <span class="commonIcon radioIcon"></span>
+                                <span class="commonPayWayIcon payWayIcon03"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <i class="left-semicircle"></i>
+                    <i class="right-semicircle"></i>
+                </div>
+                <div class="btnCenter">
+                    <a href="javascript:void(0);" class="commonBtn orangeBtn width170 ac-payHintWindow">去支付</a>
+                </div>
+            </section>
+		</div>
+
+		<div class="foot clearfix">
+			<span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+		</div>
+	</div>
+    
+    
+    
+
+    <div class="modal hide fade" id="ac-payHintWindow">
+        <div class="modal-dialog" style="width: 450px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">支付提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p>请在新打开的页面中完成支付，支付完成前请不要关闭本窗口</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="commonBtn blueBtn width170">支付成功</a>
+                    <a href="javascript:void(0);" class="commonBtn orangeBtn width170">支付失败,继续支付</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(function(){
+            $(".ac-payHintWindow").click(function(){
+                $("#ac-payHintWindow").modal({
+                    backdrop:"static",
+                    keyboard: false
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
