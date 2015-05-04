@@ -16,7 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../css/client/userOrder.css">
 
     <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="../js/bootdist/bootstrap.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="../js/vendor/jquery.color-2.1.2.min.js"></script>
@@ -138,7 +139,7 @@
                                     </td>
                                     <td>
                                         <div><span class="timeFonts">07:30</span></div>
-                                        <div>上海浦东国际机场<span class="fc11b9b7">T1</span></div>
+                                        <div>上海浦东国际机场<span class="fc11b9b7 air-terminal green-border-tooltip" title="T1航站楼">T1</span></div>
                                     </td>
                                     <td>
                                         <div class="adjustSpace"><i class="planeIcon"></i></div>
@@ -149,7 +150,7 @@
                                     </td>
                                     <td>
                                         <div class="timeFonts"><b>18:45</b></div>
-                                        <div>巴黎戴高乐国际机场<span class="fc11b9b7">T2</span></div>
+                                        <div>巴黎戴高乐国际机场<span class="fc11b9b7 air-terminal green-border-tooltip" title="T2航站楼">T2</span></div>
                                     </td>
                                     <td>
                                         <div class="adjustSpace"><i class="clockIcon"></i></div>
@@ -165,15 +166,11 @@
                                     </td>
                                     <td>
                                         <div><span class="timeFonts">20:15</span></div>
-                                        <div>巴黎戴高乐国际机场<span class="fc11b9b7">A2</span></div>
+                                        <div>巴黎戴高乐国际机场<span class="fc11b9b7 air-terminal green-border-tooltip" title="A2航站楼">A2</span></div>
                                     </td>
                                     <td>
-                                        <div class="adjustSpace haha">
-                                            <!--<i class="stoppingPoint">经停</i>-->
-                                            <!--<a href="#" data-toggle="tooltip" title=""><i class="stoppingPoint">经停</i></a>-->
-                                            <i class="stoppingPoint" data-toggle="tooltip" title="" viewport="#haha2">
-                                                经停
-                                            </i>
+                                        <div class="adjustSpace">
+                                            <i class="stoppingPoint stop green-border-tooltip">经停</i>
                                         </div>
                                         <div>
                                             <i class="pubFlights_MU flightsIcon"></i>
@@ -182,7 +179,7 @@
                                     </td>
                                     <td>
                                         <div class="timeFonts"><b>23:05</b></div>
-                                        <div>上海浦东国际机场<span class="fc11b9b7">A3</span></div>
+                                        <div>上海浦东国际机场<span class="fc11b9b7 air-terminal green-border-tooltip" title="A3航站楼">A3</span></div>
                                     </td>
                                     <td>
                                         <div class="adjustSpace"><i class="clockIcon"></i></div>
@@ -198,11 +195,11 @@
                                     </td>
                                     <td>
                                         <div><span class="timeFonts">19:15</span></div>
-                                        <div>巴黎戴高乐国际机场<span class="fc11b9b7">A3</span></div>
+                                        <div>巴黎戴高乐国际机场<span class="fc11b9b7 air-terminal green-border-tooltip" title="A3航站楼">A3</span></div>
                                     </td>
                                     <td>
                                         <div class="adjustSpace">
-                                            <i class="stoppingPoint">中转</i>
+                                            <i class="stoppingPoint transfer green-border-tooltip">中转</i>
                                         </div>
                                         <div>
                                             <i class="pubFlights_MU flightsIcon"></i>
@@ -211,7 +208,7 @@
                                     </td>
                                     <td>
                                         <div class="timeFonts markDays"><b>09:05</b><i>+1天</i></div>
-                                        <div>上海浦东国际机场<span class="fc11b9b7">A1</span></div>
+                                        <div>上海浦东国际机场<span class="fc11b9b7 air-terminal green-border-tooltip" title="A1航站楼">A1</span></div>
                                     </td>
                                     <td>
                                         <div class="adjustSpace"><i class="clockIcon"></i></div>
@@ -757,13 +754,50 @@
 			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
 		</div>
 	</div>
+    
+    <!--  经停提示信息模板  -->
+    <script type="text/html" id="stop_flight_template">
+        <table class="flight_tip_table">
+            <tr>
+                <th>经停：</th>
+                <td>阿布扎比阿布扎比</td>
+            </tr>
+            <tr>
+                <th>到达：</th>
+                <td>10:20</td>
+            </tr>
+            <tr>
+                <th>起飞：</th>
+                <td>14:30</td>
+            </tr>
+            <tr>
+                <th>停留：</th>
+                <td>2h30m</td>
+            </tr>
+        </table>
+    </script>
 
-    <div class="tooltip top" role="tooltip" id="haha2">
-        <div class="tooltip-arrow"></div>
-        <div class="tooltip-inner">
-            哈哈哈
-        </div>
-    </div>
+    <!--  中转提示信息模板  -->
+    <script type="text/html" id="transfer_flight_template">
+        <table class="flight_tip_table">
+            <tr>
+                <th>中转：</th>
+                <td>阿布扎比</td>
+            </tr>
+            <tr>
+                <th>到达：</th>
+                <td>10:20</td>
+            </tr>
+            <tr>
+                <th>起飞：</th>
+                <td>14:30</td>
+            </tr>
+            <tr>
+                <th>停留：</th>
+                <td>2h30m</td>
+            </tr>
+        </table>       
+    </script>
 
     <script type="text/javascript">
         $(function(){
@@ -772,34 +806,18 @@
                 speed: 300,
                 changeTextColor: "#fff"
             });
-        });
-    </script>
 
-    <!--<script>
-        $(function(){
-            $(".ac-hangUp").click(function(){
-                $("#ac-hangUp").modal({
-                    backdrop:"static",
-                    keyboard: false
-                });
+            $(".stoppingPoint.transfer").attr("title", $("#transfer_flight_template").html());
+            $(".stoppingPoint.stop").attr("title", $("#stop_flight_template").html());
+
+            $(".green-border-tooltip").tooltip({
+                html: true,
+                placement: 'bottom',
+                template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
             });
 
         });
-    </script>-->
 
-<script>
-    $(function () {
-        $(".haha").hover(function(){
-            $("#haha2").tooltip("show")
-            
-        });
-        
-    })
-</script>
-    <script>
-        $(function(){
-            $("[data-toggle='tooltip']").tooltip();
-        });
     </script>
 	
 </body>

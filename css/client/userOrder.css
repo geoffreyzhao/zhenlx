@@ -251,6 +251,7 @@
     color: #11b9b7;
     font-size: 12px;
     padding:4px 0 0 0;
+    cursor: default;
 }
 .order-conBlockTab .markDays {
     position: relative;
@@ -666,3 +667,6 @@
 }
 /*  在线支付 E  */
 
+.air-terminal {
+    cursor: default;
+}
