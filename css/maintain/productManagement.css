@@ -19,6 +19,13 @@
     background: #fff;
     cursor: pointer;
 }
+.headSecondLevel .operationDiv a {
+    color: #3db99a;
+}
+.headSecondLevel .operationDiv a:hover {
+    color: #3db99a;
+    text-decoration: none;
+}
 .headSecondLevel .plusIcon {
     background: url("../../images/commonIcon.png") no-repeat 0 -131px;
     width:14px;
