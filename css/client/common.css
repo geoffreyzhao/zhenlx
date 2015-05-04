@@ -611,3 +611,156 @@ header .head {
     color: #fff;
 }
 /*  翻页样式 end */
+
+/*  重置 bootstrap datepicker 样式（单日历） start  */
+
+input.datepicker {
+    width: 110px;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+div.datepicker {
+    padding: 15px;
+    background-color: #3c96ca;
+}
+
+div.datepicker td,
+div.datepicker th {
+    width: 35px;
+    height: 35px;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+div.datepicker table tr td.day:hover,
+div.datepicker table tr td.day.focused {
+    background-color: #3685bc;
+    cursor: pointer;
+}
+
+div.datepicker table tr td.today {
+    background: #3685bc;
+    color: #fff;
+}
+
+div.datepicker table tr td.today:hover {
+    background: #3685bc!important;
+    color: #fff!important;
+}
+
+div.datepicker table tr td.active,
+div.datepicker table tr td.active:hover,
+div.datepicker table tr td.active.disabled,
+div.datepicker table tr td.active.disabled:hover {
+    background: #2472a9!important;
+    color: #fff;
+}
+
+div.datepicker table tr td.old,
+div.datepicker table tr td.new {
+    color: #7ec0e7;
+}
+
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+    color: #7ec0e7;
+    background-color: #3c96ca!important;
+}
+
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+    color: #7ec0e7;
+    background-color: #3c96ca!important;
+}
+
+div.datepicker table thead .dow {
+    font-size: 16px;
+}
+
+div.datepicker table thead .prev:after {
+    content: '';
+    background: url(../../images/datepicker-change-icon.png) no-repeat 0 0;
+    display: inline-block;
+    vertical-align: middle; 
+    width: 25px;
+    height: 25px;
+}
+
+div.datepicker table thead .prev:hover {
+    background: transparent!important;
+}
+
+div.datepicker table thead .prev:after:hover {
+    background: url(../../images/datepicker-change-icon.png) no-repeat 0 0;
+}
+
+div.datepicker table thead .prev.disabled:after {
+    background: url(../../images/datepicker-change-icon.png) no-repeat 0 -27px;
+}
+
+div.datepicker table thead .next:after {
+    content: '';
+    background: url(../../images/datepicker-change-icon.png) no-repeat -26px 0;
+    display: inline-block;
+    vertical-align: middle; 
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+div.datepicker table thead .next:hover {
+    background: transparent!important;
+}
+
+div.datepicker table thead .next:after:hover {
+    background: url(../../images/datepicker-change-icon.png) no-repeat -26px 0!important;
+}
+
+div.datepicker table thead .next.disabled:after {
+    background: url(../../images/datepicker-change-icon.png) no-repeat -27px -27px;
+}
+
+div.datepicker .datepicker-switch {
+    font-size: 16px;
+}
+
+div.datepicker .datepicker-switch:hover {
+    background: #3685bc!important;
+}
+
+div.datepicker table tr td span {
+    border-radius: 0;
+}
+
+div.datepicker table tr td span.old,
+div.datepicker table tr td span.new {
+    color: #7ec0e7;
+}
+
+div.datepicker table tr td span:hover {
+    background-color: #3685bc;
+}
+
+div.datepicker table tr td span.active {
+    background: #2472a9!important;
+}
+
+.datepicker-dropdown:before,
+.datepicker-dropdown:after {
+    border-bottom-color: #3c96ca!important;
+}
+
+.datepicker-dropdown.datepicker-orient-bottom:before,
+.datepicker-dropdown.datepicker-orient-bottom:after {
+    border-top-color: #3c96ca!important;
+}
+
+/*  重置 bootstrap datepicker 样式（单日历） end  */
+
+input[type='text'].datepicker.hasIcon {
+    display: inline-block;
+    background: url("../../images/datepicker.png") no-repeat 97% center;
+    vertical-align: middle;
+}

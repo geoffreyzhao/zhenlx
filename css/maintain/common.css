@@ -734,6 +734,11 @@ div.datepicker table tr td span.active {
     border-bottom-color: #3c96ca!important;
 }
 
+.datepicker-dropdown.datepicker-orient-bottom:before,
+.datepicker-dropdown.datepicker-orient-bottom:after {
+    border-top-color: #3c96ca!important;
+}
+
 /*  重置 bootstrap datepicker 样式（单日历） end  */
 
 /* 弹窗 S */
