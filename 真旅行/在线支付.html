@@ -25,6 +25,7 @@
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
+    <script type="text/javascript" src="../js/base/respond.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -108,10 +109,8 @@
 		</div>
 	</div>
     
-    
-    
 
-    <div class="modal hide fade" id="ac-payHintWindow">
+    <div class="modal fade" id="ac-payHintWindow">
         <div class="modal-dialog" style="width: 450px;">
             <div class="modal-content">
                 <div class="modal-header">
@@ -133,11 +132,13 @@
     
     <script>
         $(function(){
+            $(".modal").modal({
+                backdrop:"static",
+                keyboard: false,
+                show: false
+            });
             $(".ac-payHintWindow").click(function(){
-                $("#ac-payHintWindow").modal({
-                    backdrop:"static",
-                    keyboard: false
-                });
+                $("#ac-payHintWindow").modal("show");
             });
 
         });

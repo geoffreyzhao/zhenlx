@@ -252,7 +252,7 @@
             <section>
                 <br>
                 <a href="javascript:void(0);" class="ac-hangUp">用JS调用做弹窗</a>
-                <div class="modal hide fade" id="ac-hangUp">
+                <div class="modal fade" id="ac-hangUp">
                     <div class="modal-dialog" style="width: 500px;">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -316,11 +316,13 @@
 
     <script>
         $(function(){
+            $("#ac-hangUp").modal({
+                backdrop:"static",
+                keyboard: false,
+                show: false
+            });
             $(".ac-hangUp").click(function(){
-                $("#ac-hangUp").modal({
-                    backdrop:"static",
-                    keyboard: false
-                });
+                $("#ac-hangUp").modal("show");
             });
             
         });

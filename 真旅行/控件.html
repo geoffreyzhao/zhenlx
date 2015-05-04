@@ -152,7 +152,7 @@
 <br>
 <section>
     <a href="javascript:void(0);" class="ac-payHintWindow">用JS调用做弹窗</a>
-    <div class="modal hide fade" id="ac-payHintWindow">
+    <div class="modal fade" id="ac-payHintWindow">
         <div class="modal-dialog" style="width: 450px;">
             <div class="modal-content">
                 <div class="modal-header">
@@ -179,11 +179,13 @@
 
 <script>
     $(function(){
+        $(".modal").modal({
+            backdrop:"static",
+            keyboard: false,
+            show: false
+        });
         $(".ac-payHintWindow").click(function(){
-            $("#ac-payHintWindow").modal({
-                backdrop:"static",
-                keyboard: false
-            });
+            $("#ac-payHintWindow").modal("show");
         });
 
     });
