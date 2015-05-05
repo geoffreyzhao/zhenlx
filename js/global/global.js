@@ -63,4 +63,37 @@
 
 	    });
 	};
+
+
+	//  模块悬停，随着需求和使用产品逐步优化
+	$.fn.fixedBar = function(options) {
+
+		var opts = $.extend({
+			offsetX : 0,
+			offsetY : 0
+		}, options);		
+
+		return this.each(function(){
+
+			var top = $(this).offset().top,
+				left = $(this).offset().left,
+				marginTop = $(this).css("margin-top"),
+				$that = $(this);
+
+			$(window).scroll(function(event) {
+				if ($(window).scrollTop() >= top) {
+					$that.css({
+						position: "fixed",
+						top: (0 - parseInt(marginTop) + opts.offsetY) + "px",
+						left: left + "px"
+					});
+				} else {
+					$that.css({
+						position: "static"
+					});
+				}
+			});
+
+		});
+	}
 })(jQuery);
