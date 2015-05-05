@@ -533,6 +533,15 @@ screen and (min-width:801px) and (max-width:1020px){
     font-size: 16px;
     /*letter-spacing: 3px;*/
 }
+.commonButton.disabled {
+    background-color: #a9a9a9;
+    color: #fff;
+}
+.commonButton.disabled:hover {
+    background-color: #a9a9a9;
+    color: #fff;
+    cursor: default;
+}
 .red-fe6869Button {
     background: #fe6869;
 }
