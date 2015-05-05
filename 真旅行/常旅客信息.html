@@ -596,10 +596,10 @@
                 $(this).parents(".travelerInfoListModel").siblings(".addTravelerInfoModel").show();
             });
             
-            //添加 删除
+            //添加证件类型
             $(".addTravelerInfoModel").delegate(".travelerInfoTab .addRoundnessIcon","click",function(){
                 var addTr = $(this).parents(".travelerInfoTab").find(".addTrContent").html();
-                $(this).parents(".defaultTr").after("<tr class='addTrContent'>" + addTr + "</tr>");
+                $(this).parents(".defaultTr").siblings(".addTrContent:last").before("<tr class='addTrContent'>" + addTr + "</tr>");
 
                 if ($(".idTypeInfo .addTrContent:visible").length == 2) {
                     $(".travelerInfoTab .addRoundnessIcon").hide();
@@ -607,10 +607,12 @@
                     $(".travelerInfoTab .addRoundnessIcon").show();
                 }
 
-                console.log(changeIdType());
                 $(this).closest(".idTypeInfo").find(".dropdown:visible:last").find("ul.dropdown-menu").html(geneIdTypeList(changeIdType()));
+                addLiClickEvent();
                 changeDropdown();
             });
+
+            // 删除证件类型
             $(".addTravelerInfoModel").delegate(".addTrContent .delRoundnessIcon","click",function(){
                 $(this).parents(".addTrContent").remove();
 
@@ -620,23 +622,28 @@
                     $(".travelerInfoTab .addRoundnessIcon").show();
                 }
 
-                // $(".dropdown.id-type .dropdownBtn").click(function(){
-                //     $(this).closest(".dropdown").find("ul.dropdown-menu").html(geneIdTypeList(changeIdType()));
-                // });
-                // changeDropdown();
-            });            
+                $(this).closest(".idTypeInfo").find(".dropdown:visible:last").find("ul.dropdown-menu").html(geneIdTypeList(changeIdType()));
+                addLiClickEvent();
+                changeDropdown(); 
+            }); 
 
-            $(".dropdown.id-type .dropdownBtn").click(function(){
-                var curType = $(this).closest(".dropdown").find("li.active a").html();
-                var typeArr = _.union(changeIdType(), [curType]);
+            //  点击 dropdown 时，判断并生成对应的 类型结构
+            $(".idTypeInfo").delegate('.dropdown.id-type .dropdownBtn', 'click', function(event) {
+                var $that = $(this);
 
-                
-                $(this).closest(".dropdown").find("ul.dropdown-menu").html(geneIdTypeList(typeArr));
+                var result = ["身份证", "护照", "通行证"];
+                $that.parents("tr").siblings("tr:visible").each(function(){
+                    var curType = $(this).find("li.active a").html();
+                    result = _.without(result, curType);
+                });
+                $that.closest(".dropdown").find("ul.dropdown-menu").html(geneIdTypeList(result));
+                addLiClickEvent();
             });
             changeDropdown();
             
         });
-
+    
+        //  添加 删除 选择 操作后需要重新过滤证件类型的值
         function changeIdType() {
             var result = ["身份证", "护照", "通行证"];
             $(".dropdown.id-type:visible").each(function(){
@@ -646,6 +653,7 @@
             return result;
         }
 
+        //  根据证件类型 生成对应的li结构
         function geneIdTypeList(types) {
             var result = "";
 
@@ -659,9 +667,21 @@
             return result;
         }
 
+        //  dropdown 默认显示的是 active li中的值
         function changeDropdown() {
             $(".dropdown.id-type").each(function(){
                 $(this).find("span.activeFonts").html($(this).find("li.active a").html());
+            });
+        }
+
+        //  li 被替换掉之后没有点击事件，需重新绑定一次
+        function addLiClickEvent() {
+            $(".dropdown-menu li a").click(function(){
+                var thisHtml = $(this).html();
+                var $thisParents = $(this).parents(".dropdown-menu li");
+                $(this).parents(".dropdown-menu").siblings(".dropdownBtn").find(".activeFonts").html(thisHtml);
+                $thisParents.addClass("active");
+                $thisParents.siblings().removeClass("active");
             });
         }
     </script>
