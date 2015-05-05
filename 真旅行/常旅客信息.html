@@ -18,6 +18,7 @@
     <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/underscore.js"></script>
     <script type="text/javascript" src="../js/client/common.js"></script>
     <script type="text/javascript" src="../js/client/adjust.js"></script>
     
@@ -387,7 +388,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>英文名:</th>
+                                        <th>拼音/英文名:</th>
                                         <td>
                                             <input type="text" style="width: 137px;" placeholder="FIRST NAME">
                                             <input type="text" style="width: 137px;" placeholder="LAST NAME">
@@ -402,12 +403,6 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th>国籍:</th>
-                                        <td>
-                                            <input type="text" style="width: 280px;">
-                                        </td>
-                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -415,7 +410,7 @@
                                 <div class="titleContent clearfix">
                                     <b class="titleFonts">证件信息</b>
                                 </div>
-                                <table class="travelerInfoTab">
+                                <table class="travelerInfoTab idTypeInfo">
                                     <colgroup>
                                         <col width="110">
                                         <col width="390">
@@ -426,9 +421,9 @@
                                     <tr class="defaultTr">
                                         <th>证件类型:</th>
                                         <td>
-                                            <div class="dropdown" style="width: 105px;">
+                                            <div class="dropdown id-type" style="width: 105px;">
                                                 <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
-                                                    <span class="activeFonts">身份证</span>
+                                                    <span class="activeFonts"></span>
                                                     <span class="caret"></span>
                                                 </a>
                                                 <ul class="dropdown-menu">
@@ -448,9 +443,9 @@
                                     <tr class="addTrContent">
                                         <th>证件类型:</th>
                                         <td>
-                                            <div class="dropdown" style="width: 105px;">
+                                            <div class="dropdown id-type" style="width: 105px;">
                                                 <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
-                                                    <span class="activeFonts">身份证</span>
+                                                    <span class="activeFonts"></span>
                                                     <span class="caret"></span>
                                                 </a>
                                                 <ul class="dropdown-menu">
@@ -507,6 +502,12 @@
                                                     <span class="commonIcon radioIcon"></span>婴儿
                                                 </label>
                                             </div>
+                                        </td>
+                                    </tr>                                    
+                                    <tr>
+                                        <th>国籍:</th>
+                                        <td>
+                                            <input type="text" style="width: 280px;">
                                         </td>
                                     </tr>
                                     <tr>
@@ -586,6 +587,9 @@
         
     <script>
         $(function(){
+
+            var idTypeAll = ["身份证", "护照", "通行证"];
+
             //添加常旅客
             $(".titleContent .addTravelerBtn").click(function(){
                 $(this).parents(".travelerInfoListModel").hide();
@@ -595,13 +599,71 @@
             //添加 删除
             $(".addTravelerInfoModel").delegate(".travelerInfoTab .addRoundnessIcon","click",function(){
                 var addTr = $(this).parents(".travelerInfoTab").find(".addTrContent").html();
-                $(this).parents(".defaultTr").after("<tr class='addTrContent'>" + addTr + "</tr>");                
+                $(this).parents(".defaultTr").after("<tr class='addTrContent'>" + addTr + "</tr>");
+
+                if ($(".idTypeInfo .addTrContent:visible").length == 2) {
+                    $(".travelerInfoTab .addRoundnessIcon").hide();
+                } else {
+                    $(".travelerInfoTab .addRoundnessIcon").show();
+                }
+
+                console.log(changeIdType());
+                $(this).closest(".idTypeInfo").find(".dropdown:visible:last").find("ul.dropdown-menu").html(geneIdTypeList(changeIdType()));
+                changeDropdown();
             });
             $(".addTravelerInfoModel").delegate(".addTrContent .delRoundnessIcon","click",function(){
                 $(this).parents(".addTrContent").remove();
+
+                if ($(".idTypeInfo .addTrContent:visible").length == 2) {
+                    $(".travelerInfoTab .addRoundnessIcon").hide();
+                } else {
+                    $(".travelerInfoTab .addRoundnessIcon").show();
+                }
+
+                // $(".dropdown.id-type .dropdownBtn").click(function(){
+                //     $(this).closest(".dropdown").find("ul.dropdown-menu").html(geneIdTypeList(changeIdType()));
+                // });
+                // changeDropdown();
+            });            
+
+            $(".dropdown.id-type .dropdownBtn").click(function(){
+                var curType = $(this).closest(".dropdown").find("li.active a").html();
+                var typeArr = _.union(changeIdType(), [curType]);
+
+                
+                $(this).closest(".dropdown").find("ul.dropdown-menu").html(geneIdTypeList(typeArr));
             });
+            changeDropdown();
             
         });
+
+        function changeIdType() {
+            var result = ["身份证", "护照", "通行证"];
+            $(".dropdown.id-type:visible").each(function(){
+                var curType = $(this).find("li.active a").html();
+                result = _.without(result, curType);
+            });
+            return result;
+        }
+
+        function geneIdTypeList(types) {
+            var result = "";
+
+            for (var i = 0; i < types.length; i++) {
+                result += "<li";
+                if (i == 0) {
+                    result += " class='active'";
+                }
+                result += "><a href='javascript:;'>" + types[i] + "</a></li>";
+            }
+            return result;
+        }
+
+        function changeDropdown() {
+            $(".dropdown.id-type").each(function(){
+                $(this).find("span.activeFonts").html($(this).find("li.active a").html());
+            });
+        }
     </script>
 
 </body>
