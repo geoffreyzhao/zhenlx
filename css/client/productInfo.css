@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+/*   产品详情 S   */
+
+/* foot S*/
+.foot{
+    background-color: #2b8a82;
+}
+.foot .footContent{
+    width: 1130px;
+    padding: 30px 0;
+    color: #fff;
+    margin: 0 auto;
+}
+/* foot E*/
+
+.mainContent{
+    background-color: #fff;
+}
+.mainContent .mainWrapper{
+    width: 1130px;
+    margin: 0 auto;
+}
+.mainWrapper .productFixedContent{
+    margin-bottom: 100px;
+    position: relative;
+}
+.productFixedContent .fixedList{
+    width: 1130px;
+    margin: 25px 0 35px;
+    background-color: #f9f9f9;
+    z-index: 2;
+} 
+.fixedList li{
+    float: left;
+}
+.fixedList li a{
+    display: inline-block;
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 17px;
+    color: #11b9b7;
+    border-left: 1px solid #d6efef;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.fixedList li:first-child a{
+    border-left: none;
+}
+.fixedList li.active a,
+.fixedList li:hover a{
+    color: #fff;
+    background-color: #11b9b7;
+}
+.fixedList li.last{
+    float: right;
+    line-height: 1;
+}
+.fixedList .last .bookBtn{
+    width: 160px;
+    background-color: #ffa200;
+    color: #fff;
+    line-height: 1;
+}
+.fixedList .last .bookBtn:hover{
+    background-color: #f29901;
+    color: #fff;
+}
+.last .bookBtn .priceFonts{
+    margin: 7px 0 5px;
+    font-size: 24px;
+}
+.last .bookBtn .bookFonts{
+    font-size: 15px;
+}
+.productFixedContent .commonModel{
+    margin-bottom: 80px;
+    font-size: 15px;
+}
+.commonModel .commonTitle{
+    font-size: 20px;
+    color: #11b9b7;
+    padding: 10px 5px 15px;
+    border-bottom: 1px solid #dcf5f4;
+}
+.commonModel .commonIcon{
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../images/client/productInfoIcon.png") no-repeat;
+    margin-right: 10px;
+}
+.commonTitle .costIcon{
+    width: 25px;
+    height: 25px;
+    background-position: -32px -43px;
+}
+.commonModel .titleFonts{
+    font-size: 18px;
+    color: #11b9b7;
+    margin: 20px 0 15px;
+}
+.commonModel .wrapperList{
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cff1f1;
+}
+.wrapperList .row{
+    float: left;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.wrapperList .twoRow{
+    width: 49%;
+    border-left: 1px solid #cff1f1;
+    padding-right: 10px;
+    padding-left: 50px;
+}
+.wrapperList .twoRow:first-child{
+    border-left: none;
+    padding-left: 0;
+}
+.wrapperList .oneRow{
+    width: 90%;
+}
+.listDetails li{
+    color: #616161;
+    line-height: 25px;
+    list-style-type: decimal;
+    margin-left: 22px;
+}
+.commonTitle .journeyIcon{
+    width: 20px;
+    height: 22px;
+    background-position: -64px -43px;
+}
+.journeyRecommendModel{
+    position: relative;
+}
+.journeyRecommendModel .asideFixed{
+    position: absolute;
+    left: -65px;
+    top: 55px;
+}
+.asideFixed li a{
+    display: inline-block;
+    font-size: 14px;
+    width: 60px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    background-color: #e7f8f8;
+    color: #11b9b7;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.asideFixed li:hover a,
+.asideFixed li.active a{
+    background-color: #11b9b7;
+    color: #fff;
+}
+.journeyRecommendModel .journeyRecommendList{
+    margin-left: 40px;
+}
+.journeyRecommendList li{
+    padding-bottom: 40px;
+    position: relative;
+}
+.journeyRecommendList .wrapperList{
+    margin: 30px 0;
+}
+.wrapperList .twoRow.overviewLeft{
+    width: 57%;
+    padding-right: 30px;    
+}
+.wrapperList .twoRow.overviewRight{
+    width: 42%;
+    padding-left: 30px;
+    color: #ababab;
+    font-size: 14px;
+}
+.overviewRight .rightIcon{
+    margin-bottom: 10px;
+}
+.rightIcon .carIcon{
+    width: 27px;
+    height: 21px;
+    background-position: -93px -43px;
+    margin-top: 5px;
+}
+.rightIcon .weatherIcon{
+    width: 29px;
+    height: 26px;
+    background-position: -128px -43px;
+}
+.rightIcon .clothesIcon{
+    width: 30px;
+    height: 23px;
+    background-position: -162px -43px;
+    margin-top: 3px;
+}
+.journeyRecommendList .leftDot{
+    width: 21px;
+    height: 21px;
+    background-position: -222px -43px;
+    position: absolute;
+    left: -40px;
+    top: 4px;
+    z-index: 2;
+}
+.journeyRecommendList li.active .leftDot{
+    background-position: -196px -43px;
+}
+.journeyRecommendList .leftLine{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    border-left: 3px solid #cff1f1;
+    position: absolute;
+    left: -26px;
+    top: 20px;
+    z-index: 1;
+}
+.journeyRecommendList li.last{
+    border-bottom: 1px solid #cff1f1;
+}
+.journeyRecommendList li.last .lastDot{
+    top: inherit;
+    bottom: -20px;
+}
+.journeyRecommendList .listTitle{
+    font-size: 20px;
+    color: #11b9b7;
+    margin: 15px 0;
+}
+.commonModel .fontSize12{
+    font-size: 12px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.journeyRecommendList .daysImg{
+    margin-bottom: 20px;
+}
+.journeyRecommendList .daysImg img{
+    display: inline-block;
+    width: 534px;
+    height: 303px;
+}
+.journeyRecommendList .daysImg img:first-child{
+    margin-right: 15px;
+}
+.daysInfo li{
+    padding-bottom: 10px;
+    line-height: 25px;
+    font-size: 16px;
+}
+.daysInfo .daysInfoLeft{
+    float: left;
+    width: 45px;
+}
+.daysInfo .daysFontsDetails{
+    float: left;
+    width: 1040px;
+}
+.commonModel .hotelIcon{
+    width: 26px;
+    height: 22px;
+    background-position: 0 -43px;
+}
+.commonModel .breakfastIcon{
+    width: 25px;
+    height: 27px;
+    background-position: -248px -43px;
+}
+.commonModel .shoesIcon{
+    width: 21px;
+    height: 19px;
+    background-position: -56px -77px;
+}
+/*   产品详情 E   */

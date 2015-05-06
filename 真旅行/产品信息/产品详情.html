@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>真旅行前台 产品信息 产品详情</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/productInfo.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/client/common.js"></script>   
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<header>
+		<div class="head clearfix">
+			<div class="logo"></div>
+		</div>
+	</header>
+
+	<div class="mainContent">
+        <div style="height: 635px; background-color: #245269; color: #fff">年轻人的第一次高逼格出国旅行</div>
+        <section class="mainWrapper">
+            <div style="height: 495px; background-color: #f9f9f9;">日历模块</div>
+            <div class="productFixedContent">
+                <ul class="fixedList clearfix">
+                    <li class="active">
+                        <a href="#airInfo">航班信息</a>
+                    </li>
+                    <li>
+                        <a href="#hotelInfo">酒店信息</a>
+                    </li>
+                    <li>
+                        <a href="#priceExplain">费用说明</a>
+                    </li>
+                    <li>
+                        <a href="#journeyRecommend">行程推荐</a>
+                    </li>
+                    <li>
+                        <a href="#bookingNote">预定须知</a>
+                    </li>
+                    <li>
+                        <a href="#userEvaluation">用户评价</a>
+                    </li>
+                    <li class="last">
+                        <a href="javascript:void(0);" class="bookBtn">
+                            <div class="priceFonts">¥2399</div>
+                            <div class="bookFonts">立即预定</div>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="commonModel">
+                    <a name="priceExplain"></a>
+                    <div class="commonTitle"><i class="commonIcon costIcon"></i>费用说明</div>
+                    <ul class="wrapperList clearfix">
+                        <li class="row twoRow">
+                            <h3 class="titleFonts">费用包含</h3>
+                            <ul class="listDetails">
+                                <li>北京往返普吉岛含税机票；</li>
+                                <li>当地精品海明威丝绸酒店5晚住宿(含早；或同级)；</li>
+                                <li>目的地机场至酒店的往返接送服务</li>
+                            </ul>
+                        </li>
+                        <li class="row twoRow">
+                            <h3 class="titleFonts">真旅行赠送项目</h3>
+                            <ul class="listDetails">
+                                <li>柬埔寨当地3G上网卡（每间房一张）</li>
+                                <li>出国人员旅游意外伤害保险</li>
+                                <li>专属发现柬埔寨小册子及发现小盒（每间房一份）</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="wrapperList clearfix">
+                        <li class="row oneRow">
+                            <h3 class="titleFonts">费用不含</h3>
+                            <ul class="listDetails">
+                                <li>护照费、保险费、签证费；</li>
+                                <li>酒店服务人员小费及酒店内其它收费设施的使用费；</li>
+                                <li>出入境的行李海关课税，超重行李的托运费、管理费等；</li>
+                                <li>洗衣，理发，电话，饮料，烟酒，付费电视，行李搬运费等私人费用；</li>
+                                <li>所含费用中未提到的其它费用；</li>
+                                <li>因不可抗拒的客观原因和非我公司原因（如天灾、战争、罢工等）或航空公司航班延误或取消、领馆签证延误、报名人数不足等特殊情况，我公司有权取消或变更行程，一切超出费用（如在外延期签证费、住、食及交通费、国家航空运价调整等）我公司有权追加差价；</li>
+                                <li>全程单房差：700元/人起（如客人单人报名，所产生单房差费用，需客人承担）。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="commonModel journeyRecommendModel">
+                    <a name="journeyRecommend"></a>
+                    <div class="commonTitle"><i class="commonIcon journeyIcon"></i>行程推荐</div>
+                    <ul class="asideFixed">
+                        <li class="active">
+                            <a href="#overview">概览</a>
+                        </li>
+                        <li>
+                            <a href="#D1">D1</a>
+                        </li>
+                        <li>
+                            <a href="#D2">D2</a>
+                        </li>
+                        <li>
+                            <a href="#D3">D3</a>
+                        </li>
+                        <li>
+                            <a href="#D4">D4</a>
+                        </li>
+                        <li>
+                            <a href="#D5">D5</a>
+                        </li>
+                    </ul>
+                    <ul class="journeyRecommendList">
+                        <li class="active">
+                            <span class="commonIcon leftDot"></span>
+                            <span class="leftLine"></span>
+                            <h3 class="listTitle">目的地概览</h3>
+                            <img src="../../images/client/overviewImg.jpg" style="width: 1090px;height: 400px;">
+                            <ul class="wrapperList clearfix">
+                                <li class="row twoRow overviewLeft">
+                                    提到柬埔寨，最先跃入脑海的一定是吴哥窟。面对宏伟壮观的护城长廊，内心深处的敬畏感油然而生。巴戎庙内宝塔林立，塔布隆寺演绎树与塔的爱恨交缠。置身佛的国度，不经意间就会撞见充满友善和微笑的眼神，一切皆有佛性。所以，当你站在“微笑的高棉”前时，看着他那深邃的眼睛，你会读懂一切，也无需再问那个很多人会问起的问题“为什么叫他微笑的高棉呢”所以，当你站在“微笑的高棉”前时，看着他那深邃的眼睛，你会读懂一切，也无需再问那个很多人会问起的问题“为什么叫他微笑的高棉呢”
+                                </li>
+                                <li class="row twoRow overviewRight">
+                                    <div class="rightIcon">
+                                        <span class="commonIcon carIcon"></span>
+                                        <span class="commonIcon weatherIcon"></span>
+                                        <span class="commonIcon clothesIcon"></span>
+                                    </div>
+                                    小圈和大圈是暹粒旅行中不可不知的两条经典游览线路。无数实践证明，这两条线路是最高效省时的游览方式。柬埔寨是热带国家，温度普遍很高，多准备一些夏天衣服1-3月平均参考温度是21-35摄氏度，天气稍炎热。在参观寺庙时女性请勿穿着吊带和膝盖以上的短裙，同时请注意防晒，使用防晒指数较高的防晒霜。
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="commonIcon leftDot"></span>
+                            <span class="leftLine"></span>
+                            <h3 class="listTitle">第一天<em class="fontSize12">●</em>抵达暹粒</h3>
+                            <div class="daysImg">
+                                <img src="../../images/client/dayNumberImg01.jpg">
+                                <img src="../../images/client/dayNumberImg02.jpg">
+                            </div>
+                            <ul class="daysInfo">
+                                <li class="clearfix">
+                                    <div class="daysInfoLeft">
+                                        <span class="commonIcon hotelIcon"></span>
+                                    </div>
+                                    <div class="daysFontsDetails">金边奇迹温泉度假酒店（King Miracle Resort & Spa）s</div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="daysInfoLeft">
+                                        <span class="commonIcon breakfastIcon"></span>
+                                    </div>
+                                    <div class="daysFontsDetails">早餐: 自助餐 &nbsp; 午餐: 金边酒店4星标准法式浪漫套餐（配85年拉菲）&nbsp; 晚餐: 金边美食街盅记自助烧烤（含羊腿）</div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="daysInfoLeft">
+                                        <span class="commonIcon shoesIcon"></span>
+                                    </div>
+                                    <div class="daysFontsDetails">全天自由行</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="commonIcon leftDot"></span>
+                            <span class="leftLine"></span>
+                            <h3 class="listTitle">第二天<em class="fontSize12">●</em>微笑的高棉 （暹粒小圈游）</h3>
+                            <div class="daysImg">
+                                <img src="../../images/client/dayNumberImg03.jpg">
+                                <img src="../../images/client/dayNumberImg04.jpg">
+                            </div>
+                            <ul class="daysInfo">
+                                <li class="clearfix">
+                                    <div class="daysInfoLeft">
+                                        <span class="commonIcon hotelIcon"></span>
+                                    </div>
+                                    <div class="daysFontsDetails">金边奇迹温泉度假酒店（King Miracle Resort & Spa）s</div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="daysInfoLeft">
+                                        <span class="commonIcon breakfastIcon"></span>
+                                    </div>
+                                    <div class="daysFontsDetails">早餐: 自助餐 &nbsp; 午餐: 金边酒店4星标准法式浪漫套餐（配85年拉菲）&nbsp; 晚餐: 金边美食街盅记自助烧烤（含羊腿）</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="last">
+                            <span class="commonIcon leftDot"></span>
+                            <span class="commonIcon leftDot lastDot"></span>
+                            <span class="leftLine"></span>
+                            <h3 class="listTitle">第六天<em class="fontSize12">●</em>抵达上海</h3>
+                            <div class="daysImg">
+                                <img src="../../images/client/dayNumberImg05.jpg">
+                            </div>
+                            <ul class="daysInfo">
+                                <li class="clearfix">
+                                    <div class="daysFontsDetails">全天自由行！</div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="daysFontsDetails">早餐后请根据您的航班时间合理安排行程，请务必在飞机起飞前2小时到达机场办理登机手续，返回您温馨的家。</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+	</div>
+    
+    <div class="foot clearfix">
+        <div class="footContent">
+            <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+            <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+        </div>
+    </div>
+
+</body>
+</html>
