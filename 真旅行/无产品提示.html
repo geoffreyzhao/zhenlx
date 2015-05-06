@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>无产品提示</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/flight_logo.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/userOrder.css">
+
+    <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../js/client/common.js"></script>
+    <!--  渐变背景和mainbox 需要调整距离和位置，引入adjust.js  -->
+    <script type="text/javascript" src="../js/client/adjust.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
+    <script type="text/javascript" src="../js/base/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="head clearfix">
+            <div class="logo"></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="main-wrapper" id="main-wrapper">
+            <div class="orderFlowBar">
+                <ul class="clearfix">
+                    <li><i class="pastTenseIcon"></i><span class="pastTenseFonts">选择产品</span></li>
+                    <li><i class="pastTenseIcon"></i><span class="pastTenseFonts">填写订单</span></li>
+                    <li class="currentStatus"><i class="nowTenseIcon"><em>3</em></i><span class="nowTenseFonts">在线支付</span></li>
+                    <li><i class="futureTenseIcon"><em>4</em></i><span class="futureTenseFonts">支付完成</span></li>
+                </ul>
+            </div>
+            <section class="onLinePayContent">
+                <div class="top-border"></div>
+                <div class="withoutOrderModel">
+                    <div class="withoutDivision clearfix">
+                        <p class="text-center"><img src="../images/client/snail.jpg"/></p>
+                        <h2 class="text-center withoutInfo">Oh no!</h2>
+                        <p class="text-center withoutTip">实在抱歉，有人刚刚把剩余的几个位置抢光了！</p>
+                    </div>
+                    <i class="left-semicircle"></i>
+                    <i class="right-semicircle"></i>
+                </div>
+                <div class="withoutOrderModel01">
+                    <div class="titleModel padding20">
+                        <p class="text-center withoutTip">你可以</p>
+                    </div>
+                    <div class="text-center payWayContent clearfix">
+                        <div class="withoutLeft">
+                            <ul>
+                                <li class="text-center" style="padding-bottom: 5px;"><a href="javascript:void(0);"><img src="../images/client/withImg_01.jpg"
+                                    onmouseover="this.src='../images/client/withImg_03.jpg'" onmouseout="this.src='../images/client/withImg_01.jpg'"/></a></li>
+                                <li class="text-center withoutText">点我</li>
+                                <li class="text-center withoutText">预定其他日期</li>
+                            </ul>
+                        </div>
+                        <div class="withoutRight">
+                            <li class="text-center" style="padding-bottom: 5px;"><img src="../images/client/withImg_02.jpg"/></li>
+                            <li class="text-center withoutText">扫一扫微信</li>
+                            <li class="text-center withoutText">联系小真真客服咨询</li>
+                        </div>
+                        <div class="chkUser-center"></div>
+                    </div>
+                    <i class="left-semicircle"></i>
+                    <i class="right-semicircle"></i>
+                </div>
+            </section>
+        </div>
+        <div class="foot clearfix">
+            <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+            <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+        </div>
+    </div>
+
+</body>
+</html>

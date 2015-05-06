@@ -438,6 +438,7 @@
 .order-conBlock .left-semicircle, 
 .order-conBlockTitle .left-semicircle, 
 .guestInfo-item .left-semicircle,
+.withoutOrderModel .left-semicircle,
 .commonOrderModel .left-semicircle{
     position: absolute;
     bottom:-4px;
@@ -450,6 +451,7 @@
 .order-conBlock .right-semicircle, 
 .order-conBlockTitle .right-semicircle,
 .guestInfo-item .right-semicircle,
+.withoutOrderModel .right-semicircle,
 .commonOrderModel .right-semicircle {
     position: absolute;
     bottom:-4px;
@@ -634,6 +636,9 @@
 .titleModel.padding30{
     padding: 30px 0;
 }
+.titleModel.padding20{
+    padding: 10px 0;
+}
 .payWayContent{
     margin-bottom: 60px;
 }
@@ -665,6 +670,15 @@
 .onLinePayContent .btnCenter{
     padding: 20px 0 40px;
 }
+.withoutOrderModel{
+    border-bottom:1px dashed #0c8694;
+    padding:20px 0px;
+    position: relative;
+}
+.withoutOrderModel01{
+    padding:20px 0px;
+    position: relative;
+}
 .chkUser-left{
     width:300px;
     padding-top:20px;
@@ -686,6 +700,44 @@
     width:31px;
     height:46px;
     background-image: url("../../images/client/changeUser.jpg");
+}
+.noPosition{
+    width:129px;
+    height:90px;
+    background-image: url("../../images/client/snail.jpg");
+}
+.withoutDivision{
+    padding:10px;
+}
+.withoutLeft ul{
+    list-style: none;
+}
+.withoutLeft ul li{
+    line-height: 20px;
+}
+.withoutInfo{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+}
+.withoutTip{
+    font-size: 15px;
+    color: #a3a3a3;
+}
+.withoutLeft {
+    padding: 20px 0px;
+    width: 555px;
+    float: left;
+}
+.withoutText{
+    font-weight: bold;
+    font-size: 15px;
+    color: #11b9b7;
+}
+.withoutRight{
+    padding: 20px 0px;
+    width:555px;
+    float: right;
 }
 /*  在线支付 E  */
 
