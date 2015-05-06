@@ -655,7 +655,7 @@
                                 </label>
                             </div>
                             <div class="buttonDiv">
-                                <a href="在线支付.html" class="bigOrangeBtn active" style="width:220px;">提交订单</a>
+                                <a href="javascript:void(0);" class="bigOrangeBtn active checkUser" style="width:220px;">提交订单</a>
                             </div>
                         </div>
                         
@@ -754,6 +754,49 @@
 			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
 		</div>
 	</div>
+
+    <!--提交订单前验证联系人信息-->
+    <div class="modal fade" id="checkUser">
+        <div class="modal-dialog" style="width:605px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">登录</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <div class="chkUser-left">
+                        <p>该联系人手机号已经注册过了，请直接登录</p>
+                        <div style="margin: 20px 0px;">
+                            <div class="componentInput">
+                                <i class="commonIcon personHeaderIcon"></i>
+                                <input type="text" placeholder="手机号/邮箱" style="width: 243px;">
+                            </div>
+                        </div>
+                        <div style="margin: 20px 0px;">
+                            <div class="componentInput forgetPW">
+                                <i class="commonIcon lockIcon"></i>
+                                <input type="password" placeholder="请输入密码" style="width: 160px;">
+                                <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
+                            </div>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <a href="javascript:void(0);" class="commonBtn blueBtn" style="width:278px;">提交</a>
+                        </div>
+                    </div>
+                    <div class="chkUser-right">
+                        <div class="text-center" style="margin: 10px 0px;"><img class="changeUser"/></div>
+                        <div class="text-center">
+                            <p>换个<span style="color: #11b9b7">联系人手机号？</span></p>
+                        </div>
+                    </div>
+                    <div class="chkUser-center"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     
     <!--  经停提示信息模板  -->
     <script type="text/html" id="stop_flight_template">
@@ -818,6 +861,10 @@
 
             $(".right-orderPriceDetail").fixedBar({
                 offsetY: 3
+            });
+            $(".checkUser").click(function(){
+               $("#checkUser").modal("show");
+
             });
 
         });

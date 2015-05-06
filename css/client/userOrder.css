@@ -665,6 +665,28 @@
 .onLinePayContent .btnCenter{
     padding: 20px 0 40px;
 }
+.chkUser-left{
+    width:300px;
+    padding-top:20px;
+    float: left;
+}
+.chkUser-right{
+    width:250px;
+    height:240px;
+    padding-top:50px;
+    float: right;
+}
+.chkUser-center{
+    width:18px;
+    height:239px;
+    float: left;
+    background-image: url("../../images/client/chkUser_line.jpg");
+}
+.changeUser{
+    width:31px;
+    height:46px;
+    background-image: url("../../images/client/changeUser.jpg");
+}
 /*  在线支付 E  */
 
 .air-terminal {
