@@ -25,8 +25,7 @@
     <script type="text/javascript" src="../../js/base/html5.js"></script>
     <![endif]-->
 </head>
-<body>
-
+<body data-spy="scroll" data-target="#navbar" data-offset="475">
 	<header>
 		<div class="head clearfix">
 			<div class="logo"></div>
@@ -38,35 +37,37 @@
         <section class="mainWrapper">
             <div style="height: 495px; background-color: #f9f9f9;">日历模块</div>
             <div class="productFixedContent">
-                <ul class="fixedList clearfix">
-                    <li class="active">
-                        <a href="#airInfo">航班信息</a>
-                    </li>
-                    <li>
-                        <a href="#hotelInfo">酒店信息</a>
-                    </li>
-                    <li>
-                        <a href="#priceExplain">费用说明</a>
-                    </li>
-                    <li>
-                        <a href="#journeyRecommend">行程推荐</a>
-                    </li>
-                    <li>
-                        <a href="#bookingNote">预定须知</a>
-                    </li>
-                    <li>
-                        <a href="#userEvaluation">用户评价</a>
-                    </li>
-                    <li class="last">
-                        <a href="javascript:void(0);" class="bookBtn">
-                            <div class="priceFonts">¥2399</div>
-                            <div class="bookFonts">立即预定</div>
-                        </a>
-                    </li>
-                </ul>
+                <div id="navbar">
+                    <ul class="nav fixedList clearfix">
+                        <li class="active">
+                            <a href="#airInfo">航班信息</a>
+                        </li>
+                        <li>
+                            <a href="#hotelInfo">酒店信息</a>
+                        </li>
+                        <li>
+                            <a href="#priceExplain">费用说明</a>
+                        </li>
+                        <li>
+                            <a href="#journeyRecommend">行程推荐</a>
+                        </li>
+                        <li>
+                            <a href="#bookingNote">预定须知</a>
+                        </li>
+                        <li>
+                            <a href="#userEvaluation">用户评价</a>
+                        </li>
+                        <li class="last">
+                            <a href="javascript:void(0);" class="bookBtn">
+                                <div class="priceFonts">¥2399</div>
+                                <div class="bookFonts">立即预定</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 
                 <div class="commonModel">
-                    <a name="priceExplain"></a>
+                    <div id="priceExplain"></div>
                     <div class="commonTitle"><i class="commonIcon costIcon"></i>费用说明</div>
                     <ul class="wrapperList clearfix">
                         <li class="row twoRow">
@@ -103,34 +104,36 @@
                 </div>
                 
                 <div class="commonModel journeyRecommendModel">
-                    <a name="journeyRecommend"></a>
+                    <div id="journeyRecommend"></div>
                     <div class="commonTitle"><i class="commonIcon journeyIcon"></i>行程推荐</div>
-                    <ul class="asideFixed">
-                        <li class="active">
-                            <a href="#overview">概览</a>
-                        </li>
-                        <li>
-                            <a href="#D1">D1</a>
-                        </li>
-                        <li>
-                            <a href="#D2">D2</a>
-                        </li>
-                        <li>
-                            <a href="#D3">D3</a>
-                        </li>
-                        <li>
-                            <a href="#D4">D4</a>
-                        </li>
-                        <li>
-                            <a href="#D5">D5</a>
-                        </li>
-                        <li>
-                            <a href="#D6">D6</a>
-                        </li>
-                    </ul>
+                    <div id="navbar">
+                        <ul class="nav asideFixed">
+                            <li class="active">
+                                <a href="#overview">概览</a>
+                            </li>
+                            <li>
+                                <a href="#D1">D1</a>
+                            </li>
+                            <li>
+                                <a href="#D2">D2</a>
+                            </li>
+                            <li>
+                                <a href="#D3">D3</a>
+                            </li>
+                            <li>
+                                <a href="#D4">D4</a>
+                            </li>
+                            <li>
+                                <a href="#D5">D5</a>
+                            </li>
+                            <li>
+                                <a href="#D6">D6</a>
+                            </li>
+                        </ul>
+                    </div>
                     <ul class="journeyRecommendList">
                         <li class="active">
-                            <a name="overview"></a>
+                            <div id="overview"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">目的地概览</h3>
@@ -150,7 +153,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a name="D1"></a>
+                            <div id="D1"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第一天<em class="fontSize12">●</em>抵达暹粒</h3>
@@ -189,7 +192,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a name="D2"></a>
+                            <div id="D2"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第二天<em class="fontSize12">●</em>微笑的高棉 （暹粒小圈游）</h3>
@@ -222,7 +225,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a name="D3"></a>
+                            <div id="D3"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第三天<em class="fontSize12">●</em>微笑的高棉 </h3>
@@ -255,7 +258,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a name="D4"></a>
+                            <div id="D4"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第四天<em class="fontSize12">●</em>夜晚的不眠</h3>
@@ -288,7 +291,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a name="D5"></a>
+                            <div id="D5"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第五天<em class="fontSize12">●</em>愉快的玩耍</h3>
@@ -321,7 +324,7 @@
                             </ul>
                         </li>
                         <li class="last">
-                            <a name="D6"></a>
+                            <div id="D6"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="commonIcon lastDot"></span>
                             <span class="leftLine"></span>
@@ -342,7 +345,7 @@
                 </div>
                 
                 <div class="commonModel">
-                    <a name="bookingNote"></a>
+                    <div id="bookingNote"></div>
                     <div class="commonTitle"><i class="commonIcon bookingIcon"></i>预定须知</div>
                     <ul class="wrapperList clearfix noBlueBorder">
                         <li class="row oneRow">
@@ -382,7 +385,7 @@
                 </div>
                 
                 <div class="commonModel">
-                    <a name="userEvaluation"></a>
+                    <div id="userEvaluation"></div>
                     <div class="commonTitle">
                         <i class="commonIcon userEvaluationIcon"></i>用户评价
                         <label class="fonts14">( 共<span class="blueFonts">108</span>人点评 )</label>
@@ -489,69 +492,27 @@
             //滚动监听有蒙版效果
             $(window).scroll(function(){
                 $(".journeyRecommendList").children("li").each(function(){
-                    console.log($(this).html());
                     showLi(this);
                 });
             });
 
             function showLi(ele) {
-                var prevEleTop,
-                        prevEleHeight,
-                        top = $(ele).offset().top,
-                        eleHeight = $(ele).height(),
-                        scrollTop = $(window).scrollTop();
-                if ($(ele).prev("li").length == 0) {
-                    prevEleTop = 0;
-                    prevEleHeight = 0;
+                var top = $(ele).offset().top,
+                    eleHeight = $(ele).height(),
+                    scrollTop = $(window).scrollTop(),
+                    clientHeight = document.documentElement.clientHeight,
+                    nextEleTop;
+
+                if ($(ele).next("li").length == 0) {
+                    nextEleTop = top + eleHeight;
                 } else {
-                    prevEleTop = $(ele).prev("li").offset().top;
-                    prevEleHeight = $(ele).prev("li").height();
+                    nextEleTop = $(ele).next("li").offset().top;
                 }
-                if (scrollTop > prevEleTop && scrollTop < top) {
+                if (scrollTop > (top - clientHeight*0.5) && scrollTop < (nextEleTop - clientHeight*0.5)) {
                     $(ele).addClass("active");
                     $(ele).siblings("li").removeClass("active");
                 }
             }
-
-            //滚动监听有锚点效果
-            /*var flag = true;
-
-            $(".asideFixed li").click(function(){
-                flag = false;
-                $(this).addClass("active");
-                $(this).siblings("li").removeClass("active");
-                setTimeout(function(){
-                    var top = $("body").scrollTop();
-                    $("body").scrollTop(top - 100);
-                }, 1);
-            });
-
-            var a_pos = [];
-
-            $(".asideFixed a").each(function(index){
-                var href= $(this).attr("href");
-                a_pos.push($("a[name=" + href.substring(1) + "]").offset());
-            });
-
-            $(window).bind("scroll",function(e){
-                if(flag){
-                    var that = $(".asideFixed");
-                    var currentPos = that.offset();
-                    var i = 0;
-                    for(i = a_pos.length - 1; i >=0 ; i--){
-                        if(currentPos.top >= a_pos[i].top-100){
-                            that.find("li").removeClass('active');
-                            $("li:eq(" + (i) + ")" , that).addClass("active");
-                            return false;
-                        }
-                    }
-                    that.find("li").removeClass('active');
-                    $("li:first" , that).addClass("active");
-                }
-                flag=true;
-            });*/
-            
-            
             
         });
     </script>
