@@ -29,7 +29,7 @@
     width: 1130px;
     margin: 25px 0 35px;
     background-color: #f9f9f9;
-    z-index: 2;
+    z-index: 3;
 } 
 .fixedList li{
     float: left;
@@ -150,7 +150,7 @@
 }
 .journeyRecommendModel .asideFixed{
     position: absolute;
-    left: -65px;
+    left: -75px;
     top: 55px;
 }
 .asideFixed li a{
@@ -238,8 +238,13 @@
     border-bottom: 1px solid #cff1f1;
 }
 .journeyRecommendList li.last .lastDot{
-    top: inherit;
+    width: 21px;
+    height: 21px;
+    background-position: -222px -43px;
+    position: absolute;
+    left: -40px;
     bottom: -20px;
+    z-index: 2;
 }
 .journeyRecommendList .listTitle{
     font-size: 20px;
