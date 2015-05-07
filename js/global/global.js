@@ -66,6 +66,7 @@
 
 
 	//  模块悬停，随着需求和使用产品逐步优化
+	// TODO:  添加悬停结束  endAt
 	$.fn.fixedBar = function(options) {
 
 		var opts = $.extend({
@@ -80,6 +81,10 @@
 				marginTop = $(this).css("margin-top"),
 				$that = $(this);
 
+			var originPos = $that.css("postiion"),
+				originTop = $that.css("top"),
+				originLeft = $that.css("left");
+
 			$(window).scroll(function(event) {
 				if ($(window).scrollTop() >= top) {
 					$that.css({
@@ -89,7 +94,9 @@
 					});
 				} else {
 					$that.css({
-						position: "static"
+						position: originPos,
+						top: originTop,
+						left: originLeft
 					});
 				}
 			});
