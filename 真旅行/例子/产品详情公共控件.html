@@ -369,7 +369,6 @@
 									+	"<span class='day-icon'></span></div><div class='right-block'>";
 
 			coverEleStr += parseNumToString(i+1) + "</div><div class='icon'>";
-			console.log((i+1) + "==" + parseNumToString(i+1));
 
 			var dayData = tripData.dataList[i],
 				fi = dayData.flightInfos,
@@ -415,7 +414,6 @@
 			} 
 			coverEleStr += "</div></div>";
 			popoverEleStr += "</div>";
-			console.log(coverEleStr);
 
 			eleArr.push($(coverEleStr));
 			popoverEleArr.push($(popoverEleStr));

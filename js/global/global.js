@@ -71,7 +71,8 @@
 
 		var opts = $.extend({
 			offsetX : 0,
-			offsetY : 0
+			offsetY : 0,
+			endAt: "body"
 		}, options);		
 
 		return this.each(function(){
@@ -81,25 +82,31 @@
 				marginTop = $(this).css("margin-top"),
 				$that = $(this);
 
-			var originPos = $that.css("postiion"),
+			var originPos = $that.css("position"),
 				originTop = $that.css("top"),
 				originLeft = $that.css("left");
 
+			var end = $(opts.endAt).outerHeight() + $(opts.endAt).offset().top - $that.outerHeight();
+
 			$(window).scroll(function(event) {
-				if ($(window).scrollTop() >= top) {
+				if ($(window).scrollTop() >= top && $(window).scrollTop() <= (end+6)) {
 					$that.css({
 						position: "fixed",
 						top: (0 - parseInt(marginTop) + opts.offsetY) + "px",
 						left: left + "px"
 					});
 				} else {
-					$that.css({
-						position: originPos,
-						top: originTop,
-						left: originLeft
-					});
+					stopFix($that);
 				}
 			});
+
+			function stopFix($ele) {
+				$ele.css({
+					position: originPos,
+					top: originTop,
+					left: originLeft
+				});
+			}
 
 		});
 	}
