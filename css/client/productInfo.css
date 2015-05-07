@@ -79,6 +79,7 @@
 .productFixedContent .commonModel{
     margin-bottom: 80px;
     font-size: 15px;
+    color: #616161;
 }
 .commonModel .commonTitle{
     font-size: 20px;
@@ -131,6 +132,13 @@
     line-height: 25px;
     list-style-type: decimal;
     margin-left: 22px;
+}
+.commonModel .listDetails a{
+    color: #11b9b7;
+}
+.commonModel .listDetails a:hover{
+    color: #11b9b7;
+    text-decoration: underline;
 }
 .commonTitle .journeyIcon{
     width: 20px;
@@ -267,6 +275,9 @@
     float: left;
     width: 1040px;
 }
+.commonModel .marginRight10{
+    margin-right: 10px;
+}
 .commonModel .hotelIcon{
     width: 26px;
     height: 22px;
@@ -282,4 +293,120 @@
     height: 19px;
     background-position: -56px -77px;
 }
+.commonModel .bookingIcon{
+    width: 19px;
+    height: 24px;
+    background-position: 0 -77px;
+}
+.wrapperList.noBlueBorder{
+    border-bottom: none;
+}
+.wrapperList.noBlueBorder .row{
+    padding-bottom: 5px;    
+}
+.wrapperList.noBlueBorder .titleFonts{
+    font-size: 15px;
+    font-weight: bold;
+    color: #616161;
+    margin: 20px 0 10px;
+}
+.commonModel .userEvaluationIcon{
+    width: 25px;
+    height: 24px;
+    background-position: -25px -77px;
+}
+.commonModel .commonTitle .fonts14{
+    font-size: 14px;
+    color: #9f9f9f;
+}
+.commonModel .commonTitle .fonts14 .blueFonts,
+.commonModel .blueFonts{
+    color: #11b9b7;
+}
+.commonModel .color9f9f9fFonts{
+    color: #9f9f9f;
+}
+.userEvaluationList li{
+    padding: 25px;
+    border-bottom: 1px solid #cff1f1;
+}
+.userEvaluationList .userEvaluationLeft{
+    font-size: 12px;
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+.userEvaluationList .userEvaluationLeft img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+.userEvaluationList .userEvaluationRight{
+    font-size: 14px;
+    float: left;
+    width: 88%;
+    margin-left: 20px;
+}
+.userEvaluationList .userEvaluationRight p{
+    line-height: 25px;
+    margin-top: 5px;
+}
+.commonStarLevelIcon{
+    display: inline-block;
+    width: 138px;
+    height: 13px;
+    vertical-align: middle;
+    line-height: 1;
+    background: url("../../images/client/starLevelIcon.png") no-repeat;
+}
+.starLevelIcon{
+    background-position: 0 -18px;
+}
+.starLevelIcon span{
+    margin-top: -7px;
+    background-position: 0 0;
+}
+.commonStarLevelIcon.starLevel-1 span{
+    width: 13px;
+}
+.commonStarLevelIcon.starLevel-2 span{
+    width: 34px;
+}
+.commonStarLevelIcon.starLevel-3 span{
+    width: 54px;
+}
+.commonStarLevelIcon.starLevel-4 span{
+    width: 75px;
+}
+.commonStarLevelIcon.starLevel-5 span{
+    width: 96px;
+}
+.commonStarLevelIcon.starLevel-6 span{
+    width: 117px;
+}
+.commonStarLevelIcon.starLevel-7 span{
+    width: 138px;
+}
+.commonStarLevelIcon.starLevel-0-5 span{
+    width: 7px;
+}
+.commonStarLevelIcon.starLevel-1-5 span{
+    width: 28px;
+}
+.commonStarLevelIcon.starLevel-2-5 span{
+    width: 48px;
+}
+.commonStarLevelIcon.starLevel-3-5 span{
+    width: 69px;
+}
+.commonStarLevelIcon.starLevel-4-5 span{
+    width: 90px;
+}
+.commonStarLevelIcon.starLevel-5-5 span{
+    width: 111px;
+}
+.commonStarLevelIcon.starLevel-6-5 span{
+    width: 132px;
+}
+
 /*   产品详情 E   */
