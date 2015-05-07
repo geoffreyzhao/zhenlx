@@ -96,4 +96,33 @@
 
 		});
 	}
+
+	//  common tab bar
+	$.fn.tabBar = function(){
+		return this.each(function(){
+
+			var $that = $(this);
+
+			resetCommonTab();
+	        $that.find("li.tab-item").click(function(){
+	            $(this).siblings("li").removeClass("current");
+	            $(this).addClass("current");
+	            resetCommonTab();
+	        });
+		    
+			function resetCommonTab() {
+			    $that.find("li.placement").removeClass("left-active").removeClass("right-active");
+			    $that.find("li.current").prev(".placement").addClass("left-active");
+			    $that.find("li.current").next(".placement").addClass("right-active");
+
+			    var h = $that.height(),
+			        w = $that.width() - $that.find("li.rest").position().left;
+
+			    $that.find("li.rest").css({
+			        height: h + "px",
+			        width: w + "px"
+			    });
+			}
+		});
+	}
 })(jQuery);

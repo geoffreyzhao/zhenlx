@@ -99,6 +99,8 @@
 .commonTab th{
     border: 1px solid #eaeaea;
     padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .commonTab thead{
     background-color: #f5f5f5;

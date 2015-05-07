@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/*  tab 切换样式  */
+
+.common-tab-bar {
+}
+
+.common-tab-bar .tab-top {
+	width: 100%;
+	height: 15px;
+	background-color: #11b9b7;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	position: relative;
+	top: 5px;
+}
+
+ul.common-tab {	
+	color: #fff;
+	font-size: 14px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	margin: 0;
+	position: relative;
+}
+
+ul.common-tab > li {
+	float: left;
+	padding: 15px 14px;
+	background-color: #11b9b7;
+}
+
+ul.common-tab > li:hover {
+	cursor: pointer;
+}
+
+ul.common-tab > li.current {
+	background-color: #fff;
+	color: #11b9b7;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	position: relative;
+}
+
+ul.common-tab > li.placement {
+	height: 50px;
+	width: 9px;
+	padding: 0;
+}
+
+ul.common-tab > li.placement.left-active {
+	border-bottom-right-radius: 5px;
+}
+
+ul.common-tab > li.placement.right-active {
+	border-bottom-left-radius: 5px;	
+}
+
+ul.common-tab > li.rest {
+	cursor: default;
+}
+
+/*  产品详情页--日历样式  */
+
+.custom-price-calendar-container {
+	position: relative;
+}
+
+.custom-price-calendar-container .wrap-cover-bg {
+	background: url(../../images/client/calendar-cover-bg.png) no-repeat center;
+	width: 100%;
+	height: 556px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+
+.calendarTables {
+	background-color: #fbfbfb;
+	color: #999;
+	font-size: 15px;
+	border: 2px solid #11b9b7;
+	border-top: none;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	height: 496px;
+}
+
+.week-day-title {
+	margin: 0;
+}
+
+.week-day-title li {
+	float: left;
+	height: 38px;
+	line-height: 38px;
+	width: 106px;
+	background-color: #fbfbfb;
+	color: #999;
+	text-align: center;
+}
+
+.calTable {
+}
+
+.calTable td {
+	border-right: 1px solid #cceeed;
+	border-bottom: 1px solid #cceeed;
+}
+
+.calTable tr:first-child td {
+	border-top: 1px solid #cceeed;
+}
+
+.calTable tr:last-child td {
+	border-bottom: none;
+}
+
+.calTable td:last-child {
+	border-right: none;
+}
+
+.calTable .tdCont {
+	width: 106px;
+	height: 75px;
+	position: relative;
+}
+
+.calTable .tdCont .priceCover {
+	position: relative;
+	padding: 10px 8px 0 10px;
+	height: 100%;
+}
+
+.calTable .tdCont .priceCover .dateDay {
+	float: left;
+}
+
+.calTable .tdCont .priceCover .right-block {
+	float: right;
+	text-align: right;
+}
+
+.calTable .tdCont .onsale .leftNum {
+	color: #e46c14;
+	line-height: 20px;
+}
+
+.calTable .tdCont .onsale .price {
+	color: #e46c14;
+	line-height: 20px;
+}
+
+.calTable .tdCont .soldout .leftNum {
+	color: #cacaca;
+	line-height: 20px;
+}
+
+.calTable .tdCont .soldout .price {
+	color: #cacaca;
+	line-height: 20px;
+}
+
+.calTable .tdCont .onsale:hover,
+.calTable .tdCont .soldout:hover {
+	cursor: pointer;
+}
+
+.calTable .tdCont .tripCover {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 99%;
+	height: 100%;
+	z-index: 2;
+	background-color: #c8fdfd;
+	color: #11b9b7;
+	border-radius: 4px;
+	padding: 10px 8px 0 10px;
+}
+
+.calTable .tdCont .tripCover .dateDay {
+	float: left;
+}
+
+.calTable .tdCont .tripCover .right-block {
+	float: right;
+	text-align: right;
+}
+
+.calTable .tdCont .tripCover .right-block .icon {
+	margin-top: 17px;
+}
+
+.calTable .tdCont .tripCover .right-block .flight-icon {
+	background: url(../../images/client/trip-icon.png) no-repeat 0 0;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.calTable .tdCont .tripCover .right-block .hotel-icon {
+	background: url(../../images/client/trip-icon.png) no-repeat 0 -20px;
+	width: 21px;
+	height: 17px;
+	display: inline-block;
+}

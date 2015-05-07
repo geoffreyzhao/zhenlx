@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品详情公共控件</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/temp_productInfo.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/underscore.js"></script>
+    <script type="text/javascript" src="../../js/global/global.js"></script>
+    <script type="text/javascript" src="../../js/client/common.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+公共tab样式:
+<div style="color:red;">
+(因为使用场景不同，padding,width等值可根据需要进行调整或覆盖，这里只确定tab结构)：
+</div>
+
+<div class="common-tab-bar" style="width:500px;">
+	<div class="tab-top"></div>
+	<ul class="common-tab clearfix">
+		<li class="placement"></li>
+	    <li class="tab-item">基本信息</li>
+	    <li class="placement"></li>
+	    <li class="tab-item">酒店设施</li>
+	    <li class="placement"></li>
+	    <li class="tab-item current">预订须知</li>
+	    <li class="placement"></li>
+	    <li class="tab-item">备注信息</li>
+	    <li class="placement"></li>
+	    <li class="rest"></li>
+	</ul>
+</div>
+
+
+<div>产品详情自定义日历：</div>
+
+<div class="custom-price-calendar-container coverBg" style="width:752px;margin:20px;">
+	<div class="wrap-cover-bg"></div>
+	<div class="common-tab-bar">
+		<div class="tab-top"></div>
+		<ul class="common-tab calendar-month-tab clearfix"></ul>
+	</div>
+	
+	<div class="calendarTables">
+		<ul class="week-day-title clearfix">
+			<li>日</li>
+			<li>一</li>
+			<li>二</li>
+			<li>三</li>
+			<li>四</li>
+			<li>五</li>
+			<li>六</li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		var data = [
+			{ month : "2015/05/01",   // 日期格式需要注意，不同浏览器下识别情况不同，写个通用的格式
+              info : [
+              	{dayDate: 1, leftNum: 10, price: 2000},
+              	{dayDate: 12, leftNum: 300, price: 20000},
+              	{dayDate: 23, leftNum: 0, price: 88888}
+              ]
+        	},
+        	{ month : "2015/06/01",   // 日期格式需要注意，不同浏览器下识别情况不同，写个通用的格式
+              info : []
+        	},
+        	{ month : "2015/07/01",   // 日期格式需要注意，不同浏览器下识别情况不同，写个通用的格式
+              info : []
+        	},
+        	{ month : "2015/08/01",   // 日期格式需要注意，不同浏览器下识别情况不同，写个通用的格式
+              info : []
+        	}
+        ];
+		setCalendar(data, ".calendarTables");
+
+		//  生成月份
+		$(".custom-price-calendar-container ul.common-tab").append(geneTabSwitchMonth(data));
+		//  设置月份样式
+		$(".common-tab").tabBar();
+	});
+
+	function setCalendar(data, ele) {
+        for (var i = 0; i < data.length; i++) {
+            var monthInfo = data[i];  // 获得当前月份的数据信息
+
+            var calStr = "<table class='calTable ct-" + data[i].month.split('/')[0] + "-" +
+                            data[i].month.split('/')[1] + "'><tr>";  // 拼接字符串生成表格日期内容
+
+            var curentMonthDate = new Date(monthInfo.month);
+            var nextMonthDate = new Date(curentMonthDate.getFullYear(), curentMonthDate.getMonth() + 1,
+                curentMonthDate.getDate());
+            var monthDays = (nextMonthDate - curentMonthDate)/(1000*60*60*24);  // 获得当前月天数
+
+            var firstWeekDay = curentMonthDate.getDay();  // 获得当前月1号是周几, 范围0-6
+            var lastWeekDay = nextMonthDate.getDay() - 1 < 0 ? 6 : nextMonthDate.getDay() - 1; 
+            // 计算当月最后一天是周几，填补日历最后的空格
+
+            var currentDay = 1;  // 从1号开始排列当月的日期
+
+            for (var j = 0; j < firstWeekDay; j++) {  // 当月1号之前td为空
+                calStr += "<td class='empty'></td>";
+            }
+
+            for (; currentDay <= monthDays; currentDay++) {
+
+                var w1 = firstWeekDay == 0 ? 7 : firstWeekDay;
+
+                if (currentDay % 7 == (7 - w1) && currentDay != monthDays) {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td></tr><tr>";
+                } else if (currentDay == monthDays) {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td>";
+                    for (var t = 0; t < 6 - lastWeekDay; t++) {
+                        calStr += "<td></td>";
+                    }
+                    calStr += "</tr></table>";
+                } else {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td>";
+                }
+            }
+            $(ele).append(calStr);
+        }
+    }
+
+    function getDayInfo(currentDay, monthInfo) {
+        for (var i = 0; i < monthInfo.info.length; i++) {
+            if (monthInfo.info[i].dayDate == currentDay) {
+                return monthInfo.info[i];
+            }
+        }
+        return null;
+    }
+
+    function geneTdContent(currentDay, monthInfo) {
+        var dayInfo = getDayInfo(currentDay, monthInfo);
+        var tdCont = "";
+
+        var d = currentDay < 10 ? '0' + currentDay : currentDay;
+        var dateStr = monthInfo.month.slice(0, 7) + "/" + d;
+        
+        if (!!dayInfo) {            
+
+            if (dayInfo.leftNum == 0) {
+                tdCont += "<div class='tdCont'><div class='priceCover soldout clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+                tdCont += "<div class='right-block'><div class='leftNum'>售完</div>";
+                tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+            } else {
+                tdCont += "<div class='tdCont'><div class='priceCover onsale clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+
+                tdCont += "<div class='right-block'><div class='leftNum'>余" + dayInfo.leftNum + "</div>";
+
+                tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+                
+            }
+        } else {
+            tdCont += "<div class='tdCont'><div class='priceCover noPrice'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + currentDay + "</div></div></div>";
+        }
+        return tdCont;
+    }
+
+    function geneTabSwitchMonth(data) {
+        var liStr = "";
+        for (var i = 0; i < data.length; i++) {
+            var temp = new Date(data[i].month);
+
+            liStr += "<li class='placement'></li>";
+            liStr += "<li name='" + data[i].month + "' class='tab-item'>" + temp.getFullYear() + "年" +
+                        (temp.getMonth() + 1) + "月</li>";
+        }
+        liStr += "<li class='placement'></li><li class='rest'></li>";
+        return liStr;
+    }
+
+
+</script>
+
+<script type="text/javascript">
+	$(function(){
+
+		$(".calendar-month-tab .tab-item").eq(0).addClass("current");
+		$(".common-tab").tabBar();
+		$(".custom-price-calendar-container .calTable").hide();
+		$(".custom-price-calendar-container .calTable").eq(0).show();
+
+		$(".calendar-month-tab").find("li.tab-item").each(function(index){
+			$(this).click(function(){
+				$(".custom-price-calendar-container .calTable").hide();
+				$(".custom-price-calendar-container .calTable").eq(index).show();
+			});
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$(function(){
+
+		var tripData = {
+			startDate: "2015/05/01",
+			dataList: [  //  根据数组长度 表示要显示的天数
+				{  // 第一天
+					flightInfos:[
+						{
+							fromCity: '上海',
+							toCity: '金边',
+							departureTime: '07:10',
+							arrivalTime: '12:15',
+							flightNo: 'K555'
+						},
+						{
+							fromCity: '金边',
+							toCity: '新罗',
+							departureTime: '14:12',
+							arrivalTime: '15:15',
+							flightNo: 'K666'
+						}
+					],
+					hotelInfo:{
+						hotelNameCn: '吴哥奇迹温泉度假酒店',
+						hotelNameEn: 'Angkor Miracle Resort & Spa',
+						rating: '5'
+					}
+				},
+				{   //  第二天
+					hotelInfo:{
+						hotelNameCn: '吴哥奇迹温泉度假酒店',
+						hotelNameEn: 'Angkor Miracle Resort & Spa',
+						rating: '5'
+					}
+				},
+				{	//  第三天
+					hotelInfo:{
+						hotelNameCn: '吴哥奇迹温泉度假酒店',
+						hotelNameEn: 'Angkor Miracle Resort & Spa',
+						rating: '5'
+					}
+				},
+				{	//  第四天
+					hotelInfo:{
+						hotelNameCn: '吴哥奇迹温泉度假酒店',
+						hotelNameEn: 'Angkor Miracle Resort & Spa',
+						rating: '5'
+					}
+				},
+				{	//  第五天
+					flightInfos:[
+						{
+							fromCity: '新罗',
+							toCity: '金边',
+							departureTime: '16:10',
+							arrivalTime: '17:15',
+							flightNo: 'K666'
+						},
+						{
+							fromCity: '金边',
+							toCity: '上海',
+							departureTime: '18:12',
+							arrivalTime: '19:15',
+							flightNo: 'K555'
+						}
+					]
+				}
+			]
+		};		
+
+		$(".priceCover").not(".noPrice").click(function(){
+			if (tripData.startDate == $(this).find(".dateDay").data("dayvalue")) {
+				$(this).parents(".custom-price-calendar-container").find(".wrap-cover-bg").show();
+
+				var data = tripData.dataList;
+				for (var i = 0; i < data.length; i++) {
+
+					var fi = data[i].flightInfos,
+						hi = data[i].hotelInfo;
+
+					if (!!fi) {  //  有航班信息
+
+					} else {   //  没有航班信息，则是自由活动
+
+					}
+
+					if (!!hi) {  //  有酒店信息
+
+					}
+				}
+			}
+			geneTripCover($(this), tripData);
+		});
+
+		$("body").delegate(".wrap-cover-bg", "click", function(event){
+			$(this).hide();
+			$(".calTable .tripCover").remove();
+			event.stopPropagation();
+		});
+	});
+
+	function geneTripCover($ele, tripData) {
+
+		//  找到需要重新覆盖的td元素
+		var isCoveredEleTd = [];
+		isCoveredEleTd.push($ele.parents("td"));
+
+		var curTdNextEleArr = $ele.parents("td").nextAll("td").not(".empty");
+
+		for (var i = 0; i < curTdNextEleArr.length; i++) {
+			isCoveredEleTd.push($(curTdNextEleArr[i]));
+		}
+
+		//  往下一行追加(暂时只考虑多一行且不跨月的情况)
+		if (curTdNextEleArr.length < (tripData.dataList.length - 1)) {  
+			var s_tr = parseInt((tripData.dataList.length - curTdNextEleArr.length - 1) / 7),
+				s_td = (tripData.dataList.length - curTdNextEleArr.length - 1) % 7;
+
+			var tdList = $ele.parents("tr").next("tr").find("td:lt("+s_td+")");
+			for (var i = 0; i < tdList.length; i++) {
+				isCoveredEleTd.push($(tdList[i]));
+			}
+		}
+
+		// ======================  isCoveredEleTd  填充完毕
+
+		var eleArr = []; //  生成覆盖元素节点  存放在该数组中（只有右侧部分，左侧复用原来priceCover的结构）
+
+		for (var i = 0; i < tripData.dataList.length; i++) {
+
+			var coverEleStr = "<div class='right-block'><div class='trip-day'>";
+
+			coverEleStr += parseNumToString(i+1) + "</div><div class='icon'>";
+			console.log((i+1) + "==" + parseNumToString(i+1));
+
+			var dayData = tripData.dataList[i],
+				fi = dayData.flightInfos,
+				hi = dayData.hotelInfo;
+
+			if (!!fi) {  //  有航班信息,显示飞机icon
+				coverEleStr += "<span class='flight-icon'></span>";
+			} 
+
+			if (!!hi) {  //  有酒店信息,显示酒店icon
+				coverEleStr += "<span class='hotel-icon'></span>";
+			}
+			coverEleStr += "</div></div>";
+			console.log(coverEleStr);
+
+			eleArr.push($(coverEleStr));
+		}
+
+		//  ====================  覆盖元素右侧部分  填充完毕
+
+		//  依次追加节点，填充覆盖
+		for (var i = 0; i < isCoveredEleTd.length; i++) {
+			var day = isCoveredEleTd[i].find(".dateDay").eq(0);
+			var day_value = isCoveredEleTd[i].find(".dateDay").eq(0).data("dayvalue");
+
+			isCoveredEleTd[i].find(".tdCont").append("<div class='tripCover clearfix'><div class='dateDay' data-dayvalue='" + day_value + "'>" + day.html() + "</div><div class='right-block'>" + eleArr[i].html() + "</div></div>");
+		}
+
+		$(".calTable .tripCover").click(function(){
+			
+		});
+	}
+
+	function parseNumToString(num) {
+		var result = "";
+		switch(num) {
+			case 1:
+				result = "第一天";
+				break;
+			case 2:
+				result = "第二天";
+				break;
+			case 3:
+				result = "第三天";
+				break;
+			case 4:
+				result = "第四天";
+				break;
+			case 5:
+				result = "第五天";
+				break;
+			case 6:
+				result = "第六天";
+				break;
+			case 7:
+				result = "第七天";
+				break;
+			case 8:
+				result = "第八天";
+				break;
+			case 9:
+				result = "第九天";
+				break;
+			case 10:
+				result = "第十天";
+				break;
+			case 11:
+				result = "第十一天";
+				break;
+			case 12:
+				result = "第十二天";
+				break;
+			case 13:
+				result = "第十三天";
+				break;
+			case 14:
+				result = "第十四天";
+				break;
+			case 15:
+				result = "第十五天";
+				break;
+		}
+		return result;
+	}
+
+</script>
+
+</body>
+</html>

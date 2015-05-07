@@ -79,7 +79,7 @@ $(function(){
             var endDate = $(this).datepicker("getDate");
             $(this).siblings('input.datepicker.startDate').datepicker("setEndDate", endDate);
         });
-    }
+    }  
 
 });
 
