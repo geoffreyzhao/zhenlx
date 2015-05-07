@@ -179,6 +179,10 @@
     padding-bottom: 40px;
     position: relative;
 }
+.journeyRecommendList > li{
+    opacity: 0.4;
+    filter:alpha(opacity=40);    
+}
 .journeyRecommendList .wrapperList{
     margin: 30px 0;
 }
@@ -220,6 +224,10 @@
     left: -40px;
     top: 4px;
     z-index: 2;
+}
+.journeyRecommendList li.active{
+    opacity: 1;
+    filter:alpha(opacity=100);
 }
 .journeyRecommendList li.active .leftDot{
     background-position: -196px -43px;

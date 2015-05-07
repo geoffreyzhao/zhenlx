@@ -488,7 +488,8 @@
             
             //滚动监听有蒙版效果
             $(window).scroll(function(){
-                $(".journeyRecommendList li").each(function(){
+                $(".journeyRecommendList").children("li").each(function(){
+                    console.log($(this).html());
                     showLi(this);
                 });
             });
@@ -506,25 +507,23 @@
                     prevEleTop = $(ele).prev("li").offset().top;
                     prevEleHeight = $(ele).prev("li").height();
                 }
-                if (scrollTop > prevEleTop + prevEleHeight  && scrollTop < top + eleHeight) {
+                if (scrollTop > prevEleTop && scrollTop < top) {
                     $(ele).addClass("active");
                     $(ele).siblings("li").removeClass("active");
                 }
             }
 
             //滚动监听有锚点效果
-            var flag = true;
+            /*var flag = true;
 
-            $(".asideFixed li").each(function(){
-                $(this).click(function(){
-                    flag = false;
-                    $(this).addClass("active");
-                    $(this).siblings("li").removeClass("active");
-                    setTimeout(function(){
-                        var top = $("body").scrollTop();
-                        $("body").scrollTop(top - 150);
-                    }, 1);
-                });
+            $(".asideFixed li").click(function(){
+                flag = false;
+                $(this).addClass("active");
+                $(this).siblings("li").removeClass("active");
+                setTimeout(function(){
+                    var top = $("body").scrollTop();
+                    $("body").scrollTop(top - 100);
+                }, 1);
             });
 
             var a_pos = [];
@@ -540,7 +539,7 @@
                     var currentPos = that.offset();
                     var i = 0;
                     for(i = a_pos.length - 1; i >=0 ; i--){
-                        if(currentPos.top >= a_pos[i].top-150){
+                        if(currentPos.top >= a_pos[i].top-100){
                             that.find("li").removeClass('active');
                             $("li:eq(" + (i) + ")" , that).addClass("active");
                             return false;
@@ -550,7 +549,7 @@
                     $("li:first" , that).addClass("active");
                 }
                 flag=true;
-            });
+            });*/
             
             
             
