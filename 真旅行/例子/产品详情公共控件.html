@@ -72,6 +72,42 @@
 	</div>
 </div>
 
+<div class="popover-trip-container">
+	<div class="top-block clearfix">
+		<div class="left-block">
+			<span class="day-icon"></span>
+		</div>
+		<div class="right-block">
+			<table class="flight-info">
+				<tbody>
+					<tr>
+						<td>上海→金边</td>
+						<td>07:30-12:15</td>
+						<td>K666</td>
+					</tr>
+					<tr>
+						<td>上海上海上海→金边金边金边</td>
+						<td>07:30-12:15</td>
+						<td>K666</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="bottom-block clearfix">
+		<div class="left-block">
+			<span class="night-icon"></span>
+		</div>
+		<div class="right-block clearfix">
+			<div class="hotel-name">
+				<div class="ch-name">吴哥奇迹温泉度假酒店</div>
+				<div class="en-name">Angkor Miracle Resort & Spa</div>
+			</div>
+			<div class="star-rating">五星</div>
+		</div>
+	</div>
+</div>
+
 <script type="text/javascript">
 	$(function(){
 		var data = [
@@ -131,7 +167,7 @@
                 } else if (currentDay == monthDays) {
                     calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td>";
                     for (var t = 0; t < 6 - lastWeekDay; t++) {
-                        calStr += "<td></td>";
+                        calStr += "<td class='empty'></td>";
                     }
                     calStr += "</tr></table>";
                 } else {
@@ -220,23 +256,23 @@
 				{  // 第一天
 					flightInfos:[
 						{
-							fromCity: '上海',
-							toCity: '金边',
+							fromCity: '上海上海上',
+							toCity: '金边金边金',
 							departureTime: '07:10',
 							arrivalTime: '12:15',
 							flightNo: 'K555'
 						},
 						{
-							fromCity: '金边',
-							toCity: '新罗',
+							fromCity: '金边金边金边',
+							toCity: '新罗新罗新罗',
 							departureTime: '14:12',
 							arrivalTime: '15:15',
 							flightNo: 'K666'
 						}
 					],
 					hotelInfo:{
-						hotelNameCn: '吴哥奇迹温泉度假酒店',
-						hotelNameEn: 'Angkor Miracle Resort & Spa',
+						hotelNameCn: '吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+						hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
 						rating: '5'
 					}
 				},
@@ -249,7 +285,7 @@
 				},
 				{	//  第三天
 					hotelInfo:{
-						hotelNameCn: '吴哥奇迹温泉度假酒店',
+						hotelNameCn: '吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
 						hotelNameEn: 'Angkor Miracle Resort & Spa',
 						rating: '5'
 					}
@@ -285,30 +321,14 @@
 		$(".priceCover").not(".noPrice").click(function(){
 			if (tripData.startDate == $(this).find(".dateDay").data("dayvalue")) {
 				$(this).parents(".custom-price-calendar-container").find(".wrap-cover-bg").show();
-
-				var data = tripData.dataList;
-				for (var i = 0; i < data.length; i++) {
-
-					var fi = data[i].flightInfos,
-						hi = data[i].hotelInfo;
-
-					if (!!fi) {  //  有航班信息
-
-					} else {   //  没有航班信息，则是自由活动
-
-					}
-
-					if (!!hi) {  //  有酒店信息
-
-					}
-				}
+				geneTripCover($(this), tripData);
 			}
-			geneTripCover($(this), tripData);
 		});
 
 		$("body").delegate(".wrap-cover-bg", "click", function(event){
 			$(this).hide();
 			$(".calTable .tripCover").remove();
+			$(".calTable .popover-trip-container").remove();
 			event.stopPropagation();
 		});
 	});
@@ -339,10 +359,14 @@
 		// ======================  isCoveredEleTd  填充完毕
 
 		var eleArr = []; //  生成覆盖元素节点  存放在该数组中（只有右侧部分，左侧复用原来priceCover的结构）
+		var popoverEleArr = [];   //  存放弹窗层结构
 
 		for (var i = 0; i < tripData.dataList.length; i++) {
 
 			var coverEleStr = "<div class='right-block'><div class='trip-day'>";
+			var popoverEleStr = "<div class='popover-trip-container'>"
+									+ "<div class='top-block clearfix'><div class='left-block'>"
+									+	"<span class='day-icon'></span></div><div class='right-block'>";
 
 			coverEleStr += parseNumToString(i+1) + "</div><div class='icon'>";
 			console.log((i+1) + "==" + parseNumToString(i+1));
@@ -351,17 +375,50 @@
 				fi = dayData.flightInfos,
 				hi = dayData.hotelInfo;
 
-			if (!!fi) {  //  有航班信息,显示飞机icon
+			if (!!fi) {  //  有航班信息,显示飞机icon，popover上显示航班信息
 				coverEleStr += "<span class='flight-icon'></span>";
-			} 
-
-			if (!!hi) {  //  有酒店信息,显示酒店icon
-				coverEleStr += "<span class='hotel-icon'></span>";
+				if (!!hi) {  //  有航程并且有酒店，如果没有酒店，则航程是晚上的返程,白天自由活动
+					popoverEleStr += "<table class='flight-info'><tbody><tr><td class='city'>"+fi[0].fromCity+"→"
+									+fi[0].toCity+"</td>"
+									+"<td>"+fi[0].departureTime+"-"+fi[0].arrivalTime+"</td>"
+									+"<td>"+fi[0].flightNo+"</td></tr>"
+									+"<tr><td class='city'>"+fi[1].fromCity+"→"
+									+fi[1].toCity+"</td>"
+									+"<td>"+fi[1].departureTime+"-"+fi[1].arrivalTime+"</td>"
+									+"<td>"+fi[1].flightNo+"</td></tr></tbody></table></div></div>";
+				} else {
+					popoverEleStr += "<div class='freetime'>自由活动</div></div></div>";
+					popoverEleStr += "<div class='bottom-block clearfix'>"
+								+"<div class='left-block'><span class='night-icon'></span></div>"
+								+"<div class='right-block clearfix'><table class='flight-info'>"
+								+"<tbody><tr><td class='city'>"+fi[0].fromCity+"→"
+								+fi[0].toCity+"</td>"
+								+"<td>"+fi[0].departureTime+"-"+fi[0].arrivalTime+"</td>"
+								+"<td>"+fi[0].flightNo+"</td></tr>"
+								+"<tr><td class='city'>"+fi[1].fromCity+"→"
+								+fi[1].toCity+"</td>"
+								+"<td>"+fi[1].departureTime+"-"+fi[1].arrivalTime+"</td>"
+								+"<td>"+fi[1].flightNo+"</td></tr></tbody></table></div></div>";
+				}
+			} else {  //  popover 上显示自由活动
+				popoverEleStr += "<div class='freetime'>自由活动</div></div></div>";
 			}
+
+			if (!!hi) {  //  有酒店信息,显示酒店icon，popover上显示酒店信息
+				coverEleStr += "<span class='hotel-icon'></span>";
+				popoverEleStr += "<div class='bottom-block clearfix'>"
+								+"<div class='left-block'><span class='night-icon'></span></div>"
+								+"<div class='right-block clearfix'><div class='hotel-name'>"
+								+"<div class='ch-name'>"+hi.hotelNameCn+"</div>"
+								+"<div class='en-name'>"+hi.hotelNameEn+"</div>"
+								+"</div><div class='star-rating'>"+hi.rating+"</div></div></div>";
+			} 
 			coverEleStr += "</div></div>";
+			popoverEleStr += "</div>";
 			console.log(coverEleStr);
 
 			eleArr.push($(coverEleStr));
+			popoverEleArr.push($(popoverEleStr));
 		}
 
 		//  ====================  覆盖元素右侧部分  填充完毕
@@ -372,10 +429,51 @@
 			var day_value = isCoveredEleTd[i].find(".dateDay").eq(0).data("dayvalue");
 
 			isCoveredEleTd[i].find(".tdCont").append("<div class='tripCover clearfix'><div class='dateDay' data-dayvalue='" + day_value + "'>" + day.html() + "</div><div class='right-block'>" + eleArr[i].html() + "</div></div>");
+
+			isCoveredEleTd[i].find(".tdCont").append("<div class='popover-trip-container'>" + popoverEleArr[i].html() + "</div>");
 		}
 
 		$(".calTable .tripCover").click(function(){
-			
+
+			$(this).closest(".calTable").find(".tripCover").removeClass("current");
+			$(this).addClass("current");
+
+			$(this).closest(".calTable").find(".popover-trip-container").hide();
+
+			var $popover = $(this).closest("td").find(".popover-trip-container"),
+				trIndex = $(this).closest("tr").index(),
+				tdIndex = $(this).closest("td").index();
+
+			var tdHeight = $(this).closest("td").outerHeight(),
+				popoverHeight = $(this).closest("td").find(".popover-trip-container").outerHeight();
+
+			if (trIndex == 0) { //  第一行向下显示
+				if (tdIndex <= 3) {  //  向右显示
+					$popover.css({
+						left: 0,
+						top: tdHeight + "px"
+					}).show();
+				} else {  //  向左显示
+					$popover.css({
+						right: 0,
+						top: tdHeight + "px"
+					}).show();
+				}	
+			} else {  //  其他向上显示
+				if (tdIndex <= 3) {  //  向右显示
+					$popover.css({
+						left: 0,
+						top: -popoverHeight-1 + "px"
+					}).show();
+				} else {  //  向左显示
+					$popover.css({
+						right: 0,
+						top: -popoverHeight-1 + "px"
+					}).show();
+				}	
+			}
+
+					
 		});
 	}
 
