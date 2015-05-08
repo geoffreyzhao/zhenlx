@@ -159,11 +159,15 @@
     position: relative;
 }
 .productFixedContent .fixedList{
-    width: 1130px;
-    margin: 25px 0 35px;
+    width: 1130px;    
     background-color: #f9f9f9;
     z-index: 3;
-} 
+    top: 0;
+}
+.fixedList-container {
+    height: 60px;
+    margin: 25px 0 35px;
+}
 .fixedList li{
     float: left;
 }
@@ -214,6 +218,10 @@
     margin-bottom: 80px;
     font-size: 15px;
     color: #616161;
+}
+.commonModel .anchor {
+    position: relative;
+    top: -75px;
 }
 .commonModel .commonTitle{
     font-size: 20px;
@@ -283,9 +291,15 @@
     position: relative;
 }
 .journeyRecommendModel .asideFixed{
-    position: absolute;
-    left: -75px;
-    top: 55px;
+    float: left;
+    margin-left: -75px;
+    top: 70px;
+}
+.affix {
+    position: fixed!important;
+}
+.journeyRecommendModel .journeyRecommendList {
+    float: right;
 }
 .asideFixed li a{
     display: inline-block;
@@ -317,6 +331,10 @@
 .journeyRecommendList > li{
     opacity: 0.4;
     filter:alpha(opacity=40);    
+}
+.journeyRecommendList > li .link {
+    position: relative;
+    top: -75px;
 }
 .journeyRecommendList .wrapperList{
     margin: 30px 0;

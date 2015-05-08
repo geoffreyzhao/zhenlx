@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../../js/base/html5.js"></script>
     <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#navbar" data-offset="475">
+<body data-spy="scroll" data-target="#navbar" data-offset="75">
 	<header>
 		<div class="head clearfix">
 			<div class="logo"></div>
@@ -79,7 +79,7 @@
         <section class="mainWrapper">
             <div style="height: 495px; background-color: #f9f9f9;">日历模块</div>
             <div class="productFixedContent">
-                <div id="navbar">
+                <div id="navbar" class="fixedList-container">
                     <ul class="nav fixedList clearfix">
                         <li class="active">
                             <a href="#airInfo">航班信息</a>
@@ -342,7 +342,7 @@
                 </div>
                 
                 <div class="commonModel">
-                    <div id="priceExplain"></div>
+                    <div id="priceExplain" class="anchor"></div>
                     <div class="commonTitle"><i class="commonIcon costIcon"></i>费用说明</div>
                     <ul class="wrapperList clearfix">
                         <li class="row twoRow">
@@ -379,10 +379,10 @@
                 </div>
                 
                 <div class="commonModel journeyRecommendModel">
-                    <div id="journeyRecommend"></div>
+                    <div id="journeyRecommend" class="anchor"></div>
                     <div class="commonTitle"><i class="commonIcon journeyIcon"></i>行程推荐</div>
-                    <div id="navbar">
-                        <ul class="nav asideFixed">
+                    <div class="clearfix">
+                        <ul class="asideFixed">
                             <li class="active">
                                 <a href="#overview">概览</a>
                             </li>
@@ -404,11 +404,10 @@
                             <li>
                                 <a href="#D6">D6</a>
                             </li>
-                        </ul>
-                    </div>
-                    <ul class="journeyRecommendList">
+                        </ul>                    
+                        <ul class="journeyRecommendList">
                         <li class="active">
-                            <div id="overview"></div>
+                            <div class="link" id="overview"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">目的地概览</h3>
@@ -428,7 +427,7 @@
                             </ul>
                         </li>
                         <li>
-                            <div id="D1"></div>
+                            <div class="link" id="D1"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第一天<em class="fontSize12">●</em>抵达暹粒</h3>
@@ -467,7 +466,7 @@
                             </ul>
                         </li>
                         <li>
-                            <div id="D2"></div>
+                            <div class="link" id="D2"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第二天<em class="fontSize12">●</em>微笑的高棉 （暹粒小圈游）</h3>
@@ -500,7 +499,7 @@
                             </ul>
                         </li>
                         <li>
-                            <div id="D3"></div>
+                            <div class="link" id="D3"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第三天<em class="fontSize12">●</em>微笑的高棉 </h3>
@@ -533,7 +532,7 @@
                             </ul>
                         </li>
                         <li>
-                            <div id="D4"></div>
+                            <div class="link" id="D4"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第四天<em class="fontSize12">●</em>夜晚的不眠</h3>
@@ -566,7 +565,7 @@
                             </ul>
                         </li>
                         <li>
-                            <div id="D5"></div>
+                            <div class="link" id="D5"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第五天<em class="fontSize12">●</em>愉快的玩耍</h3>
@@ -599,7 +598,7 @@
                             </ul>
                         </li>
                         <li class="last">
-                            <div id="D6"></div>
+                            <div class="link" id="D6"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="commonIcon lastDot"></span>
                             <span class="leftLine"></span>
@@ -616,11 +615,12 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="commonModel">
-                    <div id="bookingNote"></div>
+                    <div id="bookingNote" class="anchor"></div>
                     <div class="commonTitle"><i class="commonIcon bookingIcon"></i>预定须知</div>
                     <ul class="wrapperList clearfix noBlueBorder">
                         <li class="row oneRow">
@@ -660,7 +660,7 @@
                 </div>
                 
                 <div class="commonModel">
-                    <div id="userEvaluation"></div>
+                    <div id="userEvaluation" class="anchor"></div>
                     <div class="commonTitle">
                         <i class="commonIcon userEvaluationIcon"></i>用户评价
                         <label class="fonts14">( 共<span class="blueFonts">108</span>人点评 )</label>
@@ -774,17 +774,31 @@
     </script>
     
     <script>
-        $(function(){            
-            $(".fixedList").fixedBar();
-            $(".asideFixed").fixedBar({
-                offsetY: 60,
-                endAt:".journeyRecommendModel"
+        $(function(){  
+            $(".fixedList").affix({
+                offset: {
+                    top: function(){
+                        return this.top = $(".fixedList").offset().top;
+                    }
+                }
+            });
+
+            $(".asideFixed").affix({
+                offset: {
+                    top: $(".asideFixed").offset().top - 70,
+                    bottom: $("body").height() - $(".journeyRecommendModel").offset().top - 
+                                $(".journeyRecommendModel").outerHeight(true) + 80
+                }
             });
             
             //滚动监听有蒙版效果
             $(window).scroll(function(){
-                $(".journeyRecommendList").children("li").each(function(){
+                $(".journeyRecommendList").children("li").each(function(index){
                     showLi(this);
+                    if ($(this).hasClass("active")) {
+                        $(".asideFixed > li").removeClass("active");
+                        $(".asideFixed > li").eq(index).addClass("active");
+                    }
                 });
             });
 

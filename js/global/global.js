@@ -65,7 +65,7 @@
 	};
 
 
-	//  模块悬停，随着需求和使用产品逐步优化
+	//  模块悬停，随着需求和使用产品逐步优化(方法有bug，暂时废弃，换用bootstrap affix实现悬停效果)
 	// TODO:  添加悬停结束  endAt
 	$.fn.fixedBar = function(options) {
 
@@ -77,23 +77,25 @@
 
 		return this.each(function(){
 
-			var top = $(this).offset().top,
-				left = $(this).offset().left,
-				marginTop = $(this).css("margin-top"),
-				$that = $(this);
+			var	$that = $(this);
 
-			var originPos = $that.css("position"),
+			var top = $that.offset().top,
+				left = $that.offset().left,
+				marginTop = $that.css("margin-top")
+				marginLeft = $that.css("margin-left");
+
+			var originPos = $that.css("position"),   //  只针对有定位的元素，relative,absolute
 				originTop = $that.css("top"),
 				originLeft = $that.css("left");
 
 			var end = $(opts.endAt).outerHeight() + $(opts.endAt).offset().top - $that.outerHeight();
 
 			$(window).scroll(function(event) {
-				if ($(window).scrollTop() >= top && $(window).scrollTop() <= (end+6)) {
+				if ($(window).scrollTop() >= (top-opts.offsetY) && $(window).scrollTop() <= (end-opts.offsetY+6)) {
 					$that.css({
 						position: "fixed",
 						top: (0 - parseInt(marginTop) + opts.offsetY) + "px",
-						left: left + "px"
+						left: (left - parseInt(marginLeft) + opts.offsetX) + "px"
 					});
 				} else {
 					stopFix($that);
