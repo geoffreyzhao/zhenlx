@@ -556,7 +556,6 @@
 .commonStarLevelIcon.starLevel-6-5 span{
     width: 132px;
 }
-
 .commonModel .airInfoIcon{
     width: 25px;
     height: 24px;
@@ -799,3 +798,153 @@ ul.common-tab > li.rest {
 /*  tab 切换样式 E */
 
 /*   产品详情 E   */
+
+/*   产品列表  start   */
+.product-container{
+    background-color: #2b8a82;
+}
+.product-wrapper{
+    width: 1130px;
+    margin: 0 auto;
+    min-height: 562px;
+    position: relative;
+    left: 0px;
+    top:0px;
+}
+.product-row{
+    width: 1130px;
+    margin: 0 auto;
+    padding:30px 0px;
+    min-height: 160px;
+}
+.product-clomu {
+    width: 360px;
+    float: left;
+}
+.product-clomu p{
+    padding:10px 0px;
+    font:bold 15px/25px arial, sans-serif;
+    color:#fff;
+}
+.product-clomu-txt{
+    font:13px/18px arial, sans-serif;
+    padding-right:35px;
+    color:#8efff5;
+}
+.product-clomu-space{
+    margin-left:25px;
+}
+.product-one-text{
+    position:absolute;
+    color:#ffffff;
+    left:210px;
+    top:150px;
+}
+.product-one-text p{
+    font:bold 35px/40px "Microsoft Yahei";
+}
+.product-list-flag{
+    position: absolute;
+    left:850px;
+    top:100px;
+}
+.product-one-txt{
+    font:33px/40px "Microsoft Yahei";
+    font-weight: 300;
+}
+.product-num{
+    font:bold 40px/40px "Microsoft Yahei";
+}
+.product-up{
+    position:relative;
+    top:-18px;
+    left:5px;
+    font:20px/20px "Microsoft Yahei";
+}
+.product-clomu ul{
+    list-style: none;
+}
+.product-clomu ul li{
+    float:left;
+    min-width: 100px;
+    margin-bottom:10px;
+}
+.product-clomu ul li a{
+    font:13px/18px arial,sans-serif;
+    color:#8efff5;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #47b9a9;
+    text-decoration: none;
+}
+.product-clomu ul li a:hover{
+    text-decoration: none;
+    color:#ffffff;
+}
+.pro-list-box{
+    width:100%;
+}
+.product-aboutus{
+
+}
+.pro-list-img{
+    width:1130px;
+    height:425px;
+}
+.pro-list-white{
+    padding:30px 100px;
+    min-height:250px;
+    background-color: #ffffff;
+}
+.list-white-title{
+    font:18px/20px "Microsoft Yahei";
+    color:#bdbdbd;
+}
+.confirm-flag{
+   padding-top:40px;
+    padding-bottom: 98px;
+}
+.list-white-cnt{
+    padding:20px 0px;
+}
+.list-white-cnt ul{
+    list-style: none;
+}
+.list-white-cnt ul li{
+    width:200px;
+    float:left;
+    margin:10px 0px;
+    margin-right:15px;
+}
+.locFlag{
+    width:34px;
+    float:left;
+    margin-right:3px;
+    padding:5px 0px;
+}
+.locTxt{
+    width:160px;
+    float:right;
+    font:14px/25px "Microsoft Yahei";
+    color:#494949;
+}
+.product-container .foot {
+    width: 1130px;
+    margin: 0 auto;
+    border-top: 1px solid #47b9a9;
+    padding: 22px 0;
+    color: #8efff5;
+    font-size: 12px;
+}
+.btn-space{
+    margin:5px 0px;
+    padding:5px 8px;
+}
+
+.product-container .foot .service-tel {
+    float: right;
+}
+
+.product-container .foot .service-tel .telnum {
+    font-size: 15px;
+}
+/*   产品列表  end   */
