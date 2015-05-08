@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/*   产品详情 S   */
-
 /* foot S*/
 .foot{
     background-color: #2b8a82;
@@ -13,6 +11,141 @@
     margin: 0 auto;
 }
 /* foot E*/
+
+/*   产品详情 S   */
+.productDetailModel{
+    margin-bottom: 70px;
+    position: relative;
+}
+.productDetailBanner img{
+    display: inherit;
+    width: 1420px;
+    height: 634px;
+    margin: 0 auto;
+}
+.productDetailModel .themeContent{    
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-left: 370px;
+}
+.productDetailModel .themeContent img{
+    width: 175px;
+    height: 145px;
+}
+.productDetailModel .bannerSynopsisFonts{
+    font-family: "细黑";
+    color: #fff;
+    width: 370px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+}
+.bannerSynopsisFonts .synopsisFonts{
+    font-size: 50px;
+    line-height: 60px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.bannerSynopsisFonts .timePlaceFonts{
+    font-size: 40px;
+}
+.bannerSynopsisFonts .timePlaceFonts .dotFonts{
+    font-size: 12px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+.bannerSynopsisFonts .priceFontsContent{
+    position: relative;
+    text-align: center;
+}
+.priceFontsContent .fontsLeftLine,
+.priceFontsContent .fontsRightLine{
+    display: inline-block;
+    vertical-align: top;
+    height: 1px;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    top: 50%;
+}
+.priceFontsContent .fontsLeftLine{
+    width: 23%;
+    left: 0;    
+}
+.priceFontsContent .fontsRightLine{
+    width: 23%;
+    right: 0;
+}
+.priceFontsContent .priceFonts{
+    display: inline-block;
+    font-size: 70px;
+    vertical-align: top;
+}
+.priceFontsContent .riseFonts{
+    display: inline-block;
+    font-size: 28px;
+    vertical-align: top;
+    margin-top: 20px;
+}
+.productDetailModel .bannerBottomList{
+    width: 1150px;
+    height: 97px;
+    position: absolute;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -575px;
+}
+.bannerBottomList .leftIcon,
+.bannerBottomList .rightIcon{
+    display: inline-block;
+    width: 55px;
+    height: 97px;
+    background: url("../../images/client/productInfoIcon.png") no-repeat;
+    vertical-align: top;
+}
+.bannerBottomList .leftIcon{
+    background-position: 0 -107px;
+}
+.bannerBottomList .rightIcon{
+    background-position: -61px -107px;
+}
+.bannerBottomList .middleListContent{
+    display: inline-block;
+    width: 1030px;
+    height: 97px;
+    margin: 0 -5px;
+    background-color: #585481;
+}
+.bannerBottomList .bannerBottomHint{
+    font-size: 14px;
+    margin: 20px 0 0;
+    color: #fff;
+}
+.bannerBottomHint li{
+    display: inline-block;
+    float: left;
+    width: 255px;
+    padding: 10px;
+    border-left: 1px solid #79769a;
+}
+.bannerBottomHint li:first-child{
+    padding-left: 0;
+    border-left: none;
+}
+.bannerBottomHint .leftHintIcon{
+    display: inline-block;
+    width: 33px;
+    height: 37px;
+    background: url("../../images/client/productInfoIcon.png") no-repeat 0 0;
+    vertical-align: middle;
+    margin-right: 10px;
+    float: left;
+}
+.bannerBottomHint .hintContent{
+    float: left;
+    width: 190px;
+}
 
 .mainContent{
     background-color: #fff;
@@ -423,5 +556,246 @@
 .commonStarLevelIcon.starLevel-6-5 span{
     width: 132px;
 }
+
+.commonModel .airInfoIcon{
+    width: 25px;
+    height: 24px;
+    background-position: -220px 0;
+}
+.commonModel .airInfoList{
+    margin: 8px 0;
+    position: relative;
+    border-bottom: 1px solid #dcf5f4;
+}
+.commonModel .airInfoList li{
+    display: inline-block;
+    padding: 20px 0;
+}
+.airInfoList .dashedLine{
+    display: inline-block;
+    width: 1px;
+    height: 93%;
+    border-left: 1px dashed #c3eded;
+    position: absolute;
+    top: 0;
+}
+.airInfoList .dashedLine.firstLine{
+    left: 165px;
+}
+.airInfoList .dashedLine.secondLine{
+    left: 775px;
+}
+.airInfoList li.leftGoBack{
+    width: 160px;
+    text-align: center;
+    line-height: 25px;
+}
+.airInfoList .lightBlue18Fonts{
+    font-size: 18px;
+    color: #11b9b7;
+    margin-bottom: 7px;
+}
+.leftGoBack .goBackCommonStyle{
+    display: inline-block;
+    font-size: 13px;
+    min-width: 50px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.leftGoBack .goBackCommonStyle.greenBg{
+    background-color: #0fd730;
+}
+.leftGoBack .goBackCommonStyle.blueBg{
+    background-color: #11b9b7;
+}
+.airInfoList li.timePlaceAirport{
+    width: 580px;
+    margin: 0 30px;
+}
+.timePlaceAirport .timePlaceInfo{
+    display: inline-block;
+    width: 255px;
+    text-align: center;
+    margin-right: 30px;
+}
+.timePlaceAirport .timePlaceFonts{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.timePlaceFonts .placeFonts{
+    color: #11b9b7;
+}
+.timePlaceFonts .timeFonts{
+    color: #484848;
+}
+.timePlaceAirport .airportFonts{
+    font-size: 16px;
+    color: #9f9f9f;
+}
+.timePlaceAirport .flyToIcon{
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background: url("../../images/client/productInfoIcon.png") no-repeat -248px 0;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+}
+.airInfoList .shippingSpaceInfo{
+    width: 310px;
+    text-align: center;
+}
+.airLogo .verticalAlignMiddle{
+    vertical-align: middle;
+}
+.commonTitle.noBorder{
+    border: none;
+} 
+.commonModel .hotelInfoModel{
+    margin-bottom: 30px;
+}
+.hotelInfoModel .leftHotelImg{
+    float: left;
+    width: 760px;
+}
+.leftHotelImg .hotelTittle{
+    font-size: 20px;
+    color: #616161;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-top: 1px solid #dcf5f4;
+}
+.leftHotelImg .hotelBigImg img{
+    width: 758px;
+    height: 474px;
+}
+.leftHotelImg .hotelSmallImg{
+    margin-top: 15px;
+}
+.leftHotelImg .hotelSmallImg li{
+    float: left;
+    width: 138px;
+    margin-left: 17px;
+}
+.leftHotelImg .hotelSmallImg li:first-child{
+    margin-left: 0;
+}
+.hotelSmallImg li img{
+    width: 138px;
+    height: 86px;
+    opacity: 0.4;
+    filter:alpha(opacity=40);
+}
+.hotelSmallImg li.active img{
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+.hotelInfoModel .rightHotelTabs{
+    float: right;
+    width: 360px;
+}
+.rightHotelTabs .listInfo{
+    height: 575px;
+    padding: 10px 15px;
+    overflow: auto;
+    background-color: #f9f9f9;
+}
+.commonModel .blueFonts14{
+    font-size: 14px;
+    color: #11b9b7;
+    margin: 0 5px;
+}
+.listInfo .hotelTabList{
+    margin: 3px 5px;
+    border-bottom: 1px solid #d4efee;
+}
+.listInfo .hotelTabList th{
+    color: #ababab;
+    padding: 5px 2px 5px 0;
+    text-align: left;
+}
+.listInfo .hotelTabList td{
+    color: #616161;
+}
+.listInfo .hotelTabList .last td,
+.listInfo .hotelTabList .last th{
+    padding-top: 7px;
+    padding-bottom: 12px;
+}
+.listInfo .hotelTabList .verticalAlignTop{
+    vertical-align: top;
+    padding-top: 0;
+}
+.listInfo .fontsModelDetail{
+    margin: 10px 0;
+}
+.listInfo .fontsModelDetail .titleFonts{
+    font-size: 14px;
+    color: #11b9b7;
+    margin: 10px 0 5px;
+}
+.fontsModelDetail .fontsModelList{
+    font-size: 14px;
+    line-height: 23px;
+}
+
+/*  tab 切换样式 S */
+.common-tab-bar {
+}
+.common-tab-bar .tab-top {
+    width: 100%;
+    height: 15px;
+    background-color: #11b9b7;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    top: 5px;
+}
+ul.common-tab {
+    color: #fff;
+    font-size: 14px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0;
+    position: relative;
+}
+ul.common-tab > li {
+    float: left;
+    padding: 15px 23px;
+    background-color: #11b9b7;
+}
+ul.common-tab > li:hover {
+    cursor: pointer;
+}
+ul.common-tab > li.current {
+    background-color: #f9f9f9;
+    color: #11b9b7;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+}
+ul.common-tab > li.placement {
+    height: 50px;
+    width: 9px;
+    padding: 0;
+}
+ul.common-tab > li.placement.left-active {
+    border-bottom-right-radius: 5px;
+}
+ul.common-tab > li.placement.right-active {
+    border-bottom-left-radius: 5px;
+}
+ul.common-tab > li.rest {
+    cursor: default;
+    padding: 0;
+}
+/*  tab 切换样式 E */
 
 /*   产品详情 E   */
