@@ -53,6 +53,15 @@
 <div>产品详情自定义日历：</div>
 
 <div class="custom-price-calendar-container coverBg" style="width:752px;margin:20px;">
+	<ul class="week-day-title top clearfix">
+		<li>日</li>
+		<li>一</li>
+		<li>二</li>
+		<li>三</li>
+		<li>四</li>
+		<li>五</li>
+		<li>六</li>
+	</ul>
 	<div class="wrap-cover-bg"></div>
 	<div class="common-tab-bar">
 		<div class="tab-top"></div>
@@ -117,7 +126,9 @@
               	{dayDate: 3, leftNum: 22, price: 998},
               	{dayDate: 9, leftNum: 0, price: 20000},
               	{dayDate: 22, leftNum: 10, price: 20000},
-              	{dayDate: 23, leftNum: 0, price: 88888}
+              	{dayDate: 23, leftNum: 0, price: 88888},
+              	{dayDate: 26, leftNum: 12, price: 1999},
+              	{dayDate: 31, leftNum: 22, price: 2499}
               ]
         	},
         	{ month : "2015/06/01",   // 日期格式需要注意，不同浏览器下识别情况不同，写个通用的格式
@@ -157,7 +168,7 @@
             var currentDay = 1;  // 从1号开始排列当月的日期
 
             for (var j = 0; j < firstWeekDay; j++) {  // 当月1号之前td为空
-                calStr += "<td class='empty'></td>";
+                calStr += "<td class='empty'><div class='tdCont'></div></td>";
             }
 
             for (; currentDay <= monthDays; currentDay++) {
@@ -169,7 +180,7 @@
                 } else if (currentDay == monthDays) {
                     calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td>";
                     for (var t = 0; t < 6 - lastWeekDay; t++) {
-                        calStr += "<td class='empty'></td>";
+                        calStr += "<td class='empty'><div class='tdCont'></div></td>";
                     }
                     calStr += "</tr></table>";
                 } else {
@@ -244,10 +255,9 @@
 			$(this).click(function(){
 				$(".custom-price-calendar-container .calTable").hide();
 				$(".custom-price-calendar-container .calTable").eq(index).show();
-				$(".wrap-cover-bg").css("height", $(".calendarTables").outerHeight() + "px");
 				
 				if (!$(".custom-price-calendar-container .calTable").eq(index).find(".tripCover").length > 0) {
-					$(".wrap-cover-bg").hide();			
+					$(".wrap-cover-bg").hide();		
 				} else {
 					$(".wrap-cover-bg").show();			
 				}
@@ -496,7 +506,7 @@
 			]
 		},
 		{
-			startDate: "2015/07/31",
+			startDate: "2015/05/31",
 			dataList: [  //  根据数组长度 表示要显示的天数
 				{  // 第一天
 					flightInfos:[
@@ -604,25 +614,15 @@
 			var $thisTd = $(this).closest("td"),
 				$thisTable = $(this).closest('table'),
 				tdIndex = $thisTable.find("td").index($thisTd),
-				restValidTdNum = $thisTable.find("td:gt("+tdIndex+")").not(".empty").length,
-				otherMonth = false;
+				restValidTdNum = $thisTable.find("td:gt("+tdIndex+")").not(".empty").length;
 
 			for (var td = 0; td < tripDataList.length; td++) {
 				var tripData = tripDataList[td];
 
-				//  跨月情况，数据进入下月渲染 (TODO)
-				if (tripData.dataList.length > restValidTdNum + 1) {
-					console.log('跨月情况');
-					otherMonth = true;
-					//  下月需要的天数
-					var leftDays = tripDataList[td].dataList.length - (restValidTdNum + 1);
-					//  从下个月第一个非empty的td元素开始渲染
-					var $nextMonthValidTd = $(this).closest("table").next("table").find("td").not("empty").eq(0);
-
-				}
-
 				if (tripData.startDate == $(this).find(".dateDay").data("dayvalue")) {
-					$(this).closest(".custom-price-calendar-container").find(".wrap-cover-bg").show();
+					$(".wrap-cover-bg").show();
+					$(".week-day-title.top").show();
+
 					geneTripCover($(this), tripData);
 				}
 			}
@@ -630,8 +630,10 @@
 
 		$("body").delegate(".wrap-cover-bg", "click", function(event){
 			$(this).hide();
+			$(".week-day-title.top").hide();
 			$(".calTable .tripCover").remove();
 			$(".calTable .popover-trip-container").remove();
+			$(".calTable tr.append").remove();
 			event.stopPropagation();
 		});
 	});
@@ -642,7 +644,8 @@
 		var isCoveredEleTd = [];
 		isCoveredEleTd.push($ele.closest("td"));
 
-		var curTdNextEleArr = $ele.closest("td").nextAll("td").not(".empty");		
+		var curTdNextEleArr = $ele.closest("td").nextAll("td");
+		// .not(".empty");		
 
 		//  往下一行追加(暂时只考虑不跨月的情况)
 		if (curTdNextEleArr.length < (tripData.dataList.length - 1)) {  
@@ -656,14 +659,21 @@
 
 			for (var i = s_tr; i >= 0; i--) {
 
+				if ($tr.next("tr").length == 0) {  //  跨月情况，表格需要追加行数
+					$ele.closest('tbody').append("<tr class='append'><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td></tr>");
+				}
+
 				$tr = $tr.next("tr");
+
 				var tdList;
 
 				if (i == 0) {
-					tdList = $tr.find("td:lt("+s_td+")").not(".empty");
+					tdList = $tr.find("td:lt("+s_td+")");
+					// .not(".empty");
 					
 				} else {
-					tdList = $tr.find("td").not(".empty");
+					tdList = $tr.find("td");
+					// .not(".empty");
 				}
 				isCoveredEleTd = _.union(isCoveredEleTd, _.map(tdList, function(value){ return $(value); }));
 			}
@@ -739,11 +749,16 @@
 		//  ====================  覆盖元素右侧部分  填充完毕
 
 		//  依次追加节点，填充覆盖
+		var overDayCount = 0;  //  记录跨月的天数
 		for (var i = 0; i < isCoveredEleTd.length; i++) {
 			var day = isCoveredEleTd[i].find(".dateDay").eq(0);
 			var day_value = isCoveredEleTd[i].find(".dateDay").eq(0).data("dayvalue");
 
-			isCoveredEleTd[i].find(".tdCont").append("<div class='tripCover clearfix'><div class='dateDay' data-dayvalue='" + day_value + "'>" + day.html() + "</div><div class='right-block'>" + eleArr[i].html() + "</div></div>");
+			if (!day.html() && overDayCount == 0) {
+				overDayCount = isCoveredEleTd.length - i + 1;
+			}
+
+			isCoveredEleTd[i].find(".tdCont").append("<div class='tripCover clearfix'><div class='dateDay' data-dayvalue='" + day_value + "'>" + (day.html() || overDayCount + i - isCoveredEleTd.length) + "</div><div class='right-block'>" + eleArr[i].html() + "</div></div>");
 
 			isCoveredEleTd[i].find(".tdCont").append("<div class='popover-trip-container'>" + popoverEleArr[i].html() + "</div>");
 		}
@@ -762,7 +777,7 @@
 			var tdHeight = $(this).closest("td").outerHeight(),
 				popoverHeight = $(this).closest("td").find(".popover-trip-container").outerHeight();
 
-			if (trIndex <= 1) { //  第一行向下显示
+			if (trIndex <= 0) { //  第一行向下显示
 				if (tdIndex <= 3) {  //  向右显示
 					$popover.css({
 						left: 0,
