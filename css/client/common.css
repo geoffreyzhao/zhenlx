@@ -387,7 +387,7 @@ input[type="text"].verifyBox:focus{
 }
 .dropdown .dropdown-menu{
     width: 100%;
-    min-width: 100px;
+    min-width: 0;
     border-top: none;
     margin: 0;
     padding: 0;

@@ -47,6 +47,7 @@
     border-bottom: 1px solid #fff;
     padding-bottom: 15px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 .bannerSynopsisFonts .timePlaceFonts{
     font-size: 40px;
@@ -193,9 +194,13 @@
     color: #fff;
     background-color: #11b9b7;
 }
+.productFixedContent .fixedList.affix li.last {
+    display: inline-block;
+}
 .fixedList li.last{
     float: right;
     line-height: 1;
+    display: none;
 }
 .fixedList .last .bookBtn{
     width: 160px;
@@ -718,7 +723,11 @@
     float: right;
     width: 360px;
 }
-.rightHotelTabs .listInfo{
+.rightHotelTabs .tab-cont {
+    background-color: #f9f9f9;
+}
+.rightHotelTabs .listInfo,
+.rightHotelTabs .tab-cont {
     height: 575px;
     padding: 10px 15px;
     overflow: auto;
@@ -761,6 +770,34 @@
 .fontsModelDetail .fontsModelList{
     font-size: 14px;
     line-height: 23px;
+}
+.rightHotelTabs .hotel-facilities .titleFonts {
+    font-size: 14px;
+    margin: 0;
+    padding: 20px 0 15px;
+}
+
+.rightHotelTabs .tab-cont pre {
+    background-color: #f9f9f9;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.hotel-notes .hotelTabList{
+    margin: 3px 5px;
+}
+.hotel-notes .hotelTabList th{
+    color: #ababab;
+    padding: 8px 2px 8px 0;
+    text-align: left;
+}
+.hotel-notes .hotelTabList td{
+    color: #616161;
+    padding: 8px 2px 8px 0;
+}
+.hotel-notes .hotelTabList .verticalAlignTop{
+    vertical-align: top;
+    padding-top: 0;
 }
 
 /*  tab 切换样式 S */
@@ -814,6 +851,481 @@ ul.common-tab > li.rest {
     padding: 0;
 }
 /*  tab 切换样式 E */
+
+.price-order-block {
+    margin: 105px 0 40px 0;
+}
+
+.left-price-info {
+    float: left;
+}
+
+.left-price-info ul.common-tab > li.current {
+    background-color: #fbfbfb;
+}
+
+.right-order-info {
+    float: right;
+    width: 355px;
+    background-color: #f9f9f9;
+    padding: 18px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.custom-price-calendar-container {
+    position: relative;
+}
+
+.custom-price-calendar-container .wrap-cover-bg {
+    background: url(../../images/client/calendar-cover-bg.png) repeat-y center;
+    width: 100%;
+    height: 99%;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.calendarTables {
+    background-color: #fbfbfb;
+    color: #999;
+    font-size: 15px;
+    border: 2px solid #11b9b7;
+    border-top: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.week-day-title {
+    margin: 0;
+}
+
+.week-day-title li {
+    float: left;
+    height: 38px;
+    line-height: 38px;
+    width: 106px;
+    background-color: #fbfbfb;
+    color: #999;
+    text-align: center;
+}
+
+.week-day-title.top {
+    background-color: #11b9b7;
+    padding: 0 2px;
+    border-radius: 4px;
+    position: absolute;
+    top: -42px;
+    width: 100%;
+    display: none;
+}
+
+.week-day-title.top li {
+    color: #fff;
+    background-color: #11b9b7;
+    height: 48px;
+    line-height: 48px;
+}
+
+.calTable {
+}
+
+.calTable td {
+    border-right: 1px solid #cceeed;
+    border-bottom: 1px solid #cceeed;
+}
+
+.calTable tr:first-child td {
+    border-top: 1px solid #cceeed;
+}
+
+.calTable tr:last-child td {
+    border-bottom: none;
+}
+
+.calTable td:last-child {
+    border-right: none;
+}
+
+.calTable .tdCont {
+    width: 106px;
+    height: 75px;
+    position: relative;
+}
+
+.calTable .tdCont .priceCover {
+    position: relative;
+    padding: 10px 8px 0 10px;
+    height: 100%;
+}
+
+.calTable .tdCont .priceCover .dateDay {
+    float: left;
+}
+
+.calTable .tdCont .priceCover .right-block {
+    float: right;
+    text-align: right;
+}
+
+.calTable .tdCont .onsale .leftNum {
+    color: #e46c14;
+    line-height: 20px;
+}
+
+.calTable .tdCont .onsale .price {
+    color: #e46c14;
+    line-height: 20px;
+}
+
+.calTable .tdCont .soldout .leftNum {
+    color: #cacaca;
+    line-height: 20px;
+}
+
+.calTable .tdCont .soldout .price {
+    color: #cacaca;
+    line-height: 20px;
+}
+
+.calTable .tdCont .onsale:hover,
+.calTable .tdCont .soldout:hover {
+    cursor: pointer;
+}
+
+.calTable .tdCont .tripCover {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 99.5%;
+    height: 100%;
+    z-index: 2;
+    background-color: #c8fdfd;
+    color: #11b9b7;
+    border-radius: 4px;
+    padding: 10px 8px 0 10px;
+}
+
+.calTable .tdCont .tripCover:hover {
+    cursor: pointer;
+}
+
+.calTable .tdCont .tripCover.current {
+    background-color: #fff;
+}
+
+.calTable .tdCont .tripCover .dateDay {
+    float: left;
+}
+
+.calTable .tdCont .tripCover .right-block {
+    float: right;
+    text-align: right;
+}
+
+.calTable .tdCont .tripCover .right-block .icon {
+    margin-top: 17px;
+}
+
+.calTable .tdCont .tripCover .right-block .flight-icon {
+    background: url(../../images/client/trip-icon.png) no-repeat 0 0;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.calTable .tdCont .tripCover .right-block .hotel-icon {
+    background: url(../../images/client/trip-icon.png) no-repeat 0 -20px;
+    width: 21px;
+    height: 17px;
+    display: inline-block;
+}
+
+.popover-trip-container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 7px;
+    color: #616161;
+    font-size: 12px;
+    position: absolute;
+    z-index: 3;
+    width: 335px;
+    display: none;
+}
+
+.popover-trip-container .top-block {
+    border-bottom: 1px solid #cff1f1;
+}
+
+.popover-trip-container .top-block .left-block,
+.popover-trip-container .top-block .right-block {
+    padding-top: 3px;
+}
+
+.popover-trip-container .bottom-block .left-block,
+.popover-trip-container .bottom-block .right-block {
+    padding-top: 5px;
+}
+
+.popover-trip-container .left-block {
+    float: left;
+    width: 32px;
+    text-align: center;
+}
+
+.popover-trip-container .right-block {
+    float: left;
+    border-left: 1px solid #cff1f1;
+    padding-left: 10px;
+    min-height: 65px;
+}
+
+.popover-trip-container .day-icon {
+    background: url(../../images/client/day-night-icon.png) no-repeat 0 0;
+    width: 19px;
+    height: 20px;
+    display: inline-block;
+}
+
+.popover-trip-container .night-icon {
+    background: url(../../images/client/day-night-icon.png) no-repeat 0 -22px;
+    width: 13px;
+    height: 14px;
+    display: inline-block;
+}
+
+.popover-trip-container .flight-info td {
+    padding: 3px 0 3px 15px;
+    border: none!important;
+}
+
+.popover-trip-container .flight-info td:first-child {
+    padding-left: 0;
+    color: #11b9b7;
+    width: 132px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.popover-trip-container .flight-info td:last-child {
+    color: #11b9b7;
+}
+
+.popover-trip-container .flight-info .city {
+    width: 145px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.popover-trip-container .right-block .freetime {
+    left: 45%;
+    display: inline-block;
+    position: absolute;
+    top: 24px;
+    font-size: 14px;
+}
+
+.popover-trip-container .hotel-name {
+    line-height: 18px;  
+}
+
+.popover-trip-container .hotel-name .ch-name,
+.popover-trip-container .hotel-name .en-name {
+    width: 242px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.popover-trip-container .star-rating {
+}
+
+.tag-block {
+    border-bottom: 1px solid #d4efee;
+    padding-bottom: 12px;
+}
+
+.tag-icon {
+    display: inline-block;
+    background: url(../../images/client/productInfoIcon.png) no-repeat -40px 0;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.trip-tag {
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 8px;
+    border-radius: 3px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.tag-bg-1 {
+    background-color: #44bcda;
+}
+
+.tag-bg-2 {
+    background-color: #df7eb0;
+}
+
+.tag-bg-3 {
+    background-color: #ea9e26;
+}
+
+.tag-bg-4 {
+    background-color: #11b9b7;
+}
+
+.date-icon {
+    display: inline-block;
+    background: url(../../images/client/productInfoIcon.png) no-repeat -67px 0;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+}
+
+.departure-icon {
+    display: inline-block;
+    background: url(../../images/client/productInfoIcon.png) no-repeat -93px 0;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+}
+
+.destination-icon {
+    display: inline-block;
+    background: url(../../images/client/productInfoIcon.png) no-repeat -118px 0;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+}
+
+.person-icon {
+    display: inline-block;
+    background: url(../../images/client/productInfoIcon.png) no-repeat -144px 0;
+    width: 19px;
+    height: 22px;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+.trip-info-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #d4efee;
+}
+
+.trip-info-table th,
+.trip-info-table td {
+    padding: 9px 0;
+}
+
+.trip-info-table th {
+    color: #ababab;
+    padding-left: 10px;
+}
+
+.trip-info-table tr:last-child th,
+.trip-info-table tr:last-child td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.trip-info-table td:last-child {
+    padding-left: 6px;
+}
+
+.buy-icon {
+    display: inline-block;
+    background: url(../../images/client/productInfoIcon.png) no-repeat -169px 0;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-right: 6px;
+}
+
+.share-icon {
+    display: inline-block;
+    background: url(../../images/client/productInfoIcon.png) no-repeat -195px 0;
+    width: 19px;
+    height: 23px;
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-right: 6px;
+}
+
+.order-block {
+   
+}
+
+.order-block .title {
+    color: #ababab;
+}
+
+.cur-price .price-text {
+    font-size: 48px;
+    color: #e46c14;
+}
+
+.cur-price .price-text em {
+    font-size: 14px;
+}
+
+.cur-price .price-tooltip {
+    color: #11b9b7;
+    cursor: default;
+    margin-left: 5px;
+}
+
+.discard-price {
+    color: #ababab;
+    padding-left: 78px;
+}
+
+.discard-price .price-text {
+    text-decoration: line-through;
+    font-size: 24px;
+}
+
+.discard-price .price-text em {
+    font-size: 14px;
+}
+
+.order-block .order-btn {
+    background-color: #ffa200;
+    text-align: center;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 3px;
+    margin: 15px 0;
+}
+
+.order-block .order-btn:hover {
+    background-color: #f29901;
+    cursor: pointer;
+}
+
+.qrCode-icon {
+    background: url(../../images/client/qrCode-icon.png) no-repeat;
+    display: inline-block;
+    width: 23px;
+    height: 24px;
+    vertical-align: middle;
+}
 
 /*   产品详情 E   */
 

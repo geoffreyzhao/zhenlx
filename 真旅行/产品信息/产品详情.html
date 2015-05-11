@@ -19,6 +19,7 @@
     <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/underscore.js"></script>   
     <script type="text/javascript" src="../../js/global/global.js"></script>
     <script type="text/javascript" src="../../js/client/common.js"></script>   
 
@@ -77,7 +78,102 @@
             </div>
         </div>
         <section class="mainWrapper">
-            <div style="height: 495px; background-color: #f9f9f9;">日历模块</div>
+            <div class="price-order-block clearfix">
+                <div class="custom-price-calendar-container left-price-info">
+                    <ul class="week-day-title top clearfix">
+                        <li>日</li>
+                        <li>一</li>
+                        <li>二</li>
+                        <li>三</li>
+                        <li>四</li>
+                        <li>五</li>
+                        <li>六</li>
+                    </ul>
+                    <div class="wrap-cover-bg"></div>
+                    <div class="common-tab-bar">
+                        <div class="tab-top"></div>
+                        <ul class="common-tab calendar-month-tab clearfix"></ul>
+                    </div>
+                    
+                    <div class="calendarTables">
+                        <ul class="week-day-title clearfix">
+                            <li>日</li>
+                            <li>一</li>
+                            <li>二</li>
+                            <li>三</li>
+                            <li>四</li>
+                            <li>五</li>
+                            <li>六</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-order-info">
+                    <div class="tag-block">
+                        <span class="tag-icon"></span>
+                        <span class="trip-tag tag-bg-1">文化</span>
+                        <span class="trip-tag tag-bg-2">亲子游</span>
+                        <span class="trip-tag tag-bg-3">假期游</span>
+                        <span class="trip-tag tag-bg-4">东南亚风情</span>
+                    </div>
+                    <div class="trip-info-block">
+                        <table class="trip-info-table">
+                            <tbody>
+                                <tr>
+                                    <td><span class="date-icon"></span></td>
+                                    <th>出行时间：</th>
+                                    <td>2015-05-20</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="departure-icon"></span></td>
+                                    <th>出发地：</th>
+                                    <td>上海</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="destination-icon"></span></td>
+                                    <th>目的地：</th>
+                                    <td>暹粒</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="person-icon"></span></td>
+                                    <th>出行人数：</th>
+                                    <td>
+                                        <div class="dropdown" style="width: 92px;">
+                                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                <span class="activeFonts">1</span>
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                                <li><a href="javascript:void(0);">2</a></li>
+                                                <li><a href="javascript:void(0);">3</a></li>
+                                                <li><a href="javascript:void(0);">4</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="order-block">
+                        <div class="cur-price">
+                            <span class="buy-icon"></span>
+                            <span class="title">价格:</span>
+                            <span class="price-text">￥2399<em>起</em></span>
+                            <span class="price-tooltip" title="底价说明底价说明底价说明底价说明底价说明底价说明底价说明底价说明底价说明">底价说明</span>
+                        </div>
+                        <div class="discard-price">
+                            <span class="title">市场价:</span>
+                            <span class="price-text">￥3856<em>起</em></span>
+                        </div>
+                        <div class="order-btn">立即预定</div>
+                        <div class="share-info">
+                            <span class="share-icon"></span>
+                            <span class="title">分享：</span>
+                            <span class="qrCode-icon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="productFixedContent">
                 <div id="navbar" class="fixedList-container">
                     <ul class="nav fixedList clearfix">
@@ -269,7 +365,7 @@
                             </ul>
                         </div>
                         <div class="rightHotelTabs">
-                            <div class="common-tab-bar" style="width:355px;">
+                            <div class="common-tab-bar hotel-info-tab" style="width:355px;">
                                 <div class="tab-top"></div>
                                 <ul class="common-tab clearfix">
                                     <li class="placement"></li>
@@ -282,7 +378,8 @@
                                     <li class="rest"></li>
                                 </ul>
                             </div>
-                            <div class="listInfo">
+                            <div class="tab-cont-block">
+                                <div class="tab-cont listInfo">
                                 <table class="hotelTabList">
                                     <colgroup>
                                         <col width="75">
@@ -323,18 +420,56 @@
                                 </table>
                                 <div class="fontsModelDetail">
                                     <h3 class="titleFonts">关于酒店:</h3>
-                                    <ul class="fontsModelList">
-                                        <li>Angkor Miracle Resort & Spa酒店位于柬埔寨文化村对面，设有无边际海水游泳池、水疗中心和带免费无线网络连接的客房。</li>
-                                        <li>当代风格的空调客房配有高棉风格的家具，享有市区或游泳池景观，铺有木地板，并配有有线电视、沏茶/咖啡设备和迷你吧。</li>
-                                    </ul>
+                                    <pre>Angkor Miracle Resort & Spa酒店位于柬埔寨文化村对面，设有无边际海水游泳池、水疗中心和带免费无线网络连接的客房。当代风格的空调客房配有高棉风格的家具，享有市区或游泳池景观，铺有木地板，并配有有线电视、沏茶/咖啡设备和迷你吧。</pre>
                                 </div>
                                 <div class="fontsModelDetail">
                                     <h3 class="titleFonts">酒店特色:</h3>
-                                    <ul class="fontsModelList">
-                                        <li>Kong Kea 餐厅供应传统的高棉美食和西式佳肴。</li>
-                                        <li>Mezzanine酒廊酒吧和池畔酒吧则供应饮品。</li>
-                                        <li>Angkor Miracle酒店提供前往Central Market市场的免费班车，距离暹粒国际机场和历史悠久的吴哥庙均仅有10分钟车程。</li>
-                                    </ul>
+                                    <pre>Kong Kea 餐厅供应传统的高棉美食和西式佳肴。Mezzanine酒廊酒吧和池畔酒吧则供应饮品。Angkor Miracle酒店提供前往Central Market市场的免费班车，距离暹粒国际机场和历史悠久的吴哥庙均仅有10分钟车程。</pre>
+                                </div>
+                                </div>
+                                <div class="tab-cont hotel-facilities">
+                                    <div class="fontsModelDetail">
+                                        <h3 class="titleFonts" style="padding-top:10px;">综合设施:</h3>
+                                        <pre>综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施综合设施</pre>
+                                    </div>
+                                    <div class="fontsModelDetail">
+                                        <h3 class="titleFonts">餐饮设施:</h3>
+                                        <pre>当地美食</pre>
+                                    </div>
+                                    <div class="fontsModelDetail">
+                                        <h3 class="titleFonts">网络设施:</h3>
+                                        <pre>有线，无线WIFI</pre>
+                                    </div>
+                                    <div class="fontsModelDetail">
+                                        <h3 class="titleFonts">活动设施:</h3>
+                                        <pre>游泳池，健身房，瑜伽室 等</pre>
+                                    </div>
+                                    <div class="fontsModelDetail">
+                                        <h3 class="titleFonts">服务项目:</h3>
+                                        <pre>柬式马杀鸡</pre>
+                                    </div>
+                                </div>
+                                <div class="tab-cont hotel-notes">
+                                    <table class="hotelTabList">
+                                        <colgroup>
+                                            <col width="75">
+                                            <col width="">
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th class="verticalAlignTop">儿童及附加床:</th>
+                                            <td class="verticalAlignTop">2-12岁儿童与成人同价； 2岁以下婴儿可添加一张免费婴儿床；每间房最多加床1张。</td>
+                                        </tr>
+                                        <tr>
+                                            <th>退房时间:</th>
+                                            <td>从13:30</td>
+                                        </tr>
+                                        <tr>
+                                            <th>入住时间:</th>
+                                            <td>至11:30</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -813,21 +948,866 @@
                 $(this).siblings("li").removeClass("active");
             });
             
-            //tabs切换效果
+
+            //  生成初始日历结构---只包含价格信息没有交互
+
+            var data = [
+                { month : "2015/05/01",   //  数据月份
+                  info : [
+                    //  几号       剩余库存      售价
+                    {dayDate: 1, leftNum: 10, price: 2000},   //  当月下的每天数据
+                    {dayDate: 3, leftNum: 22, price: 998},
+                    {dayDate: 9, leftNum: 0, price: 20000},
+                    {dayDate: 22, leftNum: 10, price: 20000},
+                    {dayDate: 23, leftNum: 0, price: 88888},
+                    {dayDate: 26, leftNum: 12, price: 1999},
+                    {dayDate: 31, leftNum: 22, price: 2499}
+                  ]
+                },
+                { month : "2015/06/01",   
+                  info : [{dayDate: 1, leftNum: 10, price: 2000}]
+                },
+                { month : "2015/07/01",   
+                  info : [{dayDate: 31, leftNum: 10, price: 2000}]
+                },
+                { month : "2015/08/01",  
+                  info : []
+                }
+            ];
+            setCalendar(data, ".calendarTables");
+
+        //  生成月份标题
+        $(".custom-price-calendar-container ul.common-tab").append(geneTabSwitchMonth(data));
+            
             $(".calendar-month-tab .tab-item").eq(0).addClass("current");
             $(".common-tab").tabBar();
-            $(".custom-price-calendar-container .calTable").hide();
-            $(".custom-price-calendar-container .calTable").eq(0).show();
+            $(".calTable").hide();
+            $(".calTable").eq(0).show();
 
             $(".calendar-month-tab").find("li.tab-item").each(function(index){
                 $(this).click(function(){
-                    $(".custom-price-calendar-container .calTable").hide();
-                    $(".custom-price-calendar-container .calTable").eq(index).show();
+                    $(".calTable").hide();
+                    $(".calTable").eq(index).show();
+                    
+                    if (!$(".calTable").eq(index).find(".tripCover").length > 0) {
+                        $(".wrap-cover-bg").hide();     
+                    } else {
+                        $(".wrap-cover-bg").show();         
+                    }
                 });
             });
             
-            
         });
+
+    function setCalendar(data, ele) {
+        for (var i = 0; i < data.length; i++) {
+            var monthInfo = data[i];  // 获得当前月份的数据信息
+
+            var calStr = "<table class='calTable ct-" + data[i].month.split('/')[0] + "-" +
+                            data[i].month.split('/')[1] + "'><tr>";  // 拼接字符串生成表格日期内容
+
+            var curentMonthDate = new Date(monthInfo.month);
+            var nextMonthDate = new Date(curentMonthDate.getFullYear(), curentMonthDate.getMonth() + 1,
+                curentMonthDate.getDate());
+            var monthDays = (nextMonthDate - curentMonthDate)/(1000*60*60*24);  // 获得当前月天数
+
+            var firstWeekDay = curentMonthDate.getDay();  // 获得当前月1号是周几, 范围0-6
+            var lastWeekDay = nextMonthDate.getDay() - 1 < 0 ? 6 : nextMonthDate.getDay() - 1; 
+            // 计算当月最后一天是周几，填补日历最后的空格
+
+            var currentDay = 1;  // 从1号开始排列当月的日期
+
+            for (var j = 0; j < firstWeekDay; j++) {  // 当月1号之前td为空
+                calStr += "<td class='empty'><div class='tdCont'></div></td>";
+            }
+
+            for (; currentDay <= monthDays; currentDay++) {
+
+                var w1 = firstWeekDay == 0 ? 7 : firstWeekDay;
+
+                if (currentDay % 7 == (7 - w1) && currentDay != monthDays) {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td></tr><tr>";
+                } else if (currentDay == monthDays) {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td>";
+                    for (var t = 0; t < 6 - lastWeekDay; t++) {
+                        calStr += "<td class='empty'><div class='tdCont'></div></td>";
+                    }
+                    calStr += "</tr></table>";
+                } else {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td>";
+                }
+            }
+            $(ele).append(calStr);
+        }
+    }
+
+    function getDayInfo(currentDay, monthInfo) {
+        for (var i = 0; i < monthInfo.info.length; i++) {
+            if (monthInfo.info[i].dayDate == currentDay) {
+                return monthInfo.info[i];
+            }
+        }
+        return null;
+    }
+
+    function geneTdContent(currentDay, monthInfo) {
+        var dayInfo = getDayInfo(currentDay, monthInfo);
+        var tdCont = "";
+
+        var d = currentDay < 10 ? '0' + currentDay : currentDay;
+        var dateStr = monthInfo.month.slice(0, 7) + "/" + d;
+        
+        if (!!dayInfo) {            
+
+            if (dayInfo.leftNum == 0) {
+                tdCont += "<div class='tdCont'><div class='priceCover soldout clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+                tdCont += "<div class='right-block'><div class='leftNum'>售完</div>";
+                tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+            } else {
+                tdCont += "<div class='tdCont'><div class='priceCover onsale clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+
+                tdCont += "<div class='right-block'><div class='leftNum'>余" + dayInfo.leftNum + "</div>";
+
+                tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+                
+            }
+        } else {
+            tdCont += "<div class='tdCont'><div class='priceCover noPrice'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + currentDay + "</div></div></div>";
+        }
+        return tdCont;
+    }
+
+    function geneTabSwitchMonth(data) {
+        var liStr = "";
+        for (var i = 0; i < data.length; i++) {
+            var temp = new Date(data[i].month);
+
+            liStr += "<li class='placement'></li>";
+            liStr += "<li name='" + data[i].month + "' class='tab-item'>" + temp.getFullYear() + "年" +
+                        (temp.getMonth() + 1) + "月</li>";
+        }
+        liStr += "<li class='placement'></li><li class='rest'></li>";
+        return liStr;
+    }
     </script>
+    
+    <!--  日历交互结构及样式  -->
+    <script type="text/javascript">
+    $(function(){
+
+        var tripDataList = [{
+            startDate: "2015/05/01",
+            dataList: [  //  根据数组长度 表示要显示的天数
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '1上海上海上',
+                            toCity: '1金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '1金边金边金边',
+                            toCity: '1新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '1吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '1吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '1吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '1吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    flightInfos:[
+                        {
+                            fromCity: '1新罗',
+                            toCity: '1金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '1金边',
+                            toCity: '1上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            startDate: "2015/05/03",
+            dataList: [  //  根据数组长度 表示要显示的天数
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '2上海上海上',
+                            toCity: '2金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '2金边金边金边',
+                            toCity: '2新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '2吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '2吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '2吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '2吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    flightInfos:[
+                        {
+                            fromCity: '2新罗',
+                            toCity: '2金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '金边',
+                            toCity: '上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            startDate: "2015/05/09",
+            dataList: [  //  根据数组长度 表示要显示的天数
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '上海上海上',
+                            toCity: '金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '金边金边金边',
+                            toCity: '新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第六天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第七天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第八天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第九天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第十天
+                    flightInfos:[
+                        {
+                            fromCity: '新罗',
+                            toCity: '金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '金边',
+                            toCity: '上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            startDate: "2015/05/31",
+            dataList: [  //  根据数组长度 表示要显示的天数
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '3上海上海上',
+                            toCity: '3金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '3金边金边金边',
+                            toCity: '3新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第六天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第七天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第八天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第九天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第十天
+                    flightInfos:[
+                        {
+                            fromCity: '3新罗',
+                            toCity: '3金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '3金边',
+                            toCity: '3上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            startDate: "2015/06/01",
+            dataList: [ 
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '3上海上海上',
+                            toCity: '3金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '3金边金边金边',
+                            toCity: '3新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第六天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第七天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第八天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第九天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第十天
+                    flightInfos:[
+                        {
+                            fromCity: '3新罗',
+                            toCity: '3金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '3金边',
+                            toCity: '3上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        }
+        ];
+
+        $(".priceCover").not(".noPrice").click(function(){
+
+            var $thisTd = $(this).closest("td"),
+                $thisTable = $(this).closest('table'),
+                tdIndex = $thisTable.find("td").index($thisTd),
+                restValidTdNum = $thisTable.find("td:gt("+tdIndex+")").not(".empty").length;
+
+            for (var td = 0; td < tripDataList.length; td++) {
+                var tripData = tripDataList[td];
+
+                if (tripData.startDate == $(this).find(".dateDay").data("dayvalue")) {
+                    $(".wrap-cover-bg").show();
+                    $(".week-day-title.top").show();
+
+                    geneTripCover($(this), tripData);
+                }
+            }
+        });
+
+        $("body").delegate(".wrap-cover-bg", "click", function(event){
+            $(this).hide();
+            $(".week-day-title.top").hide();
+            $(".calTable .tripCover").remove();
+            $(".calTable .popover-trip-container").remove();
+            $(".calTable tr.append").remove();
+            event.stopPropagation();
+        });
+    });
+
+    /*
+        分三步：
+        1. 找到需要重新覆盖的td元素，如果不够，则创建新元素
+        2. 根据数据生成所有的覆盖层和弹出层结构
+        3. 依此遍历，将生成的结构依此填充至表格内
+    */
+    function geneTripCover($ele, tripData) {
+
+        //  找到需要重新覆盖的td元素，如果不够，则创建新元素
+        var isCoveredEleTd = [];
+        isCoveredEleTd.push($ele.closest("td"));
+
+        var curTdNextEleArr = $ele.closest("td").nextAll("td");      
+
+        //  往下一行追加
+        if (curTdNextEleArr.length < (tripData.dataList.length - 1)) {  
+
+            isCoveredEleTd = _.union(isCoveredEleTd, _.map(curTdNextEleArr, function(value){ return $(value); }));
+
+            var s_tr = parseInt((tripData.dataList.length - curTdNextEleArr.length - 1) / 7),
+                s_td = (tripData.dataList.length - curTdNextEleArr.length - 1) % 7;
+
+            var $tr = $ele.closest("tr");
+
+            for (var i = s_tr; i >= 0; i--) {
+
+                if ($tr.next("tr").length == 0) {  //  跨月情况，表格需要追加行数
+                    $ele.closest('tbody').append("<tr class='append'><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td></tr>");
+                }
+
+                $tr = $tr.next("tr");
+
+                var tdList;
+
+                if (i == 0) {
+                    tdList = $tr.find("td:lt("+s_td+")");
+                    
+                } else {
+                    tdList = $tr.find("td");
+                }
+                isCoveredEleTd = _.union(isCoveredEleTd, _.map(tdList, function(value){ return $(value); }));
+            }
+        } else {
+            for (var i = 0; i < tripData.dataList.length - 1; i++) {
+                isCoveredEleTd.push($(curTdNextEleArr[i]));
+            }
+        }
+
+        // ======================  isCoveredEleTd  填充完毕
+
+        var eleArr = []; //  生成覆盖元素节点  存放在该数组中（只有右侧部分，左侧复用原来priceCover的结构）
+        var popoverEleArr = [];   //  存放弹窗层结构
+
+        for (var i = 0; i < tripData.dataList.length; i++) {
+
+            var coverEleStr = "<div class='right-block'><div class='trip-day' data-tripday='"+(i+1)+"'>";
+            var popoverEleStr = "<div class='popover-trip-container'>"
+                                    + "<div class='top-block clearfix'><div class='left-block'>"
+                                    +   "<span class='day-icon'></span></div><div class='right-block'>";
+
+            coverEleStr += parseNumToString(i+1) + "</div><div class='icon'>";
+
+            var dayData = tripData.dataList[i],
+                fi = dayData.flightInfos,
+                hi = dayData.hotelInfo;
+
+            if (!!fi) {  //  有航班信息,显示飞机icon，popover上显示航班信息
+                coverEleStr += "<span class='flight-icon'></span>";
+                if (!!hi) {  //  有航程并且有酒店，如果没有酒店，则航程是晚上的返程,白天自由活动
+                    popoverEleStr += "<table class='flight-info'><tbody><tr><td class='city'>"+fi[0].fromCity+"→"
+                                    +fi[0].toCity+"</td>"
+                                    +"<td>"+fi[0].departureTime+"-"+fi[0].arrivalTime+"</td>"
+                                    +"<td>"+fi[0].flightNo+"</td></tr>"
+                                    +"<tr><td class='city'>"+fi[1].fromCity+"→"
+                                    +fi[1].toCity+"</td>"
+                                    +"<td>"+fi[1].departureTime+"-"+fi[1].arrivalTime+"</td>"
+                                    +"<td>"+fi[1].flightNo+"</td></tr></tbody></table></div></div>";
+                } else {
+                    popoverEleStr += "<div class='freetime'>自由活动</div></div></div>";
+                    popoverEleStr += "<div class='bottom-block clearfix'>"
+                                +"<div class='left-block'><span class='night-icon'></span></div>"
+                                +"<div class='right-block clearfix'><table class='flight-info'>"
+                                +"<tbody><tr><td class='city'>"+fi[0].fromCity+"→"
+                                +fi[0].toCity+"</td>"
+                                +"<td>"+fi[0].departureTime+"-"+fi[0].arrivalTime+"</td>"
+                                +"<td>"+fi[0].flightNo+"</td></tr>"
+                                +"<tr><td class='city'>"+fi[1].fromCity+"→"
+                                +fi[1].toCity+"</td>"
+                                +"<td>"+fi[1].departureTime+"-"+fi[1].arrivalTime+"</td>"
+                                +"<td>"+fi[1].flightNo+"</td></tr></tbody></table></div></div>";
+                }
+            } else {  //  popover 上显示自由活动
+                popoverEleStr += "<div class='freetime'>自由活动</div></div></div>";
+            }
+
+            if (!!hi) {  //  有酒店信息,显示酒店icon，popover上显示酒店信息
+                coverEleStr += "<span class='hotel-icon'></span>";
+                popoverEleStr += "<div class='bottom-block clearfix'>"
+                                +"<div class='left-block'><span class='night-icon'></span></div>"
+                                +"<div class='right-block clearfix'><div class='hotel-name'>"
+                                +"<div class='ch-name'>"+hi.hotelNameCn+"</div>"
+                                +"<div class='en-name'>"+hi.hotelNameEn+"</div>"
+                                +"</div><div class='star-rating'>"+hi.rating+"</div></div></div>";
+            } 
+            coverEleStr += "</div></div>";
+            popoverEleStr += "</div>";
+
+            eleArr.push($(coverEleStr));
+            popoverEleArr.push($(popoverEleStr));
+        }
+
+        //  ====================  覆盖元素右侧部分及弹层信息  填充完毕
+
+        //  依次追加节点，填充覆盖
+        var overDayCount = 0;  //  记录跨月的天数
+        for (var i = 0; i < isCoveredEleTd.length; i++) {
+            var day = isCoveredEleTd[i].find(".dateDay").eq(0);
+            var day_value = isCoveredEleTd[i].find(".dateDay").eq(0).data("dayvalue");
+
+            if (!day.html() && overDayCount == 0) {
+                overDayCount = isCoveredEleTd.length - i + 1;
+            }
+
+            isCoveredEleTd[i].find(".tdCont").append("<div class='tripCover clearfix'><div class='dateDay' data-dayvalue='" + day_value + "'>" + (day.html() || overDayCount + i - isCoveredEleTd.length) + "</div><div class='right-block'>" + eleArr[i].html() + "</div></div>");
+
+            isCoveredEleTd[i].find(".tdCont").append("<div class='popover-trip-container'>" + popoverEleArr[i].html() + "</div>");
+        }
+
+        $(".calTable .tripCover").click(function(){
+
+            $(this).closest(".calTable").find(".tripCover").removeClass("current");
+            $(this).addClass("current");
+
+            $(this).closest(".calTable").find(".popover-trip-container").hide();
+
+            var $popover = $(this).closest("td").find(".popover-trip-container"),
+                trIndex = $(this).closest("tr").index(),
+                tdIndex = $(this).closest("td").index();
+
+            var tdHeight = $(this).closest("td").outerHeight(),
+                popoverHeight = $(this).closest("td").find(".popover-trip-container").outerHeight();
+
+            if (trIndex <= 0) { //  第一行向下显示
+                if (tdIndex <= 3) {  //  向右显示
+                    $popover.css({
+                        left: 0,
+                        top: tdHeight + "px"
+                    }).show();
+                } else {  //  向左显示
+                    $popover.css({
+                        right: 0,
+                        top: tdHeight + "px"
+                    }).show();
+                }   
+            } else {  //  其他向上显示
+                if (tdIndex <= 3) {  //  向右显示
+                    $popover.css({
+                        left: 0,
+                        top: -popoverHeight-1 + "px"
+                    }).show();
+                } else {  //  向左显示
+                    $popover.css({
+                        right: 0,
+                        top: -popoverHeight-1 + "px"
+                    }).show();
+                }   
+            }                    
+        });
+    }
+
+    function parseNumToString(num) {
+        var result = "";
+        switch(num) {
+            case 1:
+                result = "第一天";
+                break;
+            case 2:
+                result = "第二天";
+                break;
+            case 3:
+                result = "第三天";
+                break;
+            case 4:
+                result = "第四天";
+                break;
+            case 5:
+                result = "第五天";
+                break;
+            case 6:
+                result = "第六天";
+                break;
+            case 7:
+                result = "第七天";
+                break;
+            case 8:
+                result = "第八天";
+                break;
+            case 9:
+                result = "第九天";
+                break;
+            case 10:
+                result = "第十天";
+                break;
+            case 11:
+                result = "第十一天";
+                break;
+            case 12:
+                result = "第十二天";
+                break;
+            case 13:
+                result = "第十三天";
+                break;
+            case 14:
+                result = "第十四天";
+                break;
+            case 15:
+                result = "第十五天";
+                break;
+        }
+        return result;
+    }
+
+</script>
+
+<script type="text/javascript">
+    $(function(){
+
+        $(".price-tooltip").tooltip({
+            html: true,
+            placement: 'bottom',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+
+        $(".tab-cont").hide();
+        $(".tab-cont").eq(0).show();
+        $(".hotel-info-tab .tab-item").each(function(index){
+            $(this).click(function(){
+                $(".tab-cont").hide();
+                $(".tab-cont").eq(index).show();
+            });
+        });
+    });
+</script>
 </body>
 </html>
