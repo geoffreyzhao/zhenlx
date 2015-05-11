@@ -1378,6 +1378,13 @@ ul.common-tab > li.rest {
     left:850px;
     top:100px;
 }
+.lovetips{
+    width:174px;
+    height:144px;
+    display: inline-block;
+    vertical-align: middle;
+    background:url("../../images/client/lovetips.png") no-repeat 0 0;
+}
 .product-one-txt{
     font:33px/40px "Microsoft Yahei";
     font-weight: 300;
@@ -1390,6 +1397,13 @@ ul.common-tab > li.rest {
     top:-18px;
     left:5px;
     font:20px/20px "Microsoft Yahei";
+}
+.start-trip{
+    width:148px;
+    height:55px;
+    display: inline-block;
+    vertical-align: middle;
+    background:url("../../images/client/proListflag01.png") no-repeat 0 0;
 }
 .product-clomu ul{
     list-style: none;
@@ -1450,8 +1464,16 @@ ul.common-tab > li.rest {
     color:#bdbdbd;
 }
 .confirm-flag{
-   padding-top:40px; 
-   padding-bottom:30px; 
+    padding-top:40px;
+    padding-bottom:30px;
+}
+.wishList{
+    width:95px;
+    height:95px;
+    display: inline-block;
+    vertical-align: middle;
+    background:url("../../images/client/confirm_normal.png") no-repeat 0 0;
+    cursor: pointer;
 }
 .list-white-cnt{
     padding:20px 0px;
@@ -1480,7 +1502,14 @@ ul.common-tab > li.rest {
     margin-left:10px;
     float:right;
     font:14px/25px "Microsoft Yahei";
-    color:#494949;
+    color:#565656;
+}
+.locImg{
+    width:34px;
+    height:37px;
+    display: inline-block;
+    vertical-align: middle;
+    background:url("../../images/client/locIcon.png") no-repeat 0 0;
 }
 .product-container .foot {
     width: 1130px;
@@ -1498,7 +1527,31 @@ ul.common-tab > li.rest {
 .product-container .foot .service-tel {
     float: right;
 }
-
+.border-radius{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding:5px 8px;
+    margin:5px 0px;
+    margin-right:5px;
+    font:14px/18px "Microsoft Yahei";
+    color:#ffffff;
+}
+.label-color-one{
+    background-color: #44bcda;
+}
+.label-color-two{
+    background-color: #df7eb0;
+}
+.label-color-three{
+    background-color: #ea9e26;
+}
+.label-color-four{
+    background-color: #11b9b7;
+}
+.label-color-five{
+    background-color: #aa87ae;
+}
 .product-container .foot .service-tel .telnum {
     font-size: 15px;
 }
