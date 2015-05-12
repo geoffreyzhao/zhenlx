@@ -347,13 +347,19 @@
             });
             
             //目的地浮层
+            $(".selectRight .selectCity span,.selectLeft .selectCity span").click(function(){
+                $(this).addClass("active");
+                $(this).siblings("span").removeClass("active");
+                $(".searchTab .destination .destinationInput").val($(this).html());
+                $(".selectDestination").hide();
+            });
             $(".destinationModel .destination").click(function(){
                 $(this).siblings(".selectDestination").show();
             });
             $(".selectLeft li").each(function(index){
                 $(this).mouseover(function(){
-                    $(".selectRight .li").hide();
-                    $(".selectRight .li:eq(" + index + ")").show();
+                    $(".selectRight li").hide();
+                    $(".selectRight li:eq(" + index + ")").show();
                 });
             });
 
