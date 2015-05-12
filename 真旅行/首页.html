@@ -52,12 +52,11 @@
                     <table class="searchTab">
                         <colgroup>
                             <col width="65">
-                            <col width="195">
+                            <col width="300">
                             <col width="65">
-                            <col width="195">
-                            <col width="85">
-                            <col width="195">
-                            <col width="180">
+                            <col width="300">
+                            <col width="50">
+                            <col width="190">
                             <col width="110">
                         </colgroup>
                         <tbody>
@@ -67,7 +66,7 @@
                                 <div class="startOffPlaceModel">
                                     <div class="addIcon startOffPlace">
                                         <span class="commonIcon startOffIcon"></span>
-                                        <input type="text" class="startOffInput" value="中国-上海" style="width: 180px;" readonly="readonly">
+                                        <input type="text" class="startOffInput" value="中国-上海" style="width: 280px;" readonly="readonly">
                                     </div>
                                     <ul class="selectStartOffPlace">
                                         <li class="active">上海</li>
@@ -81,7 +80,7 @@
                                 <div class="destinationModel">
                                     <div class="addIcon destination">
                                         <span class="commonIcon destinationIcon"></span>
-                                        <input type="text" class="destinationInput" value="墨尔本野性之旅" style="width: 180px;" readonly="readonly">
+                                        <input type="text" class="destinationInput" value="墨尔本野性之旅" style="width: 280px;" readonly="readonly">
                                     </div>
                                     <div class="selectDestination">
                                         <ul class="cityList selectLeft">
@@ -231,22 +230,20 @@
                                     </div>
                                 </div>
                             </td>
-                            <th>出行时间</th>
+                            <th>主题</th>
                             <td>
-                                <div class="addIcon travelTime">
-                                    <span class="commonIcon timeIcon"></span>
-                                    <input class="datepicker default" type="text" value="五一劳动节" style="width: 180px;">
+                                <div class="dropdown" style="width: 170px;">
+                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                        <span class="activeFonts">蜜月</span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">全部</a></li>
+                                        <li><a href="javascript:void(0);">度假</a></li>
+                                        <li><a href="javascript:void(0);">购物</a></li>
+                                        <li class="active"><a href="javascript:void(0);">蜜月</a></li>
+                                    </ul>
                                 </div>
-                            </td>
-                            <td>
-                                <label class="weatherStatus">
-                                    <span class="weatherIcon"></span>
-                                    <span class="numberOfDegrees">18°</span>
-                                </label>
-                                <label class="regionFonts">
-                                    <div>墨尔本</div>
-                                    <div>Melbourne</div>
-                                </label>
                             </td>
                             <td>
                                 <a href="javascript:void(0);" class="commonBtn orangeBtn">搜索</a>
