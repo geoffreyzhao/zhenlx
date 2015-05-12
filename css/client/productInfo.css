@@ -1401,6 +1401,7 @@ ul.common-tab > li.rest {
 .start-trip{
     width:148px;
     height:55px;
+    cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     background:url("../../images/client/proListflag01.png") no-repeat 0 0;

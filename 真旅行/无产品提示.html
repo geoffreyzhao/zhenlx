@@ -49,7 +49,7 @@
                 <div class="top-border"></div>
                 <div class="withoutOrderModel">
                     <div class="withoutDivision clearfix">
-                        <p class="text-center"><img src="../images/client/snail.jpg"/></p>
+                        <p class="text-center"><label class="noPosition"></label></p>
                         <h2 class="text-center withoutInfo">Oh no!</h2>
                         <p class="text-center withoutTip">实在抱歉，有人刚刚把剩余的几个位置抢光了！</p>
                     </div>
@@ -63,14 +63,13 @@
                     <div class="text-center payWayContent clearfix">
                         <div class="withoutLeft">
                             <ul>
-                                <li class="text-center" style="padding-bottom: 5px;"><a href="javascript:void(0);"><img src="../images/client/withImg_01.jpg"
-                                    onmouseover="this.src='../images/client/withImg_03.jpg'" onmouseout="this.src='../images/client/withImg_01.jpg'"/></a></li>
+                                <li class="text-center" style="padding-bottom: 5px;"><a href="javascript:void(0);"><label class="clickme"></label></a></li>
                                 <li class="text-center withoutText">点我</li>
                                 <li class="text-center withoutText">预定其他日期</li>
                             </ul>
                         </div>
                         <div class="withoutRight">
-                            <li class="text-center" style="padding-bottom: 5px;"><img src="../images/client/withImg_02.jpg"/></li>
+                            <li class="text-center" style="padding-bottom: 5px;"><label class="weixin"></label></li>
                             <li class="text-center withoutText">扫一扫微信</li>
                             <li class="text-center withoutText">联系小真真客服咨询</li>
                         </div>
@@ -86,6 +85,12 @@
             <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
         </div>
     </div>
-
+    <script type="text/javascript">
+        $(".clickme").hover(function(){
+            $(".clickme").css("background-image","url(../images/client/withImg_03.jpg)");
+        }, function () {
+            $(".clickme").css("background-image","url(../images/client/withImg_01.jpg)");
+        });
+    </script>
 </body>
 </html>

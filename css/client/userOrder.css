@@ -699,11 +699,31 @@
 .changeUser{
     width:31px;
     height:46px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../images/client/changeUser.jpg") no-repeat 0 0;
 }
 .noPosition{
     width:129px;
-    height:90px;
+    height:91px;
+    display: inline-block;
+    vertical-align: middle;
     background-image: url("../../images/client/snail.jpg");
+}
+.clickme{
+    width:158px;
+    height:158px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../../images/client/withImg_01.jpg");
+    cursor: pointer;
+}
+.weixin{
+    width:157px;
+    height:157px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../../images/client/withImg_02.jpg");
 }
 .withoutDivision{
     padding:10px;
