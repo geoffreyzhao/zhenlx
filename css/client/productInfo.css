@@ -537,6 +537,48 @@
     margin-top: -7px;
     background-position: 0 0;
 }
+.commonStarLevelIcon.starLevel-1.noLeftStar {
+    width: 13px;
+}
+.commonStarLevelIcon.starLevel-2.noLeftStar {
+    width: 34px;
+}
+.commonStarLevelIcon.starLevel-3.noLeftStar {
+    width: 54px;
+}
+.commonStarLevelIcon.starLevel-4.noLeftStar {
+    width: 75px;
+}
+.commonStarLevelIcon.starLevel-5.noLeftStar {
+    width: 96px;
+}
+.commonStarLevelIcon.starLevel-6.noLeftStar {
+    width: 117px;
+}
+.commonStarLevelIcon.starLevel-7.noLeftStar {
+    width: 138px;
+}
+.commonStarLevelIcon.starLevel-0-5.noLeftStar {
+    width: 7px;
+}
+.commonStarLevelIcon.starLevel-1-5.noLeftStar {
+    width: 28px;
+}
+.commonStarLevelIcon.starLevel-2-5.noLeftStar {
+    width: 48px;
+}
+.commonStarLevelIcon.starLevel-3-5.noLeftStar {
+    width: 69px;
+}
+.commonStarLevelIcon.starLevel-4-5.noLeftStar {
+    width: 90px;
+}
+.commonStarLevelIcon.starLevel-5-5.noLeftStar {
+    width: 111px;
+}
+.commonStarLevelIcon.starLevel-6-5.noLeftStar {
+    width: 132px;
+}
 .commonStarLevelIcon.starLevel-1 span{
     width: 13px;
 }
@@ -1318,6 +1360,20 @@ ul.common-tab > li.rest {
     background-color: #f29901;
     cursor: pointer;
 }
+.fixed-order-btn {
+    background-color: #ffa200;
+    text-align: center;
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    border-radius: 3px;
+    width: 160px;
+}
+.fixed-order-btn:hover {
+    background-color: #f29901;
+    cursor: pointer;
+}
 
 .qrCode-icon {
     background: url(../../images/client/qrCode-icon.png) no-repeat;
@@ -1325,6 +1381,27 @@ ul.common-tab > li.rest {
     width: 23px;
     height: 24px;
     vertical-align: middle;
+}
+
+.commonModel pre {
+    font-size: 15px;
+    line-height: 25px;
+    color: #616161;
+}
+
+.timePlaceAirport .stoppingPoint {
+    background: url("../../images/client/order-spirit.png") no-repeat -33px 0;
+    display: inline-block;
+    width: 92px;
+    height: 25px;
+    color: #11b9b7;
+    font-size: 12px;
+    cursor: default;
+    position: absolute;
+    left: 37%;
+    top: 30%;
+    text-align: center;
+    line-height: 25px;
 }
 
 /*   产品详情 E   */
