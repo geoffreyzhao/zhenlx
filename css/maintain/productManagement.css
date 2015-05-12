@@ -278,6 +278,14 @@
 .overviewTab td p {
     margin-bottom: 5px;
 }
+.overviewTextarea {
+    width: 660px;
+    height: 300px;
+    resize: none;
+    display: block;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
 /* 新增产品 推荐行程 E */
 
 /*  添加酒店资源 start  */
