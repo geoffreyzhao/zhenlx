@@ -117,6 +117,11 @@
                     </div>
                     <div class="trip-info-block">
                         <table class="trip-info-table">
+                            <colgroup>
+                                <col width="22"/>
+                                <col width="82"/>
+                                <col width=""/>
+                            </colgroup>
                             <tbody>
                                 <tr>
                                     <td><span class="date-icon"></span></td>
@@ -135,9 +140,9 @@
                                 </tr>
                                 <tr>
                                     <td><span class="person-icon"></span></td>
-                                    <th>出行人数：</th>
-                                    <td>
-                                        <div class="dropdown" style="width: 92px;">
+                                    <th colspan="2">
+                                        <span>成人：</span>
+                                        <div class="dropdown" style="width: 56px;">
                                             <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
                                                 <span class="activeFonts">1</span>
                                                 <span class="caret"></span>
@@ -149,7 +154,20 @@
                                                 <li><a href="javascript:void(0);">4</a></li>
                                             </ul>
                                         </div>
-                                    </td>
+                                        <span style="margin-left:10px;">儿童：</span>
+                                        <div class="dropdown" style="width: 56px;">
+                                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                <span class="activeFonts">1</span>
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                                <li><a href="javascript:void(0);">2</a></li>
+                                                <li><a href="javascript:void(0);">3</a></li>
+                                                <li><a href="javascript:void(0);">4</a></li>
+                                            </ul>
+                                        </div>
+                                    </th>
                                 </tr>
                             </tbody>
                         </table>
