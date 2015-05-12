@@ -243,45 +243,70 @@
 
                 <section class="pm-info-module price-info-module">
                     <div class="sub-title">成本维护</div>
-                    <section class="pack-price-block">
+                    <section class="pack-price-block" style="padding-top:0;">
+                        <div class="radioContent priceOperType">
+                            <label class="radio active" name="1">
+                                <span class="radioIcon"></span>
+                                <span class="labelFonts">批量操作</span>
+                            </label>
+                            <label class="radio" name="2">
+                                <span class="radioIcon"></span>
+                                <span class="labelFonts">单日操作(点击日历选取日期)</span>
+                            </label>
+                        </div>
                         <div class="price-maint-block">
-                            <div class="date-oper-line">
-                                <span>打包成本</span>
-                                <input type="text" class="datepicker hasIcon startDate" style="width:150px;" /> 至 
-                                <input type="text" class="datepicker hasIcon endDate" style="width:150px;"/>
-                                <span class="checkboxContent week-date">
-                                    <label class="checkboxInfo">
-                                        <span class="checkboxIcon"></span>一
-                                    </label>
-                                    <label class="checkboxInfo">
-                                        <span class="checkboxIcon"></span>二
-                                    </label>
-                                    <label class="checkboxInfo">
-                                        <span class="checkboxIcon"></span>三
-                                    </label>
-                                    <label class="checkboxInfo">
-                                        <span class="checkboxIcon"></span>四
-                                    </label>
-                                    <label class="checkboxInfo">
-                                        <span class="checkboxIcon"></span>五
-                                    </label>
-                                    <label class="checkboxInfo">
-                                        <span class="checkboxIcon"></span>六
-                                    </label>
-                                    <label class="checkboxInfo">
-                                        <span class="checkboxIcon"></span>日
-                                    </label>
-                                </span>
-                                <span class="oper-price-btn">
-                                    <button class="commonButton blue-45c8dcButton">添加成本</button>
-                                    <button class="commonButton blue-45c8dcButton">清除成本</button>
-                                </span>
+                            <!--  批量修改  -->
+                            <div class="batch-oper-block">
+                                <div class="date-oper-line">
+                                    <span>打包成本</span>
+                                    <input type="text" class="datepicker hasIcon startDate" style="width:150px;" /> 至 
+                                    <input type="text" class="datepicker hasIcon endDate" style="width:150px;"/>
+                                    <span class="checkboxContent week-date">
+                                        <label class="checkboxInfo">
+                                            <span class="checkboxIcon"></span>一
+                                        </label>
+                                        <label class="checkboxInfo">
+                                            <span class="checkboxIcon"></span>二
+                                        </label>
+                                        <label class="checkboxInfo">
+                                            <span class="checkboxIcon"></span>三
+                                        </label>
+                                        <label class="checkboxInfo">
+                                            <span class="checkboxIcon"></span>四
+                                        </label>
+                                        <label class="checkboxInfo">
+                                            <span class="checkboxIcon"></span>五
+                                        </label>
+                                        <label class="checkboxInfo">
+                                            <span class="checkboxIcon"></span>六
+                                        </label>
+                                        <label class="checkboxInfo">
+                                            <span class="checkboxIcon"></span>日
+                                        </label>
+                                    </span>
+                                    <span class="oper-price-btn">
+                                        <button class="commonButton blue-45c8dcButton">添加成本</button>
+                                        <button class="commonButton blue-45c8dcButton">清除成本</button>
+                                    </span>
+                                </div>
+                                <div class="price-line">
+                                    <span class="adult-price-text">成人票价</span>
+                                    <input type="text" style="width:88px;" />
+                                    <span class="child-price-text">儿童票价</span>
+                                    <input type="text" style="width:88px;" />
+                                </div>
                             </div>
-                            <div class="price-line">
+                            <!--  单日修改  -->
+                            <div class="single-oper-block" style="display:none;">
+                                <span>打包成本</span>
                                 <span class="adult-price-text">成人票价</span>
                                 <input type="text" style="width:88px;" />
                                 <span class="child-price-text">儿童票价</span>
                                 <input type="text" style="width:88px;" />
+                                <span class="oper-price-btn">
+                                    <button class="commonButton blue-45c8dcButton">添加成本</button>
+                                    <button class="commonButton blue-45c8dcButton">清除成本</button>
+                                </span>
                             </div>
                         </div>
                         <div class="double-price-calendar clearfix" style="margin-left:60px;">
@@ -1334,8 +1359,13 @@
         setDpCalendarTitle(ele, leftDate, rightDate);
 
         $(ele).find(".tdCont").not(".disabled").click(function(){
-            $(ele).find(".tdCont").removeClass("active");
-            $(this).addClass("active");
+            if ($(".priceOperType label.radio.active").attr("name") == 1) {   
+            //  如果是批量操作，可视情况解除点击事件
+                return false;
+            } else {
+                $(ele).find(".tdCont").removeClass("active");
+                $(this).addClass("active");
+            }
         });
     }
 
@@ -1407,6 +1437,25 @@
         $(ele).find(".right-calendar-title").html(rightYear + "年" + (rightMonth+1) + "月");
     }
 
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $(".priceOperType label.radio").click(function(){
+                if ($(this).attr("name") == "1") {   //  批量操作
+                    $(".batch-oper-block").show();
+                    $(".single-oper-block").hide();
+
+                    //  切换为批量操作时 视情况处理单日操作时已点击过的单元格
+                    $(".double-price-calendar").find(".tdCont").removeClass("active");
+                }
+
+                if ($(this).attr("name") == "2") {   //  单日操作
+                    $(".batch-oper-block").hide();
+                    $(".single-oper-block").show();
+                }
+            });
+        });
     </script>
 
 </body>

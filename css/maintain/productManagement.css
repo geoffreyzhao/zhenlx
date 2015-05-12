@@ -1469,4 +1469,22 @@ input[type="text"].tagInput {
     font-weight: bold;
 }
 
+.priceOperType {
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+.priceOperType .labelFonts {
+    font-size: 14px;
+}
+
+.single-oper-block .adult-price-text {
+    color: #ff4200;
+}
+
+.single-oper-block .child-price-text {
+    color: #008736;
+    margin-left: 20px;
+}
+
 /*  新增产品-底价维护   end  */
