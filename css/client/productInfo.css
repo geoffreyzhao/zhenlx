@@ -1408,15 +1408,8 @@ ul.common-tab > li.rest {
 
 /*   产品列表  start   */
 .product-container{
-    background-color: #2b8a82;
 }
 .product-wrapper{
-    width: 1130px;
-    margin: 0 auto;
-    min-height: 562px;
-    position: relative;
-    left: 0px;
-    top:0px;
 }
 .product-row{
     width: 1130px;
@@ -1441,19 +1434,22 @@ ul.common-tab > li.rest {
 .product-clomu-space{
     margin-left:25px;
 }
+.content-above-image {
+    width: 1130px;
+    margin: 0 auto;
+}
 .product-one-text{
-    position:absolute;
+    float: left;
     color:#ffffff;
-    left:210px;
-    top:150px;
+    margin-left: 150px;
+    margin-top: 175px;
 }
 .product-one-text p{
     font:bold 35px/40px "Microsoft Yahei";
 }
 .product-list-flag{
-    position: absolute;
-    left:850px;
-    top:100px;
+    float: right;
+    margin-top: 30px;
 }
 .lovetips{
     width:174px;
@@ -1516,6 +1512,8 @@ ul.common-tab > li.rest {
     padding:30px 50px;
     min-height:220px;
     background-color: #ffffff;
+    width: 1130px;
+    margin: 0 auto;
 }
 .list-white-left{
 	width:209px;
@@ -1552,6 +1550,9 @@ ul.common-tab > li.rest {
     vertical-align: middle;
     background:url("../../images/client/confirm_normal.png") no-repeat 0 0;
     cursor: pointer;
+}
+.wishList.active{
+    background:url("../../images/client/confirm_pressed.png") no-repeat 0 0;
 }
 .list-white-cnt{
     padding:20px 0px;
@@ -1633,4 +1634,28 @@ ul.common-tab > li.rest {
 .product-container .foot .service-tel .telnum {
     font-size: 15px;
 }
+.pro-item-box {
+    height: 540px;  /*  图片显示出来的高度 */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.content-above-image {
+    position: relative;
+    z-index: 50;
+    top: 0;
+    margin: 20px auto 0;
+}
+.parallax-image-wrapper {
+    z-index: -5;
+    position: relative;
+    width: 100%;
+    float: right;
+    display: inline-block;
+}
+.parallax-image-wrapper img {
+    top: -800px;   /*  默认需要显示出来的图片位置  */
+    position: relative;
+}
+
 /*   产品列表  end   */

@@ -15,16 +15,14 @@
     <link rel="stylesheet" type="text/css" href="../../css/client/productInfo.css">
 
     <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
-    <!-- <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script> -->
-    <script type="text/javascript" src="../../js/bootdist/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/jquery.color-2.1.2.min.js"></script>
     <script type="text/javascript" src="../../js/global/global.js"></script>
     <script type="text/javascript" src="../../js/client/common.js"></script>
-    <!--  渐变背景和mainbox 需要调整距离和位置，引入adjust.js  -->
-    <script type="text/javascript" src="../../js/client/adjust.js"></script>
-    <script type="text/javascript" src="../../js/client/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../../js/vendor/jquery.lazyload.js"></script>
+    <!-- <script type="text/javascript" src="../../js/vendor/skrollr.min.js"></script> -->
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../../js/base/html5.js"></script>
@@ -49,20 +47,23 @@
 </header>
 
 <div class="product-container">
-    <section class="product-wrapper">
-        <div class="pro-list-box">
-            <img src="../../images/client/productListImg01.jpg" data-original="../../images/client/productListImg01.jpg"
-                 alt="产品列表一" draggable="false" class="pro-list-img"/>
-        </div>
-        <div class="product-one-text">
-            <p>年轻人的第一次高逼格出国旅行</p>
+    <section class="product-wrapper">        
+        <div class="pro-item-box img-target-1">
+            <div class="content-above-image clearfix">
+                <div class="product-one-text">
+                    <p>年轻人的第一次高逼格出国旅行</p>
 
-            <div class="product-one-txt">上海-暹粒·5天4晚<span class="product-num">2339</span><span
-                    class="product-up">起</span></div>
-            <p style="margin-top:20px;"><a href="javascript:void(0);"><label class="start-trip"></label></a></p>
-        </div>
-        <div class="product-list-flag">
-            <label class="lovetips"></label>
+                    <div class="product-one-txt">上海-暹粒·5天4晚<span class="product-num">2339</span><span
+                            class="product-up">起</span></div>
+                    <p style="margin-top:20px;"><a href="javascript:void(0);"><label class="start-trip"></label></a></p>
+                </div>
+                <div class="product-list-flag">
+                    <label class="lovetips"></label>
+                </div>
+            </div>
+            <div class="parallax-image-wrapper" data-anchor-target=".img-target-1" data-bottom-top="bottom:-75%;" data-top-bottom="bottom:75%;">
+                <img src="../../images/client/pro-hd-img-01.jpg" data-original="../../images/client/pro-hd-img-01.jpg">
+            </div>
         </div>
         <div class="pro-list-white clearfix">
             <div class="list-white-left clearfix">
@@ -105,20 +106,23 @@
         </div>
     </section>
     <section class="product-wrapper">
-        <div class="pro-list-box">
-            <img src="../../images/client/productListImg02.jpg" data-original="../../images/client/productListImg02.jpg"
-                 alt="产品列表二" class="pro-list-img"/>
-        </div>
-        <div class="product-one-text">
-            <p>体验法式风情的柬埔寨</p>
+        <div class="pro-item-box img-target-2">
+            <div class="content-above-image clearfix">
+                <div class="product-one-text">
+                    <p>体验法式风情的柬埔寨</p>
 
-            <div class="product-one-txt">上海-柬埔寨·4天3晚<span class="product-num">3999</span><span
-                    class="product-up">起</span></div>
-            <p style="margin-top:20px;"><a href="javascript:void(0);"><label class="start-trip"></label></a></p>
-        </div>
-        <div class="product-list-flag">
-            <label class="lovetips"></label>
-        </div>
+                    <div class="product-one-txt">上海-柬埔寨·4天3晚<span class="product-num">3999</span><span
+                            class="product-up">起</span></div>
+                    <p style="margin-top:20px;"><a href="javascript:void(0);"><label class="start-trip"></label></a></p>
+                </div>
+                <div class="product-list-flag">
+                    <label class="lovetips"></label>
+                </div>
+            </div>
+            <div class="parallax-image-wrapper" data-anchor-target=".img-target-2" data-bottom-top="bottom:-75%;" data-top-bottom="bottom:75%;">                
+                <img src="../../images/client/pro-hd-img-02.jpg" data-original="../../images/client/pro-hd-img-02.jpg"/>
+            </div>
+        </div>        
         <div class="pro-list-white clearfix">
             <div class="list-white-left clearfix">
                 <p class="list-white-title">热门标签</p>
@@ -160,19 +164,22 @@
         </div>
     </section>
     <section class="product-wrapper">
-        <div class="pro-list-box">
-            <img src="../../images/client/productListImg03.jpg" data-original="../../images/client/productListImg03.jpg"
-                 alt="产品列表三" class="pro-list-img"/>
-        </div>
-        <div class="product-one-text">
-            <p>瑞士风情游,体验不一样的旅途</p>
+        <div class="pro-item-box img-target-3">
+            <div class="content-above-image clearfix">
+                <div class="product-one-text">
+                    <p>瑞士风情游,体验不一样的旅途</p>
 
-            <div class="product-one-txt">上海-瑞士·6天5晚<span class="product-num">5899</span><span
-                    class="product-up">起</span></div>
-            <p style="margin-top:20px;"><a href="javascript:void(0);"><label class="start-trip"></label></a></p>
-        </div>
-        <div class="product-list-flag">
-            <label class="lovetips"></label>
+                    <div class="product-one-txt">上海-瑞士·6天5晚<span class="product-num">5899</span><span
+                            class="product-up">起</span></div>
+                    <p style="margin-top:20px;"><a href="javascript:void(0);"><label class="start-trip"></label></a></p>
+                </div>
+                <div class="product-list-flag">
+                    <label class="lovetips"></label>
+                </div>
+            </div>
+            <div class="parallax-image-wrapper" data-anchor-target=".img-target-3" data-bottom-top="bottom:-75%;" data-top-bottom="bottom:75%;">
+                <img src="../../images/client/pro-hd-img-03.jpg" data-original="../../images/client/pro-hd-img-03.jpg"/>
+            </div>
         </div>
         <div class="pro-list-white clearfix">
             <div class="list-white-left clearfix">
@@ -215,6 +222,8 @@
             </div>
         </div>
     </section>
+    <!--  底部暂未确定，以后再重构  -->
+    <!--
     <div class="product-row">
         <div class="product-clomu">
             <p>关于真旅行</p>
@@ -240,11 +249,16 @@
             </div>
         </div>
     </div>
-    <div class="foot clearfix" style="margin-top: 50px;">
-        <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
-        <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+    -->
+    <div class="foot-wrapper">        
+        <div class="foot clearfix" style="margin-top: 50px;">
+            <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+            <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+        </div>
     </div>
 </div>
+
+    <script type="text/javascript" src="../../js/vendor/skrollr.min.js"></script>
 
 <script type="text/javascript">
     $(function () {
@@ -257,6 +271,17 @@
             fx: "swing",
             speed: 300,
             changeTextColor: "#fff"
+        });
+
+        //  时差滚动效果初始化
+        skrollr.init({
+            smoothScrolling: false,
+            mobileDeceleration: 0.004,
+            forceHeight: false
+        });
+
+        $(".wishList").click(function(){
+            $(this).toggleClass("active");
         });
     });
 

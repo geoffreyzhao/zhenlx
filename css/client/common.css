@@ -451,6 +451,10 @@ header .head {
 	min-height: 562px;
 }
 
+.foot-wrapper {
+    background-color: #2b8b82;
+}
+
 .main-container .foot {
 	width: 1130px;
 	margin: 0 auto;
