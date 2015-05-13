@@ -1642,7 +1642,7 @@ ul.common-tab > li.rest {
 }
 .content-above-image {
     position: relative;
-    z-index: 50;
+    z-index: 2;
     top: 0;
     margin: 20px auto 0;
 }
@@ -1658,4 +1658,184 @@ ul.common-tab > li.rest {
     position: relative;
 }
 
+/*  导航目的地样式 S  */
+.dropdown .dropdownBtn{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.searchModel .leftBorderStyle,
+.searchModel .rightBorderStyle{
+    display: inline-block;
+    width: 7px;
+    height: 84px;
+    background: url("../../images/client/searchBorder.png") no-repeat;
+    vertical-align: top;
+}
+.searchModel .leftBorderStyle{
+    background-position: 0 0;
+}
+.searchModel .rightBorderStyle{
+    background-position: -12px 0;
+}
+.searchModel {
+    position: absolute;
+    left: 20%;
+    z-index: 3;
+}
+.searchInnerWrapper {
+    width: 1130px;
+}
+.searchModel .searchContent{
+    display: inline-block;    
+    width: 100%;
+    height: 84px;
+    margin: 0 -5px;
+    color: #fff;
+    background-color: rgb(6,38,50);
+    background-color: rgba(6,38,50,0.9); 
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.searchContent .searchTab{
+    margin: 20px 0 0 10px;
+}
+.searchContent .searchTab input[type="text"]{
+    color: #434343;
+    padding-left: 35px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.searchContent .searchTab th{
+    font-size: 18px;
+}
+.searchTab .addIcon{
+    display: inline-block;
+    position: relative;
+}
+.addIcon .commonIcon{
+    position: absolute;
+    top: 28%;
+    left: 3px;
+}
+.startOffPlace .startOffIcon{
+    width: 19px;
+    height: 19px;
+    background-position: -24px -190px;
+}
+.destination .destinationIcon{
+    width: 19px;
+    height: 20px;
+    background-position: -48px -190px;
+}
+.travelTime .timeIcon{
+    width: 16px;
+    height: 16px;
+    background-position: -71px -190px;
+    top: 33%;
+}
+.weatherStatus .weatherIcon{
+    display: inline-block;
+    width: 37px;
+    height: 33px;
+    background: url("../../images/client/weatherIcon.png") no-repeat 0 0;
+    vertical-align: top;
+    margin-right: 5px;
+}
+.weatherStatus .numberOfDegrees{
+    font-size: 24px;
+    margin-right: 10px;
+}
+.searchTab .regionFonts{
+    font-size: 13px;
+}
+.searchTab .startOffPlaceModel,
+.searchTab .destinationModel{
+    position: relative;
+}
+.startOffPlaceModel .selectStartOffPlace{
+    font-size: 14px;
+    color: #555555;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: absolute;
+    top: 41px;
+    left: 0;
+    display: none;
+}
+.startOffPlaceModel .selectStartOffPlace > li{
+    width: 260px;
+    padding: 10px 0;
+    margin: 0 10px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    cursor: pointer;
+}
+.startOffPlaceModel .selectStartOffPlace > li:first-child{
+    border-top: none;
+}
+.startOffPlaceModel .selectStartOffPlace > li.active,
+.startOffPlaceModel .selectStartOffPlace > li:hover{
+    color: #11b9b7;
+}
+.destinationModel .selectDestination{
+    width: 545px;
+    font-size: 12px;
+    color: #555555;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    display: none;
+}
+.selectDestination .selectLeft{
+    display: inline-block;
+    width: 180px;
+    background-color: #fff;
+}
+.selectDestination .cityList > li{
+    padding: 10px 0;
+    margin: 0 15px;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+.selectDestination .cityList > li:first-child{
+    border-top: none;
+}
+.cityList > li .selectTitle{
+    font-size: 14px;
+    color: #11b9b7;
+    margin: 5px 0;
+    padding: 0;
+}
+.cityList .selectCity span{
+    display: inline-block;
+    padding-top: 10px;
+    width: 48%;
+    text-align: left;
+}
+.selectDestination .selectRight{
+    display: inline-block;
+    width: 360px;
+    vertical-align: top;
+}
+.selectDestination .selectRight > li{
+    border-top: none;
+}
+.cityList.selectRight > li .selectTitle{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.cityList.selectRight .selectCity span{
+    width: 32%;
+}
+/*  导航目的地样式 E  */
+
 /*   产品列表  end   */
+
