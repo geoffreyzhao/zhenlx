@@ -97,9 +97,44 @@
 }
 .order-titleBlock,
 .commonOrderModel{
-    border-bottom:1px dashed #0c8694;
+    border-bottom:1px dashed #c2dadf;
     padding:10px 0 10px 70px;
     position: relative;
+}
+.order-titleBlock .pro-basic-info {
+    float: left;
+}
+.order-titleBlock .person-count-block {
+    float: right;
+    margin-top: 12px;
+    margin-right: 50px;
+}
+.person-count-block .adult-count {
+    float: left;
+    text-align: center;
+}
+.person-count-block .child-count {
+    float: right;
+    text-align: center;
+    margin-left: 20px;
+}
+.person-count-block .count {
+    font-size: 24px;
+}
+.person-count-block .person-type {
+    font-size: 15px;
+    color: #9f9f9f;
+}
+.order-titleBlock .back-lineArrow {
+    background: url("../../images/client/order-spirit.png") no-repeat 0 -112px;
+    display: inline-block;
+    width: 19px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 10px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
 .order-titleBlock h3 {
     font-size: 22px;
@@ -147,7 +182,7 @@
 }
 /* 机票 */
 .order-conBlock {
-    border-bottom:1px dashed #0c8694;
+    border-bottom:1px dashed #c2dadf;
     padding:3px 0 3px 0;
     position: relative;
 }
@@ -310,7 +345,7 @@
 }
 /* 旅客信息 */
 .order-conBlockTitle {
-    border-bottom:1px dashed #0c8694;
+    border-bottom:1px dashed #c2dadf;
     padding:10px 0 10px 20px;
     position: relative;
     font-size: 20px;
@@ -376,7 +411,7 @@
     cursor: pointer;
 }
 .guestInfo-item {
-    border-bottom:1px dashed #0c8694;
+    border-bottom:1px dashed #c2dadf;
     margin:3px 0 3px 0;
     padding:3px 0 3px 0;
     position: relative;
