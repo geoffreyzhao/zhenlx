@@ -638,6 +638,7 @@
                             </div>
                             <div class="buttonDiv">
                                 <a href="javascript:void(0);" class="bigOrangeBtn active checkUser" style="width:220px;">提交订单</a>
+                                <button class="priceChangeBtn">变价提示</button>
                             </div>
                         </div>
                         
@@ -784,6 +785,26 @@
         </div>
 
     </div>
+
+    <!-- 变价弹窗提示 -->
+    <div class="modal" id="priceChangeTip">
+        <div class="modal-dialog" style="width: 450px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">变价提示</h4>
+                </div>
+                <div class="modal-body">                    
+                    <p>您的订单价格有变动，现价为：<span class="total-price">￥3566</span></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="commonBtn blueBtn width170">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!--  经停提示信息模板  -->
     <script type="text/html" id="stop_flight_template">
@@ -853,6 +874,16 @@
             $(".checkUser").click(function(){
                $("#checkUser").modal("show");
 
+            });
+
+            $("#priceChangeTip").modal({
+                show: false,
+                backdrop:"static",
+                keyboard: false
+            });
+
+            $(".priceChangeBtn").click(function(){
+                $("#priceChangeTip").modal("show");  //  关闭弹窗  $(ele).modal("hide");
             });
 
         });
