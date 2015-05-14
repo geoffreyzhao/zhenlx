@@ -1423,11 +1423,14 @@ ul.common-tab > li.rest {
 }
 .product-clomu p{
     padding:10px 0px;
-    font:bold 15px/25px arial, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: bold;
     color:#fff;
 }
 .product-clomu-txt{
-    font:13px/18px arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
     padding-right:35px;
     color:#8efff5;
 }
@@ -1445,7 +1448,9 @@ ul.common-tab > li.rest {
     margin-top: 175px;
 }
 .product-one-text p{
-    font:bold 35px/40px "Microsoft Yahei";
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 40px;
 }
 .product-list-flag{
     float: right;
@@ -1459,17 +1464,21 @@ ul.common-tab > li.rest {
     background:url("../../images/client/lovetips.png") no-repeat 0 0;
 }
 .product-one-txt{
-    font:33px/40px "Microsoft Yahei";
+    font-size: 33px;
+    line-height: 40px;
     font-weight: 300;
 }
 .product-num{
-    font:bold 40px/40px "Microsoft Yahei";
+    font-size: 40px;
+    font-weight: bold;;
+    line-height: 40px;
 }
 .product-up{
     position:relative;
     top:-18px;
     left:5px;
-    font:20px/20px "Microsoft Yahei";
+    font-size: 20px;
+    line-height: 20px;
 }
 .start-trip{
     width:148px;
@@ -1488,7 +1497,8 @@ ul.common-tab > li.rest {
     margin-bottom:10px;
 }
 .product-clomu ul li a{
-    font:13px/18px arial,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
     color:#8efff5;
     padding-bottom: 5px;
     border-bottom: 1px solid #47b9a9;
@@ -1536,7 +1546,8 @@ ul.common-tab > li.rest {
 	float:left;	
 }
 .list-white-title{
-    font:18px/20px "Microsoft Yahei";
+    font-size: 18px;
+    line-height: 20px;
     color:#bdbdbd;
 }
 .confirm-flag{
@@ -1580,7 +1591,8 @@ ul.common-tab > li.rest {
 	width:193px;
     margin-left:10px;
     float:right;
-    font:14px/25px "Microsoft Yahei";
+    font-size: 14px;
+    line-height: 25px;
     color:#565656;
 }
 .locImg{
@@ -1613,7 +1625,8 @@ ul.common-tab > li.rest {
     padding:5px 8px;
     margin:5px 0px;
     margin-right:5px;
-    font:14px/18px "Microsoft Yahei";
+    font-size: 14px;
+    line-height: 18px;
     color:#ffffff;
 }
 .label-color-one{
@@ -1635,7 +1648,7 @@ ul.common-tab > li.rest {
     font-size: 15px;
 }
 .pro-item-box {
-    height: 540px;  /*  图片显示出来的高度 */
+    height: 450px;  /*  图片显示出来的高度 */
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -1644,18 +1657,32 @@ ul.common-tab > li.rest {
     position: relative;
     z-index: 2;
     top: 0;
-    margin: 20px auto 0;
+    width: 1920px;
+    margin: 0;
+    float: right;
+    right: 50%;
+}
+.content-above-image img {
+    position: relative;
+    right: -50%;
+}
+.content-above-image a {
+    position: absolute;
+    left: 76.5%;
+    bottom: 35px;
 }
 .parallax-image-wrapper {
     z-index: -5;
     position: relative;
-    width: 100%;
+    width: 1920px;    /*  可能会改  */
     float: right;
+    right: 50%;
     display: inline-block;
 }
 .parallax-image-wrapper img {
-    top: -800px;   /*  默认需要显示出来的图片位置  */
+    top: -780px;   /*  默认需要显示出来的图片位置  */
     position: relative;
+    right: -50%;
 }
 
 /*  导航目的地样式 S  */
@@ -1680,11 +1707,12 @@ ul.common-tab > li.rest {
 }
 .searchModel {
     position: absolute;
-    left: 20%;
+    width: 100%;
     z-index: 3;
 }
 .searchInnerWrapper {
     width: 1130px;
+    margin: 0 auto;
 }
 .searchModel .searchContent{
     display: inline-block;    

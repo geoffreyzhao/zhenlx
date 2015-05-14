@@ -124,4 +124,7 @@ pre {
     font-family: "Microsoft YaHei";
     font-weight: normal;
     background: none;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
 }
