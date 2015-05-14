@@ -54,11 +54,11 @@
             <table class="searchTab">
                 <colgroup>
                     <col width="65">
-                    <col width="300">
+                    <col width="200">
                     <col width="65">
-                    <col width="300">
+                    <col width="255">
                     <col width="50">
-                    <col width="210">
+                    <col width="200">
                     <col width="">
                 </colgroup>
                 <tbody>
@@ -68,7 +68,8 @@
                         <div class="startOffPlaceModel">
                             <div class="addIcon startOffPlace">
                                 <span class="commonIcon startOffIcon"></span>
-                                <input type="text" class="startOffInput" value="上海" style="width: 280px;" readonly="readonly">
+                                <input type="text" class="startOffInput" value="上海" style="width: 170px;" readonly="readonly">
+                                <span class="caret"></span>
                             </div>
                             <ul class="selectStartOffPlace">
                                 <li class="active">上海</li>
@@ -82,11 +83,11 @@
                         <div class="destinationModel">
                             <div class="addIcon destination">
                                 <span class="commonIcon destinationIcon"></span>
-                                <input type="text" class="destinationInput" value="墨尔本" style="width: 280px;" readonly="readonly">
+                                <input type="text" class="destinationInput" value="墨尔本" style="width: 225px;" readonly="readonly">
                                 <input id="customer" type="hidden" val="asdasd"/>
                             </div>
                             <div class="selectDestination">
-                                <ul class="cityList selectLeft">
+                                <!-- <ul class="cityList selectLeft">
                                     <li>
                                         <h3 class="selectTitle">境内线路 China</h3>
                                         <div class="selectCity">
@@ -228,6 +229,28 @@
                                             <span>坦桑尼亚</span>
                                             <span>印度尼西亚</span>
                                         </div>
+                                    </li>
+                                </ul> -->
+                                <ul class="cityList selectLeft">
+                                    <li>
+                                        <span>国内精选</span>
+                                        <span class="nav-tree-arrow"></span>
+                                    </li>
+                                    <li>
+                                        <span>日韩</span>
+                                        <span class="nav-tree-arrow"></span>
+                                    </li>
+                                    <li>
+                                        <span>东南亚</span>
+                                        <span class="nav-tree-arrow"></span>
+                                    </li>
+                                    <li>
+                                        <span>欧洲</span>
+                                        <span class="nav-tree-arrow"></span>
+                                    </li>
+                                </ul>
+                                <ul class="cityList selectRight">
+                                    <li>
                                     </li>
                                 </ul>
                             </div>
@@ -506,8 +529,12 @@
             $(".searchTab .startOffPlace input").val($(this).html());
             $(".selectStartOffPlace").hide();
         });
-        $(".searchTab .startOffPlace").click(function(){
-            $(this).siblings(".selectStartOffPlace").show();               
+        $(".searchTab .startOffPlace").click(function(event){
+            $(this).siblings(".selectStartOffPlace").toggle();
+            // event.stopPropagation();
+        });
+        $("body").click(function(){
+            $(".selectStartOffPlace").hide();
         });
         
         //目的地浮层

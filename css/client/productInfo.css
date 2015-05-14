@@ -1724,6 +1724,7 @@ ul.common-tab > li.rest {
     background-color: rgba(6,38,50,0.9); 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    padding: 0 90px;
 }
 .searchContent .searchTab{
     margin: 20px 0 0 10px;
@@ -1741,11 +1742,21 @@ ul.common-tab > li.rest {
 .searchTab .addIcon{
     display: inline-block;
     position: relative;
+    cursor: pointer;
 }
 .addIcon .commonIcon{
     position: absolute;
     top: 28%;
     left: 3px;
+}
+.addIcon .caret {
+    color: #11b9b7;
+    position: absolute;
+    top: 20px;
+    right: 7px;
+}
+.addIcon input {
+    cursor: pointer;
 }
 .startOffPlace .startOffIcon{
     width: 19px;
@@ -1795,12 +1806,13 @@ ul.common-tab > li.rest {
     display: none;
 }
 .startOffPlaceModel .selectStartOffPlace > li{
-    width: 260px;
+    width: 150px;
     padding: 10px 0;
     margin: 0 10px;
     border-top: 1px solid #e0e0e0;
-    text-align: center;
+    text-indent: 28px;
     cursor: pointer;
+    font-size: 15px;
 }
 .startOffPlaceModel .selectStartOffPlace > li:first-child{
     border-top: none;
@@ -1832,6 +1844,8 @@ ul.common-tab > li.rest {
     margin: 0 15px;
     border-top: 1px solid #e0e0e0;
     cursor: pointer;
+    font-size: 15px;
+    text-indent: 20px;
 }
 .selectDestination .cityList > li:first-child{
     border-top: none;
