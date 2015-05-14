@@ -83,7 +83,7 @@
                         <div class="destinationModel">
                             <div class="addIcon destination">
                                 <span class="commonIcon destinationIcon"></span>
-                                <input type="text" class="destinationInput" value="墨尔本" style="width: 225px;" readonly="readonly">
+                                <input type="text" class="destinationInput" value="泰国" style="width: 225px;" readonly="readonly">
                                 <input id="customer" type="hidden" val="asdasd"/>
                             </div>
                             <div class="selectDestination">
@@ -231,26 +231,49 @@
                                         </div>
                                     </li>
                                 </ul> -->
+                                <input type="hidden" id="selectedDestLevel" value="" />
                                 <ul class="cityList selectLeft">
                                     <li>
-                                        <span>国内精选</span>
+                                        <span class="dest-text">国内精选</span>
                                         <span class="nav-tree-arrow"></span>
                                     </li>
                                     <li>
-                                        <span>日韩</span>
+                                        <span class="dest-text">日韩</span>
                                         <span class="nav-tree-arrow"></span>
                                     </li>
                                     <li>
-                                        <span>东南亚</span>
+                                        <span class="dest-text">东南亚</span>
                                         <span class="nav-tree-arrow"></span>
                                     </li>
                                     <li>
-                                        <span>欧洲</span>
+                                        <span class="dest-text">欧洲</span>
                                         <span class="nav-tree-arrow"></span>
                                     </li>
+                                    <li class="empty"></li>
                                 </ul>
                                 <ul class="cityList selectRight">
                                     <li>
+                                        <div>九寨沟</div>
+                                        <div>北京</div>
+                                        <div>海南岛</div>
+                                        <div>杭州</div>
+                                        <div>丽江</div>
+                                    </li>
+                                    <li>
+                                        <div>首尔</div>
+                                        <div>济州岛</div>
+                                        <div>东京</div>
+                                    </li>
+                                    <li>
+                                        <div>泰国</div>
+                                        <div>新加坡</div>
+                                        <div>柬埔寨</div>
+                                        <div>普吉岛</div>
+                                        <div>马尔代夫</div>
+                                    </li>
+                                    <li>
+                                        <div>意大利</div>
+                                        <div>法国</div>
                                     </li>
                                 </ul>
                             </div>
@@ -258,16 +281,16 @@
                     </td>
                     <th>主题</th>
                     <td>
-                        <div class="dropdown" style="width: 170px;">
-                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
-                                <span class="activeFonts">蜜月</span>
+                        <div class="themeModal">
+                            <div class="addIcon theme">
+                                <span class="commonIcon themeIcon"></span>
+                                <input type="text" class="themeInput" value="蜜月" style="width: 170px;" readonly="readonly">
                                 <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="javascript:void(0);">全部</a></li>
-                                <li><a href="javascript:void(0);">度假</a></li>
-                                <li><a href="javascript:void(0);">购物</a></li>
-                                <li class="active"><a href="javascript:void(0);">蜜月</a></li>
+                            </div>
+                            <ul class="selectTheme">
+                                <li class="active">蜜月</li>
+                                <li>亲子</li>
+                                <li>休闲</li>
                             </ul>
                         </div>
                     </td>
@@ -527,31 +550,65 @@
             $(this).addClass("active");
             $(this).siblings("li").removeClass("active");
             $(".searchTab .startOffPlace input").val($(this).html());
-            $(".selectStartOffPlace").hide();
         });
         $(".searchTab .startOffPlace").click(function(event){
             $(this).siblings(".selectStartOffPlace").toggle();
-            // event.stopPropagation();
+            $(".selectDestination").hide();
+            $(".selectTheme").hide();
+            event.stopPropagation();
         });
         $("body").click(function(){
             $(".selectStartOffPlace").hide();
         });
         
-        //目的地浮层
-        $(".selectRight .selectCity span,.selectLeft .selectCity span").click(function(){
+        //目的地浮层，左右两级没有联通
+        
+        $(".destinationModel .destination").click(function(event){
+            $(this).siblings(".selectDestination").toggle();
+            $(".selectStartOffPlace").hide();
+            $(".selectTheme").hide();
+            event.stopPropagation();
+        });
+        $(".selectRight > li > div").click(function(){
+            $(".destinationInput").val($(this).html());
+            $("#selectedDestLevel").val(2);
+            $(".selectRight > li > div").removeClass("active");
             $(this).addClass("active");
-            $(this).siblings("span").removeClass("active");
-            $(".searchTab .destination .destinationInput").val($(this).html());
-            $(".selectDestination").hide();
+            $(this).closest(".selectDestination").hide();
         });
-        $(".destinationModel .destination").click(function(){
-            $(this).siblings(".selectDestination").show();
-        });
-        $(".selectLeft li").each(function(index){
+        $(".selectLeft li").not(".empty").each(function(index){
             $(this).mouseover(function(){
                 $(".selectRight li").hide();
                 $(".selectRight li:eq(" + index + ")").show();
             });
+
+            $(this).click(function(){
+                $(".destinationInput").val($(this).find(".dest-text").html());
+                $("#selectedDestLevel").val(1);
+                $(this).siblings("li").removeClass("active");
+                $(this).addClass("active");
+                $(this).closest(".selectDestination").hide();
+            });
+        });
+        $("body").click(function(){
+            $(".selectDestination").hide();
+        });
+
+        //主题
+        $(".selectTheme li").click(function(){
+            $(this).addClass("active");
+            $(this).siblings("li").removeClass("active");
+            $(".searchTab .theme input").val($(this).html());
+            $(".selectTheme").hide();
+        });
+        $(".searchTab .theme").click(function(event){
+            $(this).siblings(".selectTheme").toggle();
+            $(".selectStartOffPlace").hide();
+            $(".selectDestination").hide();
+            event.stopPropagation();
+        });
+        $("body").click(function(){
+            $(".selectTheme").hide();
         });
     });
 

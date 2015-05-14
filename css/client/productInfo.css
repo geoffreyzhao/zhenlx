@@ -1790,10 +1790,12 @@ ul.common-tab > li.rest {
     font-size: 13px;
 }
 .searchTab .startOffPlaceModel,
-.searchTab .destinationModel{
+.searchTab .destinationModel,
+.searchTab .themeModal {
     position: relative;
 }
-.startOffPlaceModel .selectStartOffPlace{
+.startOffPlaceModel .selectStartOffPlace,
+.themeModal .selectTheme {
     font-size: 14px;
     color: #555555;
     background-color: #fff;
@@ -1805,7 +1807,8 @@ ul.common-tab > li.rest {
     left: 0;
     display: none;
 }
-.startOffPlaceModel .selectStartOffPlace > li{
+.startOffPlaceModel .selectStartOffPlace > li,
+.themeModal .selectTheme > li {
     width: 150px;
     padding: 10px 0;
     margin: 0 10px;
@@ -1814,15 +1817,18 @@ ul.common-tab > li.rest {
     cursor: pointer;
     font-size: 15px;
 }
-.startOffPlaceModel .selectStartOffPlace > li:first-child{
+.startOffPlaceModel .selectStartOffPlace > li:first-child,
+.themeModal .selectTheme > li:first-child {
     border-top: none;
 }
 .startOffPlaceModel .selectStartOffPlace > li.active,
-.startOffPlaceModel .selectStartOffPlace > li:hover{
+.startOffPlaceModel .selectStartOffPlace > li:hover,
+.themeModal .selectTheme > li.active,
+.themeModal .selectTheme > li:hover {
     color: #11b9b7;
 }
 .destinationModel .selectDestination{
-    width: 545px;
+    width: 360px;
     font-size: 12px;
     color: #555555;
     background-color: #f7f7f7;
@@ -1836,8 +1842,11 @@ ul.common-tab > li.rest {
 }
 .selectDestination .selectLeft{
     display: inline-block;
-    width: 180px;
+    width: 175px;
     background-color: #fff;
+    margin: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 .selectDestination .cityList > li{
     padding: 10px 0;
@@ -1846,6 +1855,24 @@ ul.common-tab > li.rest {
     cursor: pointer;
     font-size: 15px;
     text-indent: 20px;
+    height: 42px;
+}
+.selectDestination .cityList > li .nav-tree-arrow {
+    width: 4px;
+    height: 7px;
+    background: url(../../images/client/green-right-arrow.png) no-repeat 0 0;
+    float: right;
+    margin-top: 8px;
+    margin-right: 6px;
+    display: none;
+}
+.selectDestination .selectLeft > li.active,
+.selectDestination .selectLeft > li:hover {
+    color: #11b9b7;
+}
+.selectDestination .selectLeft > li.active .nav-tree-arrow,
+.selectDestination .selectLeft > li:hover .nav-tree-arrow {
+    display: inline-block;
 }
 .selectDestination .cityList > li:first-child{
     border-top: none;
@@ -1864,11 +1891,22 @@ ul.common-tab > li.rest {
 }
 .selectDestination .selectRight{
     display: inline-block;
-    width: 360px;
+    width: 180px;
     vertical-align: top;
 }
 .selectDestination .selectRight > li{
     border-top: none;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+.selectDestination .selectRight > li div {
+    height: 42px;
+    line-height: 42px;
+}
+.selectDestination .selectRight > li div:hover,
+.selectDestination .selectRight > li div.active {
+    color: #11b9b7;
 }
 .cityList.selectRight > li .selectTitle{
     padding-bottom: 10px;
@@ -1876,6 +1914,13 @@ ul.common-tab > li.rest {
 }
 .cityList.selectRight .selectCity span{
     width: 32%;
+}
+.addIcon .themeIcon {
+    display: inline-block;
+    background: url(../../images/client/inputThemeIcon.png) no-repeat 0 0;
+    width: 18px;
+    height: 17px;
+    vertical-align: middle;
 }
 /*  导航目的地样式 E  */
 
