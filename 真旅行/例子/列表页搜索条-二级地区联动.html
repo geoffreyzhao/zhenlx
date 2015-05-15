@@ -63,6 +63,11 @@
 			position: relative;
 		}
 
+		.second-level > li:hover,
+		.second-level > li.active {
+			color: red;
+		}
+
 	</style>
 </head>
 <body>
@@ -114,25 +119,37 @@
 			$(this).find(".second-level").show();
 		});
 
-		$(".first-level > li").click(function(){
+		$(".first-level > li").click(function(event){
 			$(this).siblings("li").removeClass("active");
 			$(this).addClass("active");
+
+			$(".second-destName").removeClass("active");
+
 			$("#dest").val($(this).find(".first-destName").html());
 		});
 
-
-
 		$(".first-level").mouseleave(function(event){
 
-			$(".first-level").children("li").each(function(index){
-				if ($(".first-level").children("li").hasClass("active")) {
-					$('.second-level').hide();
-					$(this).children('.second-level').show();
-				} else {
-					$('.second-level').hide();
-					$(".first-level").children("li").eq(0).children('.second-level').show();
-				}
-			});
+			if ($(".first-level").children("li.active").length != 0) {
+				$('.second-level').hide();
+				$(".first-level").children("li.active").children('.second-level').show();
+			} else {
+				$('.second-level').hide();
+				$(".first-level").children("li").eq(0).children('.second-level').show();
+			}
+
+		});
+
+		$(".second-destName").click(function(event){
+			$("#dest").val($(this).html());
+
+			$(".second-destName").removeClass("active");
+			$(this).addClass("active");
+
+			$(this).parents("li").siblings('li').removeClass("active");
+			$(this).parents("li").addClass("active");
+
+			event.stopPropagation();
 		});
 	});
 </script>
