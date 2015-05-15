@@ -1519,39 +1519,43 @@ ul.common-tab > li.rest {
     height:425px;
 }
 .pro-list-white{
-    padding:30px 50px;
+    padding:30px 0px;
     min-height:220px;
     background-color: #ffffff;
     width: 1130px;
     margin: 0 auto;
 }
 .list-white-left{
-	width:209px;
-	padding:10px;
+	width:270px;
+	padding-left:33px;
+    padding-top:5px;
 	min-height:200px;
-	border-right:1px #e1e1e1 solid;
 	float:left;
 }
 .list-white-right{
-	width:209px;
-	padding:10px;
+	width:130px;
+    padding-top:5px;
+	padding-left:30px;
+    margin-right:25px;
 	min-height:200px;
-	border-left:1px #e1e1e1 solid;
 	float:right;
 }
 .list-white-center{
-	width:510px;	
-	padding:10px 0px;
-	margin:0px 30px;
+	width:703px;
+    min-height:227px;
+    padding-top:5px;
+	padding-left:69px;
+    border-left:1px #ebebeb solid;
+    border-right:1px #ebebeb solid;
 	float:left;	
 }
 .list-white-title{
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 18px;
     color:#bdbdbd;
 }
 .confirm-flag{
-    padding-top:40px;
+    padding-top:42px;
     padding-bottom:30px;
 }
 .wishList{
@@ -1566,7 +1570,7 @@ ul.common-tab > li.rest {
     background:url("../../images/client/confirm_pressed.png") no-repeat 0 0;
 }
 .list-white-cnt{
-    padding:20px 0px;
+    padding-top:30px;
 }
 .list-white-cnt ul{
     list-style: none;
@@ -1577,22 +1581,23 @@ ul.common-tab > li.rest {
     margin:10px 0px;    
 }
 .locBox{
-	width:240px;
-	margin-bottom:20px;
+	width:269px;
+    margin-right:45px;
+	margin-bottom:42px;
 	float:left;	
 }
 .locFlag{
     width:34px;
+    height:37px;
     float:left;
-    margin-right:3px;
+    margin-right:11px;
     padding:5px 0px;
 }
 .locTxt{
-	width:193px;
-    margin-left:10px;
-    float:right;
-    font-size: 14px;
-    line-height: 25px;
+	width:224px;
+    float:left;
+    font-size: 16px;
+    line-height: 24px;
     color:#565656;
 }
 .locImg{
@@ -1622,26 +1627,27 @@ ul.common-tab > li.rest {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    padding:5px 8px;
-    margin:5px 0px;
-    margin-right:5px;
+    padding:5px 6px;
+    margin-bottom:12px;
+    margin-right:6px;
     font-size: 14px;
     line-height: 18px;
     color:#ffffff;
+    float: left;
 }
-.label-color-one{
+.label-color-1{
     background-color: #44bcda;
 }
-.label-color-two{
+.label-color-2{
     background-color: #df7eb0;
 }
-.label-color-three{
+.label-color-3{
     background-color: #ea9e26;
 }
-.label-color-four{
+.label-color-4{
     background-color: #11b9b7;
 }
-.label-color-five{
+.label-color-5{
     background-color: #aa87ae;
 }
 .product-container .foot .service-tel .telnum {
