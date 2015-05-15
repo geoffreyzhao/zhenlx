@@ -1487,6 +1487,7 @@ ul.common-tab > li.rest {
     display: inline-block;
     vertical-align: middle;
     background:url("../../images/client/proListflag01.png") no-repeat 0 0;
+    margin-bottom: 0;
 }
 .product-clomu ul{
     list-style: none;
@@ -1676,6 +1677,10 @@ ul.common-tab > li.rest {
     position: absolute;
     left: 76.5%;
     bottom: 35px;
+}
+.content-above-image a:hover {
+    background-color: rgb(229,199,86);
+    background-color: rgba(229,199,86,0.6);
 }
 .parallax-image-wrapper {
     z-index: -5;

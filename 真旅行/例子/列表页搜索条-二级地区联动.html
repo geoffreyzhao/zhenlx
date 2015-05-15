@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索条</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/temp_productInfo.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/underscore.js"></script>
+    <script type="text/javascript" src="../../js/global/global.js"></script>
+    <script type="text/javascript" src="../../js/client/common.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
+    <![endif]-->
+
+	<style type="text/css">
+		.first-level {
+			width: 300px;			
+			position: relative;
+			height: 200px;
+		}
+
+		.first-level > li {
+			cursor: pointer;
+			height: 50px;
+			line-height: 50px;
+			background-color: #999;
+		}
+
+		.first-level > li:hover > span,
+		.first-level > li.active > span {
+			color: red;
+		}
+
+		.second-level {
+			display:none;
+			width: 300px;
+			position: absolute;
+			left: 300px;
+			top: 0;
+			height: 200px;
+			background-color: #11b9b7;
+		}
+
+		.second-level > li {
+			cursor: pointer;
+			height: 50px;
+			line-height: 50px;
+			background-color: #11b9b7;
+			position: relative;
+		}
+
+	</style>
+</head>
+<body>
+
+两级联动搜索条---目的地：<input type="text" id="dest" placeholder="目的地" />
+
+<ul class="first-level">
+    <li>
+    	<span class="first-destName">境内游</span>
+    	<ul class="second-level">
+    	    <li class="second-destName">九寨沟</li>
+    	    <li class="second-destName">北京</li>
+    	    <li class="second-destName">杭州</li>
+    	    <li class="second-destName">三亚</li>
+    	</ul>
+    </li>
+    <li>
+    	<span class="first-destName">日韩</span>
+    	<ul class="second-level">
+    	    <li class="second-destName">首尔</li>
+    	    <li class="second-destName">济州岛</li>
+    	    <li class="second-destName">东京</li>
+    	</ul>
+    </li>
+    <li>
+    	<span class="first-destName">东南亚</span>
+    	<ul class="second-level">
+    	    <li class="second-destName">泰国</li>
+    	    <li class="second-destName">新加坡</li>
+    	    <li class="second-destName">柬埔寨</li>
+    	</ul>
+    </li>
+    <li>
+    	<span class="first-destName">欧洲</span>
+    	<ul class="second-level">
+    	    <li class="second-destName">意大利</li>
+    	    <li class="second-destName">法国</li>
+    	</ul>
+    </li>
+</ul>
+
+<script type="text/javascript">
+	$(function(){
+
+		$(".second-level").eq(0).show();
+
+		$(".first-level > li").mouseover(function(){
+			$(this).siblings("li").find(".second-level").hide();
+			$(this).find(".second-level").show();
+		});
+
+		$(".first-level > li").click(function(){
+			$(this).siblings("li").removeClass("active");
+			$(this).addClass("active");
+			$("#dest").val($(this).find(".first-destName").html());
+		});
+
+
+
+		$(".first-level").mouseleave(function(event){
+
+			$(".first-level").children("li").each(function(index){
+				if ($(".first-level").children("li").hasClass("active")) {
+					$('.second-level').hide();
+					$(this).children('.second-level').show();
+				} else {
+					$('.second-level').hide();
+					$(".first-level").children("li").eq(0).children('.second-level').show();
+				}
+			});
+		});
+	});
+</script>
+	
+</body>
+</html>
