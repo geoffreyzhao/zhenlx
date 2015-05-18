@@ -113,7 +113,7 @@
 }
 .bannerBottomList .middleListContent{
     display: inline-block;
-    width: 1030px;
+    width: 1040px;
     height: 97px;
     margin: 0 -5px;
     background-color: #585481;
@@ -126,8 +126,8 @@
 .bannerBottomHint li{
     display: inline-block;
     float: left;
-    width: 255px;
-    padding: 10px;
+    width: 260px;
+    padding: 10px 5px;
     border-left: 1px solid #79769a;
 }
 .bannerBottomHint li:first-child{
@@ -140,12 +140,12 @@
     height: 37px;
     background: url("../../images/client/productInfoIcon.png") no-repeat 0 0;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 5px;
     float: left;
 }
 .bannerBottomHint .hintContent{
     float: left;
-    width: 190px;
+    width: 210px;
 }
 
 .mainContent{
@@ -1545,7 +1545,7 @@ ul.common-tab > li.rest {
 	width:703px;
     min-height:227px;
     padding-top:5px;
-	padding-left:69px;
+	padding-left:50px;
     border-left:1px #ebebeb solid;
     border-right:1px #ebebeb solid;
 	float:left;	
@@ -1582,8 +1582,8 @@ ul.common-tab > li.rest {
     margin:10px 0px;    
 }
 .locBox{
-	width:269px;
-    margin-right:45px;
+	width:285px;
+    margin-right:40px;
 	margin-bottom:42px;
 	float:left;	
 }
@@ -1595,11 +1595,19 @@ ul.common-tab > li.rest {
     padding:5px 0px;
 }
 .locTxt{
-	width:224px;
+	width:240px;
     float:left;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 42px;
     color:#565656;
+    height: 48px;
+}
+.locTxt span {
+    display: inline-block;
+    line-height: 24px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .locImg{
     width:34px;
