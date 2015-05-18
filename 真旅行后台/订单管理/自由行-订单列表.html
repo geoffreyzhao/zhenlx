@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 自由行-订单列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/orderManagement.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+    <script type="text/javascript" src="../../js/maintain/customValidator.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+        
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="stairMenuContent">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                        <ul class="stairMenu">
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">产品管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">景点管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">国内机票</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">国际机票</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">酒店</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">文档下载</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav currentStairMenu">
+                                <a href="javascript:void(0);">订单管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">自由行订单</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">当地游订单</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">运营管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航111</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航222</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航333</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航444</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">会员管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">会员维护</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">心愿清单</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">常用旅客</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">财务&供应商系统</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航111</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航222</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航333</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航444</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">权限管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">会员维护</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">心愿清单</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">常用旅客</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel"></div>
+        </header>
+        <div class="main-container">
+            <section class="whiteBg">
+            <form id="searchConditionForm">
+                <ul class="searchList clearfix">
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="80">
+                                <col width="280">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>订 单 号</th>
+                                <td>
+                                    <input type="text" data-cv="required" style="width: 255px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>操 作 员</th>
+                                <td>
+                                    <div class="dropdown" style="width: 255px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                            <span class="activeFonts">min.fang</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="javascript:void(0);">min.fang</a></li>
+                                            <li><a href="javascript:void(0);">jingjing.su</a></li>
+                                            <li><a href="javascript:void(0);">yan.liu</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>建单日期</th>
+                                <td>
+                                    <input type="text" style="width: 115px;" class="datepicker default hasIcon">
+                                    <em> 至 </em>
+                                    <input type="text" style="width: 115px;" class="datepicker default hasIcon">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="80">
+                                <col width="280">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>产品 ID</th>
+                                <td>
+                                    <input type="text" style="width: 255px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>订单状态</th>
+                                <td>
+                                    <div class="dropdown" style="width: 255px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                            <span class="activeFonts">所有状态</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="javascript:void(0);">所有状态</a></li>
+                                            <li><a href="javascript:void(0);">待支付</a></li>
+                                            <li><a href="javascript:void(0);">支付超时</a></li>
+                                            <li><a href="javascript:void(0);">支付成功</a></li>
+                                            <li><a href="javascript:void(0);">OP确认</a></li>
+                                            <li><a href="javascript:void(0);">出行通知</a></li>
+                                            <li><a href="javascript:void(0);">出行中</a></li>
+                                            <li><a href="javascript:void(0);">完成</a></li>
+                                            <li><a href="javascript:void(0);">已取消</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>订单金额</th>
+                                <td>
+                                    <input type="text" style="width: 115px;" value="2000.00">
+                                    <em> 至 </em>
+                                    <input type="text" style="width: 115px;" value="3500.00">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="80">
+                                <col width="290">
+                                <col width="110">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>产品标题</th>
+                                <td>
+                                    <input type="text" placeholder="关键字" style="width: 255px;">
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="lightBlueBtn"><i class="searchIcon"></i>搜 索</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </form>
+                <section class="clearfix">
+                    <table class="commonTab">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="12%">
+                            <col width="7%">
+                            <col width="20%">
+                            <col width="10%">
+                            <col width="13%">
+                            <col width="18%">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>订单状态</th>
+                            <th>订单号</th>
+                            <th>产品ID</th>
+                            <th>产品标题</th>
+                            <th>创建时间</th>
+                            <th>订单金额</th>
+                            <th class="text-center">订单操作</th>
+                            <th>操作人</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>待支付</td>
+                            <td>1502131523</td>
+                            <td>D1008</td>
+                            <td>丽江-上海机+酒</td>
+                            <td>2015-03-19</td>
+                            <td class="orangefa7f1f">130.00</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0);">取消</a>
+                                <a href="javascript:void(0);">查看</a>
+                            </td>
+                            <td>min.fang</td>
+                        </tr>
+                        <tr>
+                            <td>支付超时</td>
+                            <td>1502131523</td>
+                            <td>D1008</td>
+                            <td>丽江-上海机+酒</td>
+                            <td>2015-03-19</td>
+                            <td class="orangefa7f1f">1300.00</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0);">取消</a>
+                                <a href="javascript:void(0);">查看</a>
+                            </td>
+                            <td>min.fang</td>
+                        </tr>
+                        <tr>
+                            <td>支付成功</td>
+                            <td>1502131523</td>
+                            <td>D1008</td>
+                            <td>丽江-上海机+酒</td>
+                            <td>2015-03-19</td>
+                            <td class="orangefa7f1f">11200.00</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0);">取消</a>
+                                <a href="javascript:void(0);">查看</a>
+                                <a href="javascript:void(0);">OP确认</a>
+                            </td>
+                            <td>min.fang</td>
+                        </tr>
+                        <tr>
+                            <td>OP确认</td>
+                            <td>1502131523</td>
+                            <td>D1008</td>
+                            <td>丽江-上海机+酒</td>
+                            <td>2015-03-19</td>
+                            <td class="orangefa7f1f">100.00</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0);">取消</a>
+                                <a href="javascript:void(0);">查看</a>
+                                <a href="javascript:void(0);">礼盒发放</a>
+                            </td>
+                            <td>min.fang</td>
+                        </tr>
+                        <tr>
+                            <td>礼盒发放</td>
+                            <td>1502131523</td>
+                            <td>D1008</td>
+                            <td>丽江-上海机+酒</td>
+                            <td>2015-03-19</td>
+                            <td class="orangefa7f1f">100.00</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0);">查看</a>
+                                <a href="javascript:void(0);">出行通知</a>
+                            </td>
+                            <td>min.fang</td>
+                        </tr>
+                        <tr>
+                            <td>出行通知</td>
+                            <td>1502131523</td>
+                            <td>D1008</td>
+                            <td>丽江-上海机+酒</td>
+                            <td>2015-03-19</td>
+                            <td class="orangefa7f1f">1000.00</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0);">查看</a>
+                            </td>
+                            <td>min.fang</td>
+                        </tr>
+                        <tr>
+                            <td>出行中</td>
+                            <td>1502131523</td>
+                            <td>D1008</td>
+                            <td>丽江-上海机+酒</td>
+                            <td>2015-03-19</td>
+                            <td class="orangefa7f1f">1000.00</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0);">查看</a>
+                            </td>
+                            <td>min.fang</td>
+                        </tr>
+                        <tr>
+                            <td>已完成</td>
+                            <td>1502131523</td>
+                            <td>D1008</td>
+                            <td>丽江-上海机+酒</td>
+                            <td>2015-03-19</td>
+                            <td class="orangefa7f1f">1000.00</td>
+                            <td class="text-center">
+                                <a href="javascript:void(0);">查看</a>
+                            </td>
+                            <td>min.fang</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span class="countNum">共 331 条记录，</span>
+                        <span class="pageNum">
+                            <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
+                            <ul class="paginationNum" style="display: none;">
+                                <li class="active">
+                                    <a href="javascript:void(0);">5</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">10</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">20</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">30</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">40</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">50</a>
+                                </li>
+                            </ul>
+                        </span>
+                        <span class="pageSize">1/10</span>
+                        <span class="pageArrow">
+                            <a href="javascript:void(0);" class="firstPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="prevPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="nextPage">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="lastPage">
+                                <i></i>
+                            </a>
+                        </span>
+                        <span>
+                            <span>跳转到</span>
+                            <input type="text" style="width: 45px;" class="pageToNum">
+                            <a href="javascript:void(0);" class="pageTo">
+                                <i></i>
+                            </a>
+                        </span>
+                    </div>
+                </section>
+            </section>
+            
+        </div>
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+
+    <div class="modal hide fade" id="ac-hangUp">
+        <div class="modal-dialog" style="width: 500px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">操作提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="popupContainer">
+                        <i class="warnIcon"></i>
+                        <span class="popupContainer-fonts">确认要挂起选中的会员吗？</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="commonButton red-fe6869Button">确认挂起</button>
+                    <button type="button" class="commonButton blue-45c8dcButton">点错了</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+<script>
+    $(function(){
+        $(".radioList .radio").click(function(){
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+        });
+
+        $(".commonTab tbody .checkbox").click(function(){
+            $(this).toggleClass("active");
+            var $that = $(this);
+
+            if ($(".commonTab tbody .checkbox").not(".active").length > 0) {
+                $that.parents("table").find(".allCheckbox").removeClass("active");
+            } else {
+                $that.parents("table").find(".allCheckbox").addClass("active");
+            }
+        });
+        
+        $(".allCheckbox").click(function(){
+            $(this).toggleClass("active");
+            if ($(this).hasClass("active")) {
+                $(this).parents("table").find(".checkbox").addClass("active");
+            } else {
+                $(this).parents("table").find(".checkbox").removeClass("active");
+            }
+        });
+        
+        $(".ac-hangUp").click(function(){
+            $("#ac-hangUp").modal();
+        });
+
+        $(".lightBlueBtn").click(function(){
+            var validateResult = $("#searchConditionForm").customValidate({
+                validateAll: true
+            });
+            //  表单验证通过返回 ture, 否则返回 false
+            console.log(validateResult);
+        });
+
+        
+    });
+</script>
+
+</body>
+</html>
