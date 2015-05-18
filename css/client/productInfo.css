@@ -1839,8 +1839,6 @@ ul.common-tab > li.rest {
     color: #11b9b7;
 }
 .destinationModel .selectDestination{
-    width: 360px;
-    font-size: 12px;
     color: #555555;
     background-color: #f7f7f7;
     border-radius: 5px;
@@ -1851,7 +1849,7 @@ ul.common-tab > li.rest {
     top: 41px;
     display: none;
 }
-.selectDestination .selectLeft{
+.selectDestination .cityList{
     display: inline-block;
     width: 175px;
     background-color: #fff;
@@ -1877,54 +1875,21 @@ ul.common-tab > li.rest {
     margin-right: 6px;
     display: none;
 }
-.selectDestination .selectLeft > li.active,
-.selectDestination .selectLeft > li:hover {
+.selectDestination .cityList > li.active .fl-destName,
+.selectDestination .cityList > li:hover .fl-destName {
     color: #11b9b7;
 }
-.selectDestination .selectLeft > li.active .nav-tree-arrow,
-.selectDestination .selectLeft > li:hover .nav-tree-arrow {
+.selectDestination .cityList > li.active .nav-tree-arrow,
+.selectDestination .cityList > li:hover .nav-tree-arrow {
     display: inline-block;
 }
 .selectDestination .cityList > li:first-child{
     border-top: none;
 }
-.cityList > li .selectTitle{
-    font-size: 14px;
-    color: #11b9b7;
+.cityList > li .fl-destName{
+    font-size: 15px;
     margin: 5px 0;
     padding: 0;
-}
-.cityList .selectCity span{
-    display: inline-block;
-    padding-top: 10px;
-    width: 48%;
-    text-align: left;
-}
-.selectDestination .selectRight{
-    display: inline-block;
-    width: 180px;
-    vertical-align: top;
-}
-.selectDestination .selectRight > li{
-    border-top: none;
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-.selectDestination .selectRight > li div {
-    height: 42px;
-    line-height: 42px;
-}
-.selectDestination .selectRight > li div:hover,
-.selectDestination .selectRight > li div.active {
-    color: #11b9b7;
-}
-.cityList.selectRight > li .selectTitle{
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e0e0e0;
-}
-.cityList.selectRight .selectCity span{
-    width: 32%;
 }
 .addIcon .themeIcon {
     display: inline-block;
@@ -1932,6 +1897,29 @@ ul.common-tab > li.rest {
     width: 18px;
     height: 17px;
     vertical-align: middle;
+}
+.destSelect-first-level .second-level {
+    position: absolute;
+    left: 175px;
+    top: 0;
+    width: 180px;
+    height: 210px;
+    color: #555555;
+    background-color: #f7f7f7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+}
+
+.destSelect-first-level .sl-destName {
+    height: 42px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.destSelect-first-level .sl-destName:hover,
+.destSelect-first-level .sl-destName.active {
+    color: #11b9b7;
 }
 /*  导航目的地样式 E  */
 

@@ -72,7 +72,7 @@
 </head>
 <body>
 
-两级联动搜索条---目的地：<input type="text" id="dest" placeholder="目的地" />
+两级联动搜索条---目的地：<input type="text" id="dest" placeholder="目的地" value="法国" />
 
 <ul class="first-level">
     <li>
@@ -112,7 +112,7 @@
 <script type="text/javascript">
 	$(function(){
 
-		$(".second-level").eq(0).show();
+		initSetActiveDest();
 
 		$(".first-level > li").mouseover(function(){
 			$(this).siblings("li").find(".second-level").hide();
@@ -152,6 +152,39 @@
 			event.stopPropagation();
 		});
 	});
+
+	function initSetActiveDest() {
+		var destText = $("#dest").val();
+
+		if (destText == "") {
+			$(".second-level").eq(0).show();
+			return;
+		} else {
+			$(".first-destName").each(function(){
+				if ($(this).html() == destText) {
+					$(".first-level > li").removeClass("active");
+
+					$(this).closest('li').addClass("active");
+
+					$(".second-level").hide();
+					$(this).next(".second-level").show();
+				}				
+			});
+
+			$(".second-destName").each(function(){
+				if ($(this).html() == destText) {
+					$(this).siblings(".second-destName").removeClass("active");
+					$(this).parent("li").siblings("li").removeClass("active");
+
+					$(this).addClass("active");
+					$(this).parents("li").addClass("active");
+
+					$(".second-level").hide();
+					$(this).parent("ul").show();
+				}
+			});
+		}
+	}
 </script>
 	
 </body>

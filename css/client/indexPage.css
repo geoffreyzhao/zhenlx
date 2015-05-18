@@ -161,6 +161,7 @@
     height: 84px;
     margin: 0 -5px;
     color: #fff;
+    padding-left: 72px;
 }
 .searchContent .searchTab{
     margin: 20px 0 0 10px;
@@ -183,6 +184,15 @@
     position: absolute;
     top: 28%;
     left: 3px;
+}
+.addIcon .caret {
+    color: #11b9b7;
+    position: absolute;
+    top: 20px;
+    right: 7px;
+}
+.addIcon input {
+    cursor: pointer;
 }
 .startOffPlace .startOffIcon{
     width: 19px;
@@ -216,10 +226,12 @@
     font-size: 13px;
 }
 .searchTab .startOffPlaceModel,
-.searchTab .destinationModel{
+.searchTab .destinationModel,
+.searchTab .themeModal{
     position: relative;
 }
-.startOffPlaceModel .selectStartOffPlace{
+.startOffPlaceModel .selectStartOffPlace,
+.themeModal .selectTheme{
     font-size: 14px;
     color: #555555;
     background-color: #fff;
@@ -231,21 +243,27 @@
     left: 0;
     display: none;
 }
-.startOffPlaceModel .selectStartOffPlace > li{
-    width: 260px;
+.startOffPlaceModel .selectStartOffPlace > li,
+.themeModal .selectTheme > li{
+    width: 150px;
     padding: 10px 0;
     margin: 0 10px;
     border-top: 1px solid #e0e0e0;
-    text-align: center;
+    text-indent: 28px;
     cursor: pointer;
+    font-size: 15px;
 }
-.startOffPlaceModel .selectStartOffPlace > li:first-child{
+.startOffPlaceModel .selectStartOffPlace > li:first-child,
+.themeModal .selectTheme > li:first-child{
     border-top: none;
 }
 .startOffPlaceModel .selectStartOffPlace > li.active,
-.startOffPlaceModel .selectStartOffPlace > li:hover{
+.startOffPlaceModel .selectStartOffPlace > li:hover,
+.themeModal .selectTheme > li.active,
+.themeModal .selectTheme > li:hover{
     color: #11b9b7;
 }
+/*  目的地 多城市样式，以后可能用
 .destinationModel .selectDestination{
     width: 545px;
     font-size: 12px;
@@ -300,7 +318,90 @@
 .cityList.selectRight .selectCity span{
     width: 32%;
 }
+*/
+.destinationModel .selectDestination{
+    color: #555555;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    display: none;
+}
+.selectDestination .cityList{
+    display: inline-block;
+    width: 175px;
+    background-color: #fff;
+    margin: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.selectDestination .cityList > li{
+    padding: 10px 0;
+    margin: 0 15px;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-size: 15px;
+    text-indent: 20px;
+    height: 42px;
+}
+.selectDestination .cityList > li .nav-tree-arrow {
+    width: 4px;
+    height: 7px;
+    background: url(../../images/client/green-right-arrow.png) no-repeat 0 0;
+    float: right;
+    margin-top: 8px;
+    margin-right: 6px;
+    display: none;
+}
+.selectDestination .cityList > li.active .fl-destName,
+.selectDestination .cityList > li:hover .fl-destName {
+    color: #11b9b7;
+}
+.selectDestination .cityList > li.active .nav-tree-arrow,
+.selectDestination .cityList > li:hover .nav-tree-arrow {
+    display: inline-block;
+}
+.selectDestination .cityList > li:first-child{
+    border-top: none;
+}
+.cityList > li .fl-destName{
+    font-size: 15px;
+    margin: 5px 0;
+    padding: 0;
+}
+.addIcon .themeIcon {
+    display: inline-block;
+    background: url(../../images/client/inputThemeIcon.png) no-repeat 0 0;
+    width: 18px;
+    height: 17px;
+    vertical-align: middle;
+}
+.destSelect-first-level .second-level {
+    position: absolute;
+    left: 175px;
+    top: 0;
+    width: 180px;
+    height: 210px;
+    color: #555555;
+    background-color: #f7f7f7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+}
 
+.destSelect-first-level .sl-destName {
+    height: 42px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.destSelect-first-level .sl-destName:hover,
+.destSelect-first-level .sl-destName.active {
+    color: #11b9b7;
+}
 
 
 /*  导航目的地样式 E  */
