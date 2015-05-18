@@ -188,19 +188,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>操 作 员</th>
+                                <th>产品标题</th>
                                 <td>
-                                    <div class="dropdown" style="width: 255px;">
-                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                            <span class="activeFonts">min.fang</span>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="active"><a href="javascript:void(0);">min.fang</a></li>
-                                            <li><a href="javascript:void(0);">jingjing.su</a></li>
-                                            <li><a href="javascript:void(0);">yan.liu</a></li>
-                                        </ul>
-                                    </div>
+                                    <input type="text" placeholder="关键字" style="width: 255px;">
                                 </td>
                             </tr>
                             <tr>
@@ -218,13 +208,17 @@
                         <table class="searchTab">
                             <colgroup>
                                 <col width="80">
-                                <col width="280">
+                                <col width="290">
+                                <col width="110">
                             </colgroup>
                             <tbody>
                             <tr>
                                 <th>产品 ID</th>
                                 <td>
                                     <input type="text" style="width: 255px;">
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="lightBlueBtn"><i class="searchIcon"></i>搜 索</a>
                                 </td>
                             </tr>
                             <tr>
@@ -238,9 +232,9 @@
                                         <ul class="dropdown-menu">
                                             <li class="active"><a href="javascript:void(0);">所有状态</a></li>
                                             <li><a href="javascript:void(0);">待支付</a></li>
-                                            <li><a href="javascript:void(0);">支付超时</a></li>
                                             <li><a href="javascript:void(0);">支付成功</a></li>
                                             <li><a href="javascript:void(0);">OP确认</a></li>
+                                            <li><a href="javascript:void(0);">发放礼盒</a></li>
                                             <li><a href="javascript:void(0);">出行通知</a></li>
                                             <li><a href="javascript:void(0);">出行中</a></li>
                                             <li><a href="javascript:void(0);">完成</a></li>
@@ -248,6 +242,7 @@
                                         </ul>
                                     </div>
                                 </td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <th>订单金额</th>
@@ -256,33 +251,6 @@
                                     <em> 至 </em>
                                     <input type="text" style="width: 115px;" value="3500.00">
                                 </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li>
-                        <table class="searchTab">
-                            <colgroup>
-                                <col width="80">
-                                <col width="290">
-                                <col width="110">
-                            </colgroup>
-                            <tbody>
-                            <tr>
-                                <th>产品标题</th>
-                                <td>
-                                    <input type="text" placeholder="关键字" style="width: 255px;">
-                                </td>
-                                <td>
-                                    <a href="javascript:void(0);" class="lightBlueBtn"><i class="searchIcon"></i>搜 索</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th></th>
                                 <td></td>
                             </tr>
                             </tbody>
@@ -311,7 +279,7 @@
                             <th>创建时间</th>
                             <th>订单金额</th>
                             <th class="text-center">订单操作</th>
-                            <th>操作人</th>
+                            <th>最后操作人</th>
                         </tr>
                         </thead>
                         <tbody>
