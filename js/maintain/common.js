@@ -96,6 +96,24 @@ $(function() {
         $(this).toggleClass("active");
     });
     
+    //  modal 弹窗位置居中 (modal框，需要提前定宽和高)
+    if ($(".modal").length != 0) {
+        $('.modal').on('show.bs.modal', function (e) {
+            var top = ($(window).height() - $(this).find(".modal-dialog").height()) / 2;
+            $(this).find(".modal-dialog").css({
+                "margin-top": top + "px"
+            });
+        });
+    }
+
+    $(window).resize(function(){
+        if ($(".modal-dialog:visible").length != 0) {
+            var top = ($(window).height() - $(".modal-dialog:visible").height()) / 2;
+            $(".modal-dialog:visible").css({
+                "margin-top": top + "px"
+            });
+        }
+    });
     
 });
 

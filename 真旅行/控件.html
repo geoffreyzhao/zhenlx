@@ -153,7 +153,7 @@
 <section>
     <a href="javascript:void(0);" class="ac-payHintWindow">用JS调用做弹窗</a>
     <div class="modal fade" id="ac-payHintWindow">
-        <div class="modal-dialog" style="width: 450px;">
+        <div class="modal-dialog" style="width: 450px;height:180px;">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -188,7 +188,25 @@
             $("#ac-payHintWindow").modal("show");
         });
 
+        resizeModalTop();
+
+        $(window).resize(function(){
+            var top = ($(window).height() - $(".modal-dialog:visible").height()) / 2;
+            $(".modal-dialog").css({
+                "margin-top": top + "px"
+            });
+        });
+
     });
+
+    function resizeModalTop() {
+        $('.modal').on('show.bs.modal', function (e) {
+            var top = ($(window).height() - $(this).find(".modal-dialog").height()) / 2;
+            $(this).find(".modal-dialog").css({
+                "margin-top": top + "px"
+            });
+        });
+    }
 </script>
 
 </body>

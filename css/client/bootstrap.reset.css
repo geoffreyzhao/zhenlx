@@ -9,8 +9,8 @@
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff,endColorstr=#99ffffff);
 }
 .modal.in{
+    /*display:-moz-box !important;
     display:-webkit-box !important;
-    display:-moz-box !important;
     display: -ms-flexbox !important;
     display: -o-box !important;
     display:box !important;
@@ -28,7 +28,7 @@
     -webkit-box-align:center;
     -moz-box-align: center;
     -ms-flex-align: center;
-    -o-box-align: center;
+    -o-box-align: center;*/
 }
 .modal-dialog{ margin: 150px auto;}
 .modal-content {
