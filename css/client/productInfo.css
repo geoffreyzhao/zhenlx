@@ -17,11 +17,23 @@
     margin-bottom: 70px;
     position: relative;
 }
-.productDetailBanner img{
+/*.productDetailBanner img{
     display: inherit;
     width: 1420px;
     height: 634px;
     margin: 0 auto;
+}*/
+.productDetailBanner .pro-detail-cont {
+    position: absolute;
+    z-index: 2;
+}
+.productDetailBanner .pro-detail-img {
+    height: 580px;
+    overflow: hidden;
+}
+.productDetailBanner .pro-detail-img img {
+    position: relative;
+    top: -300px;
 }
 .productDetailModel .themeContent{    
     position: absolute;
