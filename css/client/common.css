@@ -57,6 +57,20 @@ input[type="text"].verifyBox:focus{
     color: #fe7800;
 }
 
+input[type="text"].errorStyle,
+input[type="text"].errorStyle:focus{
+    border: 1px solid #ffa200 !important;
+    background-color: #fff8eb;
+}
+.errorBox {
+    position: absolute;
+    padding: 10px 10px 10px 0;
+    color: #fe7800;
+    background-color: #fff3de;
+    font-size: 14px;
+    z-index: 3;
+}
+
 .componentInput{
     display: inline-block;
     border: 1px solid #d0d0d0;

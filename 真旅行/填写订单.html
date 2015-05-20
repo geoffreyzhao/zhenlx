@@ -25,6 +25,7 @@
     <script type="text/javascript" src="../js/client/common.js"></script>
     <!--  渐变背景和mainbox 需要调整距离和位置，引入adjust.js  -->
     <script type="text/javascript" src="../js/client/adjust.js"></script>
+    <script type="text/javascript" src="../js/client/customValidator.js"></script>
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
@@ -303,7 +304,7 @@
                                     </td>
                                     <th class="adjustpadding">旅客姓名：</th>
                                     <td class="adjustpadding">
-                                        <input type="text" style="width: 280px;" placeholder="与证件名保持一致"/>
+                                        <input type="text" style="width: 280px;" placeholder="与证件名保持一致" data-cv="required" data-ct="旅客姓名" data-cp=""/>
                                         <span class="guestNameIcon"></span>
                                     </td>
                                 </tr>
@@ -515,14 +516,14 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>详细地址：</th>
+                                        <th style="vertical-align: top;padding-top:18px;">详细地址：</th>
                                         <td>
                                             <div class="dropdown" style="width: 110px;">
                                                 <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
                                                     <span class="activeFonts">省市</span>
                                                     <span class="caret"></span>
                                                 </a>
-                                                <ul class="dropdown-menu">
+                                                <ul class="dropdown-menu" data-cv="required" data-ct="省份" data-cp="right">
                                                     <li class="active"><a href="javascript:void(0);">上海市</a></li>
                                                     <li><a href="javascript:void(0);">南京市</a></li>
                                                     <li><a href="javascript:void(0);">北京市</a></li>
@@ -540,7 +541,19 @@
                                                     <li><a href="javascript:void(0);">虹口区</a></li>
                                                 </ul>
                                             </div>
-                                            <input type="text" value="" style="width: 356px;" placeholder="填写详细通讯地址，好签收我们为您寄出的真旅礼盒哦"/>
+                                            <div class="dropdown" style="width: 110px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                    <span class="activeFonts">区县</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">闸北区</a></li>
+                                                    <li><a href="javascript:void(0);">普陀区</a></li>
+                                                    <li><a href="javascript:void(0);">宝山区</a></li>
+                                                    <li><a href="javascript:void(0);">虹口区</a></li>
+                                                </ul>
+                                            </div>
+                                            <input type="text" value="" style="width: 356px;margin-top:10px;" placeholder="填写详细通讯地址，好签收我们为您寄出的真旅礼盒哦"/>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -652,23 +665,23 @@
                             <colgroup>
                                 <col width="99"/>
                                 <col width="129"/>
-                                <col width="69"/>
+                                <col width="75"/>
                             </colgroup>
                             <tbody>
                             <tr>
                                 <td>成人价</td>
                                 <td>￥9999× 1人</td>
-                                <td class="colorTd"><b>￥9999</b></td>
+                                <td class="colorTd"><b>￥9999.9</b></td>
                             </tr>
                             <tr>
                                 <td>儿童价</td>
                                 <td>￥9999× 1人</td>
-                                <td class="colorTd"><b>￥9999</b></td>
+                                <td class="colorTd"><b>￥9999.6</b></td>
                             </tr>
                             <tr>
                                 <td>单房差</td>
                                 <td>￥1000× 1间</td>
-                                <td class="colorTd"><b>￥1000</b></td>
+                                <td class="colorTd"><b>￥1000.0</b></td>
                             </tr>
                             </tbody>
                         </table>
@@ -701,13 +714,13 @@
                             <colgroup>
                                 <col width="99"/>
                                 <col width="129"/>
-                                <col width="69"/>
+                                <col width="75"/>
                             </colgroup>
                             <tbody>
                             <tr>
                                 <td>优惠券抵扣</td>
                                 <td>春季欧洲券</td>
-                                <td class="colorTd"><b>-￥50</b></td>
+                                <td class="colorTd"><b>-￥50.00</b></td>
                             </tr>
                             <!-- <tr>
                                 <td>积分抵扣</td>
@@ -884,6 +897,13 @@
 
             $(".priceChangeBtn").click(function(){
                 $("#priceChangeTip").modal("show");  //  关闭弹窗  $(ele).modal("hide");
+            });
+
+            //  测试代码，测试报错信息
+            $(".guestNameIcon").click(function(){
+                var validateResult = $("body").customValidate({
+                    validateAll: true
+                });
             });
 
         });
