@@ -4,6 +4,7 @@
 body {
 	font-size: 16px;
 	font-family: "Microsoft Yahei", arial, sans-serif;
+    background-color: #e5f6fe;
 }
 
 .wrapper {
@@ -757,16 +758,23 @@ div.datepicker table tr td span.active {
     padding-top: 10px;
     position: relative;
 }
-.popupContainer .warnIcon {
-    background: url("../../images/popupIcon.png") no-repeat 0 0;
+.popupContainer .warnIcon,
+.popupContainer .passIcon{
     display: inline-block;
     width: 41px;
     height: 41px;
     margin-right: 10px;
     vertical-align: bottom;
+    background: url("../../images/popupIcon.png") no-repeat;
     position: absolute;
     left: 30px;
     top: 10%;
+}
+.popupContainer .warnIcon {
+    background-position: 0 0;
+}
+.popupContainer .passIcon {
+    background-position: -47px 0;
 }
 .popupContainer-fonts {
     display: inline-block;

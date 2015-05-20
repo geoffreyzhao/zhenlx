@@ -117,3 +117,240 @@
     color: #fa7f1f;
 }
 /*  自由行-订单列表 end  */
+
+/*  自由行-订单详情 S  */
+.topFlow{
+    float: right;
+    margin: 0;
+}
+.topFlow li{
+    float: left;
+    min-width: 105px;
+    font-size: 16px;
+    text-align: center;
+    color: #2e7ba5;
+    line-height: 40px;
+    margin-left: -10px;
+}
+.topFlow li label{
+    display: inline-block;
+    background: url("../../images/flowIcon.png") no-repeat;
+    width: 226px;
+    height: 41px;
+}
+.topFlow li .first{
+    width: 106px;
+    margin-right: 5px;
+    background-position: 0 0;
+}
+.topFlow li .middle{
+    background-position: -116px -45px
+}
+.topFlow li .last{
+    width: 106px;
+    background-position: -351px 0;
+}
+.topFlow li .first em{
+    margin-right: 10px;
+}
+.topFlow li .last em{
+    margin-left: 10px;
+}
+.topFlow .current{
+    color: #b65d13;
+}
+.topFlow .current .first{
+    background-position: 0 -45px;
+}
+.topFlow .current .middle{
+    background-position: -116px 0;
+}
+.topFlow .current .last{
+    background-position: -351px -45px;
+}
+
+.moduleContent{
+    margin: 20px 10px 0;
+    font-size: 16px;
+}
+.moduleContent .titleContent{
+    margin-bottom: 10px;
+}
+.titleContent .titleFonts{
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    margin: 0;
+    color: #555555;
+}
+.titleContent .titleRight{
+    float: right;
+    margin-right: 10px;
+}
+.titleRight .flexible{
+    font-size: 16px;
+    color: #3895cf;
+    cursor: pointer;
+}
+.moduleContent .grayThead{
+    margin-top: 10px;
+    width: 100%;
+}
+.grayThead thead th{
+    font-size: 16px;
+    background-color: #f5f5f5;
+    border: 1px solid #eaeaea;
+    padding: 12px 10px;
+}
+.grayThead tbody td{
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    font-size: 14px;
+}
+.grayThead tbody tr:hover{
+    background-color: #eefaff;
+}
+.grayThead tbody a{
+    font-size: 16px;
+    display: inline-block;
+    color: #3895cf;
+}
+.grayThead tbody a:hover{
+    color: #3895cf;
+    text-decoration: underline;
+}
+.flexibleContent,
+.packUp,
+.giftBoxNotesTd{
+    display: none;
+}
+.moduleContent .noBorderTabStyle{
+    width: 100%;
+}
+.noBorderTabStyle thead{
+    background-color: #fafafa;
+    border-top: 2px solid #f1f1f1;
+    border-bottom: 1px dashed #888888;
+}
+.noBorderTabStyle thead th{
+    padding: 12px 10px;
+    font-size: 16px;
+}
+.noBorderTabStyle tbody td{
+    padding: 5px 10px;
+    color: #666666;
+    font-size: 14px;
+}
+.noBorderTabStyle tbody{
+    border-bottom: 2px solid #f1f1f1;
+}
+.noBorderTabStyle .first td{
+    padding-top: 15px;
+}
+.noBorderTabStyle .last td{
+    padding-bottom: 15px;
+}
+.noBorderTabStyle label{
+    margin: 0;
+}
+.noBorderTabStyle .orderFonts{
+    font-size: 20px;
+    color: #555555;
+}
+.noBorderTabStyle .orderFonts .orderNumFonts{
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.noBorderTabStyle .textAlignRight{
+    text-align: right;
+}
+.noBorderTabStyle .statusFonts{
+    font-size: 16px;
+    color: #666666;
+}
+.noBorderTabStyle .statusFonts .orangeFonts{
+    font-size: 18px;
+    color: #ed6003;
+}
+.noBorderTabStyle .cancelOrder{
+    font-size: 14px;
+    color: #3895cf;
+    margin-right: 10px;
+}
+.giftBoxNotesTd .giftBoxNotesInput{
+    width: 400px;
+    margin: 0 10px;
+}
+.titleContent .titleFonts.blue2fb0c4{
+    color: #2fb0c4;
+}
+.noBorderTabStyle td.fontSize16,
+.grayThead tbody td.fontSize16{
+    font-size: 16px;
+}
+.grayThead tbody .orangeff6600{
+    color: #ff6600;
+}
+.titleRight .grayBgFonts{
+    font-size: 16px;
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #a5a5a5;
+    padding: 5px 10px;
+    margin-bottom: -5px;
+    cursor: pointer;
+}
+.titleRight .grayBgFonts.current{
+    background-color: #45c8dc;
+    color: #fff;
+}
+.moduleContent .costDetails{
+    margin: 15px 0;
+}
+.costDetails .titleFonts{
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 5px;
+}
+.costDetails .textareaText{
+    font-size: 14px;
+    color: #666666;
+    width: 920px;
+    height: 80px;
+    padding: 10px;
+    resize: none;
+}
+.leftGrayTh{
+    margin: 10px 0;
+}
+.leftGrayTh tbody th{
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: #444444;
+    border: 1px solid #eaeaea;
+    padding: 7px 10px;
+    text-align: center;
+}
+.leftGrayTh tbody td{
+    font-size: 14px;
+    padding: 8px 10px;
+    border: 1px solid #eaeaea;
+    color: #666666;
+}
+.leftGrayTh td .orangeFonts,
+.leftGrayTh td.orangeFonts{
+    color: #ff6600;
+}
+.leftGrayTh tbody .textAlignRight{
+    text-align: right;
+}
+.leftGrayTh tbody .fontsWeight16{
+    font-weight: bold;
+    font-size: 16px;
+}
+.saveRemark{
+    margin-top: 7px;
+}
+
+/*  自由行-订单详情 E  */
