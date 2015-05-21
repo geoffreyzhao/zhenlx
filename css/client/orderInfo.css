@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/*  订单详情 S  */
+/*  璁㈠崟璇︽儏 S  */
 .tooltip-inner{
     min-width: 200px;
     max-width: 500px;
@@ -268,4 +268,134 @@
     color: #055453;
     margin: 10px 0;
 }
-/*  订单详情 E  */
+/*  璁㈠崟璇︽儏 E  */
+
+/** 无订单 start  */
+.withoutOrder, .orderList{
+    position: relative;
+    top: 40px;
+    color: #484848;
+}
+.withoutOrder .top-border, .orderList .top-border{
+    display: inline-block;
+    background: url(../../images/client/repeat-border.jpg) repeat-x;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+.withoutOrder .pin, .orderList .pin{
+    width:24px;
+    height:44px;
+    background: url("../../images/client/spirit.png") no-repeat 0px 0px;
+    position: absolute;
+    top:-13px;
+    left:28px;
+    z-index: 10;
+}
+.txtColor{
+    color:#11b9b7;
+}
+.withoutOrderBox{
+    width:100%;
+    min-height: 710px;
+    border-top:0px;
+}
+.withoutOrder-row1{
+    margin:115px 0px 85px;
+    font-size:22px;
+    line-height: 18px;
+}
+.withoutOrder-row2{
+    width:100%;
+    height:268px;
+    background: url("../../images/client/withoutOrderImg.png") no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.withoutOrder-row3{
+    font-size: 20px;
+    line-height: 18px;
+    color:#aaaaaa;
+    margin:55px 0px;
+}
+.phoneIcon{
+    width:12px;
+    height:15px;
+    margin-right:5px;
+    background: url("../../images/client/spirit.png") no-repeat -56px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 11;
+}
+
+/** 无订单 end    */
+
+/** 订单列表 start    */
+.orderListBox{
+    width:100%;
+    background-color: #ffffff;
+    min-height: 710px;
+}
+.orderListBox-head{
+    padding:34px;
+    border-bottom:1px dashed #0c8694;
+}
+.orderListBox-one{
+    width:100%;
+    position: relative;
+}
+.orderListBox-one .left-semicircle{
+    position: absolute;
+    bottom:-4px;
+    left:0px;
+    width:4px;
+    height: 8px;
+    border-radius:0 4px 4px 0;
+    background: #0b7e96;
+}
+.orderListBox-one .right-semicircle{
+    position: absolute;
+    bottom:-4px;
+    right:0px;
+    width:4px;
+    height: 8px;
+    border-radius:4px 0 0 4px;
+    background: #0b7e96;
+}
+.boxHead-title{
+    width:110px;
+    height:23px;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    display: inline-block;
+}
+.boxHead-title-border{
+    border-left:1px #ececec solid;
+    border-right:1px #ececec solid;
+}
+.boxHead-title-color1{
+    color:#11b9b7;
+}
+.boxHead-title-color2{
+    color:#0b7d96;
+}
+.boxHead-title-num{
+    padding:0px 5px;
+}
+.orderListStatus a{
+    text-decoration: none;
+    color:#11b9b7;
+}
+.orderStatusTip{
+    width:16px;
+    height:18px;
+    margin-right: 5px;
+    background: url("../../images/client/spirit.png") no-repeat -69px 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/** 订单列表 end    */
