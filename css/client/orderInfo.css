@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/*  订单详情 S  */
+.tooltip-inner{
+    min-width: 200px;
+    max-width: 500px;
+}
+.onLinePayContent{
+    position: relative;
+    top: 10px;
+    background-color: #fff;
+    color: #484848;
+}
+.onLinePayContent .top-border{
+    display: inline-block;
+    background: url(../../images/client/repeat-border.jpg) repeat-x;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+.commonOrderModel{
+    border-bottom:1px dashed #c2dadf;
+    padding: 15px 25px;
+    position: relative;
+}
+.commonOrderModel .left-semicircle,
+.titleModel .left-semicircle{
+     position: absolute;
+     bottom:-4px;
+     left:0px;
+     width:4px;
+     height: 8px;
+     border-radius:0 4px 4px 0;
+     background: #0b7e96;
+}
+.commonOrderModel .right-semicircle,
+.titleModel .right-semicircle{
+    position: absolute;
+    bottom:-4px;
+    right:0px;
+    width:4px;
+    height: 8px;
+    border-radius:4px 0 0 4px;
+    background: #0b7e96;
+}
+.commonOrderModel .titleModel{
+    font-size: 20px;
+    color: #484848;
+    margin: 0 -25px;
+    padding: 0 25px 15px;
+    border-bottom:1px dashed #c2dadf;
+    position: relative;
+}
+.commonOrderModel .titleModel.noBorderBottom{
+    padding: 0 25px;
+    border-bottom: none;
+}
+.commonOrderModel .blueFonts{
+    color: #11b9b7;
+}
+.productInfoModel{
+    margin: 0 25px;
+}
+.productInfoModel .productInfoTitle{
+    font-size: 18px;
+    color: #484848;
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+}
+.productInfoTitle .fontSize16{
+    font-size: 16px;
+    margin-right: 15px;
+}
+.productInfoModel .productInfoTab{
+    margin: 30px 0 40px;
+}
+.productInfoTab .productInfoImg{
+    width: 150px;
+    height: 94px;
+}
+.productInfoTab td{
+    font-size: 15px;
+    text-align: center;
+    color: #484848;
+    padding: 0 10px;
+    vertical-align: top;
+    border-left: 1px solid #ececec;
+}
+.productInfoTab td.noLeftBorder{
+    border-left: none;
+}
+.productInfoTab .orderInfoTitles{
+    color: #9f9f9f;
+    margin: 10px 0 30px;
+}
+.productInfoTab .orangeFonts{
+    color: #fe7800;
+    font-weight: bold;
+}
+.productInfoTab .orangeFonts .fontSize12{
+    font-size: 12px;
+    color: #c7c7c7;
+    font-weight: normal;
+}
+
+.orderFlowModel{
+    padding: 30px 40px 40px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-bottom: 2px solid #042c34;
+    border-left: 1px solid #042c34;
+    border-right: 1px solid #042c34;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: relative;
+    top: 30px;
+}
+.orderFlowModel .orderStatus{
+    margin: 0;
+}
+.orderStatus li{
+    float: left;
+    padding-left: 100px;
+    margin-left: -12px;
+    cursor: pointer;
+    position: relative;
+}
+.orderStatus li.first{
+    padding-left: 0;
+    margin-left: 0;
+}
+.orderStatus .line{
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    border-top: 1px dashed #e1e1e1;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    z-index: 1;
+}
+.orderStatus .last .line{
+    width: 85%;
+}
+.orderStatus li.first .line{
+    border-top: none;
+}
+.orderStatus li .statusFonts{
+    margin-top: 60px;
+    min-width: 70px;
+    text-align: center;
+}
+.statusFonts .grayFonts{
+    font-size: 14px;
+    color: #dcdbdb;
+}
+.statusFonts .dateFonts{
+    font-size: 12px;
+    color: #9f9f9f;
+}
+.orderStatus .whiteOrderIcon,
+.orderStatus .payOrderIcon,
+.orderStatus .paySuccessIcon,
+.orderStatus .boxIcon,
+.orderStatus .travelInformIcon,
+.orderStatus .stewardIcon,
+.orderStatus .evaluateIcon,
+.orderStatus .passed .whiteOrderIcon,
+.orderStatus .passed .payOrderIcon,
+.orderStatus .passed .paySuccessIcon,
+.orderStatus .passed .boxIcon,
+.orderStatus .passed .travelInformIcon,
+.orderStatus .passed .stewardIcon,
+.orderStatus .passed .evaluateIcon{
+    display: inline-block;
+    vertical-align: middle;
+    width: 43px;
+    height: 43px;
+    background: url("../../images/client/defaultOrderStatus.jpg") no-repeat;
+    margin-left: 13px;
+    position: absolute;
+    z-index: 2;
+}
+.orderStatus .whiteOrderIcon{
+    background-position: 0 0;
+}
+.orderStatus .payOrderIcon{
+    background-position: -39px 0;
+}
+.orderStatus .paySuccessIcon{
+    background-position: -77px 0;
+}
+.orderStatus .boxIcon{
+    background-position: -114px 0;
+}
+.orderStatus .travelInformIcon{
+    background-position: -152px 0;
+}
+.orderStatus .stewardIcon{
+    background-position: -190px 0;
+}
+.orderStatus .evaluateIcon{
+    background-position: -229px 0;
+}
+.orderStatus .current .whiteOrderIcon,
+.orderStatus .whiteOrder:hover .whiteOrderIcon,
+.orderStatus .current .payOrderIcon,
+.orderStatus .payOrder:hover .payOrderIcon,
+.orderStatus .current .paySuccessIcon,
+.orderStatus .paySuccess:hover .paySuccessIcon,
+.orderStatus .current .boxIcon,
+.orderStatus .box:hover .boxIcon,
+.orderStatus .current .travelInformIcon,
+.orderStatus .travelInform:hover .travelInformIcon,
+.orderStatus .current .stewardIcon,
+.orderStatus .steward:hover .stewardIcon,
+.orderStatus .current .evaluateIcon,
+.orderStatus .evaluate:hover .evaluateIcon{
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    vertical-align: middle;
+    background: url("../../images/client/currentStatusIcon.png") no-repeat;    
+}
+.orderStatus .current .whiteOrderIcon,
+.orderStatus .whiteOrder:hover .whiteOrderIcon{
+    background-position: 0 0;
+}
+.orderStatus .current .payOrderIcon,
+.orderStatus .payOrder:hover .payOrderIcon{
+    background-position: -49px 0;
+}
+.orderStatus .current .paySuccessIcon,
+.orderStatus .paySuccess:hover .paySuccessIcon{
+    background-position: -96px 0;
+}
+.orderStatus .current .boxIcon,
+.orderStatus .box:hover .boxIcon{
+    background-position: -144px 0;
+}
+.orderStatus .current .travelInformIcon,
+.orderStatus .travelInform:hover .travelInformIcon{
+    background-position: -192px 0;
+}
+.orderStatus .current .stewardIcon,
+.orderStatus .steward:hover .stewardIcon{
+    background-position: -240px 0;
+}
+.orderStatus .current .evaluateIcon,
+.orderStatus .evaluate:hover .evaluateIcon{
+    background-position: -288px 0;
+}
+.orderStatus .passed .whiteOrderIcon,
+.orderStatus .passed .payOrderIcon,
+.orderStatus .passed .paySuccessIcon,
+.orderStatus .passed .boxIcon,
+.orderStatus .passed .travelInformIcon,
+.orderStatus .passed .stewardIcon,
+.orderStatus .passed .evaluateIcon{
+    background-position: -267px 0;
+}
+.statusHint{
+    font-size: 13px;
+    color: #055453;
+    margin: 10px 0;
+}
+/*  订单详情 E  */

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>真旅行 我的订单 订单详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/flight_logo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/orderInfo.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/client/common.js"></script>
+    <!--  渐变背景和mainbox 需要调整距离和位置，引入adjust.js  -->
+    <script type="text/javascript" src="../../js/client/adjust.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header>
+    <div class="head clearfix">
+        <div class="logo"></div>
+    </div>
+</header>
+
+<div class="main-container">
+    <div class="main-wrapper" id="main-wrapper">
+        <div class="orderFlowModel">
+            <ul class="orderStatus clearfix">
+                <li class="first green-border-tooltip whiteOrder passed">
+                    <span class="whiteOrderIcon"></span>
+                    <span class="line"></span>
+                    <div class="statusFonts">
+                        <div class="grayFonts">填写订单</div>
+                        <div class="dateFonts">2015-05-15</div>
+                    </div>
+                </li>
+                <li class="payOrder green-border-tooltip passed">
+                    <span class="payOrderIcon"></span>
+                    <span class="line"></span>
+                    <div class="statusFonts">
+                        <div class="grayFonts">支付订单</div>
+                        <div class="dateFonts">2015-05-15</div>
+                    </div>
+                </li>
+                <li class="paySuccess green-border-tooltip passed">
+                    <span class="paySuccessIcon"></span>
+                    <span class="line"></span>
+                    <div class="statusFonts">
+                        <div class="grayFonts">支付成功</div>
+                        <div class="dateFonts">2015-05-15</div>
+                    </div>
+                </li>
+                <li class="box green-border-tooltip passed">
+                    <span class="boxIcon"></span>
+                    <span class="line"></span>
+                    <div class="statusFonts">
+                        <div class="grayFonts">心意盒子</div>
+                        <div class="dateFonts">2015-05-15</div>
+                    </div>
+                </li>
+                <li class="travelInform green-border-tooltip passed">
+                    <span class="travelInformIcon"></span>
+                    <span class="line"></span>
+                    <div class="statusFonts">
+                        <div class="grayFonts">出行通知</div>
+                        <div class="dateFonts">2015-05-15</div>
+                    </div>
+                </li>
+                <li class="steward green-border-tooltip passed">
+                    <span class="stewardIcon"></span>
+                    <span class="line"></span>
+                    <div class="statusFonts">
+                        <div class="grayFonts">真旅管家</div>
+                        <div class="dateFonts">2015-05-15</div>
+                    </div>
+                </li>
+                <li class="last evaluate green-border-tooltip current">
+                    <span class="evaluateIcon"></span>
+                    <span class="line"></span>
+                    <div class="statusFonts">
+                        <div class="grayFonts">旅游评价</div>
+                        <div class="dateFonts">2015-05-15</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section class="onLinePayContent">
+            <div class="top-border"></div>
+            <div class="commonOrderModel">
+                <i class="left-semicircle"></i>
+                <i class="right-semicircle"></i>
+                <div class="titleModel noBorderBottom">订单详情</div>
+            </div>
+            <div class="commonOrderModel">
+                <i class="left-semicircle"></i>
+                <i class="right-semicircle"></i>
+                <div class="titleModel blueFonts">
+                    <span>产品信息</span>
+                    <i class="left-semicircle"></i>
+                    <i class="right-semicircle"></i>
+                </div>
+                <div class="productInfoModel">
+                    <div class="productInfoTitle"><span class="blueFonts fontSize16">订单号:1505125213</span>上海至巴黎五晚13天话色彩国度</div>
+                    <table class="productInfoTab">
+                        <colgroup>
+                            <col width="160">
+                            <col width="150">
+                            <col width="150">
+                            <col width="150">
+                            <col width="130">
+                            <col width="130">
+                            <col width="150">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td class="noLeftBorder">
+                                <img class="productInfoImg" src="../../images/client/productInfoImg.jpg">
+                            </td>
+                            <td class="noLeftBorder">
+                                <div class="orderInfoTitles">下单日期</div>
+                                <div>2015-04-20</div>
+                            </td>
+                            <td>
+                                <div class="orderInfoTitles">出游日期</div>
+                                <div>2015-05-10</div>
+                            </td>
+                            <td>
+                                <div class="orderInfoTitles">订单金额</div>
+                                <div class="orangeFonts">￥12639</div>
+                            </td>
+                            <td>
+                                <div class="orderInfoTitles">应付金额</div>
+                                <div class="orangeFonts">
+                                    <div>￥12000</div>
+                                    <div class="fontSize12">已优惠&nbsp; ￥639</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="orderInfoTitles">状态</div>
+                                <div class="orangeFonts">待支付</div>
+                            </td>
+                            <td style="vertical-align: middle;">
+                                <a href="javascript:void(0);" class="commonBtn orangeBtn">去支付</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    <div class="foot clearfix">
+        <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+        <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+    </div>
+</div>
+
+<script type="text/html" id="whiteOrder_template">
+    <div class="statusHint">打开荷包，来一场说走就走的旅行吧</div>
+</script>
+<script type="text/html" id="payOrder_template">
+    <div class="statusHint">打开荷包，来一场说走就走的旅行吧</div>
+</script>
+
+<script>
+    $(function(){
+        $(".orderStatus .whiteOrder").attr("title", $("#whiteOrder_template").html());
+        $(".green-border-tooltip").tooltip({
+            html: true,
+            placement: 'bottom',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+
+
+    });
+</script>
+
+</body>
+</html>
