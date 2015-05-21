@@ -16,6 +16,7 @@
 .productDetailModel{
     margin-bottom: 70px;
     position: relative;
+    border-bottom: 3px solid #585481;
 }
 /*.productDetailBanner img{
     display: inherit;
@@ -105,9 +106,10 @@
     width: 1150px;
     height: 97px;
     position: absolute;
-    bottom: -48px;
+    bottom: -51px;
     left: 50%;
     margin-left: -575px;
+
 }
 .bannerBottomList .leftIcon,
 .bannerBottomList .rightIcon{
@@ -125,10 +127,12 @@
 }
 .bannerBottomList .middleListContent{
     display: inline-block;
-    width: 1040px;
+    width: 1150px;
     height: 97px;
     margin: 0 -5px;
     background-color: #585481;
+    border-radius: 97px;
+    padding: 0 55px;
 }
 .bannerBottomList .bannerBottomHint{
     font-size: 14px;
@@ -141,6 +145,7 @@
     width: 260px;
     padding: 10px 5px;
     border-left: 1px solid #79769a;
+    border-left-color: rgba(255, 255, 255, .2);
 }
 .bannerBottomHint li:first-child{
     padding-left: 0;
@@ -1957,4 +1962,6 @@ ul.common-tab > li.rest {
 /*  导航目的地样式 E  */
 
 /*   产品列表  end   */
-
+.grayFont {
+    color: #ababab;
+}

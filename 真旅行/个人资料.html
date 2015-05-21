@@ -126,9 +126,10 @@
                                         <span class="commonIcon editIcon"></span>
                                     </td>
                                 </tr>
-                                <tr class="editModelInfo editPhoneNumber" style="display: none;">
+                                <tr class="editModelInfo editPhoneNumber">
                                     <td colspan="2" class="noPadding">
-                                        <table class="editModelTab">
+                                        <div class="editModelTabContainer" style="display: none;">
+                                            <table class="editModelTab">
                                             <colgroup>
                                                 <col width="100">
                                                 <col width="">
@@ -172,7 +173,8 @@
                                                 </td>
                                             </tr>
                                             </tbody>
-                                        </table>
+                                            </table>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr class="PWContent">
@@ -411,15 +413,15 @@
         //编辑手机号码
         $(".phoneNumberContent .editIcon").click(function(){
             $(this).hide();
-            $(this).parents(".phoneNumberContent").siblings(".editPhoneNumber").show();
-            setWrapperHeight();
-            setMainBoxPosition();
+            $(this).parents(".phoneNumberContent").siblings(".editPhoneNumber").find(".editModelTabContainer").slideDown(function(){
+                $(window).trigger("resize");
+            });
         });
         $(".editPhoneNumber .grayBtn").click(function(){
-            $(this).parents(".editPhoneNumber").hide();
+            $(this).parents(".editPhoneNumber").find(".editModelTabContainer").slideUp(function(){
+                $(window).trigger("resize");
+            });
             $(this).parents(".editPhoneNumber").siblings(".phoneNumberContent").find(".editIcon").show();
-            setWrapperHeight();
-            setMainBoxPosition();
         });
         
         //编辑密码

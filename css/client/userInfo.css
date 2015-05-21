@@ -94,13 +94,19 @@
     font-size: 12px;
 }
 .dataTab .editModelInfo .noPadding{
-    padding: 10px 0;
+    /*padding: 10px 0;
     border-bottom: 1px solid #dfe9e8;
-    border-top: 1px solid #dfe9e8;
+    border-top: 1px solid #dfe9e8;*/
+    padding: 0;
 }
 .dataTab .editModelTab th,
 .dataTab .editModelTab td{
     padding: 10px;
+}
+.editModelTabContainer {
+    padding: 10px 0;
+    border-bottom: 1px solid #dfe9e8;
+    border-top: 1px solid #dfe9e8;
 }
 /*  个人资料 end  */
 
