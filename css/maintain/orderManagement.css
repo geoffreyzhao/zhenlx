@@ -2,6 +2,9 @@
 @charset "utf-8";
 
 /*  自由行-订单列表 start  */
+.main-header .headSecondLevel.headBtn{
+    padding: 10px 10px 0;
+}
 .whiteBg{
     background-color: #fff;
     padding: 10px;
@@ -221,7 +224,8 @@
 }
 .flexibleContent,
 .packUp,
-.giftBoxNotesTd{
+.giftBoxNotesTd,
+.travelToInformTd{
     display: none;
 }
 .moduleContent .noBorderTabStyle{
@@ -278,7 +282,7 @@
     color: #3895cf;
     margin-right: 10px;
 }
-.giftBoxNotesTd .giftBoxNotesInput{
+.orderSpan .orderInput{
     width: 400px;
     margin: 0 10px;
 }

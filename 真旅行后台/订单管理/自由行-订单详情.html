@@ -117,7 +117,7 @@
                             <td class="fontSize16">nan.zhao</td>
                             <td></td>
                         </tr>
-                        <tr>
+                        <tr class="addTr">
                             <td>2015-05-13 &nbsp; 07:52:12</td>
                             <td class="fontSize16">支付</td>
                             <td class="fontSize16">管理员</td>
@@ -154,14 +154,19 @@
                             <td>订单类型</td>
                             <td>国际产品订单</td>
                             <td rowspan="2" class="textAlignRight">
-                                <span class="cancelOrderTd">
+                                <span class="orderSpan cancelOrderTd">
                                     <a href="javascript:void(0);" class="cancelOrder ac-cancelOrder">取消订单</a>
                                     <button class="commonButton blue-45c8dcButton ac-OPSure">OP 确认</button>
                                 </span>
-                                <span class="giftBoxNotesTd">
+                                <span class="orderSpan giftBoxNotesTd">
                                     <span>礼盒发放须知</span>
-                                    <input type="text" class="giftBoxNotesInput" placeholder="您的礼盒已经在途中，查询号是00544">
-                                    <button class="commonButton blue-45c8dcButton">发放礼盒</button>
+                                    <input type="text" class="orderInput" placeholder="您的礼盒已经在途中，查询号是00544">
+                                    <button class="commonButton blue-45c8dcButton ac-distributionBox">发放礼盒</button>
+                                </span>
+                                <span class="orderSpan travelToInformTd">
+                                    <span>出行通知须知</span>
+                                    <input type="text" class="orderInput" placeholder="请在出发前备好您的相关证件，未来目的地的天气....">
+                                    <button class="commonButton blue-45c8dcButton ac-travelToInform">出行通知</button>
                                 </span>
                             </td>
                         </tr>
@@ -479,6 +484,50 @@
         </div>
     </div>
     
+    <div class="modal fade commonInitialize" id="ac-distributionBox">
+        <div class="modal-dialog" style="width: 500px;height:185px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">操作提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="popupContainer">
+                        <i class="passIcon"></i>
+                        <span class="popupContainer-fonts">该订单状态已变更为［发放礼盒，待出行通知］！</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="commonButton red-fe6869Button">确 认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade commonInitialize" id="ac-travelToInform">
+        <div class="modal-dialog" style="width: 500px;height:185px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">操作提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="popupContainer">
+                        <i class="passIcon"></i>
+                        <span class="popupContainer-fonts">该订单状态已变更为［已完成］！</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="commonButton red-fe6869Button">确 认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script>
         $(function(){
             //操作日志伸缩
@@ -503,17 +552,55 @@
                 });
             });
             
-            //取消订单弹窗
+            //弹窗初始化
             $(".commonInitialize").modal({
                 backdrop:"static",
                 keyboard: false,
                 show: false
             });
+            //取消订单弹窗
             $(".ac-cancelOrder").click(function(){
                 $("#ac-cancelOrder").modal("show");
             });
+            //op模块弹窗
             $(".ac-OPSure").click(function(){
                 $("#ac-OPSure").modal("show");
+                $(this).parents(".cancelOrderTd").hide();
+                $(this).parents(".cancelOrderTd").next(".giftBoxNotesTd").show();
+                $(".statusFonts .orangeFonts").text("OP确认");
+                $(".topFlow li").removeClass("current");
+                $(".topFlow li").eq(2).addClass("current");
+            });
+            //发放礼盒弹窗
+            $(".ac-distributionBox").click(function(){
+                $("#ac-distributionBox").modal("show");
+                $(this).parents(".giftBoxNotesTd").hide();
+                $(this).parents(".giftBoxNotesTd").next(".travelToInformTd").show();
+                $(".statusFonts .orangeFonts").text("礼盒发放");
+                $(".topFlow li").removeClass("current");
+                $(".topFlow li").eq(3).addClass("current");
+            });
+            //出行通知弹窗
+            $(".ac-travelToInform").click(function(){
+                $("#ac-travelToInform").modal("show");
+                $(this).parents(".travelToInformTd").hide();
+                $(this).parents(".travelToInformTd").siblings("orderSpan").hide();
+                $(".statusFonts .orangeFonts").text("出行中/已完成");
+                $(".topFlow li").removeClass("current");
+                $(".topFlow li").eq(4).addClass("current");
+            });
+
+            $(".ac-OPSure,.ac-distributionBox,.ac-travelToInform").click(function(){
+                $(".titleRight .unfold").hide();
+                $(".titleRight .packUp").show();
+                $(".flexibleContent").show();
+                var addTrHtml = $(".flexibleContent .addTr").html();
+                $(".flexibleContent tbody").append("<tr class='addTr'>" + addTrHtml + "</tr>");                
+            });
+            
+            //点击确认关闭弹窗
+            $(".modal-footer .red-fe6869Button").click(function(){
+                $("#ac-OPSure,#ac-distributionBox,#ac-travelToInform").modal("hide");
             });
             
         })
