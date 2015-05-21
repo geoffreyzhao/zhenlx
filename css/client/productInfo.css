@@ -1214,6 +1214,14 @@ ul.common-tab > li.rest {
     height: 21px;
     vertical-align: middle;
     margin-right: 5px;
+    float: left;
+}
+
+.trip-tag-list {
+    float: left;
+    width: 292px;
+    max-height: 62px;
+    overflow: hidden;
 }
 
 .trip-tag {
@@ -1224,6 +1232,7 @@ ul.common-tab > li.rest {
     border-radius: 3px;
     color: #fff;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .tag-bg-1 {
@@ -1240,6 +1249,10 @@ ul.common-tab > li.rest {
 
 .tag-bg-4 {
     background-color: #11b9b7;
+}
+
+.tag-bg-5 {
+    background-color: #aa87ae;
 }
 
 .date-icon {
