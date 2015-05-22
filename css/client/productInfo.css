@@ -1769,8 +1769,8 @@ ul.common-tab > li.rest {
     height: 84px;
     margin: 0 -5px;
     color: #fff;
-    background-color: rgb(6,38,50);
-    background-color: rgba(6,38,50,0.9); 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.75); 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding: 0 90px;

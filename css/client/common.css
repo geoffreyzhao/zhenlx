@@ -565,7 +565,7 @@ header .head {
 }
 
 .top-nav-item {
-    font-size: 20px;
+    font-size: 18px;
     color: #7f7f7f;
     width: 107px;
     text-align: center;
@@ -578,6 +578,19 @@ header .head {
 
 .top-nav-item.current {
     color: #fff;
+    background: url(../../images/client/top-nav-slider-bg.png) no-repeat;
+    width: 107px;
+    height: 53px;
+    display: inline-block;
+    z-index: 1;
+}
+
+.top-nav-item.current:hover {
+    color: #fff;
+}
+
+.top-nav-item:hover {
+    color: #11b9b7;
 }
 
 .top-nav .slider {
