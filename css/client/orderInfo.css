@@ -1,9 +1,12 @@
 @charset "utf-8";
 
-/*  璁㈠崟璇︽儏 S  */
-.tooltip-inner{
+/*  订单详情 S  */
+.orderStatus .tooltip-inner{
     min-width: 200px;
-    max-width: 500px;
+    max-width: 350px;
+}
+.commonStyle label{
+    margin: 0;
 }
 .onLinePayContent{
     position: relative;
@@ -29,7 +32,7 @@
 .titleModel .left-semicircle{
      position: absolute;
      bottom:-4px;
-     left:0px;
+     left:0;
      width:4px;
      height: 8px;
      border-radius:0 4px 4px 0;
@@ -39,7 +42,7 @@
 .titleModel .right-semicircle{
     position: absolute;
     bottom:-4px;
-    right:0px;
+    right:0;
     width:4px;
     height: 8px;
     border-radius:4px 0 0 4px;
@@ -60,13 +63,10 @@
 .commonOrderModel .blueFonts{
     color: #11b9b7;
 }
-.productInfoModel{
-    margin: 0 25px;
-}
 .productInfoModel .productInfoTitle{
     font-size: 18px;
     color: #484848;
-    margin: 25px 0 15px;
+    margin: 0 0 15px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ececec;
 }
@@ -75,7 +75,7 @@
     margin-right: 15px;
 }
 .productInfoModel .productInfoTab{
-    margin: 30px 0 40px;
+    margin: 30px 0 0
 }
 .productInfoTab .productInfoImg{
     width: 150px;
@@ -263,14 +263,341 @@
 .orderStatus .passed .evaluateIcon{
     background-position: -267px 0;
 }
+
 .statusHint{
     font-size: 13px;
     color: #055453;
     margin: 10px 0;
+    text-align: left;
+    line-height: 20px;
 }
-/*  璁㈠崟璇︽儏 E  */
+.editContactInfo,
+.editTouristInfo{
+    font-size: 14px;
+    color: #11b9b7;
+    position: absolute;
+    right: 3%;
+    top: 7px;
+}
+.commonStyle{
+    margin: 25px 25px 40px;
+}
+.commonLightBlueThead{
+    font-size: 14px;
+    color: #484848;
+    width: 100%;
+}
+.commonLightBlueThead thead th,
+.commonLightBlueThead.leftTh th{
+    background-color: #f3fbfb;
+    color: #9f9f9f;
+    border: 1px solid #d4f0f0;
+    padding: 13px 10px;
+    text-align: center;
+}
+.commonLightBlueThead tbody td{
+    background-color: #fcfefe;
+    padding: 13px 10px;
+    border: 1px solid #d4f0f0;
+    text-align: center;
+}
+.editContactInfoContent{
+    font-size: 14px;
+    background-color: #fcfefe;
+    border: 1px solid #d4f0f0;
+    padding: 25px 10px;
+    display: none;
+}
+.commonEditTab th{
+    color: #9f9f9f;
+    text-align: right;
+    padding: 7px 10px;
+}
+.commonEditTab td{
+    color: #484848;
+    padding: 7px 10px;
+}
+.commonEditTab td .blueBtn{
+    font-size: 18px;
+}
+.commonEditTab td .cancelBtn{
+    font-size: 18px;
+    color: #818181;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.commonEditTab td .cancelBtn:hover{
+    text-decoration: underline;
+}
+.commonEditTab .genderSelect{
+    font-size: 14px;
+}
+.editTouristInfoContent{
+    background-color: #fcfefe;
+    border: 1px solid #d4f0f0;
+    display: none;
+}
+.editTouristInfoTab{
+    font-size: 14px;
+    border-top: 1px solid #d4f0f0;
+}
+.editTouristInfoTab:first-child{
+    border-top: none;
+}
+.editTouristInfoTab .numberFonts{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: "Adobe 黑体 Std";
+    text-align: center;
+    color: #11b9b7;
+    border-right: 1px solid #d4f0f0;
+}
+.editTouristInfoTab .first td,
+.editTouristInfoTab .first th{
+    padding-top: 30px;
+}
+.editTouristInfoTab .last td,
+.editTouristInfoTab .last th{
+    padding-bottom: 20px;
+}
+.commonOrderModel .airInfoList{
+    margin: 8px 0;
+    position: relative;
+    border-bottom: 1px solid #dcf5f4;
+}
+.commonOrderModel .airInfoList li{
+    display: inline-block;
+    padding: 20px 0;
+}
+.airInfoList .dashedLine{
+    display: inline-block;
+    width: 1px;
+    height: 93%;
+    border-left: 1px dashed #c3eded;
+    position: absolute;
+    top: 0;
+}
+.airInfoList .dashedLine.firstLine{
+    left: 165px;
+}
+.airInfoList .dashedLine.secondLine{
+    left: 750px;
+}
+.airInfoList li.leftGoBack{
+    width: 160px;
+    text-align: center;
+    line-height: 25px;
+}
+.airInfoList .lightBlue18Fonts{
+    font-size: 16px;
+    color: #11b9b7;
+    margin-bottom: 7px;
+}
+.leftGoBack .goBackCommonStyle{
+    display: inline-block;
+    font-size: 13px;
+    min-width: 50px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.leftGoBack .goBackCommonStyle.greenBg{
+    background-color: #0fd730;
+}
+.leftGoBack .goBackCommonStyle.blueBg{
+    background-color: #11b9b7;
+}
+.airInfoList li.timePlaceAirport{
+    width: 565px;
+    margin-left: 20px;
+}
+.timePlaceAirport .timePlaceInfo{
+    display: inline-block;
+    width: 260px;
+    text-align: center;
+    padding-right: 35px;
+}
+.timePlaceAirport .timePlaceInfo.rightPlaceInfo{
+    width: 280px;
+    padding-left: 45px;
+    padding-right: 0;
+}
+.timePlaceAirport .timePlaceFonts{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.timePlaceFonts .placeFonts{
+    color: #11b9b7;
+    font-weight: normal;
+}
+.timePlaceFonts .timeFonts{
+    color: #484848;
+}
+.timePlaceAirport .airportFonts{
+    font-size: 16px;
+    color: #9f9f9f;
+}
+.timePlaceAirport .flyToIcon{
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background: url("../../images/client/productInfoIcon.png") no-repeat -248px 0;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+}
+.airInfoList .shippingSpaceInfo{
+    width: 310px;
+    text-align: center;
+}
+.airLogo .verticalAlignMiddle{
+    vertical-align: middle;
+}
+.timePlaceAirport .stoppingPoint {
+    background: url("../../images/client/order-spirit.png") no-repeat -33px 0;
+    display: inline-block;
+    width: 92px;
+    height: 25px;
+    color: #11b9b7;
+    font-size: 12px;
+    cursor: default;
+    position: absolute;
+    left: 37%;
+    top: 30%;
+    text-align: center;
+    line-height: 25px;
+}
+.commonStyle.changeCommonStyle{
+    margin: 25px 0 30px;
+}
+.changeCommonStyle .airInfoList.last{
+    border-bottom: none;
+}
+.changeCommonStyle .hotelInfoTab{
+    width: 100%;
+    position: relative;
+}
+.changeCommonStyle .hotelInfoTab:first-child{
+    margin-top: -25px;
+}
+.hotelInfoTab tr{
+    border-bottom: 1px solid #dcf5f4;
+}
+.hotelInfoTab td{
+    font-size: 14px;
+    color: #484848;
+    padding: 30px 10px;
+    text-align: center;
+}
+.hotelInfoTab td.textAlignLeft{
+    text-align: left;
+    padding-left: 40px;
+}
+.hotelInfoTab .blueBgFonts,
+.hotelInfoTab .orangeBgFonts{
+    font-size: 13px;
+    display: inline-block;
+    min-width: 50px;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.hotelInfoTab .blueBgFonts{
+    background-color: #11b9b7;
+}
+.hotelInfoTab .orangeBgFonts{
+    background-color: #fe7800;
+}
+.hotelInfoTab .blueFontsWeight{
+    font-size: 14px;
+    font-weight: bold;
+    color: #11b9b7;
+}
+.hotelInfoTab .roomsIcon{
+    width: 27px;
+    height: 20px;
+    background-position: -64px -157px;
+    margin-bottom: 5px;
+}
+.hotelInfoTab .solidLine{
+    display: inline-block;
+    width: 1px;
+    height: 75%;
+    border-left: 1px solid #dcf5f4;
+    position: absolute;
+    top: 15px;
+}
+.hotelInfoTab .solidLine.hotelFirstLine{
+    left: 360px;
+}
+.hotelInfoTab .solidLine.hotelSecondLine{
+    left: 840px;
+}
+.commonStyle .bedType{
+    font-size: 14px;
+    margin: 20px 0 0;
+    color: #484848;
+}
+.bedType .color9f9f9f{
+    color: #9f9f9f;
+    margin-right: 10px;    
+}
+.editBedTypeContent{
+    display: none;
+}
+.editBedTypeContent .genderSelect{
+    font-size: 14px;
+}
+.editBedTypeContent .saveBedType{
+    font-size: 14px;
+    font-weight: bold;
+    color: #11b9b7;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.commonLightBlueThead.leftTh th{
+    color: #11b9b7;
+}
+.commonLightBlueThead.leftTh td{
+    line-height: 22px;
+    padding-left: 15px;
+}
+.commonLightBlueThead.costTab td{
+    text-align: left;
+}
+.commonLightBlueThead .orangeWeight14,
+.commonLightBlueThead .orangeWeight16,
+.commonLightBlueThead .orangeWeight20,
+.commonLightBlueThead .orangeWeight22{
+    font-weight: bold;
+    color: #fe7800;
+}
+.commonLightBlueThead .orangeWeight14{
+    font-size: 14px;
+}
+.commonLightBlueThead .orangeWeight16{
+    font-size: 16px;
+}
+.commonLightBlueThead.leftTh .orangeWeight22{
+    font-size: 22px;
+    text-align: right;
+    padding-right: 90px;
+}
+.commonLightBlueThead .orangeWeight20{
+    font-size: 20px;
+}
+/*  订单详情 E  */
 
-/** 无订单 start  */
+/* 无订单 start  */
 .withoutOrder, .orderList{
     position: relative;
     top: 40px;
