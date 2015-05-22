@@ -282,6 +282,9 @@
     color: #3895cf;
     margin-right: 10px;
 }
+.noBorderTabStyle .trTitle {
+    text-align: right;
+}
 .orderSpan .orderInput{
     width: 400px;
     margin: 0 10px;
