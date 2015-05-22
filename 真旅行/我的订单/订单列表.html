@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/bootstrap.reset.css">
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
@@ -45,20 +45,168 @@
 </header>
 
 <div class="main-container">
-    <div class="main-wrapper" id="main-wrapper">
+    <div class="main-wrapper box-space" id="main-wrapper">
         <section class="orderList">
             <span class="pin"></span>
             <div class="top-border"></div>
             <div class="orderListBox">
-                <div class="orderListBox-one">
+                <div class="orderListBox-cnt">
                     <div class="orderListBox-head clearfix">
-                        <span class="boxHead-title boxHead-title-color1">所有订单</span><span class="boxHead-title
-                         boxHead-title-border boxHead-title-color2">待支付<i class="boxHead-title-num">1</i></span><span
-                            class="boxHead-title">待评价<i class="boxHead-title-num boxHead-title-color1">1</i></span>
-                        <span class="orderListStatus pull-right boxHead-title-color1"><span class="orderStatusTip"></span><a href="">订单状态</a></span>
+                        <span class="boxHead-title boxHead-title-color">所有订单</span><span class="boxHead-title
+                         boxHead-title-border">待支付<i class="boxHead-title-num">1</i></span><span
+                            class="boxHead-title">待评价<i class="boxHead-title-num">1</i></span>
+                        <span class="orderListStatus pull-right"><span class="orderStatusTip"></span><i class="orderTooltip green-border-tooltip">订单状态</i></span>
                     </div>
-                    <i class="left-semicircle"></i>
-                    <i class="right-semicircle"></i>
+                    <i class="left-semicircle left-semicircle-bg01"></i>
+                    <i class="right-semicircle left-semicircle-bg01"></i>
+                </div>
+                <div class="orderListBox-cnt">
+                    <div class="boxTwo-cnt">
+                        <span class="orderListModel">订单号:1505125213</span><span>上海至巴黎五晚13天话色彩国度</span>
+                    </div>
+                    <i class="left-semicircle left-semicircle-bg01"></i>
+                    <i class="right-semicircle left-semicircle-bg01"></i>
+                </div>
+                <div class="orderListBox-cnt">
+                    <div class="boxCnt-item clearfix">
+                        <div class="boxCnt-item-img pull-left"></div>
+                        <div class="boxCnt-item-type pull-left">
+                            <div class="boxCnt-item-txt">下单日期</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color">2015-04-20</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">出游日期</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color">2015-05-10</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">订单金额</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-num">￥12639</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">应付金额</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-num">￥12000<div class="boxCnt-txt-off">已优惠 ￥639</div></div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">状态</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color01">待支付</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">查看</div>
+                            <div class="boxCnt-txt-color"><button type="button" class="btn btn-look btn-pay">去支付</button></div>
+                        </div>
+                    </div>
+                    <i class="left-semicircle left-semicircle-bg01"></i>
+                    <i class="right-semicircle left-semicircle-bg01"></i>
+                </div>
+                <div class="orderListBox-cnt">
+                    <div class="boxTwo-cnt">
+                        <span class="orderListModel">订单号:1505125213</span><span>上海至巴黎五晚13天话色彩国度</span>
+                    </div>
+                    <i class="left-semicircle left-semicircle-bg01"></i>
+                    <i class="right-semicircle left-semicircle-bg01"></i>
+                </div>
+                <div class="orderListBox-cnt">
+                    <div class="boxCnt-item clearfix">
+                        <div class="boxCnt-item-img pull-left"></div>
+                        <div class="boxCnt-item-type pull-left">
+                            <div class="boxCnt-item-txt">下单日期</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color">2015-04-20</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">出游日期</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color">2015-05-10</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">订单金额</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-num">￥12639</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">应付金额</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-num">￥12000<div class="boxCnt-txt-off">已优惠 ￥639</div></div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">状态</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color02">出行中</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">查看</div>
+                            <div class="boxCnt-txt-color"><button type="button" class="btn btn-look btn-judge">去评价</button></div>
+                        </div>
+                    </div>
+                    <i class="left-semicircle left-semicircle-bg02"></i>
+                    <i class="right-semicircle left-semicircle-bg02"></i>
+                </div>
+                <div class="orderListBox-cnt">
+                    <div class="boxTwo-cnt">
+                        <span class="orderListModel">订单号:1505125213</span><span>上海至巴黎五晚13天话色彩国度</span>
+                    </div>
+                    <i class="left-semicircle left-semicircle-bg02"></i>
+                    <i class="right-semicircle left-semicircle-bg02"></i>
+                </div>
+                <div class="orderListBox-cnt">
+                    <div class="boxCnt-item clearfix">
+                        <div class="boxCnt-item-img pull-left"></div>
+                        <div class="boxCnt-item-type pull-left">
+                            <div class="boxCnt-item-txt">下单日期</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color">2015-04-20</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">出游日期</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color">2015-05-10</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">订单金额</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-num">￥12639</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">应付金额</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-num">￥12000<div class="boxCnt-txt-off">已优惠 ￥639</div></div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">状态</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color03">已完成</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-txt-color boxCnt-look"><button type="button" class="btn btn-look btn-see">查看</button></div>
+                        </div>
+                    </div>
+                    <i class="left-semicircle left-semicircle-bg03"></i>
+                    <i class="right-semicircle left-semicircle-bg03"></i>
+                </div>
+                <div class="orderListBox-cnt">
+                    <div class="boxTwo-cnt">
+                        <span class="orderListModel">订单号:1505125213</span><span>上海至巴黎五晚13天话色彩国度</span>
+                    </div>
+                    <i class="left-semicircle left-semicircle-bg03"></i>
+                    <i class="right-semicircle left-semicircle-bg03"></i>
+                </div>
+                <div>
+                    <div class="boxCnt-item clearfix">
+                        <div class="boxCnt-item-img pull-left"></div>
+                        <div class="boxCnt-item-type pull-left">
+                            <div class="boxCnt-item-txt">下单日期</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color">2015-04-20</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">出游日期</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color">2015-05-10</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">订单金额</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-num">￥12639</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">应付金额</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-num">￥12000<div class="boxCnt-txt-off">已优惠 ￥639</div></div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-item-txt">状态</div>
+                            <div class="boxCnt-item-txt boxCnt-txt-color03">已完成</div>
+                        </div>
+                        <div class="boxCnt-item-type boxCnt-item-border pull-left">
+                            <div class="boxCnt-txt-color boxCnt-look"><button type="button" class="btn btn-look btn-see">查看</button></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -89,6 +237,14 @@
             changeTextColor: "#fff"
         });
 
+        $(".orderTooltip").attr("title", $("#orderStatus-tooltip").html());
+
+        $(".green-border-tooltip").tooltip({
+            html: true,
+            placement: 'bottom',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+
     });
 
     function setWrapperHeight() {
@@ -98,6 +254,36 @@
             });
         }
     }
+</script>
+<!--订单状态的提示框-->
+<script type="text/html" id="orderStatus-tooltip">
+    <table class="order-table">
+        <tr>
+            <td class="td-first-line boxHead-title-color" width="100">状态说明</td>
+            <td class="text-right td-first-line"><button type="button" class="close" aria-hidden="true">&times;</button></td>
+        </tr>
+        <tr class="order-tr">
+            <td class="boxCnt-txt-color01">待支付</td>
+            <td>订单已提交，系统处理中，等待买家支付</td>
+        </tr>
+        <tr class="order-tr">
+            <td class="boxHead-title-color">支付成功</td>
+            <td>超强的运营能力，保证您支付成功即可确认！嗯呢，就是可以等待出游啦！</td>
+        </tr>
+        <tr class="order-tr">
+            <td class="boxCnt-txt-color02">出行中</td>
+            <td>开开心心旅程中</td>
+        </tr>
+        <tr class="order-tr">
+            <td class="boxHead-title-color">已完成</td>
+            <td>旅行归来，感谢预定真旅行，记得给我们分享旅行见闻哦！</td>
+        </tr>
+        <tr class="order-tr">
+            <td class="boxCnt-txt-color03">支付超时</td>
+            <td>种种原因半小时你还未支付您的订单，无奈产品被抢走……</td>
+        </tr>
+
+    </table>
 
 </script>
 

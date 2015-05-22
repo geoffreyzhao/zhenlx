@@ -656,7 +656,6 @@
     vertical-align: middle;
     z-index: 11;
 }
-
 /** 无订单 end    */
 
 /** 订单列表 start    */
@@ -666,30 +665,126 @@
     min-height: 710px;
 }
 .orderListBox-head{
-    padding:34px;
+    padding:34px 34px 34px 44px;
+}
+.orderListBox-cnt{
+    position: relative;
     border-bottom:1px dashed #0c8694;
 }
-.orderListBox-one{
-    width:100%;
-    position: relative;
-}
-.orderListBox-one .left-semicircle{
+.orderListBox-cnt .left-semicircle{
     position: absolute;
     bottom:-4px;
     left:0px;
     width:4px;
     height: 8px;
     border-radius:0 4px 4px 0;
-    background: #0b7e96;
 }
-.orderListBox-one .right-semicircle{
+.orderListBox-cnt .right-semicircle{
     position: absolute;
     bottom:-4px;
     right:0px;
     width:4px;
     height: 8px;
     border-radius:4px 0 0 4px;
+}
+.left-semicircle-bg01{
     background: #0b7e96;
+}
+.left-semicircle-bg02{
+    background: #0c8c93;
+}
+.left-semicircle-bg03{
+    background: #0d9692;
+}
+.boxTwo-cnt{
+    padding:23px 23px 23px 62px;
+    font-size: 16px;
+    line-height: 18px;
+}
+.boxTwo-cnt span{
+    margin-right:22px;
+}
+.boxTwo-cnt .orderListModel, .boxCnt-txt-color03{
+    color:#11b9b7;
+}
+.boxCnt-item{
+    padding: 43px 43px 43px 62px;
+}
+.boxCnt-item-img{
+    width:150px;
+    height:94px;
+    background: url("../../images/client/productInfoImg.jpg") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+.boxCnt-item-type{
+    width:145px;
+    height:94px;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    display: inline-block;
+    color:#9f9f9f;
+}
+.boxCnt-item-border{
+    border-left:1px #ececec solid;
+}
+.boxCnt-item-txt{
+    padding:12px 0px;
+}
+.boxCnt-txt-color{
+    color:#484848;
+}
+.boxCnt-look{
+    height:94px;
+    padding-top:30px;
+}
+.boxCnt-txt-color01, .order-table .boxCnt-txt-color01{
+    color:#fe7800;
+}
+.boxCnt-txt-color02, .order-table .boxCnt-txt-color02{
+    color:#28d148;
+}
+.boxCnt-txt-color03, .order-table .boxCnt-txt-color03{
+    color:#ff4800;
+}
+.btn-look{
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+.btn-pay{
+    background-color: #ffa200;
+}
+.btn-pay:hover, .btn-pay:focus{
+    color: #FFFFFF;
+    background-color: #fe7800;
+}
+.btn-judge{
+    background-color: #11b9b7;
+}
+.btn-judge:hover, .btn-judge:focus{
+    color: #FFFFFF;
+    background-color: #10adab;
+}
+.btn-see{
+    padding:6px 20px;
+    background-color: #11b9b7;
+}
+.btn-see:hover, .btn-see:focus{
+    color: #FFFFFF;
+    background-color: #10adab;
+}
+.boxCnt-txt-num{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    color:#fe7800;
+}
+.boxCnt-txt-off{
+    font-size: 12px;
+    line-height: 18px;
+    color:#c7c7c7;
 }
 .boxHead-title{
     width:110px;
@@ -704,16 +799,14 @@
     border-left:1px #ececec solid;
     border-right:1px #ececec solid;
 }
-.boxHead-title-color1{
+.boxHead-title-color{
     color:#11b9b7;
-}
-.boxHead-title-color2{
-    color:#0b7d96;
 }
 .boxHead-title-num{
     padding:0px 5px;
+    color:#11b9b7;
 }
-.orderListStatus a{
+.orderListStatus .orderTooltip{
     text-decoration: none;
     color:#11b9b7;
 }
@@ -724,135 +817,40 @@
     background: url("../../images/client/spirit.png") no-repeat -69px 0px;
     display: inline-block;
     vertical-align: middle;
+}
+.box-space{
+    margin-bottom: 112px;
+}
+.order-table{
+    width:452px;
+    border:0px;
+    margin-right:13px;
+}
+.order-tr{
+    padding:0px 15px;
+}
+.order-table tr td{
+    text-align: left;
+    font-size: 13px;
+    color: #055453;
+    line-height: 18px;
+    padding:15px;
+    border-bottom:1px #d4f0f0 solid;
+}
+.order-table tr:last-child td {
+    border:none;
+}
+.td-first-line{
+    font-size: 14px !important;
+}
+.orderListStatus .tooltip{
+    left:664px !important;
+}
+.orderListStatus .tooltip .tooltip-arrow{
+    left:90% !important;
+}
+.orderListStatus .tooltip .tooltip-inner{
+    width:452px;
+    padding:6px 0px;
 }
 /** 订单列表 end    */
-
-/** �޶��� start  */
-.withoutOrder, .orderList{
-    position: relative;
-    top: 40px;
-    color: #484848;
-}
-.withoutOrder .top-border, .orderList .top-border{
-    display: inline-block;
-    background: url(../../images/client/repeat-border.jpg) repeat-x;
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    top: -3px;
-    left: 0;
-}
-.withoutOrder .pin, .orderList .pin{
-    width:24px;
-    height:44px;
-    background: url("../../images/client/spirit.png") no-repeat 0px 0px;
-    position: absolute;
-    top:-13px;
-    left:28px;
-    z-index: 10;
-}
-.txtColor{
-    color:#11b9b7;
-}
-.withoutOrderBox{
-    width:100%;
-    min-height: 710px;
-    border-top:0px;
-}
-.withoutOrder-row1{
-    margin:115px 0px 85px;
-    font-size:22px;
-    line-height: 18px;
-}
-.withoutOrder-row2{
-    width:100%;
-    height:268px;
-    background: url("../../images/client/withoutOrderImg.png") no-repeat;
-    background-position: center;
-    display: inline-block;
-}
-.withoutOrder-row3{
-    font-size: 20px;
-    line-height: 18px;
-    color:#aaaaaa;
-    margin:55px 0px;
-}
-.phoneIcon{
-    width:12px;
-    height:15px;
-    margin-right:5px;
-    background: url("../../images/client/spirit.png") no-repeat -56px 0px;
-    display: inline-block;
-    vertical-align: middle;
-    z-index: 11;
-}
-
-/** �޶��� end    */
-
-/** �����б� start    */
-.orderListBox{
-    width:100%;
-    background-color: #ffffff;
-    min-height: 710px;
-}
-.orderListBox-head{
-    padding:34px;
-    border-bottom:1px dashed #0c8694;
-}
-.orderListBox-one{
-    width:100%;
-    position: relative;
-}
-.orderListBox-one .left-semicircle{
-    position: absolute;
-    bottom:-4px;
-    left:0px;
-    width:4px;
-    height: 8px;
-    border-radius:0 4px 4px 0;
-    background: #0b7e96;
-}
-.orderListBox-one .right-semicircle{
-    position: absolute;
-    bottom:-4px;
-    right:0px;
-    width:4px;
-    height: 8px;
-    border-radius:4px 0 0 4px;
-    background: #0b7e96;
-}
-.boxHead-title{
-    width:110px;
-    height:23px;
-    vertical-align: middle;
-    font-size: 18px;
-    line-height: 18px;
-    text-align: center;
-    display: inline-block;
-}
-.boxHead-title-border{
-    border-left:1px #ececec solid;
-    border-right:1px #ececec solid;
-}
-.boxHead-title-color1{
-    color:#11b9b7;
-}
-.boxHead-title-color2{
-    color:#0b7d96;
-}
-.boxHead-title-num{
-    padding:0px 5px;
-}
-.orderListStatus a{
-    text-decoration: none;
-    color:#11b9b7;
-}
-.orderStatusTip{
-    width:16px;
-    height:18px;
-    margin-right: 5px;
-    background: url("../../images/client/spirit.png") no-repeat -69px 0px;
-    display: inline-block;
-    vertical-align: middle;
-}
-/** �����б� end    */
