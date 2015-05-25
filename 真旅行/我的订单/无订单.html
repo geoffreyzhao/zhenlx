@@ -38,7 +38,6 @@
                 <li class="top-nav-item">心愿清单</li>
                 <li class="top-nav-item">代金卷</li>
                 <li class="top-nav-item">会员信息</li>
-                <li class="slider"></li>
             </ul>
         </div>
     </div>
@@ -55,8 +54,7 @@
                         Hello,<span class="txtColor">Dorian</span>,你还没有订单哦~
                     </div>
                     <div class="withoutOrder-row2"></div>
-                    <div class="withoutOrder-row3 text-center">踏上真旅，一起去看世界</div>
-
+                    <a href="javascript:;" class="withoutOrder-row3 text-center">踏上真旅，一起去看世界</a>
                 </div>
             </div>
         </section>
@@ -79,12 +77,6 @@
             $(".box-relative-location").css({
                 "top": $ele.position().top + "px"
             }).show();
-        });
-
-        $(".top-nav-list").slideNav({
-            fx: "swing",
-            speed: 300,
-            changeTextColor: "#fff"
         });
 
     });

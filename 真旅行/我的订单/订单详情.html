@@ -280,7 +280,6 @@
                             <col width="150">
                             <col width="85">
                             <col width="65">
-                            <col width="120">
                             <col width="80">
                             <col width="85">
                             <col width="190">
@@ -292,7 +291,6 @@
                             <th>拼音/英文名</th>
                             <th>国籍</th>
                             <th>性别</th>
-                            <th>手机号</th>
                             <th>乘客类型</th>
                             <th>证件类型</th>
                             <th>证件号</th>
@@ -305,7 +303,6 @@
                             <td>Dorian zhou</td>
                             <td>中国</td>
                             <td>男</td>
-                            <td>13865898856</td>
                             <td>成人</td>
                             <td>护照</td>
                             <td>SH0J880765367</td>
@@ -316,7 +313,6 @@
                             <td>Lin zhi xuan</td>
                             <td>中国</td>
                             <td>女</td>
-                            <td>18655228899</td>
                             <td>成人</td>
                             <td>护照</td>
                             <td>SH0J880765367</td>
@@ -351,10 +347,6 @@
                                         <label class="radio">
                                             <span class="commonIcon radioIcon"></span>
                                             <span class="genderSelect">儿童（2-12岁）</span>
-                                        </label>
-                                        <label class="radio">
-                                            <span class="commonIcon radioIcon"></span>
-                                            <span class="genderSelect">婴儿（<2岁）</span>
                                         </label>
                                     </span>
                                 </td>
@@ -425,10 +417,6 @@
                                         <label class="radio">
                                             <span class="commonIcon radioIcon"></span>
                                             <span class="genderSelect">儿童（2-12岁）</span>
-                                        </label>
-                                        <label class="radio">
-                                            <span class="commonIcon radioIcon"></span>
-                                            <span class="genderSelect">婴儿（<2岁）</span>
                                         </label>
                                     </span>
                                 </td>
@@ -882,6 +870,50 @@
     <div class="statusHint">您的评价是我们不断改进的动力，同时也是其他游客出行的参考，成功推荐新的游客我们将赠送可抵现金券于您的账户。</div>
 </script>
 
+    <!--  经停提示信息模板  -->
+    <script type="text/html" id="stop_flight_template">
+        <table class="flight_tip_table">
+            <tr>
+                <th>经停：</th>
+                <td>阿布扎比阿布扎比</td>
+            </tr>
+            <tr>
+                <th>到达：</th>
+                <td>10:20</td>
+            </tr>
+            <tr>
+                <th>起飞：</th>
+                <td>14:30</td>
+            </tr>
+            <tr>
+                <th>停留：</th>
+                <td>2h30m</td>
+            </tr>
+        </table>
+    </script>
+
+    <!--  中转提示信息模板  -->
+    <script type="text/html" id="transfer_flight_template">
+        <table class="flight_tip_table">
+            <tr>
+                <th>中转：</th>
+                <td>阿布扎比</td>
+            </tr>
+            <tr>
+                <th>到达：</th>
+                <td>10:20</td>
+            </tr>
+            <tr>
+                <th>起飞：</th>
+                <td>14:30</td>
+            </tr>
+            <tr>
+                <th>停留：</th>
+                <td>2h30m</td>
+            </tr>
+        </table>       
+    </script>
+
 <script>
     $(function(){
         //导航状态浮层
@@ -892,6 +924,10 @@
         $(".orderStatus .travelInform").attr("title", $("#travelInform_template").html());
         $(".orderStatus .steward").attr("title", $("#steward_template").html());
         $(".orderStatus .evaluate").attr("title", $("#evaluate_template").html());
+
+        $(".stoppingPoint.transfer").attr("title", $("#transfer_flight_template").html());
+        $(".stoppingPoint.stop").attr("title", $("#stop_flight_template").html());
+
         $(".green-border-tooltip").tooltip({
             html: true,
             placement: 'bottom',

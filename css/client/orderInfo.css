@@ -173,6 +173,11 @@
     font-size: 12px;
     color: #9f9f9f;
 }
+.orderStatus .current .grayFonts,
+.orderStatus .passed .grayFonts,
+.orderStatus li:hover .grayFonts {
+    color: #11b9b7;
+}
 .orderStatus .whiteOrderIcon,
 .orderStatus .payOrderIcon,
 .orderStatus .paySuccessIcon,
@@ -662,6 +667,10 @@
     line-height: 18px;
     color:#aaaaaa;
     margin:55px 0px;
+    display: block;
+}
+.withoutOrder-row3:hover {
+    color: #11b9b7;
 }
 .phoneIcon{
     width:12px;

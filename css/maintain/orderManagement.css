@@ -123,7 +123,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    max-width: 690px;
+    max-width: 550px;
     word-wrap: break-word;
     word-break: break-all;
 }
