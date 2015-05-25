@@ -694,7 +694,7 @@
 }
 .orderListBox-cnt{
     position: relative;
-    border-bottom:1px dashed #0c8694;
+    border-bottom:1px dashed #c3dadd;
 }
 .orderListBox-cnt .left-semicircle{
     position: absolute;
@@ -738,7 +738,6 @@
 .boxCnt-item-img{
     width:150px;
     height:94px;
-    background: url("../../images/client/productInfoImg.jpg") no-repeat;
     display: inline-block;
     vertical-align: middle;
 }
@@ -851,15 +850,17 @@
     border:0px;
     margin-right:13px;
 }
-.order-tr{
-    padding:0px 15px;
+.order-td-right{
+    padding-right:13px;
 }
 .order-table tr td{
     text-align: left;
     font-size: 13px;
     color: #055453;
     line-height: 18px;
-    padding:15px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    padding-left:20px;
     border-bottom:1px #d4f0f0 solid;
 }
 .order-table tr:last-child td {
@@ -872,9 +873,10 @@
     left:664px !important;
 }
 .orderListStatus .tooltip .tooltip-arrow{
-    left:90% !important;
+    left:88.5% !important;
 }
 .orderListStatus .tooltip .tooltip-inner{
+    max-width: none;
     width:452px;
     padding:6px 0px;
 }

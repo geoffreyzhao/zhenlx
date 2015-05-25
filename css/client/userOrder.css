@@ -813,3 +813,171 @@
     /*font-weight: bold;*/
     color: #fe7800;
 }
+
+/*  付款成功 start  */
+.paySuccess-box{
+    position: relative;
+    top: 40px;
+    color: #484848;
+}
+.paySuccess-box .pin{
+    width:24px;
+    height:44px;
+    background: url("../../images/client/spirit.png") no-repeat 0px 0px;
+    position: absolute;
+    top:-13px;
+    left:28px;
+    z-index: 10;
+}
+.paySuccess-box .top-border{
+    display: inline-block;
+    background: url(../../images/client/repeat-border.jpg) repeat-x;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+.payBox-panel{
+    width:100%;
+    min-height: 710px;
+    border-top:0px;
+    background-color: #ffffff;
+}
+.paybox-up{
+    padding-bottom: 55px;
+    position: relative;
+    border-bottom:1px dashed #c3dadd;
+}
+.paybox-up .left-semicircle, .paybox-center .left-semicircle{
+    position: absolute;
+    bottom:-4px;
+    left:0px;
+    width:4px;
+    height: 8px;
+    border-radius:0 4px 4px 0;
+}
+.paybox-up .right-semicircle, .paybox-center .right-semicircle{
+    position: absolute;
+    bottom:-4px;
+    right:0px;
+    width:4px;
+    height: 8px;
+    border-radius:4px 0 0 4px;
+}
+.paybox-center .line{
+    width:1125px;
+    height: 1px;
+    background: url("../../images/client/line.jpg") repeat-x;
+    display: inline-block;
+    position: absolute;
+    bottom:0px;
+    left:5px;
+    
+}
+.paybox-up-cnt{
+    text-align: center;
+}
+.paybox-up-cnt .paybox-up-tip{
+    padding-top:29px;
+    font-size:24px;
+    line-height: 18px;
+}
+.paybox-up-txt{
+    padding-top:34px;
+    vertical-align: middle;
+}
+.paybox-up-txt span{
+    font-size: 18px;
+    line-height: 18px;
+}
+.paybox-up-txt .paybox-up-border{
+    padding-right:16px;
+    border-right:1px #e0e0e0 solid;
+}
+.paybox-up-right{
+    padding-left:16px;
+}
+.span-color01{
+    color:#fe7800;
+}
+.span-color02{
+    color:#11b9b7;
+}
+.paybox-up-img{
+    padding-top:73px;
+    position: relative;
+}
+.payImg{
+    width:67px;
+    height:67px;
+    background:url("../../images/client/registerIconSprite.png") no-repeat -33px -23px;
+    display: inline-block;
+
+}
+.left-bg01{
+    background-color: #0b8295;
+}
+.left-bg02{
+    background-color: #0c8d93;
+}
+.paybox-center{
+    padding:50px 0px 63px;
+    position: relative;
+    text-align: center;
+}
+.paybox-center .paybox-center-cnt{
+    padding-left:396px;
+    font-size: 18px;
+    line-height:30px;
+}
+.paybox-center-right{
+    float: left;
+    margin-left:51px;
+    text-align: left;
+}
+.paybox-center-right ul{
+    padding-top:28px;
+    list-style: none;
+}
+.paybox-center-right ul li{
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 8px;
+
+}
+.paybox-center-img{
+    width:157px;
+    height:157px;
+    background:url("../../images/client/withImg_02.jpg") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+.paybox-bottom{
+    padding-top:44px;
+    text-align: center;
+}
+.btn-back{
+    width:150px;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding:13px;
+    margin-left:25px;
+}
+.payBtn-color01{
+    background-color: #11b9b7;
+}
+.payBtn-color01:hover, .payBtn-color01:focus{
+    background-color: #10adab;
+    color: #ffffff;
+}
+.payBtn-color02{
+    background-color: #ffa200;
+}
+.payBtn-color02:hover, .payBtn-color02:focus{
+    background-color: #fe7800;
+    color: #ffffff;
+}
+/*  付款成功 end  */
