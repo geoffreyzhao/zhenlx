@@ -375,6 +375,12 @@ input[type="text"].errorStyle:focus{
 .dropdown .dropdownBtn:focus{
     border: 1px solid #80d0ee;
 }
+.dropdown.disabled .dropdownBtn {
+    background-color: #dcdbdb;
+}
+.dropdown.disabled .dropdownBtn:focus{
+    border: 1px solid #dadada;
+}
 .dropdown .dropdownBtn .caret{
     position: absolute;
     right: 7px;
