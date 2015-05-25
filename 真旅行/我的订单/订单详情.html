@@ -39,10 +39,10 @@
 <div class="main-container">
     <div class="main-wrapper" id="main-wrapper">
         <div class="orderFlowModel">
+            <div class="dashedLine"></div>
             <ul class="orderStatus clearfix">
                 <li class="first green-border-tooltip whiteOrder passed">
                     <span class="whiteOrderIcon"></span>
-                    <span class="line"></span>
                     <div class="statusFonts">
                         <div class="grayFonts">填写订单</div>
                         <div class="dateFonts">2015-05-15</div>
@@ -50,47 +50,42 @@
                 </li>
                 <li class="payOrder green-border-tooltip passed">
                     <span class="payOrderIcon"></span>
-                    <span class="line"></span>
                     <div class="statusFonts">
                         <div class="grayFonts">支付订单</div>
                         <div class="dateFonts">2015-05-15</div>
                     </div>
                 </li>
-                <li class="paySuccess green-border-tooltip passed">
+                <li class="paySuccess green-border-tooltip current">
                     <span class="paySuccessIcon"></span>
-                    <span class="line"></span>
                     <div class="statusFonts">
                         <div class="grayFonts">支付成功</div>
                         <div class="dateFonts">2015-05-15</div>
                     </div>
                 </li>
-                <li class="box green-border-tooltip passed">
+                <li class="box green-border-tooltip">
                     <span class="boxIcon"></span>
-                    <span class="line"></span>
                     <div class="statusFonts">
                         <div class="grayFonts">心意盒子</div>
                         <div class="dateFonts">2015-05-15</div>
                     </div>
                 </li>
-                <li class="travelInform green-border-tooltip passed">
+                <li class="travelInform green-border-tooltip">
                     <span class="travelInformIcon"></span>
-                    <span class="line"></span>
                     <div class="statusFonts">
                         <div class="grayFonts">出行通知</div>
                         <div class="dateFonts">2015-05-15</div>
                     </div>
                 </li>
-                <li class="steward green-border-tooltip passed">
+                <li class="steward green-border-tooltip">
                     <span class="stewardIcon"></span>
-                    <span class="line"></span>
                     <div class="statusFonts">
                         <div class="grayFonts">真旅管家</div>
                         <div class="dateFonts">2015-05-15</div>
                     </div>
                 </li>
-                <li class="last evaluate green-border-tooltip current">
+                <li class="last evaluate green-border-tooltip">
                     <span class="evaluateIcon"></span>
-                    <span class="line"></span>
+                    <!-- <span class="line"></span> -->
                     <div class="statusFonts">
                         <div class="grayFonts">旅游评价</div>
                         <div class="dateFonts">2015-05-15</div>
@@ -719,7 +714,8 @@
                                     <span class="genderSelect">优先双床房</span>
                                 </label>
                             </span>
-                            <span class="saveBedType">保存</span>
+                            <span class="sureBtn">确定</span>
+                            <span class="cancelBtn">取消</span>
                         </span>
                     </div>
                 </div>
@@ -865,7 +861,7 @@
 </div>
 
 <script type="text/html" id="whiteOrder_template">
-    <div class="statusHint">请仔细填写游客信息</div>
+    <div class="statusHint">出行前请仔细填写游客信息</div>
 </script>
 <script type="text/html" id="payOrder_template">
     <div class="statusHint">打开荷包，来一场说走就走的旅行吧</div>
@@ -911,9 +907,9 @@
         });
         $(".editContactInfoTab .cancelBtn").click(function(){
             $(this).parents(".editContactInfoContent").slideUp(function(){
+                $(".contactInfoTab").show();
                 $(window).trigger("resize");
             });
-            $(".contactInfoTab").show()
         });
 
         //编辑游客信息
@@ -925,15 +921,20 @@
         });
         $(".editTouristInfoContent .cancelBtn").click(function(){
             $(this).parents(".editTouristInfoContent").slideUp(function(){
+                $(".touristInfoTab").show();
                 $(window).trigger("resize");
             });
-            $(".touristInfoTab").show()
         });
         
         //编辑床型
         $(".bedType .editBedType").click(function(){
             $(this).hide();
             $(".editBedTypeContent").show();
+        });
+
+        $(".editBedTypeContent .cancelBtn").click(function(){
+            $(".editBedTypeContent").hide();
+            $(".editBedType").show();
         });
 
     });

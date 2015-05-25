@@ -2,8 +2,10 @@
 
 /*  订单详情 S  */
 .orderStatus .tooltip-inner{
-    min-width: 200px;
-    max-width: 350px;
+    /*min-width: 200px;*/
+    /*max-width: 350px;*/
+    width: 250px;
+    max-width: none;
 }
 .commonStyle label{
     margin: 0;
@@ -110,9 +112,9 @@
     padding: 30px 40px 40px;
     margin-bottom: 30px;
     background-color: #fff;
-    border-bottom: 2px solid #042c34;
+    /*border-bottom: 2px solid #042c34;
     border-left: 1px solid #042c34;
-    border-right: 1px solid #042c34;
+    border-right: 1px solid #042c34;*/
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -122,10 +124,19 @@
 .orderFlowModel .orderStatus{
     margin: 0;
 }
+.orderFlowModel .dashedLine {
+    display: inline-block;
+    width: 975px;
+    height: 1px;
+    border-top: 1px dashed #e1e1e1;
+    position: absolute;
+    left: 72px;
+    top: 52px;
+    z-index: 1;
+}
 .orderStatus li{
     float: left;
-    padding-left: 100px;
-    margin-left: -12px;
+    margin-left: 90px;
     cursor: pointer;
     position: relative;
 }
@@ -204,7 +215,7 @@
     background-position: -190px 0;
 }
 .orderStatus .evaluateIcon{
-    background-position: -229px 0;
+    background-position: -228px 0;
 }
 .orderStatus .current .whiteOrderIcon,
 .orderStatus .whiteOrder:hover .whiteOrderIcon,
@@ -232,7 +243,7 @@
 }
 .orderStatus .current .payOrderIcon,
 .orderStatus .payOrder:hover .payOrderIcon{
-    background-position: -49px 0;
+    background-position: -48px 0;
 }
 .orderStatus .current .paySuccessIcon,
 .orderStatus .paySuccess:hover .paySuccessIcon{
@@ -261,7 +272,7 @@
 .orderStatus .passed .travelInformIcon,
 .orderStatus .passed .stewardIcon,
 .orderStatus .passed .evaluateIcon{
-    background-position: -267px 0;
+    background-position: -266px 0;
 }
 
 .statusHint{
@@ -557,10 +568,15 @@
 .editBedTypeContent .genderSelect{
     font-size: 14px;
 }
-.editBedTypeContent .saveBedType{
+.editBedTypeContent .sureBtn{
     font-size: 14px;
-    font-weight: bold;
     color: #11b9b7;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.editBedTypeContent .cancelBtn{
+    font-size: 14px;
+    color: #818181;
     margin-left: 20px;
     cursor: pointer;
 }

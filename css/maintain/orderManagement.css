@@ -119,6 +119,14 @@
 .commonTab .orangefa7f1f{
     color: #fa7f1f;
 }
+.commonTab .product-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 690px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
 /*  自由行-订单列表 end  */
 
 /*  自由行-订单详情 S  */
