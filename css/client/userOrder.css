@@ -397,6 +397,15 @@
 .order-favorableTable .checkboxContent .checkbox {
     color: #484848;
 }
+.order-protocol-btn {
+    font-size: 14px;
+    color: #11b9b7;
+    cursor: pointer;
+}
+#orderProtocol .modal-body {
+    height: 320px;
+    overflow: auto;
+}
 .order-guestTable .leftTd div {
     font-size: 36px;
     font-weight: bold;
