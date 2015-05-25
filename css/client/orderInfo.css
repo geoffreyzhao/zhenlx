@@ -756,6 +756,10 @@
 .boxCnt-item-txt{
     padding:12px 0px;
 }
+.boxCnt-item-txt.view-order:hover {
+    cursor: pointer;
+    color: #11b9b7;
+}
 .boxCnt-txt-color{
     color:#484848;
 }

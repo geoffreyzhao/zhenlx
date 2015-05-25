@@ -38,7 +38,6 @@
                 <li class="top-nav-item">心愿清单</li>
                 <li class="top-nav-item">代金卷</li>
                 <li class="top-nav-item">会员信息</li>
-                <li class="slider"></li>
             </ul>
         </div>
     </div>
@@ -96,7 +95,7 @@
                             <div class="boxCnt-item-txt boxCnt-txt-color01">待支付</div>
                         </div>
                         <div class="boxCnt-item-type boxCnt-item-border pull-left">
-                            <div class="boxCnt-item-txt">查看</div>
+                            <div class="boxCnt-item-txt view-order">查看</div>
                             <div class="boxCnt-txt-color">
                                 <button type="button" class="btn btn-look btn-pay">去支付</button>
                             </div>
@@ -139,7 +138,7 @@
                             <div class="boxCnt-item-txt boxCnt-txt-color02">出行中</div>
                         </div>
                         <div class="boxCnt-item-type boxCnt-item-border pull-left">
-                            <div class="boxCnt-item-txt">查看</div>
+                            <div class="boxCnt-item-txt view-order">查看</div>
                             <div class="boxCnt-txt-color">
                                 <button type="button" class="btn btn-look btn-judge">去评价</button>
                             </div>
@@ -253,12 +252,6 @@
             }).show();
         });
 
-        $(".top-nav-list").slideNav({
-            fx: "swing",
-            speed: 300,
-            changeTextColor: "#fff"
-        });
-
         $(".orderTooltip").attr("title", $("#orderStatus-tooltip").html());
 
         $(".green-border-tooltip").tooltip({
@@ -283,7 +276,7 @@
         <tr>
             <td class="td-first-line boxHead-title-color" width="80">状态说明</td>
             <td class="text-right order-td-right td-first-line">
-                <button type="button" class="close" aria-hidden="true">&times;</button>
+                <!-- <button type="button" class="close" aria-hidden="true">&times;</button> -->
             </td>
         </tr>
         <tr class="order-tr">
