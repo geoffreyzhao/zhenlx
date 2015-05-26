@@ -291,6 +291,9 @@
 .wrapperList .oneRow{
     width: 90%;
 }
+.listDetails {
+    line-height: 26px;
+}
 .listDetails li{
     color: #616161;
     line-height: 25px;
