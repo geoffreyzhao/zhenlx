@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>B2C 真旅行前台 个人资料</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/userInfo.css">
+
+    <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../js/client/common.js"></script>
+    <script type="text/javascript" src="../js/client/adjust.js"></script>
+    
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<header>
+		<div class="head clearfix">
+			<div class="logo"></div>
+            <div class="top-nav">
+                <ul class="top-nav-list clearfix">
+                    <li class="top-nav-item">个人中心</li>
+                    <li class="top-nav-item">我的订单</li>
+                    <li class="top-nav-item">心愿清单</li>
+                    <li class="top-nav-item">代金券</li>
+                    <li class="top-nav-item current">会员信息</li>
+                </ul>
+            </div>
+		</div>
+	</header>
+
+	<div class="main-container">
+		<div class="main-wrapper" id="main-wrapper">
+			<div class="main-box" id="main-box">
+				<div class="top-border"><span class="clip"></span></div>
+				<div class="box-container">
+					<div class="cont-block clearfix">
+                        <span class="modelLine"></span>
+						<aside class="leftMenuContent">
+                            <ul>
+                                <li>
+                                    <a href="个人资料.html">个人资料</a>
+                                </li>
+                                <li>
+                                    <a href="常旅客信息.html">常用旅客信息</a>
+                                </li>
+                                <li class="active">
+                                    <a href="联系人信息.html">联系人信息</a>
+                                </li>
+                            </ul>
+						</aside>                        
+                        <section class="rightContent editHeadPortrait">
+                            <table class="dataTab">
+                                <colgroup>
+                                    <col width="100">
+                                    <col width="">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>姓名:</th>
+                                    <td>
+                                        <span class="realNameContent">
+                                            <span class="realNameFonts">小强</span>
+                                            <span class="commonIcon editIcon"></span>
+                                        </span>
+                                        <span class="editContent editNameBlock">
+                                            <input type="text" value="小强" class="editRealName" style="width: 220px;">
+                                            <span class="sureBtn">确定</span>
+                                            <span class="cancelBtn">取消</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="phoneNumberContent">
+                                    <th>电话:</th>
+                                    <td>
+                                        <span>13859785522</span>
+                                        <span class="commonIcon editIcon"></span>
+                                    </td>
+                                </tr>
+                                <tr class="editModelInfo editPhoneNumber">
+                                    <td colspan="2" class="noPadding">
+                                        <div class="editModelTabContainer" style="display: none;">
+                                            <table class="editModelTab">
+                                            <colgroup>
+                                                <col width="100">
+                                                <col width="">
+                                            </colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <th>原手机号:</th>
+                                                <td>
+                                                    <input type="text" value="" style="width: 220px;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>登录密码:</th>
+                                                <td>
+                                                    <input type="password" class="verifyBox" style="width: 220px;">
+                                                    <div class="verifyStyle">
+                                                        <i class="commonIcon errorIcon"></i>请输入登录密码
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>新手机号:</th>
+                                                <td>
+                                                    <input type="text" value="" style="width: 220px;">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>验证码:</th>
+                                                <td>
+                                                    <div class="componentInput verificationCode">
+                                                        <input type="text" placeholder="请输入验证码" style="width: 108px;">
+                                                        <span class="getVerificationCode">获取短信验证码</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
+                                                    <a href="javascript:void(0);" class="cancelBtn grayBtn" style="margin-left:20px;">取消</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>邮箱:</th>
+                                    <td>
+                                        <span class="emailContent">
+                                            <span>dorianzhou@126.com</span>
+                                            <span class="commonIcon editIcon"></span>
+                                        </span>
+                                        <span class="editContent editEmailBlock">
+                                            <input type="text" value="dorianzhou@126.com" class="editEmail" style="width: 220px;">
+                                            <span class="sureBtn">确定</span>
+                                            <span class="cancelBtn">取消</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>常用地址:</th>
+                                    <td>
+                                        <span class="addressContent">
+                                            <span>上海市宝山区天使路123号4号楼</span>
+                                            <span class="commonIcon editIcon"></span>
+                                        </span>
+                                        <span class="editContent editAddressBlock">                                           
+                                            <div class="dropdown" style="width: 110px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                    <span class="activeFonts">选择省</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">上海市</a></li>
+                                                    <li><a href="javascript:void(0);">天津市</a></li>
+                                                    <li><a href="javascript:void(0);">北京市</a></li>
+                                                </ul>
+                                            </div>                                        
+                                            <div class="dropdown" style="width: 110px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                    <span class="activeFonts">选择市</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">上海市</a></li>
+                                                    <li><a href="javascript:void(0);">南京市</a></li>
+                                                    <li><a href="javascript:void(0);">北京市</a></li>
+                                                </ul>
+                                            </div>                                       
+                                            <div class="dropdown" style="width: 110px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                                    <span class="activeFonts">选择区/县</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">闸北区</a></li>
+                                                    <li><a href="javascript:void(0);">普陀区</a></li>
+                                                    <li><a href="javascript:void(0);">宝山区</a></li>
+                                                    <li><a href="javascript:void(0);">虹口区</a></li>
+                                                </ul>
+                                            </div> 
+                                            <input type="text" value="上海市宝山区天使路123号4号楼" style="width: 300px;">
+                                            <span class="sureBtn">确定</span>
+                                            <span class="cancelBtn">取消</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="foot clearfix">
+			<span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+		</div>
+	</div>
+
+<script>
+    $(function(){            
+        
+        //编辑手机号码
+        $(".phoneNumberContent .editIcon").click(function(){
+            $(this).hide();
+            $(this).parents(".phoneNumberContent").siblings(".editPhoneNumber").find(".editModelTabContainer").slideDown(function(){
+                $(window).trigger("resize");
+            });
+        });
+        $(".editPhoneNumber .grayBtn").click(function(){
+            $(this).parents(".editPhoneNumber").find(".editModelTabContainer").slideUp(function(){
+                $(window).trigger("resize");
+            });
+            $(this).parents(".editPhoneNumber").siblings(".phoneNumberContent").find(".editIcon").show();
+        });
+
+        //编辑真实姓名
+        $(".realNameContent .editIcon").click(function(){
+            $(this).parents(".realNameContent").hide();
+            $(this).parents(".realNameContent").siblings(".editContent").show();
+        });
+        $(".editNameBlock .cancelBtn").click(function(){
+            $(this).parents(".editContent").hide();
+            $(this).parents(".editContent").siblings(".realNameContent").show();
+        });
+        $(".editNameBlock .sureBtn").click(function(){
+            var $realNameVal = $(this).siblings(".editRealName").val();
+            var $parents = $(this).parents(".editContent");
+            $parents.siblings(".realNameContent").find(".realNameFonts").html($realNameVal);
+            $parents.hide();
+            $parents.siblings(".realNameContent").show();
+        });
+
+        //编辑地址
+        $(".addressContent .editIcon").click(function(){
+            $(this).parents(".addressContent").hide();
+            $(this).parents(".addressContent").siblings(".editContent").show();
+        });
+        $(".editAddressBlock .cancelBtn,.editAddressBlock .sureBtn").click(function(){
+            $(this).parents(".editContent").hide();
+            $(this).parents(".editContent").siblings(".addressContent").show();
+        });
+
+        //  编辑邮箱
+        $(".emailContent .editIcon").click(function(){
+            $(this).parents(".emailContent").hide();
+            $(this).parents(".emailContent").next(".editContent").show();
+        });
+        $(".editEmailBlock .cancelBtn,.editEmailBlock .sureBtn").click(function(){
+            $(this).parents(".editContent").hide();
+            $(this).parents(".editContent").siblings(".emailContent").show();
+        });
+        
+    });
+</script>
+
+</body>
+</html>

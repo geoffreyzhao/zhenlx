@@ -77,7 +77,7 @@
 }
 .dataTab .sureBtn{
     color: #11b9b7;
-    margin: 20px;
+    margin: 0 20px;
     cursor: pointer;
 }
 .dataTab .cancelBtn{
