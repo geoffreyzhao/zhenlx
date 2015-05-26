@@ -40,7 +40,7 @@
                     <li class="top-nav-item">特别推荐</li>
                     <li class="top-nav-item">服务说明</li>
                     <li class="top-nav-item">真旅社区</li>
-                    <li class="slider"></li>
+                    <!-- <li class="slider"></li> -->
                 </ul>
             </div>
 		</div>
@@ -69,10 +69,11 @@
                                 <input type="text" placeholder="请输入验证码" style="width: 174px;">
                                 <span class="getVerificationCode">获取短信验证码</span>
                             </div>
-                            <div class="componentInput PWStrong" style="margin-bottom:26px;">
+                            <div class="componentInput PWStrong" style="margin-bottom:26px;position: relative;">
                                 <i class="commonIcon lockIcon"></i>
                                 <input type="password" placeholder="创建密码, 请输入6-28位字符" style="width: 262px;">
                                 <span class="strength weak">弱</span>
+                                <i class="view-pwd"></i>
                             </div>
                             <div class="buttonRow">
                                 <a href="javascript:void(0);" class="bigOrangeBtn" style="width:345px;">注   册</a>
@@ -93,10 +94,19 @@
 
     <script type="text/javascript">
         $(function(){
-            $(".top-nav-list").slideNav({
-                fx: "swing", 
-                speed: 300,
-                changeTextColor: "#fff"
+            // $(".top-nav-list").slideNav({
+            //     fx: "swing", 
+            //     speed: 300,
+            //     changeTextColor: "#fff"
+            // });
+            $(".view-pwd").click(function(){
+                $(this).toggleClass("active");
+
+                if ($(this).hasClass("active")) {
+                    $(this).parent(".componentInput").find("input").attr("type", "text");
+                } else {
+                    $(this).parent(".componentInput").find("input").attr("type", "password");
+                }
             });
         });
     </script>
