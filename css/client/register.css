@@ -111,6 +111,23 @@
     /*margin-bottom: 60px;*/
 }
 
+.recommendPerson {
+    position: relative;
+}
+
+.recommendPerson a {
+    position: absolute;
+    top: 0;
+    right: -115px;
+    font-size: 14px;
+    color: #7f7f7f;
+}
+
+.recommendPerson a:hover {
+    color: #11b9b7;
+    text-decoration: underline;
+}
+
 /*  完善个人资料  end  */
 
 /*  完善个人资料--选择头像  start  */

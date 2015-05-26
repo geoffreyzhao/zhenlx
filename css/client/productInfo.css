@@ -1773,7 +1773,7 @@ ul.common-tab > li.rest {
     background-color: rgba(0,0,0,0.75); 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 0 90px;
+    padding-left: 82px;
 }
 .searchContent .searchTab{
     margin: 20px 0 0 10px;

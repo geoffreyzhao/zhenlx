@@ -87,7 +87,7 @@
 	background-color: #fff;
 	border-radius: 3px;
 	text-align: center;
-	box-shadow: 0 1px 10px 2px #666;
+	box-shadow: 0 1px 10px 1px #666;
 	display: none;
 }
 
@@ -128,7 +128,7 @@
     display: inline-block;
     width: 6px;
     height: 11px;
-    background: url(../../images/client/white-border-arrow.png) no-repeat;
+    background: url(../../images/client/white-border-arrow.png) no-repeat 0 0;
     position: absolute;
     top: 8px;
     right: -6px;
@@ -157,7 +157,7 @@
 .searchModel .searchContent{
     display: inline-block;
     background-color: #005162;
-    width: 98%;
+    width: 1116px;
     height: 84px;
     margin: 0 -5px;
     color: #fff;

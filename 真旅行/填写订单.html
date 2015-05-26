@@ -303,8 +303,22 @@
                                     </td>
                                     <th class="adjustpadding">旅客姓名：</th>
                                     <td class="adjustpadding">
-                                        <input type="text" style="width: 280px;" placeholder="与证件名保持一致" data-cv="required" data-ct="旅客姓名" data-cp=""/>
-                                        <span class="guestNameIcon"></span>
+                                        <div class="guestContainer">
+                                            <input type="text" style="width: 280px;" placeholder="与证件名保持一致" data-cv="required" data-ct="旅客姓名" data-cp=""/>
+                                            <span class="guestNameIcon"></span>
+                                            <ul class="guestNameList" style="width:280px;">
+                                                <li class="current">常旅客1</li>
+                                                <li>常旅客2</li>
+                                                <li>常旅客3</li>
+                                                <li>常旅客4</li>
+                                                <li>常旅客5</li>
+                                                <li>常旅客1</li>
+                                                <li>常旅客2</li>
+                                                <li>常旅客3</li>
+                                                <li>常旅客4</li>
+                                                <li>常旅客5</li>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -391,9 +405,18 @@
                                     </td>
                                     <th class="adjustpadding">旅客姓名：</th>
                                     <td class="adjustpadding">
-                                        <input type="text" style="width: 140px;" placeholder="First Name"/>
-                                        <input type="text" style="width: 140px;" placeholder="Last Name"/>
-                                        <span class="guestNameIcon"></span>
+                                        <div class="guestContainer">
+                                            <input type="text" style="width: 140px;" placeholder="First Name"/>
+                                            <input type="text" style="width: 140px;" placeholder="Last Name"/>
+                                            <span class="guestNameIcon"></span>
+                                            <ul class="guestNameList" style="width:284px;">
+                                                <li class="current">常旅客1</li>
+                                                <li>常旅客2</li>
+                                                <li>常旅客3</li>
+                                                <li>常旅客4</li>
+                                                <li>常旅客5</li>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -924,11 +947,11 @@
             });
 
             //  测试代码，测试报错信息
-            $(".guestNameIcon").click(function(){
-                var validateResult = $("body").customValidate({
-                    validateAll: true
-                });
-            });
+            // $(".guestNameIcon").click(function(){
+            //     var validateResult = $("body").customValidate({
+            //         validateAll: true
+            //     });
+            // });
 
             $(".order-protocol-btn").click(function(){
                 $("#orderProtocol").modal("show");
@@ -937,6 +960,11 @@
             $("#agree").click(function(){
                 $("#orderProtocol").modal("hide");
                 $("#agreeProtocol").addClass("active");
+            });
+
+            //  常旅客姓名提示
+            $(".guestNameIcon").click(function(){
+                $(this).next(".guestNameList").slideToggle("fast");
             });
 
         });

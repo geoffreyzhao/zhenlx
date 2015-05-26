@@ -609,6 +609,129 @@ header .head {
     float: left;
 }
 
+.top-right-block {
+    float: right;
+    margin-top: 24px;
+    margin-left: 90px;
+    padding-right: 2px;
+}
+
+.login-entrance {
+    position: relative;
+}
+
+.login-entrance > a {
+    padding: 0 12px;
+    color: #7f7f7f;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.login-entrance .register {
+    padding-right: 0px;
+}
+
+.login-entrance > a:hover,
+.login-entrance > a.active {
+    color: #11b9b7;
+}
+
+.login-entrance em {
+    color: #e4e4e4;
+}
+
+.login-entrance .login-box {
+    position: absolute;
+    top: 40px;
+    right: 3px;
+}
+
+.login-entrance .login-box .arrow {
+    position: absolute;
+    top: -6px;
+    right: 68px;
+    display: inline-block;
+    width: 11px;
+    height: 6px;
+    background: url(../../images/client/white-border-arrow.png) no-repeat 0 -25px;
+}
+
+.after-login {
+    position: relative;
+}
+
+.after-login .userName {    
+    cursor: pointer;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.after-login .userName .commonIcon {
+    margin-right: 3px;
+    margin-top: -2px;
+}
+
+.after-login .userName em {
+    color: #7f7f7f;
+    font-size: 14px;
+}
+
+.userInfo-box {
+    width: 250px;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 1px 10px 1px #666;
+    position: absolute;
+    top: 40px;
+    right: 2px;
+    display: none;
+}
+
+.userInfo-box .arrow {
+    position: absolute;
+    top: -6px;
+    right: 36px;
+    display: inline-block;
+    width: 11px;
+    height: 6px;
+    background: url(../../images/client/white-border-arrow.png) no-repeat 0 -25px;
+}
+
+.userInfo-box .user-avatar {
+    padding: 30px 0 25px 0;
+    text-align: center;
+}
+
+.userInfo-box .user-avatar .user-name {
+    color: #7f7f7f;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.userInfo-box .oper-btn {    
+    border-top: 1px solid #e0e0e0;
+}
+
+.userInfo-box .oper-btn a {
+    display: inline-block;
+    color: #7f7f7f;
+    height: 50px;
+    line-height: 50px;
+    width: 120px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.userInfo-box .oper-btn a:hover {
+    color: #11b9b7;
+}
+
+.userInfo-box .oper-btn a:first-child {
+    border-right: 1px solid #e0e0e0;
+}
+
 /*  头尾 背景 边框线  等公共样式   end   */
 
 
