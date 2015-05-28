@@ -1,7 +1,7 @@
 /*  真旅行后台管理  会员管理样式  */
 @charset "utf-8";
 
-/*  基础数据-产品属性 start  */
+/*  基础数据 start  */
 .leftMenu{
     float: left;
     margin: 0 10px;
@@ -148,11 +148,48 @@
 .commonTextarea.labelText{
     height: 180px;
 }
+.rightModelContent .uploadData{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.uploadData button{
+    font-size: 15px;
+    margin-right: 10px;
+}
+.uploadData .fileFonts{
+    color: #999999;
+}
+.rightModelContent .lightGrayLine {
+    margin: 15px 0;
+    height: 1px;
+    border-bottom: 3px solid #f1f1f1;
+}
+.leftClassifyBtn .setDefault{
+    font-size: 14px;
+    color: #2cb9cf;
+    display: inline-block;
+    min-width: 90px;
+    padding: 7px;
+    text-align: center;
+    border: 1px solid  #45c8dc;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.leftClassifyBtn .setDefault:hover{
+    color: #fff;
+    background-color: #45c8dc;
+}
+.placeLabel{
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+}
+.placeLabel .closeIcon{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background: url("../../images/commonIcon.png") no-repeat -41px -132px;
+}
 
-
-
-
-
-
-
-/*  基础数据-产品属性 end  */
+/*  基础数据 end  */

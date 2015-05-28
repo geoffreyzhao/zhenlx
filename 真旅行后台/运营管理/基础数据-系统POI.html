@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>B2C 真旅行后台 基础数据-产品属性</title>
+    <title>B2C 真旅行后台 基础数据-系统POI</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -172,11 +172,11 @@
         <div class="main-container clearfix">
             <aside class="leftMenu">  <!--leftMenu 开始-->
                 <ul class="menuChange">
-                    <li>
+                    <li class="current">
                         <a href="基础数据-系统POI.html">系统POI信息</a>
                         <i class="rightArrow"></i>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="基础数据-产品属性.html">产品属性</a>
                         <i class="rightArrow"></i>
                     </li>
@@ -188,12 +188,12 @@
             </aside> <!--leftMenu 结束-->
             <section class="rightModelContent">
                 <div class="titleContent clearfix">
-                    <h3 class="titleFonts18">产品属性信息</h3>
+                    <h3 class="titleFonts18">出发地信息</h3>
                 </div>
                 <div class="selectClassify clearfix">
                     <div class="leftClassifyBtn">
-                        <div class="modifiedTheme">
-                            <button class="commonButton blue-45c8dcButton">修改产品主题</button>
+                        <div class="modifiedPlaceDeparture">
+                            <button class="commonButton blue-45c8dcButton">修改出发地</button>
                         </div>
                         <div class="saveCancelBtn">
                             <button class="commonButton orange-f79767Btn">确 认</button>
@@ -202,39 +202,42 @@
                     </div>
                     <div class="rightClassifyInfo">
                         <textarea class="commonTextarea themeText" readonly>
-放松
-度假
-海滨
-沙滩
-冰川
-山丘
-沙漠
-蜜月情侣
-极限探索
-亲子出游
+上海
+杭州
+广州
+深圳
+北京
+西安
+南京
+武汉
+大连
+ 哈尔滨
 </textarea>
                     </div>
                 </div>
+                <div class="lightGrayLine"></div>
+                <div class="titleContent clearfix">
+                    <h3 class="titleFonts18">目的地信息</h3>
+                </div>
                 <div class="selectClassify clearfix">
                     <div class="leftClassifyBtn">
-                        <div class="modifiedLabel">
-                            <button class="commonButton blue-45c8dcButton">修改产品标签</button>
+                        <div>
+                            <button class="commonButton blue-45c8dcButton">上传数据</button>
                         </div>
-                        <div class="saveCancelBtn">
-                            <button class="commonButton orange-f79767Btn">确 认</button>
-                            <button class="commonButton gray-bbbButton">取 消</button>
+                        <div>
+                            <a href="javascript:void(0);" class="setDefault">设为默认显示</a>
+                        </div>
+                        <div>
+                            <label class="placeLabel">
+                                <span>日本</span>
+                                <span class="closeIcon"></span>
+                            </label>
                         </div>
                     </div>
                     <div class="rightClassifyInfo">
-                        <textarea class="commonTextarea labelText" readonly>
-放松
-度假
-海滨
-沙滩
-购物
-</textarea>
+                        
                     </div>
-                </div>              
+                </div>
             </section>
         </div>
         <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
@@ -242,14 +245,14 @@
 
 <script>
     $(function(){
-        $(".leftClassifyBtn .modifiedTheme,.leftClassifyBtn .modifiedLabel").click(function(){
+        $(".leftClassifyBtn .modifiedPlaceDeparture").click(function(){
             $(this).hide();
             $(this).siblings(".saveCancelBtn").show();
             $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").removeAttr("readonly");
         });
         $(".saveCancelBtn .gray-bbbButton").click(function(){
             $(this).parents(".saveCancelBtn").hide();
-            $(this).parents(".saveCancelBtn").siblings(".modifiedLabel,.modifiedTheme").show();
+            $(this).parents(".saveCancelBtn").siblings(".modifiedPlaceDeparture").show();
             $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").attr("readonly","readonly");
         });
     })
