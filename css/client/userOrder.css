@@ -794,6 +794,9 @@
     background-image: url("../../images/client/withImg_01.jpg");
     cursor: pointer;
 }
+.clickme:hover {
+    background-image: url("../../images/client/withImg_03.jpg");
+}
 .weixin{
     width:157px;
     height:157px;
