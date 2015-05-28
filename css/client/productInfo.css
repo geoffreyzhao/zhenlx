@@ -1514,13 +1514,22 @@ ul.common-tab > li.rest {
     line-height: 20px;
 }
 .start-trip{
-    width:148px;
-    height:55px;
-    cursor: pointer;
+    padding: 9px 52px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+}
+.start-trip i {
     display: inline-block;
+    width: 15px;
+    height: 20px;
+    background: url(../../images/client/white-right-arrow.png) no-repeat;
     vertical-align: middle;
-    background:url("../../images/client/proListflag01.png") no-repeat 0 0;
-    margin-bottom: 0;
+    margin-right: 3px;
+    margin-top: -10px;
+}
+.start-trip span {
+    font-size: 24px;
+    color: #fff;
 }
 .product-clomu ul{
     list-style: none;
