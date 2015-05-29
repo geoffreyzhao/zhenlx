@@ -451,7 +451,7 @@
                                                     <span class="caret"></span>
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li class="active"><a href="javascript:void(0);">身份证</a></li>
+                                                    <li><a href="javascript:void(0);">身份证</a></li>
                                                     <li><a href="javascript:void(0);">护照</a></li>
                                                     <li><a href="javascript:void(0);">通行证</a></li>
                                                 </ul>
@@ -631,14 +631,15 @@
 
             //  点击 dropdown 时，判断并生成对应的 类型结构
             $(".idTypeInfo").delegate('.dropdown.id-type .dropdownBtn', 'click', function(event) {
-                var $that = $(this);
+                var $that = $(this),
+                    activeTypeHtml = $that.find(".activeFonts").html();
 
                 var result = ["身份证", "护照", "通行证"];
                 $that.parents("tr").siblings("tr:visible").each(function(){
                     var curType = $(this).find("li.active a").html();
                     result = _.without(result, curType);
                 });
-                $that.closest(".dropdown").find("ul.dropdown-menu").html(geneIdTypeList(result));
+                $that.closest(".dropdown").find("ul.dropdown-menu").html(geneIdTypeList(result, activeTypeHtml));
                 addLiClickEvent();
             });
             changeDropdown();
@@ -656,13 +657,19 @@
         }
 
         //  根据证件类型 生成对应的li结构
-        function geneIdTypeList(types) {
+        function geneIdTypeList(types, activeTypeHtml) {
             var result = "";
 
             for (var i = 0; i < types.length; i++) {
                 result += "<li";
-                if (i == 0) {
-                    result += " class='active'";
+                if (activeTypeHtml == undefined) {
+                    if (i == 0) {
+                        result += " class='active'";
+                    }
+                } else {
+                    if (types[i] == activeTypeHtml) {
+                        result += " class='active'";
+                    }
                 }
                 result += "><a href='javascript:;'>" + types[i] + "</a></li>";
             }
