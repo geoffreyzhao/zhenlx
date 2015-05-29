@@ -201,7 +201,7 @@
                         </div>
                     </div>
                     <div class="rightClassifyInfo">
-                        <textarea class="commonTextarea themeText" readonly>
+                        <textarea class="commonTextarea themeText" readonly="readonly">
 上海
 杭州
 广州
@@ -227,15 +227,87 @@
                         <div>
                             <a href="javascript:void(0);" class="setDefault">设为默认显示</a>
                         </div>
-                        <div>
+                        <div class="defaultVal">
                             <label class="placeLabel">
-                                <span>日本</span>
+                                <span class="fontsWidth">日本</span>
                                 <span class="closeIcon"></span>
                             </label>
                         </div>
                     </div>
                     <div class="rightClassifyInfo">
-                        
+                        <div class="placeInfoContent">
+                            <ul class="grayTitleFonts clearfix">
+                                <li>一级</li>
+                                <li>二级</li>
+                                <li>三级</li>
+                            </ul>
+                            <div class="placeList">
+                                <table class="placeTab">
+                                    <colgroup>
+                                        <col width="190">
+                                        <col width="190">
+                                        <col width="190">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>亚洲</th>
+                                        <th>日本</th>
+                                        <td>京都</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>名古屋</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>横滨</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>新宿</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>江户</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>大阪</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th>泰国</th>
+                                        <td>曼谷</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>清迈</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th>越南</th>
+                                        <td>胡志明市（西贡）</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>河内</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <td>海防市</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -248,13 +320,30 @@
         $(".leftClassifyBtn .modifiedPlaceDeparture").click(function(){
             $(this).hide();
             $(this).siblings(".saveCancelBtn").show();
-            $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").removeAttr("readonly");
+            $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").removeAttr("readonly","readonly");
         });
         $(".saveCancelBtn .gray-bbbButton").click(function(){
             $(this).parents(".saveCancelBtn").hide();
             $(this).parents(".saveCancelBtn").siblings(".modifiedPlaceDeparture").show();
             $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").attr("readonly","readonly");
         });
+        
+        $(".placeList .placeTab th").click(function(){
+            $(this).addClass("current");
+            $(this).siblings("th").removeClass("current");
+            $(this).parents("tr").siblings("tr").find("th").removeClass("current");
+        });
+        $(".setDefault").click(function(){
+            $text = $(".placeTab tr .current").text();
+            if($(".placeTab tr .current").html() != ""){
+                $(this).parents("div").siblings(".defaultVal").find(".fontsWidth").text($text);
+                $(".defaultVal").show();
+            }
+        });
+        $(".closeIcon").click(function(){
+            $(this).parents(".defaultVal").hide();
+        });
+        
     })
 </script>
 

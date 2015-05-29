@@ -201,7 +201,7 @@
                         </div>
                     </div>
                     <div class="rightClassifyInfo">
-                        <textarea class="commonTextarea themeText" readonly>
+                        <textarea class="commonTextarea themeText" readonly="readonly">
 放松
 度假
 海滨
@@ -226,7 +226,7 @@
                         </div>
                     </div>
                     <div class="rightClassifyInfo">
-                        <textarea class="commonTextarea labelText" readonly>
+                        <textarea class="commonTextarea labelText" readonly="readonly">
 放松
 度假
 海滨
@@ -245,7 +245,7 @@
         $(".leftClassifyBtn .modifiedTheme,.leftClassifyBtn .modifiedLabel").click(function(){
             $(this).hide();
             $(this).siblings(".saveCancelBtn").show();
-            $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").removeAttr("readonly");
+            $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").removeAttr("readonly","readonly");
         });
         $(".saveCancelBtn .gray-bbbButton").click(function(){
             $(this).parents(".saveCancelBtn").hide();
