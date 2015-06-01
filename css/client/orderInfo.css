@@ -356,6 +356,7 @@
 .editTouristInfoTab{
     font-size: 14px;
     border-top: 1px solid #d4f0f0;
+    width: 100%;
 }
 .editTouristInfoTab:first-child{
     border-top: none;
@@ -363,7 +364,8 @@
 .editTouristInfoTab .numberFonts{
     font-size: 35px;
     font-weight: bold;
-    font-family: "Adobe 黑体 Std";
+    /*font-family: "Adobe 黑体 Std";*/
+    font-family: Arial;
     text-align: center;
     color: #11b9b7;
     border-right: 1px solid #d4f0f0;
@@ -375,6 +377,15 @@
 .editTouristInfoTab .last td,
 .editTouristInfoTab .last th{
     padding-bottom: 20px;
+}
+.commonEditTab.operTab {
+    
+}
+.commonEditTab.operTab td:first-child {
+    border-right: 1px solid #d4f0f0;
+}
+.commonEditTab.operTab td:last-child {
+    padding: 0 0 20px 30px;
 }
 .commonOrderModel .airInfoList{
     margin: 8px 0;

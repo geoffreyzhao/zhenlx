@@ -111,38 +111,56 @@
                             <textarea name="content" class="editorText"></textarea>
                         </form>
                     </div>
-                    
+                    <div class="localTips">
+                        <h4 class="editorModelTitle">当地Tips</h4>
+                        <form>
+                            <ul class="facilityList clearfix" style="margin-bottom: 0;">
+                                <li class="active">气候</li>
+                                <li class="">消费</li>
+                                <li class="">通讯</li>
+                                <li class="">风俗</li>
+                                <li class="">其他</li>
+                            </ul>
+                            <div class="facilityContent">
+                                <textarea name="content">气候</textarea>
+                                <textarea name="content" style="visibility: hidden;">消费</textarea>
+                                <textarea name="content" style="visibility: hidden;">通讯</textarea>
+                                <textarea name="content" style="visibility: hidden;">风俗</textarea>
+                                <textarea name="content" style="visibility: hidden;">其他</textarea>
+                            </div>
+                        </form>
+                    </div>
                     
                 </div>
-               
-
-
-                
-
-
-                
-
-
-               
-
-                
-                
             </section>
         </div>    
         <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
     </div>
     
     <script>
-        //        var editor;
-        KindEditor.ready(function(K) {
-            K.options.items = ['forecolor', 'insertorderedlist'];
-            K.create('textarea[name="content"]', {
-                afterCreate : function() {
-                    this.loadPlugin('autoheight');
-                }
-            });
-        });
+        $(function(){
 
+            KindEditor.ready(function(K) {
+                K.options.items = ['forecolor', 'insertorderedlist'];
+                K.create('textarea[name="content"]', {
+                    afterCreate : function() {
+                        this.loadPlugin('autoheight');
+                        $(".facilityContent .ke-container:gt(0)").hide();
+                    }
+                });
+            });
+
+            $(".facilityList li").each(function(index){
+                $(this).click(function(){
+                    $(".facilityContent .ke-container").hide();
+                    $(".facilityContent .ke-container:eq(" + index + ")").show();
+                    $(".facilityList li").removeClass("active");
+                    $(this).addClass("active");
+                });
+
+            });
+            
+        });
     </script>
     
 
