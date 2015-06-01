@@ -1785,7 +1785,7 @@ ul.common-tab > li.rest {
     background-color: rgba(0,0,0,0.75); 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding-left: 82px;
+    padding-left: 140px;
 }
 .searchContent .searchTab{
     margin: 20px 0 0 10px;
@@ -1796,6 +1796,10 @@ ul.common-tab > li.rest {
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
+    border: none;
+}
+.searchContent .searchTab input[type="text"]:focus {
+    border: none!important;
 }
 .searchContent .searchTab th{
     font-size: 18px;
@@ -1870,7 +1874,7 @@ ul.common-tab > li.rest {
 }
 .startOffPlaceModel .selectStartOffPlace > li,
 .themeModal .selectTheme > li {
-    width: 150px;
+    width: 235px;
     padding: 10px 0;
     margin: 0 10px;
     border-top: 1px solid #e0e0e0;
