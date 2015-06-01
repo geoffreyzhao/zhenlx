@@ -323,6 +323,14 @@
 .moduleContent .costDetails{
     margin: 15px 0;
 }
+.moduleContent .costDetails .contText {
+    font-size: 14px;
+    color: #666666;
+    width: 940px;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    line-height: 24px;
+}
 .costDetails .titleFonts{
     font-size: 14px;
     color: #777777;

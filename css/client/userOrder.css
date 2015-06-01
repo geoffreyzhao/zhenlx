@@ -778,6 +778,7 @@
     display: inline-block;
     vertical-align: middle;
     background: url("../../images/client/changeUser.jpg") no-repeat 0 0;
+    cursor: pointer;
 }
 .noPosition{
     width:129px;

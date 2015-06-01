@@ -541,25 +541,48 @@
                             <li>
                                 <a href="#D6">D6</a>
                             </li>
-                        </ul>                    
+                        </ul>
+                        <div style="float: right;">
+                        <!-- <div class="link" id="overview"></div> -->
+                        <img src="../../images/client/overviewImg.jpg" class="overviewImg" />
                         <ul class="journeyRecommendList">
                         <li class="active">
                             <div class="link" id="overview"></div>
                             <span class="commonIcon leftDot"></span>
                             <span class="leftLine"></span>
-                            <h3 class="listTitle">目的地概览</h3>
-                            <img src="../../images/client/overviewImg.jpg" style="width: 1090px;height: 400px;">
                             <ul class="wrapperList clearfix">
                                 <li class="row twoRow overviewLeft">
-                                    提到柬埔寨，最先跃入脑海的一定是吴哥窟。面对宏伟壮观的护城长廊，内心深处的敬畏感油然而生。巴戎庙内宝塔林立，塔布隆寺演绎树与塔的爱恨交缠。置身佛的国度，不经意间就会撞见充满友善和微笑的眼神，一切皆有佛性。所以，当你站在“微笑的高棉”前时，看着他那深邃的眼睛，你会读懂一切，也无需再问那个很多人会问起的问题“为什么叫他微笑的高棉呢”所以，当你站在“微笑的高棉”前时，看着他那深邃的眼睛，你会读懂一切，也无需再问那个很多人会问起的问题“为什么叫他微笑的高棉呢”
+                                    <h3 class="listTitle" style="margin: 0 0 15px 0;">目的地概览</h3>
+                                    <pre>提到柬埔寨，最先跃入脑海的一定是吴哥窟。面对宏伟壮观的护城长廊，内心深处的敬畏感油然而生。巴戎庙内宝塔林立，塔布隆寺演绎树与塔的爱恨交缠。置身佛的国度，不经意间就会撞见充满友善和微笑的眼神，一切皆有佛性。所以，当你站在“微笑的高棉”前时，看着他那深邃的眼睛，你会读懂一切，也无需再问那个很多人会问起的问题“为什么叫他微笑的高棉呢”所以，当你站在“微笑的高棉”前时，看着他那深邃的眼睛，你会读懂一切，也无需再问那个很多人会问起的问题“为什么叫他微笑的高棉呢”</pre>
                                 </li>
                                 <li class="row twoRow overviewRight">
-                                    <div class="rightIcon">
-                                        <span class="commonIcon carIcon"></span>
-                                        <span class="commonIcon weatherIcon"></span>
-                                        <span class="commonIcon clothesIcon"></span>
+                                    <div class="tipsTopBlock clearfix">
+                                        <span class="title">当地Tips</span>
+                                        <ul class="rightIcon tripTipsIconList clearfix">
+                                            <li>
+                                                <span class="tripTipsIcon weatherIcon current"></span></li>
+                                            <li>
+                                                <span class="tripTipsIcon shoppingIcon"></span>
+                                            </li>
+                                            <li>
+                                                <span class="tripTipsIcon communicationIcon"></span>
+                                            </li>
+                                            <li>
+                                                <span class="tripTipsIcon customIcon"></span>
+                                            </li>
+                                            <li>
+                                                <span class="tripTipsIcon otherIcon"></span>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    小圈和大圈是暹粒旅行中不可不知的两条经典游览线路。无数实践证明，这两条线路是最高效省时的游览方式。柬埔寨是热带国家，温度普遍很高，多准备一些夏天衣服1-3月平均参考温度是21-35摄氏度，天气稍炎热。在参观寺庙时女性请勿穿着吊带和膝盖以上的短裙，同时请注意防晒，使用防晒指数较高的防晒霜。
+                                    <div class="tipsContentBlock">
+                                        <div>小圈和大圈是暹粒旅行中不可不知的两条经典游览线路。无数实践证明，这两条线路是最高效省时的游览方式。柬埔寨是热带国家，温度普遍很高，多准备一些夏天衣服1-3月平均参考温度是21-35摄氏度，天气稍炎热。在参观寺庙时女性请勿穿着吊带和膝盖以上的短裙，同时请注意防晒，使用防晒指数较高的防晒霜。</div>
+                                        <div>购物提示</div>
+                                        <div>通讯提示</div>
+                                        <div>风俗提示</div>
+                                        <div>其他提示</div>
+                                    </div>
+                                    
                                 </li>
                             </ul>
                         </li>
@@ -753,6 +776,7 @@
                             </ul>
                         </li>
                         </ul>
+                        </div>
                     </div>
                 </div>
                 
@@ -1846,7 +1870,7 @@
             template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
         });
 
-        $(".tab-cont").hide();
+        // $(".tab-cont").hide();
         $(".tab-cont").eq(0).show();
         $(".hotel-info-tab .tab-item").each(function(index){
             $(this).click(function(){
@@ -1864,7 +1888,20 @@
             template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
         });
 
+        $(".tripTipsIcon").each(function(index){
+            $(".tripTipsIcon").removeClass("current");
+            $(".tripTipsIcon").eq(0).addClass("current");
+            $(".tipsContentBlock > div").hide();
+            $(".tipsContentBlock > div").eq(0).show();
 
+            $(this).click(function(){
+                $(".tripTipsIcon").removeClass("current");
+                $(this).addClass("current");
+                $(".tipsContentBlock > div").hide();
+                $(".tipsContentBlock > div").eq(index).show();
+            });
+
+        });
     });
 </script>
 </body>

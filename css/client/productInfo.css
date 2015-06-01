@@ -280,13 +280,14 @@
 }
 .wrapperList .twoRow{
     width: 49%;
-    border-left: 1px solid #cff1f1;
+    /*border-left: 1px solid #cff1f1;*/
     padding-right: 10px;
     padding-left: 50px;
 }
 .wrapperList .twoRow:first-child{
     border-left: none;
     padding-left: 0;
+    border-right: 1px solid #cff1f1;
 }
 .wrapperList .oneRow{
     width: 90%;
@@ -324,7 +325,7 @@
     position: fixed!important;
 }
 .journeyRecommendModel .journeyRecommendList {
-    float: right;
+    /*float: right;*/
 }
 .asideFixed li a{
     display: inline-block;
@@ -787,6 +788,7 @@
 }
 .rightHotelTabs .tab-cont {
     background-color: #f9f9f9;
+    display: none;
 }
 .rightHotelTabs .listInfo,
 .rightHotelTabs .tab-cont {
@@ -1417,7 +1419,7 @@ ul.common-tab > li.rest {
 }
 
 .commonModel pre {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 25px;
     color: #616161;
 }
@@ -1435,6 +1437,98 @@ ul.common-tab > li.rest {
     top: 30%;
     text-align: center;
     line-height: 25px;
+}
+
+.overviewImg {
+    width: 100%;
+    margin-top: 28px;
+}
+
+.tipsTopBlock .title {
+    float: left;
+    font-size: 20px;
+    color: #11b9b7;
+}
+
+.tipsContentBlock {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.tipsTopBlock .tripTipsIconList {
+    float: right;
+}
+
+.tripTipsIconList > li {
+    float: left;
+    margin-right: 15px;
+    padding-bottom: 0;
+}
+
+.tripTipsIcon {
+    display: inline-block;
+    background: url(../../images/client/trip-tips-icon.png) no-repeat;
+    vertical-align: middle;
+}
+
+.tripTipsIcon.weatherIcon {
+    background-position: 0 0;
+    width: 29px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.tripTipsIcon.weatherIcon:hover,
+.tripTipsIcon.weatherIcon.current {
+    background-position: 0 -32px;
+}
+
+.tripTipsIcon.shoppingIcon {
+    background-position: -31px 0;
+    width: 20px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.tripTipsIcon.shoppingIcon:hover,
+.tripTipsIcon.shoppingIcon.current {
+    background-position: -31px -32px;
+}
+
+.tripTipsIcon.communicationIcon {
+    background-position: -53px 0;
+    width: 21px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.tripTipsIcon.communicationIcon:hover,
+.tripTipsIcon.communicationIcon.current {
+    background-position: -53px -32px;
+}
+
+.tripTipsIcon.customIcon {
+    background-position: -76px 0;
+    width: 29px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.tripTipsIcon.customIcon:hover,
+.tripTipsIcon.customIcon.current {
+    background-position: -76px -32px;
+}
+
+.tripTipsIcon.otherIcon {
+    background-position: -107px 0;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.tripTipsIcon.otherIcon:hover,
+.tripTipsIcon.otherIcon.current {
+    background-position: -107px -32px;
 }
 
 /*   产品详情 E   */
