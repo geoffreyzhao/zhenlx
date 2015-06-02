@@ -643,7 +643,6 @@ header .head {
 .login-entrance .login-box {
     position: absolute;
     top: 40px;
-    right: 3px;
     padding: 25px 0;
     width: 310px;
     z-index: 4;
@@ -685,7 +684,7 @@ header .head {
 .login-entrance .login-box .arrow {
     position: absolute;
     top: -6px;
-    right: 68px;
+    left: 22px;
     display: inline-block;
     width: 11px;
     height: 6px;
@@ -721,14 +720,13 @@ header .head {
     box-shadow: 0 1px 10px 1px #666;
     position: absolute;
     top: 40px;
-    right: 2px;
     display: none;
 }
 
 .userInfo-box .arrow {
     position: absolute;
     top: -6px;
-    right: 36px;
+    left: 25px;
     display: inline-block;
     width: 11px;
     height: 6px;
