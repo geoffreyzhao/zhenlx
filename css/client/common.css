@@ -644,6 +644,42 @@ header .head {
     position: absolute;
     top: 40px;
     right: 3px;
+    padding: 25px 0;
+    width: 310px;
+    z-index: 4;
+    background-color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 1px 10px 1px #666;
+    display: none;
+}
+
+.login-box .errorBoxContent,
+.login-box .componentInput {
+    margin-bottom: 15px;
+}
+
+.login-attach .checkbox {
+    font-size: 13px;
+    color: #11b9b7;
+    font-weight: normal;
+    margin-left: -128px;
+}
+
+.login-attach .checkboxIcon {
+    margin-top: -5px;
+}
+
+.login-attach .register-link {
+    font-size: 13px;
+    color: #11b9b7;
+    float: right;
+    margin-top: 10px;
+    margin-right: 23px;
+}
+
+.login-attach .register-link:hover {
+    cursor: pointer;
 }
 
 .login-entrance .login-box .arrow {
@@ -678,7 +714,7 @@ header .head {
 
 .userInfo-box {
     width: 250px;
-    z-index: 2;
+    z-index: 4;
     background-color: #fff;
     border-radius: 3px;
     text-align: center;

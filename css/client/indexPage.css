@@ -84,7 +84,7 @@
 .login-box {
 	padding: 25px 0;
 	width: 310px;
-	z-index: 2;
+	z-index: 4;
 	background-color: #fff;
 	border-radius: 3px;
 	text-align: center;

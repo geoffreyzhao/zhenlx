@@ -33,6 +33,59 @@
 <header>
     <div class="head clearfix">
         <div class="logo"></div>
+        <div class="top-right-block">
+            <div class="login-entrance" style="display: none;">
+                <a class="login" href="javascript:;">登录</a><em>|</em><a class="register" href="javascript:;">注册</a>
+                <div class="login-box">
+                    <div class="arrow"></div>
+                    <!--<div style="width: 262px;" class="errorBoxContent">
+                        <i class="commonIcon errorIcon"></i>输入的用户名或密码有错
+                    </div><br/>-->
+                    <div class="componentInput">
+                        <i class="commonIcon personHeaderIcon"></i>
+                        <input type="text" placeholder="手机号/邮箱" style="width: 225px;">    
+                    </div><br/>
+                    <div class="componentInput forgetPW">
+                        <i class="commonIcon lockIcon"></i>
+                        <input type="password" placeholder="请输入密码" style="width: 143px;">
+                        <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
+                    </div><br/>
+                    <!--<div class="componentInput verificationCode">
+                        <i class="commonIcon verificationCodeIcon"></i>
+                        <input type="text" placeholder="请输入验证码" style="width: 120px;">
+                        <img src="../images/client/verificationCode.png">
+                    </div><br/>-->
+                    <a href="javascript:void(0);" class="commonBtn blueBtn loginBtn" style="width:263px;">登 录</a>
+                    <div class="login-attach"> 
+                        <div class="checkboxContent">         
+                            <label class="checkbox active">
+                                <span class="commonIcon checkboxIcon"></span>记住我
+                            </label>
+                        </div>
+                        <a class="register-link" href="javascript:;">免费注册</a>
+                    </div>
+                </div>
+            </div>
+            <div class="after-login">
+                <span class="userName">
+                    <span class="commonIcon userIcon"></span>
+                    <em>Dorian zhou</em>
+                </span>
+                <div class="userInfo-box">
+                    <div class="arrow"></div>
+                    <div class="userInfo-block">
+                        <div class="user-avatar">
+                            <img src="../../images/client/headPortrait01.png" alt="">
+                            <div class="user-name">Dorian Zhou</div>
+                        </div>
+                        <div class="oper-btn">
+                            <a href="javascript:;">用户中心</a>
+                            <a class="logoutBtn" href="javascript:;">退出登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="top-nav">
             <ul class="top-nav-list clearfix">
                 <li class="top-nav-item current">目的地</li>
@@ -513,6 +566,58 @@
                     $(this).closest("ul.second-level").show();
                 }
             });
+        }
+    }
+
+    //  登录注册入口
+    $(".login").click(function(event){
+        $(this).toggleClass("active");
+        $(".login-entrance .login-box").toggle();
+        event.stopPropagation();
+    });
+
+    $("body").click(function(event){
+        if (!isOuterTrigger(event, $(".login-entrance .login-box"))) {
+            $(".login").removeClass("active");
+            $(".login-entrance .login-box").hide();
+        }
+    });
+
+    $(".after-login > span.userName").click(function(event){
+        $(".userInfo-box").toggle();
+        event.stopPropagation();
+    });
+
+    $("body").click(function(event){
+        if (!isOuterTrigger(event, $(".userInfo-box"))) {
+            $(".userInfo-box").hide();
+        }
+    });
+
+    $(".loginBtn").click(function(){
+        $(".login-entrance").hide();
+        $(".after-login").show();
+    });
+
+    $(".logoutBtn").click(function(){
+        $(".after-login").hide();
+        $(".login-entrance").show();
+    });
+    
+    //  判断点击范围是否超出元素
+    function isOuterTrigger(event, $ele) {
+        var top = $ele.offset().top,
+            left = $ele.offset().left,
+            width = $ele.outerWidth(),
+            height = $ele.outerHeight();
+
+        var _x = event.pageX,
+            _y = event.pageY;
+
+        if (_y > top + height || _y < top || _x > left + width || _x < left) {
+            return false;
+        } else {
+            return true;
         }
     }
 
