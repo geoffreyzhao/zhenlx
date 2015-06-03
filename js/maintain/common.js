@@ -52,6 +52,14 @@ $(function() {
             var startDate = $(this).datepicker("getDate");
             $(this).siblings('input.datepicker.endDate').datepicker("setStartDate", startDate);
         });
+
+        // 手动清空输入框时，清除对应的时间
+        $("input.datepicker.startDate").focus(function(){
+            var $endDate = $(this).siblings('input.datepicker.endDate');
+            if ($endDate.val() == "") {
+                $endDate.datepicker("clearDates");
+            }
+        });
     }
 
     //  结束时间
@@ -68,6 +76,14 @@ $(function() {
         }).on("changeDate", function(){
             var endDate = $(this).datepicker("getDate");
             $(this).siblings('input.datepicker.startDate').datepicker("setEndDate", endDate);
+        });
+
+        // 手动清空输入框时，清除对应的时间
+        $("input.datepicker.endDate").focus(function(){
+            var $startDate = $(this).siblings('input.datepicker.startDate');
+            if ($startDate.val() == "") {
+                $startDate.datepicker("clearDates");
+            }
         });
     }
 
