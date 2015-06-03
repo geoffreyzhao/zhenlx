@@ -1,1 +1,114 @@
 @charset "utf-8";
+
+/*  代金券   start */
+
+.cont-block{
+    position: relative;
+}
+.cont-block .modelLine{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    border-left: 1px dashed #bbdde1;
+    position: absolute;
+    left: 220px;
+    top: 0;
+}
+.leftMenuContent{
+    width: 220px;
+    float: left;
+    margin-top: 50px;
+}
+.leftMenuContent ul{
+    margin: 10px 30px;
+}
+.leftMenuContent ul a{
+    font-size: 18px;
+    display: block;
+    min-width: 135px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #11b9b7;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.leftMenuContent li.active a{
+    color: #fff;
+    background-color: #11b9b7;
+}
+.rightContent{
+    padding: 30px 40px 30px 25px;
+    float: left;
+    width: 80.3%;
+}
+
+.voucher-switch {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ececec;
+	margin-bottom: 0;
+}
+
+.voucher-switch li {
+	float: left;
+	font-size: 18px;
+	padding: 0 25px;
+	color: #7f7f7f;
+	cursor: pointer;
+	border-right: 1px solid #ececec;
+}
+
+.voucher-switch li:last-child {
+	border: none;
+}
+
+.voucher-switch li:hover,
+.voucher-switch li.current {
+	color: #11b9b7;
+}
+
+.voucherListContainer {
+	padding: 40px 25px 0 25px;
+}
+
+.voucherItem {
+	width: 373px;
+	height: 185px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	position: relative;
+	margin-right: 45px;
+	margin-bottom: 35px;
+}
+
+.voucherItem.voucher-bg-0 {
+	background-color: #1ddd89;
+}
+
+.voucherItem.voucher-bg-1 {
+	background-color: #2dd3e7;
+}
+
+.voucherItem.voucher-bg-2 {
+	background-color: #f683ac;
+}
+
+.voucherItem.voucher-bg-3 {
+	background-color: #f5b75e;
+}
+
+.voucherItem.voucher-bg-0 .rightBorder {
+	position: absolute;
+	right: -2px;
+	background: url(../../images/client/voucher-short-border.png) repeat-y 0 0;
+	width: 2px;
+	height: 185px;
+}
+
+.voucherItem.voucher-bg-0 .price {
+
+}
+
+
+/*  代金券   end */

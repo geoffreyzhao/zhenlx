@@ -372,7 +372,7 @@
 .wrapperList .twoRow.overviewRight{
     width: 42%;
     padding-left: 30px;
-    color: #ababab;
+    color: #616161;
     font-size: 14px;
 }
 .overviewRight .rightIcon{
@@ -450,9 +450,14 @@
     display: inline-block;
     width: 534px;
     height: 303px;
+    margin-bottom: 15px;
+    border-radius: 5px;
 }
 .journeyRecommendList .daysImg img:first-child{
-    margin-right: 15px;
+    /*margin-right: 15px;*/
+}
+.journeyRecommendList .daysImg img:nth-child(odd) {
+    margin-right: 10px;
 }
 .daysInfo li{
     padding-bottom: 10px;
@@ -1352,7 +1357,7 @@ ul.common-tab > li.rest {
 }
 
 .cur-price .price-text {
-    font-size: 48px;
+    font-size: 42px;
     color: #e46c14;
 }
 

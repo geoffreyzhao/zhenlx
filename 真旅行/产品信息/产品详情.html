@@ -188,7 +188,7 @@
                         <div class="cur-price">
                             <span class="buy-icon"></span>
                             <span class="title">价格:</span>
-                            <span class="price-text">￥2399<em>起</em></span>
+                            <span class="price-text">￥99999<em>起</em></span>
                             <span class="price-tooltip" title="底价说明底价说明底价说明底价说明底价说明底价说明底价说明底价说明底价说明">底价说明</span>
                         </div>
                         <div class="discard-price">
@@ -598,6 +598,7 @@
                             <div class="daysImg">
                                 <img src="../../images/client/dayNumberImg01.jpg">
                                 <img src="../../images/client/dayNumberImg02.jpg">
+                                <img src="../../images/client/dayNumberImg02.jpg">
                             </div>
                             <ul class="daysInfo">
                                 <li class="clearfix">
@@ -635,6 +636,8 @@
                             <span class="leftLine"></span>
                             <h3 class="listTitle">第二天<em class="fontSize12">●</em>微笑的高棉 （暹粒小圈游）</h3>
                             <div class="daysImg">
+                                <img src="../../images/client/dayNumberImg03.jpg">
+                                <img src="../../images/client/dayNumberImg04.jpg">
                                 <img src="../../images/client/dayNumberImg03.jpg">
                                 <img src="../../images/client/dayNumberImg04.jpg">
                             </div>
@@ -1911,6 +1914,16 @@
 
         });
     });
+
+    function setBannerBgColor(color) {
+        $(".bannerBottomList .middleListContent").css({
+            "background-color": "#" + color
+        });
+
+        $(".productDetailModel").css({
+            "border-bottom-color": "#" + color
+        });
+    }
 </script>
 </body>
 </html>
