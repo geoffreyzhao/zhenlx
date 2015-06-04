@@ -1,1 +1,321 @@
 @charset "utf-8";
+
+/** 网站消息-提醒  start **/
+.cont-block{
+    position: relative;
+}
+.cont-block .modelLine{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    border-left: 1px dashed #bbdde1;
+    position: absolute;
+    left: 220px;
+    top: 0;
+}
+.leftMenuContent{
+    width: 220px;
+    float: left;
+    margin-top: 50px;
+}
+.leftMenuContent ul{
+    margin: 10px 30px;
+}
+.leftMenuContent ul a{
+    font-size: 18px;
+    display: block;
+    min-width: 135px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #11b9b7;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+.leftMenuContent li.active a{
+    color: #fff;
+    background-color: #11b9b7;
+}
+.rightContent{
+    padding: 20px 39px 20px 24px;
+    float: left;
+    width: 80.3%;
+}
+.rightContent .remind-title{
+    padding:18px 0px;
+}
+.editHeadPortrait{
+    min-height: 686px;
+    height:auto !important;
+    overflow:visible;
+}
+.remind-column{
+    width:100%;
+    padding:23px 0px;
+    border-bottom: 1px #ececec solid;
+    color: #616161;
+}
+.remind-column .remind-news, .msg-column .msg-news{
+    font-size: 18px;
+    line-height:18px;
+    color:#7f7f7f;
+}
+.remind-left{
+    float: left;
+    padding-left:13px;
+    font-size: 14px;
+    display: inline-block;
+}
+.remind-left a{
+    padding:0px 4px;
+    color: #11b9b7;
+}
+.remind-left a:hover{
+    text-decoration: underline;
+}
+.remind-left .remind-left-num, .msg-left .msg-left-num{
+    padding-left:10px;
+    font-size: 16px;
+    color:#ffa200;
+}
+.remind-right{
+    float: right;
+    display: inline-block;
+}
+.remind-right a{
+    font-size: 14px;
+    color:#11b9b7;
+    text-decoration: none;
+}
+.remind-right a:hover{
+    text-decoration: underline;
+}
+.remind-icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:8px;
+    margin-right:22px;
+}
+.formal-icon1{
+    width:20px;
+    height:26px;
+    background: url("../../images/client/remind-icon.png") no-repeat 0 0;
+}
+.pressed-icon1{
+    width:20px;
+    height:26px;
+    background: url("../../images/client/remind-icon.png") no-repeat 0 -30px;
+}
+.formal-icon2{
+    width:21px;
+    height:26px;
+    background: url("../../images/client/remind-icon.png") no-repeat -22px 0;
+}
+.pressed-icon2{
+    width:21px;
+    height:26px;
+    background: url("../../images/client/remind-icon.png") no-repeat -22px -30px;
+}
+.formal-icon3{
+    width:23px;
+    height:27px;
+    background: url("../../images/client/remind-icon.png") no-repeat -45px 0;
+}
+.pressed-icon3{
+    width:23px;
+    height:27px;
+    background: url("../../images/client/remind-icon.png") no-repeat -45px -30px;
+}
+.formal-icon4{
+    width:23px;
+    height:23px;
+    background: url("../../images/client/remind-icon.png") no-repeat -70px 0;
+}
+.pressed-icon4{
+    width:23px;
+    height:23px;
+    background: url("../../images/client/remind-icon.png") no-repeat -70px -30px;
+}
+.remind-color2{
+    color:#cacaca;
+    padding-right:7px;
+}
+.remind-column-bg, .msg-column-bg{
+    background-color:#fffded;
+}
+/** end **/
+
+/** 网站消息-私信  start **/
+.msg-column{
+    width:100%;
+    padding:23px 0px 32px;
+    border-bottom: 1px #ececec solid;
+    color: #616161;
+}
+.msg-left{
+    float:left;
+    padding:0 16px;
+}
+.msg-right{
+    height:60px;
+    float: right;
+    display: inline-block;
+    position: relative;
+}
+.msg-center{
+    float: left;
+    font-size: 14px;
+    display: inline-block;
+}
+.msg-center p a{
+    color: #11b9b7;
+    text-decoration: none;
+}
+.msg-center p a:hover, .msg-center p a:focus{
+    text-decoration: underline;
+}
+.msg-cnt-num{
+    color:#ffa200;
+    padding-left:10px;
+}
+.msg-img{
+    width:60px;
+    height:60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.msg-del-icon{
+    width:18px;
+    height:19px;
+    background: url("../../images/client/msg-box.png") no-repeat 0 0;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right:14px;
+    bottom: -15px;
+}
+.msg-del-icon:hover{
+    background: url("../../images/client/msg-box.png") no-repeat -18px 0;
+}
+.msg-icon1{
+    background:url("../../images/client/userEvaluationImg01.png") no-repeat;
+}
+.msg-icon2{
+    background:url("../../images/client/userEvaluationImg02.png") no-repeat;
+}
+.msg-icon3{
+    background:url("../../images/client/userEvaluationImg03.png") no-repeat;
+}
+.msg-icon4{
+    background:url("../../images/client/userEvaluationImg04.png") no-repeat;
+}
+/** end **/
+
+/** 网站消息-私信详情  start **/
+.detail-title{
+    width:100%;
+    padding:18px 14px;
+    font-size: 18px;
+    line-height:18px;
+    color:#7f7f7f;
+}
+.detail-column{
+    width:100%;
+    color: #616161;
+}
+.detail-left{
+    float:left;
+    padding-left:14px;
+}
+.detail-right{
+    float: right;
+    padding-right:14px;
+}
+.detail-del-icon{
+    width:18px;
+    height:19px;
+    background: url("../../images/client/msg-box.png") no-repeat 0 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.detail-del-icon:hover{
+    background: url("../../images/client/msg-box.png") no-repeat -18px 0;
+}
+.line-left{
+    margin-top:11px;
+    width:333px;
+    float: left;
+    height:1px;
+    color: #ececec;
+}
+.line-left1{
+    margin-top:11px;
+    width:370px;
+    float: left;
+    height:1px;
+    color: #ececec;
+}
+.line-txt{
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    color:#cacaca;
+}
+.line-right{
+    margin-top:11px;
+    width:368px;
+    float: right;
+    height:1px;
+    color: #ececec;
+}
+.line-right1{
+    margin-top:11px;
+    width:375px;
+    float: right;
+    height:1px;
+    color: #ececec;
+}
+.detail-cnt{
+    padding:16px;
+    font-size: 14px;
+    line-height: 26px;
+}
+.detail-cnt-left{
+    float: left;
+}
+.detail-cnt-right{
+    width:736px;
+    float: left;
+    margin-left:16px;
+}
+.detail-time{
+    font-size: 14px;
+    color:#cacaca;
+    margin-right:13px;
+}
+.detail-name{
+    margin-bottom: 10px;
+}
+.detail-cnt-right p{
+    overflow: hidden;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.detail-cnt-right form p{
+    margin-top:21px;
+}
+.detail-cnt-right form p .subBtn{
+    font-size: 18px;
+}
+.detail-del-icon{
+    width:18px;
+    height:19px;
+    background: url("../../images/client/msg-box.png") no-repeat 0 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.detail-del-icon:hover{
+    background: url("../../images/client/msg-box.png") no-repeat -18px 0;
+}
+/** end **/
