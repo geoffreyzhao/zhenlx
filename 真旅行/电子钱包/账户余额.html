@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>B2C 真旅行前台 电子钱包-账户余额</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/wallet.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/client/common.js"></script>
+    <script type="text/javascript" src="../../js/client/adjust.js"></script>
+    
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<header>
+		<div class="head clearfix">
+			<div class="logo"></div>
+            <div class="top-nav">
+                <ul class="top-nav-list clearfix">
+                    <li class="top-nav-item">个人中心</li>
+                    <li class="top-nav-item">我的订单</li>
+                    <li class="top-nav-item">心愿清单</li>
+                    <li class="top-nav-item current">电子钱包</li>
+                    <li class="top-nav-item">网站通知</li>
+                </ul>
+            </div>
+		</div>
+	</header>
+
+	<div class="main-container">
+		<div class="main-wrapper" id="main-wrapper">
+			<div class="main-box" id="main-box">
+				<div class="top-border"><span class="clip"></span></div>
+				<div class="box-container">
+					<div class="cont-block clearfix">
+                        <span class="modelLine"></span>
+						<aside class="leftMenuContent">
+                            <ul>
+                                <li>
+                                    <a href="代金券.html">代金券</a>
+                                </li>
+                                <li class="active">
+                                    <a href="账户余额.html">账户余额</a>
+                                </li>
+                            </ul>
+						</aside>                        
+                        <section class="rightContent accountBalance">
+                        	<div class="subTitle">我的余额</div>
+							<div class="accountInfo">
+								<span class="piggyBank"></span>
+								<span class="money">￥200</span>
+								<a href="javascript:;" class="commonBtn orangeBtn">去提现</a>
+							</div>
+                        	<div class="subTitle">好友帮赚钱
+								<span class="aboutMakeMoney green-border-tooltip" title="怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱"><i class="question-mark-icon"></i>关于赚钱</span>
+                        	</div>
+							<table class="person-reward-table">
+								<colgroup>
+									<col width="25%"/>
+									<col width="25%"/>
+									<col width="25%"/>
+									<col width="25%"/>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>我的好友</th>
+										<th>状态</th>
+										<th>获得奖金</th>
+										<th>奖金状态</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>太平洋的鲸鱼</td>
+										<td>已注册</td>
+										<td class="money">￥100</td>
+										<td class="status">已发放</td>
+									</tr>
+									<tr>
+										<td>Darion Zhou</td>
+										<td>已出游</td>
+										<td class="money">￥200</td>
+										<td>预备发放</td>
+									</tr>
+									<tr>
+										<td>太平洋的鲸鱼</td>
+										<td>已注册</td>
+										<td class="money">￥100</td>
+										<td class="status">已发放</td>
+									</tr>
+									<tr>
+										<td>Darion Zhou</td>
+										<td>已出游</td>
+										<td class="money">￥200</td>
+										<td>预备发放</td>
+									</tr>
+									<tr>
+										<td>Darion Zhou</td>
+										<td>已出游</td>
+										<td class="money">￥200</td>
+										<td>预备发放</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="pagination">
+							    <span class="countNumber">共<em class="blueFonts">100</em>条记录</span>
+							    <span class="pageSize">
+							        <a href="javascript:void(0);" class="active">1</a>
+							        <a href="javascript:void(0);">2</a>
+							        <a href="javascript:void(0);">3</a>
+							        <a href="javascript:void(0);">4</a>
+							        <a href="javascript:void(0);">50</a>
+							    </span>
+							</div>
+                        </section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="foot clearfix">
+			<span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".green-border-tooltip").tooltip({
+	            html: true,
+	            placement: 'bottom',
+	            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+	        });
+		});
+	</script>
+
+</body>
+</html>

@@ -390,5 +390,98 @@
 	margin: 0;
 }
 
-
 /*  代金券   end */
+
+/*  账户余额  start  */
+
+.accountBalance {
+
+}
+
+.accountBalance .subTitle {
+	font-size: 18px;
+	color: #7f7f7f;
+	padding-bottom: 20px;
+	padding-left: 25px;
+	border-bottom: 1px solid #ececec;
+}
+.accountBalance .accountInfo {
+	padding: 28px 0 28px 25px;
+	border-bottom: 1px solid #ececec;
+	margin-bottom: 50px;
+}
+
+.accountBalance .accountInfo .piggyBank {
+	display: inline-block;
+	background: url(../../images/client/piggy-bank-icon.png) no-repeat 0 0;
+	width: 67px;
+	height: 67px;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.accountBalance .accountInfo .money {
+	font-size: 32px;
+	color: #fe7800;
+	font-family: Arial;
+	vertical-align: middle;
+}
+
+.accountBalance .accountInfo .orangeBtn {
+	float: right;
+	margin-top: 10px;
+	margin-right: 25px;
+}
+
+.accountBalance .aboutMakeMoney {
+	font-size: 16px;
+	float: right;
+	color: #11b9b7;
+	margin-top: 5px;
+	margin-right: 20px;
+}
+
+.question-mark-icon {
+	display: inline-block;
+	background: url(../../images/client/question-mark-icon.png) no-repeat 0 0;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -2px;
+}
+
+.person-reward-table {
+	font-size: 16px;
+	width: 100%;
+	margin: 25px 0;
+}
+
+.person-reward-table th,
+.person-reward-table td {
+	border: 1px solid #d2efef;
+	text-align: center;
+}
+
+.person-reward-table th {
+	padding: 16px 0;
+	background-color: #f3fbfb;
+	color: #9f9f9f;
+}
+
+.person-reward-table td {
+	padding: 18px 0;
+	color: #484848;
+}
+
+.person-reward-table .money {
+	color: #fe7800;
+	font-family: Arial;
+	font-weight: bold;;
+}
+
+.person-reward-table .status {
+	color: #11b9b7;
+}
+
+/*  账户余额  end  */
