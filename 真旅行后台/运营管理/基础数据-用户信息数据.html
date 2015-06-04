@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>B2C 真旅行后台 基础数据-系统POI</title>
+    <title>B2C 真旅行后台 基础数据-用户信息数据</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -172,7 +172,7 @@
         <div class="main-container clearfix">
             <aside class="leftMenu">  <!--leftMenu 开始-->
                 <ul class="menuChange">
-                    <li class="current">
+                    <li>
                         <a href="基础数据-系统POI.html">系统POI信息</a>
                         <i class="rightArrow"></i>
                     </li>
@@ -180,7 +180,7 @@
                         <a href="基础数据-产品属性.html">产品属性</a>
                         <i class="rightArrow"></i>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="基础数据-用户信息数据.html">用户信息数据</a>
                         <i class="rightArrow"></i>
                     </li>
@@ -192,164 +192,38 @@
             </aside> <!--leftMenu 结束-->
             <section class="rightModelContent">
                 <div class="titleContent clearfix">
-                    <h3 class="titleFonts18">出发地信息</h3>
+                    <h3 class="titleFonts18">名称AB库</h3>
                 </div>
-                <div class="selectClassify clearfix">
-                    <div class="leftClassifyBtn">
-                        <div class="modifiedPlaceDeparture">
-                            <button class="commonButton blue-45c8dcButton">修改出发地</button>
-                        </div>
-                        <div class="saveCancelBtn">
-                            <button class="commonButton orange-f79767Btn">确 认</button>
-                            <button class="commonButton gray-bbbButton">取 消</button>
-                        </div>
-                    </div>
-                    <div class="rightClassifyInfo">
-                        <textarea class="commonTextarea themeText" readonly="readonly">
-上海
-杭州
-广州
-深圳
-北京
-西安
-南京
-武汉
-大连
- 哈尔滨
-</textarea>
-                    </div>
+                <div class="uploadData">
+                    <button class="commonButton blue-45c8dcButton">上传数据</button>
+                    <span class="fileFonts">未上传文件</span>
+                    <form>
+                        <input type="file" />
+                    </form>
                 </div>
-                <div class="lightGrayLine"></div>
-                <div class="titleContent clearfix">
-                    <h3 class="titleFonts18">目的地信息</h3>
+                <!-- <div class="uploadData">
+                    <button class="commonButton blue-45c8dcButton">上传数据</button>
+                    <span class="fileFonts">wenjianmingcheng528. xls</span>
+                </div> -->
+
+                <div class="titleContent clearfix" style="margin-top:100px;">
+                    <h3 class="titleFonts18">用户国籍</h3>
                 </div>
-                <div class="selectClassify clearfix">
-                    <div class="leftClassifyBtn">
-                        <div>
-                            <button class="commonButton blue-45c8dcButton">上传数据</button>
-                        </div>
-                        <div>
-                            <a href="javascript:void(0);" class="setDefault">设为默认显示</a>
-                        </div>
-                        <div class="defaultVal">
-                            <label class="placeLabel">
-                                <span class="fontsWidth">日本</span>
-                                <span class="closeIcon"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="rightClassifyInfo">
-                        <div class="placeInfoContent">
-                            <ul class="grayTitleFonts clearfix">
-                                <li>一级</li>
-                                <li>二级</li>
-                                <li>三级</li>
-                            </ul>
-                            <div class="placeList">
-                                <table class="placeTab">
-                                    <colgroup>
-                                        <col width="190">
-                                        <col width="190">
-                                        <col width="190">
-                                    </colgroup>
-                                    <tbody>
-                                    <tr>
-                                        <th>亚洲</th>
-                                        <th>日本</th>
-                                        <td>京都</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <td>名古屋</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <td>横滨</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <td>新宿</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <td>江户</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <td>大阪</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th>泰国</th>
-                                        <td>曼谷</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <td>清迈</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th>越南</th>
-                                        <td>胡志明市（西贡）</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <td>河内</td>
-                                    </tr>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <td>海防市</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                <div class="uploadData">
+                    <button class="commonButton blue-45c8dcButton">上传数据</button>
+                    <span class="fileFonts">未上传文件</span>
+                    <form>
+                        <input type="file" />
+                    </form>
                 </div>
+                <!-- <div class="uploadData">
+                    <button class="commonButton blue-45c8dcButton">上传数据</button>
+                    <span class="fileFonts">wenjianmingcheng528. xls</span>
+                </div> -->
             </section>
         </div>
         <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
     </div>
-
-<script>
-    $(function(){
-        $(".leftClassifyBtn .modifiedPlaceDeparture").click(function(){
-            $(this).hide();
-            $(this).siblings(".saveCancelBtn").show();
-            $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").removeAttr("readonly","readonly");
-        });
-        $(".saveCancelBtn .gray-bbbButton").click(function(){
-            $(this).parents(".saveCancelBtn").hide();
-            $(this).parents(".saveCancelBtn").siblings(".modifiedPlaceDeparture").show();
-            $(this).parents(".leftClassifyBtn").siblings(".rightClassifyInfo").find(".commonTextarea").attr("readonly","readonly");
-        });
-        
-        $(".placeList .placeTab th").click(function(){
-            $(this).addClass("current");
-            $(this).siblings("th").removeClass("current");
-            $(this).parents("tr").siblings("tr").find("th").removeClass("current");
-        });
-        $(".setDefault").click(function(){
-            $text = $(".placeTab tr .current").text();
-            if($(".placeTab tr .current").html() != ""){
-                $(this).parents("div").siblings(".defaultVal").find(".fontsWidth").text($text);
-                $(".defaultVal").show();
-            }
-        });
-        $(".closeIcon").click(function(){
-            $(this).parents(".defaultVal").hide();
-        });
-        
-    })
-</script>
 
 
 </body>

@@ -151,6 +151,7 @@
 .rightModelContent .uploadData{
     font-size: 14px;
     margin-bottom: 10px;
+    position: relative;
 }
 .uploadData button{
     font-size: 15px;
@@ -158,6 +159,14 @@
 }
 .uploadData .fileFonts{
     color: #999999;
+}
+.uploadData input[type='file'] {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 40px;
+    opacity: 0;
+    cursor: pointer;
 }
 .rightModelContent .lightGrayLine {
     margin: 15px 0;
@@ -245,6 +254,24 @@
 .placeList .placeTab th.current{
     background-color: #45c8dc;
     color: #ffffff;
+}
+
+.upload-image-list {
+    margin-top: 20px;
+}
+
+.upload-image-list > li {
+    float: left;
+    margin: 20px;
+    text-align: center;
+}
+
+.upload-image-list > li img {
+    margin-bottom: 10px;
+}
+
+.upload-image-list > li .image-name {
+    display: block;
 }
 
 /*  基础数据 end  */
