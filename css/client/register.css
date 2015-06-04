@@ -128,6 +128,24 @@
     text-decoration: underline;
 }
 
+.rewardPlan {
+    font-size: 14px;
+}
+
+.rewardPlan em {
+    padding-right: 5px;
+    color: #11b9b7;
+}
+
+.rewardPlan a {
+    color: #11b9b7;
+}
+
+.rewardPlan a:hover {
+    color: #11b9b7;
+    text-decoration: underline;
+}
+
 /*  完善个人资料  end  */
 
 /*  完善个人资料--选择头像  start  */

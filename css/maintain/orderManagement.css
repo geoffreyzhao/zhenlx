@@ -217,6 +217,8 @@
     border: 1px solid #eaeaea;
     padding: 10px;
     font-size: 14px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .grayThead tbody tr:hover{
     background-color: #eefaff;

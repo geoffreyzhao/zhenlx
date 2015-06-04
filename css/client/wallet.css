@@ -107,7 +107,7 @@
 	right: -2px;
 	background: url(../../images/client/voucher-short-border.png) repeat-y 0 0;
 	width: 2px;
-	height: 185px;
+	height: 100%;
 }
 
 .voucherItem.voucher-bg-0 .price {
@@ -123,7 +123,7 @@
 	right: -2px;
 	background: url(../../images/client/voucher-short-border.png) repeat-y -4px 0;
 	width: 2px;
-	height: 185px;
+	height: 100%;
 }
 
 .voucherItem.voucher-bg-1 .price {
@@ -139,7 +139,7 @@
 	right: -2px;
 	background: url(../../images/client/voucher-short-border.png) repeat-y -8px 0;
 	width: 2px;
-	height: 185px;
+	height: 100%;
 }
 
 .voucherItem.voucher-bg-2 .price {
@@ -155,7 +155,7 @@
 	right: -2px;
 	background: url(../../images/client/voucher-short-border.png) repeat-y -12px 0;
 	width: 2px;
-	height: 185px;
+	height: 100%;
 }
 
 .voucherItem.voucher-bg-3 .price {
@@ -306,6 +306,13 @@
 	opacity: 1!important;
 }
 
+.voucherList.expired .voucherItem div,
+.voucherList.expired .voucherItem span,
+.voucherList.expired .voucherItem em,
+.voucherList.expired .voucherItem a {
+	opacity: 0.7;
+}
+
 .voucherList.expired .voucherItem {
 	background-color: #ccc;
 }
@@ -337,6 +344,50 @@
 .voucherList.expired .bottom a:hover {
 	cursor: default;
 	text-decoration: none;
+}
+
+.voucherItem.small {
+	height: 145px;
+	display: block;
+	margin: 20px auto 25px!important;
+}
+
+.share-person-block {
+	padding: 0 10px;
+	width: 375px;
+	border: 1px solid #d0d0d0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-radius: 2px;
+	margin: 0 auto 25px;
+}
+
+.share-person-block .title {
+	color: #777;
+}
+
+.share-person-block img {
+	height: 23px;
+	width: 23px;
+	border-radius: 23px;
+}
+
+.share-person-block input[type='text'] {
+	color: #484848;
+	border: none;
+	height: 35px;
+  	line-height: 35px;
+  	margin-top: -4px;
+}
+
+.share-person-block input[type='text']:focus {
+	outline: none;
+	border: none!important;
+}
+
+.share-person-block .refreshIcon {
+	margin: 0;
 }
 
 
