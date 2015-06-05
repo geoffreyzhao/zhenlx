@@ -1,1 +1,147 @@
 @charset "utf-8";
+/**  交易明细 start  ***/
+.headSecondLevel .operationDiv {
+    float: right;
+    display: inline;
+    margin:7px 10px 0 0;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 33px;
+    background: #f1f1f1;
+    border: 1px solid #337da6;
+    color: #1ea483;
+    font-size: 16px;
+    text-align: center;
+}
+.headSecondLevel .operationDiv:hover {
+    background: #fff;
+    cursor: pointer;
+}
+.headSecondLevel .operationDiv a {
+    color: #3db99a;
+}
+.headSecondLevel .operationDiv a:hover {
+    color: #3db99a;
+    text-decoration: none;
+}
+.headSecondLevel .plusIcon {
+    background: url("../../images/commonIcon.png") no-repeat 0 -131px;
+    width:14px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.whiteBg{
+    background-color: #fff;
+    padding: 10px;
+    font-size: 16px;
+}
+.whiteBg .searchList{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f1f1f1;
+}
+.searchList li{
+    float: left;
+}
+.searchList .searchTab{
+    color: #666666;
+}
+.searchList .searchTab th{
+    text-align: right;
+    padding: 5px 3px;
+    font-weight: normal;
+}
+.searchList .searchTab td{
+    padding: 5px 3px;
+}
+.searchList .searchTab input[type="text"]{
+    width: 200px;
+}
+.searchTab .lightBlueBtn{
+    background-color: #45c8dc;
+    display: inline-block;
+    min-width: 80px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #fff;
+}
+.searchTab .lightBlueBtn:hover{
+    background-color: #2ebad0;
+    color: #fff;
+}
+.searchTab .searchIcon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../../images/commonIcon.png") no-repeat -15px -19px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.searchList .searchTab .fitToTr td, .searchList .searchTab .fitToTr th {
+    padding-top:0px;
+}
+.productTab th {
+    color: #444;
+}
+.productTab td {
+    color: #666;
+}
+.commonTab {
+    width:100%;
+}
+.commonTab td,
+.commonTab th{
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.commonTab thead{
+    background-color: #f5f5f5;
+}
+.commonTab tbody tr:hover{
+    background-color: #eefaff;
+}
+.commonTab tbody a{
+    margin-right: 5px;
+}
+.commonTab .greenFontsLink{
+    color: #3db99a;
+}
+.commonTab .greenFontsLink:hover{
+    color: #3db99a;
+    text-decoration: underline;
+}
+.commonTab .grayFontsLink{
+    color: #666666;
+}
+.commonTab .grayFontsLink:hover{
+    color: #666666;
+    text-decoration: underline;
+}
+.commonTab .fcf78c68 {
+    color: #f78c68;
+}
+.commonTab .fcaaa {
+    color: #aaa;
+}
+.commonTab .fs14 {
+    font-size: 14px;
+}
+.outTab{
+    width:100%;
+    padding:5px;
+    text-align: right;
+}
+.outTab a{
+    text-decoration: none;
+    color: #3DB99A;
+}
+.outTab a:hover, .outTab a:focus{
+    text-decoration: underline;
+}
+/**  end  **/
