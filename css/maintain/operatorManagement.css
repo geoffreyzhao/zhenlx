@@ -776,7 +776,6 @@ textarea {
 
 .voucherPerNum {
     width: 40px;
-    margin-right: 5px;
     height: 34px!important;
     line-height: 34px!important;
 }
@@ -784,7 +783,7 @@ textarea {
 .voucherPerNum[readonly='readonly'] {
     border: none;
     background-color: transparent;
-    width: 12px;
+    width: 25px;
 }
 
 .voucherPerNum[readonly='readonly']:focus {
@@ -829,3 +828,23 @@ textarea {
 }
 
 /*  新增送券活动  end */
+
+/*  新增领券活动  start */
+
+.voucherTotalNum {
+    width: 80px;
+    height: 34px!important;
+    line-height: 34px!important;
+}
+
+.voucherTotalNum[readonly='readonly'] {
+    border: none;
+    background-color: transparent;
+    width: 60px;
+}
+
+.voucherTotalNum[readonly='readonly']:focus {
+    border: none!important;
+}
+
+/*  新增领券活动  end */
