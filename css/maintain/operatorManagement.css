@@ -662,3 +662,170 @@
 }
 
 /*  代金券使用明细  start */
+
+/*  新增送券活动  start  */
+
+.activityTable {
+
+}
+
+.activityTable th {
+    text-align: right;
+    padding: 10px 10px 10px 0;
+}
+
+.activityTable .verticalAlign {
+    vertical-align: top;
+}
+
+.activityTable td {
+    padding: 10px 0;
+}
+
+textarea.activity-description {
+    width: 860px;
+    height: 150px;
+}
+
+.activity-effect {
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #24b48f;
+    background-color: #dcf8f1;
+    text-align: center;
+}
+
+.activity-termination {
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #f65253;
+    background-color: #fff3f3;
+    text-align: center;
+}
+
+.activity-draft {
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #00bedc;
+    background-color: #e4fbff;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+}
+
+.redStar {
+    color: red;
+}
+
+.selectUserBlock label.radio {
+    display: block;
+    margin-left: 0;
+}
+
+.activityTable label.radio {
+    margin-top: 0;
+}
+
+.inputUserBlock textarea {
+    width: 670px;
+    height: 150px;
+}
+
+.inputUserBlock textarea[readonly='readonly'] {
+    background-color: #e1e1e1;
+}
+
+.inputUserBlock .saveBtn,
+.inputUserBlock .cancelBtn {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.operInputUser {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.voucherInfoTable {
+    width: 955px;
+    margin-top: 20px;
+}
+
+.blueFontsNum {
+    font-family: Arial;
+    color: #3895cf;
+}
+
+.blueFonts {
+    color: #3895cf;
+}
+
+.voucherPerNum {
+    width: 40px;
+    margin-right: 5px;
+    height: 34px!important;
+    line-height: 34px!important;
+}
+
+.voucherPerNum[readonly='readonly'] {
+    border: none;
+    background-color: transparent;
+    width: 12px;
+}
+
+.voucherPerNum[readonly='readonly']:focus {
+    border: none!important;
+}
+
+.grayFonts {
+    color: #999;
+}
+
+.newVoucherTable .grayFonts {
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.newVoucherTable th {
+    text-align: right;
+    padding: 8px 10px 8px 0;
+}
+
+.newVoucherTable .verticalAlign {
+    vertical-align: top;
+}
+
+.newVoucherTable td {
+    padding: 8px 0;
+}
+
+.newVoucherTable label.radio {
+    margin-top: 0;
+}
+
+.newVoucherTable .productRange {
+    width: 425px;
+    height: 105px;
+    display: none;
+}
+
+.newVoucherTable .productRange[readonly='readonly'] {
+    background-color: #e1e1e1;
+    display: none;
+}
+
+/*  新增送券活动  end */
