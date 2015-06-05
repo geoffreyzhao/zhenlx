@@ -164,6 +164,32 @@ textarea:focus {
     width: 1100px;
     margin: 0 auto;
 }
+.headSecondLevel .operationDiv {
+    float: right;
+    display: inline;
+    margin: 7px 10px 0 0;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 33px;
+    background: #f1f1f1;
+    border: 1px solid #337da6;
+    color: #1ea483;
+    font-size: 16px;
+    text-align: center;
+}
+.headSecondLevel .operationDiv:hover {
+    background: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.headSecondLevel .plusIcon {
+    background: url("../../images/commonIcon.png") no-repeat 0 -131px;
+    width: 14px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
 .second-level-nav {
     background-color: #59aad7;
     position: absolute;
