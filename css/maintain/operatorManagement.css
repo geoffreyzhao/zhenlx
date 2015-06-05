@@ -407,5 +407,258 @@
 .commonTab .orangefa7f1f{
     color: #fa7f1f;
 }
+.commonTab .blueFontsLink {
+    color: #3895cf;
+}
+.commonTab .blueFontsLink:hover {
+    color: #3895cf;
+    text-decoration: underline;
+}
 
 /*   网站活动   end  
+
+/*  代金券使用明细  start */
+
+.voucherBlock {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f1f1f1;
+}
+
+.voucherItem {
+    width: 373px;
+    height: 145px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin-right: 45px;
+    margin-bottom: 35px;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    line-height: 18px;
+}
+
+.voucherItem.voucher-bg-0 {
+    background-color: #1ddd89;
+}
+
+.voucherItem.voucher-bg-1 {
+    background-color: #2dd3e7;
+}
+
+.voucherItem.voucher-bg-2 {
+    background-color: #f683ac;
+}
+
+.voucherItem.voucher-bg-3 {
+    background-color: #f5b75e;
+}
+
+.voucherItem.voucher-bg-0 .rightBorder {
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    background: url(../../images/client/voucher-short-border.png) repeat-y 0 0;
+    width: 2px;
+    height: 100%;
+}
+
+.voucherItem.voucher-bg-0 .price {
+    display: inline-block;
+    background: url(../../images/client/voucher-denomination.png) no-repeat 0 0;
+    width: 58px;
+    height: 48px;
+}
+
+.voucherItem.voucher-bg-1 .rightBorder {
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    background: url(../../images/client/voucher-short-border.png) repeat-y -4px 0;
+    width: 2px;
+    height: 100%;
+}
+
+.voucherItem.voucher-bg-1 .price {
+    display: inline-block;
+    background: url(../../images/client/voucher-denomination.png) no-repeat -64px 0;
+    width: 72px;
+    height: 48px;
+}
+
+.voucherItem.voucher-bg-2 .rightBorder {
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    background: url(../../images/client/voucher-short-border.png) repeat-y -8px 0;
+    width: 2px;
+    height: 100%;
+}
+
+.voucherItem.voucher-bg-2 .price {
+    display: inline-block;
+    background: url(../../images/client/voucher-denomination.png) no-repeat -147px 0;
+    width: 72px;
+    height: 48px;
+}
+
+.voucherItem.voucher-bg-3 .rightBorder {
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    background: url(../../images/client/voucher-short-border.png) repeat-y -12px 0;
+    width: 2px;
+    height: 100%;
+}
+
+.voucherItem.voucher-bg-3 .price {
+    display: inline-block;
+    background: url(../../images/client/voucher-denomination.png) no-repeat -225px 0;
+    width: 98px;
+    height: 47px;
+}
+
+.horizontal-white-split-line {
+    background: url(../../images/client/white-line-piece.png) repeat-x 0 0;
+    height: 1px;
+    width: 100%;
+}
+
+.voucherItem .top {
+    font-size: 15px;
+    padding: 9px 18px 9px 22px;
+}
+
+.voucherItem .top .title {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: inline-block;
+}
+
+.voucherItem .middle {
+    position: relative;
+    font-size: 13px;
+    padding: 13px 18px 13px 22px;
+}
+
+.voucherItem .price {
+    position: absolute;
+    right: 54px;
+    top: 14px;
+    font-size: 30px;
+}
+
+.voucherItem.voucher-bg-0 .price em {
+    position: relative;
+    top: 20px;
+    left: 66px;
+}
+
+.voucherItem .privilege {
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff; 
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.voucherItem.voucher-bg-0 .privilege {
+    color: #1ddd89; 
+}
+
+.voucherItem .validity {
+    margin-bottom: 8px;
+} 
+
+.voucherItem .applicability {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.voucherItem.voucher-bg-1 .privilege {
+    color: #2dd3e7; 
+}
+
+.voucherItem.voucher-bg-2 .privilege {
+    color: #f683ac; 
+}
+
+.voucherItem.voucher-bg-3 .privilege {
+    color: #f5b75e; 
+}
+
+.voucherItem.voucher-bg-1 .price em {
+    position: relative;
+    top: 20px;
+    left: 80px;
+}
+
+.voucherItem.voucher-bg-2 .price em {
+    position: relative;
+    top: 20px;
+    left: 80px;
+}
+
+.voucherItem.voucher-bg-3 .price em {
+    position: relative;
+    top: 20px;
+    left: 105px;
+}
+
+.voucherBlock {
+    margin-top: 20px;
+}
+
+.voucherContainer {
+    float: left;
+    margin-left: 20px;
+}
+
+.voucherNumCondition {
+    text-align: center;
+    padding: 38px 130px;
+    background-color: #fafafa;
+    float: left;
+}
+
+.voucherNumCondition .left {
+    float: left;
+    padding-right: 35px;
+    border-right: 1px dashed #ddd;
+}
+
+.voucherNumCondition .left .title,
+.voucherNumCondition .right .title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.voucherNumCondition .left .num {
+    font-size: 30px;
+    color: #31c03e;
+    font-family: Arial;
+}
+
+.voucherNumCondition .right {
+    float: left;
+    margin-left: 35px;
+}
+
+.voucherNumCondition .right .num {
+    font-size: 30px;
+    color: #f3532e;
+    font-family: Arial;
+}
+
+/*  代金券使用明细  start */

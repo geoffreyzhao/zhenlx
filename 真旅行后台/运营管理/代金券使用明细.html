@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 代金券使用明细</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/operatorManagement.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script> -->
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+        
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <header class="main-header hoveringModel">
+            <div class="stairMenuContent">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                        <ul class="stairMenu">
+                            <li class="editFonts">代金券使用明细</li>
+                        </ul>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel headBtn clearfix">
+                <span class="leftBtn">
+                    <a href="javascript:void(0);" class="returnBtn">< 返回</a>
+                </span>
+            </div>
+        </header>
+        <div class="main-container changeMainContent">
+            <section class="whiteBg">
+                <div class="voucherBlock clearfix">
+                    <div class="voucherContainer">
+                        <div class="voucherItem voucher-bg-0">
+                            <div class="flag"></div>
+                            <div class="rightBorder"></div>
+                            <div class="top">
+                                <span class="title">夏至节·盛夏清凉</span>
+                            </div>
+                            <div class="horizontal-white-split-line"></div>
+                            <div class="middle">
+                                <div class="privilege">满1000元减</div>
+                                <div class="validity">2015.6.1 - 2015.6.6</div>
+                                <div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+                                <span class="price"><em>元</em></span>
+                            </div>
+                        </div>
+                        <!--  其他三种类型券  -->
+                        <!-- <div class="voucherItem voucher-bg-1">
+                            <div class="flag"></div>
+                            <div class="rightBorder"></div>
+                            <div class="top">
+                                <span class="title">最游惠</span>
+                            </div>
+                            <div class="horizontal-white-split-line"></div>
+                            <div class="middle">
+                                <div class="privilege">满2000元减</div>
+                                <div class="validity">2015.6.1 - 2015.6.6</div>
+                                <div class="applicability">适用范围：东南亚产品</div>
+                                <span class="price"><em>元</em></span>
+                            </div>
+                        </div>
+                        <div class="voucherItem voucher-bg-2">
+                            <div class="flag"></div>
+                            <div class="rightBorder"></div>
+                            <div class="top">
+                                <span class="title">任意券任意券任意券任意券任意券任意券任意券任意券任意券</span>
+                            </div>
+                            <div class="horizontal-white-split-line"></div>
+                            <div class="middle">
+                                <div class="privilege">满3000元减</div>
+                                <div class="validity">2015.11.11 - 2015.12.12</div>
+                                <div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+                                <span class="price"><em>元</em></span>
+                            </div>
+                        </div>
+                        <div class="voucherItem voucher-bg-3">
+                            <div class="flag"></div>
+                            <div class="rightBorder"></div>
+                            <div class="top">
+                                <span class="title">蜜月甜蜜之旅</span>
+                            </div>
+                            <div class="horizontal-white-split-line"></div>
+                            <div class="middle">
+                                <div class="privilege">满4000元减</div>
+                                <div class="validity">2015.1.1 - 2015.1.31</div>
+                                <div class="applicability">适用范围：蜜月产品</div>
+                                <span class="price"><em>元</em></span>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="voucherNumCondition">
+                        <div class="left">
+                            <div class="title">已发送</div>
+                            <div class="num">80000</div>
+                        </div>
+                        <div class="right">
+                            <div class="title">已消费</div>
+                            <div class="num">60000</div>
+                        </div>
+                    </div>
+                </div>
+                <table class="searchTab" style="margin:25px 0;">
+                    <colgroup>
+                        <col width="60">
+                        <col width="280">
+                        <col width="75">
+                        <col width="435">
+                        <col width="">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>领券者</th>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <th>消费时间</th>
+                        <td>
+                            <input type="text" style="width: 130px;" class="datepicker startDate hasIcon"><em> 至 </em><input type="text" style="width: 130px;" class="datepicker endDate hasIcon">
+                        </td>
+                        <td>
+                            <a href="javascript:void(0);" class="lightBlueBtn" style="width:100px;"><i class="searchIcon"></i>搜 索</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <section class="clearfix" style="width:950px;">
+                    <table class="commonTab">
+                        <colgroup>
+                            <col width="280"/>
+                            <col width="340"/>
+                            <col width="340"/>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>领券者</th>
+                            <th>发放时间</th>
+                            <th>消费时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a class="blueFontsLink" href="javascript:;">18681834307</a></td>
+                            <td>2015-05-20 16:20:15</td>
+                            <td>2015-06-01 8:20:43</td>
+                        </tr>
+                        <tr>
+                            <td><a class="blueFontsLink" href="javascript:;">18681834307</a></td>
+                            <td>2015-05-20 16:20:15</td>
+                            <td>2015-06-01 8:20:43</td>
+                        </tr>
+                        <tr>
+                            <td><a class="blueFontsLink" href="javascript:;">18681834307</a></td>
+                            <td>2015-05-20 16:20:15</td>
+                            <td>2015-06-01 8:20:43</td>
+                        </tr>
+                        <tr>
+                            <td><a class="blueFontsLink" href="javascript:;">18681834307</a></td>
+                            <td>2015-05-20 16:20:15</td>
+                            <td>2015-06-01 8:20:43</td>
+                        </tr>
+                        <tr>
+                            <td><a class="blueFontsLink" href="javascript:;">18681834307</a></td>
+                            <td>2015-05-20 16:20:15</td>
+                            <td>2015-06-01 8:20:43</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span class="countNum">共 331 条记录，</span>
+                        <span class="pageNum">
+                            <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
+                            <ul class="paginationNum" style="display: none;">
+                                <li class="active">
+                                    <a href="javascript:void(0);">5</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">10</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">20</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">30</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">40</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">50</a>
+                                </li>
+                            </ul>
+                        </span>
+                        <span class="pageSize">1/10</span>
+                        <span class="pageArrow">
+                            <a href="javascript:void(0);" class="firstPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="prevPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="nextPage">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="lastPage">
+                                <i></i>
+                            </a>
+                        </span>
+                        <span>
+                            <span>跳转到</span>
+                            <input type="text" style="width: 45px;" class="pageToNum">
+                            <a href="javascript:void(0);" class="pageTo">
+                                <i></i>
+                            </a>
+                        </span>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+
+<script>
+    $(function(){
+        
+        
+    })
+</script>
+
+
+</body>
+</html>
