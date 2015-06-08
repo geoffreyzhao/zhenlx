@@ -42,6 +42,9 @@
     float: left;
     width: 80.3%;
 }
+.rightContent .pagination{
+    border-top:none;
+}
 .rightContent .remind-title{
     padding:18px 0px;
 }

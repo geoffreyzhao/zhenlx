@@ -242,8 +242,8 @@
                         <tr>
                             <th>操作日期</th>
                             <td>
-                                <input type="text" style="width: 200px;" class="datepicker default hasIcon" readonly="readonly">&nbsp;至&nbsp;<input type="text"
-                                                   style="width: 200px;" class="datepicker default hasIcon" readonly="readonly">
+                                <input type="text" style="width: 200px;" class="datepicker startDate hasIcon" readonly="readonly">&nbsp;至&nbsp;<input type="text"
+                                                   style="width: 200px;" class="datepicker endDate hasIcon" readonly="readonly">
                             </td>
                         </tr>
                         <tr>
@@ -260,20 +260,17 @@
                                         <li role="presentation"><a href="javascript:void(0);">支出</a></li>
                                     </ul>
                                 </div>&nbsp;-&nbsp;收支分类
-                                <div class="dropdown" id="sonMenu" style="width: 170px;">
+                                <div class="dropdown" style="width: 170px;">
                                     <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                        <span class="activeFonts">全部</span>
+                                        <span class="activeFonts" id="activeSon">全部</span>
                                         <span class="caret"></span>
                                     </a>
-                                    <ul class="dropdown-menu" role="menu">
+                                    <ul class="dropdown-menu" id="sonMenu" role="menu">
                                         <li class="active" role="presentation"><a href="javascript:void(0);">全部</a></li>
-                                        <li role="presentation"><a href="javascript:void(0);">获得抵用券</a></li>
-                                        <li role="presentation"><a href="javascript:void(0);">获得积分</a></li>
-                                    </ul>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li class="active" role="presentation"><a href="javascript:void(0);">全部</a></li>
-                                        <li role="presentation"><a href="javascript:void(0);">支付票款</a></li>
-                                        <li role="presentation"><a href="javascript:void(0);">抵用券过期</a></li>
+                                        <li class="income-subType"><a href="javascript:void(0);">获得抵用券</a></li>
+                                        <li class="income-subType"><a href="javascript:void(0);">获得积分</a></li>
+                                        <li class="outcome-subType"><a href="javascript:void(0);">支付票款</a></li>
+                                        <li class="outcome-subType"><a href="javascript:void(0);">抵用券过期</a></li>
                                     </ul>
                                 </div>
 
@@ -492,7 +489,21 @@
 
         $("#parentMenu li").click(function(){
             var index = $("#parentMenu li").index(this);
-            
+            var firstSon = "";
+            $("#sonMenu li").hide();
+            if(index == 0){
+                firstSon = $("#sonMenu li").first().text();
+                $("#activeSon").text(firstSon);
+                $("#sonMenu li").eq(0).show();
+            }else if(index == 1){
+                firstSon = $("#sonMenu").find(".income-subType").first().text();
+                $("#activeSon").text(firstSon);
+                $("#sonMenu").find(".income-subType").show();
+            }else if(index == 2){
+                firstSon = $("#sonMenu").find(".outcome-subType").first().text();
+                $("#activeSon").text(firstSon);
+                $("#sonMenu").find(".outcome-subType").show();
+            }
         });
     });
 
