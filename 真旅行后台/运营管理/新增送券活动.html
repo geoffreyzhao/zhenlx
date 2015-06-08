@@ -91,7 +91,7 @@
                         </tr>
                         <tr>
                             <th class="verticalAlign"><em class="redStar">*</em>用户范围</th>
-                            <td>
+                            <td class="userRangeCont">
                                 <div class="radioContent">
                                     <label class="radio active setUserBySelect">
                                         <span class="radioIcon"></span>
@@ -128,11 +128,11 @@
                         </tr>
                         <tr>
                             <th>活动送券</th>
-                            <td><button class="commonButton blue-45c8dcButton addVoucherBtn" style="width:130px;"><i class="whiteAddIcon"></i>添加代金券</button></td>
+                            <td><button class="commonButton blue-45c8dcButton addVoucherBtn disabled" style="width:130px;"><i class="whiteAddIcon"></i>添加代金券</button></td>
                         </tr>
                     </tbody>
                 </table>
-                <table class="commonTab voucherInfoTable">
+                <table class="commonTab voucherInfoTable" style="display: none;">
                     <thead>
                         <tr>
                             <th>券码</th>
@@ -156,7 +156,7 @@
                                 <a class="greenFontsLink edit" href="javascript:;">编辑</a>
                                 <a class="greenFontsLink save" href="javascript:;" style="display: none;">保存</a>
                                 <a class="greenFontsLink delVoucher" href="javascript:;">删除</a>
-                                <a class="greenFontsLink" href="javascript:;">查看</a>
+                                <a class="greenFontsLink viewVoucherInfo" href="javascript:;">查看</a>
                             </td>
                         </tr>
                     </tbody>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="commonButton red-fe6869Button">确认</button>
+                    <button type="button" class="commonButton red-fe6869Button sureEffect">确认</button>
                     <button type="button" class="commonButton blue-45c8dcButton">取消</button>
                 </div>
             </div>
@@ -284,7 +284,7 @@
         </div>
     </div>
 
-    <!--   代金券模板 弹窗   -->
+    <!--   新增代金券模板 弹窗   -->
     <div class="modal fade" data-backdrop="static" data-keyboard="false" id="voucherWindow">
         <div class="modal-dialog" style="width:630px;height:480px;">
             <div class="modal-content">
@@ -358,6 +358,59 @@
         </div>
     </div>
 
+    <!--   查看代金券内容 弹窗   -->
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="voucherInfoWindow">
+        <div class="modal-dialog" style="width:560px;height:350px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">查看代金券</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="popupContainer">
+                        <table class="newVoucherTable">
+                            <colgroup>
+                                <col width="90">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>券名：</th>
+                                    <td>券名券名券名券名</td>
+                                </tr>
+                                <tr>
+                                    <th>面额：</th>
+                                    <td>100元</td>
+                                </tr>
+                                <tr>
+                                    <th>使用条件：</th>
+                                    <td>2000元</td>
+                                </tr>
+                                <tr>
+                                    <th>有效期：</th>
+                                    <td>2015-04-01 至 2015-05-31</td>
+                                </tr>
+                                <tr>
+                                    <th>适用说明：</th>
+                                    <td>全场通用</td>
+                                </tr>
+                                <tr>
+                                    <th class="verticalAlign">产品范围：</th>
+                                    <td>所有产品/0165461,16546513,9876514651,0165461,16546513,9876514651,0165461,16546513,9876514651</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 <script type="text/javascript">
     $(function(){
 
@@ -422,7 +475,7 @@
 
         //  添加代金券
 
-        $("body").on("click", ".addVoucherBtn", function(){
+        $("body").on("click", ".addVoucherBtn:not(.disabled)", function(){
             $("#voucherWindow").modal("show");
         });
 
@@ -432,6 +485,34 @@
 
         $("body").on("click", ".addInputProduct", function(){
             $(".productRange").show();
+        });
+
+        //  确认生效操作, 内容变为不可编辑状态
+        $("body").on("click", ".sureEffect", function(){
+
+            //  文本输入框不可编辑
+            $(".activityTable input[type='text'], .activityTable textarea").attr("readonly", "readonly");
+
+            //  日期不可操作
+            $(".activityTable").find("input.datepicker").attr("disabled", "disabled");
+
+            //  显示用户范围
+            if ($(".selectUserBlock").is(":visible")) {
+                $(".userRangeCont").html($(".selectUserBlock label.active").find(".labelFonts").html());
+            } else if ($(".inputUserBlock").is(":visible")) {
+                $(".userRangeCont").html($(".inputUserTextarea"));
+            }
+
+            //  添加代金券操作
+            $(".addVoucherBtn").removeClass("disabled");
+            $(".voucherInfoTable").show();
+
+            $("#effectWindow").modal("hide");
+        });
+
+        //  查看代金券内容
+        $("body").on("click", ".viewVoucherInfo", function(){
+            $("#voucherInfoWindow").modal("show");
         });
         
     });

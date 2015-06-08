@@ -740,13 +740,15 @@ textarea {
     margin-top: 0;
 }
 
-.inputUserBlock textarea {
+textarea.inputUserTextarea {
     width: 670px;
     height: 150px;
 }
 
-.inputUserBlock textarea[readonly='readonly'] {
+.activityTable input[readonly='readonly'],
+.activityTable textarea[readonly='readonly'] {
     background-color: #e1e1e1;
+    border: 1px solid #dadada!important;
 }
 
 .inputUserBlock .saveBtn,
@@ -810,6 +812,8 @@ textarea {
 
 .newVoucherTable td {
     padding: 8px 0;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .newVoucherTable label.radio {
