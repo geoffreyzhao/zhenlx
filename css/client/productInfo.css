@@ -444,7 +444,10 @@
     vertical-align: middle;
 }
 .journeyRecommendList .daysImg{
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+}
+.daysImgDescCont {
+    margin-bottom: 25px;
 }
 .journeyRecommendList .daysImg img{
     display: inline-block;
@@ -454,10 +457,10 @@
     border-radius: 5px;
 }
 .journeyRecommendList .daysImg img:first-child{
-    /*margin-right: 15px;*/
-}
-.journeyRecommendList .daysImg img:nth-child(odd) {
     margin-right: 10px;
+}
+.daysInfo {
+    margin-bottom: 15px;
 }
 .daysInfo li{
     padding-bottom: 10px;
@@ -937,6 +940,7 @@
     background: url("../../images/client/productInfoIcon.png") no-repeat;
     vertical-align: middle;
     margin-right: 10px;
+    cursor: pointer;
 }
 .headIconContent .headLeftArrowIcon{
     width: 32px;
