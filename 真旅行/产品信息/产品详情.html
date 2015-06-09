@@ -30,7 +30,12 @@
 <body data-spy="scroll" data-target="#navbar" data-offset="75">
 	<header>
 		<div class="head clearfix">
-			<div class="logo"></div>
+			<!--<div class="logo"></div>-->
+            <div class="headIconContent clearfix">
+                <a href="javascript:void(0);" class="commonIcon headLeftArrowIcon pull-left"></a>
+                <span class="commonIcon headMiddleIcon pull-left"></span>
+                <a href="javascript:void(0);" class="commonIcon headRightArrowIcon pull-right"></a>
+            </div>
 		</div>
 	</header>
 
@@ -211,7 +216,7 @@
             <div class="productFixedContent">
                 <div id="navbar" class="fixedList-container">
                     <ul class="nav fixedList clearfix">
-                        <li class="active">
+                        <li>
                             <a href="#airInfo">航班信息</a>
                         </li>
                         <li>
@@ -263,7 +268,7 @@
                             </div>
                         </li>
                         <li class="shippingSpaceInfo">
-                            <div class="lightBlue18Fonts">K 6999 / 头等舱 / 波音787</div>
+                            <div class="lightBlue16Fonts">K 6999 / 头等舱 / 波音787</div>
                             <div class="airLogo">
                                 <span class="pubFlights_MU verticalAlignMiddle"></span>
                                 <span class="color9f9f9fFonts">吴哥航空</span>
@@ -295,7 +300,7 @@
                             </div>
                         </li>
                         <li class="shippingSpaceInfo">
-                            <div class="lightBlue18Fonts">K 6999 / 头等舱 / 波音787</div>
+                            <div class="lightBlue16Fonts">K 6999 / 头等舱 / 波音787</div>
                             <div class="airLogo">
                                 <span class="pubFlights_MU verticalAlignMiddle"></span>
                                 <span class="color9f9f9fFonts">吴哥航空</span>
@@ -327,7 +332,7 @@
                             </div>
                         </li>
                         <li class="shippingSpaceInfo">
-                            <div class="lightBlue18Fonts">K 6999 / 头等舱 / 波音787</div>
+                            <div class="lightBlue16Fonts">K 6999 / 头等舱 / 波音787</div>
                             <div class="airLogo">
                                 <span class="pubFlights_MU verticalAlignMiddle"></span>
                                 <span class="color9f9f9fFonts">吴哥航空</span>
@@ -359,7 +364,7 @@
                             </div>
                         </li>
                         <li class="shippingSpaceInfo">
-                            <div class="lightBlue18Fonts">K 6999 / 头等舱 / 波音787</div>
+                            <div class="lightBlue16Fonts">K 6999 / 头等舱 / 波音787</div>
                             <div class="airLogo">
                                 <span class="pubFlights_MU verticalAlignMiddle"></span>
                                 <span class="color9f9f9fFonts">吴哥航空</span>
@@ -373,7 +378,17 @@
                     <div class="commonTitle noBorder"><i class="commonIcon hotelIcon"></i>酒店信息</div>
                     <div class="hotelInfoModel clearfix">
                         <div class="leftHotelImg">
-                            <h3 class="hotelTittle">吴哥奇迹温泉度假酒店  Angkor Miracle Resort & Spa</h3>
+                            <div class="hotelTitleModel clearfix">
+                                <h3 class="hotelTittle" title="吴哥奇迹温泉度假酒店  Angkor Miracle Resort & Spa">吴哥奇迹温泉度假酒店  Angkor Miracle Resort & Spa</h3>
+                                <div class="nightsContent">
+                                    <span class="commonIcon moonIcon"></span>
+                                    <span>
+                                        第
+                                        <span class="blueFonts">1<span class="fontSize5">●</span>3<span class="fontSize5">●</span>5 </span>
+                                        晚
+                                    </span>
+                                </div>
+                            </div>
                             <div class="hotelBigImg">
                                 <img src="../../images/client/detailHotelImg01.jpg">
                             </div>
@@ -396,7 +411,7 @@
                             </ul>
                         </div>
                         <div class="rightHotelTabs">
-                            <div class="common-tab-bar hotel-info-tab" style="width:355px;">
+                            <!--<div class="common-tab-bar hotel-info-tab" style="width:355px;">
                                 <div class="tab-top"></div>
                                 <ul class="common-tab clearfix">
                                     <li class="placement"></li>
@@ -408,7 +423,12 @@
                                     <li class="placement"></li>
                                     <li class="rest"></li>
                                 </ul>
-                            </div>
+                            </div>-->
+                            <ul class="hotel-info-tab clearfix">
+                                <li class="current">基本信息</li>
+                                <li>酒店设施</li>
+                                <li>入住须知</li>
+                            </ul>
                             <div class="tab-cont-block">
                                 <div class="tab-cont listInfo">
                                     <table class="hotelTabList">
@@ -1883,10 +1903,12 @@
 
         // $(".tab-cont").hide();
         $(".tab-cont").eq(0).show();
-        $(".hotel-info-tab .tab-item").each(function(index){
+        $(".hotel-info-tab li").each(function(index){
             $(this).click(function(){
                 $(".tab-cont").hide();
                 $(".tab-cont").eq(index).show();
+                $(".hotel-info-tab li").removeClass("current");
+                $(this).addClass("current");
             });
         });
 

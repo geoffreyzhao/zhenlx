@@ -196,7 +196,7 @@
     line-height: 60px;
     text-align: center;
     font-size: 17px;
-    color: #11b9b7;
+    color: #616161;
     border-left: 1px solid #d6efef;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -680,10 +680,16 @@
     text-align: center;
     line-height: 25px;
 }
-.airInfoList .lightBlue18Fonts{
-    font-size: 18px;
+.airInfoList .lightBlue18Fonts,
+.airInfoList .lightBlue16Fonts{
     color: #11b9b7;
     margin-bottom: 7px;
+}
+.airInfoList .lightBlue18Fonts{
+    font-size: 18px;
+}
+.airInfoList .lightBlue16Fonts{
+    font-size: 16px;
 }
 .leftGoBack .goBackCommonStyle{
     display: inline-block;
@@ -698,7 +704,7 @@
     -moz-border-radius: 4px;
 }
 .leftGoBack .goBackCommonStyle.greenBg{
-    background-color: #0fd730;
+    background-color: #1adc87;
 }
 .leftGoBack .goBackCommonStyle.blueBg{
     background-color: #11b9b7;
@@ -719,6 +725,7 @@
     margin-bottom: 5px;
 }
 .timePlaceFonts .placeFonts{
+    font-weight: normal;
     color: #11b9b7;
 }
 .timePlaceFonts .timeFonts{
@@ -754,13 +761,41 @@
     float: left;
     width: 760px;
 }
-.leftHotelImg .hotelTittle{
-    font-size: 20px;
+.leftHotelImg .hotelTitleModel{
+    position: relative;
+    border-top: 1px solid #dcf5f4;
     color: #616161;
-    padding: 15px 0 0;
+}
+.leftHotelImg .hotelTittle{
+    width: 80%;
+    font-size: 20px;
+    padding: 10px 0 0;
     margin-top: 10px;
     margin-bottom: 15px;
-    border-top: 1px solid #dcf5f4;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.hotelTitleModel .nightsContent{
+    font-size: 15px;
+    padding: 5px 0 5px 10px;
+    border-left: 1px solid #e5e5e5;
+    position: absolute;
+    top: 15px;
+    right: 2%;
+}
+.nightsContent .fontSize5{
+    display: inline-block;
+    font-size: 5px;
+    -webkit-transform: scale(0.3);
+    margin: 0 3px;
+    vertical-align: middle;
+}
+.nightsContent .moonIcon{
+    width: 16px;
+    height: 16px;
+    background-position: -82px -77px;
+    margin: 0 5px;
 }
 .leftHotelImg .hotelBigImg img{
     width: 758px;
@@ -790,6 +825,31 @@
 .hotelInfoModel .rightHotelTabs{
     float: right;
     width: 360px;
+}
+.rightHotelTabs .hotel-info-tab{
+    margin: 0;
+    border-bottom: 1px solid #d4efee;
+}
+.hotel-info-tab li{
+    float: left;
+    width: 120px;
+    text-align: center;
+    height: 57px;
+    line-height: 57px;
+    color: #616161;
+    background-color: #edf5f5;
+    border-left: 1px solid #d4efee;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    cursor: pointer;
+}
+.hotel-info-tab li:first-child{
+    border-left: none;
+}
+.hotel-info-tab li.current{
+    color: #fff;
+    background-color: #11b9b7;
 }
 .rightHotelTabs .tab-cont {
     background-color: #f9f9f9;
@@ -867,6 +927,38 @@
 .hotel-notes .hotelTabList .verticalAlignTop{
     vertical-align: top;
     padding-top: 0;
+}
+
+.headIconContent{
+    padding: 10px 0;
+}
+.headIconContent .commonIcon{
+    display: inline-block;
+    background: url("../../images/client/productInfoIcon.png") no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.headIconContent .headLeftArrowIcon{
+    width: 32px;
+    height: 32px;
+    background-position: 0 -210px;
+}
+.headIconContent .headLeftArrowIcon:hover{
+    background-position: -78px -210px;
+}
+.headIconContent .headMiddleIcon{
+    width: 40px;
+    height: 43px;
+    background-position: -150px -210px;
+    margin: -5px 0 0 500px;
+}
+.headIconContent .headRightArrowIcon{
+    width: 32px;
+    height: 32px;
+    background-position: -40px -210px;
+}
+.headIconContent .headRightArrowIcon:hover{
+    background-position: -115px -210px;
 }
 
 /*  tab 切换样式 S */
