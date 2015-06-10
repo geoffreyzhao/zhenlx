@@ -198,9 +198,9 @@
     font-size: 17px;
     color: #616161;
     border-left: 1px solid #d6efef;
-    border-radius: 3px;
+    /*border-radius: 3px;
     -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+    -moz-border-radius: 3px;*/
     padding: 0;
 }
 .fixedList li:first-child a{
@@ -1393,9 +1393,9 @@ ul.common-tab > li.rest {
 
 .destination-icon {
     display: inline-block;
-    background: url(../../images/client/productInfoIcon.png) no-repeat -118px 0;
+    background: url(../../images/client/dest-icon.png) no-repeat 0 0;
     width: 21px;
-    height: 21px;
+    height: 23px;
     vertical-align: middle;
 }
 

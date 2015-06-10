@@ -137,7 +137,9 @@
 }
 
 .rewardPlan {
-    font-size: 14px;
+    color: #999;
+    margin: 25px 0 0 0;
+    font-size: 12px;
 }
 
 .rewardPlan em {

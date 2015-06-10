@@ -194,7 +194,7 @@
                             <span class="buy-icon"></span>
                             <span class="title">价格:</span>
                             <span class="price-text">￥99999<em>起</em></span>
-                            <span class="price-tooltip" title="底价说明底价说明底价说明底价说明底价说明底价说明底价说明底价说明底价说明">底价说明</span>
+                            <span class="price-tooltip" title="起价说明起价说明起价说明起价说明起价说明起价说明起价说明起价说明起价说明">起价说明</span>
                         </div>
                         <div class="discard-price">
                             <span class="title">市场价:</span>
@@ -1744,14 +1744,23 @@
 
         $(".calTable .tripCover").click(function(){
 
-            $(this).closest(".calTable").find(".tripCover").removeClass("current");
-            $(this).addClass("current");
-
-            $(this).closest(".calTable").find(".popover-trip-container").hide();
+            if ($(this).hasClass("current")) {
+                $(this).removeClass("current");
+            } else {
+                $(this).closest(".calTable").find(".tripCover").removeClass("current");
+                $(this).addClass("current");
+            }
 
             var $popover = $(this).closest("td").find(".popover-trip-container"),
                 trIndex = $(this).closest("tr").index(),
                 tdIndex = $(this).closest("td").index();
+
+            if ($popover.is(":visible")) {
+                $popover.hide();
+                return;
+            } else {
+                $(this).closest(".calTable").find(".popover-trip-container").hide();
+            }
 
             var tdHeight = $(this).closest("td").outerHeight(),
                 popoverHeight = $(this).closest("td").find(".popover-trip-container").outerHeight();
@@ -1761,27 +1770,30 @@
                     $popover.css({
                         left: 0,
                         top: tdHeight + "px"
-                    }).show();
+                    }).toggle();
                 } else {  //  向左显示
                     $popover.css({
                         right: 0,
                         top: tdHeight + "px"
-                    }).show();
+                    }).toggle();
                 }   
             } else {  //  其他向上显示
                 if (tdIndex <= 3) {  //  向右显示
                     $popover.css({
                         left: 0,
                         top: -popoverHeight-1 + "px"
-                    }).show();
+                    }).toggle();
                 } else {  //  向左显示
                     $popover.css({
                         right: 0,
                         top: -popoverHeight-1 + "px"
-                    }).show();
+                    }).toggle();
                 }   
             }                    
         });
+        
+        //  默认触发第一天
+        $(".calTable .tripCover").eq(0).trigger("click");
     }
 
     function parseNumToString(num) {
