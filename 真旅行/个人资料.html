@@ -297,6 +297,7 @@
                             <div class="sec-tab">
                                 <span class="uploadBtn current">上传头像</span>
                                 <span class="pickupBtn">选择头像</span>
+                                <div class="slidline"></div>
                             </div>
 
                             <!--  上传头像  start  -->
@@ -304,13 +305,16 @@
                                 <div class="upload-block clearfix">
                                     <div class="upload-tip-text">( 请使用小于2M的 png,jpg,gif 格式图片 )</div>
                                     <div class="upload-btn">
+                                        <img src="" alt="">
+                                        <span class="imgcover">
                                         <input type="file" />
+                                    </span>
                                     </div>
-                                    <div class="line"></div>
+                                    <!-- <div class="line"></div>
                                     <div class="review-avatar">
                                         <div class="title">预览</div>
                                         <img src="../images/client/avatar-01.jpg" alt="">
-                                    </div>
+                                    </div> -->
                                 </div>                                
                             </section>
                             <!--  上传头像  end  -->
@@ -472,6 +476,12 @@
             $(".sec-tab span").removeClass("current");
             $(this).addClass("current");
 
+            if($(this).index()==0){
+                    $(".sec-tab .slidline").animate({'left':'25'},400);
+                }else{
+                    $(".sec-tab .slidline").animate({'left':'138'},400);
+            }
+
             if ($(this).hasClass("uploadBtn")) {
                 $(".pickup-default-avatar").hide();
                 $(".upload-avatar").show();
@@ -479,9 +489,16 @@
                 $(".upload-avatar").hide();
                 $(".pickup-default-avatar").show();
             }
-
-            
         });
+
+        $(".upload-btn").hover(function(){
+                if($(".upload-btn img").attr("src") != ""){
+                    $(".upload-btn .imgcover").addClass("reupload-imgcover");
+                } else {
+                    $(".upload-btn .imgcover").removeClass("reupload-imgcover");
+                }
+                $(".upload-btn .imgcover").toggle();
+            });
         
     });
 </script>

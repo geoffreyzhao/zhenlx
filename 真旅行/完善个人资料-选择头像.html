@@ -50,7 +50,9 @@
 					<div class="cont-block">
 						<div class="sec-tab">
 							<span class="uploadBtn current">上传头像</span>
+							<em class="decoraline"></em>
 							<span class="pickupBtn">选择头像</span>
+							<div class="slidline"></div>
 						</div>
 
 						<!--  上传头像  start  -->
@@ -59,11 +61,11 @@
 								<div class="upload-btn">
 									<input type="file" />
 								</div>
-								<div class="line"></div>
+								<!-- <div class="line"></div>
 								<div class="review-avatar">
 									<div class="title">预览</div>
 									<img src="../images/client/review-avatar-blank.jpg" alt="">
-								</div>
+								</div> -->
 							</div>
 							<div class="upload-tip-text">( 请使用小于2M的 png,jpg,gif 格式图片 )</div>
 						</section>
@@ -130,6 +132,12 @@
 			$(".sec-tab span").click(function(){
 				$(".sec-tab span").removeClass("current");
 				$(this).addClass("current");
+
+				if($(this).index()==0){
+					$(".sec-tab .slidline").animate({'margin-left':'-108'},500);
+				}else{
+					$(".sec-tab .slidline").animate({'margin-left':'7'},500);
+				}
 
 				if ($(this).hasClass("uploadBtn")) {
 					$(".pickup-default-avatar").hide();

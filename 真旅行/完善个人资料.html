@@ -102,20 +102,25 @@
 					<div class="cont-block">
 						<div class="sec-tab">
 							<span class="uploadBtn current">上传头像</span>
+							<em class="decoraline"></em>
 							<span class="pickupBtn">选择头像</span>
+							<div class="slidline"></div>
 						</div>
 
 						<!--  上传头像  start  -->
 						<section class="upload-avatar">
 							<div class="upload-block clearfix">								
 								<div class="upload-btn">
-									<input type="file" />
+									<img src="" alt="">
+									<span class="imgcover">
+										<input type="file" />
+									</span>
 								</div>
-								<div class="line"></div>
-								<div class="review-avatar">
+								<!-- <div class="line"></div> -->
+								<!-- <div class="review-avatar">
 									<div class="title">预览</div>
 									<img src="../images/client/review-avatar-blank.jpg" alt="">
-								</div>
+								</div> -->
 							</div>
 							<div class="upload-tip-text">( 请使用小于2M的 png,jpg,gif 格式图片 )</div>
 						</section>
@@ -183,6 +188,12 @@
 				$(".sec-tab span").removeClass("current");
 				$(this).addClass("current");
 
+				if($(this).index()==0){
+					$(".sec-tab .slidline").animate({'margin-left':'-108'},400);
+				}else{
+					$(".sec-tab .slidline").animate({'margin-left':'7'},400);
+				}
+
 				if ($(this).hasClass("uploadBtn")) {
 					$(".pickup-default-avatar").hide();
 					$(".upload-avatar").show();
@@ -202,6 +213,15 @@
 				$(".main-box.info").hide();
 				setWrapperHeight();
     			setMainBoxPosition();
+			});
+
+			$(".upload-btn").hover(function(){
+				if($(".upload-btn img").attr("src") != ""){
+					$(".upload-btn .imgcover").addClass("reupload-imgcover");
+				} else {
+					$(".upload-btn .imgcover").removeClass("reupload-imgcover");
+				}
+				$(".upload-btn .imgcover").toggle();
 			});
 		});
 	</script>
