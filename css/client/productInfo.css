@@ -365,15 +365,24 @@
 .journeyRecommendList .wrapperList{
     margin: 30px 0;
 }
+.wrapperList.overviewBlock {
+    border-bottom: none;
+}
 .wrapperList .twoRow.overviewLeft{
-    width: 57%;
-    padding-right: 30px;    
+    float: none;
+    width: 100%;
+    padding: 0 0 25px 0;
+    border-right: none;
+    border-bottom: 1px solid #cff1f1;
+}
+.overviewLeft .listTitle {
+    margin-bottom: 25px!important;
 }
 .wrapperList .twoRow.overviewRight{
-    width: 42%;
-    padding-left: 30px;
-    color: #616161;
     font-size: 14px;
+    width: 100%;
+    float: none;
+    padding: 25px 0 0 0;
 }
 .overviewRight .rightIcon{
     margin-bottom: 10px;
@@ -1557,6 +1566,10 @@ ul.common-tab > li.rest {
     margin-top: 28px;
 }
 
+.tipsTopBlock  {
+    margin-bottom: 18px;
+}
+
 .tipsTopBlock .title {
     float: left;
     font-size: 20px;
@@ -1569,7 +1582,8 @@ ul.common-tab > li.rest {
 }
 
 .tipsTopBlock .tripTipsIconList {
-    float: right;
+    float: left;
+    margin-left: 20px;
 }
 
 .tripTipsIconList > li {
@@ -1951,8 +1965,8 @@ ul.common-tab > li.rest {
     bottom: 35px;
 }
 .content-above-image a:hover {
-    background-color: rgba(229,199,86,0.6);    
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99E5C756,endColorstr=#99E5C756);/*IE-8*/
+    background-color: rgba(255,255,255,0.2);    
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33FFFFFF,endColorstr=#33FFFFFF);/*IE-8*/
 }
 .parallax-image-wrapper {
     z-index: -5;
