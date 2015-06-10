@@ -91,7 +91,7 @@
     background-color: #f3fdfc;
 }
 .dataTab .getVerificationCode{
-    font-size: 12px;
+    /*font-size: 12px;*/
 }
 .dataTab .editModelInfo .noPadding{
     /*padding: 10px 0;
@@ -107,6 +107,14 @@
     padding: 10px 0;
     border-bottom: 1px solid #dfe9e8;
     border-top: 1px solid #dfe9e8;
+}
+.cancelOper {
+    margin-left: 20px;
+    color: #818181;
+}
+.cancelOper:hover,
+.cancelOper:focus {
+    color: #818181;
 }
 /*  个人资料 end  */
 

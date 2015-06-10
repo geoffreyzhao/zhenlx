@@ -162,7 +162,7 @@
                                                 <th>验证码:</th>
                                                 <td>
                                                     <div class="componentInput verificationCode">
-                                                        <input type="text" placeholder="请输入验证码" style="width: 108px;">
+                                                        <input type="text" placeholder="请输入验证码" style="width: 100px;">
                                                         <span class="getVerificationCode">获取短信验证码</span>
                                                     </div>
                                                 </td>
@@ -171,7 +171,7 @@
                                                 <th></th>
                                                 <td>
                                                     <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
-                                                    <a href="javascript:void(0);" class="commonBtn grayBtn">取消</a>
+                                                    <a href="javascript:void(0);" class="cancelOper">取消</a>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -186,8 +186,9 @@
                                         <span class="commonIcon editIcon"></span>
                                     </td>
                                 </tr>
-                                <tr class="editModelInfo editPw" style="display: none;">
+                                <tr class="editModelInfo editPw">
                                     <td colspan="2" class="noPadding">
+                                    <div class="editModelTabContainer" style="display: none;">
                                         <table class="editModelTab">
                                             <colgroup>
                                                 <col width="100">
@@ -221,11 +222,12 @@
                                                 <th></th>
                                                 <td>
                                                     <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
-                                                    <a href="javascript:void(0);" class="commonBtn grayBtn">取消</a>
+                                                    <a href="javascript:void(0);" class="cancelOper">取消</a>
                                                 </td>
                                             </tr>
                                             </tbody>
                                         </table>
+                                    </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -423,25 +425,25 @@
                 $(window).trigger("resize");
             });
         });
-        $(".editPhoneNumber .grayBtn").click(function(){
+        $(".editPhoneNumber .cancelOper").click(function(){
             $(this).parents(".editPhoneNumber").find(".editModelTabContainer").slideUp(function(){
                 $(window).trigger("resize");
+                $(this).parents(".editPhoneNumber").siblings(".phoneNumberContent").find(".editIcon").show();
             });
-            $(this).parents(".editPhoneNumber").siblings(".phoneNumberContent").find(".editIcon").show();
         });
         
         //编辑密码
         $(".PWContent .editIcon").click(function(){
             $(this).hide();
-            $(this).parents(".PWContent").siblings(".editPw").show();
-            setWrapperHeight();
-            setMainBoxPosition();
+            $(this).parents(".PWContent").siblings(".editPw").find(".editModelTabContainer").slideDown(function(){
+                $(window).trigger("resize");
+            });
         });
-        $(".editPw .grayBtn").click(function(){
-            $(this).parents(".editPw").hide();
-            $(this).parents(".editPw").siblings(".PWContent").find(".editIcon").show();
-            setWrapperHeight();
-            setMainBoxPosition();
+        $(".editPw .cancelOper").click(function(){
+            $(this).parents(".editPw").find(".editModelTabContainer").slideUp(function(){
+                $(window).trigger("resize");
+                $(this).parents(".editPw").siblings(".PWContent").find(".editIcon").show();
+            });
         });
 
         //编辑真实姓名

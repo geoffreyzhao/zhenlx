@@ -11,8 +11,8 @@ a:focus{outline: none;}
 input[type="text"],
 input[type="password"]{
     border: 1px solid #dadada;
-    height: 43px;
-    line-height: 43px;
+    height: 40px;
+    line-height: 40px;
     padding-left: 3px;
 }
 input[type="text"]:focus,
@@ -125,7 +125,7 @@ input[type="text"].errorStyle:focus{
 .componentInput input[type="password"]:focus,
 .componentInput input[type="text"]:focus{
     border: none !important;
-    background: none;
+    background: #fff;
     margin-top: -3px;
     color: #484848;
 }
@@ -161,7 +161,7 @@ input[type="text"].errorStyle:focus{
     background-color: #1be1df;
     color: #fff;
     height: 35px;
-    line-height: 36px;
+    line-height: 38px;
     text-align: center;
     padding: 0 10px;
     margin-right: 3px;
@@ -169,6 +169,7 @@ input[type="text"].errorStyle:focus{
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     cursor: pointer;
+    font-size: 13px;
 }
 .componentInput .getVerificationCode.retry{
     background-color: #baf6f5;

@@ -98,16 +98,27 @@
 .order-titleBlock,
 .commonOrderModel{
     border-bottom:1px dashed #c2dadf;
-    padding:10px 0 10px 70px;
     position: relative;
+    padding: 10px 0 10px 70px;
+}
+.order-titleBlock {
+    padding: 2px 0;
 }
 .order-titleBlock .pro-basic-info {
-    float: left;
 }
 .order-titleBlock .person-count-block {
-    float: right;
-    margin-top: 12px;
-    margin-right: 50px;
+}
+.order-title-table td {
+    padding: 10px 0;
+}
+.order-title-table td.main-cont {
+    padding: 10px;
+}
+.order-title-table h3 {
+    line-height: 32px;
+}
+.order-title-table .rightBorder {
+    border-right: 1px solid #c2dadf;
 }
 .person-count-block .adult-count {
     float: left;
@@ -126,20 +137,25 @@
     color: #9f9f9f;
 }
 .order-titleBlock .back-lineArrow {
+    display: block;
+    text-align: center;
+}
+.order-titleBlock .back-lineArrow i {
     background: url("../../images/client/order-spirit.png") no-repeat 0 -112px;
     display: inline-block;
     width: 19px;
     height: 16px;
     vertical-align: middle;
-    margin-left: 10px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
+    margin-bottom: 5px;
+}
+.order-titleBlock .back-lineArrow span {
+    color: #11b9b7;
+    display: block;
 }
 .order-titleBlock h3 {
     font-size: 22px;
     color: #484848;
-    margin:10px 0 15px 0;
+    margin:10px 0;
 }
 .order-titleBlock h3 i {
     background: url("../../images/client/order-spirit.png") no-repeat 0 -112px;
@@ -256,7 +272,6 @@
 }
 .order-conBlockTab .timeFonts {
     font-size: 30px;
-    font-weight: bold;
     color: #484848;
 }
 .order-conBlockTab .planeIcon, .order-conBlockTab .clockIcon, .order-conBlockTab .houseIcon {
