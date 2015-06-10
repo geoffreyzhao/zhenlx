@@ -99,10 +99,10 @@
 .nickname .input-tip-pic {
     position: absolute;
     display: inline-block;
-    width: 144px;
-    height: 72px;
-    background: url(../../images/client/after-reg.png) no-repeat -56px 0;
-    right: -150px;
+    width: 163px;
+    height: 74px;
+    background: url(../../images/client/change-nickname-tip.png) no-repeat;
+    right: -170px;
     top: -47px;
 }
 .nickname .commonIcon {

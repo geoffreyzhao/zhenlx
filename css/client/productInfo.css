@@ -867,6 +867,19 @@
     background-color: #f9f9f9;
     display: none;
 }
+.rightHotelTabs .tab-cont::-webkit-scrollbar-track {
+    border-radius: 10px;
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);*/
+}
+.rightHotelTabs .tab-cont::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.rightHotelTabs .tab-cont::-webkit-scrollbar-thumb {
+    background-color: #e8e8e8;
+    border-color: #e8e8e8;
+    border-radius: 10px;
+}
 .rightHotelTabs .listInfo,
 .rightHotelTabs .tab-cont {
     height: 575px;
