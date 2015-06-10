@@ -265,8 +265,14 @@
     text-align: center;
 }
 
+.upload-image-item a {
+    display: block;
+}
+
 .upload-image-list > li img {
     margin-bottom: 10px;
+    width: 95px;
+    height: 95px;
 }
 
 .upload-image-list > li .image-name {
