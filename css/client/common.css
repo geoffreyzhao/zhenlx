@@ -126,7 +126,7 @@ input[type="text"].errorStyle:focus{
 .componentInput input[type="text"]:focus{
     border: none !important;
     background: #fff;
-    margin-top: -3px;
+    margin-top: -4px;
     color: #484848;
 }
 .forgetPW .forgetPWFonts,
