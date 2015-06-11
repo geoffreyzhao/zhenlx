@@ -1,0 +1,287 @@
+@charset "utf-8";
+/* 评价管理-评价列表 -start */
+.whiteBg{
+    background-color: #fff;
+    padding: 10px;
+    font-size: 16px;
+}
+.whiteBg .searchList{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f1f1f1;
+}
+.searchList li{
+    float: left;
+}
+.searchList .searchTab{
+    color: #666666;
+}
+.searchList .searchTab th{
+    text-align: right;
+    padding: 5px 3px;
+    font-weight: normal;
+}
+.searchList .searchTab td{
+    padding: 5px 3px;
+}
+.searchList .searchTab input[type="text"]{
+    width: 200px;
+}
+.searchTab .lightBlueBtn{
+    background-color: #45c8dc;
+    display: inline-block;
+    min-width: 80px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #fff;
+}
+.searchTab .lightBlueBtn:hover{
+    background-color: #2ebad0;
+    color: #fff;
+}
+.searchTab .searchIcon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../../images/commonIcon.png") no-repeat -15px -19px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.operationBtn{
+    margin-bottom: 10px;
+}
+.operationBtn a{
+    font-size: 14px;
+    margin-right: 10px;
+    color: #3287d6;
+    display: inline-block;
+    min-width: 50px;
+    padding: 4px;
+    text-align: center;
+}
+.operationBtn a:hover,
+.operationBtn a.active{
+    background-color: #e5f6fe;
+    outline: none;
+}
+.operationBtn a:focus{
+    outline: none;
+}
+.commonTab{
+    width: 100%;
+}
+.commonTab .sortArrow{
+    display: inline-block;
+    width: 9px;
+    height: 13px;
+    vertical-align: middle;
+    margin-left: 5px;
+    background: url("../../images/commonIcon.png") no-repeat;
+}
+.sortArrow.upGray{
+    background-position: -38px 0;
+}
+.sortArrow.downGray{
+    background-position: -52px 0;
+}
+.sortArrow.allGray{
+    background-position: -65px 0;
+}
+.sortArrow.allOrange{
+    background-position: -78px 0;
+}
+.commonTab td,
+.commonTab th{
+    border: 1px solid #eaeaea;
+    padding: 10px;
+}
+.commonTab thead{
+    background-color: #f5f5f5;
+}
+.commonTab tbody tr:hover{
+    background-color: #eefaff;
+}
+.commonTab tbody a{
+    margin-right: 5px;
+}
+.commonTab .greenFontsLink{
+    color: #3db99a;
+}
+.commonTab .greenFontsLink:hover{
+    color: #3db99a;
+    text-decoration: underline;
+}
+.commonTab .grayFontsLink{
+    color: #666666;
+}
+.commonTab .grayFontsLink:hover{
+    color: #666666;
+    text-decoration: underline;
+}
+.commonTab .grayFontsNoLink{
+    cursor: default;
+    color: #b0b0b0;
+}
+.commonTab .grayFontsNoLink:hover{
+    color: #b0b0b0;
+    text-decoration: none;
+}
+/* end */
+
+/* 评价管理-评价详情-start */
+.main-header .headSecondBlank{
+    width: 100%;
+    height: 58px;
+    padding:10px;
+}
+.judge-container{
+    width:100%;
+    padding:0px 10px;
+}
+.contentBg{
+    min-height:648px;
+    background-color:#ffffff;
+    padding:18px;
+    font-size: 16px;
+    border:1px #e5ecf0 solid;
+}
+.backBtn{
+    width:93px;
+    height:38px;
+    display: inline-block;
+    text-align:center;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 32px;
+    color:#226388;
+    cursor: pointer;
+    background-color:#ffffff;
+    border-radius: 5px;
+    border:2px #c8e6f4 solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.backBtn:hover{
+    border:2px #b1d7e9 solid;
+}
+.head-btn{
+    float: right;
+    display: inline-block;
+}
+.head-btn .commonJudgeBtn, .modal-footer .commonJudgeBtn{
+    width:100px;
+    height:38px;
+    display: inline-block;
+    text-align:center;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height:38px;
+    color:#ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left:10px;
+}
+.redBtn, .confirmBtn{
+    background-color:#fe6869;
+}
+.redBtn:hover, .confirmBtn:hover{
+    background-color:#f65253;
+}
+.greyBtn{
+    background-color:#b6d7e7;
+}
+.greyBtn:hover{
+    background-color:#a5c7d8;
+}
+.content-box{
+    width:960px;
+    color:#666666;
+}
+.cancelBtn{
+    background-color:#45c8dc;
+}
+.cancelBtn:hover{
+    background-color:#41bbce;
+}
+.content-row{
+    height:49px;
+    padding:5px 15px;
+    font-size: 16px;
+    line-height:18px;
+}
+.content-row span{
+    display: inline-block;
+    margin:0px 12px;
+}
+.row-left{
+    padding-top:10px;
+    margin:0 12px;
+    float: left;
+    display: inline-block;
+}
+.txt-type{
+    font-size: 14px;
+    line-height:28px;
+    overflow: hidden;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+.row-right{
+    margin:0 12px;
+    float: right;
+    display: inline-block;
+}
+.row-title{
+    width:80px;
+}
+.btnSize{
+    width:85px;
+    height:39px;
+    font-size:16px;
+    line-height:39px;
+    display: inline-block;
+    text-align:center;
+    vertical-align: middle;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.successBtn{
+    color:#24b48f;
+    background-color:#dcf8f1;
+}
+.failBtn{
+    color:#f65253;
+    background-color:#fff3f3;
+}
+.waitBtn{
+    color:#00bedc;
+    background-color:#e4fbff;
+}
+.yellowStar4{
+    width:83px;
+    height:13px;
+    display:inline-block;
+    vertical-align: middle;
+    background: url("../../images/client/starLevelIcon.png") no-repeat 0 0px;
+}
+.greyStar1{
+    width:14px;
+    height:13px;
+    display:inline-block;
+    vertical-align: middle;
+    background: url("../../images/client/starLevelIcon.png") no-repeat 0 -18px;
+}
+.judge-icon{
+    width:41px;
+    height:41px;
+    display: inline-block;
+    background:url("../../images/popupIcon.png") no-repeat 0 0px;
+    margin:5px 18px;
+    vertical-align: middle;
+}
+
+/* end */

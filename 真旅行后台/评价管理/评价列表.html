@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>心愿清单列表</title>
+    <title>评价列表</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,12 @@
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
-    <link rel="stylesheet" type="text/css" href="../../css/maintain/favourList.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/judgeManagement.css">
 
     <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="../../js/maintain/common.js"></script>
 
     <!--[if lte IE 9]>
@@ -106,14 +108,14 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="first-level-nav currentStairMenu">
+                        <li class="first-level-nav">
                             <a href="javascript:void(0);">会员管理</a>
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
-                                    <li>
+                                    <li class="currentSecondLevelMenu">
                                         <a href="javascript:void(0);">会员维护</a>
                                     </li>
-                                    <li class="currentSecondLevelMenu">
+                                    <li>
                                         <a href="javascript:void(0);">心愿清单</a>
                                     </li>
                                     <li>
@@ -122,7 +124,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="first-level-nav">
+                        <li class="first-level-nav currentStairMenu">
                             <a href="javascript:void(0);">评价管理</a>
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
@@ -181,126 +183,122 @@
         </div>
         <div class="headSecondLevel"></div>
     </header>
-    <div class="main-container clearfix">
-        <aside class="leftMenu">  <!--leftMenu 开始-->
-            <ul class="menuChange">
-                <li class="current">
-                    <a href="javascript:void(0);">旅行产品</a>
-                    <i class="rightArrow"></i>
-                </li>
-            </ul>
-        </aside> <!--leftMenu 结束-->
-        <section class="rightModelContent padding20">
-            <ul class="searchList clearfix">
-                <li>
-                    <table class="searchTab">
-                        <colgroup>
-                            <col width="70">
-                            <col width="320">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <th>用户昵称</th>
-                            <td>
-                                <input type="text">
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-                <li>
-                    <table class="searchTab">
-                        <colgroup>
-                            <col width="70">
-                            <col width="320">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <th>产品标题</th>
-                            <td>
-                                <input type="text">
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-                <li>
-                    <table class="searchTab">
-                        <colgroup>
-                            <col width="110">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <a href="javascript:void(0);" class="lightBlueBtn"><i class="searchIcon"></i>搜 索</a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-            </ul>
-            <div class="lightGrayLine"></div>
+    <div class="main-container">
+        <section class="whiteBg">
+            <form id="searchConditionForm">
+                <ul class="searchList clearfix">
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="80">
+                                <col width="255">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>评论ID</th>
+                                <td>
+                                    <input type="text" style="width:245px;" data-cv="required" data-ct="p评论ID">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>评论时间</th>
+                                <td>
+                                    <input type="text" style="width: 110px;" class="datepicker startDate hasIcon">
+                                    <em>至</em>
+                                    <input type="text" style="width: 110px;" class="datepicker endDate hasIcon">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="120">
+                                <col width="220">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>评论产品标题</th>
+                                <td>
+                                    <input type="text" data-cv="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>评论状态</th>
+                                <td>
+                                    <input type="text" data-cv="email" data-ct="评论状态">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="120">
+                                <col width="240">
+                                <col width="110">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>评论用户昵称</th>
+                                <td>
+                                    <input type="text" data-cv="email" data-ct="用户昵称">
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="lightBlueBtn"><i class="searchIcon"></i>搜 索</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </form>
             <section class="clearfix">
                 <table class="commonTab">
                     <colgroup>
-                        <col width="15%">
-                        <col width="12%">
+                        <col width="45px">
+                        <col width="9%">
+                        <col width="9%">
                         <col width="10%">
-                        <col width="15%">
-                        <col width="18%">
-                        <col width="14%">
+                        <col width="11%">
+                        <col width="16%">
                     </colgroup>
                     <thead>
                     <tr>
-                        <th>产品名称</th>
-                        <th>产品ID</th>
-                        <th>目的地区域</th>
-                        <th>产品状态</th>
-                        <th>最近收藏时间</th>
-                        <th>收藏数量(点击查看)
-                            <i class="sortArrow upGray"></i></th>
+                        <th>评论内容</th>
+                        <th>产品标题</th>
+                        <th>用户昵称</th>
+                        <th>评论时间</th>
+                        <th>评论状态</th>
+                        <th>操作</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>北京-巴黎飞机6天</td>
-                        <td>Z564201</td>
-                        <td>欧洲</td>
-                        <td>上线</td>
-                        <td>2015-05-07 14:26:20</td>
-                        <td>
-                            <a href="清单详情.html" class="yellowFontLink">1111</a>
-                        </td>
+                        <td>感谢真旅行的安排和服务，性价比超高。 航班服务不错，但是登记台人员可能对……</td>
+                        <td>武汉直飞新加坡5天往返含税机票加酒店</td>
+                        <td>都敏俊</td>
+                        <td>2015-03-19</br>15：00</td>
+                        <td>待审核</td>
+                        <td><a href="评价详情.html" class="greenFontsLink">查看</a></td>
                     </tr>
                     <tr>
-                        <td>北京-纽约飞机6天</td>
-                        <td>Z720461</td>
-                        <td>美洲</td>
-                        <td>上线</td>
-                        <td>2015-05-07 14:26:20</td>
-                        <td>
-                            <a href="清单详情.html" class="yellowFontLink">666</a>
-                        </td>
+                        <td>酒店服务在当地400-500左右的价位来说，算是不错……</td>
+                        <td>澳大利亚阿德莱德市区观光+阿德莱……</td>
+                        <td>都敏俊</td>
+                        <td>2015-03-19</br>15：00</td>
+                        <td>已通过</td>
+                        <td><a href="评价详情.html" class="greenFontsLink">查看</a></td>
                     </tr>
                     <tr>
-                        <td>北京-斐济飞机9天</td>
-                        <td>Z564202</td>
-                        <td>非洲</td>
-                        <td>下线</td>
-                        <td>2015-05-07 14:26:20</td>
-                        <td>
-                            <a href="清单详情.html" class="yellowFontLink">888</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>上海-巴黎飞机6天</td>
-                        <td>Z564201</td>
-                        <td>欧洲</td>
-                        <td>上线</td>
-                        <td>2015-05-07 14:26:20</td>
-                        <td>
-                            <a href="清单详情.html" class="yellowFontLink">1111</a>
-                        </td>
+                        <td>很一般</td>
+                        <td>武汉直飞新加坡5天</td>
+                        <td>都敏俊</td>
+                        <td>2015-03-19</br>15：00</td>
+                        <td>未通过</td>
+                        <td><a href="评价详情.html" class="greenFontsLink">查看</a></td>
                     </tr>
                     </tbody>
                 </table>
@@ -353,8 +351,8 @@
                         </span>
                 </div>
             </section>
-
         </section>
+
     </div>
     <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
 </div>
