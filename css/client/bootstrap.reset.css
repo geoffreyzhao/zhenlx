@@ -60,6 +60,9 @@ button.close{
     color: #666;
     font-size: 14px;
 }
+.modal-body p {
+    margin: 0;
+}
 button.close:hover{
     color: #11b9b7;
     opacity: 0.8;

@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/bootstrap.reset.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/client/common.css">
@@ -91,7 +92,7 @@
                                         <span class="defaultFonts">默认</span>
                                     </div>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <span class="leftImg">
                                         <img src="../images/client/avatar-02.jpg">
                                     </span>
@@ -359,7 +360,7 @@
                                         </span>
                                         <span class="defaultFonts">默认</span>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                             <div class="pagination">
                                 <span class="countNumber">共<em class="blueFonts">100</em>条记录</span>
@@ -586,6 +587,28 @@
 			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
 		</div>
 	</div>
+
+    <!--   删除二次确认  模板 -->
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="delGuestWindow">
+        <div class="modal-dialog" style="width: 400px;height:180px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">删除确认</h4>
+                </div>
+                <div class="modal-body">                    
+                    <p>确认删除当前常旅客？</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="commonBtn blueBtn">确认</a>
+                    <a href="javascript:void(0);" class="commonBtn orangeBtn">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
         
     <script>
         $(function(){
@@ -643,6 +666,12 @@
                 addLiClickEvent();
             });
             changeDropdown();
+
+
+            //  删除常旅客信息  提示框
+            $("body").on("click", ".bigDeleteIcon", function(){
+                $("#delGuestWindow").modal("show");
+            });
             
         });
     

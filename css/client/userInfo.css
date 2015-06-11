@@ -62,6 +62,10 @@
     height:686px;
     overflow:visible;
 }
+.travelerInfoListModel {
+    min-height: 686px;
+    height: 686px;
+}
 .headPortraitImg{
     display: inline-block;
     position: relative;

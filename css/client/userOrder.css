@@ -891,12 +891,11 @@
 }
 .payBox-panel{
     width:100%;
-    min-height: 710px;
     border-top:0px;
     background-color: #ffffff;
 }
 .paybox-up{
-    padding-bottom: 55px;
+    padding-bottom: 30px;
     position: relative;
     border-bottom:1px dashed #c3dadd;
 }
@@ -956,7 +955,7 @@
     color:#11b9b7;
 }
 .paybox-up-img{
-    padding-top:73px;
+    padding-top:40px;
     position: relative;
 }
 .payImg{
@@ -973,7 +972,7 @@
     background-color: #0c8d93;
 }
 .paybox-center{
-    padding:50px 0px 63px;
+    padding:20px 0px 25px;
     position: relative;
     text-align: center;
 }
@@ -1006,6 +1005,7 @@
 }
 .paybox-bottom{
     padding-top:44px;
+    padding-bottom:44px;
     text-align: center;
 }
 .btn-back{
