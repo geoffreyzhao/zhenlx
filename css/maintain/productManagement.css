@@ -513,16 +513,16 @@ input[type="text"].tagInput {
     margin: 0 5px 10px 0;
     cursor: pointer;
 }
-.hotTag li.lightBlueTag{
+.hotTag li.lightTag-0{
     background-color: #d3effc;
 }
-.hotTag li.lightGreenTag{
+.hotTag li.lightTag-1{
     background-color: #bfefc3;
 }
-.hotTag li.lightPinkTag{
+.hotTag li.lightTag-2{
     background-color: #f7e5ef;
 }
-.hotTag li.lightOrangeTag{
+.hotTag li.lightTag-3{
     background-color: #fcebd3;
 }
 .hotTag li:hover{
