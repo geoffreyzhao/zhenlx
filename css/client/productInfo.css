@@ -1553,6 +1553,25 @@ ul.common-tab > li.rest {
     display: none;
 }
 
+.share-info .share-icon,.share-info .title,.share-info .qrCode-icon{
+    float:left;
+}
+
+.share-info .title{margin:0 4px 0 4px;}
+
+.wishlist{
+    background: url(../../images/client/wish-normal.png) no-repeat;
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    vertical-align: middle;
+    float:right;
+}
+
+.wishlist:hover{
+    background: url(../../images/client/wish-hover.png) no-repeat;
+}
+
 .commonModel pre {
     font-size: 14px;
     line-height: 25px;

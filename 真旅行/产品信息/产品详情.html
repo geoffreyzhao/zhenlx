@@ -209,6 +209,7 @@
                                     <img src="../../images/client/withImg_02.jpg">
                                 </div>
                             </span>
+                            <span class="wishlist"></span>
                         </div>
                     </div>
                 </div>
@@ -1959,6 +1960,11 @@
             "border-bottom-color": "#" + color
         });
     }
+</script>
+<script type="text/javascript">
+    $(".wishlist").click(function(){
+        $(this).css('background-image','url(../../images/client/wish-hover.png)');
+    });
 </script>
 </body>
 </html>
