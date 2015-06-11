@@ -110,11 +110,26 @@
 	height: 100%;
 }
 
-.voucherItem.voucher-bg-0 .price {
+.voucherItem .price {
 	display: inline-block;
-	background: url(../../images/client/voucher-denomination.png) no-repeat 0 0;
-	width: 58px;
-	height: 48px;
+	font-size: 30px;
+	text-align:center;
+	/*background: url(../../images/client/voucher-denomination.png) no-repeat 0 0;*/
+	width: 100px;
+	height: 60px;
+}
+
+.voucherItem .price-number{
+	width: 134px;
+	height: 60px;
+	font-size:60px;
+	text-align: right;
+	line-height: 60px;
+	font-family:"Arial";
+	position: absolute;
+	right: 0;
+	top: -8px;
+	margin-right:8px;
 }
 
 .voucherItem.voucher-bg-1 .rightBorder {
@@ -126,13 +141,6 @@
 	height: 100%;
 }
 
-.voucherItem.voucher-bg-1 .price {
-	display: inline-block;
-	background: url(../../images/client/voucher-denomination.png) no-repeat -64px 0;
-	width: 72px;
-	height: 48px;
-}
-
 .voucherItem.voucher-bg-2 .rightBorder {
 	display: inline-block;
 	position: absolute;
@@ -142,13 +150,6 @@
 	height: 100%;
 }
 
-.voucherItem.voucher-bg-2 .price {
-	display: inline-block;
-	background: url(../../images/client/voucher-denomination.png) no-repeat -147px 0;
-	width: 72px;
-	height: 48px;
-}
-
 .voucherItem.voucher-bg-3 .rightBorder {
 	display: inline-block;
 	position: absolute;
@@ -156,13 +157,6 @@
 	background: url(../../images/client/voucher-short-border.png) repeat-y -12px 0;
 	width: 2px;
 	height: 100%;
-}
-
-.voucherItem.voucher-bg-3 .price {
-	display: inline-block;
-	background: url(../../images/client/voucher-denomination.png) no-repeat -225px 0;
-	width: 98px;
-	height: 47px;
 }
 
 .horizontal-white-split-line {
@@ -181,8 +175,6 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	word-wrap: break-word;
-	word-break: break-all;
 	display: inline-block;
 }
 
@@ -225,10 +217,10 @@
 	font-size: 30px;
 }
 
-.voucherItem.voucher-bg-0 .price em {
+.voucherItem .price em {
 	position: relative;
-	top: 20px;
-	left: 66px;
+	top: 18px;
+	left: 64px;
 }
 
 .voucherItem .privilege {
@@ -255,8 +247,6 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	word-wrap: break-word;
-	word-break: break-all;
 }
 
 .voucherItem.voucher-bg-1 .privilege {
@@ -269,24 +259,6 @@
 
 .voucherItem.voucher-bg-3 .privilege {
 	color: #f5b75e; 
-}
-
-.voucherItem.voucher-bg-1 .price em {
-	position: relative;
-	top: 20px;
-	left: 80px;
-}
-
-.voucherItem.voucher-bg-2 .price em {
-	position: relative;
-	top: 20px;
-	left: 80px;
-}
-
-.voucherItem.voucher-bg-3 .price em {
-	position: relative;
-	top: 20px;
-	left: 105px;
 }
 
 .voucherList.used .voucherItem div,
