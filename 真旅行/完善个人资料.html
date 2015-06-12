@@ -111,7 +111,7 @@
 						<section class="upload-avatar">
 							<div class="upload-block clearfix">								
 								<div class="upload-btn">
-									<img src="" alt="">
+									<img src="../images/client/avatorbg.png" alt="">
 									<span class="imgcover">
 										<input type="file" />
 									</span>
@@ -216,7 +216,7 @@
 			});
 
 			$(".upload-btn").hover(function(){
-				if($(".upload-btn img").attr("src") != ""){
+				if($(".upload-btn img").attr("src").indexOf("avatorbg.png") == -1){  //  当前为默认图片
 					$(".upload-btn .imgcover").addClass("reupload-imgcover");
 				} else {
 					$(".upload-btn .imgcover").removeClass("reupload-imgcover");

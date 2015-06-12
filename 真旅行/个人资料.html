@@ -307,7 +307,7 @@
                                 <div class="upload-block clearfix">
                                     <div class="upload-tip-text">( 请使用小于2M的 png,jpg,gif 格式图片 )</div>
                                     <div class="upload-btn">
-                                        <img src="" alt="">
+                                        <img src="../images/client/avatorbg.png" alt="">
                                         <span class="imgcover">
                                         <input type="file" />
                                     </span>
@@ -494,7 +494,7 @@
         });
 
         $(".upload-btn").hover(function(){
-                if($(".upload-btn img").attr("src") != ""){
+                if($(".upload-btn img").attr("src").indexOf("avatorbg.png") == -1){
                     $(".upload-btn .imgcover").addClass("reupload-imgcover");
                 } else {
                     $(".upload-btn .imgcover").removeClass("reupload-imgcover");

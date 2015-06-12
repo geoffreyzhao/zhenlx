@@ -286,7 +286,7 @@
     left: 0;
     width: 181px;
     height: 181px;
-    background: url(../../images/client/avatorbg.png) no-repeat;
+    /*background: url(../../images/client/avatorbg.png) no-repeat;*/
 }
 
 .upload-btn .imgcover{
