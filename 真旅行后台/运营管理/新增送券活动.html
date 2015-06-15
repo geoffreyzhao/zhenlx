@@ -19,6 +19,7 @@
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="../../js/maintain/common.js"></script>
+    <script type="text/javascript" src="../../js/maintain/customValidator.js"></script>
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../../js/base/html5.js"></script>
@@ -304,7 +305,7 @@
                             <tbody>
                                 <tr>
                                     <th>券名</th>
-                                    <td><input type="text" placeholder="10字以内" style="width: 285px;"></td>
+                                    <td><input type="text" id="test" placeholder="10字以内" data-cv="required" style="width: 285px;"></td>
                                 </tr>
                                 <tr>
                                     <th>面额</th>
@@ -323,11 +324,11 @@
                                 <tr>
                                     <th>有效期</th>
                                     <td>
-                                        <input type="text" style="width: 130px;" class="datepicker startDate hasIcon">
+                                        <input type="text" style="width: 130px;" data-cv="required" class="datepicker startDate hasIcon">
                                         <input type="text" style="width: 40px;"> 时
                                         <input type="text" style="width: 40px;"> 分
                                         <em style="margin-left:5px;"> 至 </em>
-                                        <input type="text" style="width: 130px;" class="datepicker endDate hasIcon">
+                                        <input type="text" style="width: 130px;" data-cv="required" class="datepicker endDate hasIcon">
                                         <input type="text" style="width: 40px;"> 时
                                         <input type="text" style="width: 40px;"> 分
                                     </td>
@@ -357,7 +358,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="commonButton red-fe6869Button">确认</button>
+                    <button type="button" class="commonButton red-fe6869Button save">确认</button>
                     <button type="button" class="commonButton blue-45c8dcButton">取消</button>
                 </div>
             </div>
@@ -520,6 +521,15 @@
         $("body").on("click", ".viewVoucherInfo", function(){
             $("#voucherInfoWindow").modal("show");
         });
+
+        $("#voucherWindow").modal("show");
+
+        $(".save").click(function(){
+            $("body").customValidate({
+                validateAll: true
+            });
+        });
+
         
     });
 </script>
