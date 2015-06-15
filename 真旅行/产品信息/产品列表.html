@@ -245,7 +245,7 @@
             <div class="list-white-right">
                 <p class="list-white-title">加入心愿单</p>
 
-                <div class="confirm-flag"><span class="wishList" onclick="javascript:void(0);"></span></div>
+                <div class="confirm-flag"><span class="wishList" onclick="javascript:void(0);"></span><p class="hasActiveTip">已加入心愿清单</p></div>
             </div>
             <div class="list-white-center">
                 <p class="list-white-title">行程亮点</p>
@@ -308,7 +308,7 @@
             </div>
             <div class="list-white-right">
                 <p class="list-white-title">加入心愿单</p>
-                <div class="confirm-flag"><span class="wishList" onclick="javascript:void(0);"></span></div>
+                <div class="confirm-flag"><span class="wishList" onclick="javascript:void(0);"></span><p class="hasActiveTip">已加入心愿清单</p></div>
             </div>
             <div class="list-white-center">
                 <p class="list-white-title">行程亮点</p>
@@ -372,7 +372,7 @@
             <div class="list-white-right">
                 <p class="list-white-title">加入心愿单</p>
 
-                <div class="confirm-flag"><span class="wishList" onclick="javascript:void(0);"></span></div>
+                <div class="confirm-flag"><span class="wishList" onclick="javascript:void(0);"></span><p class="hasActiveTip">已加入心愿清单</p></div>
             </div>
             <div class="list-white-center">
                 <p class="list-white-title">行程亮点</p>
@@ -449,7 +449,16 @@
         });
 
         $(".wishList").click(function(){
-            $(this).toggleClass("active");
+            if (!$(this).hasClass("active")) {
+                $(this).addClass("active");
+            } else {
+                var $tip = $(this).next(".hasActiveTip");
+                $tip.fadeIn(function(){
+                    setTimeout(function(){
+                        $tip.fadeOut();
+                    }, 1500);
+                });
+            }
         });
 
         //出发地浮层

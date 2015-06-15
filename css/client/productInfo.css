@@ -1560,16 +1560,19 @@ ul.common-tab > li.rest {
 .share-info .title{margin:0 4px 0 4px;}
 
 .wishlist{
-    background: url(../../images/client/wish-normal.png) no-repeat;
+    background: url("../../images/client/confirm_normal_s.png") no-repeat 0 0;
     display: inline-block;
-    width: 26px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     vertical-align: middle;
     float:right;
+    cursor: pointer;
+    margin-top: -5px;
 }
 
+.wishlist.actived,
 .wishlist:hover{
-    background: url(../../images/client/wish-hover.png) no-repeat;
+    background: url("../../images/client/confirm_pressed_s.png") no-repeat 0 0;
 }
 
 .commonModel pre {
@@ -2248,4 +2251,21 @@ ul.common-tab > li.rest {
 /*   产品列表  end   */
 .grayFont {
     color: #ababab;
+}
+
+.hasActiveTip {
+    display: none;
+    font-size: 14px;
+    color: #11b9b7;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.wishedTip {
+    font-size: 13px;
+    color: #11b9b7;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    display: none;
 }
