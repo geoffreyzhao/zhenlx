@@ -896,3 +896,107 @@
     padding:6px 0px;
 }
 /** 订单列表 end    */
+
+/*  发布订单 start */
+.publish-content{
+    position: relative;
+    top: 40px;
+    color: #484848;
+}
+.publish-content .top-border{
+    display: inline-block;
+    background: url(../../images/client/repeat-border.jpg) repeat-x;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+.publish-content .pin{
+    width:24px;
+    height:44px;
+    background: url("../../images/client/spirit.png") no-repeat 0px 0px;
+    position: absolute;
+    top:-13px;
+    left:28px;
+    z-index: 10;
+}
+.publish-judgeBox{
+    width:100%;
+    min-height: 640px;
+    border-top:0px;
+}
+.judge-content{
+    padding-top:15px;
+    padding-left:45px;
+    padding-right:35px;
+    line-height:18px;
+}
+.judge-title{
+    width:100%;
+    padding:9px 0px;
+    border-bottom:1px #dfe9e8 solid;
+    color:#11b9b7;
+    font-size: 18px;
+}
+.judge-row{
+    font-size: 16px;
+    color:#333333;
+    padding-top:15px;
+    padding-bottom: 26px;
+    border-bottom:1px #dfe9e8 solid;
+}
+.judge-img{
+    width:200px;
+    height:112px;
+    margin-right:43px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.judge-tab{
+    font-size: 16px;
+    color:#666666;
+}
+.judge-left{
+    padding:15px 3px;
+    width:58px;
+    float:left;
+    display: inline-block;
+}
+.judge-right{
+    padding:15px 3px;
+    width:706px;
+    float:left;
+}
+.judge-right .list-inline > li{
+    padding:0px;
+}
+.greyStar{
+    width:21px;
+    height:20px;
+    display:inline-block;
+    vertical-align: middle;
+    background: url("../../images/client/judge-stars.png") no-repeat;
+    cursor: pointer;
+    margin:0px 3px;
+}
+.yellowStar{
+    width:21px;
+    height:20px;
+    display:inline-block;
+    vertical-align: middle;
+    background: url("../../images/client/judge-stars.png") no-repeat 0 -22px;
+    cursor: pointer;
+    margin:0px 3px;
+}
+.judge-tip{
+    width:764px;
+    font-size: 12px;
+    color:#999999;
+    text-align: right;
+}
+.txtArea{
+    width:100%;
+    resize: none;
+}
+/* end */
