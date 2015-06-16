@@ -20,6 +20,7 @@
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/jquery.color-2.1.2.min.js"></script>
     <script type="text/javascript" src="../../js/global/global.js"></script>
+    <script type="text/javascript" src="../../js/client/adjust.js"></script>
     <script type="text/javascript" src="../../js/client/common.js"></script>
 
     <!--[if lte IE 9]>
@@ -43,10 +44,9 @@
 </header>
 
 <div class="main-container">
-    <div class="main-wrapper" style="width:1060px;" id="main-wrapper">
-        <section class="publish-content">
+    <div class="main-wrapper" id="main-wrapper">
+        <section class="publish-content main-box" style="width:1060px;">
             <span class="pin"></span>
-
             <div class="top-border"></div>
             <div class="panel panel-default publish-judgeBox">
                 <div class="panel-body">
@@ -55,7 +55,7 @@
                         <div class="judge-row"><img class="judge-img"
                                                     src="../../images/client/productListImg03.jpg"><span>上海-巴黎5晚6天年轻人的第一次高逼格欧洲行</span>
                         </div>
-                        <form method="post" action="" style="margin-top:15px;">
+                        <form style="margin-top:15px;">
                             <div class="judge-tab clearfix">
                                 <div class="judge-left">评星：</div>
                                 <div class="judge-right">
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                             <div class="judge-tip">还可以输入<span style="color:#11b9b7;">500</span>个字</div>
-                            <div style="margin-left:58px;"><a href="javascript:void(0);"
+                            <div style="margin-left:61px;"><a href="javascript:void(0);"
                                                               class="commonBtn blueBtn">发布评论</a></div>
                         </form>
                     </div>
@@ -88,34 +88,18 @@
 
 <script type="text/javascript">
     $(function () {
-
-        setWrapperHeight();
-        $(".main-nav .right-nav-icon").click(function () {
-            var $ele = $(this);
-            $(".box-relative-location").css({
-                "top": $ele.position().top + "px"
-            }).show();
+        /**评星**/
+        var ind = 0;
+        $("#stars li").bind("click", function () {
+            //alert($(this).index());
+            ind = $(this).index();
+            if(!$(this).hasClass("yellowStar")){
+                $(this).toggleClass("yellowStar");
+            }
+            $(this).prevAll().removeClass("yellowStar");
+            $(this).prevAll().toggleClass("yellowStar");
+            $(this).nextAll().removeClass("yellowStar");
         });
-    });
-
-    function setWrapperHeight() {
-        if ($(".main-wrapper").length !== 0) {
-            $(".main-wrapper").eq(0).css({
-                "min-height": (document.documentElement.clientHeight - 142) + "px"
-            });
-        }
-    }
-    /**评星**/
-    var ind = 0;
-    $("#stars li").bind("click", function () {
-        //alert($(this).index());
-        ind = $(this).index();
-        if(!$(this).hasClass("yellowStar")){
-            $(this).toggleClass("yellowStar");
-        }
-        $(this).prevAll().removeClass("yellowStar");
-        $(this).prevAll().toggleClass("yellowStar");
-        $(this).nextAll().removeClass("yellowStar");
     });
 
 </script>

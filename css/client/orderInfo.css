@@ -634,6 +634,7 @@
     position: relative;
     top: 40px;
     color: #484848;
+    border-bottom: none;
 }
 .withoutOrder .top-border, .orderList .top-border{
     display: inline-block;
@@ -658,8 +659,9 @@
 }
 .withoutOrderBox{
     width:100%;
-    min-height: 710px;
+    /*min-height: 710px;*/
     border-top:0px;
+    margin-bottom: 0;
 }
 .withoutOrder-row1{
     margin:115px 0px 85px;
@@ -902,6 +904,7 @@
     position: relative;
     top: 40px;
     color: #484848;
+    border-bottom: none;
 }
 .publish-content .top-border{
     display: inline-block;
@@ -925,6 +928,7 @@
     width:100%;
     min-height: 640px;
     border-top:0px;
+    margin-bottom: 0;
 }
 .judge-content{
     padding-top:15px;
