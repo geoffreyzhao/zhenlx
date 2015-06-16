@@ -468,13 +468,6 @@
     height: 100%;
 }
 
-.voucherItem.voucher-bg-0 .price {
-    display: inline-block;
-    background: url(../../images/client/voucher-denomination.png) no-repeat 0 0;
-    width: 58px;
-    height: 48px;
-}
-
 .voucherItem.voucher-bg-1 .rightBorder {
     display: inline-block;
     position: absolute;
@@ -482,13 +475,6 @@
     background: url(../../images/client/voucher-short-border.png) repeat-y -4px 0;
     width: 2px;
     height: 100%;
-}
-
-.voucherItem.voucher-bg-1 .price {
-    display: inline-block;
-    background: url(../../images/client/voucher-denomination.png) no-repeat -64px 0;
-    width: 72px;
-    height: 48px;
 }
 
 .voucherItem.voucher-bg-2 .rightBorder {
@@ -500,13 +486,6 @@
     height: 100%;
 }
 
-.voucherItem.voucher-bg-2 .price {
-    display: inline-block;
-    background: url(../../images/client/voucher-denomination.png) no-repeat -147px 0;
-    width: 72px;
-    height: 48px;
-}
-
 .voucherItem.voucher-bg-3 .rightBorder {
     display: inline-block;
     position: absolute;
@@ -514,13 +493,6 @@
     background: url(../../images/client/voucher-short-border.png) repeat-y -12px 0;
     width: 2px;
     height: 100%;
-}
-
-.voucherItem.voucher-bg-3 .price {
-    display: inline-block;
-    background: url(../../images/client/voucher-denomination.png) no-repeat -225px 0;
-    width: 98px;
-    height: 47px;
 }
 
 .horizontal-white-split-line {
@@ -555,6 +527,28 @@
     right: 54px;
     top: 14px;
     font-size: 30px;
+    background: none;
+}
+
+.voucherItem .price {
+    display: inline-block;
+    font-size: 30px;
+    text-align:center;
+    width: 100px;
+    height: 60px;
+}
+
+.voucherItem .price-number{
+    width: 134px;
+    height: 60px;
+    font-size:60px;
+    text-align: right;
+    line-height: 60px;
+    font-family:"Arial";
+    position: absolute;
+    right: 0;
+    top: -8px;
+    margin-right:8px;
 }
 
 .voucherItem.voucher-bg-0 .price em {
