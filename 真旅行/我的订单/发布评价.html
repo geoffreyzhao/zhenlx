@@ -47,6 +47,7 @@
     <div class="main-wrapper" id="main-wrapper">
         <section class="publish-content main-box" style="width:1060px;">
             <span class="pin"></span>
+
             <div class="top-border"></div>
             <div class="panel panel-default publish-judgeBox">
                 <div class="panel-body">
@@ -60,7 +61,11 @@
                                 <div class="judge-left">评星：</div>
                                 <div class="judge-right">
                                     <ul class="list-inline" id="stars">
-                                        <li class="greyStar"></li><li class="greyStar"></li><li class="greyStar"></li><li class="greyStar"></li><li class="greyStar"></li>
+                                        <li class="greyStar"></li>
+                                        <li class="greyStar"></li>
+                                        <li class="greyStar"></li>
+                                        <li class="greyStar"></li>
+                                        <li class="greyStar"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -93,7 +98,7 @@
         $("#stars li").bind("click", function () {
             //alert($(this).index());
             ind = $(this).index();
-            if(!$(this).hasClass("yellowStar")){
+            if (!$(this).hasClass("yellowStar")) {
                 $(this).toggleClass("yellowStar");
             }
             $(this).prevAll().removeClass("yellowStar");
