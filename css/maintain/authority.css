@@ -1,0 +1,128 @@
+@charset "utf-8";
+/** 权限管理 -角色列表 start**/
+.whiteBg{
+    background-color: #fff;
+    padding: 10px;
+    font-size: 16px;
+}
+.productTab th {
+    color: #444;
+}
+.productTab td {
+    color: #666;
+}
+.commonTab {
+    width:100%;
+}
+.commonTab td,
+.commonTab th{
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.commonTab thead{
+    background-color: #f5f5f5;
+}
+.commonTab tbody tr:hover{
+    background-color: #eefaff;
+}
+.commonTab tbody a{
+    margin-right: 20px;
+}
+.commonTab .greenFontsLink{
+    color: #3db99a;
+}
+.commonTab .greenFontsLink:hover{
+    color: #3db99a;
+    text-decoration: underline;
+}
+.commonTab .grayFontsLink{
+    color: #666666;
+}
+.commonTab .grayFontsLink:hover{
+    color: #666666;
+    text-decoration: underline;
+}
+.judge-icon{
+    width:41px;
+    height:41px;
+    display: inline-block;
+    background:url("../../images/popupIcon.png") no-repeat 0 0px;
+    margin:5px 18px;
+    vertical-align: middle;
+}
+.modal-footer .commonJudgeBtn{
+    width:100px;
+    height:38px;
+    display: inline-block;
+    text-align:center;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height:38px;
+    color:#ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left:10px;
+}
+.confirmBtn{
+    background-color:#fe6869;
+}
+.confirmBtn:hover{
+    background-color:#f65253;
+}
+.cancelBtn{
+    background-color:#45c8dc;
+}
+.cancelBtn:hover{
+    background-color:#41bbce;
+}
+/** end **/
+
+/** 组织架构 start **/
+.whiteBg .searchList{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f1f1f1;
+}
+.searchList li{
+    float: left;
+}
+.searchList .searchTab{
+    color: #666666;
+}
+.searchList .searchTab th{
+    text-align: right;
+    padding: 5px 3px;
+    font-weight: normal;
+}
+.searchList .searchTab td{
+    padding: 5px 3px;
+}
+.searchList .searchTab input[type="text"]{
+    width: 200px;
+}
+.searchTab .lightBlueBtn{
+    background-color: #45c8dc;
+    display: inline-block;
+    min-width: 80px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #fff;
+}
+.searchTab .lightBlueBtn:hover{
+    background-color: #2ebad0;
+    color: #fff;
+}
+.searchTab .searchIcon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../../images/commonIcon.png") no-repeat -15px -19px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/** end **/

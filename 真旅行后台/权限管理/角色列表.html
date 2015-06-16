@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>真旅行后台-财务-票务账户明细</title>
+    <title>真旅行后台-权限管理-角色列表</title>
     <meta http-equiv="x-ua-compatible" content="IE=Edge">
     <meta name="venderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/maintain/common.css">
-    <link rel="stylesheet" href="../../css/maintain/finance.css">
+    <link rel="stylesheet" href="../../css/maintain/authority.css">
 
     <script src="../../js/base/jquery-1.11.2.min.js"></script>
     <script src="../../js/bootdist/bootstrap.min.js"></script>
@@ -34,6 +34,7 @@
                     <ul class="stairMenu">
                         <li class="first-level-nav">
                             <a href="javascript:void(0);">产品管理</a>
+
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
                                     <li class="currentSecondLevelMenu">
@@ -47,6 +48,7 @@
                         </li>
                         <li class="first-level-nav">
                             <a href="javascript:void(0);">景点管理</a>
+
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
                                     <li class="currentSecondLevelMenu">
@@ -66,6 +68,7 @@
                         </li>
                         <li class="first-level-nav">
                             <a href="javascript:void(0);">订单管理</a>
+
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
                                     <li class="currentSecondLevelMenu">
@@ -85,6 +88,7 @@
                         </li>
                         <li class="first-level-nav">
                             <a href="javascript:void(0);">运营管理</a>
+
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
                                     <li class="currentSecondLevelMenu">
@@ -104,6 +108,7 @@
                         </li>
                         <li class="first-level-nav">
                             <a href="javascript:void(0);">会员管理</a>
+
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
                                     <li class="currentSecondLevelMenu">
@@ -114,38 +119,37 @@
                                     </li>
                                     <li>
                                         <a href="javascript:void(0);">常用旅客</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="first-level-nav currentStairMenu">
-                            <a href="javascript:void(0);">财务&供应商系统</a>
-                            <div class="second-level-nav">
-                                <ul class="secondLevelList clearfix">
-                                    <li>
-                                        <a href="javascript:void(0);">交易明细</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">票券收支明细</a>
-                                    </li>
-                                    <li class="currentSecondLevelMenu">
-                                        <a href="javascript:void(0);">票券账户明细</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="first-level-nav">
-                            <a href="javascript:void(0);">权限管理</a>
+                            <a href="javascript:void(0);">财务&供应商系统</a>
+
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
                                     <li class="currentSecondLevelMenu">
-                                        <a href="javascript:void(0);">会员维护</a>
+                                        <a href="javascript:void(0);">交易明细</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0);">心愿清单</a>
+                                        <a href="javascript:void(0);">票券收支明细</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0);">常用旅客</a>
+                                        <a href="javascript:void(0);">票券账户明细</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="first-level-nav currentStairMenu">
+                            <a href="javascript:void(0);">权限管理</a>
+
+                            <div class="second-level-nav">
+                                <ul class="secondLevelList clearfix">
+                                    <li class="currentSecondLevelMenu">
+                                        <a href="javascript:void(0);">角色管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">组织架构</a>
                                     </li>
                                 </ul>
                             </div>
@@ -162,165 +166,44 @@
                 </div>
             </div>
         </div>
-        <div class="headSecondLevel"></div>
+        <div class="headSecondLevel">
+            <div class="operationDiv"><i class="plusIcon"></i>添加角色</div>
+        </div>
     </header>
     <div class="main-container">
-        <section class="whiteBg">
-            <ul class="searchList clearfix">
-                <li>
-                    <table class="searchTab">
-                        <colgroup>
-                            <col width="80">
-                            <col width="220">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <th>客户名称</th>
-                            <td>
-                                <input type="text"/>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-                <li>
-                    <table class="searchTab">
-                        <colgroup>
-                            <col width="80">
-                            <col width="220">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <th>账户类型</th>
-                            <td>
-                                <div class="dropdown" style="width: 200px;">
-                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                        <span class="activeFonts">全部</span>
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="active"><a href="javascript:void(0);">全部</a></li>
-                                        <li><a href="javascript:void(0);">积分</a></li>
-                                        <li><a href="javascript:void(0);">抵用券</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-                <li>
-                    <table class="searchTab">
-                        <colgroup>
-                            <col width="80">
-                            <col width="220">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <th>冻结状态</th>
-                            <td>
-                                <div class="dropdown" style="width: 200px;">
-                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                        <span class="activeFonts">全部</span>
-                                        <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="active"><a href="javascript:void(0);">全部</a></li>
-                                        <li><a href="javascript:void(0);">已冻结</a></li>
-                                        <li><a href="javascript:void(0);">未冻结</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-                <li>
-                    <table class="searchTab">
-                        <colgroup>
-                            <col width="80">
-                            <col width="225">
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <th>截止时间</th>
-                            <td>
-                                <input type="text" style="width: 200px;" class="datepicker default hasIcon" readonly="readonly">
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-                <li>
-                    <table class="searchTab">
-                        <colgroup>
-                            <col width="103">
-                        </colgroup>
-                        <tbody>
-                        <tr style="height:46px;">
-                            <td>
-                                <a href="javascript:void(0);" class="lightBlueBtn"><i class="searchIcon"></i>查 询</a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </li>
-            </ul>
-            <div class="outTab"><a href="javascript:void(0);">导出Excel</a></div>
-            <section class="clearfix">
-                <table class="commonTab productTab">
-                    <colgroup>
-                        <col width="15%">
-                        <col width="12%">
-                        <col width="8%">
-                        <col width="8%">
-                        <col width="6%">
-                        <col width="6%">
-                        <col width="9%">
-                    </colgroup>
-                    <thead>
-                    <tr>
-                        <th>客户名称</th>
-                        <th>账户类型</th>
-                        <th>账户余额</th>
-                        <th>可用余额</th>
-                        <th>冻结余额</th>
-                        <th>账户冻结</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>易谦</td>
-                        <td>抵用券</td>
-                        <td>2500.00</td>
-                        <td><span class="fcf78c68">2000</span></td>
-                        <td>500</td>
-                        <td>否</td>
-                        <td><a href="javascript:void(0);" class="greenFontsLink">冻结</a></td>
-                    </tr>
-                    <tr>
-                        <td>易谦</td>
-                        <td>抵用券</td>
-                        <td>2500.00</td>
-                        <td><span class="fcf78c68">2000</span></td>
-                        <td>500</td>
-                        <td>否</td>
-                        <td><a href="javascript:void(0);" class="greenFontsLink">冻结</a></td>
-                    </tr>
-                    <tr>
-                        <td>易谦</td>
-                        <td>抵用券</td>
-                        <td>2500.00</td>
-                        <td><span class="fcf78c68">2000</span></td>
-                        <td>500</td>
-                        <td>否</td>
-                        <td><a href="javascript:void(0);" class="greenFontsLink">冻结</a></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="pagination">
-                    <span class="countNum">共 331 条记录，</span>
+        <section class="whiteBg clearfix">
+            <table class="commonTab productTab">
+                <colgroup>
+                    <col width="15%">
+                    <col width="12%">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>角色名称</th>
+                    <th>使用用户数</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>财务</td>
+                    <td>2</td>
+                    <td><a href="javascript:void(0);" class="greenFontsLink">复制</a><a href="javascript:void(0);"
+                                                                                      class="greenFontsLink">编辑</a><a
+                            href="javascript:void(0);" class="greenFontsLink deleRole">删除</a></td>
+                </tr>
+                <tr>
+                    <td>内容编辑</td>
+                    <td>2</td>
+                    <td><a href="javascript:void(0);" class="greenFontsLink">复制</a><a href="javascript:void(0);"
+                                                                                      class="greenFontsLink">编辑</a><a
+                            href="javascript:void(0);" class="greenFontsLink deleRole">删除</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <span class="countNum">共 331 条记录，</span>
                         <span class="pageNum">
                             <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
                             <ul class="paginationNum" style="display: none;">
@@ -344,7 +227,7 @@
                                 </li>
                             </ul>
                         </span>
-                    <span class="pageSize">1/10</span>
+                <span class="pageSize">1/10</span>
                         <span class="pageArrow">
                             <a href="javascript:void(0);" class="firstPage disabled">
                                 <i></i>
@@ -366,11 +249,43 @@
                                 <i></i>
                             </a>
                         </span>
-                </div>
-            </section>
+            </div>
         </section>
     </div>
     <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
 </div>
+<!--删除-->
+<div class="modal fade" id="deleModal">
+    <div class="modal-dialog" style="width: 450px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">操作提示</h4>
+            </div>
+            <div class="modal-body">
+                <p style="text-align: center"><span class="judge-icon"></span>删除所选的角色？</p>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="commonJudgeBtn confirmBtn">确认</a>
+                <a href="javascript:void(0);" class="commonJudgeBtn cancelBtn" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".modal").modal({
+            backdrop: "static",
+            keyboard: false,
+            show: false
+        });
+        $(".deleRole").click(function () {
+            $("#deleModal").modal("show");
+        })
+
+    });
+</script>
 </body>
 </html>
