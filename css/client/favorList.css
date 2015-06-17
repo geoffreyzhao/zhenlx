@@ -188,17 +188,64 @@
     left:1px;
     top:-68px;
     width:174px;
+    height:112px;
+    display:none;
+    z-index:3;
+    margin:0;
+}
+.private-letter-box{
+    width:174px;
     height:100px;
     background:#fff;
-    display:none;
     border:2px solid #11B9B7;
     border-radius:4px;
     padding:10px 3px 0 8px;
-    z-index:3;
     font-size:14px;
     text-align:center;
-    margin:0;
 }
+
+/*/*开始*/
+/*.private-letter-box:before{
+    content:"";
+    width:15px;
+    height:7px;
+    background:url(../../images/client/private-letter-bg.png);
+    position:absolute;
+    left:50%;
+    margin-left:-7px;
+    bottom:7px;
+}
+.private-letter-box .avatar{
+    width:38px;
+    height:38px;
+    margin-right:4px;
+    display:inline-block;
+    float:left;
+}
+.private-letter-box .avatar img{
+    width:100%;
+    height:100%;
+    border-radius: 100%;
+}
+.private-letter-box .username{
+    width:114px;
+    float:left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.private-letter-box a{
+    width:60px;
+    height:22px;
+    color:#fff;
+    font-size:14px;
+    border:0;
+    outline:none;
+    background:#ffa200;
+    border-radius:4px;
+    display:inline-block;
+}*/
+/*结束*/
 .partner .private-letter li:before{
     content:"";
     width:15px;
@@ -207,7 +254,7 @@
     position:absolute;
     left:50%;
     margin-left:-7px;
-    bottom:-7px;
+    bottom:7px;
 }
 
 .partner .private-letter li.private-bg-left:before{
