@@ -80,6 +80,10 @@
     position:relative;
     overflow:hidden;
 }
+.product-images img{
+    width:380px;
+    height:238px;
+}
 .product-images .imagecover{
     position:absolute;
     left:0;
