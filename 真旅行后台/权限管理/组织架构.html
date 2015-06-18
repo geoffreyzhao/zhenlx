@@ -183,7 +183,7 @@
                         <tr>
                             <th>员工姓名</th>
                             <td>
-                                <input type="text"/>
+                                <input type="text" placeholder="关键字"/>
                             </td>
                         </tr>
                         </tbody>
@@ -199,7 +199,7 @@
                         <tr>
                             <th>工&nbsp;&nbsp;号</th>
                             <td>
-                                <input type="text">
+                                <input type="text" placeholder="关键字">
                             </td>
                         </tr>
                         </tbody>
@@ -368,7 +368,7 @@
 
 <!--添加员工 弹窗-->
 <div class="modal fade" data-backdrop="static" data-keyboard="false" id="addRole">
-    <div class="modal-dialog" style="width:630px;height:480px;">
+    <div class="modal-dialog" style="width:812px;height:480px;">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -382,20 +382,20 @@
                         <table class="newVoucherTable">
                             <colgroup>
                                 <col width="90">
-                                <col width="">
+                                <col width="150">
+                                <col width="90">
+                                <col width="220">
+                                <col width="70">
+                                <col width="150">
                             </colgroup>
                             <tbody>
                             <tr>
                                 <th><em class="redStar">*</em>员工姓名</th>
-                                <td><input type="text" style="width: 285px;"></td>
-                            </tr>
-                            <tr>
-                                <th><em class="redStar">*</em>手机号码</th>
-                                <td><input type="text" style="width: 285px;"></td>
-                            </tr>
-                            <tr>
-                                <th><em class="redStar">*</em>工&nbsp;&nbsp;号</th>
-                                <td><input type="text" style="width: 285px;"></td>
+                                <td><input type="text" style="width: 130px;"></td>
+                                <th>手机号码</th>
+                                <td><input type="text" style="width: 200px;"></td>
+                                <th>工&nbsp;&nbsp;号</th>
+                                <td><input type="text" style="width: 130px;"></td>
                             </tr>
                             </tbody>
                         </table>
@@ -407,7 +407,7 @@
                         </colgroup>
                         <tbody>
                         <tr>
-                            <th><em class="redStar">*</em>用户名</th>
+                            <th><em class="redStar">*</em>用&nbsp;&nbsp;户&nbsp;&nbsp;名</th>
                             <td><input type="text" style="width: 285px;"></td>
                         </tr>
                         <tr>
@@ -419,24 +419,25 @@
                             <td><input type="text" style="width: 285px;"></td>
                         </tr>
                         <tr>
-                            <th class="verticalAlign">角色选择</th>
+                            <th class="verticalAlign"><em class="redStar">*</em>角色选择</th>
                             <td>
-                                <span class="dropdown" style="width: 200px;">
+                                <span class="dropdown" style="width: 285px;">
                                     <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                        <span class="activeFonts">全部</span>
+                                        <span class="activeFonts">角色选择</span>
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="active"><a href="javascript:void(0);">全部</a></li>
+                                        <li class="active"><a href="javascript:void(0);">角色选择</a></li>
                                         <li><a href="javascript:void(0);">角色一</a></li>
                                         <li><a href="javascript:void(0);">角色二</a></li>
                                     </ul>
-                                </span><em class="redStar" style="font-size: 14px;">*选择角色后，点击[添加个性化权限]按钮所调出的列表屏蔽该角色权限选择</em>
+                                </span>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2">
-                                <span style="width: 200px; margin-left:20px;"><a class="addSpecil" href="javascript:void(0);">添加个性化权限</a></span>
+                            <td>&nbsp;</td>
+                            <td id="specilLabel">
+                                <a class="addSpecil" href="javascript:void(0);"><em> + </em>添加个性化权限</a>
                             </td>
                         </tr>
                         </tbody>
@@ -444,28 +445,28 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="commonButton red-fe6869Button">确认</button>
+                <button type="button" class="commonButton red-fe6869Button" style="margin-right:10px;">确认</button>
                 <button type="button" class="commonButton blue-45c8dcButton" data-dismiss="modal">取消</button>
             </div>
         </div>
     </div>
 </div>
 
-/** 添加个性化权限 弹窗 **/
+<!--添加个性化权限 弹窗-->
 <div class="modal fade" data-backdrop="static" data-keyboard="false" id="addSpecilModal">
-    <div class="modal-dialog" style="width:650px;height:480px;">
+    <div class="modal-dialog" style="width:815px;height:480px;">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title">添加员工</h4>
+                <h4 class="modal-title">添加个性化权限</h4>
             </div>
             <div class="modal-body">
                 <table class="addSpecilTable table-bordered">
                     <colgroup>
-                        <col width="118">
-                        <col width="495">
+                        <col width="160">
+                        <col width="653">
                     </colgroup>
                     <thead>
                     <tr>
@@ -477,8 +478,9 @@
                 <div class="popupContainer specilTab">
                     <table class="addSpecilTable table-bordered">
                         <colgroup>
-                            <col width="120">
-                            <col width="495">
+                            <col width="157">
+                            <col width="180">
+                            <col width="436">
                         </colgroup>
                         <tbody>
                         <tr>
@@ -487,6 +489,13 @@
                                 <div class="checkboxContent">
                                     <label class="checkboxInfo">
                                         <span class="checkboxIcon"></span>产品维护
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="checkboxContent">
+                                    <label class="checkboxInfo">
+                                        <span class="checkboxIcon"></span>线路维护
                                     </label>
                                 </div>
                             </td>
@@ -499,6 +508,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th>订单管理</th>
@@ -509,6 +519,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th rowspan="2">运营维护</th>
@@ -519,6 +530,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>
@@ -528,6 +540,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th rowspan="2">会员管理</th>
@@ -538,6 +551,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>
@@ -547,6 +561,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th>评价管理</th>
@@ -557,6 +572,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th rowspan="5">供应商财务维护</th>
@@ -567,6 +583,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>
@@ -576,6 +593,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>
@@ -585,6 +603,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>
@@ -594,6 +613,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>
@@ -603,6 +623,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <th rowspan="2">权限管理</th>
@@ -613,6 +634,7 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>
@@ -622,13 +644,14 @@
                                     </label>
                                 </div>
                             </td>
+                            <td></td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="commonButton red-fe6869Button">确认</button>
+                <button type="button" class="commonButton red-fe6869Button" id="confirmAddSp" style="margin-right:10px;">确认</button>
                 <button type="button" class="commonButton blue-45c8dcButton" data-dismiss="modal">取消</button>
             </div>
         </div>
@@ -663,6 +686,36 @@
         $(".addSpecil").click(function(){
            $("#addSpecilModal").modal("show");
         });
+    });
+    /**遍历添加权限表格筛选被选项**/
+    $("#confirmAddSp").click(function(){
+        var flag = $(".checkboxContent .checkboxInfo").hasClass("active");
+        var checkGroup = $(".checkboxContent .checkboxInfo").filter(".active");
+        var num = checkGroup.length;
+        if(flag){
+            //console.info("有选择");
+            $.each(checkGroup, function(i, n){
+
+                //console.info("第"+(i+1)+"个:"+ $(this).text().trim());
+                $(".addSpecil").addClass("addSpecilHover");
+                $(".addSpecil").text('个性化权限（'+num+'）');
+                $("#specilLabel").append('<span class="specilLabel"><span class="spTxt">'+$(this).text().trim()+'</span><i class="spClose"></i></span>');
+            })
+            $(".spClose").click(function(){
+                $(this).parent(".specilLabel").remove();
+                var cnt = $("#specilLabel .addSpecil").siblings().length;
+                if(cnt == 0){
+                    $(".addSpecil").removeClass("addSpecilHover");
+                    $(".addSpecil").html("<em> + </em>添加个性化权限");
+                }else{
+                    $(".addSpecil").text('个性化权限（'+cnt+'）');
+                    //console.info("还剩下"+cnt+"个对象");
+                }
+            });
+        }else{
+            //console.info("还没有选择");
+        }
+        $("#addSpecilModal").modal("hide");
     });
 </script>
 </body>

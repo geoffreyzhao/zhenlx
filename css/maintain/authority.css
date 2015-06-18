@@ -166,21 +166,31 @@
     color: red;
 }
 .roleInfo{
-    border-bottom: 1px #eaeaea dashed;
+    border-bottom: 1px #dfdfdf dashed;
 }
 .addSpecil{
+    width:285px;
     padding:5px 20px;
+    margin-right:17px;
+    margin-bottom: 10px;
     text-align: center;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border:1px #45c8dc dashed;
-    color:#45c8dc;
+    border:1px #35c39f dashed;
+    color:#35c39f;
+    background-color:#edfcf8;
     display: inline-block;
 }
-.addSpecil:hover{
-    border:1px #2ebad0 dashed;
-    color:#2ebad0;
+.addSpecil:hover, .addSpecilHover{
+    text-decoration: none;
+    background-color:#35c39f;
+    color:#ffffff;
+}
+.addSpecil .plusIcon{
+    background: url("../../images/commonIcon.png") no-repeat 0 -131px;
+    width: 14px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 .specilTab{
     height:480px;
@@ -192,9 +202,39 @@
 }
 .addSpecilTable thead tr th{
     padding-left: 10px;
+    border-bottom-width: 1px;
+}
+.addSpecilTable tr th{
+    vertical-align: text-top;
+}
+.addSpecilTable tr td:hover{
+    background-color: #eefaff;
 }
 .addSpecilTable th, .addSpecilTable td{
     padding:8px 10px;
 }
-
+.specilLabel{
+    text-align: center;
+    padding:3px 5px;
+    border:1px #b0d8f5 solid;
+    background-color:#ebf6fe;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-right:10px;
+    display: inline-block;
+}
+.specilLabel .spTxt{
+    font-size: 14px;
+    color:#666666;
+    margin-right: 10px;
+}
+.spClose{
+    width:10px;
+    height:10px;
+    background:url("../../images/commonIcon.png") no-repeat -41px -132px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
 /** end **/

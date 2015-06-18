@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于真旅行</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/client/aboutTravel.css">
+
+    <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../js/client/common.js"></script>
+    <script type="text/javascript" src="../js/client/adjust.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header>
+    <div class="head clearfix">
+        <div class="logoImg"></div>
+
+        <div class="searchModel">
+            <!-- <div class="leftBorderStyle"></div> -->
+            <div class="searchContent">
+                <table class="searchTab">
+                    <colgroup>
+                        <col width="94">
+                        <col width="141">
+                        <col width="99">
+                        <col width="464">
+                        <col width="">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th class="addIcon"><span class="commonIcon startOffIcon"></span><span class="startPlace-title">出发地</span>
+                        </th>
+                        <td>
+                            <div class="startOffPlaceModel">
+                                <div class="startOffPlace">
+                                    <input type="text" class="startOffInput" value="上海" style="width: 141px;"
+                                           readonly="readonly">
+                                    <span class="caret"></span>
+                                </div>
+                                <ul class="selectStartOffPlace">
+                                    <li class="active">上海</li>
+                                    <li>苏州</li>
+                                    <li>杭州</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <th class="addIcon"><span class="commonIcon destinationIcon"></span><span
+                                class="destination-title">目的地</span></th>
+                        <td>
+                            <div class="destinationModel">
+                                <div class="destination">
+                                    <!-- <span class="commonIcon destinationIcon"></span> -->
+                                    <input type="text" class="destinationInput" value="" style="width:464px;"
+                                           placeholder="目的地" readonly="readonly">
+                                    <input id="selectedDestLevel" type="hidden"/>
+                                </div>
+                                <div class="selectDestination">
+                                    <ul class="cityList ul-dest-first-level">
+                                        <li class="destSelect-first-level">
+                                            <span class="fl-destName">国内精选</span>
+                                            <span class="nav-tree-arrow"></span>
+                                            <ul class="second-level">
+                                                <li class="sl-destName">九寨沟</li>
+                                                <li class="sl-destName">北京</li>
+                                                <li class="sl-destName">海南岛</li>
+                                                <li class="sl-destName">杭州</li>
+                                                <li class="sl-destName">丽江</li>
+                                            </ul>
+                                        </li>
+                                        <li class="destSelect-first-level">
+                                            <span class="fl-destName">日韩</span>
+                                            <span class="nav-tree-arrow"></span>
+                                            <ul class="second-level">
+                                                <li class="sl-destName">首尔</li>
+                                                <li class="sl-destName">济州岛</li>
+                                                <li class="sl-destName">东京</li>
+                                            </ul>
+                                        </li>
+                                        <li class="destSelect-first-level">
+                                            <span class="fl-destName">东南亚</span>
+                                            <span class="nav-tree-arrow"></span>
+                                            <ul class="second-level">
+                                                <li class="sl-destName">泰国</li>
+                                                <li class="sl-destName">新加坡</li>
+                                                <li class="sl-destName">柬埔寨</li>
+                                                <li class="sl-destName">普吉岛</li>
+                                                <li class="sl-destName">马尔代夫</li>
+                                            </ul>
+                                        </li>
+                                        <li class="destSelect-first-level">
+                                            <span class="fl-destName">欧洲</span>
+                                            <span class="nav-tree-arrow"></span>
+                                            <ul class="second-level">
+                                                <li class="sl-destName">意大利</li>
+                                                <li class="sl-destName">法国</li>
+                                            </ul>
+                                        </li>
+                                        <li class="empty"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="searchbtn">
+                            <a href="javascript:void(0);"></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="rightBorderStyle"></div> -->
+        </div>
+        <div class="top-right-block">
+            <div class="login-entrance">
+                <a class="login commonBtn" href="javascript:;">登录</a><a class="register commonBtn" href="javascript:;">注册</a>
+
+                <div class="login-box">
+                    <div class="arrow"></div>
+                    <div style="width: 262px;" class="errorBoxContent">
+                        <i class="commonIcon errorIcon"></i>输入的用户名或密码有错
+                    </div>
+                    <br/>
+
+                    <div class="componentInput">
+                        <i class="commonIcon personHeaderIcon"></i>
+                        <input type="text" placeholder="手机号/邮箱" style="width: 225px;">
+                    </div>
+                    <br/>
+
+                    <div class="componentInput forgetPW">
+                        <i class="commonIcon lockIcon"></i>
+                        <input type="password" placeholder="请输入密码" style="width: 143px;">
+                        <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
+                    </div>
+                    <br/>
+
+                    <div class="componentInput verificationCode">
+                        <i class="commonIcon verificationCodeIcon"></i>
+                        <input type="text" placeholder="请输入验证码" style="width: 120px;">
+                        <img src="../images/client/verificationCode.png">
+                    </div>
+                    <br/>
+                    <a href="javascript:void(0);" class="commonBtn blueBtn loginBtn" style="width:263px;">登 录</a>
+
+                    <div class="login-attach">
+                        <div class="checkboxContent">
+                            <label class="checkbox active">
+                                <span class="commonIcon checkboxIcon"></span>记住我
+                            </label>
+                        </div>
+                        <a class="register-link" href="javascript:;">免费注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="main-container">
+    <div class="main-wrapper" id="main-wrapper">
+        <div class="main-box" id="main-box">
+            <div class="top-border"><span class="clip"></span></div>
+            <div class="box-container">
+                <div class="cont-block clearfix">
+                    <span class="modelLine"></span>
+                    <aside class="leftMenuContent">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">关于真旅行
+                                    <l class="upIcon"></l>
+                                </a>
+                                <ul class="list-unstyled leftSecondMenu">
+                                    <li><a href="javascript:void(0);" class="secondActive">旅行+</a></li>
+                                    <li><a href="javascript:void(0);">品牌故事</a></li>
+                                    <li><a href="javascript:void(0);">关于我们</a></li>
+                                    <li><a href="javascript:void(0);">工作机会</a></li>
+                                    <li><a href="javascript:void(0);">联系我们</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">服务说明
+                                    <l class="upIcon"></l>
+                                </a>
+                                <ul class="list-unstyled leftSecondMenu">
+                                    <li><a href="javascript:void(0);">服务保障</a></li>
+                                    <li><a href="javascript:void(0);">服务条款</a></li>
+                                    <li><a href="javascript:void(0);">合作伙伴</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">网站条款
+                                    <l class="upIcon"></l>
+                                </a>
+                                <ul class="list-unstyled leftSecondMenu">
+                                    <li><a href="javascript:void(0);">客服协议</a></li>
+                                    <li><a href="javascript:void(0);">隐私保护</a></li>
+                                    <li><a href="javascript:void(0);">免费声明</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">网站条款
+                                    <l class="downIcon"></l>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">网站条款
+                                    <l class="downIcon"></l>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <section class="rightContent editHeadPortrait">
+                        <div class="aboutTitle">关于真旅行</div>
+                        <article>
+                            <p>
+                                Zlvxing真旅行是中国首屈一指的高端精品旅行预订网站及时尚生活方式网络媒体，致力于品介全球最精彩度假和生活方式体验，
+                                为中国中高端新锐旅行者提供精品度假酒店及非凡旅程预订服务，用心打造世界上最美的假期选择，并提供领先潮流的时尚生活方式内容。
+                            </p>
+                            <p>
+                                真旅行自成立起就一直主张“有故事的人生，有风格的旅行”。我们聚拢了一批世界上经历丰富的旅行者，这些人身上带着“品味探测器”，
+                                他们的推荐必须是有美感的、必定是有故事的、 必然是有情感的。真旅行旅行产品包括全球精品酒店预订、世界各地别墅预订、
+                                海外自由行套餐和国内短假轻奢套餐，精品线路和定制旅行服务——“真品定制”以及顶级奢华邮轮旅行服务，自此真旅行已发展成为国内
+                                高端旅行行业内具有最全高端产品线的公司。2014和2015年真旅行连续两年荣登《胡润百富》发布的“TOP10 大中华区最受欢迎出境游奢华旅行社”榜单；
+                                且真旅行还是荣获2015年《悦游Condé Nast Traveler》“读者之选Readers’ Choice”在线服务类的唯一高端旅行品牌。
+                            </p>
+                            <p>
+                                真旅行网站的线上媒体及“真旅行旅行人生”微信自媒体品介旅行，时尚，美食，设计，热点潮流等时尚生活新方式，聚集20万精英粉丝。2015年还将推出达人社区APP，分享发掘最优质的目的地体验。
+                            </p>
+                            <p>
+                                真旅行还于2014年开始每年举办权威性的“Global Travel Experience Award全球旅行体验大奖”，由网友和专家评选全球最佳酒店的最美体验，并举办颁奖典礼。
+                            </p>
+                            <p>
+                                Zlvxing--上都，是元朝的夏都，每年皇帝都到那里去避暑。18世纪英国诗人柯勒律治于其诗篇中赞美：“上都坐忽必烈汗，恢宏皇城乐御邦”(In Zlvxing did Kubla Khan, A stately pleasure-dome decree...)。
+                                后来西方人以"Zlvxing"比作“世外桃源”。Zlvxing是lvxing的谐音演变。我们每个人心中都有一个属于自己的乐土， Zlvxing就是帮助每一个人都寻找自己的真旅行。
+                            </p>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot clearfix">
+        <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+        <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+        setRightNavHeight();
+        setWrapperHeight();
+
+        window.onresize = function () {
+            setRightNavHeight();
+        }
+
+        $(".main-nav .right-nav-icon").click(function (event) {
+            var $ele = $(this);
+            $(".box-relative-location").css({
+                "top": $ele.position().top + "px"
+            }).show();
+            event.stopPropagation();
+        });
+
+        $("body").click(function (event) {
+            if (!isOuterTrigger(event, $(".box-relative-location"))) {
+                $(".box-relative-location").hide();
+            }
+        });
+
+        //出发地浮层
+        $(".selectStartOffPlace li").click(function () {
+            $(this).addClass("active");
+            $(this).siblings("li").removeClass("active");
+            $(".searchTab .startOffPlace input").val($(this).html());
+            $(".selectStartOffPlace").hide();
+        });
+        $(".searchTab .startOffPlace").click(function (event) {
+            $(this).siblings(".selectStartOffPlace").toggle();
+            $(".selectDestination").hide();
+            $(".selectTheme").hide();
+            event.stopPropagation();
+        });
+        $("body").click(function () {
+            $(".selectStartOffPlace").hide();
+        });
+
+        $(".destinationModel .destination").click(function (event) {
+            $(this).siblings(".selectDestination").toggle();
+            $(".selectStartOffPlace").hide();
+            $(".selectTheme").hide();
+            event.stopPropagation();
+        });
+
+        initSetActiveDest();
+
+        $(".destSelect-first-level").mouseover(function () {
+            $(this).siblings("li").find(".second-level").hide();
+            $(this).find(".second-level").show();
+        });
+
+        $(".destSelect-first-level").click(function () {
+            $(this).siblings("li").removeClass("active");
+            $(this).addClass("active");
+
+            $(".sl-destName").removeClass("active");
+
+            $(".destinationInput").val($(this).find(".fl-destName").html());
+            $("#selectedDestLevel").val(1);
+        });
+
+        $(".ul-dest-first-level").mouseleave(function () {
+            initSetActiveDest();
+        });
+
+        $(".sl-destName").click(function (event) {
+            $(".destinationInput").val($(this).html());
+            $("#selectedDestLevel").val(2);
+
+            $(".sl-destName").removeClass("active");
+            $(this).addClass("active");
+
+            $("li.destSelect-first-level").removeClass("active");
+            $(this).parents(".destSelect-first-level").addClass("active");
+
+            $(".selectDestination").hide();
+
+            event.stopPropagation();
+        });
+
+        $("body").click(function () {
+            $(".selectDestination").hide();
+        });
+
+        //主题
+        $(".selectTheme li").click(function () {
+            $(this).addClass("active");
+            $(this).siblings("li").removeClass("active");
+            $(".searchTab .theme input").val($(this).html());
+            $(".selectTheme").hide();
+        });
+        $(".searchTab .theme").click(function (event) {
+            $(this).siblings(".selectTheme").toggle();
+            $(".selectStartOffPlace").hide();
+            $(".selectDestination").hide();
+            event.stopPropagation();
+        });
+        $("body").click(function () {
+            $(".selectTheme").hide();
+        });
+
+        //  登录注册入口
+        $(".login").click(function (event) {
+            $(this).toggleClass("active");
+            $(".login-entrance .login-box").toggle();
+            event.stopPropagation();
+        });
+
+        $("body").click(function (event) {
+            if (!isOuterTrigger(event, $(".login-entrance .login-box"))) {
+                $(".login").removeClass("active");
+                $(".login-entrance .login-box").hide();
+            }
+        });
+
+        $(".after-login > span.userName").click(function (event) {
+            $(".userInfo-box").toggle();
+            event.stopPropagation();
+        });
+
+        $("body").click(function (event) {
+            if (!isOuterTrigger(event, $(".userInfo-box"))) {
+                $(".userInfo-box").hide();
+            }
+        });
+
+        $(".loginBtn").click(function () {
+            $(".login-entrance").hide();
+            $(".after-login").show();
+        });
+
+        $(".logoutBtn").click(function () {
+            $(".after-login").hide();
+            $(".login-entrance").show();
+        });
+
+    });
+
+    //  判断点击范围是否超出元素
+    function isOuterTrigger(event, $ele) {
+        var top = $ele.offset().top,
+                left = $ele.offset().left,
+                width = $ele.outerWidth(),
+                height = $ele.outerHeight();
+
+        var _x = event.pageX,
+                _y = event.pageY;
+
+        if (_y > top + height || _y < top || _x > left + width || _x < left) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function initSetActiveDest() {
+        var destText = $(".destinationInput").val();
+
+        if (destText == "") {
+            $(".cityList .second-level").hide();
+            $(".cityList .second-level").eq(0).show();
+            return;
+        } else {
+            $(".fl-destName").each(function () {
+                if ($(this).html() == destText) {
+                    $(".destSelect-first-level").removeClass("active");
+
+                    $(this).closest('li').addClass("active");
+
+                    $(".cityList .second-level").hide();
+                    $(this).closest('li').find(".second-level").show();
+                }
+            });
+
+            $(".sl-destName").each(function () {
+                if ($(this).html() == destText) {
+                    $(".sl-destName").removeClass("active");
+                    $(".destSelect-first-level").removeClass("active");
+
+                    $(this).addClass("active");
+                    $(this).parents("li.destSelect-first-level").addClass("active");
+
+                    $(".cityList .second-level").hide();
+                    $(this).closest("ul.second-level").show();
+                }
+            });
+        }
+    }
+
+    function setRightNavHeight() {
+        if ($(".right-nav-block").length !== 0) {
+            $(".right-nav-block").eq(0).css({
+                "height": document.documentElement.clientHeight + "px"
+            });
+
+            $(".right-nav-block .main-nav").css({
+                "margin-top": ((document.documentElement.clientHeight - 450) / 2) + "px"
+            });
+        }
+    }
+
+    function setWrapperHeight() {
+        if ($(".main-wrapper").length !== 0) {
+            $(".main-wrapper").eq(0).css({
+                "min-height": (document.documentElement.clientHeight - 142) + "px"
+            });
+        }
+    }
+
+</script>
+
+</body>
+</html>
+</html>
