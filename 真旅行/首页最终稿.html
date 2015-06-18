@@ -24,6 +24,232 @@
     <script type="text/javascript" src="../js/base/html5.js"></script>
     <script type="text/javascript" src="../js/base/respond.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        .main-wrapper{
+            width: 1420px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .modelTitle{
+            font-family: "Adobe 黑体 Std";
+            font-size: 30px;
+            color: #555555;
+            text-align: center;
+            margin: 45px 0 ;
+        }
+        .modelTitle .colorD3d3d3{
+            font-family: "Fixedsys";
+            font-size: 48px;
+            color: #d3d3d3;
+        }
+        .shareModel li{
+            float: left;
+            width: 33.33%;
+            min-height: 440px;
+            padding-top: 60px;
+            background-color: #f8f8f8;
+            color: #555555;
+            text-align: center;
+        }
+        .shareModel li.special{
+            background-color: #f3f3f3;
+        }
+        .shareModel li img{
+            width: 170px;
+            height: 200px;
+        }
+        .shareModel li h3{
+            font-size: 25px;
+            margin: 225px 0 20px;
+        }
+        .shareModel li .explainFonts{
+            font-size: 18px;
+            color: #7f7f7f;
+            width: 330px;
+            margin: 0 auto;
+            line-height: 27px;
+        }
+        .shareModel .imgTransformation{
+            position: relative;
+        }
+        .imgTransformation .shareIcon01,
+        .imgTransformation .shareIcon02,
+        .imgTransformation .shareIcon03{
+            display: inline-block;
+            background: url("../images/client/commonIcon.png") no-repeat;
+            vertical-align: middle;
+            position: absolute;
+            left: 41%;
+            top: 50px;
+        }
+        .imgTransformation .shareIcon01{
+            width: 83px;
+            height: 45px;
+            background-position: -109px -50px;
+            top: 60px;
+        }
+        .imgTransformation .shareIcon02{
+            width: 67px;
+            height: 67px;
+            background-position: 0 -271px;
+            left: 43%;
+        }
+        .imgTransformation .shareIcon03{
+            width: 56px;
+            height: 69px;
+            background-position: -107px -103px;
+            left: 44%;
+        }
+        .imgTransformation img{
+            transition:width height 2s;
+            -moz-transition:width height 2s; /* Firefox 4 */
+            -webkit-transition:width height 2s; /* Safari and Chrome */
+            -o-transition:width height 2s; /* Opera */
+            position: absolute;
+            left: 32%;
+        }
+        .imgTransformation img:hover{
+            width: 190px;
+            height: 220px;
+            left: 30%;
+        }
+        .brandStory{
+            color: #555555;
+            background:url("../images/client/storyBg.jpg") no-repeat;
+            height: 647px;
+            position: relative;
+        }
+        .brandStory .brandStoryIcon{
+            display: inline-block;
+            width: 86px;
+            height: 86px;
+            vertical-align: middle;
+            background: url("../images/client/brandStoryIcon.png") no-repeat;
+            position: absolute;
+            left: 47%;
+            top: 85px;
+            z-index: 2;
+        }
+        .brandStory .brandStoryFonts{
+            width: 950px;
+            min-height: 380px;
+            padding: 15px 60px;
+            position: absolute;
+            left: 244px;
+            top: 134px;
+            background: rgba(255,255,255,0.8);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
+        }
+        .brandStoryFonts .brandTitle{
+            font-size: 30px;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #d6d6d5;
+            text-align: center;
+        }
+        .brandStoryFonts .fontsDetails{
+            font-size: 14px;
+            line-height: 25px;
+        }
+        .shareModel.serveModel{
+            margin: 0 90px;
+            border-bottom: 1px solid #d6d6d6;
+        }
+        .shareModel.serveModel li{
+            background: none;
+            padding: 0 0 50px;
+            min-height: 260px;
+        }
+        .shareModel.serveModel li img{
+            width: auto;
+            height: auto;
+        }
+        .shareModel.serveModel li h3{
+            margin: 20px 0;
+        }
+        .titleExplain{
+            font-size: 18px;
+            color: #7f7f7f;
+            text-align: center;
+            margin: -20px 90px 60px;
+        }
+        .aboutUsModel{
+            margin: 80px 90px 30px;
+            padding-bottom: 50px;
+            background: url("../images/client/imgBgMap.png") no-repeat;
+            border-bottom: 1px solid #d6d6d5;
+        }
+        .aboutUsModel > li{
+            margin: 0 70px 25px;
+        }
+        .aboutUsModel > li.secondLi{
+            margin: 0 140px 25px;
+        }
+        .aboutUsModel > li.thirdLi{
+            margin: 0 210px 25px;
+        }
+        .aboutUsModel > li.fourthLi{
+            margin: 0 280px 25px;
+        }
+        .aboutUsModel > li.fifthLi{
+            margin: 0 350px 25px;
+        }
+        .aboutUsModel .aboutUsImg li{
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+        }
+        .aboutUsModel .aboutUsImg img{
+            width: 108px;
+            height: 127px;
+        }
+        .partnersModel{
+            margin: 20px 90px;
+            text-align: center;
+        }
+        .partnersModel a{
+            display: inline-block;
+            margin-left: 45px;
+            vertical-align: middle;
+            background: url("../images/client/partners.jpg") no-repeat;
+        }
+        .partnersModel a:first-child{
+            margin-left: 0;
+        }
+        .partnersModel .alila{
+            width: 119px;
+            height: 42px;
+            background-position: 0 -11px;
+        }
+        .partnersModel .como{
+            width: 92px;
+            height: 27px;
+            background-position: -184px -17px;
+        }
+        .partnersModel .aman{
+            width: 83px;
+            height: 38px;
+            background-position: -340px -13px;
+        }
+        .partnersModel .belmond{
+            width: 106px;
+            height: 43px;
+            background-position: -482px -12px;
+        }
+        .partnersModel .sixSenses{
+            width: 80px;
+            height: 69px;
+            background-position: -628px 0;
+        }
+        .partnersModel .swireHotels{
+            width: 140px;
+            height: 18px;
+            background-position: -756px -22px;
+        }
+
+    </style>
+    
 </head>
 <body>
     <header>
@@ -245,232 +471,6 @@
         </div>
     </div>
     
-    
-<style type="text/css">
-    .main-container{
-        background-color: #fff;
-        background: -webkit-linear-gradient(top, #f1f1f1, #f1f1f1);
-    }
-    .main-wrapper{
-        width: 1420px;
-        background-color: #fff;
-        overflow: hidden;
-    }
-    .modelTitle{
-        font-family: "Adobe 黑体 Std";
-        font-size: 30px;
-        color: #555555;
-        text-align: center;
-        margin: 45px 0 ;
-    }
-    .modelTitle .colorD3d3d3{
-        font-family: "Fixedsys";
-        font-size: 48px;
-        color: #d3d3d3;
-    }
-    .shareModel li{
-        float: left;
-        width: 33.33%;
-        min-height: 440px;
-        padding-top: 60px;
-        background-color: #f8f8f8;
-        color: #555555;
-        text-align: center;
-    }
-    .shareModel li.special{
-        background-color: #f3f3f3;
-    }
-    .shareModel li img{
-        width: 170px;
-        height: 200px;
-    }
-    .shareModel li h3{
-        font-size: 25px;
-        margin: 225px 0 20px;
-    }
-    .shareModel li .explainFonts{
-        font-size: 18px;
-        color: #7f7f7f;
-        width: 330px;
-        margin: 0 auto;
-        line-height: 27px;
-    }
-    .shareModel .imgTransformation{
-        position: relative;
-    }
-    .imgTransformation .shareIcon01,
-    .imgTransformation .shareIcon02,
-    .imgTransformation .shareIcon03{
-        display: inline-block;
-        background: url("../images/client/commonIcon.png") no-repeat;
-        vertical-align: middle;
-        position: absolute;
-        left: 41%;
-        top: 50px;
-    }
-    .imgTransformation .shareIcon01{
-        width: 83px;
-        height: 45px;
-        background-position: -109px -50px;
-        top: 60px;
-    }
-    .imgTransformation .shareIcon02{
-        width: 67px;
-        height: 67px;
-        background-position: 0 -271px;
-        left: 43%;
-    }
-    .imgTransformation .shareIcon03{
-        width: 56px;
-        height: 69px;
-        background-position: -107px -103px;
-        left: 44%;
-    }
-    .imgTransformation img{
-        position: absolute;
-        left: 32%;
-    }
-    .imgTransformation img:hover{
-        width: 180px;
-        height: 210px;
-    }
-    .brandStory{
-        color: #555555;
-        background:url("../images/client/storyBg.jpg") no-repeat;
-        height: 647px;
-        position: relative;
-    }
-    .brandStory .brandStoryIcon{
-        display: inline-block;
-        width: 86px;
-        height: 86px;
-        vertical-align: middle;
-        background: url("../images/client/brandStoryIcon.png") no-repeat;
-        position: absolute;
-        left: 47%;
-        top: 85px;
-        z-index: 2;
-    }
-    .brandStory .brandStoryFonts{
-        width: 950px;
-        min-height: 380px;
-        padding: 15px 60px;
-        position: absolute;
-        left: 244px;
-        top: 134px;
-        background: rgba(255,255,255,0.8);
-        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
-    }
-    .brandStoryFonts .brandTitle{
-        font-size: 30px;
-        padding: 20px;
-        margin-bottom: 40px;
-        border-bottom: 1px solid #d6d6d5;
-        text-align: center;
-    }
-    .brandStoryFonts .fontsDetails{
-        font-size: 14px;
-        line-height: 25px;
-    }
-    .shareModel.serveModel{
-        margin: 0 90px;
-        border-bottom: 1px solid #d6d6d6;
-    }
-    .shareModel.serveModel li{
-        background: none;
-        padding: 0 0 50px;
-        min-height: 260px;
-    }
-    .shareModel.serveModel li img{
-        width: auto;
-        height: auto;
-    }
-    .shareModel.serveModel li h3{
-        margin: 20px 0;
-    }
-    .titleExplain{
-        font-size: 18px;
-        color: #7f7f7f;
-        text-align: center;
-        margin: -20px 90px 60px;
-    }
-    .aboutUsModel{
-        margin: 80px 90px 30px;
-        padding-bottom: 50px;
-        background: url("../images/client/imgBgMap.png") no-repeat;
-        border-bottom: 1px solid #d6d6d5;
-    }
-    .aboutUsModel > li{
-        margin: 0 70px 25px;
-    }
-    .aboutUsModel > li.secondLi{
-        margin: 0 140px 25px;
-    }
-    .aboutUsModel > li.thirdLi{
-        margin: 0 210px 25px;
-    }
-    .aboutUsModel > li.fourthLi{
-        margin: 0 280px 25px;
-    }
-    .aboutUsModel > li.fifthLi{
-        margin: 0 350px 25px;
-    }
-    .aboutUsModel .aboutUsImg li{
-        display: inline-block;
-        width: 150px;
-        text-align: center;
-    }
-    .aboutUsModel .aboutUsImg img{
-        width: 108px;
-        height: 127px;
-    }
-    .partnersModel{
-        margin: 20px 90px;
-        text-align: center;
-    }
-    .partnersModel a{
-        display: inline-block;
-        margin-left: 45px;
-        vertical-align: middle;
-        background: url("../images/client/partners.jpg") no-repeat;
-    }
-    .partnersModel a:first-child{
-        margin-left: 0;
-    }
-    .partnersModel .alila{
-        width: 119px;
-        height: 42px;
-        background-position: 0 -11px;
-    }
-    .partnersModel .como{
-        width: 92px;
-        height: 27px;
-        background-position: -184px -17px;
-    }
-    .partnersModel .aman{
-        width: 83px;
-        height: 38px;
-        background-position: -340px -13px;
-    }
-    .partnersModel .belmond{
-        width: 106px;
-        height: 43px;
-        background-position: -482px -12px;
-    }
-    .partnersModel .sixSenses{
-        width: 80px;
-        height: 69px;
-        background-position: -628px 0;
-    }
-    .partnersModel .swireHotels{
-        width: 140px;
-        height: 18px;
-        background-position: -756px -22px;
-    }
-    
-    
-</style>
-
-
+  
 </body>
 </html>
