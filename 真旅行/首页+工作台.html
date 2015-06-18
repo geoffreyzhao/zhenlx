@@ -16,6 +16,7 @@
     <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/client/common.js"></script>
+    <script type="text/javascript" src="../js/cycle/jquery.cycle.all.js"></script>
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
@@ -26,200 +27,264 @@
 	<header>
 		<div class="head clearfix">
 			<div class="logo"></div>
-            
-            <div class="searchModel">
-                <!-- <div class="leftBorderStyle"></div> -->
-               <div class="searchContent">
-                   <table class="searchTab">
-                       <colgroup>
-                           <col width="94">
-                           <col width="141">
-                           <col width="99">
-                           <col width="464">
-                           <col width="">
-                       </colgroup>
-                       <tbody>
-                       <tr>
-                           <th class="addIcon"><span class="commonIcon startOffIcon"></span><span class="startPlace-title">出发地</span></th>
-                           <td>
-                               <div class="startOffPlaceModel">
-                                   <div class="startOffPlace">
-                                       <input type="text" class="startOffInput" value="上海" style="width: 141px;" readonly="readonly">
-                                       <span class="caret"></span>
-                                   </div>
-                                   <ul class="selectStartOffPlace">
-                                       <li class="active">上海</li>
-                                       <li>苏州</li>
-                                       <li>杭州</li>
-                                   </ul>
-                               </div>
-                           </td>
-                           <th class="addIcon"><span class="commonIcon destinationIcon"></span><span class="destination-title">目的地</span></th>
-                           <td>
-                               <div class="destinationModel">
-                                   <div class="destination">
-                                       <!-- <span class="commonIcon destinationIcon"></span> -->
-                                       <input type="text" class="destinationInput" value="" style="width:464px;" placeholder="目的地" readonly="readonly">
-                                       <input id="selectedDestLevel" type="hidden"/>
-                                   </div>
-                                   <div class="selectDestination">
-                                       <ul class="cityList ul-dest-first-level">
-                                           <li class="destSelect-first-level">
-                                               <span class="fl-destName">国内精选</span>
-                                               <span class="nav-tree-arrow"></span>
-                                               <ul class="second-level">
-                                                   <li class="sl-destName">九寨沟</li>
-                                                   <li class="sl-destName">北京</li>
-                                                   <li class="sl-destName">海南岛</li>
-                                                   <li class="sl-destName">杭州</li>
-                                                   <li class="sl-destName">丽江</li>
-                                               </ul>
-                                           </li>
-                                           <li class="destSelect-first-level">
-                                               <span class="fl-destName">日韩</span>
-                                               <span class="nav-tree-arrow"></span>
-                                               <ul class="second-level">
-                                                   <li class="sl-destName">首尔</li>
-                                                   <li class="sl-destName">济州岛</li>
-                                                   <li class="sl-destName">东京</li>
-                                               </ul>
-                                           </li>
-                                           <li class="destSelect-first-level">
-                                               <span class="fl-destName">东南亚</span>
-                                               <span class="nav-tree-arrow"></span>
-                                               <ul class="second-level">
-                                                   <li class="sl-destName">泰国</li>
-                                                   <li class="sl-destName">新加坡</li>
-                                                   <li class="sl-destName">柬埔寨</li>
-                                                   <li class="sl-destName">普吉岛</li>
-                                                   <li class="sl-destName">马尔代夫</li>
-                                               </ul>
-                                           </li>
-                                           <li class="destSelect-first-level">
-                                               <span class="fl-destName">欧洲</span>
-                                               <span class="nav-tree-arrow"></span>
-                                               <ul class="second-level">
-                                                   <li class="sl-destName">意大利</li>
-                                                   <li class="sl-destName">法国</li>
-                                               </ul>
-                                           </li>
-                                           <li class="empty"></li>
-                                       </ul>
-                                   </div>
-                               </div>
-                           </td>
-                           <td class="searchbtn">
-                               <a href="javascript:void(0);"></a>
-                           </td>
-                       </tr>
-                       </tbody>
-                   </table>
-               </div>
-                <!-- <div class="rightBorderStyle"></div> -->
-            </div>
-            <div class="top-right-block">
-                <div class="login-entrance" style="display: none;">
-                    <a class="login commonBtn" href="javascript:;">登录</a><a class="register commonBtn" href="javascript:;">注册</a>
-                    <div class="login-box">
-                        <div class="arrow"></div>
-                        <div style="width: 262px;" class="errorBoxContent">
-                            <i class="commonIcon errorIcon"></i>输入的用户名或密码有错
-                        </div><br/>
-                        <div class="componentInput">
-                            <i class="commonIcon personHeaderIcon"></i>
-                            <input type="text" placeholder="手机号/邮箱" style="width: 225px;">    
-                        </div><br/>
-                        <div class="componentInput forgetPW">
-                            <i class="commonIcon lockIcon"></i>
-                            <input type="password" placeholder="请输入密码" style="width: 143px;">
-                            <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
-                        </div><br/>
-                        <div class="componentInput verificationCode">
-                            <i class="commonIcon verificationCodeIcon"></i>
-                            <input type="text" placeholder="请输入验证码" style="width: 120px;">
-                            <img src="../images/client/verificationCode.png">
-                        </div><br/>
-                        <a href="javascript:void(0);" class="commonBtn blueBtn loginBtn" style="width:263px;">登 录</a>
-                        <div class="login-attach"> 
-                            <div class="checkboxContent">         
-                                <label class="checkbox active">
-                                    <span class="commonIcon checkboxIcon"></span>记住我
-                                </label>
-                            </div>
-                            <a class="register-link" href="javascript:;">免费注册</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="after-login">
-                    <span class="userName">
-                        <span class="commonIcon userIcon"></span>
-                        <em>Dorian zhou</em>
-                    </span>
-                    <div class="userInfo-box">
-                        <div class="arrow"></div>
-                        <div class="userInfo-block">
-                            <div class="user-avatar">
-                                <img src="../images/client/headPortrait01.png" alt="">
-                                <div class="user-name">Dorian Zhou</div>
-                            </div>
-                            <div class="oper-btn">
-                                <a href="javascript:;">用户中心</a>
-                                <a class="logoutBtn" href="javascript:;">退出登录</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="searchModel">
+             <div class="searchContent">
+                 <table class="searchTab">
+                     <colgroup>
+                         <col width="94">
+                         <col width="140">
+                         <col width="99">
+                         <col width="464">
+                         <col width="">
+                     </colgroup>
+                     <tbody>
+                     <tr>
+                         <th class="addIcon"><span class="commonIcon startOffIcon"></span><span class="startPlace-title">出发地</span></th>
+                         <td>
+                             <div class="startOffPlaceModel">
+                                 <div class="startOffPlace">
+                                     <input type="text" class="startOffInput" value="上海" style="width: 141px;" readonly="readonly">
+                                     <span class="caret"></span>
+                                 </div>
+                                 <ul class="selectStartOffPlace">
+                                     <li class="active">上海</li>
+                                     <li>苏州</li>
+                                     <li>杭州</li>
+                                 </ul>
+                             </div>
+                         </td>
+                         <th class="addIcon"><span class="commonIcon destinationIcon"></span><span class="destination-title">目的地</span></th>
+                         <td>
+                             <div class="destinationModel">
+                                 <div class="destination">
+                                     <!-- <span class="commonIcon destinationIcon"></span> -->
+                                     <input type="text" class="destinationInput" value="" style="width:464px;" placeholder="目的地" readonly="readonly">
+                                     <input id="selectedDestLevel" type="hidden"/>
+                                 </div>
+                                 <div class="selectDestination">
+                                     <ul class="cityList ul-dest-first-level">
+                                         <li class="destSelect-first-level">
+                                             <span class="fl-destName">国内精选</span>
+                                             <span class="nav-tree-arrow"></span>
+                                             <ul class="second-level">
+                                                 <li class="sl-destName">九寨沟</li>
+                                                 <li class="sl-destName">北京</li>
+                                                 <li class="sl-destName">海南岛</li>
+                                                 <li class="sl-destName">杭州</li>
+                                                 <li class="sl-destName">丽江</li>
+                                             </ul>
+                                         </li>
+                                         <li class="destSelect-first-level">
+                                             <span class="fl-destName">日韩</span>
+                                             <span class="nav-tree-arrow"></span>
+                                             <ul class="second-level">
+                                                 <li class="sl-destName">首尔</li>
+                                                 <li class="sl-destName">济州岛</li>
+                                                 <li class="sl-destName">东京</li>
+                                             </ul>
+                                         </li>
+                                         <li class="destSelect-first-level">
+                                             <span class="fl-destName">东南亚</span>
+                                             <span class="nav-tree-arrow"></span>
+                                             <ul class="second-level">
+                                                 <li class="sl-destName">泰国</li>
+                                                 <li class="sl-destName">新加坡</li>
+                                                 <li class="sl-destName">柬埔寨</li>
+                                                 <li class="sl-destName">普吉岛</li>
+                                                 <li class="sl-destName">马尔代夫</li>
+                                             </ul>
+                                         </li>
+                                         <li class="destSelect-first-level">
+                                             <span class="fl-destName">欧洲</span>
+                                             <span class="nav-tree-arrow"></span>
+                                             <ul class="second-level">
+                                                 <li class="sl-destName">意大利</li>
+                                                 <li class="sl-destName">法国</li>
+                                             </ul>
+                                         </li>
+                                         <li class="empty"></li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </td>
+                         <td class="searchbtn">
+                             <a href="javascript:void(0);"></a>
+                         </td>
+                     </tr>
+                     </tbody>
+                 </table>
+             </div>
+              <!-- <div class="rightBorderStyle"></div> -->
+          </div>
+          <div class="top-right-block">
+              <div class="login-entrance" style="display: none;">
+                  <a class="login commonBtn" href="javascript:;">登录</a><a class="register commonBtn" href="javascript:;">注册</a>
+                  <div class="login-box">
+                      <div class="arrow"></div>
+                      <div style="width: 262px;" class="errorBoxContent">
+                          <i class="commonIcon errorIcon"></i>输入的用户名或密码有错
+                      </div><br/>
+                      <div class="componentInput">
+                          <i class="commonIcon personHeaderIcon"></i>
+                          <input type="text" placeholder="手机号/邮箱" style="width: 225px;">    
+                      </div><br/>
+                      <div class="componentInput forgetPW">
+                          <i class="commonIcon lockIcon"></i>
+                          <input type="password" placeholder="请输入密码" style="width: 143px;">
+                          <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
+                      </div><br/>
+                      <div class="componentInput verificationCode">
+                          <i class="commonIcon verificationCodeIcon"></i>
+                          <input type="text" placeholder="请输入验证码" style="width: 120px;">
+                          <img src="../images/client/verificationCode.png">
+                      </div><br/>
+                      <a href="javascript:void(0);" class="commonBtn blueBtn loginBtn" style="width:263px;">登 录</a>
+                      <div class="login-attach"> 
+                          <div class="checkboxContent">         
+                              <label class="checkbox active">
+                                  <span class="commonIcon checkboxIcon"></span>记住我
+                              </label>
+                          </div>
+                          <a class="register-link" href="javascript:;">免费注册</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="after-login">
+                  <span class="userName">
+                      <span class="commonIcon userIcon"></span>
+                      <em>Dorian zhou</em>
+                  </span>
+                  <div class="userInfo-box">
+                      <div class="arrow"></div>
+                      <div class="userInfo-block">
+                          <div class="user-avatar">
+                              <img src="../images/client/headPortrait01.png" alt="">
+                              <div class="user-name">Dorian Zhou</div>
+                          </div>
+                          <div class="oper-btn">
+                              <a href="javascript:;">用户中心</a>
+                              <a class="logoutBtn" href="javascript:;">退出登录</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
 		</div>
 	</header>
 	
 	<div class="main-container">
-		<div class="main-wrapper" id="main-wrapper">
-	            <div class="banner carousel" id="slidershow">
-	            		<!-- Indicators -->	            
-	            		<ol class="carousel-indicators">
-	            			<li class="active" data-target="#carousel-example-generic" data-slide-to="0"></li>
-	            			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-	            		</ol>
+      <div class="banner">
+        <ul class="product">
+          <li>
+            <img src="../images/client/indexpage-banner01.jpg"/>                
+          </li>
+          <li>
+              <img src="../images/client/indexpage-banner02.jpg"/>                
+          </li>
+        </ul>
+      </div>
+      <div class="work-platform">
+        <div class="workpla-login">
+          <span class="logintext">您还未登录账号，请先登录 </span>
+          <div class="componentInput"> <i class="commonIcon personHeaderIcon"></i>
+            <input type="text" placeholder="手机号/邮箱" style="width:224px;">
+          </div>
+          <div class="componentInput forgetPW"> <i class="commonIcon lockIcon"></i>
+            <input type="password" placeholder="请输入密码" style="width:142px;">          
+            <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
+          </div>
+          <a href="javascript:void(0);" class="commonBtn blueBtn loginBtn" style="width:262px;">登 录</a>
+          <div class="login-attach">
+            <div class="checkboxContent">
+              <label class="checkbox active">
+                <span class="commonIcon checkboxIcon"></span>
+                记住我
+              </label>
+            </div>
+            <a class="register-link" href="javascript:;">免费注册</a>
+          </div>
+        </div>
+        <div class="workpla-afterlogin">
+          <div class="exit">
+            <div class="exitbtn">
+              <span class="commonIcon exitIcon"></span>
+              <span>退出</span>
+            </div>
+          </div>
+          <div class="userInfo">
+            <span class="leftImg">
+              <img src="../images/client/avatar-01.jpg">
+            </span>
+            <div class="rightUserInfo">
+              <span class="rightUsername">太平洋的鲸鱼</span>
+              <div>
+                <span class="commonIcon userIcon"></span>
+                <span>用户中心</span>
+              </div>
+            </div>
+          </div>
+          <div class="columnModel">  <!-- 栏目模块 -->
+            <ul>
+              <li>
+                <a href="javascrip:void(0);">
+                  <span class="orderIcon"></span>
+                  <span>我的订单</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascrip:void(0);">
+                  <span class="favorIcon"></span>
+                  <span class="current">我的订单</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascrip:void(0);">
+                  <span class="elecWalletIcon"></span>
+                  <span>我的订单</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascrip:void(0);">
+                  <span class="messageIcon"></span>
+                  <span>我的订单</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tipTab">
+            <div class="tab-toggle">
+              <ul class="message-tip-tab clearfix">
+                <li class="current">提醒</li>
+                <li>私信</li>
+              </ul>
+              <div class="slidline"></div>
+              <div class="tab-cont-block">
+                <div class="tab-cont remind">
+                    提醒提醒提醒提醒提醒提醒提醒提醒
+                </div>
+                <div class="tab-cont private-letter">
+                    私信私信私信私信私信上小学数学
+                </div>
+              </div>
 
-	            		<!-- Wrapper for slides -->	            
-	            		<div class="carousel-inner" role="listbox">
-	            			<div class="item active">
-	            				<img src="../../images/client/indexpage-banner01.jpg" alt="...">	            
-	            				<div class="carousel-caption">...</div>
-	            			</div>
-	            			<div class="item">
-	            				<img src="../../images/client/indexpage-banner02.jpg" alt="...">	            
-	            				<div class="carousel-caption">...</div>
-	            			</div>
-	            			...
-	            		</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
 
-	            		<!-- Controls -->	            
-	            		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-	            			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	            			<span class="sr-only">Previous</span>
-	            		</a>
-	            		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-	            			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	            			<span class="sr-only">Next</span>
-	            		</a>
-	            </div>
-		</div>
-	
 		<div class="foot clearfix">
 			<span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
 			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
 		</div>
-	</div>
 
-	<div class="right-nav-block">
+	<!-- <div class="right-nav-block">
 		<div class="main-nav">
-			<!-- <div class="right-nav-icon right-nav-info">
+ 			  <div class="right-nav-icon right-nav-info">
 				<img src="../images/client/avatar-01.jpg" alt="" style="width:25px;height:25px;border-radius: 50%;">
 			</div> -->
 			<!-- <img class="right-nav-icon right-nav-info" src="../images/client/nav-avatar-img.png" alt=""> -->
-			<div class="right-nav-icon right-nav-list"></div>
+			<!-- <div class="right-nav-icon right-nav-list"></div>
 			<div class="right-nav-icon right-nav-favor"></div>
 			<div class="right-nav-icon right-nav-asset"></div>
 			<div class="right-nav-icon right-nav-notice"></div>
@@ -228,8 +293,8 @@
 		<div class="bottom-nav">
 			<div class="right-nav-icon right-nav-edit"></div>
 			<div class="right-nav-icon right-nav-backToTop"></div>
-		</div>
-	</div>
+		</div> 
+	</div>-->
 
 	<div class="login-box box-relative-location">
 		<div class="arrow"><div class="innerArrow"></div></div>
@@ -496,6 +561,27 @@
 		    }
 		}
         
+
+    //banner轮播
+    /*$('.product').cycle({
+        fx:'scrollLeft',
+        timeout: 1000, 
+        speed: 2000, 
+        pause: true 
+      });*/
+
+// 选项卡点击
+    $(".tab-cont").eq(0).show();
+    $(".message-tip-tab li").each(function(index){
+        $(this).click(function(){
+            $(".tab-cont").hide();
+            $(".tab-cont").eq(index).show();
+            $(".message-tip-tab li").removeClass("current");
+            $(this).addClass("current");
+            $(".slidline").animate({'left':169*$(this).index()},200);
+        });
+    });
+  
 	</script>
 	
 </body>
