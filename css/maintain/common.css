@@ -923,3 +923,106 @@ input[type="text"].verifyBox:focus{
     float: right;
 }
 /*  头部没有背景条的按钮 end  */
+
+
+/* 星级样式 S*/
+.commonStarLevelIcon{
+    display: inline-block;
+    width: 138px;
+    height: 13px;
+    vertical-align: middle;
+    line-height: 1;
+    background: url("../../images/client/starLevelIcon.png") no-repeat;
+}
+.starLevelIcon{
+    background-position: 0 -18px;
+}
+.starLevelIcon span{
+    margin-top: -7px;
+    background-position: 0 0;
+}
+.commonStarLevelIcon.starLevel-1.noLeftStar {
+    width: 13px;
+}
+.commonStarLevelIcon.starLevel-2.noLeftStar {
+    width: 34px;
+}
+.commonStarLevelIcon.starLevel-3.noLeftStar {
+    width: 54px;
+}
+.commonStarLevelIcon.starLevel-4.noLeftStar {
+    width: 75px;
+}
+.commonStarLevelIcon.starLevel-5.noLeftStar {
+    width: 96px;
+}
+.commonStarLevelIcon.starLevel-6.noLeftStar {
+    width: 117px;
+}
+.commonStarLevelIcon.starLevel-7.noLeftStar {
+    width: 138px;
+}
+.commonStarLevelIcon.starLevel-0-5.noLeftStar {
+    width: 7px;
+}
+.commonStarLevelIcon.starLevel-1-5.noLeftStar {
+    width: 28px;
+}
+.commonStarLevelIcon.starLevel-2-5.noLeftStar {
+    width: 48px;
+}
+.commonStarLevelIcon.starLevel-3-5.noLeftStar {
+    width: 69px;
+}
+.commonStarLevelIcon.starLevel-4-5.noLeftStar {
+    width: 90px;
+}
+.commonStarLevelIcon.starLevel-5-5.noLeftStar {
+    width: 111px;
+}
+.commonStarLevelIcon.starLevel-6-5.noLeftStar {
+    width: 132px;
+}
+.commonStarLevelIcon.starLevel-1 span{
+    width: 13px;
+}
+.commonStarLevelIcon.starLevel-2 span{
+    width: 34px;
+}
+.commonStarLevelIcon.starLevel-3 span{
+    width: 54px;
+}
+.commonStarLevelIcon.starLevel-4 span{
+    width: 75px;
+}
+.commonStarLevelIcon.starLevel-5 span{
+    width: 96px;
+}
+.commonStarLevelIcon.starLevel-6 span{
+    width: 117px;
+}
+.commonStarLevelIcon.starLevel-7 span{
+    width: 138px;
+}
+.commonStarLevelIcon.starLevel-0-5 span{
+    width: 7px;
+}
+.commonStarLevelIcon.starLevel-1-5 span{
+    width: 28px;
+}
+.commonStarLevelIcon.starLevel-2-5 span{
+    width: 48px;
+}
+.commonStarLevelIcon.starLevel-3-5 span{
+    width: 69px;
+}
+.commonStarLevelIcon.starLevel-4-5 span{
+    width: 90px;
+}
+.commonStarLevelIcon.starLevel-5-5 span{
+    width: 111px;
+}
+.commonStarLevelIcon.starLevel-6-5 span{
+    width: 132px;
+}
+/* 星级样式 E*/

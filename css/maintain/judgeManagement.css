@@ -222,6 +222,9 @@
     float: left;
     display: inline-block;
 }
+.row-left .commonStarLevelIcon span{
+     margin: -7px 0 0; 
+}
 .txt-type{
     font-size: 14px;
     line-height:28px;
