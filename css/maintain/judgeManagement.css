@@ -287,5 +287,17 @@
     margin:5px 18px;
     vertical-align: middle;
 }
-
+.titleEllipsis,
+.contentEllipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.contentEllipsis{
+    width: 410px;
+}
+.titleEllipsis{
+    width: 190px;
+}
 /* end */
