@@ -110,7 +110,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="first-level-nav currentStairMenu">
+                        <li class="first-level-nav">
                             <a href="javascript:void(0);">会员管理</a>
 
                             <div class="second-level-nav">
@@ -181,10 +181,139 @@
 
     <div class="main-container">
         <div class="whiteBg">
-
+            <h2>消息</h2>
+            <table class="commonTab" style="margin-top:10px;">
+                <colgroup>
+                    <col width="140">
+                    <col width="148">
+                    <col width="580">
+                    <col width="73">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>业务类型</th>
+                    <th>消息主题</th>
+                    <th>消息内容</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>订单通知<i class="hot-icon"></i></td>
+                    <td>创建订单</td>
+                    <td><a href="javascript:void(0);">用户XXX创建订单，订单号 15031411235</a></td>
+                    <td><a href="javascript:void(0);" class="greenFontsLink deleteNotice">删除</a></td>
+                </tr>
+                <tr>
+                    <td>订单通知<i class="hot-icon"></i></td>
+                    <td>支付成功</td>
+                    <td><a href="javascript:void(0);">用户XXX创建订单，订单号 15031411235，请速op确认</a></td>
+                    <td><a href="javascript:void(0);" class="greenFontsLink deleteNotice">删除</a></td>
+                </tr>
+                <tr>
+                    <td>评价通知</td>
+                    <td>取消订单</td>
+                    <td><a href="javascript:void(0);">用户XXX创建订单，订单号 15031411235，原因支付超时/后台操作</a></td>
+                    <td><a href="javascript:void(0);" class="greenFontsLink deleteNotice">删除</a></td>
+                </tr>
+                <tr>
+                    <td>订单通知</td>
+                    <td>礼盒发放</td>
+                    <td><a href="javascript:void(0);">用户XXX创建订单，订单号 15031411235，请速op确认</a></td>
+                    <td><a href="javascript:void(0);" class="greenFontsLink deleteNotice">删除</a></td>
+                </tr>
+                <tr>
+                    <td>订单通知</td>
+                    <td>新评价待审核</td>
+                    <td><a href="javascript:void(0);">用户XXX对产品“上海—北欧9天....”做了评价，请速审核</a></td>
+                    <td><a href="javascript:void(0);" class="greenFontsLink deleteNotice">删除</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="pagination" style="width:942px; float:left;">
+                <span class="countNum">共 331 条记录，</span>
+                        <span class="pageNum">
+                            <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
+                            <ul class="paginationNum" style="display: none;">
+                                <li class="active">
+                                    <a href="javascript:void(0);">5</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">10</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">20</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">30</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">40</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">50</a>
+                                </li>
+                            </ul>
+                        </span>
+                <span class="pageSize">1/10</span>
+                        <span class="pageArrow">
+                            <a href="javascript:void(0);" class="firstPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="prevPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="nextPage">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="lastPage">
+                                <i></i>
+                            </a>
+                        </span>
+                        <span>
+                            <span>跳转到</span>
+                            <input type="text" style="width: 45px;" class="pageToNum">
+                            <a href="javascript:void(0);" class="pageTo">
+                                <i></i>
+                            </a>
+                        </span>
+            </div>
         </div>
     </div>
     <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
 </div>
+<!--删除操作-->
+<div class="modal fade" id="deleModal">
+    <div class="modal-dialog" style="width: 450px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">操作提示</h4>
+            </div>
+            <div class="modal-body">
+                <p style="text-align: center"><span class="notice-icon"></span>确定删除所选消息？</p>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0);" class="commonNoticeBtn confirmBtn">确认</a>
+                <a href="javascript:void(0);" class="commonNoticeBtn cancelBtn" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $(".modal").modal({
+            backdrop: "static",
+            keyboard: false,
+            show: false
+        });
+        $(".deleteNotice").click(function(){
+            $("#deleModal").modal("show");
+        });
+    });
+</script>
 </body>
 </html>

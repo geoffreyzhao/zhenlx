@@ -146,7 +146,7 @@
                             <div class="second-level-nav">
                                 <ul class="secondLevelList clearfix">
                                     <li class="currentSecondLevelMenu">
-                                        <a href="javascript:void(0);">角色管理</a>
+                                        <a href="javascript:void(0);">角色维护</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0);">组织架构</a>
@@ -167,16 +167,16 @@
             </div>
         </div>
         <div class="headSecondLevel">
-            <div class="operationDiv"><i class="plusIcon"></i>添加角色</div>
+            <div class="operationDiv"><a href="角色维护.html"><i class="plusIcon"></i>添加角色</a></div>
         </div>
     </header>
     <div class="main-container">
         <section class="whiteBg clearfix">
-            <table class="commonTab productTab">
+            <table class="commonTab productTab" style="margin-top:10px;">
                 <colgroup>
-                    <col width="15%">
-                    <col width="12%">
-                    <col width="20%">
+                    <col width="393">
+                    <col width="307">
+                    <col width="235">
                 </colgroup>
                 <thead>
                 <tr>
@@ -189,20 +189,41 @@
                 <tr>
                     <td>财务</td>
                     <td>2</td>
-                    <td><a href="javascript:void(0);" class="greenFontsLink">复制</a><a href="javascript:void(0);"
+                    <td><a href="角色维护.html" class="greenFontsLink">复制</a><a href="角色维护.html"
                                                                                       class="greenFontsLink">编辑</a><a
                             href="javascript:void(0);" class="greenFontsLink deleRole">删除</a></td>
                 </tr>
                 <tr>
                     <td>内容编辑</td>
                     <td>2</td>
-                    <td><a href="javascript:void(0);" class="greenFontsLink">复制</a><a href="javascript:void(0);"
+                    <td><a href="角色维护.html" class="greenFontsLink">复制</a><a href="角色维护.html"
+                                                                                      class="greenFontsLink">编辑</a><a
+                            href="javascript:void(0);" class="greenFontsLink deleRole">删除</a></td>
+                </tr>
+                <tr>
+                    <td>系统设置</td>
+                    <td>1</td>
+                    <td><a href="角色维护.html" class="greenFontsLink">复制</a><a href="角色维护.html"
+                                                                                      class="greenFontsLink">编辑</a><a
+                            href="javascript:void(0);" class="greenFontsLink deleRole">删除</a></td>
+                </tr>
+                <tr>
+                    <td>邮件发送</td>
+                    <td>1</td>
+                    <td><a href="角色维护.html" class="greenFontsLink">复制</a><a href="角色维护.html"
+                                                                                      class="greenFontsLink">编辑</a><a
+                            href="javascript:void(0);" class="greenFontsLink deleRole">删除</a></td>
+                </tr>
+                <tr>
+                    <td>会员活动</td>
+                    <td>1</td>
+                    <td><a href="角色维护.html" class="greenFontsLink">复制</a><a href="角色维护.html"
                                                                                       class="greenFontsLink">编辑</a><a
                             href="javascript:void(0);" class="greenFontsLink deleRole">删除</a></td>
                 </tr>
                 </tbody>
             </table>
-            <div class="pagination">
+            <div class="pagination" style="width:936px; float:left;">
                 <span class="countNum">共 331 条记录，</span>
                         <span class="pageNum">
                             <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
@@ -283,8 +304,7 @@
         });
         $(".deleRole").click(function () {
             $("#deleModal").modal("show");
-        })
-
+        });
     });
 </script>
 </body>

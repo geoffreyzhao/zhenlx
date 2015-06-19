@@ -191,10 +191,6 @@ input[type="text"], input[type="password"]{
     margin-right:6px;
     color:#ffffff !important;
 }
-.login-entrance .login:hover{
-    color:#ffffff;
-    text-decoration: none;
-}
 .register{
     background:#f4f4f4;
 }
@@ -573,5 +569,75 @@ input[type="text"], input[type="password"]{
     font-size: 20px;
     line-height: 24px;
     border-bottom: 1px dashed #bbdde1;
+}
+/**底部导航栏**/
+.bottomMenu{
+    width: 1130px;
+    margin: 43px auto;
+    padding-left:24px;
+    padding-right:24px;
+    padding-top:40px;
+    font-size: 14px;
+    line-height:18px;
+    color:#8efff5;
+}
+.bottomMenu-left{
+    float:left;
+    display: inline-block;
+}
+.bottomMenu-left-img{
+    width:177px;
+    height:177px;
+    border:10px #ffffff solid;
+    float:left;
+    display: inline-block;
+    vertical-align: middle;
+    background: #ffffff url("../../images/client/withImg_02.jpg") no-repeat;
+}
+.bottomMenu-left-txt{
+    float:left;
+    margin-left:20px;
+}
+.bottomMenu-left-txt .bottomTxt-title{
+    font-size: 16px;
+    line-height:24px;
+    color:#ffffff;
+}
+.bottomMenu-right{
+    float:right;
+}
+.bottomMenu-right ul .menuRight-title{
+    font-size: 16px;
+    line-height:24px;
+    color:#ffffff;
+    margin-top:0px;
+    margin-bottom: 15px;
+}
+.rightMenu-list{
+    float:left;
+    display: inline;
+    margin-right:90px;
+    margin-bottom: 0px;
+}
+.bottomMenu-right ul li{
+    width:100px;
+    margin:10px 0;
+}
+.bottomMenu-right ul li a{
+    font-size: 14px;
+    line-height:18px;
+    color:#8efff5;
+}
+.bottomMenu-right ul li a:hover{
+    text-decoration: underline;
+}
+.foot .service-tel .phoneIcon{
+    width:12px;
+    height:15px;
+    margin-right:5px;
+    background: url("../../images/client/spirit.png") no-repeat -56px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 11;
 }
 /** end **/

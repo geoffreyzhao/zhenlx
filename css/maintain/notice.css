@@ -1,8 +1,100 @@
 @charset "utf-8";
 /** 消息中心 start **/
 .whiteBg{
+    min-height:540px;
     background-color: #fff;
-    padding: 10px;
+    padding-left:30px;
+    padding-top:10px;
+    margin:0 10px;
     font-size: 16px;
+    color:#666666;
+}
+.whiteBg h2{
+    margin-top:20px;
+    padding-left:15px;
+    font-size: 18px;
+}
+.commonTab {
+    margin-top:20px;
+    width:auto;
+}
+.commonTab td,
+.commonTab th{
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.commonTab thead{
+    background-color: #f5f5f5;
+}
+.commonTab tbody tr:hover{
+    background-color: #eefaff;
+}
+.commonTab tbody tr td a{
+    font-size: 14px;
+    color:#3ea4dc;
+    text-decoration: none;
+}
+.commonTab tbody tr td a:hover{
+    text-decoration: underline;
+}
+.commonTab .greenFontsLink{
+    color: #3db99a;
+}
+.commonTab .greenFontsLink:hover{
+    color: #3db99a;
+    text-decoration: underline;
+}
+.commonTab .grayFontsLink{
+    color: #666666;
+}
+.commonTab .grayFontsLink:hover{
+    color: #666666;
+    text-decoration: underline;
+}
+.hot-icon{
+    width:25px;
+    height:13px;
+    background: url("../../images/soHot-icon.png") no-repeat;
+    display: inline-block;
+    vertical-align: text-top;
+    position: relative;
+    top:-5px;
+}
+.notice-icon{
+    width:41px;
+    height:41px;
+    display: inline-block;
+    background:url("../../images/popupIcon.png") no-repeat 0 0px;
+    margin:5px 18px;
+    vertical-align: middle;
+}
+.modal-footer .commonNoticeBtn{
+    width:100px;
+    height:38px;
+    display: inline-block;
+    text-align:center;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height:38px;
+    color:#ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left:10px;
+}
+.confirmBtn{
+    background-color:#fe6869;
+}
+.confirmBtn:hover{
+    background-color:#f65253;
+}
+.cancelBtn{
+    background-color:#45c8dc;
+}
+.cancelBtn:hover{
+    background-color:#41bbce;
 }
 /** end **/

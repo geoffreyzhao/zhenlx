@@ -77,7 +77,7 @@
                             </div>
                             <div class="judge-tip">还可以输入<span style="color:#11b9b7;">500</span>个字</div>
                             <div style="margin-left:61px;"><a href="javascript:void(0);"
-                                                              class="commonBtn blueBtn">发布评论</a></div>
+                                                              class="commonBtn blueBtn" id="publishJudge">发布评论</a></div>
                         </form>
                     </div>
                 </div>
@@ -90,6 +90,9 @@
         <span class="service-tel"><span class="phoneIcon"></span>服务热线：<span class="telnum">400-888-666</span></span>
     </div>
 </div>
+
+<!--发布评论成功提示-->
+<div class="publish-success-tips hidden" id="sucTips"></div>
 
 <script type="text/javascript">
     $(function () {
@@ -104,6 +107,20 @@
             $(this).prevAll().removeClass("yellowStar");
             $(this).prevAll().toggleClass("yellowStar");
             $(this).nextAll().removeClass("yellowStar");
+        });
+        $("#publishJudge").click(function(){
+            var text = $(".txtArea").val();
+            console.info("打印"+text);
+            if(text == ""){
+                alert("您还没有填写评论。");
+            }else{
+                $("#sucTips").text("发布成功！");
+                $("#sucTips").slideDown("normal", function(){
+                    setTimeout(function(){
+                        $("#sucTips").slideUp();
+                    }, 2000)
+                }).removeClass("hidden");
+            }
         });
     });
 
