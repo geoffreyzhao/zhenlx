@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>首页</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/client/common.css">
     <link rel="stylesheet" type="text/css" href="../css/client/indexnewpage.css">
-	
+  
     <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/client/common.js"></script>
@@ -24,155 +24,113 @@
 </head>
 <body>
 
-	<header>
-		<div class="head clearfix">
-			<div class="logo"></div>
-          <div class="searchModel">
-             <div class="searchContent">
-                 <table class="searchTab">
-                     <colgroup>
-                         <col width="94">
-                         <col width="140">
-                         <col width="99">
-                         <col width="464">
-                         <col width="">
-                     </colgroup>
-                     <tbody>
-                     <tr>
-                         <th class="addIcon"><span class="commonIcon startOffIcon"></span><span class="startPlace-title">出发地</span></th>
-                         <td>
-                             <div class="startOffPlaceModel">
-                                 <div class="startOffPlace">
-                                     <input type="text" class="startOffInput" value="上海" style="width: 141px;" readonly="readonly">
-                                     <span class="caret"></span>
-                                 </div>
-                                 <ul class="selectStartOffPlace">
-                                     <li class="active">上海</li>
-                                     <li>苏州</li>
-                                     <li>杭州</li>
+  <header>
+    <div class="head clearfix">
+      <div class="logo"></div>
+      <div class="searchModel">
+         <div class="searchContent">
+             <table class="searchTab">
+                 <colgroup>
+                     <col width="95">
+                     <col width="142">
+                     <col width="100">
+                     <col width="424">
+                     <col width="">
+                 </colgroup>
+                 <tbody>
+                 <tr>
+                     <th class="addIcon"><span class="commonIcon startOffIcon"></span><span class="startPlace-title">出发地:</span></th>
+                     <td>
+                         <div class="startOffPlaceModel">
+                             <div class="startOffPlace">
+                                 <input type="text" class="startOffInput" value="上海" style="width: 141px;" readonly="readonly">
+                                 <span class="caret"></span>
+                             </div>
+                             <ul class="selectStartOffPlace">
+                                 <li class="active">上海</li>
+                                 <li>苏州</li>
+                                 <li>杭州</li>
+                             </ul>
+                         </div>
+                     </td>
+                     <th class="addIcon"><span class="commonIcon destinationIcon"></span><span class="destination-title">目的地:</span></th>
+                     <td>
+                         <div class="destinationModel">
+                             <div class="destination">
+                                 <!-- <span class="commonIcon destinationIcon"></span> -->
+                                 <input type="text" class="destinationInput" value="" style="width:466px;" placeholder="目的地" readonly="readonly">
+                                 <span class="caret"></span>
+                                 <!-- <input id="caret selectedDestLevel" type="hidden"/> -->
+                             </div>
+                             <div class="selectDestination">
+                                 <ul class="cityList ul-dest-first-level">
+                                     <li class="destSelect-first-level">
+                                         <span class="fl-destName">国内精选</span>
+                                         <span class="nav-tree-arrow"></span>
+                                         <ul class="second-level">
+                                             <li class="sl-destName">九寨沟</li>
+                                             <li class="sl-destName">北京</li>
+                                             <li class="sl-destName">海南岛</li>
+                                             <li class="sl-destName">杭州</li>
+                                             <li class="sl-destName">丽江</li>
+                                         </ul>
+                                     </li>
+                                     <li class="destSelect-first-level">
+                                         <span class="fl-destName">日韩</span>
+                                         <span class="nav-tree-arrow"></span>
+                                         <ul class="second-level">
+                                             <li class="sl-destName">首尔</li>
+                                             <li class="sl-destName">济州岛</li>
+                                             <li class="sl-destName">东京</li>
+                                         </ul>
+                                     </li>
+                                     <li class="destSelect-first-level">
+                                         <span class="fl-destName">东南亚</span>
+                                         <span class="nav-tree-arrow"></span>
+                                         <ul class="second-level">
+                                             <li class="sl-destName">泰国</li>
+                                             <li class="sl-destName">新加坡</li>
+                                             <li class="sl-destName">柬埔寨</li>
+                                             <li class="sl-destName">普吉岛</li>
+                                             <li class="sl-destName">马尔代夫</li>
+                                         </ul>
+                                     </li>
+                                     <li class="destSelect-first-level">
+                                         <span class="fl-destName">欧洲</span>
+                                         <span class="nav-tree-arrow"></span>
+                                         <ul class="second-level">
+                                             <li class="sl-destName">意大利</li>
+                                             <li class="sl-destName">法国</li>
+                                         </ul>
+                                     </li>
+                                     <li class="empty"></li>
                                  </ul>
                              </div>
-                         </td>
-                         <th class="addIcon"><span class="commonIcon destinationIcon"></span><span class="destination-title">目的地</span></th>
-                         <td>
-                             <div class="destinationModel">
-                                 <div class="destination">
-                                     <!-- <span class="commonIcon destinationIcon"></span> -->
-                                     <input type="text" class="destinationInput" value="" style="width:464px;" placeholder="目的地" readonly="readonly">
-                                     <input id="selectedDestLevel" type="hidden"/>
-                                 </div>
-                                 <div class="selectDestination">
-                                     <ul class="cityList ul-dest-first-level">
-                                         <li class="destSelect-first-level">
-                                             <span class="fl-destName">国内精选</span>
-                                             <span class="nav-tree-arrow"></span>
-                                             <ul class="second-level">
-                                                 <li class="sl-destName">九寨沟</li>
-                                                 <li class="sl-destName">北京</li>
-                                                 <li class="sl-destName">海南岛</li>
-                                                 <li class="sl-destName">杭州</li>
-                                                 <li class="sl-destName">丽江</li>
-                                             </ul>
-                                         </li>
-                                         <li class="destSelect-first-level">
-                                             <span class="fl-destName">日韩</span>
-                                             <span class="nav-tree-arrow"></span>
-                                             <ul class="second-level">
-                                                 <li class="sl-destName">首尔</li>
-                                                 <li class="sl-destName">济州岛</li>
-                                                 <li class="sl-destName">东京</li>
-                                             </ul>
-                                         </li>
-                                         <li class="destSelect-first-level">
-                                             <span class="fl-destName">东南亚</span>
-                                             <span class="nav-tree-arrow"></span>
-                                             <ul class="second-level">
-                                                 <li class="sl-destName">泰国</li>
-                                                 <li class="sl-destName">新加坡</li>
-                                                 <li class="sl-destName">柬埔寨</li>
-                                                 <li class="sl-destName">普吉岛</li>
-                                                 <li class="sl-destName">马尔代夫</li>
-                                             </ul>
-                                         </li>
-                                         <li class="destSelect-first-level">
-                                             <span class="fl-destName">欧洲</span>
-                                             <span class="nav-tree-arrow"></span>
-                                             <ul class="second-level">
-                                                 <li class="sl-destName">意大利</li>
-                                                 <li class="sl-destName">法国</li>
-                                             </ul>
-                                         </li>
-                                         <li class="empty"></li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         </td>
-                         <td class="searchbtn">
-                             <a href="javascript:void(0);"></a>
-                         </td>
-                     </tr>
-                     </tbody>
-                 </table>
-             </div>
-              <!-- <div class="rightBorderStyle"></div> -->
+                         </div>
+                     </td>
+                     <td class="searchbtn">
+                         <a href="javascript:void(0);"></a>
+                     </td>
+                 </tr>
+                 </tbody>
+             </table>
+         </div>
+      </div>
+      <div class="top-right-block">
+          <div class="login-entrance" >
+              <a class="login commonBtn" href="javascript:;">登录</a><a class="register commonBtn" href="javascript:;">注册</a>
           </div>
-          <div class="top-right-block">
-              <div class="login-entrance" style="display: none;">
-                  <a class="login commonBtn" href="javascript:;">登录</a><a class="register commonBtn" href="javascript:;">注册</a>
-                  <div class="login-box">
-                      <div class="arrow"></div>
-                      <div style="width: 262px;" class="errorBoxContent">
-                          <i class="commonIcon errorIcon"></i>输入的用户名或密码有错
-                      </div><br/>
-                      <div class="componentInput">
-                          <i class="commonIcon personHeaderIcon"></i>
-                          <input type="text" placeholder="手机号/邮箱" style="width: 225px;">    
-                      </div><br/>
-                      <div class="componentInput forgetPW">
-                          <i class="commonIcon lockIcon"></i>
-                          <input type="password" placeholder="请输入密码" style="width: 143px;">
-                          <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
-                      </div><br/>
-                      <div class="componentInput verificationCode">
-                          <i class="commonIcon verificationCodeIcon"></i>
-                          <input type="text" placeholder="请输入验证码" style="width: 120px;">
-                          <img src="../images/client/verificationCode.png">
-                      </div><br/>
-                      <a href="javascript:void(0);" class="commonBtn blueBtn loginBtn" style="width:263px;">登 录</a>
-                      <div class="login-attach"> 
-                          <div class="checkboxContent">         
-                              <label class="checkbox active">
-                                  <span class="commonIcon checkboxIcon"></span>记住我
-                              </label>
-                          </div>
-                          <a class="register-link" href="javascript:;">免费注册</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="after-login">
-                  <span class="userName">
-                      <span class="commonIcon userIcon"></span>
-                      <em>Dorian zhou</em>
-                  </span>
-                  <div class="userInfo-box">
-                      <div class="arrow"></div>
-                      <div class="userInfo-block">
-                          <div class="user-avatar">
-                              <img src="../images/client/headPortrait01.png" alt="">
-                              <div class="user-name">Dorian Zhou</div>
-                          </div>
-                          <div class="oper-btn">
-                              <a href="javascript:;">用户中心</a>
-                              <a class="logoutBtn" href="javascript:;">退出登录</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+          <div class="after-login">
+              <span class="userName">
+                  <span class="commonIcon userIcon"></span>
+                  <em>Dorian zhou</em>
+              </span>
           </div>
-		</div>
-	</header>
-	
-	<div class="main-container">
+      </div>
+    </div>
+  </header>
+  
+  <div class="main-container" style="background:#fff;">
       <div class="banner">
         <ul class="product">
           <li>
@@ -181,6 +139,10 @@
           <li>
               <img src="../images/client/indexpage-banner02.jpg"/>                
           </li>
+        </ul>
+        <ul class="bannerbtn">
+          <li class="leftbtn"></li>
+          <li class="rightbtn"></li>
         </ul>
       </div>
       <div class="work-platform">
@@ -219,7 +181,7 @@
               <span class="rightUsername">太平洋的鲸鱼</span>
               <div>
                 <span class="commonIcon userIcon"></span>
-                <span>用户中心</span>
+                <span class="usercenter-text"><a href="javascript:void(0);">用户中心</a></span>
               </div>
             </div>
           </div>
@@ -259,318 +221,786 @@
               </ul>
               <div class="slidline"></div>
               <div class="tab-cont-block">
-                <div class="tab-cont remind">
-                    提醒提醒提醒提醒提醒提醒提醒提醒
+                <div class="tab-cont remind remind-cont-block">
+                  <div class="remind-tab-cont">
+                    <ul>
+                      <li class="unread"><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li ><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="ordericon"></span>您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                      <li><span class="ordericon"></span>余额 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高逼格 欧洲行( S6589421356870) </a> 返现已经到你账户余额中啦 </li>
+                      <li><span class="ordericon"></span>1您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                    </ul>
+                  </div>
+                  <div class="remind-tab-cont">
+                    <ul>
+                      <li class="unread"><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="ordericon"></span>您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                      <li ><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="ordericon"></span>余额 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高逼格 欧洲行( S6589421356870) </a> 返现已经到你账户余额中啦 </li>
+                      <li><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="ordericon"></span>2您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                    </ul>
+                  </div>
+                  <div class="remind-tab-cont">
+                    <ul>
+                      <li class="unread"><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="ordericon"></span>您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                      <li ><span class="ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 ( S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="ordericon"></span>余额 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高逼格 欧洲行( S6589421356870) </a> 返现已经到你账户余额中啦 </li>
+                      <li><span class="ordericon"></span>3您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                    </ul>
+                  </div>
+                  <ul class="remind-tab-dot">
+                    <li class="current"></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
                 </div>
-                <div class="tab-cont private-letter">
-                    私信私信私信私信私信上小学数学
+                <div class="tab-cont private-letter privletter-cont-block">
+                  <div class="privletter-tab-cont">
+                    <ul>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">南极的企鹅</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <div class="priletter-bottom">
+                            <p>
+                              <a href="javascript:void(0);">第一次在真旅行订购旅游产品，真的非常净系！性价比非常高！非常贴心...</a>
+                            </p> 
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="privletter-tab-cont">
+                    <ul>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">南极的企鹅</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <div class="priletter-bottom">
+                            <p>
+                              <a href="javascript:void(0);">第一次在真旅行订购旅游产品，真的非常净系！性价比非常高！非常贴心...</a>
+                            </p> 
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="privletter-tab-cont">
+                    <ul>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">南极的企鹅</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <div class="priletter-bottom">
+                            <p>
+                              <a href="javascript:void(0);">第一次在真旅行订购旅游产品，真的非常净系！性价比非常高！非常贴心...</a>
+                            </p> 
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="privletter-tab-dot">
+                    <li class="current"></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
+        <div class="workplabtn"></div>
       </div>
+      <section>
+        <div class="modelTitle">
+          <span class="colorD3d3d3">“</span>
+          <span>在这里，整个世界都是用来分享的</span>
+          <span class="colorD3d3d3">”</span>
+        </div>
+        <ul class="shareModel clearfix">
+          <li>
+            <div class="imgTransformation">
+              <img src="../images/client/share01.png">      
+              <span class="shareIcon01"></span>
+            </div>
+            <h3>代金券分享</h3>
+            <div class="explainFonts">用不完的代金券分享给亲朋好友温暖每个旅行的愿望</div>
+          </li>
+          <li class="special">
+            <div class="imgTransformation">
+              <img src="../images/client/share02.png">      
+              <span class="shareIcon02"></span>
+            </div>
+            <h3>真旅故事</h3>
+            <div class="explainFonts">每周三旅行达人故事分享会与一群有趣共同聆听这个世界，有趣的事。</div>
+          </li>
+          <li>
+            <div class="imgTransformation">
+              <img src="../images/client/share03.png">      
+              <span class="shareIcon03"></span>
+            </div>
+            <h3>推荐人奖励计划</h3>
+            <div class="explainFonts">奖励计划人人都可以参与哦快去看看吧</div>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <div class="modelTitle">
+          <span class="colorD3d3d3">“</span>
+          <span>在这里，旅行不是状态，而是生活</span>
+          <span class="colorD3d3d3">”</span>
+        </div>
+        <div class="brandStory">
+          <span class="brandStoryIcon"></span>
+          <div class="brandStoryFonts">
+            <h3 class="brandTitle">品牌故事</h3>
+            <div class="fontsDetails">
+              ZANADU赞那度是中国首屈一指的高端精品旅行预订网站及生活方式媒体，致力于品介全球最精彩度假和生活方式体验，为中国中高端新锐旅行者提供精品度假酒店及非凡旅程预订服务。我们用心打造世界上最美的假期选择，还有绝无仅有的超低折扣机会。
+              赞那度自成立起就一直主张“有故事的人生，有风格的旅行”。我们聚拢了一批世界上经历丰富的旅行者，这些人身上带着“品味探测器”，他们的推荐必须是有美感的、必定是有故事的、 必然是有情感的。近几年来赞那度不断更新旅行产品类别，提升专业服务品质，产品包括全球精品酒店预定、世界各地别墅预定、海外自由行套餐和国内短假轻奢套餐，现在又新增了有精品线路和定制旅行服务的“赞品定制”。赞那度旗下的“赞那度旅行人生”微信自媒体品介旅行，时尚，美食，设计，热点潮流等时尚生活新方式。
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="modelTitle">
+          <span>服务保障</span>
+        </div>
+        <ul class="shareModel serveModel clearfix">
+          <li>
+            <img src="../images/client/serveImg01.png">      
+            <h3>只做优品</h3>
+            <div class="explainFonts">从目的地的选择，到产品的制定，品质是我们的关键词，正如您的生活</div>
+          </li>
+          <li>
+            <img src="../images/client/serveImg02.png">      
+            <h3>体验升级</h3>
+            <div class="explainFonts">真旅管家保障旅途安心，线上线下真旅行打造体验完美升级。</div>
+          </li>
+          <li>
+            <img src="../images/client/serveImg03.png">      
+            <h3>支付安全</h3>
+            <div class="explainFonts">专业技术团队保障支付安全。</div>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <div class="modelTitle">
+          <span>关于我们</span>
+        </div>
+        <div class="titleExplain">这里是我们可爱萌萌哒的团队成员，每位都为真旅行贡献了一份自己的力量!</div>
+        <div class="aboutUsModel">
+        <ul class="aboutUs">
+          <li>
+            <ul class="aboutUsImg">
+              <li>
+                <img src="../images/client/aboutUsImg01.png">      
+                <div>Lily Wang</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg02.png">      
+                <div>王淑云</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg03.png">      
+                <div>李易峰</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg04.png">      
+                <div>周周</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg05.png">      
+                <div>李易峰</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg06.png">      
+                <div>王淑云</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg07.png">      
+                <div>苏静静</div>
+              </li>
+            </ul>
+          </li>
+          <li class="secondLi">
+            <ul class="aboutUsImg">
+              <li>
+                <img src="../images/client/aboutUsImg06.png">      
+                <div>苏静静</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg02.png">      
+                <div>王淑云</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg03.png">      
+                <div>李易峰</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg01.png">      
+                <div>Lily Wang</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg04.png">      
+                <div>周周</div>
+              </li>
+              <li>
+                <img src="../images/client/aboutUsImg05.png">      
+                <div>李易峰</div>
+              </li>
+            </ul>
+          </li>
+          <!--
+                    <li class="thirdLi">      
+          <ul class="aboutUsImg">
+            <li>
+              <img src="../images/client/aboutUsImg02.png">      
+              <div>王淑云</div>
+            </li>
+            <li>
+              <img src="../images/client/aboutUsImg03.png">      
+              <div>李易峰</div>
+            </li>
+            <li>
+              <img src="../images/client/aboutUsImg01.png">      
+              <div>Lily Wang</div>
+            </li>
+            <li>
+              <img src="../images/client/aboutUsImg04.png">      
+              <div>周周</div>
+            </li>
+            <li>
+              <img src="../images/client/aboutUsImg06.png">      
+              <div>苏静静</div>
+            </li>
+          </ul>
+        </li>
+        <li class="fourthLi">
+          <ul class="aboutUsImg">
+            <li>
+              <img src="../images/client/aboutUsImg06.png">      
+              <div>苏静静</div>
+            </li>
+            <li>
+              <img src="../images/client/aboutUsImg01.png">      
+              <div>Lily Wang</div>
+            </li>
+            <li>
+              <img src="../images/client/aboutUsImg04.png">      
+              <div>周周</div>
+            </li>
+            <li>
+              <img src="../images/client/aboutUsImg02.png">      
+              <div>王淑云</div>
+            </li>
+          </ul>
+        </li>
+        -->
+        <li class="fifthLi">
+          <ul class="aboutUsImg">
+            <li>
+              <img src="../images/client/aboutUsImg04.png">      
+              <div>周周</div>
+            </li>
+            <li>
+              <img src="../images/client/aboutUsImg07.png">      
+              <div>苏静静</div>
+            </li>
+            <li class="addAboutUsImg">
+              <img src="../images/client/addAboutUsImg.png">      
+              <div>YOU</div>
+            </li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+      </section>
+      <section>
+      <div class="partnersModel">
+        <a href="javascript:void(0);" class="alila"></a>
+        <a href="javascript:void(0);" class="como"></a>
+        <a href="javascript:void(0);" class="aman"></a>
+        <a href="javascript:void(0);" class="belmond"></a>
+        <a href="javascript:void(0);" class="sixSenses"></a>
+        <a href="javascript:void(0);" class="swireHotels"></a>
+      </div>
+      </section>
+  </div>
+  <div class="footer-wrap">
+    <div class="foot clearfix">
+      <div class="footer-nav">
+        <div class="erweima">
+          <img src="../images/client/erweima.jpg" alt="">
+          <div class="contact-info">
+            <span class="info-title">关注我们</span><br>
+            <span>微信号: zhenlx2015</span><br>
+            <span class="info-title">服务热线</span><br>
+            <span class="info-tell">400-888-666</span><br>
+            <span>service@zhenlx.com</span>
+          </div>
+          
+        </div>
+        <div class="quick-nav">
+          <dl>
+            <dt>关于真旅行</dt>
+            <dd><a href="javascript:void(0);">旅行+</a></dd>
+            <dd><a href="javascript:void(0);">品牌故事</a></dd>
+            <dd><a href="javascript:void(0);">关于我们</a></dd>
+            <dd><a href="javascript:void(0);">工作机会</a></dd>
+            <dd><a href="javascript:void(0);">联系我们</a></dd>
+          </dl>
+          <dl>
+            <dt>服务说明</dt>
+            <dd><a href="javascript:void(0);">服务保证</a></dd>
+            <dd><a href="javascript:void(0);">服务条款</a></dd>
+            <dd><a href="javascript:void(0);">合作伙伴</a></dd>
+          </dl>
+          <dl style="margin-right:45px;">
+            <dt>网站条款</dt>
+            <dd><a href="javascript:void(0);">客服协议</a></dd>
+            <dd><a href="javascript:void(0);">隐私保护</a></dd>
+            <dd><a href="javascript:void(0);">免责声明</a></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+        <span class="service-tel"><span class="tellIcon"></span>服务热线：<span class="telnum">400-888-666</span></span>
+      </div>
+    </div>
   </div>
 
-		<div class="foot clearfix">
-			<span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
-			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
-		</div>
-
-	<!-- <div class="right-nav-block">
-		<div class="main-nav">
- 			  <div class="right-nav-icon right-nav-info">
-				<img src="../images/client/avatar-01.jpg" alt="" style="width:25px;height:25px;border-radius: 50%;">
-			</div> -->
-			<!-- <img class="right-nav-icon right-nav-info" src="../images/client/nav-avatar-img.png" alt=""> -->
-			<!-- <div class="right-nav-icon right-nav-list"></div>
-			<div class="right-nav-icon right-nav-favor"></div>
-			<div class="right-nav-icon right-nav-asset"></div>
-			<div class="right-nav-icon right-nav-notice"></div>
-			<div class="right-nav-icon right-nav-contacts"></div>
-		</div>
-		<div class="bottom-nav">
-			<div class="right-nav-icon right-nav-edit"></div>
-			<div class="right-nav-icon right-nav-backToTop"></div>
-		</div> 
-	</div>-->
-
-	<div class="login-box box-relative-location">
-		<div class="arrow"><div class="innerArrow"></div></div>
-		<!--<div style="width: 262px;" class="errorBoxContent">
-		    <i class="commonIcon errorIcon"></i>输入的用户名或密码有错
-		</div><br/>-->
-		<div class="componentInput">
-		    <i class="commonIcon personHeaderIcon"></i>
-		    <input type="text" placeholder="手机号/邮箱" style="width: 225px;">    
-		</div><br/>
-		<div class="componentInput forgetPW">
-		    <i class="commonIcon lockIcon"></i>
-		    <input type="password" placeholder="请输入密码" style="width: 143px;">
-		    <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
-		</div><br/>
-		<!--<div class="componentInput verificationCode">
-		    <i class="commonIcon verificationCodeIcon"></i>
-		    <input type="text" placeholder="请输入验证码" style="width: 120px;">
-		    <img src="../images/client/verificationCode.png">
-		</div><br/>-->
-		<a href="javascript:void(0);" class="commonBtn blueBtn" style="width:263px;">登 录</a>
-		<div class="login-attach">
-            <div class="checkboxContent">			
-    			<label class="checkbox active">
-    		        <span class="commonIcon checkboxIcon"></span>记住我
-    		    </label>
+  <div class="login-box box-relative-location">
+    <div class="arrow"><div class="innerArrow"></div></div>
+    <!--<div style="width: 262px;" class="errorBoxContent">
+        <i class="commonIcon errorIcon"></i>输入的用户名或密码有错
+    </div><br/>-->
+    <div class="componentInput">
+        <i class="commonIcon personHeaderIcon"></i>
+        <input type="text" placeholder="手机号/邮箱" style="width: 225px;">    
+    </div><br/>
+    <div class="componentInput forgetPW">
+        <i class="commonIcon lockIcon"></i>
+        <input type="password" placeholder="请输入密码" style="width: 143px;">
+        <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
+    </div><br/>
+    <!--<div class="componentInput verificationCode">
+        <i class="commonIcon verificationCodeIcon"></i>
+        <input type="text" placeholder="请输入验证码" style="width: 120px;">
+        <img src="../images/client/verificationCode.png">
+    </div><br/>-->
+    <a href="javascript:void(0);" class="commonBtn blueBtn" style="width:263px;">登 录</a>
+    <div class="login-attach">
+            <div class="checkboxContent">     
+          <label class="checkbox active">
+                <span class="commonIcon checkboxIcon"></span>记住我
+            </label>
             </div>
-		    <a class="register-link" href="javascript:;">免费注册</a>
-		</div>
-	</div>
+        <a class="register-link" href="javascript:;">免费注册</a>
+    </div>
+  </div>
 
-	<script type="text/javascript">
-		$(function(){
+<script type="text/javascript">
+    $(function(){
+        setRightNavHeight();
+        setWrapperHeight();
 
-			setRightNavHeight();
-			setWrapperHeight();
+        window.onresize = function(){
+          setRightNavHeight();
+        }
 
-			window.onresize = function(){
-				setRightNavHeight();
-			}
+        $(".main-nav .right-nav-icon").click(function(event){
+          var $ele = $(this);
+          $(".box-relative-location").css({
+            "top": $ele.position().top + "px"
+          }).show();
+                  event.stopPropagation();
+        });
 
-			$(".main-nav .right-nav-icon").click(function(event){
-				var $ele = $(this);
-				$(".box-relative-location").css({
-					"top": $ele.position().top + "px"
-				}).show();
-                event.stopPropagation();
-			});
+        $("body").click(function(event){
+            if (!isOuterTrigger(event, $(".box-relative-location"))) {
+                $(".box-relative-location").hide();
+            }
+        });
 
-            $("body").click(function(event){
-                if (!isOuterTrigger(event, $(".box-relative-location"))) {
-                    $(".box-relative-location").hide();
-                }
-            });
-
-			// $(".top-nav-list").slideNav({
-			// 	fx: "swing", 
-			// 	speed: 300,
-			// 	changeTextColor: "#fff"
-			// });
+        // $(".top-nav-list").slideNav({
+        //  fx: "swing", 
+        //  speed: 300,
+        //  changeTextColor: "#fff"
+        // });
             
-            //出发地浮层
-            $(".selectStartOffPlace li").click(function(){
-                $(this).addClass("active");
-                $(this).siblings("li").removeClass("active");
-                $(".searchTab .startOffPlace input").val($(this).html());
-                $(".selectStartOffPlace").hide();
-            });
-            $(".searchTab .startOffPlace").click(function(event){
-                $(this).siblings(".selectStartOffPlace").toggle();
-                $(".selectDestination").hide();
-                $(".selectTheme").hide();
-                event.stopPropagation();             
-            });
-            $("body").click(function(){
-                $(".selectStartOffPlace").hide();
-            });
-            
-            //目的地浮层
-            // $(".selectRight .selectCity span,.selectLeft .selectCity span").click(function(){
-            //     $(this).addClass("active");
-            //     $(this).siblings("span").removeClass("active");
-            //     $(".searchTab .destination .destinationInput").val($(this).html());
-            //     $(".selectDestination").hide();
-            // });
-            // $(".destinationModel .destination").click(function(){
-            //     $(this).siblings(".selectDestination").show();
-            // });
-            // $(".selectLeft li").each(function(index){
-            //     $(this).mouseover(function(){
-            //         $(".selectRight li").hide();
-            //         $(".selectRight li:eq(" + index + ")").show();
-            //     });
-            // });
-            $(".destinationModel .destination").click(function(event){
-                $(this).siblings(".selectDestination").toggle();
-                $(".selectStartOffPlace").hide();
-                $(".selectTheme").hide();
-                event.stopPropagation();
-            });
-            
+        //出发地浮层
+        $(".selectStartOffPlace li").click(function(){
+            $(this).addClass("active");
+            $(this).siblings("li").removeClass("active");
+            $(".searchTab .startOffPlace input").val($(this).html());
+            $(".selectStartOffPlace").hide();
+        });
+        $(".searchTab .startOffPlace").click(function(event){
+            $(this).siblings(".selectStartOffPlace").toggle();
+            $(".selectDestination").hide();
+            $(".selectTheme").hide();
+            event.stopPropagation();             
+        });
+        $("body").click(function(){
+            $(".selectStartOffPlace").hide();
+        });
+        
+        //目的地浮层
+        // $(".selectRight .selectCity span,.selectLeft .selectCity span").click(function(){
+        //     $(this).addClass("active");
+        //     $(this).siblings("span").removeClass("active");
+        //     $(".searchTab .destination .destinationInput").val($(this).html());
+        //     $(".selectDestination").hide();
+        // });
+        // $(".destinationModel .destination").click(function(){
+        //     $(this).siblings(".selectDestination").show();
+        // });
+        // $(".selectLeft li").each(function(index){
+        //     $(this).mouseover(function(){
+        //         $(".selectRight li").hide();
+        //         $(".selectRight li:eq(" + index + ")").show();
+        //     });
+        // });
+        $(".destinationModel .destination").click(function(event){
+            $(this).siblings(".selectDestination").toggle();
+            $(".selectStartOffPlace").hide();
+            $(".selectTheme").hide();
+            event.stopPropagation();
+        });
+        
+        initSetActiveDest();
+
+        $(".destSelect-first-level").mouseover(function(){
+            $(this).siblings("li").find(".second-level").hide();
+            $(this).find(".second-level").show();
+        });
+
+        $(".destSelect-first-level").click(function(){
+            $(this).siblings("li").removeClass("active");
+            $(this).addClass("active");
+
+            $(".sl-destName").removeClass("active");
+
+            $(".destinationInput").val($(this).find(".fl-destName").html());
+            $("#selectedDestLevel").val(1);
+        });
+
+        $(".ul-dest-first-level").mouseleave(function(){
             initSetActiveDest();
+        });
 
-            $(".destSelect-first-level").mouseover(function(){
-                $(this).siblings("li").find(".second-level").hide();
-                $(this).find(".second-level").show();
+        $(".sl-destName").click(function(event){
+            $(".destinationInput").val($(this).html());
+            $("#selectedDestLevel").val(2);
+
+            $(".sl-destName").removeClass("active");
+            $(this).addClass("active");
+
+            $("li.destSelect-first-level").removeClass("active");
+            $(this).parents(".destSelect-first-level").addClass("active");
+
+            $(".selectDestination").hide();
+
+            event.stopPropagation();
+        });
+
+        $("body").click(function(){
+            $(".selectDestination").hide();
+        });
+
+        $(".loginBtn").click(function(){
+            $(".login-entrance").hide();
+            $(".after-login").show();
+            $(".workpla-login").hide();
+            $(".workpla-afterlogin").show();
+        });
+        $(".login-entrance .login").click(function(){
+            $('.work-platform').stop().animate({'left':'-385px'},400,function(){
+              $('.work-platform').stop().animate({'left':'0'});
             });
+        });
 
-            $(".destSelect-first-level").click(function(){
-                $(this).siblings("li").removeClass("active");
-                $(this).addClass("active");
+        $(".exitbtn").click(function(){
+            $(".after-login").hide();
+            $(".login-entrance").show();
+            $(".workpla-login").show();
+            $(".workpla-afterlogin").hide();
+        });
 
-                $(".sl-destName").removeClass("active");
-
-                $(".destinationInput").val($(this).find(".fl-destName").html());
-                $("#selectedDestLevel").val(1);
-            });
-
-            $(".ul-dest-first-level").mouseleave(function(){
-                initSetActiveDest();
-            });
-
-            $(".sl-destName").click(function(event){
-                $(".destinationInput").val($(this).html());
-                $("#selectedDestLevel").val(2);
-
-                $(".sl-destName").removeClass("active");
-                $(this).addClass("active");
-
-                $("li.destSelect-first-level").removeClass("active");
-                $(this).parents(".destSelect-first-level").addClass("active");
-
-                $(".selectDestination").hide();
-
-                event.stopPropagation();
-            });
-
-            $("body").click(function(){
-                $(".selectDestination").hide();
-            });
-
-            //主题
-            $(".selectTheme li").click(function(){
-                $(this).addClass("active");
-                $(this).siblings("li").removeClass("active");
-                $(".searchTab .theme input").val($(this).html());
-                $(".selectTheme").hide();
-            });
-            $(".searchTab .theme").click(function(event){
-                $(this).siblings(".selectTheme").toggle();
-                $(".selectStartOffPlace").hide();
-                $(".selectDestination").hide();
-                event.stopPropagation();
-            });
-            $("body").click(function(){
-                $(".selectTheme").hide();
-            });
-
-            //  登录注册入口
-            $(".login").click(function(event){
-                $(this).toggleClass("active");
-                $(".login-entrance .login-box").toggle();
-                event.stopPropagation();
-            });
-
-            $("body").click(function(event){
-                if (!isOuterTrigger(event, $(".login-entrance .login-box"))) {
-                    $(".login").removeClass("active");
-                    $(".login-entrance .login-box").hide();
-                }
-            });
-
-            $(".after-login > span.userName").click(function(event){
-                $(".userInfo-box").toggle();
-                event.stopPropagation();
-            });
-
-            $("body").click(function(event){
-                if (!isOuterTrigger(event, $(".userInfo-box"))) {
-                    $(".userInfo-box").hide();
-                }
-            });
-
-            $(".loginBtn").click(function(){
-                $(".login-entrance").hide();
-                $(".after-login").show();
-            });
-
-            $(".logoutBtn").click(function(){
-                $(".after-login").hide();
-                $(".login-entrance").show();
-            });
-
-		});
+    });
         
         //  判断点击范围是否超出元素
-        function isOuterTrigger(event, $ele) {
-            var top = $ele.offset().top,
-                left = $ele.offset().left,
-                width = $ele.outerWidth(),
-                height = $ele.outerHeight();
+    function isOuterTrigger(event, $ele) {
+        var top = $ele.offset().top;
+        var left = $ele.offset().left;
+        var width = $ele.outerWidth();
+        var height = $ele.outerHeight();
 
-            var _x = event.pageX,
-                _y = event.pageY;
+        var _x = event.pageX;
+        var _y = event.pageY;
 
-            if (_y > top + height || _y < top || _x > left + width || _x < left) {
-                return false;
-            } else {
-                return true;
-            }
+        if (_y > top + height || _y < top || _x > left + width || _x < left) {
+            return false;
+        } else {
+            return true;
         }
+    }
 
-        function initSetActiveDest() {
-            var destText = $(".destinationInput").val();
+    function initSetActiveDest() {
+        var destText = $(".destinationInput").val();
 
-            if (destText == "") {
-                $(".cityList .second-level").hide();
-                $(".cityList .second-level").eq(0).show();
-                return;
-            } else {
-                $(".fl-destName").each(function(){
-                    if ($(this).html() == destText) {
-                        $(".destSelect-first-level").removeClass("active");
+        if (destText == "") {
+            $(".cityList .second-level").hide();
+            $(".cityList .second-level").eq(0).show();
+            return;
+        } else {
+            $(".fl-destName").each(function(){
+                if ($(this).html() == destText) {
+                    $(".destSelect-first-level").removeClass("active");
 
-                        $(this).closest('li').addClass("active");
+                    $(this).closest('li').addClass("active");
 
-                        $(".cityList .second-level").hide();
-                        $(this).closest('li').find(".second-level").show();
-                    }               
-                });
+                    $(".cityList .second-level").hide();
+                    $(this).closest('li').find(".second-level").show();
+                }               
+            });
 
-                $(".sl-destName").each(function(){
-                    if ($(this).html() == destText) {
-                        $(".sl-destName").removeClass("active");
-                        $(".destSelect-first-level").removeClass("active");
+            $(".sl-destName").each(function(){
+                if ($(this).html() == destText) {
+                    $(".sl-destName").removeClass("active");
+                    $(".destSelect-first-level").removeClass("active");
 
-                        $(this).addClass("active");
-                        $(this).parents("li.destSelect-first-level").addClass("active");
+                    $(this).addClass("active");
+                    $(this).parents("li.destSelect-first-level").addClass("active");
 
-                        $(".cityList .second-level").hide();
-                        $(this).closest("ul.second-level").show();
-                    }
-                });
-            }
+                    $(".cityList .second-level").hide();
+                    $(this).closest("ul.second-level").show();
+                }
+            });
         }
+    }
 
-		function setRightNavHeight() {
-		    if ($(".right-nav-block").length !== 0) {
-		    	$(".right-nav-block").eq(0).css({
-		    		"height": document.documentElement.clientHeight + "px"		    		
-		    	});
+    function setRightNavHeight() {
+        if ($(".right-nav-block").length !== 0) {
+          $(".right-nav-block").eq(0).css({
+            "height": document.documentElement.clientHeight + "px"            
+          });
 
-		    	$(".right-nav-block .main-nav").css({
-		    		"margin-top": ((document.documentElement.clientHeight - 450) / 2) + "px"
-		    	});
-		    }
-		}
+          $(".right-nav-block .main-nav").css({
+            "margin-top": ((document.documentElement.clientHeight - 450) / 2) + "px"
+          });
+        }
+    }
 
-		function setWrapperHeight() {
-		    if ($(".main-wrapper").length !== 0) {
-		    	$(".main-wrapper").eq(0).css({
-		    		"min-height": (document.documentElement.clientHeight - 142) + "px"
-		    	});
-		    }
-		}
+    function setWrapperHeight() {
+        if ($(".main-wrapper").length !== 0) {
+          $(".main-wrapper").eq(0).css({
+            "min-height": (document.documentElement.clientHeight - 142) + "px"
+          });
+        }
+    }
         
 
     //banner轮播
-    /*$('.product').cycle({
-        fx:'scrollLeft',
+    $('.product').cycle({
+        fx:'fade',
         timeout: 1000, 
-        speed: 2000, 
-        pause: true 
-      });*/
+        speed: 1000, 
+        pause: true,
+        prev:".leftbtn",
+        next:".rightbtn"
+      });
 
-// 选项卡点击
+    // 选项卡点击
     $(".tab-cont").eq(0).show();
     $(".message-tip-tab li").each(function(index){
         $(this).click(function(){
@@ -578,12 +1008,52 @@
             $(".tab-cont").eq(index).show();
             $(".message-tip-tab li").removeClass("current");
             $(this).addClass("current");
-            $(".slidline").animate({'left':169*$(this).index()},200);
+            $(".slidline").stop().animate({'left':169*$(this).index()},200);
+        });
+    });
+
+    // 提醒底部圆点点击
+    $(".remind-tab-cont").eq(0).show();
+    $(".remind-tab-dot li").each(function(index){
+        $(this).hover(function(){
+            $(".remind-tab-cont").hide();
+            $(".remind-tab-cont").eq(index).show();
+            $(".remind-tab-dot li").removeClass("current");
+            $(this).addClass("current");
+            // $(".slidline").animate({'left':169*$(this).index()},200);
+        });
+    });
+    // 私信底部原点点击
+    $(".privletter-tab-cont").eq(0).show();
+    $(".privletter-tab-dot li").each(function(index){
+        $(this).hover(function(){
+            $(".privletter-tab-cont").hide();
+            $(".privletter-tab-cont").eq(index).show();
+            $(".privletter-tab-dot li").removeClass("current");
+            $(this).addClass("current");
+            // $(".slidline").animate({'left':169*$(this).index()},200);
         });
     });
   
-	</script>
-	
+    // 工作台侧边按钮点击
+    $('.workplabtn,.after-login .userName').click(function(){
+      var leftvalue=parseInt($('.work-platform').css('left'));
+      if(leftvalue==0){
+        $('.work-platform').stop().animate({'left':'-385px'},300,function(){
+          $('.work-platform').stop().animate({'left':'-358px'});
+        });
+      }else if(leftvalue==-358){
+        $('.work-platform').stop().animate({'left':'-385px'},400,function(){
+          $('.work-platform').stop().animate({'left':'0'});
+        });
+      }
+    });
+
+     $("body").click(function(event){
+        $(".work-platform").animate({'left':'-358px'},400);
+     });
+</script>
+  
 </body>
 </html>
 </html>
