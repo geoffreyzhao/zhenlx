@@ -988,6 +988,12 @@ input[type="text"], input[type="password"]{
 }
 .main-container{
     background:#fff;
+    /* background: -webkit-linear-gradient(top, #fff, #fff);  chrome, safari
+    background: -moz-linear-gradient(top, #fff, #fff);  firefox
+    background: -o-linear-gradient(top, #fff, #fff;  opera
+    background: -ms-linear-gradient(top, #fff, #fff);  IE 10
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#fff, endColorstr=#fff);IE<9>
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#fff, endColorstr=#fff);IE8+ */
 }
 
 
