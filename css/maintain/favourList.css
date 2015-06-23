@@ -205,5 +205,13 @@
     color: #b0b0b0;
     text-decoration: none;
 }
+.commonTab .contentEllipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fixedTab {
+    table-layout: fixed;
+}
 
 /* -end */
