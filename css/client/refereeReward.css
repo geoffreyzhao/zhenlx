@@ -1,0 +1,703 @@
+@charset "utf-8";
+
+/** 推荐人奖励计划 -start  **/
+.logoImg{
+    display: inline-block;
+    width: 121px;
+    height: 44px;
+    background: url(../../images/client/logo-new.png) no-repeat;
+    float: left;
+    margin-top: 6px;
+}
+.main-nav {
+    text-align: center;
+}
+
+.bottom-nav {
+    text-align: center;
+    position: absolute;
+    bottom: 18px;
+}
+
+.login-box {
+    padding: 25px 0;
+    width: 310px;
+    z-index: 4;
+    background-color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 1px 10px 1px #666;
+    display: none;
+}
+
+.box-relative-location {
+    position: fixed;
+    right: 36px;
+}
+
+.login-box .errorBoxContent,
+.login-box .componentInput {
+    margin-bottom: 15px;
+}
+
+.login-attach .checkbox {
+    font-size: 13px;
+    color: #11b9b7;
+    font-weight: normal;
+    margin-left: -128px;
+}
+
+.login-attach .checkboxIcon {
+    margin-top: -5px;
+}
+
+.login-attach .register-link {
+    font-size: 13px;
+    color: #11b9b7;
+    float: right;
+    margin-top: 10px;
+    margin-right: 23px;
+}
+
+.login-attach .register-link:hover {
+    cursor: pointer;
+}
+
+.login-box .arrow {
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background: url(../../images/client/white-border-arrow.png) no-repeat 0 0;
+    position: absolute;
+    top: 8px;
+    right: -6px;
+}
+
+/*  导航目的地样式 S  */
+.dropdown .dropdownBtn{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.searchModel{
+    width:806px;
+    float:left;
+    margin: 5px 0 0 28px;
+}
+.searchModel .leftBorderStyle,
+.searchModel .rightBorderStyle{
+    display: inline-block;
+    width: 7px;
+    height: 84px;
+    background: url("../../images/client/searchBorder.png") no-repeat;
+    vertical-align: top;
+}
+.searchModel .leftBorderStyle{
+    background-position: 0 0;
+}
+.searchModel .rightBorderStyle{
+    background-position: -12px 0;
+}
+.searchModel .searchContent{
+    display: inline-block;
+    /*background-color: rgba(0,0,0,0.4);*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);/*IE-8*/
+    width: 806px;
+    height: 43px;
+    /*margin: 0 -5px;*/
+    color: #11b9b7;
+    border:1px solid #e4e4e4;
+    border-radius: 3px;
+}
+
+.searchContent .searchTab input[type="text"]{
+    color: #434343;
+    padding-left: 35px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: none!important;
+}
+.searchContent .searchTab th{
+    font-size: 18px;
+}
+.searchTab .addIcon{
+    display: inline-block;
+    position: relative;
+}
+.searchContent .searchTab{
+    margin-left: 10px;
+    position:relative;
+    z-index:99999;
+}
+.top-right-block{
+    margin:5px 0 0 0;
+}
+.addIcon .commonIcon{
+    position: absolute;
+    top: 30%;
+    left: 0px;
+}
+.addIcon{
+
+}
+.startOffPlace .caret,.destination .selectedDestLevel {
+    position: absolute;
+    top: 20px;
+    right: 7px;
+}
+
+.addIcon input {
+    cursor: pointer;
+    color: #11b9b7;
+}
+.startPlace-title,.destination-title{
+    margin:0 0 0 38px;
+    line-height:43px;
+}
+input[type="text"], input[type="password"]{
+    height:39px;
+}
+.addIcon .startOffIcon{
+    width: 19px;
+    height: 19px;
+    background-position: -24px -190px;
+}
+.addIcon .destinationIcon{
+    width: 19px;
+    height: 20px;
+    background-position: -48px -190px;
+}
+.searchbtn{
+    position:relative;
+}
+.searchbtn a{
+    width:44px;
+    height:42px;
+    display:inline-block;
+    position:absolute;
+    top:-1px;
+    right:-1px;
+    background:url("../../images/client/searchbtn.jpg") no-repeat;
+}
+.commonBtn{
+    min-width:65px;
+}
+.login-entrance .login{
+    background:#1cafad;
+    margin-right:6px;
+    color:#ffffff !important;
+}
+.register{
+    background:#f4f4f4;
+}
+.login-entrance > a{
+    padding:0;
+    line-height:42px;
+}
+.travelTime .timeIcon{
+    width: 16px;
+    height: 16px;
+    background-position: -71px -190px;
+    top: 33%;
+}
+.weatherStatus .weatherIcon{
+    display: inline-block;
+    width: 37px;
+    height: 33px;
+    background: url("../../images/client/weatherIcon.png") no-repeat 0 0;
+    vertical-align: top;
+    margin-right: 5px;
+}
+.weatherStatus .numberOfDegrees{
+    font-size: 24px;
+    margin-right: 10px;
+}
+.searchTab .regionFonts{
+    font-size: 13px;
+}
+.searchTab .startOffPlaceModel,
+.searchTab .destinationModel,
+.searchTab .themeModal{
+    position: relative;
+}
+.startOffPlaceModel .selectStartOffPlace,
+.themeModal .selectTheme{
+    font-size: 14px;
+    color: #555555;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: absolute;
+    top: 41px;
+    left: 0;
+    display: none;
+}
+.startOffPlaceModel .selectStartOffPlace > li,
+.themeModal .selectTheme > li{
+    width: 235px;
+    padding: 10px 0;
+    margin: 0 10px;
+    border-top: 1px solid #e0e0e0;
+    text-indent: 28px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.startOffPlaceModel .selectStartOffPlace > li:first-child,
+.themeModal .selectTheme > li:first-child{
+    border-top: none;
+}
+.startOffPlaceModel .selectStartOffPlace > li.active,
+.startOffPlaceModel .selectStartOffPlace > li:hover,
+.themeModal .selectTheme > li.active,
+.themeModal .selectTheme > li:hover{
+    color: #11b9b7;
+}
+/*  目的地 多城市样式，以后可能用
+.destinationModel .selectDestination{
+    width: 545px;
+    font-size: 12px;
+    color: #555555;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    display: none;
+}
+.selectDestination .selectLeft{
+    display: inline-block;
+    width: 180px;
+    background-color: #fff;
+}
+.selectDestination .cityList > li{
+    padding: 10px 0;
+    margin: 0 15px;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+.selectDestination .cityList > li:first-child{
+    border-top: none;
+}
+.cityList > li .selectTitle{
+    font-size: 14px;
+    color: #11b9b7;
+    margin: 5px 0;
+    padding: 0;
+}
+.cityList .selectCity span{
+    display: inline-block;
+    padding-top: 10px;
+    width: 48%;
+    text-align: left;
+}
+.selectDestination .selectRight{
+    display: inline-block;
+    width: 360px;
+    vertical-align: top;
+}
+.selectDestination .selectRight > li{
+    border-top: none;
+}
+.cityList.selectRight > li .selectTitle{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.cityList.selectRight .selectCity span{
+    width: 32%;
+}
+*/
+.destinationModel .selectDestination{
+    color: #555555;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    display: none;
+}
+.selectDestination .cityList{
+    display: inline-block;
+    width: 175px;
+    background-color: #fff;
+    margin: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.selectDestination .cityList > li{
+    padding: 10px 0;
+    margin: 0 15px;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-size: 15px;
+    text-indent: 20px;
+    height: 42px;
+}
+.selectDestination .cityList > li .nav-tree-arrow {
+    width: 4px;
+    height: 7px;
+    background: url(../../images/client/green-right-arrow.png) no-repeat 0 0;
+    float: right;
+    margin-top: 8px;
+    margin-right: 6px;
+    display: none;
+}
+.selectDestination .cityList > li.active .fl-destName,
+.selectDestination .cityList > li:hover .fl-destName {
+    color: #11b9b7;
+}
+.selectDestination .cityList > li.active .nav-tree-arrow,
+.selectDestination .cityList > li:hover .nav-tree-arrow {
+    display: inline-block;
+}
+.selectDestination .cityList > li:first-child{
+    border-top: none;
+}
+.cityList > li .fl-destName{
+    font-size: 15px;
+    margin: 5px 0;
+    padding: 0;
+}
+.addIcon .themeIcon {
+    display: inline-block;
+    background: url(../../images/client/inputThemeIcon.png) no-repeat 0 0;
+    width: 18px;
+    height: 17px;
+    vertical-align: middle;
+}
+.destSelect-first-level .second-level {
+    position: absolute;
+    left: 175px;
+    top: 0;
+    width: 180px;
+    height: 210px;
+    color: #555555;
+    background-color: #f7f7f7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+}
+
+.destSelect-first-level .sl-destName {
+    height: 42px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.destSelect-first-level .sl-destName:hover,
+.destSelect-first-level .sl-destName.active {
+    color: #11b9b7;
+}
+/*  导航目的地样式 E  */
+.main-contain{
+    border-top:1px #d9d9d9 solid;
+    background:#ffffff;
+}
+.reward-banner{
+    width:1420px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.reward-img{
+    width:1420px;
+    height:560px;
+}
+.reward-contain{
+    width:1420px;
+    min-height:560px;
+    margin:0 auto;
+    background-color:#ffffff;
+}
+.reward-contain-th{
+    text-align: center;
+    font-size: 36px;
+    color:#333333;
+    padding-top:103px;
+    padding-bottom: 84px;
+}
+.reward-detail{
+    width:900px;
+    margin:0 auto;
+    font-size: 18px;
+    line-height:24px;
+    color:#333333;
+}
+.reward-detail-left{
+    float:left;
+    display: inline-block;
+}
+.reward-detail-left span, .reward-detail-right span{
+    width:320px;
+    display: inline-block;
+}
+.reward-detail-left .reward-icon01{
+    width:53px;
+    height:53px;
+    background:url("../../images/client/reward-icon.png") no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    margin-right:15px;
+}
+.reward-detail-right .reward-icon02{
+    width:59px;
+    height:53px;
+    background:url("../../images/client/reward-icon.png") no-repeat -55px 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-right:15px;
+}
+.reward-detail-right{
+    float:right;
+}
+.reward-box{
+    width:1200px;
+    margin:0px auto;
+    padding-top:107px;
+    padding-bottom: 107px;
+}
+.reward-box-th{
+    text-align: center;
+    font-size: 38px;
+    color:#333333;
+    padding-top:78px;
+    border-top:1px #afafaf dashed;
+}
+.reward-box-cnt{
+    width:710px;
+    margin:63px auto;
+    font-size: 18px;
+    line-height:31px;
+    color:#444444;
+    text-align:center;
+}
+.reward-page{
+    font-size: 18px;
+    color:#333333;
+    text-align: center;
+    padding-top:80px;
+    padding-bottom:80px;
+}
+.reward-page1{
+    text-align: center;
+    margin-top:50px;
+    margin-bottom: 34px;
+}
+.reward-page2{
+    font-size: 24px;
+    color:#2494c5;
+    text-align: center;
+}
+.reward-page1 span{
+    width:193px;
+    height:192px;
+    background: url("../../images/client/reward-qr.jpg") no-repeat;
+    display: inline-block;
+}
+.reward-box-cnt .left-quo{
+    width:33px;
+    height:31px;
+    float: left;
+    background: url("../../images/client/reward-icon.png") no-repeat -116px 0;
+    display: inline-block;
+    vertical-align: text-top;
+}
+.reward-box-cnt .right-quo{
+    width:33px;
+    height:43px;
+    margin-top:40px;
+    float: right;
+    background: url("../../images/client/reward-icon.png") no-repeat -152px 0;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.reward-box-txt{
+    width:630px;
+    float:left;
+    text-align: center;
+    font-size: 18px;
+    line-height:31px;
+    color:#444444;
+}
+.reward-name{
+    text-align: center;
+    font-size: 18px;
+    line-height:42px;
+    color:#78c5ec;
+    padding-bottom: 74px;
+    border-bottom:1px #afafaf dashed;
+}
+.reward-box h1{
+    text-align:center;
+    font-size: 48px;
+    line-height:36px;
+    color:#333333;
+    padding-top:105px;
+    padding-bottom: 105px;
+}
+.flowsheet{
+    font-size: 30px;
+    line-height:40px;
+    color:#555555;
+}
+.flowsheet-title{
+    display: inline-table;
+}
+.flowsheet-icon{
+    float:left;
+    margin-right:33px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.flowsheet-txt{
+    float:left;
+    display: table-cell;
+    text-align: left;
+}
+.flowsheet-left{
+    float:left;
+    width:600px;
+}
+.flowsheet-right{
+    float:right;
+    width:600px;
+    padding-left:40px;
+}
+.num-seq01{
+    width:50px;
+    height:50px;
+    background:url("../../images/client/num-icon.jpg") no-repeat;
+    display: inline-block;
+}
+.num-seq02{
+    width:45px;
+    height:45px;
+    background:url("../../images/client/num-icon.jpg") no-repeat -51px 0;
+    display: inline-block;
+}
+.num-seq03{
+    width:45px;
+    height:45px;
+    background:url("../../images/client/num-icon.jpg") no-repeat -97px 0;
+    display: inline-block;
+}
+.num-seq04{
+    width:45px;
+    height:45px;
+    background:url("../../images/client/num-icon.jpg") no-repeat -143px 0;
+    display: inline-block;
+}
+.flowsheet-img{
+    width:458px;
+    height:458px;
+    display: inline-block;
+    vertical-align: middle;
+    margin:56px;
+}
+.flowsheet-img01{
+    background:url("../../images/client/flowsheet.png") no-repeat;
+}
+.flowsheet-img02{
+    background:url("../../images/client/flowsheet.png") no-repeat -458px 0;
+}
+.flowsheet-img03{
+    background:url("../../images/client/flowsheet.png") no-repeat -918px 0;
+}
+.flowsheet-img04{
+    background:url("../../images/client/flowsheet.png") no-repeat -1376px 0;
+}
+
+/**底部导航栏**/
+.footer-wrap{
+    background: #1cafad;
+}
+.footer-wrap .foot{
+    width: 1130px;
+    margin: 0 auto;
+    border-top: 1px solid #47b9a9;
+    padding: 22px 0;
+    color: #8efff5;
+    font-size: 12px;
+}
+.footer-wrap .foot .service-tel {
+    float: right;
+}
+
+.footer-wrap .foot .service-tel .telnum {
+    font-size: 15px;
+}
+
+.bottomMenu{
+    width: 1130px;
+    margin: 43px auto;
+    padding-left:24px;
+    padding-right:24px;
+    padding-top:40px;
+    font-size: 14px;
+    line-height:18px;
+    color:#8efff5;
+}
+.bottomMenu-left{
+    float:left;
+    display: inline-block;
+}
+.bottomMenu-left-img{
+    width:177px;
+    height:177px;
+    border:10px #ffffff solid;
+    float:left;
+    display: inline-block;
+    vertical-align: middle;
+    background: #ffffff url("../../images/client/withImg_02.jpg") no-repeat;
+}
+.bottomMenu-left-txt{
+    float:left;
+    margin-left:20px;
+}
+.bottomMenu-left-txt .bottomTxt-title{
+    font-size: 16px;
+    line-height:24px;
+    color:#ffffff;
+}
+.bottomMenu-right{
+    float:right;
+}
+.bottomMenu-right ul .menuRight-title{
+    font-size: 16px;
+    line-height:24px;
+    color:#ffffff;
+    margin-top:0px;
+    margin-bottom: 15px;
+}
+.rightMenu-list{
+    float:left;
+    display: inline;
+    margin-right:90px;
+    margin-bottom: 0px;
+}
+.bottomMenu-right ul li{
+    width:100px;
+    margin:10px 0;
+}
+.bottomMenu-right ul li a{
+    font-size: 14px;
+    line-height:18px;
+    color:#8efff5;
+}
+.bottomMenu-right ul li a:hover{
+    text-decoration: underline;
+}
+.foot .service-tel .phoneIcon{
+    width:12px;
+    height:15px;
+    margin-right:5px;
+    background: url("../../images/client/spirit.png") no-repeat -56px 0px;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 11;
+}
+/** end **/

@@ -726,7 +726,6 @@
         var checkGroup = $(".checkboxContent .checkboxInfo").filter(".active");
         var num = checkGroup.length;
         if(flag){
-            //console.info("有选择");
             $.each(checkGroup, function(i, n){
 
                 //console.info("第"+(i+1)+"个:"+ $(this).text().trim());
@@ -742,7 +741,6 @@
                     $(".addSpecil").html("<em> + </em>添加个性化权限");
                 }else{
                     $(".addSpecil").text('个性化权限（'+cnt+'）');
-                    //console.info("还剩下"+cnt+"个对象");
                 }
             });
         }else{
