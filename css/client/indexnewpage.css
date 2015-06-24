@@ -1,5 +1,8 @@
 @charset "utf-8";
-
+.logo{
+    background:url("../../images/client/logo-new.png") no-repeat;
+    margin-top:4px;
+}
 .main-nav {
     text-align: center;
 }
@@ -112,6 +115,20 @@
 }
 .searchContent .searchTab input[type="text"].destinationInput{
     padding-left:35px;
+}
+.searchContent .searchTab input[type="text"].destinationInput::-webkit-input-placeholder{
+    color:#434343;
+}
+.searchContent .searchTab input[type="text"].destinationInput:-moz-placeholder{
+    color:#434343;
+    opacity: 1;
+}
+.searchContent .searchTab input[type="text"].destinationInput::-moz-placeholder{
+    color:#434343;
+    opacity: 1;
+}
+.searchContent .searchTab input[type="text"].destinationInput:-ms-input-placeholder{
+    color:#434343;
 }
 .searchContent .searchTab th{
     font-size: 18px;
@@ -430,15 +447,16 @@ input[type="text"], input[type="password"]{
 
 /*banner开始*/
 .banner{
-    width: 1420px;
+    width: 100%;
     height: 650px;
     margin:0 auto;
     position:relative;
+    overflow:hidden;
 }
 .banner .product{
   list-style: none;
   padding: 0;
-  width:1420px;
+  width:100%;
   height: 650px;
   overflow: hidden;
 }
@@ -447,19 +465,20 @@ input[type="text"], input[type="password"]{
   float:left;
   margin: 0;
   padding: 0;
-  width: 1420px;
+  width:100%;
   height: 650px;
   background-color: #F79321;
   position: relative;
   z-index:0;
 }
 .banner .product li img {
-    display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width:100%;
+  width:1920px;
   height:100%;
+  display: block;
+  position: absolute;
+  left:50%;
+  top: 0;
+  margin-left:-960px;
 }
 .bannerbtn li{
     width:49px;
@@ -836,7 +855,7 @@ input[type="text"], input[type="password"]{
     overflow: hidden;
 }
 .modelTitle{
-    font-family: "Adobe 黑体 Std";
+    font-family: "Microsoft Yahei";
     font-size: 30px;
     color: #555555;
     text-align: center;
@@ -851,23 +870,112 @@ input[type="text"], input[type="password"]{
     float: left;
     width: 33.33%;
     min-height: 440px;
-    padding-top: 60px;
+    padding-top: 30px;
     background-color: #f8f8f8;
     color: #555555;
     text-align: center;
 }
+.serviceGuarantModel{
+    width:1220px;
+    margin:0 auto;
+    border-bottom:1px solid #d6d6d6;
+}
+.serviceGuarantModel li{
+    float: left;
+    width: 33.33%;
+    min-height: 280px;
+    color: #555555;
+    text-align: center;
+}
 .shareModel li.special{
+    position:relative;
     background-color: #f3f3f3;
+    overflow:hidden;
+}
+.special .erweima{
+    width:50px;
+    height:50px;
+    position:absolute;
+    right:18px;
+    top:-15px;
+    border-radius:100%;
+    display:inline-block;
+    background:#fff url(../../images/client/sharemodel-erweima.png) no-repeat center center;
+    z-index:4;
+    cursor:pointer;
+}
+.showspacial{
+    opacity:0;
+}
+.scanQR{
+    width:100%;
+    height:440px;
+    position:absolute;
+    top:0;
+    left:1500px;
+    /*left:0;*/
+    background:#f3f3f3;
+    text-align:center;
+    z-index:3;
+    padding-top:80px;
+    display:block;
+    /*transition:all 1s ease 0s;*/
+    /*opacity:1;*/
+}
+.scanQR.outright{
+    /*display:none;*/
+    /*opacity:0;*/
+}
+.scanQR.outleft{
+    left:-900px;
+    /*display:none;*/
+    /*opacity:0;*/
+}
+.special .scanQR img{
+    width:183px;
+    height:183px;
+    position:static;
+    margin-bottom:40px;
+}
+.shareModel li .shareImage{
+    width: 231px;
+    height: 273px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+}
+.shareImageCover{
+    width: 231px;
+    height: 273px;
+    background:url(../../images/client/sharemodel-imagecover.png); 
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:1;
+}
+.special .shareImageCover{
+    background:url(../../images/client/sharemodel-middleimagecover.png);
 }
 .shareModel li img{
-    width: 170px;
-    height: 200px;
+    height: 262px;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:0;
+}
+.serviceGuarantModel li img{
+    height:65px;
 }
 .shareModel li h3{
     font-size: 25px;
-    margin: 225px 0 20px;
+    margin: 0 0 20px;
+    font-family:"Microsoft Yahei";
 }
-.shareModel li .explainFonts{
+.serviceGuarantModel li h3{
+    font-size: 25px;
+    margin: 20px 0 20px;
+}
+.shareModel li .explainFonts,.serviceGuarantModel li .explainFonts{
     font-size: 18px;
     color: #7f7f7f;
     width: 330px;
@@ -884,43 +992,52 @@ input[type="text"], input[type="password"]{
     background: url("../../images/client/commonIcon.png") no-repeat;
     vertical-align: middle;
     position: absolute;
-    left: 43%;
-    top: 50px;
+    left: 44%;
+    top: 80px;
+    z-index:2;
+
 }
+.imgTransformation .shareIcon03{
+    top:84px;
+}
+
 .imgTransformation .shareIcon01{
     width: 83px;
     height: 45px;
     background-position: -109px -50px;
-    top: 60px;
+    top: 95px;
 }
 .imgTransformation .shareIcon02{
     width: 67px;
     height: 67px;
     background-position: 0 -271px;
-    left: 44%;
+    left: 45%;
 }
 .imgTransformation .shareIcon03{
     width: 56px;
     height: 69px;
     background-position: -107px -103px;
-    left: 45%;
+    left: 46%;
 }
 .imgTransformation img{
-    transition:width height 2s;
-    -moz-transition:width height 2s; /* Firefox 4 */
-    -webkit-transition:width height 2s; /* Safari and Chrome */
-    -o-transition:width height 2s; /* Opera */
+     transition:1s all ease 0s; 
+     -moz-transition:1s all ease 0s;  /* Firefox 4 */
+     -webkit-transition:1s all ease 0s;  /* Safari and Chrome */
+     -o-transition:1s all ease 0s;  /* Opera */
+    transform:scale(0.8,0.8);
     position: absolute;
-    left: 36%;
+    left:226px;
 }
-.imgTransformation img:hover{
-    width: 190px;
-    height: 220px;
-    left: 34%;
+.imgTransformation .shareImage:hover img{
+    transform:scale(1,1);
+    left:0;
 }
 .brandStory{
+    width:100%;
+    height:647px;
     color: #555555;
-    background:url("../../images/client/storyBg.jpg") no-repeat center center;
+    background:url("../../images/client/storyBg.jpg") no-repeat;
+    background-size:100% 100%;
     height: 647px;
     position: relative;
 }
@@ -952,13 +1069,15 @@ input[type="text"], input[type="password"]{
     margin-bottom: 40px;
     border-bottom: 1px solid #d6d6d5;
     text-align: center;
+    font-family:"Microsoft Yahei";
 }
 .brandStoryFonts .fontsDetails{
     font-size: 14px;
     line-height: 25px;
 }
 .shareModel.serveModel{
-    margin: 0 90px;
+    width:1220px;
+    margin: 0 auto;
     border-bottom: 1px solid #d6d6d6;
 }
 .shareModel.serveModel li{

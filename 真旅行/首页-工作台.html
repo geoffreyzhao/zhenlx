@@ -31,7 +31,7 @@
          <div class="searchContent">
              <table class="searchTab">
                  <colgroup>
-                     <col width="95">
+                     <col width="98">
                      <col width="142">
                      <col width="100">
                      <col width="424">
@@ -44,7 +44,7 @@
                          <div class="startOffPlaceModel">
                              <div class="startOffPlace">
                                  <input type="text" class="startOffInput" value="上海" style="width: 141px;" readonly="readonly">
-                                 <span class="caret"></span>
+                                 <span class="caret"></span> 
                              </div>
                              <ul class="selectStartOffPlace">
                                  <li class="active">上海</li>
@@ -58,7 +58,7 @@
                          <div class="destinationModel">
                              <div class="destination">
                                  <!-- <span class="commonIcon destinationIcon"></span> -->
-                                 <input type="text" class="destinationInput" value="" style="width:466px;" placeholder="目的地" readonly="readonly">
+                                 <input type="text" class="destinationInput" value="" style="width:466px;" placeholder="看世界" readonly="readonly">
                                  <span class="caret"></span>
                                  <!-- <input id="caret selectedDestLevel" type="hidden"/> -->
                              </div>
@@ -508,7 +508,10 @@
         <ul class="shareModel clearfix">
           <li>
             <div class="imgTransformation">
-              <img src="../images/client/share01.png">      
+              <div class="shareImage">
+                <span class="shareImageCover"></span>
+                <img src="../images/client/shareImage-01.jpg">      
+              </div>
               <span class="shareIcon01"></span>
             </div>
             <h3>代金券分享</h3>
@@ -516,15 +519,27 @@
           </li>
           <li class="special">
             <div class="imgTransformation">
-              <img src="../images/client/share02.png">      
+              <div class="shareImage">
+                <span class="shareImageCover"></span>
+                <img src="../images/client/shareImage-02.jpg">
+              </div>      
               <span class="shareIcon02"></span>
+              <span class="erweima"></span>
             </div>
             <h3>真旅故事</h3>
             <div class="explainFonts">每周三旅行达人故事分享会与一群有趣共同聆听这个世界，有趣的事。</div>
+            <div class="scanQR outright">
+              <img src="../images/client/QR.jpg">      
+              <h3>扫描二维码</h3>
+              <div class="explainFonts">加入温馨的真旅行大家庭</div>
+            </div>
           </li>
           <li>
             <div class="imgTransformation">
-              <img src="../images/client/share03.png">      
+              <div class="shareImage">
+                <span class="shareImageCover"></span>
+                <img src="../images/client/shareImage-03.jpg"> 
+              </div>     
               <span class="shareIcon03"></span>
             </div>
             <h3>推荐人奖励计划</h3>
@@ -553,7 +568,7 @@
         <div class="modelTitle">
           <span>服务保障</span>
         </div>
-        <ul class="shareModel serveModel clearfix">
+        <ul class="serviceGuarantModel serveModel clearfix">
           <li>
             <img src="../images/client/serveImg01.png">      
             <h3>只做优品</h3>
@@ -1075,6 +1090,19 @@
             }
       });
     }
+
+    $(".special .erweima").hover(function(){
+
+      $('.special .scanQR').css({'display':'block'});
+      $('.special .scanQR').animate({'left':'0'},1000);
+    },function(){
+      $('.special .scanQR').animate({'left':'-1500px'},1000,function(){
+      $('.special .scanQR').css({'display':'none','left':'1500px'});
+      });
+    })
+
+
+
 });
 </script>
   
