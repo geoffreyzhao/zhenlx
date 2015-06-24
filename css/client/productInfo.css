@@ -1703,7 +1703,6 @@ ul.common-tab > li.rest {
     width: 80px;
     min-width: inherit;
 }
-
 /*   产品详情 E   */
 
 /*   产品列表  start   */
@@ -2023,6 +2022,11 @@ ul.common-tab > li.rest {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
+.searchModel{
+    width:806px;
+    float:left;
+    margin: 5px 0 0 28px;
+}
 .searchModel .leftBorderStyle,
 .searchModel .rightBorderStyle{
     display: inline-block;
@@ -2037,40 +2041,29 @@ ul.common-tab > li.rest {
 .searchModel .rightBorderStyle{
     background-position: -12px 0;
 }
-.searchModel {
-    position: absolute;
-    width: 100%;
-    z-index: 3;
-}
-.searchInnerWrapper {
-    width: 1130px;
-    margin: 0 auto;
-}
 .searchModel .searchContent{
-    display: inline-block;    
-    width: 100%;
-    height: 84px;
-    margin: 0 -5px;
-    color: #fff;
-    background-color: rgba(0,0,0,0.75);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);/*IE-8*/
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding-left: 140px;
+    display: inline-block;
+    /*background-color: rgba(0,0,0,0.4);*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00ffffff,endColorstr=#00ffffff);/*IE-8*/
+    width: 806px;
+    height: 43px;
+    /*margin: 0 -5px;*/
+    color: #11b9b7;
+    border:1px solid #e4e4e4;
+    border-radius: 3px;
 }
-.searchContent .searchTab{
-    margin: 20px 0 0 10px;
-}
+
 .searchContent .searchTab input[type="text"]{
     color: #434343;
-    padding-left: 35px;
+    padding-left:30px;
+    padding-right:10px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border: none;
-}
-.searchContent .searchTab input[type="text"]:focus {
     border: none!important;
+}
+.searchContent .searchTab input[type="text"].destinationInput{
+    padding-left:35px;
 }
 .searchContent .searchTab th{
     font-size: 18px;
@@ -2078,92 +2071,166 @@ ul.common-tab > li.rest {
 .searchTab .addIcon{
     display: inline-block;
     position: relative;
-    cursor: pointer;
+}
+.searchContent .searchTab{
+    /*margin-left: 10px;*/
+}
+.top-right-block{
+    margin:5px 0 0 0;
 }
 .addIcon .commonIcon{
     position: absolute;
-    top: 28%;
-    left: 3px;
+    top: 30%;
+    left: 0px;
 }
-.addIcon .caret {
+.addIcon{
+
+}
+/*.addIcon .caret {
     color: #11b9b7;
     position: absolute;
     top: 20px;
     right: 7px;
-}
-.addIcon input {
+}*/
+.startOffPlace .caret,.destination .selectedDestLevel{
+    position: absolute;
+    top: 20px;
+    right: 10px;
     cursor: pointer;
 }
-.startOffPlace .startOffIcon{
+.destination .caret{
+    position: absolute;
+    top: 20px;
+    right:56px;
+    cursor: pointer;
+}
+/*.addIcon input {
+    cursor: pointer;
+}*/
+.addIcon input {
+    cursor: pointer;
+    color: #11b9b7;
+}
+.startPlace-title,.destination-title{
+    display:inline-block;
+    margin: 7px 0px 0px 36px;
+}
+input[type="text"], input[type="password"]{
+    height:39px;
+}
+.addIcon .startOffIcon{
     width: 19px;
     height: 19px;
     background-position: -24px -190px;
+    margin:0 10px;
 }
-.destination .destinationIcon{
+.addIcon .destinationIcon{
     width: 19px;
     height: 20px;
+    margin-left: 10px;
     background-position: -48px -190px;
 }
+.searchbtn{
+    position:relative;
+}
+.searchbtn a{
+    width:44px;
+    height:42px;
+    display:inline-block;
+    position:absolute;
+    top:-1px;
+    right:-1px;
+    background:url("../../images/client/searchbtn.jpg") no-repeat;
+}
+.searchbtn a:hover{
+    background:url("../../images/client/searchbtnhover.jpg") no-repeat;
+}
+.commonBtn{
+    min-width:65px;
+}
+.login.commonBtn{
+    background:#1cafad;
+    margin-right:6px;
+    color:#fff;
+    display: inline-block;
+}
+.login.commonBtn:hover{
+    color:#fff;
+    background:#0C9C9A;
+}
+.register.commonBtn{
+    background:#f4f4f4;
+    color:#7f7f7f;
+    display: inline-block;
+}
+.login-entrance > a{
+    padding:0;
+    line-height:42px;
+}
+
 .travelTime .timeIcon{
     width: 16px;
     height: 16px;
     background-position: -71px -190px;
     top: 33%;
 }
-.weatherStatus .weatherIcon{
-    display: inline-block;
-    width: 37px;
-    height: 33px;
-    background: url("../../images/client/weatherIcon.png") no-repeat 0 0;
-    vertical-align: top;
-    margin-right: 5px;
-}
-.weatherStatus .numberOfDegrees{
-    font-size: 24px;
-    margin-right: 10px;
-}
+
 .searchTab .regionFonts{
     font-size: 13px;
 }
 .searchTab .startOffPlaceModel,
-.searchTab .destinationModel,
-.searchTab .themeModal {
+.searchTab .destinationModel{
     position: relative;
 }
-.startOffPlaceModel .selectStartOffPlace,
-.themeModal .selectTheme {
+.startOffPlaceModel .selectStartOffPlace{
     font-size: 14px;
     color: #555555;
     background-color: #fff;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+    border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
     position: absolute;
-    top: 41px;
-    left: 0;
+    top: 42px;
+    left: 8px;
     display: none;
+    border: 1px solid #e0e0e0;
+    border-top: 0;
+    z-index: 4;
 }
-.startOffPlaceModel .selectStartOffPlace > li,
-.themeModal .selectTheme > li {
-    width: 235px;
+.startOffPlaceModel .selectStartOffPlace > li{
+    width: 114px;
     padding: 10px 0;
     margin: 0 10px;
     border-top: 1px solid #e0e0e0;
-    text-indent: 28px;
+    text-indent: 12px;
     cursor: pointer;
     font-size: 15px;
 }
-.startOffPlaceModel .selectStartOffPlace > li:first-child,
-.themeModal .selectTheme > li:first-child {
+.startOffPlaceModel .selectStartOffPlace > li:first-child{
     border-top: none;
 }
 .startOffPlaceModel .selectStartOffPlace > li.active,
-.startOffPlaceModel .selectStartOffPlace > li:hover,
-.themeModal .selectTheme > li.active,
-.themeModal .selectTheme > li:hover {
+.startOffPlaceModel .selectStartOffPlace > li:hover{
     color: #11b9b7;
 }
+
+.startOffPlace:before,.startOffPlace:after,.destination:before{
+    content: "";
+    width:1px;
+    height:30px;
+    background:#e4e4e4;
+    position:absolute;
+    left: 8px;
+    top: 6px;
+}
+
+.startOffPlace:after{
+    left:142px;
+}
+/*  目的地 多城市样式，以后可能用
 .destinationModel .selectDestination{
+    width: 545px;
+    font-size: 12px;
     color: #555555;
     background-color: #f7f7f7;
     border-radius: 5px;
@@ -2174,12 +2241,67 @@ ul.common-tab > li.rest {
     top: 41px;
     display: none;
 }
+.selectDestination .selectLeft{
+    display: inline-block;
+    width: 180px;
+    background-color: #fff;
+}
+.selectDestination .cityList > li{
+    padding: 10px 0;
+    margin: 0 15px;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+.selectDestination .cityList > li:first-child{
+    border-top: none;
+}
+.cityList > li .selectTitle{
+    font-size: 14px;
+    color: #11b9b7;
+    margin: 5px 0;
+    padding: 0;
+}
+.cityList .selectCity span{
+    display: inline-block;
+    padding-top: 10px;
+    width: 48%;
+    text-align: left;
+}
+.selectDestination .selectRight{
+    display: inline-block;
+    width: 360px;
+    vertical-align: top;
+}
+.selectDestination .selectRight > li{
+    border-top: none;
+}
+.cityList.selectRight > li .selectTitle{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.cityList.selectRight .selectCity span{
+    width: 32%;
+}
+*/
+.destinationModel .selectDestination{
+    color: #555555;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: absolute;
+    left: 9px;
+    top: 42px;
+    display: none;
+    z-index:4;
+    border-left: 1px solid #e4e4e4;
+    border-bottom: 1px solid #E4E4E4;
+}
 .selectDestination .cityList{
     display: inline-block;
-    width: 175px;
+    width: 209px;
     background-color: #fff;
     margin: 0;
-    border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 .selectDestination .cityList > li{
@@ -2188,7 +2310,7 @@ ul.common-tab > li.rest {
     border-top: 1px solid #e0e0e0;
     cursor: pointer;
     font-size: 15px;
-    text-indent: 20px;
+    text-indent: 12px;
     height: 42px;
 }
 .selectDestination .cityList > li .nav-tree-arrow {
@@ -2225,13 +2347,14 @@ ul.common-tab > li.rest {
 }
 .destSelect-first-level .second-level {
     position: absolute;
-    left: 175px;
+    left: 209px;
     top: 0;
-    width: 180px;
+    width: 205px;
     height: 210px;
     color: #555555;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #E4E4E4;
     background-color: #f7f7f7;
-    border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     display: none;
 }
@@ -2246,7 +2369,362 @@ ul.common-tab > li.rest {
 .destSelect-first-level .sl-destName.active {
     color: #11b9b7;
 }
+
+.after-login{
+    display: none;
+    margin-top:7px;
+}
 /*  导航目的地样式 E  */
+
+/*工作台开始*/
+.work-platform{
+    width:356px;
+    height:808px;
+    background: #fff;
+    border:1px solid #bababa;
+    position:absolute;
+    left:-358px;
+    top:76px;
+    z-index:6;
+}
+/*工作台登录模块*/
+.workpla-login{
+    padding:50px 42px 0 48px;
+}
+.logintext{
+    margin-bottom:36px;
+    display: inline-block;
+}
+.componentInput{
+    margin-bottom:24px;
+    height:42px;
+}
+.workpla-login .login-attach .checkbox {
+    font-size: 13px;
+    color: #11b9b7;
+    font-weight: normal;
+    margin-left: 0;
+    margin-top:20px;
+}
+
+.workpla-login .login-attach .checkboxIcon {
+    margin-top: -5px;
+}
+
+.workpla-login .login-attach .register-link {
+    font-size: 13px;
+    color: #11b9b7;
+    float: right;
+    margin-top: 20px;
+    margin-right:0;
+}
+
+.login-attach .register-link:hover {
+    cursor: pointer;
+}
+
+/*登录后*/
+.workpla-afterlogin{
+    padding:0px 18px 0 18px;
+    display: none;
+}
+.exit{
+    height:28px;
+    padding-top:12px;
+    cursor:pointer;
+}
+.exit .exitbtn{
+    font-size:15px;
+    color:#c7c7c7;
+    float:right;
+}
+.exit .exitbtn .exitIcon{
+    width:13px;
+    height:13px;
+    background:url(../../images/client/exit.png);
+    margin:0;
+
+}
+.userInfo{
+    height:94px;
+    border-bottom:1px solid #e7e7e7;
+}
+.workpla-afterlogin .leftImg{
+    width:70px;
+    height:70px;
+    margin-left:28px;
+    float:left;
+}
+.workpla-afterlogin .leftImg img{
+    width:100%;
+    height:100%;
+}
+.workpla-afterlogin .rightUserInfo{
+    float:left;
+    padding:12px 0 0 16px;
+}
+
+.rightUserInfo .usercenter-text{
+    vertical-align: middle;
+}
+.rightUserInfo .usercenter-text a{
+    color: #23b0ae;
+}
+.workpla-afterlogin .rightUsername {
+    margin-bottom:8px;
+    margin-left:4px;
+    display: inline-block;
+}
+/*栏目模块*/
+.columnModel{
+    height:104px;
+    border-bottom:1px solid #e7e7e7;
+    padding-top:22px;
+}
+.columnModel ul{
+    overflow: hidden;
+    margin:0;
+}
+.columnModel ul li{
+    width:48px;
+    float:left;
+    margin:0 15px;
+    font-size:12px;
+    text-align: center;
+}
+.columnModel ul li span{
+    display:inline-block;
+    line-height:32px;
+    color: #929292;
+}
+.columnModel ul li span.current{
+    color:#1cafad;
+}
+.orderIcon{
+    width:24px;
+    height:30px;
+    background:url(../../images/client/columnIcon.png) no-repeat 0 0;
+}
+.favorIcon{
+    width:31px;
+    height:28px;
+    background:url(../../images/client/columnIcon.png) no-repeat -25px 0;
+}
+.elecWalletIcon{
+    width:29px;
+    height:29px;
+    background:url(../../images/client/columnIcon.png) no-repeat -56px 0;
+}
+.messageIcon{
+    width:29px;
+    height:29px;
+    background:url(../../images/client/columnIcon.png) no-repeat -86px 0;
+}
+/*选项卡模块*/
+.tipTab{
+    height:55px;
+}
+.message-tip-tab{
+    height:55px;
+    padding-top: 8px;
+    text-align: center;
+    border-bottom:1px solid #e7e7e7;
+    position:relative;
+    overflow: hidden;
+}
+.message-tip-tab li{
+    width:159px;
+    float:left;
+    font-size: 18px;
+    color: #858585;
+    border: 1px solid #fff;
+    padding: 6px 14px;
+    /* border-radius: 2px;*/
+    cursor: pointer;
+}
+.tab-toggle{
+    position:relative;
+}
+.tab-toggle .slidline{
+    width: 150px;
+    height: 3px;
+    background-color: #11B9B7;
+    position: absolute;
+    top:52px;
+    left: 0;
+    z-index: 2;
+}
+.message-tip-tab li{
+    position:relative;
+}
+.message-tip-tab li.current {
+    color: #11b9b7;
+}
+
+.message-tip-tab li span{
+    width:5px;
+    height:5px;
+    background:#efc524;
+    border-radius:100%;
+    position:absolute;
+    right: 52px;
+    top: 8px;
+    z-index:9;
+}
+
+.tab-cont{
+    display:none;
+}
+
+/*微信提醒模块*/
+.remind-tab-cont ul li{
+    padding:10px 18px 8px 30px;
+    /*height:76px;*/
+    color:#92918b;
+    font-size:14px;
+    word-wrap:break-all;
+    margin-bottom:8px;
+    position:relative;
+}
+.remind-tab-cont ul li a{
+    color:#1cafad;
+}
+.remind-tab-cont ul li a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.remind-tab-cont ul li .remind-conmenicon{
+    width:16px;
+    height:20px;
+    position:absolute;
+    left:8px;
+    top:12px;
+    background: url(../../images/client/remindicon.png) 0 0;
+}
+.remind-tab-cont ul li .ordericon{
+    width:14px;
+    background: url(../../images/client/remindicon.png) 0 0;
+}
+
+.remind-tab-cont ul li .unread-ordericon{
+    width:14px;
+    background-position:-15px 0;
+}
+.remind-tab-cont ul li .vouchericon{
+    background: url(../../images/client/remindicon.png) -30px 0;
+}
+
+.remind-tab-cont ul li .unread-vouchericon{
+    background-position:-47px 0;
+}
+.remind-tab-cont ul li .balanceicon{
+    background: url(../../images/client/remindicon.png) -64px 0;
+}
+
+.remind-tab-cont ul li .unread-balanceicon{
+    background-position:-81px 0;
+}
+.remind-tab-cont ul li.unread{
+    background:#fffded;
+    border:1px solid #eee;
+}
+.privletter-tab-cont ul li.unread{
+    background:#fffded;
+    border:1px solid #eee;
+}
+
+.remind-tab-cont,.privletter-tab-cont{
+    height:480px;
+    display:none;
+}
+.remind-tab-dot,.privletter-tab-dot{
+    text-align: center;
+}
+.remind-tab-dot li,.privletter-tab-dot li{
+    display:inline-block;
+    border-radius:100%;
+    margin:0 5px 0 0;
+    width:9px;
+    height:9px;
+    background:#dbdbdb;
+}
+.remind-tab-dot li.current,.privletter-tab-dot li.current{
+    background:#1cafad;
+}
+/*私信模块*/
+.privletter-tab-cont ul li{
+    padding:14px 10px 14px 5px;
+    min-height:80px;
+}
+.privaletter-left{
+    width:42px;
+    height:42px;
+    float:left;
+}
+.privaletter-left img{
+    width: 100%;
+    height: 100%;
+}
+.privaletter-right{
+    width:256px;
+    float:right;
+    font-size:14px;
+    word-spacing: -1;
+    padding:2px 8px 0 10px;
+}
+.username{
+    color: #616161;
+    float:left;
+}
+.priletter-data{
+    color: #d4d4d4;
+    float: right;
+}
+.priletter-top{
+    overflow:hidden;
+}
+.priletter-bottom{
+    margin:0;
+    height:40px;
+}
+.priletter-bottom a{
+    color: #929292;
+}
+
+/*/私信结束*/
+
+/*工作台侧边按钮*/
+.workplabtn{
+    width:46px;
+    height:52px;
+    border:1px solid #bababa;
+    border-radius:0 4px 4px 0;
+    background:#fff url(../../images/client/workplatformIcon.png) no-repeat center center;
+    position:absolute;
+    right:-46px;
+    top:48px;
+    z-index:0;
+    cursor:pointer;
+}
+.workplabtn:hover{
+    background:#fff url(../../images/client/workplatformIconhover.png) no-repeat center center;
+}
+
+.workplabtn span{
+    width:14px;
+    height:14px;
+    background:#efc524;
+    border:2px solid #fff;
+    border-radius:100%;
+    box-shadow:0 0 2px 1px #ddd;
+    position:absolute;
+    right:-5px;
+    top:-5px;
+    z-index:8;
+    display: block;
+}
+/** 工作台结束 **/
 
 /*   产品列表  end   */
 .grayFont {
@@ -2271,71 +2749,139 @@ ul.common-tab > li.rest {
 }
 
 /** 无产品列表页 -start **/
-.withoutOrder, .orderList{
-    position: relative;
-    top: 40px;
-    color: #484848;
-    border-bottom: none;
-}
-.withoutOrder .top-border, .orderList .top-border{
+.logoImg{
     display: inline-block;
-    background: url(../../images/client/repeat-border.jpg) repeat-x;
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    top: -3px;
-    left: 0;
+    width: 121px;
+    height: 44px;
+    background: url(../../images/client/logo-new.png) no-repeat;
+    float: left;
+    margin-top: 6px;
 }
-.withoutOrder .pin, .orderList .pin{
-    width:24px;
-    height:44px;
-    background: url("../../images/client/spirit.png") no-repeat 0px 0px;
-    position: absolute;
-    top:-13px;
-    left:28px;
-    z-index: 10;
-}
-.txtColor{
-    color:#11b9b7;
-}
-.withoutOrderBox{
+.withoutOrder-box{
     width:100%;
-    /*min-height: 710px;*/
-    border-top:0px;
+    height:727px;
+    background-color:#d9f9f9;
+    border-top:1px #a9c2c2 solid;
+    -webkit-box-shadow: inset 0 2px 5px #cbe9e9;
+    -moz-box-shadow: inset 0 2px 5px #cbe9e9;
+    box-shadow: inset 0 2px 5px #cbe9e9;
+}
+.withoutOrder-cnt{
+    width:382px;
+    margin:0 auto;
+    text-align: center;
+    padding-top:120px;
+}
+.withoutOrder-img{
+    width:174px;
+    height:306px;
+    background: url("../../images/client/withoutList-img.png") no-repeat;
+    display: inline-block;
+}
+.withoutTips{
+    font-size: 22px;
+    color:#727272;
+    margin-top:35px;
+    margin-bottom: 18px;
+}
+.withoutSpl-color{
+    color:#1cafad;
+    margin:0 5px;
+}
+.recDes{
+    font-size: 18px;
+    line-height:18px;
+    color:#a7a7a7;
+}
+.downArrow{
+    width:32px;
+    height:32px;
+    background:url("../../images/client/productInfoIcon.png") no-repeat 0 -244px;
+    display: inline-block;
+    margin-top:60px;
+}
+
+/**底部导航栏**/
+.footer-wrap{
+    height:345px;
+    background: #1cafad;
+}
+.footer-wrap .foot{
+    width: 1130px;
+    margin:0 auto;
+    background-color: transparent;
+}
+.footer-nav{
+    height:242px;
+    padding: 45px 0  0 24px;
+    border-bottom:1px solid #51c2c0;
+}
+.erweima{
+    width:50%;
+    float:left;
+}
+.erweima img{
+    margin-right:20px;
+    float: left;
+}
+.contact-info{
+    float:left;
+    color:#8efff5;
+}
+.contact-info span{
+    margin-bottom:12px;
+    display: inline-block;
+}
+.contact-info .info-title{
+    font-size:16px;
+    color:#fff;
+}
+.contact-info .info-tell{
     margin-bottom: 0;
-}
-.withoutOrder-row1{
-    margin:115px 0px 85px;
     font-size:22px;
-    line-height: 18px;
+    /*font-weight: bold;*/
 }
-.withoutOrder-row2{
-    width:100%;
-    height:268px;
-    background: url("../../images/client/withoutOrderImg.png") no-repeat;
-    background-position: center;
-    display: inline-block;
+.quick-nav{
+    float:right;
 }
-.withoutOrder-row3{
-    font-size: 20px;
-    line-height: 18px;
-    color:#aaaaaa;
-    margin:55px 0px;
-    display: block;
+.quick-nav dl{
+    margin-right:112px;
+    float:left;
 }
-.withoutOrder-row3:hover {
-    color: #11b9b7;
+.quick-nav dl dt{
+    color:#fff;
+    margin-bottom:10px;
 }
-.phoneIcon{
+.quick-nav dl dd{
+    margin-bottom:4px;
+}
+.quick-nav dl dd a{
+    color:#8efff5;
+    font-size: 14px;
+}
+.quick-nav dl dd a:hover{
+    text-decoration:underline;
+}
+.footer-copyright{
+    height:102px;
+    padding-top: 30px;
+    color:#8efff5;
+    font-size:12px;
+}
+.copyright{
+    font-size:12px;
+    float:left;
+}
+.service-tel{
+    float:right;
+    font-size: 12px;
+}
+.tellIcon{
     width:12px;
     height:15px;
-    margin-right:5px;
-    background: url("../../images/client/spirit.png") no-repeat -56px 0px;
     display: inline-block;
+    margin-right:6px;
     vertical-align: middle;
-    z-index: 11;
-}
-.main-container .foot{
-    background-color: transparent;
+    background: url(../../images/client/tellIcon.png) center center;
 }
 /** end **/
