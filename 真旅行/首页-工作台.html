@@ -1094,9 +1094,9 @@
     $(".special .erweima").hover(function(){
 
       $('.special .scanQR').css({'display':'block'});
-      $('.special .scanQR').animate({'left':'0'},1000);
+      $('.special .scanQR').stop().animate({'left':'0'},1000);
     },function(){
-      $('.special .scanQR').animate({'left':'-1500px'},1000,function(){
+      $('.special .scanQR').stop().animate({'left':'-1500px'},1000,function(){
       $('.special .scanQR').css({'display':'none','left':'1500px'});
       });
     })
