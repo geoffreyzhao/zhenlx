@@ -961,16 +961,18 @@
             
             //滚动监听有蒙版效果
             $(window).scroll(function(){
-                $(".journeyRecommendList").children("li").each(function(index){
-                    showLi(this);
-                    if ($(this).hasClass("active")) {
-                        $(".asideFixed > li").removeClass("active");
-                        $(".asideFixed > li").eq(index).addClass("active");
-                    }
-                });
+                // $(".journeyRecommendList").children("li").each(function(index){
+                //     //showLi(this);
+                //     if ($(this).hasClass("active")) {
+                //         $(".asideFixed > li").removeClass("active");
+                //         $(".asideFixed > li").eq(index).addClass("active");
+                //     }
+                // });
                 //  概览位置 取消变白效果
-                $(".journeyRecommendList > li:eq(0)").addClass("active");
+                // $(".journeyRecommendList > li:eq(0)").addClass("active");
+
             });
+            $(".journeyRecommendList > li").addClass("active");
 
             function showLi(ele) {
                 var top = $(ele).offset().top,
