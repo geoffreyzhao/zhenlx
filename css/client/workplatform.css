@@ -280,7 +280,8 @@
 /*私信模块*/
 .privletter-tab-cont ul li{
     padding:14px 10px 14px 5px;
-    min-height:80px;
+    min-height:40px;
+    overflow: hidden;
 }
 .privaletter-left{
     width:42px;
