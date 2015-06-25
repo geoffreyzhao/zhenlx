@@ -1,19 +1,4 @@
 $(function(){
-    $(".loginBtn").click(function(event){
-            $(".login-entrance").hide();
-            $(".after-login").show();
-            $(".workpla-login").hide();
-            $(".workpla-afterlogin").show();
-            event.stopPropagation();
-        });
-
-    $(".exitbtn").click(function(event){
-        $(".after-login").hide();
-        $(".login-entrance").show();
-        $(".workpla-login").show();
-        $(".workpla-afterlogin").hide();
-        event.stopPropagation();
-    });
 
     // 选项卡点击
     $(".tab-cont").eq(0).show();

@@ -803,6 +803,22 @@ $(function(){
       $('.special .scanQR').css({'display':'none','left':'650px'});
       });
     })
+
+    $(".loginBtn").click(function(event){
+        $(".login-entrance").hide();
+        $(".after-login").show();
+        $(".workpla-login").hide();
+        $(".workpla-afterlogin").show();
+        event.stopPropagation();
+    });
+
+    $(".exitbtn").click(function(event){
+        $(".after-login").hide();
+        $(".login-entrance").show();
+        $(".workpla-login").show();
+        $(".workpla-afterlogin").hide();
+        event.stopPropagation();
+    });
   
 
 });
