@@ -194,7 +194,7 @@
                             <span class="buy-icon"></span>
                             <span class="title">价格:</span>
                             <span class="price-text">￥99999<em>起</em></span>
-                            <span class="price-tooltip" title="起价说明起价说明起价说明起价说明起价说明起价说明起价说明起价说明起价说明">起价说明</span>
+                            <span class="price-tooltip" title="1、本起价是按2位成人出行所核算的单人价格。<br>2、您最终提交的价格会根据您所选择的出发日期、出行人数以及所选附加服务的不同而有所差别。">起价说明</span>
                         </div>
                         <div class="discard-price">
                             <span class="title">市场价:</span>
@@ -204,11 +204,7 @@
                         <div class="share-info">
                             <span class="share-icon"></span>
                             <span class="title">分享:</span>
-                            <span class="qrCode-icon">
-                                <div class="qrCode-image-container">
-                                    <img src="../../images/client/withImg_02.jpg">
-                                </div>
-                            </span>
+                            <span class="qrCode-icon qrCode-tooltip"></span>
                             <span class="wishlist"></span>
                             <span class="wishedTip">已加入心愿清单</span>
                         </div>
@@ -1909,10 +1905,21 @@
         </table>       
     </script>
 
+
+    <script type="text/html" id="qrCode_template">
+        <img src="../../images/client/QR.jpg" style="width:183px;height:183px;"/>
+    </script>
+
 <script type="text/javascript">
     $(function(){
-
         $(".price-tooltip").tooltip({
+            html: true,
+            placement: 'bottom',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+
+        $(".qrCode-icon").attr("title", $("#qrCode_template").html());
+        $(".qrCode-tooltip").tooltip({
             html: true,
             placement: 'bottom',
             template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
@@ -1931,6 +1938,7 @@
 
         $(".stoppingPoint.transfer").attr("title", $("#transfer_flight_template").html());
         $(".stoppingPoint.stop").attr("title", $("#stop_flight_template").html());
+        
 
         $(".green-border-tooltip").tooltip({
             html: true,

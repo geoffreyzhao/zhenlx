@@ -326,7 +326,7 @@
     height:52px;
     border:1px solid #bababa;
     border-radius:0 4px 4px 0;
-    background:#fff url(../../images/client/workplatformIcon.png) no-repeat center center;
+    background:url(../../images/client/workplatformIcon.png) #fff no-repeat center center;
     position:absolute;
     right:-46px;
     top:48px;
@@ -334,7 +334,7 @@
     cursor:pointer;
 }
 .workplabtn:hover{
-    background:#fff url(../../images/client/workplatformIconhover.png) no-repeat center center;
+    background:url(../../images/client/workplatformIconhover.png) #fff no-repeat center center;
 }
 
 .workplabtn span{

@@ -102,7 +102,7 @@
     top:-15px;
     border-radius:100%;
     display:inline-block;
-    background:#fff url(../../images/client/sharemodel-erweima.png) no-repeat center center;
+    background:url(../../images/client/sharemodel-erweima.png) #fff no-repeat center center;
     z-index:4;
     cursor:pointer;
 }
@@ -395,6 +395,8 @@
     float:left;
 }
 .erweima img{
+    width:154px;
+    height:154px;
     margin-right:20px;
     float: left;
 }

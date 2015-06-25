@@ -1489,7 +1489,10 @@ ul.common-tab > li.rest {
     cursor: default;
     margin-left: 5px;
 }
-
+.cur-price .green-border-tooltip .tooltip-inner{
+    max-width:314px;
+    text-align:left;
+}
 .discard-price {
     color: #ababab;
     padding-left: 78px;
@@ -1535,7 +1538,8 @@ ul.common-tab > li.rest {
 }
 
 .qrCode-icon {
-    background: url(../../images/client/qrCode-icon.png) no-repeat;
+    background: url(../../images/client/sharemodel-erweima.png) no-repeat;
+    background-size:100% 100%;
     display: inline-block;
     width: 23px;
     height: 24px;
@@ -1558,7 +1562,13 @@ ul.common-tab > li.rest {
     float:left;
 }
 
-.share-info .title{margin:0 4px 0 4px;}
+.share-info .title{
+    margin:0 4px 0 4px;
+}
+
+.share-info .green-border-tooltip .tooltip-inner{
+    padding:1px;
+}
 
 .wishlist{
     background: url("../../images/client/confirm_normal_s.png") no-repeat 0 0;
