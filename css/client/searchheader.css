@@ -252,7 +252,7 @@ input[type="text"], input[type="password"]{
     display: none;
     border: 1px solid #e0e0e0;
     border-top: 0;
-    z-index: 4;
+    z-index: 10;
 }
 .startOffPlaceModel .selectStartOffPlace > li{
     width: 114px;
@@ -294,7 +294,7 @@ input[type="text"], input[type="password"]{
     left: 9px;
     top: 42px;
     display: none;
-    z-index:4;
+    z-index:10;
     border-left: 1px solid #e4e4e4;
     border-bottom: 1px solid #E4E4E4;
 }
