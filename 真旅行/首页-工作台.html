@@ -784,23 +784,6 @@ $(function(){
         workplatformChange();
         event.stopPropagation();
     });
-
-    //  判断点击范围是否超出元素
-    function isOuterTrigger(event, $ele) {
-        var top = $ele.offset().top;
-        var left = $ele.offset().left;
-        var width = $ele.outerWidth();
-        var height = $ele.outerHeight();
-
-        var _x = event.pageX;
-        var _y = event.pageY;
-
-        if (_y > top + height || _y < top || _x > left + width || _x < left) {
-            return false;
-        } else {
-            return true;
-        }
-    }
  
     //banner轮播
     $('.product').cycle({

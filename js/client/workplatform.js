@@ -74,6 +74,9 @@ $(function(){
 
 //  判断点击范围是否超出元素
     function isOuterTrigger(event, $ele) {
+        if($ele.length == 0){
+            return false ;
+        }
         var top = $ele.offset().top;
         var left = $ele.offset().left;
         var width = $ele.outerWidth();
