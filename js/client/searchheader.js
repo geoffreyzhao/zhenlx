@@ -1,4 +1,14 @@
 $(function(){
+    $(".login-entrance .login").click(function(event){
+        searchheaderClick();
+        event.stopPropagation();
+    });
+
+    $('.after-login .userName').click(function(event){
+        searchheaderClick();
+        event.stopPropagation();
+    });
+
         //出发地浮层
         $(".selectStartOffPlace li").click(function(){
             $(this).addClass("active");
@@ -98,3 +108,10 @@ function initSetActiveDest() {
         });
     }
 }
+
+
+function searchheaderClick(){
+    $(".selectStartOffPlace").hide();
+    $(".selectDestination").hide();
+    // workplatformChange();
+  }

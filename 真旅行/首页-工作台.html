@@ -776,12 +776,12 @@
 <script type="text/javascript">
 $(function(){
     $(".login-entrance .login").click(function(event){
-        searchheaderClick();
+        workplatformChange();
         event.stopPropagation();
     });
 
     $('.after-login .userName').click(function(event){
-        searchheaderClick();
+        workplatformChange();
         event.stopPropagation();
     });
 
@@ -820,26 +820,7 @@ $(function(){
       $('.special .scanQR').css({'display':'none','left':'650px'});
       });
     })
-
-
-    function workplatformChange(){
-            var leftvalue=parseInt($('.work-platform').css('left'));
-            if(leftvalue==0){
-              $('.work-platform').stop().animate({'left':'-385px'},300,function(){
-                $('.work-platform').stop().animate({'left':'-358px'});
-              });
-            }else if(leftvalue==-358){
-              $('.work-platform').stop().animate({'left':'-385px'},400,function(){
-                $('.work-platform').stop().animate({'left':'0'});
-              });
-            }
-     }
-
-  function searchheaderClick(){
-    $(".selectStartOffPlace").hide();
-    $(".selectDestination").hide();
-    workplatformChange();
-  }
+  
 
 });
 </script>

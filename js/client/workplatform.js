@@ -15,8 +15,6 @@ $(function(){
         event.stopPropagation();
     });
 
-      
-
     // 选项卡点击
     $(".tab-cont").eq(0).show();
     $(".message-tip-tab li").each(function(index){
