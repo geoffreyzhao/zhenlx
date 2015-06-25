@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>工作台</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+  <link rel="stylesheet" type="text/css" href="../../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+  <link rel="stylesheet" type="text/css" href="../../css/client/workplatform.css">
+
+  <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/client/common.js"></script>
+  <script type="text/javascript" src="../../js/vendor/jquery.cycle.all.js"></script>
+  <script type="text/javascript" src="../../js/client/workplatform.js"></script>
+
+  <!--[if lte IE 9]>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="work-platform">
+        <div class="workpla-login">
+          <span class="logintext">您还未登录账号，请先登录 </span>
+          <div class="componentInput"> <i class="commonIcon personHeaderIcon"></i>
+            <input type="text" placeholder="手机号/邮箱" style="width:224px;">
+          </div>
+          <div class="componentInput forgetPW"> <i class="commonIcon lockIcon"></i>
+            <input type="password" placeholder="请输入密码" style="width:142px;">          
+            <a href="javascript:void(0);" class="forgetPWFonts">忘记密码?</a>
+          </div>
+          <a href="javascript:void(0);" class="commonBtn blueBtn loginBtn" style="width:262px;">登 录</a>
+          <div class="login-attach">
+            <div class="checkboxContent">
+              <label class="checkbox active">
+                <span class="commonIcon checkboxIcon"></span>
+                记住我
+              </label>
+            </div>
+            <a class="register-link" href="javascript:;">免费注册</a>
+          </div>
+        </div>
+        <div class="workpla-afterlogin">
+          <div class="exit">
+            <div class="exitbtn">
+              <span class="commonIcon exitIcon"></span>
+              <span>退出</span>
+            </div>
+          </div>
+          <div class="userInfo">
+            <span class="leftImg">
+              <img src="../../images/client/avatar-01.jpg">
+            </span>
+            <div class="rightUserInfo">
+              <span class="rightUsername">太平洋的鲸鱼</span>
+              <div>
+                <span class="commonIcon userIcon"></span>
+                <span class="usercenter-text"><a href="javascript:void(0);">用户中心</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="columnModel">  <!-- 栏目模块 -->
+            <ul>
+              <li>
+                <a href="javascrip:void(0);">
+                  <span class="orderIcon"></span>
+                  <span>我的订单</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascrip:void(0);">
+                  <span class="favorIcon"></span>
+                  <span class="current">心愿清单</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascrip:void(0);">
+                  <span class="elecWalletIcon"></span>
+                  <span>电子钱包</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascrip:void(0);">
+                  <span class="messageIcon"></span>
+                  <span>消息中心</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tipTab">
+            <div class="tab-toggle">
+              <ul class="message-tip-tab clearfix">
+                <li class="current">提醒<span></span></li>
+                <li>私信<span></span></li>
+              </ul>
+              <div class="slidline"></div>
+              <div class="tab-cont-block">
+                <div class="tab-cont remind remind-cont-block">
+                  <div class="remind-tab-cont">
+                    <ul>
+                      <li class="unread"><span class="remind-conmenicon unread-ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li ><span class="remind-conmenicon ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="remind-conmenicon ordericon "></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="remind-conmenicon vouchericon"></span>您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                      <li><span class="remind-conmenicon balanceicon"></span>余额 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高逼格 欧洲行( S6589421356870) </a> 返现已经到你账户余额中啦 </li>
+                      <li class="unread"><span class="remind-conmenicon unread-vouchericon"></span>1您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                    </ul>
+                  </div>
+                  <div class="remind-tab-cont">
+                    <ul>
+                      <li class="unread"><span class="remind-conmenicon unread-ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="remind-conmenicon ordericon "></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li ><span class="remind-conmenicon ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="remind-conmenicon vouchericon"></span>您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                      <li class="unread"><span class="remind-conmenicon unread-vouchericon"></span>1您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                      <li><span class="remind-conmenicon balanceicon"></span>余额 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高逼格 欧洲行(S6589421356870) </a> 返现已经到你账户余额中啦 </li>
+                    </ul>
+                  </div>
+                  <div class="remind-tab-cont">
+                    <ul>
+                      <li ><span class="remind-conmenicon ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li class="unread"><span class="remind-conmenicon unread-ordericon"></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="remind-conmenicon ordericon "></span>您的订单 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高 逼格欧洲行 (S6589421356870) </a> 已创建，请支付。</li>
+                      <li><span class="remind-conmenicon balanceicon"></span>余额 <a href="javascrip:void(0);"> 上海-巴黎5晚6天年轻人的第一次高逼格 欧洲行(S6589421356870) </a> 返现已经到你账户余额中啦 </li>
+                      <li><span class="remind-conmenicon vouchericon"></span>您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                      <li class="unread"><span class="remind-conmenicon unread-vouchericon"></span>1您收到了一张代金卷 <a href="javascrip:void(0);"> 满5000元减100</a></li>
+                    </ul>
+                  </div>
+                  <ul class="remind-tab-dot">
+                    <li class="current"></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="tab-cont private-letter privletter-cont-block">
+                  <div class="privletter-tab-cont">
+                    <ul>
+                      <li class="unread">
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">南极的企鹅</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <div class="priletter-bottom secondEllipsis">
+                            <p>
+                              <a href="javascript:void(0);">第一次在真旅行订购旅游产品，真的非常净系！性价比非常高！非常贴心tttttt</a>
+                            </p> 
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-01.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="privletter-tab-cont">
+                    <ul>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">南极的企鹅</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <div class="priletter-bottom">
+                            <p>
+                              <a href="javascript:void(0);">第一次在真旅行订购旅游产品，真的非常净系！性价比非常高！非常贴心</a>
+                            </p> 
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-02.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="privletter-tab-cont">
+                    <ul>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">南极的企鹅</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <div class="priletter-bottom">
+                            <p>
+                              <a href="javascript:void(0);">第一次在真旅行订购旅游产品，真的非常净系！性价比非常高！非常贴心...</a>
+                            </p> 
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="privaletter-left">
+                          <img src="../../images/client/avatar-03.jpg">
+                        </div>
+                        <div class="privaletter-right">
+                          <div class="priletter-top">
+                            <span class="username">非洲的狮子</span>
+                            <span class="priletter-data">2015-05-02</span>
+                          </div>
+                          <p class="priletter-bottom">
+                            <a href="javascript:void(0);">小球球，我十月去巴厘岛，一起去吗？</a>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="privletter-tab-dot">
+                    <li class="current"></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="workplabtn"><span></span></div>
+      </div>
+</body>
+</html>
