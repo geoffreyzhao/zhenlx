@@ -486,27 +486,97 @@ header .head {
 	min-height: 562px;
 }
 
-.foot-wrapper {
-    background-color: #2b8b82;
+/*  页尾样式  start  */
+.footer-wrap{
+    height:345px;
+    background: #1cafad;
 }
-
-.main-container .foot {
-	width: 1130px;
-	margin: 0 auto;
-	border-top: 1px solid #47b9a9;
-	padding: 22px 0;
-	color: #8efff5;
-	font-size: 12px;
+.main-container .footer-wrap {
+    background: transparent;
+    width: 1130px;
+    margin: 0 auto;
+    border-top: 1px solid #51c2c0;
 }
-
-.main-container .foot .service-tel {
-	float: right;
+.foot{
+    width: 1130px;
+    margin:0 auto;
 }
-
-.main-container .foot .service-tel .telnum {
-	font-size: 15px;
+.footer-nav{
+    height:242px;
+    padding: 45px 0  0 24px;
+    border-bottom:1px solid #51c2c0;
 }
-
+.erweima{
+    width:50%;
+    float:left;
+}
+.erweima img{
+    margin-right:20px;
+    float: left;
+}
+.contact-info{
+    float:left;
+    color:#8efff5;
+}
+.contact-info span{
+    margin-bottom:12px;
+    display: inline-block;
+}
+.contact-info .info-title{
+    font-size:16px;
+    color:#fff;
+}
+.contact-info .info-tell{
+    margin-bottom: 0;
+    font-size:22px;
+}
+.quick-nav{
+    float:right;
+}
+.quick-nav dl{
+    margin-right:112px;
+    float:left;
+}
+.quick-nav dl dt{
+    color:#fff;
+    margin-bottom:10px;
+}
+.quick-nav dl dd{
+    margin-bottom:4px;
+}
+.quick-nav dl dd a{
+    color:#8efff5;
+    font-size: 14px;
+}
+.quick-nav dl dd a:hover{
+    text-decoration:underline;
+}
+.footer-copyright{
+    height:102px;
+    padding-top: 30px;
+    color:#8efff5;
+    font-size:12px;
+}
+.copyright{
+    font-size:12px;
+    float:left;
+}
+.service-tel{
+    float:right;
+    font-size: 12px;
+}
+.tellIcon{
+    width:12px;
+    height:15px;
+    display: inline-block;
+    margin-right:6px;
+    vertical-align: middle;
+    background: url(../../images/client/tellIcon.png) center center;
+}
+.footer-copyright .telnum {
+    font-size: 15px;
+}
+/*  页尾样式  end  */
 .main-box {
 	background-color: #fff;
 	position: relative;
