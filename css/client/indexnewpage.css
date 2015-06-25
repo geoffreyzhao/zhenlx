@@ -98,7 +98,6 @@
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00ffffff,endColorstr=#00ffffff);/*IE-8*/
     width: 806px;
     height: 43px;
-    /*margin: 0 -5px;*/
     color: #11b9b7;
     border:1px solid #e4e4e4;
     border-radius: 3px;
@@ -137,9 +136,6 @@
     display: inline-block;
     position: relative;
 }
-.searchContent .searchTab{
-    /*margin-left: 10px;*/
-}
 .top-right-block{
     margin:5px 0 0 0;
 }
@@ -148,15 +144,6 @@
     top: 30%;
     left: 0px;
 }
-.addIcon{
-
-}
-/*.addIcon .caret {
-    color: #11b9b7;
-    position: absolute;
-    top: 20px;
-    right: 7px;
-}*/
 .startOffPlace .caret,.destination .selectedDestLevel{
     position: absolute;
     top: 20px;
@@ -169,9 +156,6 @@
     right:56px;
     cursor: pointer;
 }
-/*.addIcon input {
-    cursor: pointer;
-}*/
 .addIcon input {
     cursor: pointer;
     color: #11b9b7;
@@ -292,62 +276,6 @@ input[type="text"], input[type="password"]{
 .startOffPlace:after{
     left:142px;
 }
-/*  目的地 多城市样式，以后可能用
-.destinationModel .selectDestination{
-    width: 545px;
-    font-size: 12px;
-    color: #555555;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    position: absolute;
-    left: 0;
-    top: 41px;
-    display: none;
-}
-.selectDestination .selectLeft{
-    display: inline-block;
-    width: 180px;
-    background-color: #fff;
-}
-.selectDestination .cityList > li{
-    padding: 10px 0;
-    margin: 0 15px;
-    border-top: 1px solid #e0e0e0;
-    cursor: pointer;
-}
-.selectDestination .cityList > li:first-child{
-    border-top: none;
-}
-.cityList > li .selectTitle{
-    font-size: 14px;
-    color: #11b9b7;
-    margin: 5px 0;
-    padding: 0;
-}
-.cityList .selectCity span{
-    display: inline-block;
-    padding-top: 10px;
-    width: 48%;
-    text-align: left;
-}
-.selectDestination .selectRight{
-    display: inline-block;
-    width: 360px;
-    vertical-align: top;
-}
-.selectDestination .selectRight > li{
-    border-top: none;
-}
-.cityList.selectRight > li .selectTitle{
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e0e0e0;
-}
-.cityList.selectRight .selectCity span{
-    width: 32%;
-}
-*/
 .destinationModel .selectDestination{
     color: #555555;
     background-color: #f7f7f7;
@@ -659,7 +587,6 @@ input[type="text"], input[type="password"]{
     color: #858585;
     border: 1px solid #fff;
     padding: 6px 14px;
-   /* border-radius: 2px;*/
     cursor: pointer;
 }
 .tab-toggle{
@@ -845,9 +772,6 @@ input[type="text"], input[type="password"]{
     display: block;
 }
 
-
-
-
 /*body模块*/
 .main-wrapper{
     width: 1420px;
@@ -913,23 +837,11 @@ input[type="text"], input[type="password"]{
     position:absolute;
     top:0;
     left:650px;
-    /*left:0;*/
     background:#f3f3f3;
     text-align:center;
     z-index:3;
     padding-top:80px;
     display:block;
-    /*transition:all 1s ease 0s;*/
-    /*opacity:1;*/
-}
-.scanQR.outright{
-    /*display:none;*/
-    /*opacity:0;*/
-}
-.scanQR.outleft{
-    left:-900px;
-    /*display:none;*/
-    /*opacity:0;*/
 }
 .special .scanQR img{
     width:183px;
