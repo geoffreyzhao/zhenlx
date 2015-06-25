@@ -776,6 +776,8 @@
 <script type="text/javascript">
 $(function(){
     $(".login-entrance .login").click(function(event){
+        $(".selectStartOffPlace").hide();
+        $(".selectDestination").hide();
         workplatformChange();
         event.stopPropagation();
     });
@@ -796,41 +798,6 @@ $(function(){
             return true;
         }
     }
-
-    function initSetActiveDest() {
-        var destText = $(".destinationInput").val();
-
-        if (destText == "") {
-            $(".cityList .second-level").hide();
-            $(".cityList .second-level").eq(0).show();
-            return;
-        } else {
-            $(".fl-destName").each(function(){
-                if ($(this).html() == destText) {
-                    $(".destSelect-first-level").removeClass("active");
-
-                    $(this).closest('li').addClass("active");
-
-                    $(".cityList .second-level").hide();
-                    $(this).closest('li').find(".second-level").show();
-                }               
-            });
-
-            $(".sl-destName").each(function(){
-                if ($(this).html() == destText) {
-                    $(".sl-destName").removeClass("active");
-                    $(".destSelect-first-level").removeClass("active");
-
-                    $(this).addClass("active");
-                    $(this).parents("li.destSelect-first-level").addClass("active");
-
-                    $(".cityList .second-level").hide();
-                    $(this).closest("ul.second-level").show();
-                }
-            });
-        }
-    }
-
  
     //banner轮播
     $('.product').cycle({
@@ -850,6 +817,20 @@ $(function(){
       $('.special .scanQR').css({'display':'none','left':'650px'});
       });
     })
+
+
+    function workplatformChange(){
+            var leftvalue=parseInt($('.work-platform').css('left'));
+            if(leftvalue==0){
+              $('.work-platform').stop().animate({'left':'-385px'},300,function(){
+                $('.work-platform').stop().animate({'left':'-358px'});
+              });
+            }else if(leftvalue==-358){
+              $('.work-platform').stop().animate({'left':'-385px'},400,function(){
+                $('.work-platform').stop().animate({'left':'0'});
+              });
+            }
+     }
 
 });
 </script>
