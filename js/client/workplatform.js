@@ -55,7 +55,7 @@ $(function(){
     });
   
     // 工作台侧边按钮点击
-    $('.workplabtn,.after-login .userName').click(function(event){
+    $('.workplabtn').click(function(event){
       workplatformChange();
       event.stopPropagation();
     });

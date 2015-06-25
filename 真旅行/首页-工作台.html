@@ -776,9 +776,12 @@
 <script type="text/javascript">
 $(function(){
     $(".login-entrance .login").click(function(event){
-        $(".selectStartOffPlace").hide();
-        $(".selectDestination").hide();
-        workplatformChange();
+        searchheaderClick();
+        event.stopPropagation();
+    });
+
+    $('.after-login .userName').click(function(event){
+        searchheaderClick();
         event.stopPropagation();
     });
 
@@ -831,6 +834,12 @@ $(function(){
               });
             }
      }
+
+  function searchheaderClick(){
+    $(".selectStartOffPlace").hide();
+    $(".selectDestination").hide();
+    workplatformChange();
+  }
 
 });
 </script>
