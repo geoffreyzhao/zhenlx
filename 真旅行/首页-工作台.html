@@ -13,12 +13,14 @@
   <link rel="stylesheet" type="text/css" href="../css/client/common.css">
   <link rel="stylesheet" type="text/css" href="../css/client/indexnewpage.css">
   <link rel="stylesheet" type="text/css" href="../css/client/workplatform.css">
+  <link rel="stylesheet" type="text/css" href="../css/client/searchheader.css">
 
   <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
   <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/client/common.js"></script>
   <script type="text/javascript" src="../js/vendor/jquery.cycle.all.js"></script>
-   <script type="text/javascript" src="../js/client/workplatform.js"></script>
+  <script type="text/javascript" src="../js/client/workplatform.js"></script>
+  <script type="text/javascript" src="../js/client/searchheader.js"></script>
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../js/base/html5.js"></script>
@@ -772,79 +774,13 @@
     </div>
   </div>
 <script type="text/javascript">
-    $(function(){
-        //出发地浮层
-        $(".selectStartOffPlace li").click(function(){
-            $(this).addClass("active");
-            $(this).siblings("li").removeClass("active");
-            $(".searchTab .startOffPlace input").val($(this).html());
-            $(".selectStartOffPlace").hide();
-        });
-        $(".searchTab .startOffPlace").click(function(event){
-            $(this).siblings(".selectStartOffPlace").toggle();
-            $(".selectDestination").hide();
-            $(".selectTheme").hide();
-            event.stopPropagation();             
-        });
-        $("body").click(function(){
-            $(".selectStartOffPlace").hide();
-        });
-        
-        //目的地浮层
-        $(".destinationModel .destination").click(function(event){
-            $(this).siblings(".selectDestination").toggle();
-            $(".selectStartOffPlace").hide();
-            $(".selectTheme").hide();
-            event.stopPropagation();
-        });
-        
-        initSetActiveDest();
+$(function(){
+    $(".login-entrance .login").click(function(event){
+        workplatformChange();
+        event.stopPropagation();
+    });
 
-        $(".destSelect-first-level").mouseover(function(){
-            $(this).siblings("li").find(".second-level").hide();
-            $(this).find(".second-level").show();
-        });
-
-        $(".destSelect-first-level").click(function(){
-            $(this).siblings("li").removeClass("active");
-            $(this).addClass("active");
-
-            $(".sl-destName").removeClass("active");
-
-            $(".destinationInput").val($(this).find(".fl-destName").html());
-            $("#selectedDestLevel").val(1);
-        });
-
-        $(".ul-dest-first-level").mouseleave(function(){
-            initSetActiveDest();
-        });
-
-        $(".sl-destName").click(function(event){
-            $(".destinationInput").val($(this).html());
-            $("#selectedDestLevel").val(2);
-
-            $(".sl-destName").removeClass("active");
-            $(this).addClass("active");
-
-            $("li.destSelect-first-level").removeClass("active");
-            $(this).parents(".destSelect-first-level").addClass("active");
-
-            $(".selectDestination").hide();
-
-            event.stopPropagation();
-        });
-
-        $("body").click(function(){
-            $(".selectDestination").hide();
-        });
-
-        $(".login-entrance .login").click(function(event){
-            workplatformChange();
-            event.stopPropagation();
-        });
-
-       
-        //  判断点击范围是否超出元素
+    //  判断点击范围是否超出元素
     function isOuterTrigger(event, $ele) {
         var top = $ele.offset().top;
         var left = $ele.offset().left;
