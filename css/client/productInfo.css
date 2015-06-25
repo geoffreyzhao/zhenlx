@@ -808,6 +808,7 @@
     height: 16px;
     background-position: -82px -77px;
     margin: 0 5px;
+    margin-top: -1px;
 }
 .leftHotelImg .hotelBigImg img{
     width: 758px;
@@ -1287,7 +1288,7 @@ ul.common-tab > li.rest {
 }
 
 .popover-trip-container .flight-info td {
-    padding: 3px 0 3px 15px;
+    padding: 3px 0 3px 10px;
     border: none!important;
 }
 

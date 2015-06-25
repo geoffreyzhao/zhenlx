@@ -22,6 +22,9 @@
 .leftMenuContent ul{
     margin: 10px 30px;
 }
+.leftMenuContent > ul > li {
+    margin-bottom: 6px;
+}
 .leftMenuContent ul a{
     font-size: 18px;
     display: block;
@@ -83,10 +86,18 @@
     color: #11b9b7;
     margin: 0 20px;
     cursor: pointer;
+    position: relative;
+    top: 4px;
 }
 .dataTab .cancelBtn{
     color: #818181;
     cursor: pointer;
+    position: relative;
+    top: 4px;
+}
+.editContentSex .sureBtn,
+.editContentSex .cancelBtn {
+    top: 0;
 }
 .dataTab .editContent{
     display: none;
