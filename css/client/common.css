@@ -1161,8 +1161,16 @@ input[type='text'].datepicker.hasIcon {
     position: absolute;
     bottom:45%;
     width:100%;
+    text-align: center;
     min-height:177px;
     background:url("../../images/client/workError.png") no-repeat center;
+}
+.workError-txt{
+    font-size: 20px;
+    line-height:24px;
+    color:#9e9ea0;
+    position: relative;
+    top:217px;
 }
 .workError-btm{
     position: absolute;
@@ -1200,13 +1208,19 @@ input[type='text'].datepicker.hasIcon {
 /** end **/
 
 /** 404 -start **/
+.undefine-contain{
+    width:100%;
+    min-height:775px;
+    background-color:#ccecf0;
+    position: relative;
+}
 .undefine-box{
     width:100%;
     min-height:117px;
     text-align: center;
     background: url("../../images/client/404.png") no-repeat center;
     position: absolute;
-    top:30%;
+    top:25%;
 }
 .undefine-txt{
     width:100%;
@@ -1239,10 +1253,13 @@ input[type='text'].datepicker.hasIcon {
 }
 .undefine-btm{
     width:100%;
-    min-height:272px;
+    height:272px;
     background:url("../../images/client/cloud.png") no-repeat center;
     position:absolute;
     bottom: 0;
 
+}
+.foot-layout{
+    width:100%;
 }
 /** end **/
