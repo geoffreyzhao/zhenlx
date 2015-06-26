@@ -1152,3 +1152,97 @@ input[type='text'].datepicker.hasIcon {
     background: url("../../images/datepicker.png") no-repeat 97% center;
     vertical-align: middle;
 }
+
+/** 业务报错 -start **/
+.workError-bg{
+    background-color:#ccecf0;
+}
+.workError-tips{
+    position: absolute;
+    bottom:45%;
+    width:100%;
+    min-height:177px;
+    background:url("../../images/client/workError.png") no-repeat center;
+}
+.workError-btm{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    min-height:96px;
+    background:url("../../images/client/workError-btm.png") no-repeat center;
+}
+/** end **/
+
+/** 系统维护 -start  **/
+.maintain-img{
+    width:100%;
+    position:absolute;
+    text-align: center;
+    top: 30%;
+    min-height:297px;
+    background: url("../../images/client/maintain.png") no-repeat center;
+}
+.maintain-tips{
+    width:100%;
+    height:150px;
+    position: relative;
+    top:330px;
+}
+.maintain-txt01{
+    color:#26b29a;
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+.maintain-txt02{
+    color:#58c1b1;
+    font-size: 14px;
+}
+/** end **/
+
+/** 404 -start **/
+.undefine-box{
+    width:100%;
+    min-height:117px;
+    text-align: center;
+    background: url("../../images/client/404.png") no-repeat center;
+    position: absolute;
+    top:30%;
+}
+.undefine-txt{
+    width:100%;
+    height:110px;
+    position: relative;
+    top:150px;
+    font-size: 18px;
+    line-height:24px;
+    color:#28bbdd;
+}
+
+.backBtn{
+    width:100%;
+    margin-top:28px;
+    text-align:center;
+}
+.backlink{
+    width:128px;
+    padding:7px 10px;
+    display: inline-block;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px #28bbdd solid;
+    color:#28bbdd;
+}
+.backlink:hover, .backlink:visited{
+    text-decoration: none;
+    color:#28bbdd;
+}
+.undefine-btm{
+    width:100%;
+    min-height:272px;
+    background:url("../../images/client/cloud.png") no-repeat center;
+    position:absolute;
+    bottom: 0;
+
+}
+/** end **/

@@ -631,7 +631,16 @@ input[type="text"], input[type="password"]{
 .bottomMenu-right ul li a:hover{
     text-decoration: underline;
 }
-.foot .service-tel .phoneIcon{
+.wrap-foot{
+    background: transparent;
+    width: 1130px;
+    margin: 0 auto;
+    border-top: 1px solid #51c2c0;
+    height:102px;
+    padding-top: 30px;
+    color:#8efff5;
+}
+.wrap-foot .service-tel .phoneIcon{
     width:12px;
     height:15px;
     margin-right:5px;
