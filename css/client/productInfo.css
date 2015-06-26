@@ -198,13 +198,12 @@
     font-size: 17px;
     color: #616161;
     border-left: 1px solid #d6efef;
-    /*border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;*/
     padding: 0;
 }
 .fixedList li:first-child a{
     border-left: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 .fixedList li.active a,
 .fixedList li:hover a{
@@ -800,6 +799,10 @@
     display: inline-block;
     font-size: 5px;
     -webkit-transform: scale(0.3);
+       -moz-transform: scale(0.3);
+        -ms-transform: scale(0.3);
+         -o-transform: scale(0.3);
+            transform: scale(0.3);
     margin: 0 3px;
     vertical-align: middle;
 }
@@ -843,6 +846,23 @@
     margin: 0;
     border-bottom: 1px solid #d4efee;
 }
+.rightHotelTabs .placeholder-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #f9f9f9;
+}
+.rightHotelTabs .tab-cont-block {
+    background-color: #f9f9f9;
+    position: relative;   
+}
+.rightHotelTabs .tab-cont-block .scroll-cover-bar {
+    width: 345px;
+    height: 25px;
+    position: absolute;
+    top: -5px;
+    background-color: #f9f9f9;
+    opacity: 0.7;
+}
 .hotel-info-tab li{
     float: left;
     width: 120px;
@@ -852,13 +872,16 @@
     color: #616161;
     background-color: #edf5f5;
     border-left: 1px solid #d4efee;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
     cursor: pointer;
 }
 .hotel-info-tab li:first-child{
     border-left: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.hotel-info-tab li:last-child{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .hotel-info-tab li.current{
     color: #fff;
@@ -870,7 +893,6 @@
 }
 .rightHotelTabs .tab-cont::-webkit-scrollbar-track {
     border-radius: 10px;
-    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);*/
 }
 .rightHotelTabs .tab-cont::-webkit-scrollbar {
     width: 8px;
@@ -883,7 +905,7 @@
 }
 .rightHotelTabs .listInfo,
 .rightHotelTabs .tab-cont {
-    height: 575px;
+    height: 565px;
     padding: 10px 15px;
     overflow: auto;
     background-color: #f9f9f9;
@@ -1529,8 +1551,9 @@ ul.common-tab > li.rest {
     height: 60px;
     line-height: 60px;
     font-size: 20px;
-    border-radius: 3px;
     width: 160px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .fixed-order-btn:hover {
     background-color: #f29901;
