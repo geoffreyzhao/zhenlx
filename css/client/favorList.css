@@ -133,7 +133,7 @@
     overflow:hidden;
 }
 .travelpro li h4{
-    width:280px;
+    width:350px;
     height:42px;
     line-height:42px;
     float:left;
@@ -149,10 +149,10 @@
     color:#11B9B7;
 }
 .travelpro .expired{
-    line-height:42px;
+    line-height:40px;
     font-size:80%;
     color:#11B9B7;
-    float:right;
+    float:left;
 }
 .partner{
     padding:0 18px 0 15px;
@@ -299,4 +299,8 @@
 .isdelete .confirm{
     background:#ffa200;
     margin:20px 28px 0 0;
+}
+
+.cursorDefault {
+    cursor: default;
 }
