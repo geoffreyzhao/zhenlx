@@ -51,7 +51,7 @@ $(function(){
                 for(var i=0;i<lis.length && lisheightsum<=tabcontHeight;i++){
                     lisheightsum+=arrliHeight[i];                    
                     for(var j=0;j<lis.length;j++){
-                        if(j<i){
+                        if(j<=i){
                            $(lis[j]).show();
                         }else{
                             $(lis[j]).hide();
