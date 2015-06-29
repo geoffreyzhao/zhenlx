@@ -6,11 +6,11 @@ $(function(){
     TabcontControl();
 
     // 选项卡点击
-    $(".tab-cont").eq(0).css("opacity",1);
+    $(".work-platform .tab-cont").eq(0).css("opacity",1);
     $(".message-tip-tab li").each(function(index){
         $(this).click(function(){
-            $(".tab-cont").css("opacity",0);
-            $(".tab-cont").eq(index).css("opacity",1);
+            $(".work-platform .tab-cont").css("opacity",0);
+            $(".work-platform .tab-cont").eq(index).css("opacity",1);
             $(".message-tip-tab li").removeClass("current");
             $(this).addClass("current");
             $(".slidline").stop().animate({'left':169*$(this).index()},200);
