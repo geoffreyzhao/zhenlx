@@ -23,10 +23,12 @@ body{
     display: inline-block;
 }
 .componentInput{
+    
     margin-bottom:24px;
     height:42px;
 }
-.workpla-login .componentInput input{
+.workpla-login .componentInput input,.workpla-login .componentInput input:focus{
+    background-color:rgba(255,255,255,0);
     margin-top:-6px;
 }
 .workpla-login .login-attach .checkbox {
@@ -344,7 +346,7 @@ body{
     height:52px;
     border:1px solid #bababa;
     border-radius:0 4px 4px 0;
-    background:url(../../images/client/workplatformIcon.png) #fff no-repeat center center;
+    background:url(../../images/client/workplatformIcon.png) rgba(255,255,255,0.95) no-repeat center center;
     position:absolute;
     right:-46px;
     top:137px;
@@ -352,7 +354,7 @@ body{
     cursor:pointer;
 }
 .workplabtn:hover{
-    background:url(../../images/client/workplatformIconhover.png) #fff no-repeat center center;
+    background:url(../../images/client/workplatformIconhover.png) rgba(255,255,255,0.95) no-repeat center center;
 }
 
 .workplabtn span{
