@@ -2381,7 +2381,7 @@ input[type="text"], input[type="password"]{
     width: 32%;
 }
 */
-.destinationModel .selectDestination{
+/*.destinationModel .selectDestination{
     color: #555555;
     background-color: #f7f7f7;
     border-radius: 5px;
@@ -2471,7 +2471,7 @@ input[type="text"], input[type="password"]{
 .after-login{
     display: none;
     margin-top:7px;
-}
+}*/
 /*  导航目的地样式 E  */
 
 /*工作台开始*/

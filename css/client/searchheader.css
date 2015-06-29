@@ -138,7 +138,7 @@
     color:#434343;
 }
 .searchContent .searchTab th{
-    font-size: 18px;
+    font-size: 16px;
 }
 .searchTab .addIcon{
     display: inline-block;
@@ -170,7 +170,7 @@
 }   
 .startPlace-title,.destination-title{
     display:inline-block;
-    margin: 7px 0px 0px 36px;
+    margin: 9px 0px 0px 36px;
 }
 input[type="text"], input[type="password"]{
     height:39px;
@@ -180,12 +180,14 @@ input[type="text"], input[type="password"]{
     height: 19px;
     background-position: -24px -190px;
     margin:0 10px;
+    margin-top: 2px;
 }
 .addIcon .destinationIcon{
     width: 19px;
     height: 20px;
     margin-left: 10px;
     background-position: -48px -190px;
+    margin-top: 2px;
 }
 .searchbtn{
     position:relative;
@@ -287,9 +289,7 @@ input[type="text"], input[type="password"]{
 .destinationModel .selectDestination{
     color: #555555;
     background-color: #f7f7f7;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
+    border-bottom-left-radius: 5px;
     position: absolute;
     left: 9px;
     top: 42px;
@@ -301,9 +301,9 @@ input[type="text"], input[type="password"]{
 .selectDestination .cityList{
     display: inline-block;
     width: 209px;
+    height: 169px;
     background-color: #fff;
     margin: 0;
-    border-bottom-left-radius: 4px;
 }
 .selectDestination .cityList > li{
     padding: 10px 0;
@@ -351,7 +351,7 @@ input[type="text"], input[type="password"]{
     left: 209px;
     top: 0;
     width: 205px;
-    height: 210px;
+    height: 170px;
     color: #555555;
     border-right: 1px solid #e4e4e4;
     border-bottom: 1px solid #E4E4E4;

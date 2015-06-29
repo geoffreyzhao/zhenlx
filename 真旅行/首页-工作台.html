@@ -426,9 +426,9 @@
       </div>
       <section>
         <div class="modelTitle">
-          <span class="colorD3d3d3">“</span>
+          <span class="big-quote left"></span>
           <span>在这里，整个世界都是用来分享的</span>
-          <span class="colorD3d3d3">”</span>
+          <span class="big-quote right"></span>
         </div>
         <ul class="shareModel clearfix">
           <li>
@@ -474,9 +474,9 @@
       </section>
       <section>
         <div class="modelTitle">
-          <span class="colorD3d3d3">“</span>
+          <span class="big-quote left"></span>
           <span>在这里，旅行不是状态，而是生活</span>
-          <span class="colorD3d3d3">”</span>
+          <span class="big-quote right"></span>
         </div>
         <div class="brandStory">
           <span class="brandStoryIcon"></span>
@@ -524,7 +524,7 @@
       </section>
       <section>
         <div class="modelTitle">
-          <span>关于我们</span>
+          <span>团队介绍</span>
         </div>
         <div class="titleExplain">这里是我们可爱萌萌哒的团队成员，每位都为真旅行贡献了一份自己的力量!</div>
         <div class="aboutUsModel">
@@ -744,12 +744,9 @@ $(function(){
     //   });
 
     $(".special .erweima").hover(function(){
-      $('.special .scanQR').css({'display':'block'});
-      $('.special .scanQR').stop().animate({'left':'0'},500);
+      $('.special .scanQR').stop().animate({'top':'0'},400);
     },function(){
-      $('.special .scanQR').stop().animate({'left':'-650px'},500,function(){
-      $('.special .scanQR').css({'display':'none','left':'650px'});
-      });
+      $('.special .scanQR').stop().animate({'top':'445px'},400);
     })
 
     $(".loginBtn").click(function(event){
