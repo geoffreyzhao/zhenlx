@@ -37,7 +37,7 @@ $(function(){
      });
 
 
-    // TabcontControl();
+    // 提醒及私信模块根据内容高度展示内容
     function TabcontControl(){
             $('.work-platform .tab-cont-height').each(function(){
                 var arrliHeight=[];
