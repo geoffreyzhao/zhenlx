@@ -197,10 +197,10 @@ input[type="text"], input[type="password"]{
     position:absolute;
     top:-1px;
     right:-1px;
-    background:url("../../images/client/searchbtn.jpg") no-repeat;
+    background:url("../../images/client/searchbtn.gif") no-repeat;
 }
 .searchbtn a:hover{
-    background:url("../../images/client/searchbtnhover.jpg") no-repeat;
+    background:url("../../images/client/searchbtnhover.gif") no-repeat;
 }
 .commonBtn{
     min-width:65px;
