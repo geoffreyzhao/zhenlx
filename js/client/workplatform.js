@@ -1,22 +1,16 @@
 $(function(){
     $('.work-platform').height($(window).height());
-    var tabcontHeight=$(window).height()-301;
-    // $(".remind-tab-cont").eq(0).show();
-    // $(".privletter-tab-cont").eq(0).show();
+    var tabcontHeight=$(window).height()-331;
 
     $('.work-platform .remind-tab-cont').height(tabcontHeight);
-    var remindulH=$('.work-platform .remind-tab-cont ul').height();
-    if(remindulH>=tabcontHeight){
-        $('.work-platform .remind-tab-cont .more').show();
-    }
-
+    TabcontControl();
 
     // 选项卡点击
-    $(".tab-cont").eq(0).show();
+    $(".tab-cont").eq(0).css("opacity",1);
     $(".message-tip-tab li").each(function(index){
         $(this).click(function(){
-            $(".tab-cont").hide();
-            $(".tab-cont").eq(index).show();
+            $(".tab-cont").css("opacity",0);
+            $(".tab-cont").eq(index).css("opacity",1);
             $(".message-tip-tab li").removeClass("current");
             $(this).addClass("current");
             $(".slidline").stop().animate({'left':169*$(this).index()},200);
@@ -25,33 +19,6 @@ $(function(){
         });
     });
 
-    
-
-
-    // 提醒底部圆点hover
-   /* $(".remind-tab-cont").eq(0).show();
-    $(".remind-tab-dot li").each(function(index){
-        $(this).hover(function(){
-            $(".remind-tab-cont").hide();
-            $(".remind-tab-cont").eq(index).show();
-            $(".remind-tab-dot li").removeClass("current");
-            $(this).addClass("current");
-            // $(".slidline").animate({'left':169*$(this).index()},200);
-        });
-    });*/
-    // 私信底部原点hover
-    /*$(".privletter-tab-cont").eq(0).show();
-    $(".privletter-tab-dot li").each(function(index){
-        $(this).hover(function(){
-            $(".privletter-tab-cont").hide();
-            $(".privletter-tab-cont").eq(index).show();
-            $(".privletter-tab-dot li").removeClass("current");
-            $(this).addClass("current");
-            // $(".slidline").animate({'left':169*$(this).index()},200);
-            secondEllipsis();
-        });
-    });*/
-  
     // 工作台侧边按钮点击
     $('.workplabtn').click(function(event){
       workplatformChange();
@@ -70,17 +37,28 @@ $(function(){
      });
 
 
-    TabcontControl();
+    // TabcontControl();
     function TabcontControl(){
             $('.work-platform .tab-cont-height').each(function(){
-                var ulheight=$(this).children('ul').height();
-                var liheight=$(this).children('ul').children('li').height();
-                $(this).height(tabcontHeight);
-                if(ulheight>=tabcontHeight){
-                    delta=tabcontHeight%liheight;
-                    $(this).height(tabcontHeight-delta-15);
-                    // $(this).sibling('.more').show();
-                    $(this).sibling('.more').show();
+                var arrliHeight=[];
+                var lis=$(this).get(0).getElementsByTagName("li");
+                var lisheightsum=0;
+                for(var i=0;i<lis.length;i++){
+                    var liheight=$(lis).eq(i).outerHeight();
+                    arrliHeight.push(liheight);
+                }
+                
+                for(var i=0;i<lis.length && lisheightsum<=tabcontHeight;i++){
+                    lisheightsum+=arrliHeight[i];                    
+                    for(var j=0;j<lis.length;j++){
+                        if(j<i){
+                           $(lis[j]).show();
+                        }else{
+                            $(lis[j]).hide();
+                        }
+                    }
+                   $(this).siblings('.more').show();
+                    
                 }
             });
     }

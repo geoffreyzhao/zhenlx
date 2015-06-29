@@ -1,14 +1,12 @@
 @charset "utf-8";
+body{
+    overflow-x:hidden;
+}
 /*工作台开始*/
 .work-platform{
     width:356px;
-    /*height:100%;*/
     background:#fff;
-    /*filter:alpha(opacity=95);*/
-     /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2ffffff, endColorstr=#f2ffffff)";  */
-    /*filter:"progid:DXImageTransform.Microsoft.alpha(opacity=95)";*/
     background: rgba(255,255,255,0.95);
-    /*background-color:rgba(255,255,255,95)\9;*/
     border:1px solid #bababa;
     position:fixed;
     left:-358px;
@@ -29,7 +27,7 @@
     height:42px;
 }
 .workpla-login .componentInput input{
-	margin-top:-6px;
+    margin-top:-6px;
 }
 .workpla-login .login-attach .checkbox {
     font-size: 13px;
@@ -58,7 +56,7 @@
 /*登录后*/
 .workpla-afterlogin{
     padding:0px 18px 0 18px;
-    display: none;
+    opacity: 0;
 }
 .exit{
     height:28px;
@@ -166,12 +164,10 @@
     float:left;
     font-size: 18px;
     color: #858585;
-    /*border: 1px solid #fff;*/
     padding: 6px 14px;
     cursor: pointer;
 }
 .tab-toggle{
-    /*position:relative;*/
 }
 .slidline{
     width: 150px;
@@ -199,10 +195,15 @@
     top: 8px;
     z-index:9;
 }
-
+.tab-cont-block{
+    position: relative;
+}
 .tab-cont{
+    position: absolute;
+    left: 0;
+    top: 0;
     padding-bottom:30px;
-    display:none;
+    opacity: 0;
 }
 
 /*微信提醒模块*/
@@ -213,6 +214,7 @@
     word-wrap:break-all;
     margin-bottom:8px;
     position:relative;
+    overflow: hidden;
 }
 .remind-tab-cont ul li a{
     color:#1cafad;
@@ -287,19 +289,12 @@
     overflow:hidden;
     position:relative;
 }
-.work-platform .tab-cont-height .more{
+.work-platform .more{
     color:#1CAFAD;
-    text-align:center;
-    /*margin-top:20px;*/
+    float:right;
+    margin-right:15px;
     display:none;
-     position:absolute;
-    bottom:0px;
-    right:0; 
 }
-/*.work-platform .tab-cont-height .more a{
-    color:#1CAFAD;
-    display:none;
-}*/
 /*私信模块*/
 .privletter-tab-cont ul li{
     padding:14px 10px 14px 5px;
@@ -352,7 +347,7 @@
     background:url(../../images/client/workplatformIcon.png) #fff no-repeat center center;
     position:absolute;
     right:-46px;
-    top:48px;
+    top:137px;
     z-index:10;
     cursor:pointer;
 }
