@@ -28,6 +28,7 @@
     width: 1920px;
     right: 50%;
     position: relative;
+    top: 25px;
 }
 .productDetailBanner .pro-detail-cont img {
     position: relative;
@@ -44,7 +45,7 @@
 }
 .productDetailBanner .pro-detail-img img {
     position: relative;
-    top: -300px;
+    top: -600px;
     right: -50%;
 }
 .productDetailModel .themeContent{    
