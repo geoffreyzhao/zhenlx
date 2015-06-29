@@ -473,5 +473,16 @@
 }
 .swiper-oper-area-1:hover {
     cursor: pointer;
-    opacity: 0.6;
+}
+.image-cont-cover {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    display: none;
+    width: 150px;
+    height: 305px;
+}
+.swiper-oper-area-1:hover .image-cont-cover {
+    display: block;
 }
