@@ -90,6 +90,7 @@ body{
 .workpla-afterlogin .leftImg img{
     width:100%;
     height:100%;
+    border-radius: 100%;
 }
 .workpla-afterlogin .rightUserInfo{
     float:left;
@@ -311,6 +312,7 @@ body{
 .privaletter-left img{
     width: 100%;
     height: 100%;
+    border-radius: 100%;
 }
 .privaletter-right{
     width:256px;
