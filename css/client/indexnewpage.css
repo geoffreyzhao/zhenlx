@@ -466,23 +466,58 @@
     vertical-align: middle;
     background: url(../../images/client/tellIcon.png) center center;
 }
-.swiper-oper-area-1 {
-    position: absolute;
-    top: 90px;
-    left: 823px;
+.swiper-slide {
+    height: 650px;
 }
-.swiper-oper-area-1:hover {
+.banner-image-1 {
+    background: url(../../images/client/banner-art.jpg) center center;
+}
+.banner-image-cont.cont-1 {
+    background: url(../../images/client/banner-art-cont.png) center center;
+}
+.banner-image-cont {
+    display: block;
+    width: 269px;
+    height: 424px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+.banner-image-cont:hover {
     cursor: pointer;
 }
 .image-cont-cover {
-    position: absolute;
-    top: 60px;
-    left: 60px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
     display: none;
     width: 150px;
     height: 305px;
+    margin: 0 auto;
+    position: relative;
+    top: 60px;
 }
-.swiper-oper-area-1:hover .image-cont-cover {
+.banner-image-cont:hover .image-cont-cover {
     display: block;
+}
+.banner-image-2 {
+    background: url(../../images/client/banner-celebration.jpg) center center;
+}
+.banner-image-cont.cont-2 {
+    background: url(../../images/client/banner-celebration-cont.png) center center;
+}
+.banner-image-3 {
+    background: url(../../images/client/banner-health.jpg) center center;
+}
+.banner-image-cont.cont-3 {
+    background: url(../../images/client/banner-health-cont.png) center center;
+}
+.banner-image-4 {
+    background: url(../../images/client/banner-life.jpg) center center;
+}
+.banner-image-cont.cont-4 {
+    background: url(../../images/client/banner-life-cont.png) center center;
+}
+.banner-image-5 {
+    background: url(../../images/client/banner-pleasure.jpg) center center;
+}
+.banner-image-cont.cont-5 {
+    background: url(../../images/client/banner-pleasure-cont.png) center center;
 }

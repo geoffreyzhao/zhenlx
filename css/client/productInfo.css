@@ -413,7 +413,7 @@
 .journeyRecommendModel .journeyRecommendList{
     margin-left: 40px;
 }
-.journeyRecommendList li{
+.journeyRecommendList > li{
     padding-bottom: 40px;
     position: relative;
 }
