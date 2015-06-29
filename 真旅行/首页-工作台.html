@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.reset.css">
   <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="../css/client/common.css">
   <link rel="stylesheet" type="text/css" href="../css/client/indexnewpage.css">
   <link rel="stylesheet" type="text/css" href="../css/client/workplatform.css">
@@ -18,7 +19,8 @@
   <script type="text/javascript" src="../js/base/jquery-1.11.2.min.js"></script>
   <script type="text/javascript" src="../js/bootdist/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/client/common.js"></script>
-  <script type="text/javascript" src="../js/vendor/jquery.cycle.all.js"></script>
+  <!-- <script type="text/javascript" src="../js/vendor/jquery.cycle.all.js"></script> -->
+  <script type="text/javascript" src="../js/vendor/swiper.jquery.min.js"></script>
   <script type="text/javascript" src="../js/client/workplatform.js"></script>
   <script type="text/javascript" src="../js/client/searchheader.js"></script>
 
@@ -133,18 +135,55 @@
   
   <div class="main-container">
       <div class="banner">
-        <ul class="product">
-          <li>
-            <img src="../images/client/indexpage-banner01.jpg"/>
+        <!-- <ul class="product">
+          <li class="banner-image-1">
+            <img src="../images/client/banner-art.jpg"/>
           </li>
           <li>
-              <img src="../images/client/indexpage-banner02.jpg"/>
+              <img src="../images/client/banner-celebration.jpg"/>
+          </li>
+          <li>
+            <img src="../images/client/banner-health.jpg"/>
+          </li>
+          <li>
+              <img src="../images/client/banner-life.jpg"/>
+          </li>
+          <li>
+            <img src="../images/client/banner-pleasure.jpg"/>
           </li>
         </ul>
         <ul class="bannerbtn">
           <li class="leftbtn"></li>
           <li class="rightbtn"></li>
-        </ul>
+        </ul> -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../images/client/banner-art.jpg"/>
+                  <div class="swiper-oper-area-1">
+                    <img src="../images/client/banner-art-cont.png"/>
+                    <div class="image-cont-cover"></div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../images/client/banner-celebration.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../images/client/banner-health.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../images/client/banner-life.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../images/client/banner-pleasure.jpg"/>
+                </div>
+            </div>
+            
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+            <div class="bannerbtn leftbtn"></div>
+            <div class="bannerbtn rightbtn"></div>
+        </div>
       </div>
       <div class="work-platform">
         <div class="workpla-login">
@@ -640,6 +679,15 @@
   </div>
 <script type="text/javascript">
 $(function(){
+
+    var mySwiper = new Swiper ('.swiper-container', {
+        loop: true,
+        autoplay: 500000,
+        speed: 1000,
+        nextButton: '.bannerbtn.rightbtn',
+        prevButton: '.bannerbtn.leftbtn'
+      })        
+
     $(".login-entrance .login").click(function(event){
         workplatformChange();
         event.stopPropagation();
@@ -651,14 +699,14 @@ $(function(){
     });
  
     //banner轮播
-    $('.product').cycle({
-        fx:'fade',
-        timeout: 1000,
-        speed: 1000, 
-        pause: true,
-        prev:".leftbtn",
-        next:".rightbtn"
-      });
+    // $('.product').cycle({
+    //     fx:'fade',
+    //     timeout: 500000,
+    //     speed: 1000, 
+    //     pause: true,
+    //     prev:".leftbtn",
+    //     next:".rightbtn"
+    //   });
 
     $(".special .erweima").hover(function(){
       $('.special .scanQR').css({'display':'block'});
@@ -674,7 +722,6 @@ $(function(){
         $(".after-login").show();
         $(".workpla-login").hide();
         $(".workpla-afterlogin").show();
-        $(".workpla-afterlogin").css("opacity","1");
         event.stopPropagation();
     });
 

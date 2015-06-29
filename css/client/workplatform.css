@@ -198,10 +198,10 @@ body{
     top: 8px;
     z-index:9;
 }
-.tab-cont-block{
+.work-platform .tab-cont-block{
     position: relative;
 }
-.tab-cont{
+.work-platform .tab-cont{
     position: absolute;
     left: 0;
     top: 0;

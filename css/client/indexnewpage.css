@@ -34,7 +34,18 @@
   top: 0;
   margin-left:-960px;
 }
-.bannerbtn li{
+.bannerbtn.leftbtn{
+    width:49px;
+    height:60px;
+    position:absolute;
+    top:50%;
+    margin-top:-30px;
+    z-index:10;
+    cursor: pointer;
+    background:rgba(0,0,0,0.3) url(../../images/client/arrow01.png) no-repeat center center;
+    left:0;
+}
+.bannerbtn.rightbtn {
     width:49px;
     height:60px;
     background:rgba(0,0,0,0.3) url(../../images/client/arrow02.png) no-repeat center center;
@@ -44,10 +55,6 @@
     margin-top:-30px;
     z-index:10;
     cursor: pointer;
-}
-.bannerbtn li.leftbtn{
-    background:rgba(0,0,0,0.3) url(../../images/client/arrow01.png) no-repeat center center;
-    left:0;
 }
 
 /*body模块*/
@@ -458,4 +465,13 @@
     margin-right:6px;
     vertical-align: middle;
     background: url(../../images/client/tellIcon.png) center center;
+}
+.swiper-oper-area-1 {
+    position: absolute;
+    top: 90px;
+    left: 823px;
+}
+.swiper-oper-area-1:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
