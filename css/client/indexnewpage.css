@@ -203,39 +203,32 @@ body {
     display: inline-block;
     background: url("../../images/client/commonIcon.png") no-repeat;
     vertical-align: middle;
-    position: absolute;
-    left: 44%;
-    top: 80px;
+    position: relative;
     z-index:2;
-
-}
-.imgTransformation .shareIcon03{
-    top:84px;
+    margin: 0 auto;
+    margin-top: -340px;
 }
 
 .imgTransformation .shareIcon01{
     width: 83px;
     height: 45px;
     background-position: -109px -50px;
-    top: 95px;
 }
 .imgTransformation .shareIcon02{
     width: 67px;
     height: 67px;
     background-position: 0 -271px;
-    left: 45%;
 }
 .imgTransformation .shareIcon03{
     width: 56px;
     height: 69px;
     background-position: -107px -103px;
-    left: 46%;
 }
 .imgTransformation img{
-     transition:1s all ease 0s; 
-     -moz-transition:1s all ease 0s;  /* Firefox 4 */
-     -webkit-transition:1s all ease 0s;  /* Safari and Chrome */
-     -o-transition:1s all ease 0s;  /* Opera */
+    transition:1s all ease 0s; 
+    -moz-transition:1s all ease 0s;  /* Firefox 4 */
+    -webkit-transition:1s all ease 0s;  /* Safari and Chrome */
+    -o-transition:1s all ease 0s;  /* Opera */
     transform:scale(0.8,0.8);
     position: absolute;
     left:226px;
