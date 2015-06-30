@@ -156,6 +156,9 @@
     font-size: 22px;
     color: #484848;
     margin:10px 0;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .order-titleBlock h3 i {
     background: url("../../images/client/order-spirit.png") no-repeat 0 -112px;
