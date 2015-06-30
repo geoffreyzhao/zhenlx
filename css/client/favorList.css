@@ -271,12 +271,12 @@
 }
 .isdelete{
     width:380px;
-    height:392px;
+    height:101%;
     background:rgba(255,255,255,0.9);
     border:2px solid #11B9B7;
     position:absolute;
     left:-2px;
-    top:-1px;
+    top:-2px;
     text-align:center;
     padding-top:140px;
     z-index:4;
