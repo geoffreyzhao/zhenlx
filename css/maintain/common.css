@@ -941,6 +941,9 @@ input[type="text"].verifyBox:focus{
     margin-top: -7px;
     background-position: 0 0;
 }
+.commonStarLevelIcon.allStar5 {
+    width: 96px;
+}
 .commonStarLevelIcon.starLevel-1.noLeftStar {
     width: 13px;
 }

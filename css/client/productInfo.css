@@ -682,6 +682,9 @@
 .commonStarLevelIcon.starLevel-6-5.noLeftStar {
     width: 132px;
 }
+.commonStarLevelIcon.allStar5 {
+    width: 96px;
+}
 .commonStarLevelIcon.starLevel-1 span{
     width: 13px;
 }
