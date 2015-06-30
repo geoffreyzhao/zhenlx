@@ -485,6 +485,93 @@
     </div>
 </div>
 
+<!--编辑员工信息-->
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="edtRole">
+    <div class="modal-dialog" style="width:812px;height:480px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">编辑员工信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="popupContainer">
+                    <div class="roleInfo">
+                        <table class="newVoucherTable">
+                            <colgroup>
+                                <col width="90">
+                                <col width="150">
+                                <col width="90">
+                                <col width="220">
+                                <col width="70">
+                                <col width="150">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th><em class="redStar">*</em>员工姓名</th>
+                                <td><input id="roleName" type="text" style="width: 130px;"></td>
+                                <th>手机号码</th>
+                                <td><input type="text" style="width: 200px;"></td>
+                                <th>工&nbsp;&nbsp;号</th>
+                                <td><input id="roleNum" type="text" style="width: 130px;"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="newVoucherTable">
+                        <colgroup>
+                            <col width="90">
+                            <col width="">
+                        </colgroup>
+                        <tbody id="edtVoucherTable">
+                            <tr>
+                                <th><em class="redStar">*</em>用&nbsp;&nbsp;户&nbsp;&nbsp;名</th>
+                                <td><input id="userName" type="text" style="width: 285px;"></td>
+                            </tr>
+                            <tr>
+                                <th><em class="redStar">*</em>登录密码</th>
+                                <td><input type="text" style="width: 285px;"></td>
+                            </tr>
+                            <tr>
+                                <th><em class="redStar">*</em>确认密码</th>
+                                <td><input type="text" style="width: 285px;"></td>
+                            </tr>
+                            <tr>
+                                <th class="verticalAlign"><em class="redStar">*</em>角色选择</th>
+                                <td>
+                                    <span class="dropdown" style="width: 285px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                            <span class="activeFonts" id="roleOp">角色选择</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" id="secondMenu">
+                                            <li class="active"><a href="javascript:void(0);">角色选择</a></li>
+                                            <li><a href="javascript:void(0);">员工</a></li>
+                                            <li><a href="javascript:void(0);">主管</a></li>
+                                            <li><a href="javascript:void(0);">经理</a></li>
+                                        </ul>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td id="edtspecilLabel">
+                                    <a class="addSpecil" href="javascript:void(0);"><em> + </em>添加个性化权限</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="commonButton red-fe6869Button" style="margin-right:10px;">确认</button>
+                <button type="button" class="commonButton blue-45c8dcButton" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--添加个性化权限 弹窗-->
 <div class="modal fade" data-backdrop="static" data-keyboard="false" id="addSpecilModal">
     <div class="modal-dialog" style="width:815px;height:480px;">
@@ -719,7 +806,26 @@
         $(".addSpecil").click(function(){
            $("#addSpecilModal").modal("show");
         });
+        //编辑员工信息
+        $(".greenFontsLink").click(function(){
+            $("#edtVoucherTable tr td input").filter("[type='text']").val("");
+            $("#secondMenu li").filter(".active").removeClass("active");
+            $("#secondMenu li").first().addClass("active");
+            var defau = $("#secondMenu li").first("a").text();
+            $("#roleOp").text(defau);
+
+            var roleName = $(this).parent().siblings("td").first().text();
+            var roleNum = $(this).parent().siblings("td").eq(1).text();
+            var userName = $(this).parent().siblings("td").eq(2).text();
+
+            $("#roleName").val(roleName);
+            $("#roleNum").val(roleNum);
+            $("#userName").val(userName);
+
+            $("#edtRole").modal("show")
+        });
     });
+
     /**遍历添加权限表格筛选被选项**/
     $("#confirmAddSp").click(function(){
         var flag = $(".checkboxContent .checkboxInfo").hasClass("active");
