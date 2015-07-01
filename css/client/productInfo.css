@@ -2693,39 +2693,7 @@ input[type="text"], input[type="password"]{
     color: #929292;
 }
 
-/*/私信结束*/
-
-/*工作台侧边按钮*/
-.workplabtn{
-    width:46px;
-    height:52px;
-    border:1px solid #bababa;
-    border-radius:0 4px 4px 0;
-    background:#fff url(../../images/client/workplatformIcon.png) no-repeat center center;
-    position:absolute;
-    right:-46px;
-    top:48px;
-    z-index:0;
-    cursor:pointer;
-}
-.workplabtn:hover{
-    background:#fff url(../../images/client/workplatformIconhover.png) no-repeat center center;
-}
-
-.workplabtn span{
-    width:14px;
-    height:14px;
-    background:#efc524;
-    border:2px solid #fff;
-    border-radius:100%;
-    box-shadow:0 0 2px 1px #ddd;
-    position:absolute;
-    right:-5px;
-    top:-5px;
-    z-index:8;
-    display: block;
-}
-/** 工作台结束 **/
+/*私信结束*/
 
 /*   产品列表  end   */
 .grayFont {
