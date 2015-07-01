@@ -399,14 +399,15 @@ input[type="text"], input[type="password"]{
     background:#ffffff;
 }
 .reward-banner{
-    width:1420px;
+    height: 742px;
     margin:0 auto;
+    background:url(../../images/client/reward-bannerbig.jpg) #cfebff center center no-repeat;
     overflow: hidden;
 }
-.reward-img{
+/* .reward-img{
     width:1420px;
     height:560px;
-}
+} */
 .reward-contain{
     width:1420px;
     min-height:560px;
