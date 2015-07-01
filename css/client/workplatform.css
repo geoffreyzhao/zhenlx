@@ -341,19 +341,19 @@
 
 /*工作台侧边按钮*/
 .workplabtn{
-    width:46px;
-    height:52px;
-    border:1px solid #bababa;
-    border-radius:0 4px 4px 0;
-    background:url(../../images/client/workplatformIcon.png) rgba(255,255,255,0.95) no-repeat center center;
+    width:50px;
+    height:54px;
+    /*border:1px solid #bababa;*/
+    border-radius: 0px 100% 100% 0px;
+    background:url(../../images/client/workplatformIconyellow.png) rgba(0, 0, 0, 0.85) no-repeat center center;
     position:absolute;
-    right:-46px;
+    right:-51px;
     top:137px;
     z-index:10;
     cursor:pointer;
 }
 .workplabtn:hover{
-    background:url(../../images/client/workplatformIconhover.png) rgba(255,255,255,0.95) no-repeat center center;
+    background:url(../../images/client/workplatformIconhoveryellow.png) rgba(0, 0, 0, 0.85) no-repeat center center;
 }
 
 .workplabtn span{
