@@ -212,6 +212,12 @@
     margin-bottom: 5px;
 }
 
+.default-avatar-item > img {
+    width: 95px;
+    height: 95px;
+    border-radius: 95px;
+}
+
 .default-avatar-item:hover {
     border-color: #ececec;
     cursor: pointer;
