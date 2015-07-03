@@ -1740,6 +1740,8 @@
             } else {
                 $(this).closest(".calTable").find(".tripCover").removeClass("current");
                 $(this).addClass("current");
+                $(this).closest(".calTable").find(".priceCover").removeClass("current");
+                $(this).siblings(".priceCover").addClass("current");
             }
 
             var $popover = $(this).closest("td").find(".popover-trip-container"),

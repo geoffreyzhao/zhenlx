@@ -1240,6 +1240,10 @@ ul.common-tab > li.rest {
     height: 100%;
 }
 
+.calTable .tdCont .priceCover.current {
+    background-color: #defcfc;
+}
+
 .calTable .tdCont .priceCover .dateDay {
     float: left;
 }
