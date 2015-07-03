@@ -242,7 +242,7 @@ body {
     width:100%;
     height:647px;
     color: #555555;
-    background:url("../../images/client/storyBg.jpg") no-repeat center center;
+    background:url("../../images/client/storyBg.jpg") #91b2b7 no-repeat center center;
     background-size:cover;
     height: 647px;
     position: relative;
