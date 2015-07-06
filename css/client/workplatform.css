@@ -191,8 +191,7 @@
 .message-tip-tab li span{
     width:5px;
     height:5px;
-    background:#efc524;
-    border-radius:100%;
+    background:url(../../images/client/unread-dot.png) no-repeat;
     position:absolute;
     right: 52px;
     top: 8px;
@@ -357,8 +356,7 @@
 .workplabtn{
     width:50px;
     height:54px;
-    border-radius: 0px 100% 100% 0px;
-    background:url(../../images/client/workplatformIconyellow.png) rgba(0, 0, 0, 0.85) no-repeat center center;
+    background:url(../../images/client/workplatformbtn.png) top right no-repeat;
     position:absolute;
     right:-51px;
     top:137px;
@@ -366,15 +364,13 @@
     cursor:pointer;
 }
 .workplabtn:hover{
-    background:url(../../images/client/workplatformIconhoveryellow.png) rgba(0, 0, 0, 0.85) no-repeat center center;
+    background:url(../../images/client/workplatformbtn-hover.png) top right no-repeat;
 }
 
 .workplabtn span{
     width:14px;
     height:14px;
-    background:#efc524;
-    border:2px solid #fff;
-    border-radius:100%;
+    background:url(../../images/client/workplabtn-unread.png) center center no-repeat;
     position:absolute;
     right: -1px;
     top: -1px;
