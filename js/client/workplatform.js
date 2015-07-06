@@ -4,16 +4,20 @@ $(function(){
     // 选项卡点击
     $(".work-platform .tab-cont").eq(0).show();
 
-    $(".message-tip-tab li").each(function(index){
-        $(this).click(function(){
-            $(".work-platform .tab-cont").hide();
-            $(".work-platform .tab-cont").eq(index).show();
-            $(".message-tip-tab li").removeClass("current");
-            $(this).addClass("current");
-            $(".slidline").stop().animate({'left':169*$(this).index()},200);
-            secondEllipsis();
-            TabcontControl();
-        });
+    $(".message-tip-tab > li").each(function(index){
+        if (index == $(".message-tip-tab > li").length - 1) {
+            return;
+        } else {
+            $(this).click(function(){
+                $(".work-platform .tab-cont").hide();
+                $(".work-platform .tab-cont").eq(index).show();
+                $(".message-tip-tab li").removeClass("current");
+                $(this).addClass("current");
+                $(".slidline").stop().animate({'left':169*$(this).index()},200);
+                secondEllipsis();
+                TabcontControl();
+            });
+        }
     });
 
     // 工作台侧边按钮点击
@@ -44,7 +48,8 @@ $(function(){
 });
 
     function TabcontControl(){
-            var tabcontHeight=$(window).height()-331;
+            var tabcontHeight=$(window).height()-331,
+                liGap = parseInt($(".work-platform .tab-cont-height li").css("margin-bottom"));
             $('.work-platform .remind-tab-cont').height(tabcontHeight);
             $('.work-platform .tab-cont-height').each(function(){
                 var arrliHeight=[];
@@ -57,9 +62,9 @@ $(function(){
 
                 addHeightLoop:
                 for(var i=0;i<lis.length;i++){
-                    lisheightsum+=arrliHeight[i];
+                    lisheightsum+=(arrliHeight[i]+liGap);
                     $(lis).show();
-                    if(lisheightsum>tabcontHeight){
+                    if((lisheightsum-liGap)>tabcontHeight){
                         for(var j=i;j<lis.length;j++){
                             $(lis[j]).hide();
                         }

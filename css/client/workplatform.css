@@ -167,6 +167,9 @@
     padding: 6px 14px;
     cursor: pointer;
 }
+.message-tip-tab li:last-child {
+    padding: 0;
+}
 .tab-toggle{
 }
 .slidline{
@@ -211,10 +214,13 @@
     padding:10px 18px 8px 30px;
     color:#92918b;
     font-size:14px;
-    word-wrap:break-all;
+    word-wrap:break-word;
     margin-bottom:8px;
     position:relative;
     overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
 }
 .remind-tab-cont ul li a{
     color:#1cafad;
@@ -335,6 +341,14 @@
 }
 .priletter-bottom a{
     color: #929292;
+}
+.priletter-bottom {
+    color: #1cafad;
+}
+.priletter-bottom:hover {
+    color: #1cafad;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /*/私信结束*/
