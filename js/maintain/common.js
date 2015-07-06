@@ -49,8 +49,8 @@ $(function() {
             $("div.datepicker table thead .prev").html("");
             $("div.datepicker table thead .next").html("");
         }).on("changeDate", function(){
-            var startDate = $(this).datepicker("getDate");
-            $(this).siblings('input.datepicker.endDate').datepicker("setStartDate", startDate);
+            // var startDate = $(this).datepicker("getDate");
+            // $(this).siblings('input.datepicker.endDate').datepicker("setStartDate", startDate);
         });
 
         // 手动清空输入框时，清除对应的时间
@@ -58,6 +58,8 @@ $(function() {
             var $endDate = $(this).siblings('input.datepicker.endDate');
             if ($endDate.val() == "") {
                 $endDate.datepicker("clearDates");
+            } else {
+                $(this).datepicker("setEndDate", $endDate.val());
             }
         });
     }
@@ -69,13 +71,14 @@ $(function() {
             language: "zh-CN",
             autoclose: true,
             todayHighlight: true,
-            weekStart: 0
+            weekStart: 0,
+            setStartDate: $(this).siblings('input.datepicker.startDate').datepicker('getDate')
         }).on("show", function(){
             $("div.datepicker table thead .prev").html("");
             $("div.datepicker table thead .next").html("");
         }).on("changeDate", function(){
-            var endDate = $(this).datepicker("getDate");
-            $(this).siblings('input.datepicker.startDate').datepicker("setEndDate", endDate);
+            // var endDate = $(this).datepicker("getDate");
+            // $(this).siblings('input.datepicker.startDate').datepicker("setEndDate", endDate);
         });
 
         // 手动清空输入框时，清除对应的时间
@@ -83,6 +86,8 @@ $(function() {
             var $startDate = $(this).siblings('input.datepicker.startDate');
             if ($startDate.val() == "") {
                 $startDate.datepicker("clearDates");
+            } else {
+                $(this).datepicker("setStartDate", $startDate.val());
             }
         });
     }
