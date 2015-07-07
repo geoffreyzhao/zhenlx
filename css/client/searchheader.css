@@ -207,20 +207,20 @@ input[type="text"], input[type="password"]{
 .commonBtn{
     min-width:65px;
 }
-.login.commonBtn{
-    background:#1cafad;
-    margin-right:6px;
+.register.commonBtn{
+    background:#1cafad;    
     color:#fff;
     display: inline-block;
 }
-.login.commonBtn:hover{
+.register.commonBtn:hover{
     color:#fff;
     background:#0C9C9A;
 }
-.register.commonBtn{
+.login.commonBtn{
     background:#f4f4f4;
     color:#7f7f7f;
     display: inline-block;
+    margin-right:6px;
 }
 .login-entrance > a{
     padding:0;

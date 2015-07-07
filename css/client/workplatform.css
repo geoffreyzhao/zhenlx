@@ -92,6 +92,7 @@
 .workpla-afterlogin .rightUserInfo{
     float:left;
     padding:12px 0 0 16px;
+    margin-top: 13px;
 }
 
 .rightUserInfo .usercenter-text{

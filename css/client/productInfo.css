@@ -977,6 +977,9 @@
     overflow: auto;
     background-color: #f9f9f9;
 }
+.rightHotelTabs .hotel-notes {
+    padding-top: 15px;
+}
 .commonModel .blueFonts14{
     font-size: 14px;
     color: #11b9b7;
