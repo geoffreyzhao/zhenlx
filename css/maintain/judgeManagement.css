@@ -229,7 +229,6 @@
     font-size: 14px;
     line-height:28px;
     resize: none;
-    overflow: hidden;
     word-wrap:break-word;
     word-break:break-all;
 }
