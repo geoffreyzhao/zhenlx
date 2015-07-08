@@ -41,7 +41,7 @@
     padding-bottom: 10px;
     border-bottom: 3px solid #f1f1f1;
 }
-.searchList li{
+.searchList > li{
     float: left;
 }
 .searchList .searchTab{

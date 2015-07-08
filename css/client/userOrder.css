@@ -607,6 +607,13 @@
     position: relative;
 }
 
+.guestContainer .transName {
+    color: #9f9f9f;
+    font-size: 15px;
+    line-height: 40px;
+    color: #484848;
+}
+
 .guestContainer .guestNameList {
     position: absolute;
     background-color: #fff;

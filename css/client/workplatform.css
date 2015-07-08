@@ -106,6 +106,10 @@
     margin-left:4px;
     display: inline-block;
 }
+.workpla-afterlogin .rightUsername:hover {
+    color: #11b9b7;
+    cursor: pointer;
+}
 /*栏目模块*/
 .columnModel{
     height:104px;
