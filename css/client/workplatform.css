@@ -137,9 +137,6 @@
     line-height:32px;
     color: #929292;
 }
-.columnModel ul li span.current{
-    color:#1cafad;
-}
 .columnModel ul li:hover span{
     color:#1cafad;
 }
@@ -154,7 +151,10 @@
 .favorIcon{
     width:31px;
     height:28px;
-    background:url(../../images/client/columnIcon.png) no-repeat -25px 0;
+    background:url(../../images/client/columnIcon.png) no-repeat -25px -31px;
+}
+.columnModel ul li:hover .favorIcon{
+    background-position: -25px 0;
 }
 .elecWalletIcon{
     width:29px;
