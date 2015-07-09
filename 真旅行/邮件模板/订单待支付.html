@@ -17,7 +17,7 @@
             box-sizing: border-box;
         }
         html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
-        body {
+        .contain-box {
             width:770px;
             border:1px #ececec solid;
             margin:0px auto;
@@ -42,20 +42,17 @@
             padding:10px 15px;
         }
         .head-left{
-            width:133px;
-            height:47px;
-            background: url("http://static.travelzensh.com:82/images/client/logo.png") no-repeat;
+            width:121px;
+            height:44px;
         }
         .head-right{
             padding-top:30px;
         }
-        .head-right span{
-            width:100px;
-            padding:0px 10px;
-            text-align: center;
+        .divide{
+            padding:0 10px;
         }
-        .head-right span a{ font-size: 16px; line-height:18px; color:#484848; text-decoration: none;}
-        .head-right span a:hover, .head-right span a:focus{ color:#484848; text-decoration: underline;}
+        .head-right a{ font-size: 16px; line-height:18px; color:#484848; text-decoration: none;}
+        .head-right a:hover, .head-right a:focus{ color:#484848; text-decoration: underline;}
         .mainContent{width:100%; background-color:#ffffff; min-height: 400px;}
         .content-news{ border-bottom: 1px #ececec dashed; padding:10px 15px;}
         .content-news p{font-size: 16px;margin:3px 0px;}
@@ -71,17 +68,18 @@
         .order-col-th p{color:#9f9f9f;font-size: 12px;}
         .order-btn{float:left; padding-top:20px; margin-left:20px;}
         .order-link{text-align: center; color:#ffffff;text-decoration: none;width:100px; height:50px; background-color: #ffa200; padding:5px 8px;}
-        .foot-box{width:100%; padding:20px 15px; background-color:#ececec;}
+        .foot-box{width:100%; padding:15px; background-color:#ececec;}
         .foot-left-p{font-size:14px; line-height:18px;}
-        .foot-right{width:73px; height:73px; background-color:#ffffff; background-image:url("http://static.travelzensh.com:82/images/client/aboutus_01.png");}
+        .foot-right{width:78px; height:78px;}
     </style>
 </head>
 <body>
+<div class="contain-box">
 <header>
     <div class="head-box">
-        <div class="head-left leftSet"></div>
+        <div class="leftSet"><a href="javascript:void(0);"><img class="head-left" src="http://static.travelzensh.com:82/images/client/logo-new.png"></a></div>
         <div class="head-right rightSet">
-            <span style="border-right:1px #a2a2a2 solid;"><a href="">首页</a></span><span><a href="">个人中心</a></span>
+            <a href="javascript:void(0);">首页</a><span class="divide">|</span><a href="javascript:void(0);">个人中心</a>
         </div>
         <div class="clearFix"></div>
     </div>
@@ -94,7 +92,7 @@
         <p>请在30分钟内尽快支付，否则订单将被取消，预订成功以完成支付为准。</p>
     </div>
     <div class="content-order">
-        <div class="order-title"><a href="">订单号：53402268</a>上海至巴黎五晚13天活色彩国度</div>
+        <div class="order-title"><a href="javascript:void(0);">订单号：53402268</a>上海至巴黎五晚13天活色彩国度</div>
         <div class="order-box">
             <div class="order-col">
                 <img style="width:110px; height:69px; vertical-align: middle;" src="http://static.travelzensh.com:82/images/client/productInfoImg.jpg" alt="订单"/>
@@ -120,7 +118,7 @@
                 <div class="order-col-th" style="color:#fe7800; margin-top:10px;">待支付</div>
             </div>
             <div class="order-btn">
-                <a class="order-link" href="">去支付</a>
+                <a class="order-link" href="javascript:void(0);">去支付</a>
             </div>
             <div class="clearFix"></div>
         </div>
@@ -137,9 +135,10 @@
             <p class="foot-left-p">扫描关注“真旅行”微信，可以在您出游途中24小时享受无缝的专属服务；</p>
             <p class="foot-left-p">参与真旅行故事分享，更有随时的微信促销优惠。</p>
         </div>
-        <div class="foot-right rightSet"></div>
+        <div class="rightSet"><img class="foot-right" src="http://static.travelzensh.com:82/images/client/erweima.jpg"></div>
         <div class="clearFix"></div>
     </div>
 </footer>
+</div>
 </body>
 </html>

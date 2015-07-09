@@ -17,7 +17,7 @@
             box-sizing: border-box;
         }
         html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
-        body {
+        .contain-box {
             width:770px;
             border:1px #ececec solid;
             margin:0px auto;
@@ -42,20 +42,17 @@
             padding:10px 15px;
         }
         .head-left{
-            width:133px;
-            height:47px;
-            background: url("http://static.travelzensh.com:82/images/client/logo.png") no-repeat;
+            width:121px;
+            height:44px;
         }
         .head-right{
             padding-top:30px;
         }
-        .head-right span{
-            width:100px;
-            padding:0px 10px;
-            text-align: center;
+        .divide{
+            padding:0 10px;
         }
-        .head-right span a{ font-size: 16px; line-height:18px; color:#484848; text-decoration: none;}
-        .head-right span a:hover, .head-right span a:focus{ color:#484848; text-decoration: underline;}
+        .head-right a{ font-size: 16px; line-height:18px; color:#484848; text-decoration: none;}
+        .head-right a:hover, .head-right a:focus{ color:#484848; text-decoration: underline;}
         .mainContent{width:100%; background-color:#ffffff; min-height: 400px;}
         .content-test{ padding:10px 15px;}
         .content-test p{font-size: 16px;margin:3px 0px;}
@@ -64,15 +61,16 @@
         .order-col-th p{color:#9f9f9f;font-size: 12px;}
         .foot-box{width:100%; padding:20px 15px; background-color:#ececec;}
         .foot-left-p{font-size:14px; line-height:18px;}
-        .foot-right{width:73px; height:73px; background-color:#ffffff; background-image:url("http://static.travelzensh.com:82/images/client/aboutus_01.png");}
+        .foot-right{width:78px; height:78px;}
     </style>
 </head>
 <body>
+<div class="contain-box">
 <header>
     <div class="head-box">
-        <div class="head-left leftSet"></div>
+        <div class="leftSet"><a href="javascript:void(0);"><img class="head-left" src="http://static.travelzensh.com:82/images/client/logo-new.png"></a></div>
         <div class="head-right rightSet">
-            <span style="border-right:1px #a2a2a2 solid;"><a href="">首页</a></span><span><a href="">个人中心</a></span>
+            <a href="javascript:void(0);">首页</a><span class="divide">|</span><a href="javascript:void(0);">个人中心</a>
         </div>
         <div class="clearFix"></div>
     </div>
@@ -82,7 +80,7 @@
         <h2 style="margin-bottom: 20px;">亲爱的联系人：</h2>
         <p>您的密码重设要求已经得到验证。请点击一下链接输入您新的密码：</p>
         <p>(please click on the following link to reset your password:)</p>
-        <p><a href="">http://passport.cnblogs.com/activate.aspx?id1=2fc9fe4e-04fe-e411-b908-9dcfd8948a71&id2=aaa</a></p>
+        <p><a href="javascript:void(0);">http://passport.cnblogs.com/activate.aspx?id1=2fc9fe4e-04fe-e411-b908-9dcfd8948a71&id2=aaa</a></p>
         <p>如果您的Email程序不支持链接点击，请将上面的地址拷贝至您的浏览器(例如IE)的地址栏进入真旅行。</p>
         <p>改链接1小时内有效。</p>
         <p>感谢您对真旅行的支持，愿你早日达成看世界的梦想。</p>
@@ -101,9 +99,10 @@
             <p class="foot-left-p">扫描关注“真旅行”微信，可以在您出游途中24小时享受无缝的专属服务；</p>
             <p class="foot-left-p">参与真旅行故事分享，更有随时的微信促销优惠。</p>
         </div>
-        <div class="foot-right rightSet"></div>
+        <div class="rightSet"><img class="foot-right" src="http://static.travelzensh.com:82/images/client/erweima.jpg"></div>
         <div class="clearFix"></div>
     </div>
 </footer>
+</div>
 </body>
 </html>
