@@ -105,6 +105,11 @@
     margin-bottom:8px;
     margin-left:4px;
     display: inline-block;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
 }
 .workpla-afterlogin .rightUsername:hover {
     color: #11b9b7;
