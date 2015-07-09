@@ -140,10 +140,16 @@
 .columnModel ul li span.current{
     color:#1cafad;
 }
+.columnModel ul li:hover span{
+    color:#1cafad;
+}
 .orderIcon{
     width:24px;
     height:30px;
-    background:url(../../images/client/columnIcon.png) no-repeat 0 0;
+    background:url(../../images/client/columnIcon.png) no-repeat 0 -31px;
+}
+.columnModel ul li:hover .orderIcon{
+    background-position: 0 0;
 }
 .favorIcon{
     width:31px;
@@ -153,12 +159,18 @@
 .elecWalletIcon{
     width:29px;
     height:29px;
-    background:url(../../images/client/columnIcon.png) no-repeat -56px 0;
+    background:url(../../images/client/columnIcon.png) no-repeat -56px -31px;
+}
+.columnModel ul li:hover .elecWalletIcon{
+    background-position:-56px 0;
 }
 .messageIcon{
     width:29px;
     height:29px;
-    background:url(../../images/client/columnIcon.png) no-repeat -86px 0;
+    background:url(../../images/client/columnIcon.png) no-repeat -86px -31px;
+}
+.columnModel ul li:hover .messageIcon{
+    background-position: -86px 0;
 }
 /*选项卡模块*/
 .message-tip-tab{
