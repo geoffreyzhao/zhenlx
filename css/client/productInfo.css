@@ -356,13 +356,18 @@
     width: 90%;
 }
 .listDetails {
-    line-height: 26px;
+    line-height: 28px;
 }
 .listDetails li{
     color: #616161;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 28px;
     list-style-type: decimal;
     margin-left: 22px;
+}
+.listDetails li * {
+    font-size: 15px!important;
+    line-height: 28px!important;
 }
 .commonModel .listDetails a{
     color: #11b9b7;
@@ -379,10 +384,13 @@
 .journeyRecommendModel{
     position: relative;
 }
+.asideContContainer {
+    padding-top: 22px;
+}
 .journeyRecommendModel .asideFixed{
     float: left;
     margin-left: -75px;
-    top: 70px;
+    top: 60px;
 }
 .affix {
     position: fixed!important;
@@ -475,8 +483,11 @@
     background-position: -222px -43px;
     position: absolute;
     left: -40px;
-    top: 4px;
+    top: 1px;
     z-index: 2;
+}
+.journeyRecommendList li:first-child .leftDot {
+    top: 16px;
 }
 .journeyRecommendList li.active{
     opacity: 1;
@@ -522,6 +533,8 @@
 }
 .daysImgDescCont {
     margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 28px;
 }
 .journeyRecommendList .daysImg img{
     display: inline-block;
@@ -548,6 +561,8 @@
 .daysInfo .daysFontsDetails{
     float: left;
     width: 1040px;
+    font-size: 15px;
+    line-height: 28px;
 }
 .commonModel .marginRight10{
     margin-right: 10px;
@@ -566,6 +581,7 @@
     width: 21px;
     height: 19px;
     background-position: -56px -77px;
+    margin-left: 9px;
 }
 .commonModel .bookingIcon{
     width: 19px;
@@ -1026,8 +1042,8 @@
 
 .rightHotelTabs .tab-cont pre {
     background-color: #f9f9f9;
-    font-size: 14px;
-    line-height: 23px;
+    font-size: 15px;
+    line-height: 28px;
 }
 
 .hotel-notes .hotelTabList{
@@ -1644,6 +1660,9 @@ ul.common-tab > li.rest {
     position: relative;
     margin-top: -3px;
 }
+.qrCode-icon:hover {
+    background: url(../../images/client/qrCode-hover-icon.png) no-repeat;
+}
 
 .qrCode-icon:hover .qrCode-image-container {
     display: block;
@@ -1685,8 +1704,8 @@ ul.common-tab > li.rest {
 }
 
 .commonModel pre {
-    font-size: 14px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 28px;
     color: #616161;
 }
 
@@ -1707,7 +1726,6 @@ ul.common-tab > li.rest {
 
 .overviewImg {
     width: 100%;
-    margin-top: 28px;
 }
 
 .tipsTopBlock  {
@@ -1721,8 +1739,8 @@ ul.common-tab > li.rest {
 }
 
 .tipsContentBlock {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 28px;
 }
 
 .tipsTopBlock .tripTipsIconList {
