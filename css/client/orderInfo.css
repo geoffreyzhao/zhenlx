@@ -742,6 +742,10 @@
 .boxTwo-cnt span{
     margin-right:22px;
 }
+.boxTwo-cnt > span:hover {
+    cursor: pointer;
+    color: #11b9b7;
+}
 .boxTwo-cnt .orderListModel, .boxCnt-txt-color03{
     color:#11b9b7;
 }
