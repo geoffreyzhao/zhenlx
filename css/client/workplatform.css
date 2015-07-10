@@ -348,6 +348,11 @@
 .username{
     color: #616161;
     float:left;
+    display: inline-block;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .priletter-data{
     color: #d4d4d4;
@@ -360,15 +365,13 @@
     margin:0;
     height:40px;
 }
-.priletter-bottom p {
-    word-wrap: break-word;
-}
 .priletter-bottom a{
     color: #929292;
     word-wrap: break-word;
 }
 .priletter-bottom {
     color: #1cafad;
+    word-wrap: break-word;
 }
 .priletter-bottom:hover {
     color: #1cafad;
