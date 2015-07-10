@@ -360,8 +360,12 @@
     margin:0;
     height:40px;
 }
+.priletter-bottom p {
+    word-wrap: break-word;
+}
 .priletter-bottom a{
     color: #929292;
+    word-wrap: break-word;
 }
 .priletter-bottom {
     color: #1cafad;

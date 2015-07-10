@@ -117,9 +117,10 @@ $(function(){
      $(".secondEllipsis").each(function(){
         var divH = $(this).height();
         var $p = $("p", $(this)).eq(0);
-        var $a = $("a", $(this)).eq(0);
+        // var $a = $("a", $(this)).eq(0);
         while ($p.outerHeight() > divH) {
-            $a.text($a.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
-            }
+            // $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+            $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]?|\W)(\.\.\.)?$/, "..."));
+        }
       });
     }
