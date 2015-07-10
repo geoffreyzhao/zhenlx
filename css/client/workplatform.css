@@ -369,11 +369,13 @@
     color: #929292;
     word-wrap: break-word;
 }
-.priletter-bottom {
+.priletter-bottom,
+.priletter-bottom p {
     color: #1cafad;
     word-wrap: break-word;
 }
-.priletter-bottom:hover {
+.priletter-bottom:hover,
+.priletter-bottom p:hover {
     color: #1cafad;
     cursor: pointer;
     text-decoration: underline;
