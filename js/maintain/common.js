@@ -10,10 +10,24 @@ $(function() {
         $(this).find(".second-level-nav").show();
     });
 
-    $(".first-level-nav").mouseleave(function(){
-        $(this).find(".second-level-nav").hide();
+    $(".first-level-nav").mouseleave(function(event){
 
+        if (!isOuterTrigger(event, $(".headSecondLevel")) && !isOuterTrigger(event, $(this).find(".second-level-nav"))) {
+            $(this).find(".second-level-nav").hide();
+            recoverCurrentNav();
+        }
+
+    });
+
+    $(".headSecondLevel").mouseleave(function(event){
+        $(".second-level-nav").hide();
         recoverCurrentNav();
+    });
+    $(".second-level-nav").mouseleave(function(event){
+        if (!isOuterTrigger(event, $(this))) {
+            $(".second-level-nav").hide();
+            recoverCurrentNav();
+        }
     });
     /*  头部导航交互  结束  */
 
@@ -145,4 +159,23 @@ function recoverCurrentNav() {
             $(this).find(".second-level-nav").show();
         }
     });
+}
+
+function isOuterTrigger(event, $ele) {
+    if($ele.length == 0){
+        return false ;
+    }
+    var top = $ele.offset().top;
+    var left = $ele.offset().left;
+    var width = $ele.outerWidth();
+    var height = $ele.outerHeight();
+
+    var _x = event.pageX;
+    var _y = event.pageY;
+
+    if (_y > top + height || _y < top || _x > left + width || _x < left) {  //  超出范围了
+        return false;
+    } else {
+        return true;
+    }
 }

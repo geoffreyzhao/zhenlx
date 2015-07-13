@@ -462,6 +462,7 @@
 .order-conBlockTab textarea {
     padding:3px;
     border: 1px solid #dadada;
+    color: #484848;
 }
 .order-conBlockTab textarea:focus {
     border: 1px solid #11b9b7 !important;
