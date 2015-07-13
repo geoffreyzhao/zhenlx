@@ -1169,7 +1169,7 @@ input[type='text'].datepicker.hasIcon {
 }
 .workError-tips{
     position: absolute;
-    bottom:45%;
+    bottom:48%;
     width:100%;
     text-align: center;
     min-height:177px;
@@ -1196,7 +1196,7 @@ input[type='text'].datepicker.hasIcon {
     width:100%;
     position:absolute;
     text-align: center;
-    top: 30%;
+    top: 25%;
     min-height:297px;
     background: url("../../images/client/maintain.png") no-repeat center;
 }
@@ -1204,7 +1204,7 @@ input[type='text'].datepicker.hasIcon {
     width:100%;
     height:150px;
     position: relative;
-    top:330px;
+    top:310px;
 }
 .maintain-txt01{
     color:#26b29a;
@@ -1241,7 +1241,10 @@ input[type='text'].datepicker.hasIcon {
     line-height:24px;
     color:#28bbdd;
 }
-
+.backHomeBtn{
+    position: relative;
+    top:235px;
+}
 .backBtn{
     width:100%;
     margin-top:28px;
