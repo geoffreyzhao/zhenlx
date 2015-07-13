@@ -1017,8 +1017,16 @@
     font-size: 16px;
     line-height: 50px;
     color:#ffffff;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+}
+.publish-error-tips{
+    width:100%;
+    height:50px;
+    position: absolute;
+    top:76px;
+    color: #fe7800;
+    background-color: #fff3de;
+    text-align:center;
+    font-size: 16px;
+    line-height:50px;
 }
 /* end */

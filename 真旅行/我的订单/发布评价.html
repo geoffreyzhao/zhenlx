@@ -93,6 +93,8 @@
 
 <!--发布评论成功提示-->
 <div class="publish-success-tips hidden" id="sucTips"></div>
+<!--发布评论错误提示-->
+<div class="publish-error-tips hidden" id="errTips"></div>
 
 <script type="text/javascript">
     $(function () {
@@ -110,9 +112,14 @@
         });
         $("#publishJudge").click(function(){
             var text = $(".txtArea").val();
-            console.info("打印"+text);
             if(text == ""){
-                alert("您还没有填写评论。");
+                $("#errTips").text("您还没有填写评论！");
+                $("#errTips").slideDown("normal", function(){
+                    setTimeout(function(){
+                        $("#errTips").slideUp();
+                    }, 2000)
+                }).removeClass("hidden");
+                //alert("您还没有填写评论。");
             }else{
                 $("#sucTips").text("发布成功！");
                 $("#sucTips").slideDown("normal", function(){
