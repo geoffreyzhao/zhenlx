@@ -5,7 +5,7 @@ $(function(){
         show: false
     });
     $(".feedback .feedbackbtn").click(function(){
-        $("#ac-payHintWindow").modal("show");
+        $("#ac-feedbackHintWindow").modal("show");
     });
 
     resizeModalTop();
