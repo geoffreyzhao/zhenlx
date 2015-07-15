@@ -1,129 +1,53 @@
-@charset "utf-8"
+@charset "utf-8";
 
-* {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+.headerBar {
+	height: 2.25rem;
 }
-
-
- body {
-	font-size:24px;
-	font-family:"microsoft yahei","宋体",Verdana,Arial,Helvetica,sans-serif;
-	overflow:hidden;	/*  this is important to prevent the whole page to bounce */
-}
- 
-
-/* .ui-input-text, .ui-input-search{
-	margin:0;
-	text-shadow:none;
-	box-shadow:none;
-	border-radius:0;
-	font-size:0.625rem;
-	border:0;
-}
-.ui-page-theme-a .ui-btn:focus{
-	box-shadow:none;
-}
-.ui-page-theme-a .ui-btn:active{
-	background-color:none;
-	border-color:none;
-	color:none ;
-	text-shadow: 0 ;
-}
-.ui-mobile label{
-	display:inline;
-	font-size:0.5rem;
-}
-.ui-btn-icon-left{
-	padding-left:0;
-}
-.ui-radio .ui-btn.ui-radio-on:after {
-  background-image: none;
-  background-color:none;
-  width:0;
-  height: 0;
-  border-width: 0;
-  border-style:none;
-}
-.ui-page-theme-a .ui-radio-on:after, html .ui-bar-a .ui-radio-on:after, html .ui-body-a .ui-radio-on:after, html body .ui-group-theme-a .ui-radio-on:after, .ui-btn.ui-radio-on.ui-btn-a:after {
-  border-color:none;
-}
-.ui-btn.ui-checkbox-off:after, .ui-btn.ui-checkbox-on:after, .ui-btn.ui-radio-off:after, .ui-btn.ui-radio-on:after {
-  display: block;
-  width: 0;
-  height: 0;
-  margin: 0;
-}
-
-.ui-checkbox, .ui-radio,.ui-page-theme-a .ui-btn,.ui-page-theme-a .ui-focus,.ui-btn-icon-left:after,
-.ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after,
-.ui-btn.ui-radio-on.ui-btn-a:after{
-	border:0;
-	background:none;
-	text-shadow:none;
-	font-weight:normal;
-	box-shadow:none;
-	margin:0;
-}
-.ui-btn, label.ui-btn{
-	border:0;
-}
-.ui-page-theme-a .ui-btn{
-	padding:0;
-	color:#666666;
-}
-.ui-radio{
-	display:inline;
-}
-.ui-focus,.ui-radiu-on{
-	background:none;
-	border:0;
-}
-.ui-btn.ui-radio-on.ui-btn-a:after{
-	background:none;
-	border:0;
-	display:none;
-	width:0;
-	height:0;
-	margin:0;
-}
-.ui-btn, label.ui-btn{
-	border-width:0;
-	border-style:none;
-}
-input[type="radio" i], input[type="checkbox" i] {
-  margin:0;
-  padding: 0;
-  background-color: none;
-  border: 0;
-} */
-
-
 .header {
-	position: absolute;
+	position: fixed;
 	z-index: 2;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 1.875rem;
-	line-height:1.875rem;
-	color:#3fc0ae;
-	font-size:0.625rem;
+	right: 0;
+	height: 2.25rem;
+	line-height:2.25rem;	
 	text-align: center;
 	border-bottom:1px solid #3fc0ae;
-	text-shadow:none;
-	background: #fff ;
+	background: #fff;
 }
-.back{
-	width:0.875rem;
-	height:0.7083rem;
-	float:left;
-	margin-left:0.4583rem;
-	margin-top:0.5625rem;
-	background:url(../images/arrowL.png) no-repeat left center;
-	background-size:0.3125rem 0.521rem;
+.header .back{
+	width: 1.625rem;
+	display: inline-block;
+	float: left;
+}
+.header .back:active {
+	background-color: #f0f0f0;
+	height: 99.9%;
+}
+.header .back-arrow {
+	width:0.375rem;
+	height:0.625rem;
+	background:url(../images/arrowL.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -0.25rem;
+}
+.header .back-border {
+	display: inline-block;
+	height: 0.875rem;
 	border-right:1px solid #3fc0ae;
+	float: right;
+	margin-top: 0.675rem;
+}
+.header .title {
+	display: inline-block;
+	position: absolute;
+	left: 2rem;
+	right: 2rem;
+	color:#3fc0ae;
+	font-size:0.75rem;
 }
 .footer {
 	position: absolute;
@@ -140,141 +64,152 @@ input[type="radio" i], input[type="checkbox" i] {
 	text-align: center;
 	font-size:0.625rem;
 }
-
 .wrapper {
-	position: absolute;
 	z-index: 1;
-	top: 1.875rem;
-	bottom:2.04rem;
-	left: 0;
 	width: 100%;
 	background: #f0f0f0;
-	overflow: hidden;
 }
 .mloginTab{
-	height:2.4583rem;
-	box-sizing:border-box;
-	background:#fff;
-	padding:0.5rem 0 0 0.375rem;
-	border-bottom:1px solid #dcdcdc;
+	padding: 0.6rem 0.5rem;
+	background: #fff;
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 0;
 }
-.mloginTab a,.mloginTab a:visited,.mloginTab a:link{
-	width:6.25rem;
-	height:1.458rem;
-	line-height:1.458rem;
-	text-decoration:none;
+.mloginTab .tab span {
+	display: inline-block;
+	width: 50%;
+	height: 1.75rem;
+	line-height: 1.75rem;
 	text-align: center;
-	font-size:0.625rem;
-	color:#3fc0ae;
-	/*background:none;*/
-	text-shadow: none;
-	display:inline-block;
-	font-weight:normal;
-	border:1px solid #3fc0ae;
+	font-size: 0.8rem;
+	color: #3fc0ae;
 }
-.mloginTab .mregisterBtn{
-	border-radius:0.19rem 0 0 0.19rem;
+.mloginTab .mregisterBtn {
+	border-top: 1px solid #3fc0ae;
+	border-bottom: 1px solid #3fc0ae;
+	border-left: 1px solid #3fc0ae;
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
 }
-.mloginTab .mloginBtn{
-	border-radius:0 0.19rem 0.19rem 0;
+.mloginTab .mloginBtn {
+	border-top: 1px solid #3fc0ae;
+	border-bottom: 1px solid #3fc0ae;
+	border-right: 1px solid #3fc0ae;
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
 }
-.mloginTab .mloginBtn.current,.mloginTab .mregisterBtn.current{
-	background: #3fc0ae;color:#fff;
-	
+.mloginTab .mloginBtn.current,
+.mloginTab .mregisterBtn.current{
+	background: #3fc0ae;
+	color:#fff;	
 }
 .registerFrame{
 	display:block;
 	position: relative;
 }
-.registerFrame .tel,.registerFrame .checkCode,.registerFrame .setpassword,.loginFrame .tel,.loginFrame .password{
-	width:100%;
-	display:block;
-	border:0;
-	padding-left:1.875rem;
-	height:1.83rem;
-	font-size:0.5rem;
-	border-bottom:1px solid #dcdcdc;
+.person-icon {
+	display: inline-block;
+	width: 0.85rem;
+	height: 0.975rem;
+	background: url(../images/telicon.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	vertical-align: middle;
 }
-.registerFrame .tel,.loginFrame .tel{
-	background:#fafafa url(../images/telicon.png) no-repeat;
-	background-size:0.71rem 0.83rem;
-	background-position:0.375rem center;
+.safe-icon {
+	display: inline-block;
+	width: 0.875rem;
+	height: 1.1rem;
+	background: url(../images/checkicon.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	vertical-align: middle;
 }
-.registerFrame .checkCode{
-	background:#fafafa url(../images/checkicon.png) no-repeat;
-	background-size:0.73rem 0.92rem;
-	background-position:0.375rem center;
+.lock-icon {
+	display: inline-block;
+	width: 0.85rem;
+	height: 0.95rem;
+	background: url(../images/passwordicon.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	vertical-align: middle;
 }
-.registerFrame .setpassword,.loginFrame .password{
-	background:#fafafa url(../images/passwordicon.png) no-repeat;
-	background-size:0.71rem 0.8rem;
-	background-position:0.375rem center;
-	margin-top:0.52rem;
+.cont-block li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #dcdcdc;
+	background-color: #fafafa;
 }
-.loginFrame .password{
-	margin-top:0;
+.cont-block li.placeholder {
+	height: 0.7rem;
+	background-color: #f0f0f0;
+}
+.cont-block .bottom-btn {
+	width: 100%;
+	height: 2.45rem;
+	line-height: 2.45rem;
+	background-color: #ffa200;
+	color: #fff;
+	text-align: center;
+	font-size: 0.85rem;
+	padding: 0;
+	border: none;
+}
+.cont-block .person-icon {
+	margin-top: 0.25rem;
+	margin-left: 0.5rem;
+}
+.cont-block .safe-icon {
+	margin-top: 0.2rem;
+	margin-left: 0.5rem;
+}
+.cont-block .lock-icon {
+	margin-top: 0.22rem;
+	margin-left: 0.5rem;
+}
+.cont-block .input-box {
+	position: relative;
+}
+.cont-block input[type="tel"],
+.cont-block input[type="text"],
+.cont-block input[type="password"] {
+	background: transparent;
+	font-size: 0.75rem;
+	padding-left: 1rem;
+	width: 8.75rem;
+}
+.checkCodeBtn{
+	display: inline-block;	
+	width:4.5rem;
+	height:1.375rem;
+	line-height: 1.375rem;
+	text-align: center;
+	border:1px solid #3fc0ae;
+	border-radius:0.19rem;
+	font-size:0.75rem;
+	color:#3fc0ae;
+	position:absolute;
+	right:0.45rem;
+}
+.checkCodeBtn:active {
+	background-color: #fff;
 }
 .loginFrame{
 	display:none;
-	position: relative;
 }
-.checkCodeBtn{
-	width:3.75rem;
-	height:1.16rem;
-	line-height:1.16rem;
-	text-align: center;
-	font-size:0.625rem;
-	color:#3fc0ae;
-	border:1px solid #3fc0ae;
-	position:absolute;
-	border-radius:0.19rem;
-	right:0.45rem;
-	top:2.2rem;
+.loginFrame li.last {
+	border-bottom: none;
+	background-color: #f0f0f0;
 }
-input:focus{
-	outline:none;
+.remindPwd {
+	font-size: 0.6rem;
+	color: #666;
 }
-/* #rememberPass{
-	display:inline-block;
-	background:none;
-	width:0.67rem;
-	height:0.67rem;
-	border:1px solid #cacacf;
-	border-radius:100%;
-	margin-top: -0.3rem;
+.remindPwd input {
+	margin: 0 0.4rem;
 }
-#rememberPass:checked{
-	background:green;
-}
-.loginFrame label.rememberPassL{
-	display:inline-block;
-	margin-left:1.5rem;
-	margin-top:0.7rem;
-} */
-.findPass{
+.findPwd{
 	float:right;
-	margin-top:0.79rem;
-	margin-right:0.71rem;
-	font-size:0.5rem;
-}
-.radiobox{
-	display:inline-block;
-	background:none;
-	box-sizing:border-box;
-	width:0.67rem;
-	height:0.67rem;
-	border:1px solid #cacacf;
-	border-radius:100%;
-	margin-top: 0.7rem;
-	margin-left:0.375rem;
-	float: left;
-}
-.radiobox.active{
-	border:0.125rem solid #3fc0ae;
-}
-.rememberPassL{
-	font-size:0.5rem;
-	display:inline-block;
-	margin-left:0.5rem;
-	margin-top:0.7rem;
+	margin-right: 0.875rem;
+	font-size: 0.6rem!important;
+	color: #666;
 }

@@ -1,1 +1,100 @@
-placeholder
+@charset "utf-8";
+
+* { margin: 0;
+	padding: 0;
+}
+* { 
+	tap-highlight-color:rgba(0,0,0,0);
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-ms-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+* {
+	text-shadow: none;
+}
+html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+
+body {
+	position: relative;
+	word-break: break-word;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	font-family: "microsoft yahei",Verdana,Arial,Helvetica,sans-serif!important;
+	-webkit-font-smoothing: antialiased;
+}
+
+div[data-role="page"] {
+	background-color: #f0f0f0!important;
+}
+
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight: normal;}
+ul,ol,li{list-style:none;}
+em,i{font-style:normal;}
+fieldset,img{border:none;}
+input,img{vertical-align:middle;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {display: block;}
+[hidden],template {display: none;}
+mark {background: #f0f0f0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup {font-style: normal;font-weight: normal;}
+a {background: transparent;}
+a:focus {outline: thin dotted;}
+a:active,a:hover {outline: 0;}
+a:link,a:visited,ins {text-decoration: none;}
+sub,sup {font-size: 75%; line-height: 0; position: relative;vertical-align: baseline;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+blockquote,q{quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}
+button,input,select,textarea {font-family: inherit;font-size: 100%;}
+button,input{-webkit-appearance: none; border-radius: 0;}
+button[disabled],html input[disabled] {cursor: default;}
+
+/*common css*/
+.clearfix:after{display:block;content:'';clear:both;visibility:hidden;}
+.hidden{display:none;}
+.invisible{visibility: hidden;}
+.outer-container{overflow: hidden;}
+.flex-center{display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older WebKit browsers. */  display: -ms-flexbox;  /* 混合版本语法: IE 10 */ display: -webkit-flex;  /* 新版本语法： Chrome 21+ */ display: flex;       /* 新版本语法： Opera 12.1, Firefox 22+ */ -webkit-box-align: center;  /*老版本语法*/ -ms-flex-align: center;  /*混合版本语法*/ -webkit-align-items: center;  /*新版本语法*/ align-items: center; -webkit-box-pack: center;   /*老版本语法*/ -ms-flex-pack: center;  /*混合版本语法*/ -webkit-justify-content: center;    /*新版本语法*/ justify-content: center;}
+.flex-vertical{flex-direction: column; -ms-flex-direction: column; -webkit-box-orient: vertical;}
+.fl { float: left; }
+.fr { float: right; }
+
+input[type='tel'],
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+	border: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	background: url(../images/input-radio-normal.png) no-repeat;
+	width: 0.8rem;
+	height: 0.8rem;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	display: inline-block;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+	background: url(../images/input-radio-active.png) no-repeat;
+	width: 0.8rem;
+	height: 0.8rem;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	display: inline-block;
+	outline: none;
+}
+
+
+
+/*  iscoll  滑动加载文字样式   */
+
+#pullUp, #pullDown {
+	text-align: center;
+	font-size: 0.55rem;
+}
