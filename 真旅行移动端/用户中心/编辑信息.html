@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>编辑信息</title>
+    <link rel="stylesheet" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css">
+    <link rel="stylesheet" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" href="../../mstatic/css/userCenter.css">
+    <script src="../../mstatic/js/base/jquery.min.js"></script>
+    <script src="../../mstatic/js/base/fastclick.js"></script>
+    <script src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div data-role="content">
+        <div class="empty-row"></div>
+        <div class="edt-contain">
+            <div class="edt-row-box">
+                <div class="edt-til">头像</div>
+                <img class="edt-popimg" src="../../images/logo-login.png" alt="用户头像">
+            </div>
+            <div class="edt-row-box">
+                <div class="edt-box-left">昵称</div>
+                <div class="edt-box-right">太平洋的鲸鱼</div>
+            </div>
+            <div class="edt-row-box">
+                <div class="edt-box-left">性别</div>
+                <div class="edt-box-right">
+                    <input data-role="none" type="radio" name="sex" value="male" checked>男<input data-role="none" type="radio" name="sex" value="female">女
+                </div>
+            </div>
+            <div class="edt-row-box">
+                <div class="edt-box-left">邮箱</div>
+                <div class="edt-box-right">dorianzhou@126.com</div>
+            </div>
+            <div class="edt-row-box">
+                <div class="edt-box-left">手机号</div>
+                <div class="edt-box-right">13501723564</div>
+            </div>
+            <div class="edt-row-box">
+                <div class="edt-box-left">&nbsp;</div>
+                <div class="edt-box-right">
+                    <span class="txt-color">新手机号</span>
+                </div>
+            </div>
+            <div class="edt-row-box">
+                <div class="edt-box-left">&nbsp;</div>
+                <div class="edt-box-right">
+                    <span class="txt-color">验证码</span><a class="btn-vld" href="javascript:void(0);">获取验证码</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var root = document.getElementsByTagName("html")[0];
+    var w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+    root.style.fontSize = (w / 320) * 20 + "px";
+    $(function(){
+        FastClick.attach(document.body);
+        $(".remember-me-container").click(function(){
+            $(this).find(".checkbox").toggleClass("actived");
+        });
+    });
+</script>
+</body>
+</html>

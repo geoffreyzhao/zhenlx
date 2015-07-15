@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css">
+    <link rel="stylesheet" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" href="../../mstatic/css/userCenter.css">
+    <script src="../../mstatic/js/base/jquery.min.js"></script>
+    <script src="../../mstatic/js/base/fastclick.js"></script>
+    <script src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div data-role="content">
+        <div class="empty-row"></div>
+        <div class="content-box">
+            <div class="account">
+                <div class="account-left">
+                    <img class="account-img" src="../../images/logo-login.png" alt="用户头像">
+                </div>
+                <div class="account-right">
+                    <p class="acu-name">太平洋的鲸鱼</p>
+                    <p class="acu-txt">13501723564</p>
+                    <p class="acu-txt">xiaohuahua@travelzen.com</p>
+                    <p class="acu-txt">上海市宝山区呼兰路123号真旅网4号楼技术部</p>
+                </div>
+                <div class="clearFlt"></div>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">编辑信息</div>
+                <div class="ui-block-b">修改密码</div>
+            </div>
+        </div>
+        <div class="some-traveler">
+            <p>常用旅客信息</p>
+            <div class="traveler-box">
+                <img class="traveler-img" src="../../images/logo-login.png" alt="用户头像">
+                <div class="traveler-info">
+                    <div class="trl-name">
+                        <img class="u-img" src="../../mstatic/images/u_img.png"><span>太平洋的鲸鱼</span>
+                    </div>
+                    <div class="trl-name">
+                        <img class="u-phone" src="../../mstatic/images/u_phone.png"><span>13501723564</span>
+                    </div>
+                </div>
+                <div class="trl-edt">
+                    <a href="javascript:void(0);"><img class="u-edt" src="../../mstatic/images/u_edit.png"></a>
+                    <a href="#alert-dialog"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
+                </div>
+            </div>
+            <div class="traveler-box">
+                <img class="traveler-img" src="../../images/logo-login.png" alt="用户头像">
+                <div class="traveler-info">
+                    <div class="trl-name">
+                        <img class="u-img" src="../../mstatic/images/u_img.png"><span>太平洋的鲸鱼</span>
+                    </div>
+                    <div class="trl-name">
+                        <img class="u-phone" src="../../mstatic/images/u_phone.png"><span>13501723564</span>
+                    </div>
+                </div>
+                <div class="trl-edt">
+                    <a href="javascript:void(0);"><img class="u-edt" src="../../mstatic/images/u_edit.png"></a>
+                    <a href="#alert-dialog"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
+                </div>
+            </div>
+            <div class="traveler-box">
+                <img class="traveler-img" src="../../images/logo-login.png" alt="用户头像">
+                <div class="traveler-info">
+                    <div class="trl-name">
+                        <img class="u-img" src="../../mstatic/images/u_img.png"><span>太平洋的鲸鱼</span>
+                    </div>
+                    <div class="trl-name">
+                        <img class="u-phone" src="../../mstatic/images/u_phone.png"><span>13501723564</span>
+                    </div>
+                </div>
+                <div class="trl-edt">
+                    <a href="javascript:void(0);"><img class="u-edt" src="../../mstatic/images/u_edit.png"></a>
+                    <a href="#alert-dialog" data-transition="pop"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--点击删除按钮弹窗-->
+<div class="dlg-box" data-role="dialog" id="alert-dialog">
+    <div data-role="content">
+        <p class="dlg-cnt">删除常用旅客信息吗？</p>
+        <div class="dlg-foot">
+            <a class="btn-com btn-confirm" data-role="none" href="javascript:void(0);">确 定</a><a class="btn-com btn-cancel" data-role="none" href="javascript:void(0);" data-rel="back">取 消</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    var root = document.getElementsByTagName("html")[0];
+    var w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+    root.style.fontSize = (w / 320) * 20 + "px";
+    $(function(){
+        FastClick.attach(document.body);
+        $(".remember-me-container").click(function(){
+            $(this).find(".checkbox").toggleClass("actived");
+        });
+    });
+</script>
+</body>
+</html>

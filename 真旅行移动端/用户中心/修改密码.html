@@ -15,31 +15,28 @@
     <script src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <div data-role="page">
-        <div class="page-head" data-role="header" data-theme="b" data-position="fixed">
-            <a href="#" data-icon="arr-back" data-corners="false" data-shadow="false">返回</a>
-            <h1>修改密码</h1>
-            <a href="#" data-icon="arr-omit" data-corners="false" data-shadow="false">&nbsp;</a>
-        </div>
-        <div data-role="content" class="main-contain">
-            <form method="post" action="">
-                <div data-role="fieldcontain">
-                    <div class="ui-grid-a row-box" style="height:0.85rem; border-bottom: 1px #11b9b7 solid;"></div>
-                    <div class="ui-grid-a row-box" style="border-bottom: 1px #c8c8c8 solid;">
-                        <div class="ui-block-a row-cell">原密码</div>
-                        <div class="ui-block-b"><input type="password" placeholder="填写原密码" data-role="none"></div>
-                    </div>
-                    <div class="ui-grid-a row-box" style="border-bottom: 1px #c8c8c8 solid;">
-                        <div class="ui-block-a row-cell">新密码</div>
-                        <div class="ui-block-b"><input type="password" placeholder="填写新密码" data-role="none"></div>
-                    </div>
-                    <div class="ui-grid-a row-box" style="border-bottom: 1px #c8c8c8 solid;">
-                        <div class="ui-block-a row-cell">确认密码</div>
-                        <div class="ui-block-b"><input type="password" placeholder="再次确认密码" data-role="none"></div>
-                    </div>
+    <div class="viewport" data-role="page">
+        <div class="main-contain" data-role="content">
+            <div class="empty-row"></div>
+            <div class="row-box">
+                <span class="row-cell">原密码</span>
+                <input type="password" placeholder="填写原密码" data-role="none">
+            </div>
+            <div class="row-box">
+                <span class="row-cell">新密码</span>
+                <input type="password" placeholder="填写新密码" data-role="none">
+                <div class="flag-box">
+                    <span class="type01">强</span>
                 </div>
-                <div class="subBtn"><input type="submit" data-inline="true" data-corners="false" data-shadow="false" value="提交"></div>
-            </form>
+            </div>
+            <div class="row-box">
+                <span class="row-cell">确认密码</span>
+                <input type="password" placeholder="再次填写确认" data-role="none">
+            </div>
+                <a class="sub-link" href="javascript:void(0);">提  交</a>
+            <div class="some-type">
+                <span class="flag">*</span><span class="type01">强</span><span class="type02">弱</span><span class="type03">中</span>
+            </div>
         </div>
     </div>
 
@@ -48,9 +45,7 @@
     var w = window.innerWidth >= 640 ? 640 : window.innerWidth;
     root.style.fontSize = (w / 320) * 20 + "px";
     $(function(){
-
         FastClick.attach(document.body);
-
         $(".remember-me-container").click(function(){
             $(this).find(".checkbox").toggleClass("actived");
         });
