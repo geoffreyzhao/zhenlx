@@ -24,24 +24,20 @@
     padding:0 0.45rem;
     border-bottom: 1px #dcdcdc solid;
 }
-.account-left{
-    width:4.75rem;
-    height:4.85rem;
+.account-img{
+    width:3.75rem;
+    padding:0.875rem 1rem 0.875rem 0;
+    display: inline-block;
+
+}
+.account-info{
+    width:10.35rem;
     padding:0.875rem 0;
     display: inline-block;
-    position: relative;
-    vertical-align: top;
-    float: left;
+    vertical-align: middle;
 }
-.account-right{
-    width:10.25rem;
-    height:4.85rem;
-    padding:0.875rem 0;
-    display: inline-block;
-    float: left;
-}
-.account-right p{
-    line-height:1rem;
+.account-info p{
+    line-height:1.05rem;
     padding:0;
     margin:0;
 }
@@ -54,13 +50,6 @@
     color:#666;
     word-wrap: break-word;
     word-break: break-all;
-}
-.account-img{
-    width:3.75rem;
-    height:3.75rem;
-    position: absolute;
-    top:50%;
-    margin-top:-1.785rem;
 }
 .space{
     background-color: #f0f0f0;
@@ -97,11 +86,11 @@
     height:2.5rem;
     padding:0.525rem;
     display: inline-block;
-    vertical-align: top;
+
 }
 .traveler-info{
     display: inline-block;
-    padding-top:0.6rem;
+    vertical-align: middle;
 }
 .trl-name{
     font-size: 0.7rem;
@@ -109,13 +98,13 @@
     margin:0.175rem 0;
 }
 .u-img{
-    width:0.475rem;
+    width:0.725rem;
     height:0.7rem;
     padding-right:0.25rem;
     vertical-align: middle;
 }
 .u-phone{
-    width:0.425rem;
+    width:0.725rem;
     height:0.7rem;
     padding-right:0.25rem;
     vertical-align: middle;
@@ -123,10 +112,10 @@
 .trl-edt{
     display: inline-block;
     float: right;
-    padding-top:1.15rem;
+    padding-top:0.575rem;
 }
 .u-edt{
-    width:1.175rem;
+    width:2.075rem;
     height:1.175rem;
     padding:0 0.45rem;
 }
@@ -281,7 +270,6 @@
     border-radius: 0.075rem;
     margin-right:0.325rem;
 }
-
 /** end **/
 
 /** 编辑信息 -start **/
@@ -320,7 +308,7 @@
 }
 .edt-popimg{
     width:2.85rem;
-    height:2.85rem;
+    height:3.35rem;
     padding:0.5rem 0.25rem;
     display: inline-block;
     vertical-align: middle;
