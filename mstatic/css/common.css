@@ -40,7 +40,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 mark {background: #f0f0f0;}
 address,caption,cite,code,dfn,em,strong,th,var,optgroup {font-style: normal;font-weight: normal;}
 a {background: transparent;}
-a:focus {outline: thin dotted;}
+a:focus {outline: 0;}
 a:active,a:hover {outline: 0;}
 a:link,a:visited,ins {text-decoration: none;}
 sub,sup {font-size: 75%; line-height: 0; position: relative;vertical-align: baseline;}
@@ -62,39 +62,30 @@ button[disabled],html input[disabled] {cursor: default;}
 .fl { float: left; }
 .fr { float: right; }
 
-input[type='tel'],
-input[type='text'],
-input[type='password'],
-input[type='email'] {
-	border: none;
-}
+/*  自定义 checkbox radio 样式  */
 
 input[type="radio"],
 input[type="checkbox"] {
+	display: none;
+}
+
+.cus_checkbox,
+.cus_radio {
 	background: url(../images/input-radio-normal.png) no-repeat;
 	width: 0.8rem;
 	height: 0.8rem;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	display: inline-block;
+	vertical-align: middle;
 }
-
-input[type="radio"]:checked,
-input[type="checkbox"]:checked {
+input[type="radio"]:checked + .cus_radio,
+input[type="checkbox"]:checked + .cus_checkbox {
 	background: url(../images/input-radio-active.png) no-repeat;
 	width: 0.8rem;
 	height: 0.8rem;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 	display: inline-block;
-	outline: none;
-}
-
-
-
-/*  iscoll  滑动加载文字样式   */
-
-#pullUp, #pullDown {
-	text-align: center;
-	font-size: 0.55rem;
+	vertical-align: middle;
 }

@@ -20,7 +20,7 @@
 			w = window.innerWidth >= 640 ? 640 : window.innerWidth;
 
 		root.style.fontSize = (w / 320) * 20 + "px";
-		root.style.height = window.innerHeight + "px";
+		root.style.minHeight = window.innerHeight + "px";
 	</script>
 </head>
 <body>
@@ -91,8 +91,12 @@
 					    	</div>
 					    </li>
 					    <li class="last">
-					    	<label class="remindPwd"><input type="checkbox" name="" value="" data-role="none">记住密码</label>
-					    	<a class="findPwd" href="javascript:;">找回密码</a>
+					    	<label class="remindPwd fl">
+					    		<label class="cus_input_container">
+					    			<input type="checkbox" name="" value="" data-role="none">
+					    			<label class="cus_checkbox"></label>
+					    		</label>记住密码</label>
+					    	<a class="findPwd fr" href="javascript:;" data-role="none">找回密码</a>
 					    </li>
 					</ul>
 					<input class="bottom-btn" type="button" name="" value="登录" data-role="none">
@@ -106,24 +110,36 @@
 		
 		FastClick.attach(document.body);
 
-		var topValue = window.innerHeight - $(".headerBar").height() - $(".wrapper").height();
-
-		$(".cont-block .bottom-btn").css({
-			"margin-top": (topValue < 0 ? 0 : topValue) + "px"
-		});
+		setBodyMinHeight();
 
 		$(".mregisterBtn").click(function(){
 			$(this).addClass("current").siblings("span").removeClass("current");
 			$('.registerFrame').show();
 			$('.loginFrame').hide();
+			$(".cont-block .bottom-btn").css({
+				"margin-top": 0
+			});
+			setBodyMinHeight();
 		});
 
 		$(".mloginBtn").click(function(){
 			$(this).addClass("current").siblings("span").removeClass("current");
 			$('.registerFrame').hide();
 			$('.loginFrame').show();
+			$(".cont-block .bottom-btn").css({
+				"margin-top": 0
+			});
+			setBodyMinHeight();
 		});
 	});
+
+	function setBodyMinHeight() {
+		var topValue = window.innerHeight - $(".headerBar").height() - $(".wrapper").height();
+
+		$(".cont-block .bottom-btn").css({
+			"margin-top": (topValue < 0 ? 0 : topValue) + "px"
+		});
+	}
 
 
 </script>

@@ -1,1 +1,26 @@
-placeholder
+@charset "utf-8";
+
+.ui-mobile input[type='tel'],
+.ui-mobile input[type='text'],
+.ui-mobile input[type='password'],
+.ui-mobile input[type='email'] {
+	border: none;
+}
+
+.ui-mobile a {
+	font-weight: normal;
+	color: #666;
+}
+
+.ui-mobile a:active,
+.ui-mobile a:visited,
+.ui-mobile a:hover {
+	color: #666;
+}
+
+.ui-mobile label {
+	display: inline-block;
+	margin: 0;
+	font-weight: normal;
+	color: #666;
+}
