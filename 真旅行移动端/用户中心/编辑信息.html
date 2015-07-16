@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/userCenter.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
     <title>编辑信息</title>
-    <link rel="stylesheet" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css">
-    <link rel="stylesheet" href="../../mstatic/css/common.css">
-    <link rel="stylesheet" href="../../mstatic/css/jqm.reset.css">
-    <link rel="stylesheet" href="../../mstatic/css/userCenter.css">
-    <script src="../../mstatic/js/base/jquery.min.js"></script>
-    <script src="../../mstatic/js/base/fastclick.js"></script>
-    <script src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
 </head>
 <body>
 <div class="viewport" data-role="page">
     <div data-role="content">
-        <div class="empty-row"></div>
+        <div class="headerBar">
+            <div class="header">
+				<span class="back">
+					<i class="back-arrow"></i>
+					<em class="back-border"></em>
+				</span>
+                <span class="title">编辑信息</span>
+            </div>
+        </div>
         <div class="edt-contain">
             <div class="edt-row-box">
                 <div class="edt-til">头像</div>
@@ -25,47 +42,69 @@
             </div>
             <div class="edt-row-box">
                 <div class="edt-box-left">昵称</div>
-                <div class="edt-box-right">太平洋的鲸鱼</div>
+                <div class="edt-box-right"><input type="text" value="太平洋的鲸鱼" data-role="none"></div>
             </div>
             <div class="edt-row-box">
                 <div class="edt-box-left">性别</div>
                 <div class="edt-box-right">
-                    <input data-role="none" type="radio" name="sex" value="male" checked>男<input data-role="none" type="radio" name="sex" value="female">女
+                    <label>
+                        <input type="radio" name="sex" value="male" data-role="none" checked>
+                        <label class="cus_radio"></label>
+                    </label>男
+                    <label>
+                        <input type="radio" name="sex" value="female" data-role="none">
+                        <label class="cus_radio"></label>
+                    </label>女
                 </div>
             </div>
             <div class="edt-row-box">
                 <div class="edt-box-left">邮箱</div>
-                <div class="edt-box-right">dorianzhou@126.com</div>
+                <div class="edt-box-right">
+                    <input type="text" value="dorianzhou@126.com" data-role="none">
+                </div>
             </div>
             <div class="edt-row-box">
                 <div class="edt-box-left">手机号</div>
-                <div class="edt-box-right">13501723564</div>
-            </div>
-            <div class="edt-row-box">
-                <div class="edt-box-left">&nbsp;</div>
                 <div class="edt-box-right">
-                    <span class="txt-color">新手机号</span>
+                    <input type="text" value="13501723564" data-role="none">
                 </div>
             </div>
             <div class="edt-row-box">
                 <div class="edt-box-left">&nbsp;</div>
                 <div class="edt-box-right">
-                    <span class="txt-color">验证码</span><a class="btn-vld" href="javascript:void(0);">获取验证码</a>
+                    <input type="text" placeholder="新手机号" data-role="none">
                 </div>
+            </div>
+            <div class="edt-row-box">
+                <div class="edt-box-left">&nbsp;</div>
+                <div class="edt-box-right">
+                    <input class="input-txt" type="text" placeholder="验证码" data-role="none"><a class="btn-vld" data-role="none" href="javascript:void(0);">获取验证码</a>
+                </div>
+            </div>
+            <div class="edt-row-box">
+                <div class="edt-box-left">真实姓名</div>
+                <div class="edt-box-right">
+                    <input type="text" value="地瓜" data-role="none">
+                </div>
+            </div>
+            <div>
+                <div class="edt-box-left">通信地址</div>
+                <div class="edt-box-right">
+                    <span class="u-add">上海 上海市 黄浦区</span><span class="arr-lr"><label class="u-lr"></label></span>
+                </div>
+            </div>
+            <textarea class="edt-textEara" data-role="none"></textarea>
+            <div class="save-box">
+                <a class="edt-save" href="javascript:void(0);">保存信息</a>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    var root = document.getElementsByTagName("html")[0];
-    var w = window.innerWidth >= 640 ? 640 : window.innerWidth;
-    root.style.fontSize = (w / 320) * 20 + "px";
     $(function(){
         FastClick.attach(document.body);
-        $(".remember-me-container").click(function(){
-            $(this).find(".checkbox").toggleClass("actived");
-        });
+
     });
 </script>
 </body>

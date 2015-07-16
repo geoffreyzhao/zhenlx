@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/userCenter.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>修改旅客信息</title>
+
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div data-role="content">
+        <div class="headerBar">
+            <div class="header">
+				<span class="back">
+					<i class="back-arrow"></i>
+					<em class="back-border"></em>
+				</span>
+                <span class="title">修改旅客信息</span>
+            </div>
+        </div>
+        <div class="revise-contain">
+            <div class="revise-row-box">
+                <div class="revise-til">中文名</div>
+                <div class="revise-val">
+                    <input type="text" value="太平洋上的鲸鱼" data-role="none">
+                </div>
+            </div>
+            <div class="revise-row-box">
+                <div class="revise-til">拼音/英文名</div>
+                <div class="revise-val">
+                    <input type="text" value="dorianzhou" data-role="none">
+                </div>
+            </div>
+            <div class="revise-row-box">
+                <div class="revise-til">邮箱</div>
+                <div class="revise-val">
+                    <input type="text" value="dorianzhou@126.com" data-role="none">
+                </div>
+            </div>
+            <div>
+                <div class="revise-til">手机号</div>
+                <div class="revise-val">
+                    <input type="text" value="13501723564" data-role="none">
+                </div>
+            </div>
+        </div>
+        <div class="menu-til">
+            <div class="menu-rl">证件信息</div>
+            <div class="menu-rr"><a class="btn-add" data-role="none" href="javascript:void(0);">添加证件</a></div>
+        </div>
+        <div class="revise-contain01">
+            <div class="revise-tab">
+                <div class="revTab-row">
+                    <div class="revTab-row-til">证件类型</div>
+                    <div class="revTab-row-val">
+                        <label>
+                            <input type="radio" name="type" value="idcard" data-role="none" checked>
+                            <label class="cus_radio"></label>
+                        </label>身份证
+                        <label>
+                            <input type="radio" name="type" value="passport" data-role="none">
+                            <label class="cus_radio"></label>
+                        </label>护照
+                        <label>
+                            <input type="radio" name="type" value="pass" data-role="none">
+                            <label class="cus_radio"></label>
+                        </label>通行证
+                    </div>
+                </div>
+                <div class="revTab-row">
+                    <div class="revTab-row-til">证件号</div>
+                    <div class="revTab-row-val">
+                        <input type="text" value="13501723564" data-role="none">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
