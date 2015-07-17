@@ -15,7 +15,6 @@
     <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
     <title>修改旅客信息</title>
 
-
     <script type="text/javascript">
         var root = document.getElementsByTagName("html")[0],
                 w = window.innerWidth >= 640 ? 640 : window.innerWidth;
@@ -91,8 +90,79 @@
                         <input type="text" value="13501723564" data-role="none">
                     </div>
                 </div>
+                <div>
+                    <div class="revTab-row-til">有效期</div>
+                    <div class="revTab-row-val">
+                        <span class="rev-term">2015-09-20</span><span class="arr-lr"><label class="u-lr"></label></span>
+                    </div>
+                </div>
             </div>
-
+            <div class="rev-btn-box">
+                <a class="rev-del" data-role="none" href="javascript:void(0);">删除</a>
+            </div>
+        </div>
+        <div class="menu-til">
+            <div class="menu-rl">详细信息</div>
+        </div>
+        <div class="revise-contain02">
+            <div class="revise-row-box">
+                <div class="revise-til">性别</div>
+                <div class="revise-val">
+                    <label>
+                        <input type="radio" name="sex" value="male" data-role="none" checked>
+                        <label class="cus_radio"></label>
+                    </label>男
+                    <label>
+                        <input type="radio" name="sex" value="female" data-role="none">
+                        <label class="cus_radio"></label>
+                    </label>女
+                </div>
+            </div>
+            <div class="revise-row-box">
+                <div class="revise-til">旅客类型</div>
+                <div class="revise-val">
+                    <label>
+                        <input type="radio" name="trvel" value="adult" data-role="none" checked>
+                        <label class="cus_radio"></label>
+                    </label>成人
+                    <label>
+                        <input type="radio" name="trvel" value="child" data-role="none">
+                        <label class="cus_radio"></label>
+                    </label>儿童
+                    <label>
+                        <input type="radio" name="trvel" value="baby" data-role="none">
+                        <label class="cus_radio"></label>
+                    </label>婴儿
+                </div>
+            </div>
+            <div class="revise-row-box">
+                <div class="revise-til">旅客国籍</div>
+                <div class="revise-val">
+                    <span class="rev-term">中国</span><span class="arr-lr"><label class="u-lr"></label></span>
+                </div>
+            </div>
+            <div class="revise-row-box">
+                <div class="revise-til">出生日期</div>
+                <div class="revise-val">
+                    <span class="rev-term">点击设置</span><span class="arr-lr"><label class="u-lr"></label></span>
+                </div>
+            </div>
+            <div class="revise-row-box">
+                <div class="revise-til">邮箱</div>
+                <div class="revise-val">
+                    <input type="text" value="dorianzhou@126.com" data-role="none">
+                </div>
+            </div>
+            <div>
+                <div class="revise-til">通讯地址</div>
+                <div class="revise-val">
+                    <span class="rev-term">上海 上海市 黄浦区</span><span class="arr-lr"><label class="u-lr"></label></span>
+                </div>
+            </div>
+            <textarea class="edt-textEara" data-role="none"></textarea>
+            <div class="save-box">
+                <a class="edt-save" href="javascript:void(0);">保 存</a>
+            </div>
         </div>
     </div>
 </div>

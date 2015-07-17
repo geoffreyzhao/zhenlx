@@ -459,6 +459,14 @@
 .revise-val input:focus{
     outline: none;
 }
+.revise-val > label{
+    vertical-align: bottom;
+    margin-left:0.8rem;
+    margin-right:0.25rem;
+}
+.revise-val > label:first-child{
+    margin-left:0;
+}
 .menu-til{
     padding:0 0.5rem;
     background-color:#f0f0f0;
@@ -525,5 +533,31 @@
 }
 .revTab-row-val input:focus{
     outline: none;
+}
+.rev-term{
+    width:8.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.rev-btn-box{
+    padding-top:0.65rem;
+    text-align: right;
+}
+.rev-del{
+    color:#11b9b7 !important;
+    font-weight: normal !important;
+    padding:0.35rem 0.75rem;
+    border:1px #11b9b7 solid;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+    text-decoration: none;
+    display: inline-block;
+}
+.revise-contain02{
+    padding:0 0.45rem;
+    background-color:#fff;
+    font-size: 0.7rem;
+    color:#666;
 }
 /** end **/
