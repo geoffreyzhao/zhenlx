@@ -51,6 +51,14 @@
 	color:#3fc0ae;
 	font-size:0.75rem;
 }
+.header .til{
+	display: inline-block;
+	position: absolute;
+	left:2rem;
+	right:2rem;
+	color:#3fc0ae;
+	font-size: 0.6rem;
+}
 .footer {
 	position: absolute;
 	z-index: 2;
@@ -217,3 +225,215 @@
 	margin-right: 0.875rem;
 	font-size: 0.6rem!important;
 }
+
+/** 完善信息 -start **/
+.pop-head{
+    padding:1.45rem 0;
+    text-align: center;
+}
+.pop-img{
+    width:4.6rem;
+    height:4.6rem;
+}
+.wrap-row{
+    padding:0 1rem;
+    margin-bottom: 1.2rem;
+}
+.row-img{
+    width:0.85rem;
+    height:0.975rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.row-box{
+    width:12rem;
+    margin-left:0.7rem;
+    padding:0.2rem 0;
+    border-bottom: 1px #ccc solid;
+    font-size: 0.75rem;
+    color:#333;
+    display: inline-block;
+}
+.row-box input{
+    color:#333;
+    display: inline-block;
+    background-color:#f0f0f0;
+}
+.row-box input :-moz-placeholder,
+.row-box input ::-webkit-input-placeholder{
+    color: #ccc;
+}
+.row-box input:focus{
+    outline: none;
+}
+.row-icon{
+    width:0.775rem;
+    height:0.975rem;
+    padding-top:0.2rem;
+    display: none;
+    float: right;
+}
+.row-mail{
+    width:0.875rem;
+    height:0.675rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.row-cnt{
+    width:1rem;
+    height:0.975rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.wrap-look{
+    text-align: center;
+    font-size: 0.6rem;
+}
+.wrap-look a{
+    color:#3fc0ae !important;
+    vertical-align: middle;
+}
+.icon-qus{
+    width:0.6rem;
+    margin-right:0.125rem;
+    vertical-align: middle;
+}
+.wrap-link{
+    padding:0 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.link-fin{
+    font-weight: normal !important;
+    font-size: 0.85rem;
+    text-align: center;
+    color:#fff !important;
+    background-color:#3fc0ae;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+    text-decoration: none;
+    display: block;
+    margin-top:0.85rem;
+    padding:0.575rem 0;
+}
+.link-ign{
+    font-size: 0.85rem;
+    font-weight:normal !important;
+    text-align: center;
+    color:#3fc0ae !important;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+    border:1px #3fc0ae solid;
+    text-decoration: none;
+    display: block;
+    margin-top:0.85rem;
+    padding:0.575rem 0;
+}
+/** end **/
+
+/** 找回密码 -start **/
+.wrap-box{
+    padding-top:1.85rem;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+}
+.type-one{
+    border:3px #11b9b7 solid;
+    background-color:#fff;
+}
+.img-box{
+    width:2.2rem;
+    height:2.1rem;
+    padding-top:0.3rem;
+    display: inline-block;
+    text-align: center;
+    border-right:1px #11b9b7 solid;
+}
+.type-img{
+    width:0.65rem;
+    height:0.95rem;
+
+}
+.type-txt{
+    padding-left:2.4rem;
+    font-size: 0.75rem;
+    color:#11b9b7 !important;
+}
+.type-two{
+    height:2.25rem;
+    margin-top:0.7rem;
+    border:3px #ccc solid;
+    background-color:#fff;
+}
+.mail-box{
+    width:2.2rem;
+    height:2.1rem;
+    padding-top:0.25rem;
+    display: inline-block;
+    text-align: center;
+    border-right:1px #ccc solid;
+}
+.type-mail{
+    width:0.875rem;
+    height:0.625rem;
+}
+/** end **/
+
+/** 手机找回密码 -start **/
+.wrap-space{
+    margin-top:0.7rem;
+    border-bottom:1px #dcdcdc solid;
+}
+.main-row{
+    padding:0.8rem 0.5rem;
+    border-bottom: 1px #f0f0f0 solid;
+    background-color:#fff;
+}
+.row-til{
+    width:4.2rem;
+    font-size: 0.8rem;
+    color:#333;
+    display: inline-block;
+    vertical-align: middle;
+}
+.row-val{
+    width:9.25rem;
+    font-size: 0.75rem;
+    color:#666;
+    display: inline-block;
+}
+.row-close{
+    width:0.775rem;
+    height:0.775rem;
+    display: inline-block;
+}
+.main-row01{
+    padding:0.525rem 0.5rem;
+    border-bottom: 1px #f0f0f0 solid;
+    background-color:#fff;
+}
+.row-input{
+    width:5.8rem;
+}
+.row-input:focus{
+    outline: none;
+}
+.row-vld{
+    font-size: 0.75rem;
+    color:#11b9b7 !important;
+    font-weight: normal !important;
+    padding:0.35rem;
+    border:1px #11b9b7 solid;
+    display: inline-block;
+    float: right;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+    text-decoration: none;
+}
+.main-next{
+    padding:0 0.5rem;
+    margin-top:1.55rem;
+}
+/** end **/
