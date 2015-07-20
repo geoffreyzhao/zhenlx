@@ -140,26 +140,53 @@
       <div class="banner">
         <ul class="product">
           <li class="banner-image-1">
-              <div class="banner-image-cont cont-1">
+              <!-- <div class="banner-image-cont cont-1">
                 <div class="image-cont-cover"></div>
-              </div>
+              </div> -->
           </li>
           <li class="banner-image-2">
-              <div class="banner-image-cont cont-2">
+              <!-- <div class="banner-image-cont cont-2">
                 <div class="image-cont-cover"></div>
-              </div>
+              </div> -->
           </li>
           <li class="banner-image-3">
+            <!-- <div class="banner-image-cont cont-3">
+              <div class="image-cont-cover"></div>
+            </div> -->
+          </li>
+          <li class="banner-image-4">
+              <!-- <div class="banner-image-cont cont-4">
+                <div class="image-cont-cover"></div>
+              </div> -->
+          </li>
+          <li class="banner-image-5">
+            <!-- <div class="banner-image-cont cont-5">
+              <div class="image-cont-cover"></div>
+            </div> -->
+          </li>
+        </ul>
+        <ul class="cont-slide">
+          <li class="cont-slide-place">
+            <div class="banner-image-cont cont-1">
+              <div class="image-cont-cover"></div>
+            </div>
+          </li>
+          <li class="cont-slide-place">
+            <div class="banner-image-cont cont-2">
+              <div class="image-cont-cover"></div>
+            </div>
+          </li>
+          <li class="cont-slide-place">
             <div class="banner-image-cont cont-3">
               <div class="image-cont-cover"></div>
             </div>
           </li>
-          <li class="banner-image-4">
-              <div class="banner-image-cont cont-4">
-                <div class="image-cont-cover"></div>
-              </div>
+          <li class="cont-slide-place">
+            <div class="banner-image-cont cont-4">
+              <div class="image-cont-cover"></div>
+            </div>
           </li>
-          <li class="banner-image-5">
+          <li class="cont-slide-place">
             <div class="banner-image-cont cont-5">
               <div class="image-cont-cover"></div>
             </div>
@@ -489,23 +516,29 @@
           <span class="big-quote right"></span>
         </div>
         <div class="brandStory">
-          <span class="brandStoryIcon"></span>
           <div class="brandStoryFonts">
             <h3 class="brandTitle">关于我们</h3>
             <div class="fontsDetails">
-              <p>"旅行的意义从万物中浮现，沉默或者开口，充满我的灵魂。"<br>
-              我们是谁？<br>
-              我们是一组热爱旅行的小伙伴。<br>
-              我们热衷分享旅行体验，让旅行变成生活方式：既不奢侈，也不廉价；让出行的每一天都富有新意、打动人心。<br>
-              在与你相遇以前，我们去过不同的地方，有着各自的旅行故事，也有非常喜欢的事情：音乐、文学、艺术、体育、科技……<br>
-              我们要为你们提供亲身体验、生命完整、值得回味的旅行产品。<br></p>
+              <p style="margin-top:20px;">"旅行的意义从万物中浮现，沉默或者开口，充满我的灵魂。"</p>
+              <p class="subTitle" style="width:205px;">
+                <span class="left-border"></span>
+                <span class="title">我们是谁？</span>
+                <span class="right-border"></span>
+              </p>
+              <p>我们是一小撮热爱旅行、死磕旅行体验的小伙伴。<br>
+              在与你相遇以前，我们去过不同的地方，有着各自的旅行故事，<br>也有着各自非常喜欢做的事情：音乐、文学、艺术、体育、科技……</p>
 
-              <p>我们能为你的旅行带来什么?<br>
-              紧凑型线路——尽量少请假。<br>
-              一地深度游——有效游玩时间长。<br>
-              品味最精细——第一次出门就是资深旅行家。<br>
-              服务有保障——全身心投入在路上。<br>
-              这一切都是为了不一样的深层旅行体验。<br></p>
+              <p class="subTitle" style="width: 340px;">
+                <span class="left-border"></span>
+                <span class="title">我们能为你的旅行带来什么?</span>
+                <span class="right-border"></span>
+              </p>
+              <p>我们热衷分享旅行体验，让旅行变成生活方式：既不奢侈，也不廉价，让出行的每一天都富有新意、打动人心。<br>我们要为你提供亲身经历，体验完整，值得回味的旅行产品。</p>
+              <p style="margin-top: 15px;">设计紧凑型线路 ， 让你尽量少请假。<br>
+                注重一地深度体验 ，保证有效游玩时间。<br>
+                品味最精细 ，第一次出门就是资深旅行家。<br>
+                服务有保障 ，你可以全身心投入在路上。</p>
+              <p class="bottom">这一切，都是为了不一样的深层旅行体验。</p>
             </div>
           </div>
         </div>
@@ -779,15 +812,24 @@ $(function(){
     $('.product').cycle({
         fx:'scrollHorz',
         timeout: 7000,
-        speed: 1000, 
+        speed: 1500, 
         pause: true,
         prev:".bannerbtn .leftbtn",
         next:".bannerbtn .rightbtn"
       });
 
-    window.onresize = function(){
-      window.location.reload();
-    }
+    $('.cont-slide').cycle({
+        fx:'fade',
+        timeout: 7000,
+        speed: 1500, 
+        pause: true,
+        prev:".bannerbtn .leftbtn",
+        next:".bannerbtn .rightbtn"
+      });
+
+    // window.onresize = function(){
+    //   window.location.reload();
+    // }
 
     /*  fx 效果参数：
 blindX

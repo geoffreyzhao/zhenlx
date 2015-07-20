@@ -63,6 +63,14 @@ body {
     z-index:99;
     cursor: pointer;
 }
+.cont-slide {
+    width: 100%!important;
+    position: absolute;
+    top: 0;
+}
+.cont-slide > li {
+    width: 100%;
+}
 
 /*body模块*/
 .main-wrapper{
@@ -255,11 +263,10 @@ body {
 }
 .brandStory{
     width:100%;
-    height:647px;
     color: #555555;
     background:url("../../images/client/storyBg.jpg") #91b2b7 no-repeat center center;
     background-size:cover;
-    height: 647px;
+    height: 740px;
     position: relative;
 }
 .brandStory .brandStoryIcon{
@@ -275,27 +282,63 @@ body {
 }
 .brandStory .brandStoryFonts{
     width: 950px;
-    min-height: 380px;
-    padding: 15px 60px;
+    padding: 0 65px;
     position: absolute;
     left:50%;
-    top: 93px;
+    top: 50px;
     margin-left:-475px;
     background: rgba(255,255,255,0.8);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
 }
 .brandStoryFonts .brandTitle{
     font-size: 30px;
-    padding: 17px 20px;
-    margin-bottom: 25px;
     border-bottom: 1px solid #d6d6d5;
     text-align: center;
-    font-family:"Microsoft Yahei";
+    padding: 25px 0;
+    margin: 0;
 }
 .brandStoryFonts .fontsDetails{
     font-size: 15px;
-    line-height: 25px;
-    padding-bottom: 15px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 16px;
+}
+.brandStoryFonts .fontsDetails p {
+    margin: 0;
+}
+.brandStoryFonts .subTitle {
+    position: relative;
+    height: 60px;
+    margin: 0 auto!important;
+}
+.brandStoryFonts .subTitle .left-border {
+    position: absolute;
+    width: 50px;
+    border-top: 1px solid #d6d6d5;
+    left: 0;
+    top: 33px;
+}
+.brandStoryFonts .subTitle .right-border {
+    position: absolute;
+    width: 50px;
+    border-top: 1px solid #d6d6d5;
+    right: 0;
+    top: 33px;
+}
+.brandStoryFonts .subTitle .title {
+    position: absolute;
+    font-size: 18px;
+    color: #1cafad;
+    padding: 0 10px;
+    left: 50px;
+    top: 16px;
+}
+.brandStoryFonts .fontsDetails .bottom {
+    font-size: 18px;
+    color: #1cafad;
+    border-top: 1px solid #d6d6d5;
+    padding: 20px 0;
+    margin-top: 15px;
 }
 .shareModel.serveModel{
     width:1220px;
