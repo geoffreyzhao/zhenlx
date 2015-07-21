@@ -42,6 +42,7 @@
     padding: 20px 0 80px ;
     float: left;
     width: 78.3%;
+    min-height: 686px;
 }
 
 .sec-tab {
@@ -304,4 +305,32 @@
 
 .cursorDefault {
     cursor: default;
+}
+
+.favor-empty-block {
+    width: 100%;
+    text-align: center;
+    margin-top: 125px;
+    font-size: 18px;
+}
+
+.favor-empty-img {
+    width: 117px;
+    height: 135px;
+    background: url(../../images/client/favor-empty.png) no-repeat;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.favor-empty-block .tip-text {
+    color: #999;
+}
+
+.favor-empty-block a {
+    color: #11B9B7;
+}
+
+.favor-empty-block a:hover {
+    color: #11B9B7;
+    text-decoration: underline;
 }

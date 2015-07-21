@@ -126,16 +126,16 @@
     margin:0;
 }
 .columnModel ul li{
-    width:48px;
+    width:58px;
     float:left;
-    margin:0 15px;
-    font-size:12px;
+    margin:0 10px;
+    font-size:14px;
     text-align: center;
 }
 .columnModel ul li span{
     display:inline-block;
     line-height:32px;
-    color: #929292;
+    color: #555;
 }
 .columnModel ul li:hover span{
     color:#1cafad;
@@ -227,6 +227,7 @@
     left: 0;
     top: 0;
     padding-bottom:30px;
+    width: 100%;
     display: none;
 }
 
