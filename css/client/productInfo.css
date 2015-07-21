@@ -15,11 +15,12 @@
 /*   产品详情 S   */
 .productDetailModel{
     position: relative;
+    border-bottom: 3px solid #585481;
 }
 .productDetailBanner {
     position: relative;
     overflow: hidden;
-    height: 585px;
+    height: 500px;
     width: 100%;
 }
 .productDetailBanner .pro-detail-cont {
@@ -116,7 +117,7 @@
 }
 .productDetailModel .bannerBottomList{
     width: 1150px;
-    height: 97px;
+    height: 114px;
     position: absolute;
     bottom: -51px;
     left: 50%;
@@ -139,17 +140,17 @@
 }
 .bannerBottomList .middleListContent{
     display: inline-block;
-    width: 1150px;
-    height: 97px;
+    width: 100%;
+    height: 100%;
     margin: 0 -5px;
     background-color: #585481;
-    border-radius: 97px;
-    padding: 0 55px;
+    border-radius: 114px;
+    padding: 0 40px;
 }
 .bannerBottomList .bannerBottomHint{
     font-size: 14px;
-    margin: 20px 0 0;
     color: #fff;
+    margin-top: 12px;
 }
 .product-sell-dot {
     position: relative;
@@ -206,8 +207,7 @@
 .bannerBottomHint li{
     display: inline-block;
     float: left;
-    width: 260px;
-    padding: 10px 5px;
+    padding: 10px 12px;
     border-left: 1px solid #79769a;
     border-left-color: rgba(255, 255, 255, .2);
 }
@@ -217,16 +217,49 @@
 }
 .bannerBottomHint .leftHintIcon{
     display: inline-block;
-    width: 33px;
-    height: 37px;
-    background: url("../../images/client/productInfoIcon.png") no-repeat 0 0;
+    background: url("../../images/client/pro-hint-icon.png") no-repeat;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 10px;
     float: left;
 }
+.bannerBottomHint .leftHintIcon.icon-1 {
+    width: 38px;
+    height: 38px;
+    background-position: 0 0;
+}
+.bannerBottomHint .leftHintIcon.icon-2 {
+    width: 38px;
+    height: 36px;
+    background-position: -41px 0;
+}
+.bannerBottomHint .leftHintIcon.icon-3 {
+    width: 35px;
+    height: 39px;
+    background-position: -82px 0;
+}
+.bannerBottomHint .leftHintIcon.icon-4 {
+    width: 38px;
+    height: 40px;
+    background-position: -120px 0;
+}
+
 .bannerBottomHint .hintContent{
     float: left;
-    width: 210px;
+    width: 195px;
+}
+
+.bannerBottomHint .hintContent .title {
+    font-size: 22px;
+    color: #fff;
+    margin: 0;
+}
+
+.bannerBottomHint .hintContent .cont {
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.65;
+    filter: Alpha(opacity=65);
+    margin: 0;
 }
 
 .mainContent{
