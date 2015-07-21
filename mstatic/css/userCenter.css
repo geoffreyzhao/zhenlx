@@ -183,7 +183,7 @@
 }
 .dlg-foot{
     text-align: center;
-    padding:0.5rem 0;
+    padding:0.5rem 1.5rem;
 }
 .btn-com{
     width:4.5rem;
@@ -207,7 +207,8 @@
     background-color:#d4d4d4;
 }
 .dlg-box{
-    margin-top:50%;
+    max-width: 8.5rem;
+
 }
 /** end **/
 

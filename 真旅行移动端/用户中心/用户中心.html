@@ -65,7 +65,7 @@
                 </div>
                 <div class="trl-edt">
                     <a href="修改旅客信息.html" data-transition="slidefade"><img class="u-edt" src="../../mstatic/images/u_edit.png"></a>
-                    <a href="#alert-dialog"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
+                    <a href="#alert-dialog" data-rel="popup" data-transition="pop" data-position-to="window"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
                 </div>
             </div>
             <div class="traveler-box">
@@ -80,7 +80,7 @@
                 </div>
                 <div class="trl-edt">
                     <a  href="修改旅客信息.html" data-transition="slidefade"><img class="u-edt" src="../../mstatic/images/u_edit.png"></a>
-                    <a href="#alert-dialog"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
+                    <a href="#alert-dialog" data-rel="popup" data-transition="pop" data-position-to="window"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
                 </div>
             </div>
             <div class="traveler-box">
@@ -95,19 +95,16 @@
                 </div>
                 <div class="trl-edt">
                     <a href="修改旅客信息.html" data-transition="slidefade"><img class="u-edt" src="../../mstatic/images/u_edit.png"></a>
-                    <a href="#alert-dialog"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
+                    <a href="#alert-dialog" data-rel="popup" data-transition="pop" data-position-to="window"><img class="u-edt" src="../../mstatic/images/u_del.png"></a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<!--点击删除按钮弹窗-->
-<div class="dlg-box" data-role="dialog" id="alert-dialog">
-    <div data-role="content">
-        <p class="dlg-cnt">删除常用旅客信息吗？</p>
-        <div class="dlg-foot">
-            <a class="btn-com btn-confirm" data-role="none" href="javascript:void(0);">确 定</a><a class="btn-com btn-cancel" data-role="none" href="javascript:void(0);" data-rel="back">取 消</a>
+        <!--点击删除按钮弹窗-->
+        <div class="ui-content" data-role="popup" id="alert-dialog" data-theme="a" data-overlay-theme="b">
+            <p class="dlg-cnt">删除常用旅客信息吗？</p>
+            <div class="dlg-foot">
+                <a class="btn-com btn-confirm" data-role="none" href="javascript:void(0);" data-rel="back">确 定</a><a class="btn-com btn-cancel" data-role="none" href="javascript:void(0);" data-rel="back">取 消</a>
+            </div>
         </div>
     </div>
 </div>

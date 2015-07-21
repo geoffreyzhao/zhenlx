@@ -416,7 +416,7 @@
 .row-input{
     width:5.8rem;
 }
-.row-input:focus{
+.row-val:focus, .row-input:focus, .reset-val:focus{
     outline: none;
 }
 .row-vld{
@@ -435,5 +435,64 @@
 .main-next{
     padding:0 0.5rem;
     margin-top:1.55rem;
+}
+
+/** 重置密码 -start **/
+.reset-row{
+	padding:0.8rem 0.5rem;
+	border-bottom: 1px #dcdcdc solid;
+	background-color:#fff;
+}
+.reset-val{
+	width:13.25rem;
+	font-size: 0.6rem;
+	color:#666;
+	display: inline-block;
+}
+.reset-val :-moz-placeholder,
+.reset-val ::-webkit-input-placeholder{
+	color: #ccc;
+}
+.type01{
+	width:1.275rem;
+	height:1.275rem;
+	background-color: #2ad847;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1.275rem;
+	font-size: 0.55rem;
+	color:#fff;
+	-webkit-border-radius: 0.075rem;
+	-moz-border-radius: 0.075rem;
+	border-radius: 0.075rem;
+}
+.type02{
+	width:1.275rem;
+	height:1.275rem;
+	background-color: #ff6c00;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1.275rem;
+	font-size: 0.55rem;
+	color:#fff;
+	-webkit-border-radius: 0.075rem;
+	-moz-border-radius: 0.075rem;
+	border-radius: 0.075rem;
+}
+.type03{
+	width:1.275rem;
+	height:1.275rem;
+	background-color: #ffa200;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1.275rem;
+	font-size: 0.55rem;
+	color:#fff;
+	-webkit-border-radius: 0.075rem;
+	-moz-border-radius: 0.075rem;
+	border-radius: 0.075rem;
 }
 /** end **/

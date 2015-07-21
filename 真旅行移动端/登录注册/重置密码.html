@@ -13,7 +13,7 @@
     <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
-    <title>找回密码</title>
+    <title>重置密码</title>
 
     <script type="text/javascript">
         var root = document.getElementsByTagName("html")[0],
@@ -31,19 +31,21 @@
                 <i class="back-arrow"></i>
                 <em class="back-border"></em>
             </span>
-            <span class="title">找回密码</span>
+            <span class="title">重置密码</span>
         </div>
     </div>
     <div class="wrapper">
-        <div class="wrap-box">
-            <div class="type-one">
-                <span class="img-box"><img class="type-img" src="../../mstatic/images/icon_phone.png"></span>
-                <a class="type-txt" href="手机找回密码.html" data-transition="slidefade">获取手机动态码登录</a>
-            </div>
-            <div class="type-two">
-                <span class="mail-box"><img class="type-mail" src="../../mstatic/images/icon-mail.png"></span>
-                <a class="type-txt" href="邮箱找回密码.html" data-transition="slidefade">通过邮箱找回密码</a>
-            </div>
+        <div class="wrap-space"></div>
+        <div class="reset-row">
+            <input class="reset-val" type="password" placeholder="新密码，8~28位数字字母的组合，区分大小写" data-role="none">
+            <span class="type01">强</span>
+        </div>
+        <div class="wrap-space"></div>
+        <div class="reset-row">
+            <input class="reset-val" type="password" placeholder="再次确认密码" data-role="none">
+        </div>
+        <div class="main-next">
+            <a class="link-fin" href="javascript:void(0);">完 成</a>
         </div>
     </div>
 </div>
