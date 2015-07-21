@@ -2156,6 +2156,12 @@ ul.common-tab > li.rest {
     position: relative;
     width: 100%;
 }
+.pro-item-box .img-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
 .content-above-image {
     position: relative;
     z-index: 2;
