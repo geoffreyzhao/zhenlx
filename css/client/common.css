@@ -437,7 +437,10 @@ input[type="text"].errorStyle:focus{
 .dropdown .dropdown-menu>li>a{
     padding: 8px 5px;
     color: #666666;
-    white-space: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 .dropdown .dropdown-menu>.active>a,
 .dropdown .dropdown-menu>.active>a:hover{
