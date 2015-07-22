@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/payment.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>在线支付</title>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div class="headerBar">
+        <div class="header">
+            <span class="back">
+                <i class="back-arrow"></i>
+                <em class="back-border"></em>
+            </span>
+            <span class="title">在线支付</span>
+            <span class="acut-menu">
+                <a class="acut-box" href="javascript:void(0);"><img class="acut-img" src="../../mstatic/images/acut-img.png"></a>
+                <a href="javascript:void(0);"><img class="menu-img" src="../../mstatic/images/menu-list.png"></a>
+            </span>
+        </div>
+    </div>
+    <div class="progressBar">
+        <div class="prgbar-img">
+            <img class="prgbar" src="../../mstatic/images/prgbar-after01.png"><span class="prgline01"></span><img
+                class="prgbar" src="../../mstatic/images/prgbar-after02.png"><span class="prgline01"></span><img
+                class="prgbar" src="../../mstatic/images/prgbar-after03.png"><span class="prgline02"></span><img
+                class="prgbar" src="../../mstatic/images/prgbar-before04.png">
+        </div>
+        <div class="prgbar-txt">
+            <span class="prgtxt-box">选择产品</span><span class="prgtxt-box">填写订单</span><span class="prgtxt-box">在线支付</span><span
+                class="prgtxt-box01">支付完成</span>
+        </div>
+    </div>
+    <div class="prgtips">
+        <div class="prg-price">29:59</div>
+        <p class="prg-val">后订单将失效，请尽快完成支付！</p>
+    </div>
+    <div class="prg-space"></div>
+    <div class="prg-order clearfix">
+        <span class="prg-left">订单号:15051250101</span><span class="prg-right">2015-05-02</span>
+    </div>
+    <div class="prg-til">[爆款2999]年轻人第一次思密达欧巴江南任性旅行,广州 — 首尔</div>
+    <div class="ui-grid-a prg-grid">
+        <div class="ui-block-a prgblock-a">2015年03月24日 出发</div>
+        <div class="ui-block-b prgblock-b">应付金额<span class="rmb">￥</span><span class="prg-cash">10367</span></div>
+    </div>
+    <div class="prg-space01"></div>
+    <div class="prg-pay">
+        <div class="prg-paytil">支付方式</div>
+        <div class="prg-payType">
+            <div class="prg-payOp clearfix">
+                <img class="prg-payImg" src="../../mstatic/images/wechat.png"><span class="prg-payName">微信支付</span>
+                <label>
+                    <input type="radio" name="type" value="wechat" data-role="none" checked>
+                    <label class="pay-check"></label>
+                </label>
+            </div>
+            <div class="prg-payOp clearfix">
+                <img class="prg-payImg" src="../../mstatic/images/mypay.png"><span class="prg-payName">支付宝支付</span>
+                <label>
+                    <input type="radio" name="type" value="mypay" data-role="none">
+                    <label class="pay-check"></label>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="goPay">
+        <a class="pay-link" href="javascript:void(0);">立即支付</a>
+    </div>
+</div>
+</body>
+
+<script>
+    $(function () {
+        FastClick.attach(document.body);
+
+        $(".pay-check").click(function () {
+            $(this).toggleClass("pay-circled");
+        });
+    });
+</script>
+</html>
