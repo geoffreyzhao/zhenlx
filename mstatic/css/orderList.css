@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.orderNumber{
+	height:2.2rem;
+	line-height:2.2rem;
+	padding-left:0.45rem;
+	margin-bottom:0.45rem;
+	border-bottom:1px solid #dcdcdc;
+	background:#fff;
+	font-size:0.75rem;
+}
+.orderSum{
+	color:#333;
+}
+.orderNumberDetail{
+	color:#999;
+}
+.orderNumberDetail em{
+	color:#ffa200;
+}
