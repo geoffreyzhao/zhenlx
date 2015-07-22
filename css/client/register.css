@@ -478,3 +478,81 @@
 }
 /* 找回密码 E */
 
+/*  注册成功提示  */
+.tip-top {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.success-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../../images/client/success-icon.png);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.tip-text {
+    font-size: 20px;
+    color: #11B9B7;
+    vertical-align: middle;
+}
+
+.tip-bottom {
+    border-top: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.tip-bottom .title {
+    position: absolute;
+    color: #cfcfcf;
+    font-size: 14px;
+    display: inline-block;
+    top: -11px;
+    left: 47%;
+    background-color: #fff;
+    padding: 0 8px;
+}
+
+.bottom-left-qrcode {
+    margin-top: 8px;
+    padding: 35px 0;
+    text-align: center;
+    width: 49%;
+    float: left;
+}
+
+.bottom-left-qrcode > p {
+    color: #11B9B7;
+    font-size: 16px;
+}
+
+.bottom-left-qrcode > img {
+    margin-top: 10px;
+}
+
+.bottom-right-link {
+    margin-top: 8px;
+    padding: 35px 0;
+    text-align: center;
+    width: 49%;
+    float: right;
+    border-left: 1px solid #f0f0f0;
+}
+
+.bottom-right-link .link-text {
+    color: #11B9B7;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.bottom-right-link .link-text:hover {
+    color: #11B9B7;
+    text-decoration: underline;
+}
+
+.bottom-right-link .link-img {
+    margin-top: 10px;
+    display: block;
+}
