@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 .orderNumber{
 	height:2.2rem;
 	line-height:2.2rem;
@@ -17,4 +16,142 @@
 }
 .orderNumberDetail em{
 	color:#ffa200;
+}
+
+
+.orderinfo{
+	width:16rem;
+	height:5.75rem;
+	border-bottom:1px solid #dcdcdc;
+	border-top:1px solid #dcdcdc;
+	background:#fff;
+	margin-bottom:0.45rem;
+}
+.orderHeader{
+	height:1.65rem;
+	line-height:1.65rem;
+	border-bottom:1px solid #dcdcdc;
+}
+.orderNum{
+	float:left;
+	color:#1cafad;
+	font-size:0.6rem;
+	margin-left:0.45rem;
+}
+.orderNum em{
+	font-size:0.64rem;
+}
+.orderDate{
+	float:right;
+	font-size:0.65rem;
+	color:#999999;
+	margin-right:0.45rem;
+}
+
+.orderDetail{
+	height:4.1rem;
+	padding:0.75rem 0.45rem 0 0.45rem;
+}
+.travelInfo{
+	width:10.75rem;
+	float:left;
+	/*margin:0.75rem 0 0 0.45rem;*/
+}
+.travelTitle{
+	display:block;
+	font-size:0.75rem;
+	color:#333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.travelDate{
+	display:block;
+	font-size:0.65rem;
+	color: #999;
+	margin-top:0.95rem;
+}
+.payInfo{
+	float: right;
+	/*margin:0.75rem 0 0 0.45rem;*/
+}
+.travelPrice{
+	display:block;
+	font-size:0.5rem;
+	color:#fe0e2a;
+}
+.travelPrice em{
+	font-size: 0.9rem;
+}
+.pay,.evaluate,.completed{
+	width:3rem;
+	height:1.5rem;
+	line-height:1.5rem;
+	display:inline-block;
+	background:#ffa200;
+	border-radius:0.075rem;
+	font-size:0.75rem;
+	color:#fff!important;
+	text-align:center;
+	margin-top:0.45rem;
+}
+.evaluate{
+	background:#1cafad;
+}
+.completed{
+	background:#fff;
+	border:1px solid #1cafad;
+	color:#1cafad!important;
+}
+
+
+
+
+/**
+ *
+ * 下拉样式 Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+	background:#fff;
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:40px; height:40px;
+	/*background:url(pull-icon@2x.png) 0 0 no-repeat;*/
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
 }

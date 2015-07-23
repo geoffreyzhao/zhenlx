@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no, email=no">
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
@@ -17,14 +19,125 @@
 	<title>登录注册</title>
 
 	<script type="text/javascript">
-		var root = document.getElementsByTagName("html")[0],
-			w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+	// 初始化scroll
+	
+	var myScroll,
+	pullDownEl, pullDownOffset,
+	pullUpEl, pullUpOffset,
+	generatedCount = 0;
 
-		root.style.fontSize = (w / 320) * 20 + "px";
-		root.style.minHeight = window.innerHeight + "px";
+/**
+ * 下拉刷新 （自定义实现此方法）
+ * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+ */
+function pullDownAction () {
+	setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+		var el, li, i;
+		el = document.getElementById('thelist');
+
+		for (i=0; i<3; i++) {
+			li = document.createElement('li');
+			li.innerText = 'Generated row ' + (++generatedCount);
+			el.insertBefore(li, el.childNodes[0]);
+		}
+		
+		myScroll.refresh();		//数据加载完成后，调用界面更新方法   Remember to refresh when contents are loaded (ie: on ajax completion)
+	}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+}
+
+/**
+ * 滚动翻页 （自定义实现此方法）
+ * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
+ */
+function pullUpAction () {
+	setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+		var el, li, i;
+		el = document.getElementById('thelist');
+
+		for (i=0; i<3; i++) {
+			li = document.createElement('li');
+			li.innerText = 'Generated row ' + (++generatedCount);
+			el.appendChild(li, el.childNodes[0]);
+		}
+		
+		myScroll.refresh();		// 数据加载完成后，调用界面更新方法 Remember to refresh when contents are loaded (ie: on ajax completion)
+	}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+}
+
+/**
+ * 初始化iScroll控件
+ */
+function loaded() {
+	pullDownEl = document.getElementById('pullDown');
+	pullDownOffset = pullDownEl.offsetHeight;
+	pullUpEl = document.getElementById('pullUp');	
+	pullUpOffset = pullUpEl.offsetHeight;
+	
+	myScroll = new IScroll('wrapper', {
+		scrollbarClass: 'myScrollbar', /* 重要样式 */
+		useTransition: false, /* 此属性不知用意，本人从true改为false */
+		topOffset: pullDownOffset,
+		onRefresh: function () {
+			if (pullDownEl.className.match('loading')) {
+				pullDownEl.className = '';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+			} else if (pullUpEl.className.match('loading')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+			}
+		},
+		onScrollMove: function () {
+			if (this.y > 5 && !pullDownEl.className.match('flip')) {
+				pullDownEl.className = 'flip';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+				this.minScrollY = 0;
+			} else if (this.y < 5 && pullDownEl.className.match('flip')) {
+				pullDownEl.className = '';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+				this.minScrollY = -pullDownOffset;
+			} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+				pullUpEl.className = 'flip';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+				this.maxScrollY = this.maxScrollY;
+			} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+				this.maxScrollY = pullUpOffset;
+			}
+		},
+		onScrollEnd: function () {
+			if (pullDownEl.className.match('flip')) {
+				pullDownEl.className = 'loading';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';				
+				pullDownAction();	// Execute custom function (ajax call?)
+			} else if (pullUpEl.className.match('flip')) {
+				pullUpEl.className = 'loading';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';				
+				pullUpAction();	// Execute custom function (ajax call?)
+			}
+		}
+	});
+	
+	setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+}
+
+//初始化绑定iScroll控件 
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+
+
+
+
+	// 设置页面根字大小
+	var root = document.getElementsByTagName("html")[0],
+		w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+	root.style.fontSize = (w / 320) * 20 + "px";
+	root.style.minHeight = window.innerHeight + "px";
 	</script>
 </head>
-<body>
+<body  onload="loaded()">
 	<div data-role="page">
 		<div class="headerBar">
 			<div class="header">
@@ -40,13 +153,88 @@
 				<span class="orderSum"><em>4</em>个订单</span>
 				<span class="orderNumberDetail">（待支付<em>1</em>待评价<em>1</em>)</span>
 			</div>
-			<div class="orderList">
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
+			<div class="orderList" id="wrapper">
+				<div id="scroller">
+					<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+					</div>
+					<ul id="thelist">
+						<li class="orderinfo">
+							<div class="orderHeader">
+								<span class="orderNum">订单号:<em>0225151515566</em></span>
+								<span class="orderDate">2015-05-20</span>
+							</div>
+							<div class="orderDetail">
+								<div class="travelInfo">
+									<span class="travelTitle">广州至首尔4晚5天深度游</span>
+									<span class="travelDate"><em>2015年07月24日</em>出发</span>
+								</div>
+								<div class="payInfo">
+									<span class="travelPrice">￥<em>10367</em></span>
+									<a href="javascript:void();" class="pay" data-role="none">去支付</a>
+									<!-- <a href="javascript:void();" class="evaluate" data-role="none">去评价</a>
+									<a href="javascript:void();" class="completed" data-role="none">已完成</a> -->
+								</div>
+							</div>
+						</li>
+						<li class="orderinfo">
+							<div class="orderHeader">
+								<span class="orderNum">订单号:<em>0225151515566</em></span>
+								<span class="orderDate">2015-05-20</span>
+							</div>
+							<div class="orderDetail">
+								<div class="travelInfo">
+									<span class="travelTitle">jgfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</span>
+									<span class="travelDate"><em>2015年07月24日</em>出发</span>
+								</div>
+								<div class="payInfo">
+									<span class="travelPrice">￥<em>10367</em></span>
+									<!-- <a href="javascript:void();" class="pay" data-role="none">去支付</a> -->
+									<a href="javascript:void();" class="evaluate" data-role="none">去评价</a>
+									<!-- <a href="javascript:void();" class="completed" data-role="none">已完成</a> -->
+								</div>
+							</div>
+						</li>
+						<li class="orderinfo">
+							<div class="orderHeader">
+								<span class="orderNum">订单号:<em>0225151515566</em></span>
+								<span class="orderDate">2015-05-20</span>
+							</div>
+							<div class="orderDetail">
+								<div class="travelInfo">
+									<span class="travelTitle">广州至首尔4ytrtehtyjytttttttttttttttttttttt晚5天深度游</span>
+									<span class="travelDate"><em>2015年07月24日</em>出发</span>
+								</div>
+								<div class="payInfo">
+									<span class="travelPrice">￥<em>10367</em></span>
+									<!-- <a href="javascript:void();" class="pay" data-role="none">去支付</a> -->
+									<!-- <a href="javascript:void();" class="evaluate" data-role="none">去评价</a> -->
+									<a href="javascript:void();" class="completed" data-role="none">已完成</a>
+								</div>
+							</div>
+						</li><li class="orderinfo">
+							<div class="orderHeader">
+								<span class="orderNum">订单号:<em>0225151515566</em></span>
+								<span class="orderDate">2015-05-20</span>
+							</div>
+							<div class="orderDetail">
+								<div class="travelInfo">
+									<span class="travelTitle">广州至首尔4晚5天深度游</span>
+									<span class="travelDate"><em>2015年07月24日</em>出发</span>
+								</div>
+								<div class="payInfo">
+									<span class="travelPrice">￥<em>10367</em></span>
+									<a href="javascript:void();" class="pay" data-role="none">去支付</a>
+									<!-- <a href="javascript:void();" class="evaluate" data-role="none">去评价</a>
+									<a href="javascript:void();" class="completed" data-role="none">已完成</a> -->
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div id="pullUp">
+						<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+					</div>
+				</div>	
 			</div>
 		</div>
 	</div>
