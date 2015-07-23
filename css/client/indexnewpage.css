@@ -5,7 +5,6 @@ body {
 /*banner开始*/
 .banner{
     width: 100%;
-    height: 650px;
     margin:0 auto;
     position:relative;
     overflow:hidden;
@@ -538,7 +537,12 @@ body {
     height: 650px;
 }
 .banner-image-1 {
-    background: url(../../images/client/banner-art.jpg) center center;
+    background: url(../../images/client/art-background.jpg) center center;
+}
+.banner-image-1 .image-bottom-text {
+    background: url(../../images/client/art-words.png) center center;
+    width: 100%;
+    height: 650px;
 }
 .banner-image-cont.cont-1 {
     background: url(../../images/client/banner-art-cont.png) center center;
@@ -566,25 +570,45 @@ body {
     display: block;
 }
 .banner-image-2 {
-    background: url(../../images/client/banner-celebration.jpg) center center;
+    background: url(../../images/client/celebration-background.jpg) center center;
+}
+.banner-image-2 .image-bottom-text {
+    background: url(../../images/client/celebration-words.png) center center;
+    width: 100%;
+    height: 650px;
 }
 .banner-image-cont.cont-2 {
     background: url(../../images/client/banner-celebration-cont.png) center center;
 }
 .banner-image-3 {
-    background: url(../../images/client/banner-health.jpg) center center;
+    background: url(../../images/client/health-background.jpg) center center;
+}
+.banner-image-3 .image-bottom-text {
+    background: url(../../images/client/health-words.png) center center;
+    width: 100%;
+    height: 650px;
 }
 .banner-image-cont.cont-3 {
     background: url(../../images/client/banner-health-cont.png) center center;
 }
 .banner-image-4 {
-    background: url(../../images/client/banner-life.jpg) center center;
+    background: url(../../images/client/life-background.jpg) center center;
+}
+.banner-image-4 .image-bottom-text {
+    background: url(../../images/client/life-words.png) center center;
+    width: 100%;
+    height: 650px;
 }
 .banner-image-cont.cont-4 {
     background: url(../../images/client/banner-life-cont.png) center center;
 }
 .banner-image-5 {
-    background: url(../../images/client/banner-pleasure.jpg) center center;
+    background: url(../../images/client/pleasure-background.jpg) center center;
+}
+.banner-image-5 .image-bottom-text {
+    background: url(../../images/client/pleasure-words.png) center center;
+    width: 100%;
+    height: 650px;
 }
 .banner-image-cont.cont-5 {
     background: url(../../images/client/banner-pleasure-cont.png) center center;
@@ -603,3 +627,117 @@ body {
     display: inline-block;
     margin-bottom: 20px;
 }
+
+.banner .product.small {
+    height: 550px;
+}
+
+.banner .product.small li {
+    margin-top: -55px;
+}
+
+.banner .product.small li .image-bottom-text {
+    margin-top: -50px;
+}
+.cont-slide.small .banner-image-cont {
+    margin-top: 35px;
+}
+
+.cont-slide-place .plus-icon-1 {
+    position: absolute;
+    left: calc((100% - 846px)/2);
+    top: 255px;
+}
+
+.cont-slide-place .plus-icon-2 {
+    position: absolute;
+    left: calc((100% + 640px)/2);
+    top: 325px;
+}
+
+.cont-slide-place .plus-icon-1 .icon,
+.cont-slide-place .plus-icon-2 .icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url(../../images/client/plus.png) no-repeat;
+}
+
+.cont-slide.small .plus-icon-1 {
+    top: 200px;
+}
+
+.cont-slide.small .plus-icon-2 {
+    top: 265px;
+}
+
+@-webkit-keyframes plusRotate {
+    0% { -webkit-transform: rotateZ(0);
+       -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+         -o-transform: rotateZ(0);
+            transform: rotateZ(0); }
+    100% { -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+         -o-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); }
+}
+@-moz-keyframes plusRotate {
+    0% { -webkit-transform: rotateZ(0);
+       -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+         -o-transform: rotateZ(0);
+            transform: rotateZ(0); }
+    100% { -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+         -o-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); }
+}
+@-ms-keyframes plusRotate {
+    0% { -webkit-transform: rotateZ(0);
+       -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+         -o-transform: rotateZ(0);
+            transform: rotateZ(0); }
+    100% { -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+         -o-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); }
+}
+@-o-keyframes plusRotate {
+    0% { -webkit-transform: rotateZ(0);
+       -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+         -o-transform: rotateZ(0);
+            transform: rotateZ(0); }
+    100% { -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+         -o-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); }
+}
+@keyframes plusRotate {
+    0% { -webkit-transform: rotateZ(0);
+       -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+         -o-transform: rotateZ(0);
+            transform: rotateZ(0); }
+    100% { -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+         -o-transform: rotateZ(360deg);
+            transform: rotateZ(360deg); }
+}
+
+.cont-slide-place .plus-icon-1:hover .icon,
+.cont-slide-place .plus-icon-2:hover .icon {
+    -webkit-animation: plusRotate 1s linear infinite;
+       -moz-animation: plusRotate 1s linear infinite;
+        -ms-animation: plusRotate 1s linear infinite;
+         -o-animation: plusRotate 1s linear infinite;
+            animation: plusRotate 1s linear infinite;
+}
+

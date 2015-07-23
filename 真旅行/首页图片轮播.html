@@ -172,26 +172,36 @@
         </ul>
         <ul class="cont-slide">
           <li class="cont-slide-place">
+            <div class="plus-icon-1"><i class="icon"></i></div>
+            <div class="plus-icon-2"><i class="icon"></i></div>
             <div class="banner-image-cont cont-1">
               <div class="image-cont-cover"></div>
             </div>
           </li>
           <li class="cont-slide-place">
+            <div class="plus-icon-1"><i class="icon"></i></div>
+            <div class="plus-icon-2"><i class="icon"></i></div>
             <div class="banner-image-cont cont-2">
               <div class="image-cont-cover"></div>
             </div>
           </li>
           <li class="cont-slide-place">
+            <div class="plus-icon-1"><i class="icon"></i></div>
+            <div class="plus-icon-2"><i class="icon"></i></div>
             <div class="banner-image-cont cont-3">
               <div class="image-cont-cover"></div>
             </div>
           </li>
           <li class="cont-slide-place">
+            <div class="plus-icon-1"><i class="icon"></i></div>
+            <div class="plus-icon-2"><i class="icon"></i></div>
             <div class="banner-image-cont cont-4">
               <div class="image-cont-cover"></div>
             </div>
           </li>
           <li class="cont-slide-place">
+            <div class="plus-icon-1"><i class="icon"></i></div>
+            <div class="plus-icon-2"><i class="icon"></i></div>
             <div class="banner-image-cont cont-5">
               <div class="image-cont-cover"></div>
             </div>
@@ -820,7 +830,7 @@ $(function(){
     //banner轮播
     $('.product').cycle({
         fx:'scrollHorz',
-        timeout: 7000,
+        timeout: 700000,
         speed: 1500, 
         pause: true,
         prev:".bannerbtn .leftbtn",
@@ -829,16 +839,19 @@ $(function(){
 
     $('.cont-slide').cycle({
         fx:'fade',
-        timeout: 7000,
+        timeout: 700000,
         speed: 1500, 
         pause: true,
         prev:".bannerbtn .leftbtn",
         next:".bannerbtn .rightbtn"
       });
 
-    // window.onresize = function(){
-    //   window.location.reload();
-    // }
+    window.onresize = function(){
+      // window.location.reload();
+      resizeBannerTextPos();
+    }
+
+    resizeBannerTextPos();
 
     /*  fx 效果参数：
 blindX
@@ -893,9 +906,17 @@ zoom
         $(".workpla-afterlogin").hide();
         event.stopPropagation();
     });
-  
-
 });
+
+function resizeBannerTextPos() {
+  if (window.innerHeight < 725) {   //  小屏情况，重新调整banner图片位置
+    $(".product").addClass("small");
+    $(".cont-slide").addClass("small");
+  } else {
+    $(".product").removeClass("small");
+    $(".cont-slide").removeClass("small");
+  }
+}
 </script>
   
 </body>
