@@ -431,9 +431,11 @@
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
+    padding: 0 6px;
 }
 .leftGoBack .goBackCommonStyle.greenBg{
-    background-color: #0fd730;
+    /*background-color: #0fd730;*/
+    background-color: #1adc87;
 }
 .leftGoBack .goBackCommonStyle.blueBg{
     background-color: #11b9b7;
@@ -455,8 +457,10 @@
 }
 .timePlaceAirport .timePlaceFonts{
     font-size: 24px;
-    font-weight: bold;
     margin-bottom: 5px;
+}
+.color9f9f9fFonts {
+  color: #9f9f9f;
 }
 .timePlaceFonts .placeFonts{
     color: #11b9b7;

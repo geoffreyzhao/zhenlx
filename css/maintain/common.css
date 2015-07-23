@@ -105,6 +105,7 @@ textarea:focus {
     width: 80%;
     float: left;
     margin-top: 12px;
+    min-height: 48px;
 }
 .main-header{
     position: relative;

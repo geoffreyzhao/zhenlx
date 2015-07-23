@@ -254,12 +254,15 @@
     height: 23px;
     line-height: 23px;
     text-align: center;
+    padding: 0 6px;
 }
 .order-conBlockTab .bg-green {
-    background: #0fd730;
+    /*background: #0fd730;*/
+    background: #1adc87;
 }
 .order-conBlockTab .bg-darkGreen {
-    background: #0bd582;
+    /*background: #0bd582;*/
+    background: #1adc87;
 }
 .order-conBlockTab .bg-blue {
     background: #11b9b7;
