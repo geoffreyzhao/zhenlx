@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/payment.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>支付失败</title>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div class="payoff-content" data-role="page">
+    <div class="payFail-detail">
+        <img class="payFail-img" src="../../mstatic/images/pay-fail.png">
+        <p class="payFail-txt">支付失败</p>
+        <p class="payFail-tip">您可以继续支付或者</p>
+        <p class="payFail-tip">拨打客服电话<span class="tip-num">400-888888</span></p>
+    </div>
+    <div>
+        <a class="payoff-link" href="javascript:void(0);">继续支付</a>
+        <a class="payoff-link01" href="javascript:void(0);">返回产品列表</a>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        FastClick.attach(document.body);
+
+    });
+</script>
+</body>
+</html>

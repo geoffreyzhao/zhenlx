@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/payment.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>预订订单</title>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div class="headerBar">
+        <div class="header">
+            <span class="back">
+                <i class="back-arrow"></i>
+                <em class="back-border"></em>
+            </span>
+            <img class="head-img" src="../../mstatic/images/logo-new.png">
+        </div>
+    </div>
+    <div class="progressBar">
+        <div class="prgbar-img">
+            <img class="prgbar" src="../../mstatic/images/prgbar-after01.png"><span class="prgline01"></span><img
+                class="prgbar" src="../../mstatic/images/prgbar-after02.png"><span class="prgline02"></span><img
+                class="prgbar" src="../../mstatic/images/prgbar-before03.png"><span class="prgline02"></span><img
+                class="prgbar" src="../../mstatic/images/prgbar-before04.png">
+        </div>
+        <div class="prgbar-txt">
+            <span class="prgtxt-box">选择产品</span><span class="prgtxt-box">填写订单</span><span class="prgtxt-box01">在线支付</span><span
+                class="prgtxt-box01">支付完成</span>
+        </div>
+    </div>
+    <div class="order-til">[爆款2999]年轻人第一次思密达欧巴江南任性旅行,广州 — 首尔</div>
+    <div class="order-row">机票信息</div>
+    <div class="order-list">
+        <div class="order-list-til clearfix">
+            <div class="order-list-left">第一天<span class="order-lab01">去程</span></div>
+            <div class="order-list-right">2015-08-23出发</div>
+        </div>
+        <div class="ui-grid-b order-list-box">
+            <div class="ui-block-a order-box-left">
+                <p>上海</p>
+                <p class="plane-start">07:30</p>
+                <p class="plane-add">上海浦东国际机场</p>
+                <p class="plane-num">人韩航空KE007</p>
+            </div>
+            <div class="ui-block-b order-box-center">
+                <img class="plane" src="../../mstatic/images/plane.png">
+                <p class="plane-time">历时5小时30分</p>
+                <p class="plane-num">头等舱</p>
+            </div>
+            <div class="ui-block-c order-box-right">
+                <p>金边</p>
+                <p class="plane-stop">12:45</p>
+                <p class="plane-add">金边国际机场</p>
+                <p class="plane-num">波音/7/</p>
+            </div>
+        </div>
+        <div class="order-list-til clearfix">
+            <div class="order-list-left">第五天<span class="order-lab02">回程</span></div>
+            <div class="order-list-right">2015-08-28出发</div>
+        </div>
+        <div class="ui-grid-b order-list-box">
+            <div class="ui-block-a order-box-left">
+                <p>上海</p>
+                <p class="plane-start">14:30</p>
+                <p class="plane-add">金边国际机场</p>
+                <p class="plane-num">人韩航空KE007</p>
+            </div>
+            <div class="ui-block-b order-box-center">
+                <img class="plane" src="../../mstatic/images/plane.png">
+                <p class="plane-time">历时5小时30分</p>
+                <p class="plane-num">头等舱</p>
+            </div>
+            <div class="ui-block-c order-box-right">
+                <p>金边</p>
+                <p class="plane-stop">20:00</p>
+                <p class="plane-add">上海浦东国际机场</p>
+                <p class="plane-num">波音/7/</p>
+            </div>
+        </div>
+    </div>
+    <div class="order-row">酒店信息</div>
+    <div class="order-hotel-box">
+        <div class="order-hotel-til">首尔明洞地区优选五星级酒店</div>
+        <div class="ui-grid-b order-hotel-grid">
+            <div class="ui-block-a order-hotel-left">
+                <p><span class="order-lab03">入住</span></p>
+                <p><span class="order-lab04">离店</span></p>
+            </div>
+            <div class="ui-block-b order-hotel-center">
+                <p class="class-hotel-time">2015-03-24</p>
+                <p class="class-hotel-time01">2015-03-26</p>
+            </div>
+            <div class="ui-block-c order-hotel-right">
+                <p class="order-hotel-txt">共<span class="hotel-num">2</span>晚</p>
+                <p class="order-hotel-name">豪华观景房</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        FastClick.attach(document.body);
+
+    });
+</script>
+</body>
+</html>
