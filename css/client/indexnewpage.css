@@ -396,6 +396,10 @@ body {
     width: 108px;
     height: 127px;
 }
+.aboutUs .aboutUsImg li div {
+    color: #7f7f7f;
+    margin-top: 10px;
+}
 .partnersModel{
     margin: 20px 90px;
     text-align: center;
