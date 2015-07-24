@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>私信列表</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/privateLetterList.css">
+
+	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    
+	<script type="text/javascript">
+	
+	// 设置页面根字大小
+	var root = document.getElementsByTagName("html")[0],
+		w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+	root.style.fontSize = (w / 320) * 20 + "px";
+	root.style.minHeight = window.innerHeight + "px";
+	</script>
+</head>
+<body  onload="loaded()">
+	<div data-role="page">
+		<div class="headerBar">
+			<div class="header">
+				<span class="logo"></span>
+				<!-- <span class="til"></span> -->
+				<span class="modleList">
+					<i class="headerAvator"></i><i class="headerListbtn"></i>
+				</span>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div id="wrapper">
+				<div id="scroller">
+					<!--<div id="pullDown">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+					</div>-->
+                    <div class="privateLetterTitle">
+                        <span class="titleFonts">私信</span>
+                        <span class="numberFonts">(1)</span>
+                    </div>
+                    <ul class="listContent">
+                        <li class="current">
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto01.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">助手小智</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div class="secondEllipsis">
+                                    <p>您的订单上海-巴黎年轻人的一次高逼格欧您的订单上海-巴黎年轻人的一次高逼高逼格欧的一次高逼高逼格欧</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto02.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">助手小智</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div class="secondEllipsis">
+                                    <p>您的订单上海-巴黎年轻人的一次高逼格欧您的订单上海-巴黎年轻人的一次高逼高逼格欧的一次高逼高逼格欧</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto01.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">助手小智</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div class="secondEllipsis">
+                                    <p>您的订单上海-巴黎年轻人的一次高逼格欧您的订单上海-巴黎年轻人的一次高逼高逼格欧的一次高逼高逼格欧</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto02.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">助手小智</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div class="secondEllipsis">
+                                    <p>您的订单上海-巴黎年轻人的一次高逼格欧您的订单上海-巴黎年轻人的一次高逼高逼格欧的一次高逼高逼格欧</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto02.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">助手小智</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div class="secondEllipsis">
+                                    <p>您的订单上海-巴黎年轻人的一次高逼格欧您的订单上海-巴黎年轻人的一次高逼高逼格欧的一次高逼高逼格欧</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+					<!--<div id="pullUp">
+						<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+					</div>-->
+				</div>	
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	$(function(){
+		
+		FastClick.attach(document.body);
+        
+		setBodyMinHeight();
+
+        $(".rightDetails .secondEllipsis").each(function(){
+            var divH = $(this).height();
+            var $p = $("p", $(this)).eq(0);
+            while ($p.outerHeight() > divH) {
+                $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+            }
+        });
+        
+	});
+
+	function setBodyMinHeight() {
+		var topValue = window.innerHeight - $(".headerBar").height() - $(".wrapper").height();
+
+		$(".cont-block .bottom-btn").css({
+			"margin-top": (topValue < 0 ? 0 : topValue) + "px"
+		});
+	}
+
+
+</script>
+</body>
+</html>
