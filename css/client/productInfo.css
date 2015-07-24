@@ -2578,3 +2578,9 @@ ul.common-tab > li.rest {
     background: url(../../images/client/tellIcon.png) center center;
 }
 /** end **/
+
+#airInfo,
+#hotelInfo {
+    position: relative;
+    top: -75px;
+}

@@ -404,40 +404,9 @@ body {
     display: inline-block;
     margin-left: 45px;
     vertical-align: middle;
-    background: url("../../images/client/partners.jpg") no-repeat;
 }
 .partnersModel a:first-child{
     margin-left: 0;
-}
-.partnersModel .alila{
-    width: 119px;
-    height: 42px;
-    background-position: 0 -11px;
-}
-.partnersModel .como{
-    width: 92px;
-    height: 27px;
-    background-position: -184px -17px;
-}
-.partnersModel .aman{
-    width: 83px;
-    height: 38px;
-    background-position: -340px -13px;
-}
-.partnersModel .belmond{
-    width: 106px;
-    height: 43px;
-    background-position: -482px -12px;
-}
-.partnersModel .sixSenses{
-    width: 80px;
-    height: 69px;
-    background-position: -628px 0;
-}
-.partnersModel .swireHotels{
-    width: 140px;
-    height: 18px;
-    background-position: -756px -22px;
 }
 .main-container{
     background:#fff;
@@ -447,6 +416,86 @@ body {
     background: -ms-linear-gradient(top, #fff, #fff); /*IE 10 */
     filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#ffffff);/* IE<9> */
     -ms-filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ffffff, endColorstr=#ffffff);/* IE8+  */
+}
+
+.partnerImg-1 {
+    width: 82px;
+    height: 43px;
+    background: url(../../images/client/partner-img-1-gray.png) no-repeat center center;
+}
+
+.partnerImg-1:hover {
+    background: url(../../images/client/partner-img-1.png) no-repeat center center;
+}
+
+.partnerImg-2 {
+    width: 135px;
+    height: 33px;
+    background: url(../../images/client/partner-img-2-gray.png) no-repeat center center;
+}
+
+.partnerImg-2:hover {
+    background: url(../../images/client/partner-img-2.png) no-repeat center center;
+}
+
+.partnerImg-3 {
+    width: 92px;
+    height: 41px;
+    background: url(../../images/client/partner-img-3-gray.png) no-repeat center center;
+}
+
+.partnerImg-3:hover {
+    background: url(../../images/client/partner-img-3.png) no-repeat center center;
+}
+
+.partnerImg-4 {
+    width: 103px;
+    height: 46px;
+    background: url(../../images/client/partner-img-4-gray.png) no-repeat center center;
+}
+
+.partnerImg-4:hover {
+    background: url(../../images/client/partner-img-4.png) no-repeat center center;
+}
+
+.partnerImg-5 {
+    width: 104px;
+    height: 33px;
+    background: url(../../images/client/partner-img-5-gray.png) no-repeat center center;
+}
+
+.partnerImg-5:hover {
+    background: url(../../images/client/partner-img-5.png) no-repeat center center;
+}
+
+.partnerImg-6 {
+    width: 58px;
+    height: 43px;
+    background: url(../../images/client/partner-img-6-gray.png) no-repeat center center;
+}
+
+.partnerImg-6:hover {
+    background: url(../../images/client/partner-img-6.png) no-repeat center center;
+}
+
+.partnerImg-7 {
+    width: 69px;
+    height: 44px;
+    background: url(../../images/client/partner-img-7-gray.png) no-repeat center center;
+}
+
+.partnerImg-7:hover {
+    background: url(../../images/client/partner-img-7.png) no-repeat center center;
+}
+
+.partnerImg-8 {
+    width: 103px;
+    height: 41px;
+    background: url(../../images/client/partner-img-8-gray.png) no-repeat center center;
+}
+
+.partnerImg-8:hover {
+    background: url(../../images/client/partner-img-8.png) no-repeat center center;
 }
 
 
