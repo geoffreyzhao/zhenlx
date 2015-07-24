@@ -131,6 +131,7 @@
     margin:0;
 }
 .traveler-box{
+    padding:0.5rem 0.3rem 0.5rem 0.8rem;
     border:1px #dcdcdc solid;
     margin-bottom: 0.5rem;
 }
@@ -147,32 +148,45 @@
 }
 .trl-name{
     font-size: 0.7rem;
+    line-height: 1rem;
     color:#666;
     margin:0.175rem 0;
-}.trl-name span{
+}
+.trl-name span{
     line-height:0.7rem;
      vertical-align: middle;
  }
 .u-img{
-    width:0.725rem;
+    width:0.825rem;
     height:0.7rem;
     padding-right:0.25rem;
     vertical-align: middle;
 }
+.u-en{
+    width:0.795rem;
+    height:0.35rem;
+    padding-right:0.25rem;
+    vertical-align: middle;
+}
 .u-phone{
-    width:0.725rem;
+    width:0.825rem;
     height:0.7rem;
     padding-right:0.25rem;
     vertical-align: middle;
 }
 .trl-edt{
-    display: inline-block;
+    vertical-align: middle;
     float: right;
-    padding-top:0.575rem;
+    padding-top:0.4rem;
+}
+.trl-edt01{
+    vertical-align: middle;
+    float: right;
+    padding-top:0.85rem;
 }
 .u-edt{
-    width:2.075rem;
-    height:1.175rem;
+    width:2.55rem;
+    height:1.65rem;
     padding:0 0.45rem;
 }
 .dlg-cnt{
@@ -412,6 +426,7 @@
 .edt-textEara{
     width:100%;
     min-height:4.9rem;
+    padding:0.4rem;
     border:1px #dcdcdc solid;
     -webkit-border-radius: 0.0125rem;
     -moz-border-radius: 0.0125rem;
