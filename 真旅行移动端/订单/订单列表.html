@@ -20,7 +20,7 @@
 	<title>订单列表</title>
 
 	<script type="text/javascript">
-	// 初始化scroll
+	/*IScroll下拉刷新开始*/
 	var myScroll;
 	var pullDownEl, pullDownL;
 	var pullUpEl, pullUpL;
@@ -128,6 +128,8 @@
 		});
 	}
 	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false); 
+	/*iscroll下拉刷新结束*/
+
 
 	// 设置页面根字大小
 	var root = document.getElementsByTagName("html")[0],
@@ -148,12 +150,12 @@
 				</span>
 				<div class="navlist">
 					<ul>
-						<li>首页</li>
-						<li>产品列表</li>
-						<li>我的订单</li>
-						<li>心愿清单</li>
-						<li>我的钱包</li>
-						<li>私信</li>
+						<li><a href="javascript:void(0);">首页</a></li>
+						<li><a href="javascript:void(0);">产品列表</a></li>
+						<li><a href="javascript:void(0);">我的订单</a></li>
+						<li><a href="javascript:void(0);">心愿清单</a></li>
+						<li><a href="javascript:void(0);">我的钱包</a></li>
+						<li><a href="javascript:void(0);">私信</a></li>
 					</ul>
 				</div>
 			</div>
@@ -266,9 +268,9 @@
 	$('.headerListbtn').click(function(event){
 		event.stopPropagation();
 		if($('.navlist').is(':visible')){
-			$('.navlist').hide();
+			$('.navlist').slideUp(200);
 		}else{
-			$('.navlist').show();
+			$('.navlist').slideDown(200);
 		}
 	})
 </script>
