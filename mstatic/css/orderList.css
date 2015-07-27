@@ -77,6 +77,7 @@
 	display:block;
 	font-size:0.5rem;
 	color:#fe0e2a;
+	text-align: right;
 }
 .travelPrice em{
 	font-size: 0.9rem;
@@ -85,12 +86,12 @@
 	width:3rem;
 	height:1.5rem;
 	line-height:1.5rem;
-	display:inline-block;
 	background:#ffa200;
 	border-radius:0.075rem;
 	font-size:0.75rem;
 	color:#fff!important;
 	text-align:center;
+	float:right;
 	margin-top:0.45rem;
 }
 .evaluate{
@@ -188,7 +189,7 @@
     -webkit-animation-timing-function: linear;
 }
 
-.-webkit-keyframes loading {
+@-webkit-keyframes loading {
     from { 
         -webkit-transform:rotate(0deg)translateZ(0);
     }
@@ -196,3 +197,4 @@
     to {
         -webkit-transform: rotate(360deg) translateZ(0);
     }
+}

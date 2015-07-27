@@ -1,0 +1,101 @@
+@charset "utf-8";
+.evaluateHeader{
+	height:4.95rem;
+	background:#fff;
+	border-bottom:1px solid #dcdcdc;
+	margin-bottom:0.55rem;
+	padding:0.6rem 0 0 0.4rem;
+}
+.evaluateImg{
+	width:5rem;
+	height:3.75rem;
+	margin-right:0.5rem;
+	float:left;
+}
+.evaluateImg img{
+	width:100%;
+}
+.evaluateTitle a{
+	font-size:0.75rem;
+	color:#333333;
+}
+.evaluateTitle a:active{
+	color:#3fc0ae;
+	text-decoration:underline;
+}
+.evaluateFrame{
+	height:11.75rem;
+	padding:0.65rem 0.45rem 0 0.45rem;
+	background: #fff;
+	border-top:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
+	margin-bottom:1.6rem;
+}
+.evaluateStars{
+	font-size:0.75rem;
+	color:#333333;
+	overflow:hidden;
+}
+.evalScore{
+	margin-right:1.95rem;
+}
+.evaluateStars i{
+	font-size:0.8rem;
+	color:#ffa200;
+}
+.evaluateStars em{
+	width:1.05rem;
+	height:1.05rem;
+	display:inline-block;
+	background:url(../images/evaluate-star.png) no-repeat;	
+	-webkit-background-size: cover;
+	background-size: cover;
+	margin-right:0.9rem;
+}
+.evaluateStars em.active{
+	background:url(../images/evaluate-star-active.png) no-repeat;	
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.evaluateStars em.nomargin{
+	margin-right:0;
+}
+.evaluateFrame textarea{
+	display:block;
+	width: 100%;
+	height:7.13rem;
+	margin-top:0.75rem;
+	margin-bottom:0.75rem;
+	padding:0.5rem 0.4rem;
+	border:1px solid #cdcdcd;
+	font-size:0.75rem;
+	font-family:"Microsoft Yahei";
+	font-weight:normal;
+	resize:none;
+	text-align:justify;
+}
+.evaluateFrame textarea:focus{
+	outline:none;
+	border-color:#3fc0ae
+}
+.wordNum{
+	color:#999999;
+	float:right;
+	font-size:0.6rem;
+}
+.wordNum i{
+	color:#3fc0ae;
+}
+.submitbtn{
+	width:15rem;
+	height:2rem;
+	line-height:2rem;
+	background: #3fc0ae;
+	text-align:center;
+	margin:2rem auto;
+	border-radius:0.1rem;
+}
+.submitbtn a{
+	font-size: 0.85rem;
+	color:#fff;
+}
