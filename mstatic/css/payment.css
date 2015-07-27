@@ -2,7 +2,7 @@
 
 /** 在线支付 -start **/
 .viewport{
-    max-width: 16rem;
+    /*max-width: 16rem;*/
     background-color:#f0f0f0;
 }
 .headerBar {
@@ -83,12 +83,16 @@
     text-align: center;
 }
 .prgbar-txt{
+    text-align: center;
     margin-top:0.6rem;
 }
 .prgtxt-box{
     padding-left:1.25rem;
     color:#3fc0ae;
     display: inline-block;
+}
+.prgtxt-box:first-child{
+    padding-left:0;
 }
 .prgtxt-box01{
     padding-left:1.25rem;
@@ -259,8 +263,12 @@ input[type="radio"]:checked + .pay-check{
 }
 .QRCode-box{
     margin-top:0.5rem;
-    margin-left:3.4rem;
     margin-bottom: 2.75rem;
+    text-align: center;
+}
+.QRCode-block{
+    display: inline-block;
+    text-align: left;
 }
 .QRCode-tip{
     font-size: 0.6rem;

@@ -2,7 +2,7 @@
 
 /** 公共样式 **/
 .viewport{
-    max-width: 16rem;
+    /*max-width: 16rem;*/
     min-height: 28rem;
     margin: 0 auto;
     background-color: #f0f0f0;

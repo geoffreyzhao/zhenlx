@@ -160,7 +160,7 @@
             </div>
             <div class="revise-row-box">
                 <div class="revise-til">出生日期</div>
-                <div class="revise-val">
+                <div class="revise-val" id="birthScrll">
                     <span class="rev-term">点击设置</span><span class="arr-lr"><label class="u-lr"></label></span>
                 </div>
             </div>
@@ -177,5 +177,15 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(function(){
+        FastClick.attach(document.body);
+
+        $("#birthScrll").click(function(){
+            $(".select-pop").popup("open");
+        });
+    });
+</script>
 </body>
 </html>
