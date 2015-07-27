@@ -268,11 +268,12 @@ div[data-role="page"] {
     -webkit-animation-timing-function: linear;
 }
 
-.-webkit-keyframes loading {
-from {
-    -webkit-transform:rotate(0deg)translateZ(0);
-}
-
-to {
-    -webkit-transform: rotate(360deg) translateZ(0);
+@-webkit-keyframes loading {
+    from {
+        -webkit-transform:rotate(0deg)translateZ(0);
+    }
+    
+    to {
+        -webkit-transform: rotate(360deg) translateZ(0);
+    }
 }
