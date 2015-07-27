@@ -103,7 +103,6 @@ input[type="checkbox"]:checked + .cus_checkbox {
 	left: 0;
 	right: 0;
 	height: 2.25rem;
-	line-height:2.25rem;	
 	text-align: center;
 	border-bottom:1px solid #3fc0ae;
 	background: #fff;
@@ -182,4 +181,20 @@ input[type="checkbox"]:checked + .cus_checkbox {
 	background:url(../images/header-listmodel.png) no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
+}
+.navlist{
+	width:5rem;
+	background:#eee;
+	text-align:left;
+	display:none;
+	position:absolute;
+	top:2.25rem;
+	right:0;
+}
+.navlist li{
+	height:1.5rem;
+	line-height:1.5rem;
+	font-size:0.6rem;
+	color:#3fc0ae;
+	padding-left:0.5rem;
 }

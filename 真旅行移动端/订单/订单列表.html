@@ -146,6 +146,16 @@
 				<span class="modleList">
 					<i class="headerAvator"></i><i class="headerListbtn"></i>
 				</span>
+				<div class="navlist">
+					<ul>
+						<li>首页</li>
+						<li>产品列表</li>
+						<li>我的订单</li>
+						<li>心愿清单</li>
+						<li>我的钱包</li>
+						<li>私信</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -242,25 +252,25 @@
 
 <script type="text/javascript">
 	$(function(){
-		
 		FastClick.attach(document.body);
-
 		setBodyMinHeight();
-
-		
-
-	
 	});
 
 	function setBodyMinHeight() {
 		var topValue = window.innerHeight - $(".headerBar").height() - $(".wrapper").height();
-
 		$(".cont-block .bottom-btn").css({
 			"margin-top": (topValue < 0 ? 0 : topValue) + "px"
 		});
 	}
 
-
+	$('.headerListbtn').click(function(event){
+		event.stopPropagation();
+		if($('.navlist').is(':visible')){
+			$('.navlist').hide();
+		}else{
+			$('.navlist').show();
+		}
+	})
 </script>
 </body>
 </html>
