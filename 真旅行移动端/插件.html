@@ -302,9 +302,29 @@
             }
         });
 
-        new IScroll('#year-wrapper', {});
-        new IScroll('#month-wrapper', {});
-        new IScroll('#day-wrapper', {});
+        var scroll_year = new IScroll('#year-wrapper', {});
+        var scroll_month = new IScroll('#month-wrapper', {});
+        var scroll_day = new IScroll('#day-wrapper', {});
+
+        var start_posY,
+        	end_posY,
+        	dist;
+
+        scroll_year.on("scrollStart", function(){
+        	start_posY = this.y;
+        });
+
+        scroll_year.on("scrollEnd", function(){
+        	end_posY = this.y;
+        	dist = Math.abs(end_posY - start_posY);
+        	if (dist % 22 != 0) { // 没有滚动到有效位置
+        		if (dist % 22 < 10) {  //  滚至前一个
+        			scroll_year.scrollBy(0, -dist % 22);
+        		} else if (dist % 22 >= 10) {  //  滚至后一个
+        			scroll_year.scrollBy(0, dist % 22);
+        		}
+        	}
+        });
 
 	});
 
