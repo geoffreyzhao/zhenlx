@@ -5,6 +5,8 @@
     <title>私信列表</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
@@ -13,17 +15,128 @@
 
 	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
-	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+	<!--<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>-->
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll-probe.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
     
 	<script type="text/javascript">
-	
-	// 设置页面根字大小
-	var root = document.getElementsByTagName("html")[0],
-		w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+        /*IScroll下拉刷新开始*/
+        var myScroll;
+        var pullDownEl, pullDownL;
+        var pullUpEl, pullUpL;
+        var Downcount = 0 ,Upcount = 0;
+        var loadingStep = 0;//加载状态0默认，1显示加载状态，2执行加载数据，只有当为0时才能再次加载，这是防止过快拉动刷新
+        function pullDownAction() {//下拉事件
+            setTimeout(function() {
+                var el, li, i;
+                el = $('#thelist');
+                for (i = 0; i < 3; i++) {
+                    li = $("<li></li>");
+                    Downcount++;
+                    li.text('new Add ' + Downcount + " ！");
+                    el.prepend(li);
+                    li.attr('class','privateLetterInfo');
+                }
+                pullDownEl.removeClass('loading');
+                pullDownL.html('下拉显示更多...');
+                pullDownEl['class'] = pullDownEl.attr('class');
+                pullDownEl.attr('class','').hide();
+                myScroll.refresh();
+                loadingStep = 0;
+            }, 1000); //1秒
+        }
+        function pullUpAction() {//上拉事件
+            setTimeout(function() {
+                var el, li, i;
+                el = $('#thelist');
+                for (i = 0; i < 3; i++) {
+                    li = $("<li></li>");
+                    Upcount++;
+                    li.text('new Add ' + Upcount + " ！");
+                    el.append(li);
+                    li.attr('class','privateLetterInfo');
+                }
+                pullUpEl.removeClass('loading');
+                pullUpL.html('上拉显示更多...');
+                pullUpEl['class'] = pullUpEl.attr('class');
+                pullUpEl.attr('class','').hide();
+                myScroll.refresh();
+                loadingStep = 0;
+            }, 1000);
+        }
 
-	root.style.fontSize = (w / 320) * 20 + "px";
-	root.style.minHeight = window.innerHeight + "px";
+        function loaded() {
+            pullDownEl = $('#pullDown');
+            pullDownL = pullDownEl.find('.pullDownLabel');
+            pullDownEl['class'] = pullDownEl.attr('class');
+            pullDownEl.attr('class','').hide();
+
+            pullUpEl = $('#pullUp');
+            pullUpL = pullUpEl.find('.pullUpLabel');
+            pullUpEl['class'] = pullUpEl.attr('class');
+            pullUpEl.attr('class','').hide();
+
+            myScroll = new IScroll('#wrapper', {
+                probeType: 2,//probeType：1对性能没有影响。在滚动事件被触发时，滚动轴是不是忙着做它的东西。probeType：2总执行滚动，除了势头，反弹过程中的事件。这类似于原生的onscroll事件。probeType：3发出的滚动事件与到的像素精度。注意，滚动被迫requestAnimationFrame（即：useTransition：假）。  
+                scrollbars: true,//有滚动条  
+                mouseWheel: true,//允许滑轮滚动  
+                fadeScrollbars: true,//滚动时显示滚动条，默认影藏，并且是淡出淡入效果  
+                bounce:true,//边界反弹  
+                interactiveScrollbars:true,//滚动条可以拖动  
+                shrinkScrollbars:'scale',// 当滚动边界之外的滚动条是由少量的收缩。'clip' or 'scale'.  
+                click: true ,// 允许点击事件  
+                keyBindings:true,//允许使用按键控制  
+                momentum:true// 允许有惯性滑动  
+            });
+            //滚动时
+            myScroll.on('scroll', function(){
+                if(loadingStep == 0 && !pullDownEl.attr('class').match('flip|loading') && !pullUpEl.attr('class').match('flip|loading')){
+                    if (this.y > 5) {
+                        //下拉刷新效果
+                        pullDownEl.attr('class',pullUpEl['class'])
+                        pullDownEl.show();
+                        myScroll.refresh();
+                        pullDownEl.addClass('flip');
+                        pullDownL.html('准备刷新...');
+                        loadingStep = 1;
+                    }else if (this.y < (this.maxScrollY - 5)){
+                        //上拉刷新效果
+                        pullUpEl.attr('class',pullUpEl['class'])
+                        pullUpEl.show();
+                        myScroll.refresh();
+                        pullUpEl.addClass('flip');
+                        pullUpL.html('准备刷新...');
+                        loadingStep = 1;
+                    }
+                }
+            })
+            //滚动完毕
+            myScroll.on('scrollEnd',function(){
+                if(loadingStep == 1){
+                    if (pullUpEl.attr('class').match('flip|loading')){
+                        pullUpEl.removeClass('flip').addClass('loading');
+                        pullUpL.html('Loading...');
+                        loadingStep = 2;
+                        pullUpAction();
+                    }else if(pullDownEl.attr('class').match('flip|loading')){
+                        pullDownEl.removeClass('flip').addClass('loading');
+                        pullDownL.html('Loading...');
+                        loadingStep = 2;
+                        pullDownAction();
+                    }
+                }
+            });
+        }
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        /*iscroll下拉刷新结束*/
+
+
+        // 设置页面根字大小
+        var root = document.getElementsByTagName("html")[0],
+            w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+    
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
 	</script>
 </head>
 <body  onload="loaded()">
@@ -40,15 +153,15 @@
 		<div class="wrapper">
 			<div id="wrapper">
 				<div id="scroller">
-					<!--<div id="pullDown">
+					<div id="pullDown">
 						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
-					</div>-->
+					</div>
                     <div class="privateLetterTitle">
                         <span class="titleFonts">私信</span>
                         <span class="numberFonts">(1)</span>
                     </div>
-                    <ul class="listContent">
-                        <li class="current">
+                    <ul class="listContent" id="thelist">
+                        <li class="privateLetterInfo current">
                             <div class="leftPhoto">
                                 <img src="../../mstatic/images/privatePhoto01.png">
                             </div>
@@ -62,7 +175,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="privateLetterInfo">
                             <div class="leftPhoto">
                                 <img src="../../mstatic/images/privatePhoto02.png">
                             </div>
@@ -76,7 +189,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="privateLetterInfo">
                             <div class="leftPhoto">
                                 <img src="../../mstatic/images/privatePhoto01.png">
                             </div>
@@ -90,7 +203,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="privateLetterInfo">
                             <div class="leftPhoto">
                                 <img src="../../mstatic/images/privatePhoto02.png">
                             </div>
@@ -104,7 +217,49 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="privateLetterInfo">
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto02.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">助手小智</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div class="secondEllipsis">
+                                    <p>您的订单上海-巴黎年轻人的一次高逼格欧您的订单上海-巴黎年轻人的一次高逼高逼格欧的一次高逼高逼格欧</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="privateLetterInfo">
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto02.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">助手小智</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div class="secondEllipsis">
+                                    <p>您的订单上海-巴黎年轻人的一次高逼格欧您的订单上海-巴黎年轻人的一次高逼高逼格欧的一次高逼高逼格欧</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="privateLetterInfo">
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto02.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">助手小智</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div class="secondEllipsis">
+                                    <p>您的订单上海-巴黎年轻人的一次高逼格欧您的订单上海-巴黎年轻人的一次高逼高逼格欧的一次高逼高逼格欧</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="privateLetterInfo">
                             <div class="leftPhoto">
                                 <img src="../../mstatic/images/privatePhoto02.png">
                             </div>
@@ -119,9 +274,9 @@
                             </div>
                         </li>
                     </ul>
-					<!--<div id="pullUp">
+					<div id="pullUp">
 						<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
-					</div>-->
+					</div>
 				</div>	
 			</div>
 		</div>
@@ -130,8 +285,7 @@
 <script type="text/javascript">
 	$(function(){
 		
-		FastClick.attach(document.body);
-        
+		FastClick.attach(document.body);        
 		setBodyMinHeight();
 
         $(".rightDetails .secondEllipsis").each(function(){
