@@ -409,3 +409,17 @@
     z-index:8;
     display: block;
 }
+
+.privletter-empty-block {
+    text-align: center;
+    color: #c6c6c6;
+    font-size: 16px;
+}
+
+.letter-empty-img {
+    width: 66px;
+    height: 76px;
+    background: url(../../images/client/letter-empty.png) no-repeat;
+    display: inline-block;
+    margin-bottom: 20px;
+}

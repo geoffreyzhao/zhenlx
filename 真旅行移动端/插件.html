@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/register-login.css">
+	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+	<!-- <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll-infinite.js"></script> -->
+	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+	<title>插件</title>
+
+	<script type="text/javascript">
+		var root = document.getElementsByTagName("html")[0],
+			w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+		root.style.fontSize = (w / 320) * 20 + "px";
+		root.style.minHeight = window.innerHeight + "px";
+	</script>
+
+	<style type="text/css">
+		.ui-popup-container.slideup {
+			position: fixed!important;
+			bottom: 0!important;
+			top: initial!important;
+			width: 100%;
+			max-width: none!important;
+		}
+
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		html {
+			-ms-touch-action: none;
+		}
+
+		body,ul,li {
+			padding: 0;
+			margin: 0;
+			border: 0;
+		}
+
+		body {
+			font-size: 12px;
+			font-family: ubuntu, helvetica, arial;
+			overflow: hidden; /* this is important to prevent the whole page to bounce */
+		}
+
+		#wrapper1,
+		#wrapper2,
+		#wrapper3 {
+			position: absolute;
+			z-index: 2000;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		#scroller {
+			position: absolute;
+			z-index: 2000;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			width: 100%;
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			transform: translateZ(0);
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			-webkit-text-size-adjust: none;
+			-moz-text-size-adjust: none;
+			-ms-text-size-adjust: none;
+			-o-text-size-adjust: none;
+			text-size-adjust: none;
+		}
+
+		#scroller ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			text-align: left;
+		}
+
+		#scroller li {
+			padding: 0 10px;
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #ccc;
+			border-top: 1px solid #fff;
+			background-color: #fafafa;
+			font-size: 14px;
+		}
+
+		.height-1 {
+			height: 120px;
+		}
+
+		.height-2,
+		.height-3 {
+			top: 50px;
+		}
+		.pop-select-title {
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+		#popup-travel {
+			height: 330px;
+		}
+
+		#popup-travel-normal {
+			height: 330px;
+			overflow: auto;
+			z-index: 2;
+		    position: absolute;
+		    bottom: 0;
+		    width: 100%;
+		}
+
+		#popup-travel-normal li {
+			height: 2rem;
+			line-height: 2rem;
+			background-color: #f0f0f0;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page">
+		<a href="#popupBasic" data-rel="popup">证件类型</a>
+ 
+		<div data-role="popup" id="popupBasic" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false">
+			<div id="wrapper1" class="height-1">
+				<div id="scroller">
+			  		<ul class="pop-ul-list">
+			  			<li>身份证</li>
+			  			<li>护照</li>
+			  			<li>港澳通行证</li>
+			  		</ul>
+			  	</div>
+			</div>
+		</div>
+
+		<a href="#popup-travel" data-rel="popup">常旅客</a>
+ 
+		<div data-role="popup" id="popup-travel" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false">
+			<div class="pop-select-title">请选择</div>
+			<div id="wrapper2" class="height-2">
+				<div id="scroller">
+			  		<ul class="pop-ul-list">
+			  			<li class="row">张三1</li>
+			  			<li class="row">张三2</li>
+			  			<li class="row">张三3</li>
+			  			<li class="row">张三4</li>
+			  			<li class="row">张三5</li>
+			  			<li class="row">张三6</li>
+			  			<li class="row">张三7</li>
+			  			<li class="row">张三8</li>
+			  			<li class="row">张三9</li>
+			  			<li class="row">张三10</li>
+			  		</ul>
+				</div>
+			</div>
+		</div>
+		
+		<style type="text/css">
+			.datepicker-scroll {
+				width: 100%;
+				background-color: #f0f0f0;
+				position: relative;
+			}
+			.datepicker-scroll li {
+				height: 22px;
+				line-height: 22px;
+			}
+			.selected-date-bar {
+				position: absolute;
+				top: 44px;
+				border-top: 1px solid red;
+				border-bottom: 1px solid red;
+				background-color: transparent;
+				width: 100%;
+				height: 22px;
+			}
+			.date-wrapper {
+				display: inline-block;
+				text-align: center;
+				font-size: 18px;
+				width: 33%;
+				height: 110px;
+				overflow: hidden;
+			}
+		</style>
+
+		<div class="datepicker-scroll">
+			<div class="selected-date-bar"></div>
+			<div id="year-wrapper" class="date-wrapper">
+				<div id="year-scroller">
+					<ul>
+					    <li>1999年</li>
+					    <li>2000年</li>
+					    <li>2001年</li>
+					    <li>2002年</li>
+					    <li>2003年</li>
+					    <li>2004年</li>
+					    <li>2005年</li>
+					    <li>2006年</li>
+					    <li>2007年</li>
+					    <li>2008年</li>
+					    <li>2009年</li>
+					    <li>2010年</li>
+					    <li>2011年</li>
+					    <li>2012年</li>
+					    <li>2013年</li>
+					</ul>
+				</div>
+			</div>
+			<div id="month-wrapper" class="date-wrapper">
+				<div id="month-scroller">
+					<ul>
+					    <li>1月</li>
+					    <li>2月</li>
+					    <li>3月</li>
+					    <li>4月</li>
+					    <li>5月</li>
+					    <li>6月</li>
+					    <li>7月</li>
+					    <li>8月</li>
+					    <li>9月</li>
+					    <li>10月</li>
+					    <li>11月</li>
+					    <li>12月</li>
+					</ul>
+				</div>
+			</div>
+			<div id="day-wrapper" class="date-wrapper">
+				<div id="day-scroller">
+					<ul>
+			    <li>1日</li>
+			    <li>2日</li>
+			    <li>3日</li>
+			    <li>4日</li>
+			    <li>5日</li>
+			    <li>6日</li>
+			    <li>7日</li>
+			    <li>8日</li>
+			    <li>9日</li>
+			    <li>10日</li>
+			    <li>11日</li>
+			    <li>12日</li>
+			    <li>13日</li>
+			    <li>14日</li>
+			    <li>15日</li>
+			    <li>16日</li>
+			    <li>17日</li>
+			    <li>18日</li>
+			    <li>19日</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
+
+<script type="text/javascript">
+	$(function(){
+		
+		FastClick.attach(document.body);
+
+		var myScroll = new IScroll('#wrapper1', {});
+
+		var myScroll = new IScroll('#wrapper2', {});
+
+		$("div[data-role='popup']").popup({
+            afteropen: function(){
+                $(".ui-popup-screen").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
+                    return false;
+                });
+
+                $(".pop-select-title").bind("touchmove", function(){
+                    return false;
+                });
+            }
+        });
+
+        new IScroll('#year-wrapper', {});
+        new IScroll('#month-wrapper', {});
+        new IScroll('#day-wrapper', {});
+
+	});
+
+</script>
+</body>
+</html>
