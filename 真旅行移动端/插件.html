@@ -219,6 +219,8 @@
 			<div id="year-wrapper" class="date-wrapper">
 				<div id="year-scroller">
 					<ul>
+						<li></li>
+						<li></li>
 						<li>1979年</li>
 						<li>1980年</li>
 						<li>1981年</li>
@@ -256,12 +258,16 @@
 					    <li>2013年</li>
 					    <li>2014年</li>
 					    <li>2015年</li>
+					    <li></li>
+					    <li></li>
 					</ul>
 				</div>
 			</div>
 			<div id="month-wrapper" class="date-wrapper">
 				<div id="month-scroller">
 					<ul>
+						<li></li>
+						<li></li>
 					    <li>1月</li>
 					    <li>2月</li>
 					    <li>3月</li>
@@ -274,12 +280,16 @@
 					    <li>10月</li>
 					    <li>11月</li>
 					    <li>12月</li>
+					    <li></li>
+					    <li></li>
 					</ul>
 				</div>
 			</div>
 			<div id="day-wrapper" class="date-wrapper">
 				<div id="day-scroller">
 					<ul>
+						<li></li>
+						<li></li>
 					    <li>1日</li>
 					    <li>2日</li>
 					    <li>3日</li>
@@ -310,6 +320,8 @@
 					    <li>28日</li>
 					    <li>29日</li>
 					    <li>30日</li>
+					    <li></li>
+					    <li></li>
 					</ul>
 				</div>
 			</div>
@@ -406,8 +418,6 @@
 		if (Math.round(scroll_num) == scroll_num) {
 			$("#year-scroller li").removeClass("current");
 			$("#year-scroller li").eq(scroll_num+2).addClass("current");
-			$("#year-scroller li").eq(scroll_num).addClass("current");
-			$("#year-scroller li").eq(scroll_num+4).addClass("current");
 		}
 	}
 
