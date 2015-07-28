@@ -148,8 +148,7 @@
 <script type="text/javascript">
 	$(function(){
 		
-		FastClick.attach(document.body);        
-		setBodyMinHeight();
+		FastClick.attach(document.body);
 
         $(".rightDetails .secondEllipsis").each(function(){
             var divH = $(this).height();
@@ -187,14 +186,6 @@
         });
         
 	});
-
-	function setBodyMinHeight() {
-		var topValue = window.innerHeight - $(".headerBar").height() - $(".wrapper").height();
-
-		$(".cont-block .bottom-btn").css({
-			"margin-top": (topValue < 0 ? 0 : topValue) + "px"
-		});
-	}
 
 
 </script>
