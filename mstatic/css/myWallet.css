@@ -1,0 +1,210 @@
+@charset "utf-8";
+.myWalletTab{
+	padding: 0.6rem 0.5rem;
+	background: #fff;
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 0;
+	height:6rem;
+	margin:0.5rem 0;
+}
+.myWalletTab .tab span {
+	display: inline-block;
+	width: 50%;
+	height: 1.75rem;
+	line-height: 1.75rem;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #3fc0ae;
+}
+.myWalletTab .tab{
+	margin-bottom:1.2rem;
+}
+.myWalletTab .accountBtn {
+	border-top: 1px solid #3fc0ae;
+	border-bottom: 1px solid #3fc0ae;
+	border-left: 1px solid #3fc0ae;
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+}
+.myWalletTab .cashCouponBtn {
+	border-top: 1px solid #3fc0ae;
+	border-bottom: 1px solid #3fc0ae;
+	border-right: 1px solid #3fc0ae;
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+}
+.myWalletTab .cashCouponBtn.current,
+.myWalletTab .accountBtn.current{
+	background: #3fc0ae;
+	color:#fff;
+}
+.account{
+	font-size:1.3rem;
+	color:#f98a31;
+	margin-left:1.75rem;
+}
+.accountCon{
+	background:#fff;
+}
+.accountList{
+	background-color: #fff;
+}
+.makeMoney{
+	height:2.3rem;
+	border-bottom:1px solid #dcdcdc;
+	font-size:0.8rem;
+	color:#333!important;
+	padding:1rem 0.5rem 0;
+}
+.HelpMakeMoney{
+	float:left;
+}
+.aboutMakeMoney{
+	background:url(../images/aboutMakeMoney.png) left center no-repeat;
+	background-size:0.75rem 0.75rem;
+	float:right;
+	padding-left:1rem;
+	color:#3fc0ae!important;
+}
+.accountinfo{
+	height:2.6rem;
+	border-bottom:1px solid #dcdcdc;
+	margin:0 0.45rem;
+	padding-top:0.5rem;
+}
+.accountUser{
+	float:left;
+}
+.accountBlance{
+	float: right;
+	text-align: right;
+}
+.username{
+	width:10rem;
+	font-size:0.75rem;
+	color:#666;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display:block;
+	margin-bottom:0.35rem;
+}
+.isRegister,.istreaveled{
+	font-size: 0.65rem;
+	color:#999;
+}
+.accountNum{
+	display:block;
+	font-size:0.4rem;
+	color:#fb7902;
+	margin-bottom:0.35rem;
+}
+.accountNum em{
+	font-size:0.75rem;
+}
+.isGiveOut,.willGiveOut{
+	font-size:0.65rem;
+	color:#11b9b7;
+}
+.gray{
+	color:#999999;
+}
+
+
+
+
+
+#wrapper{
+    position: absolute;
+    z-index:1;
+    top:11.6rem;
+    bottom:0;
+    left:0;
+    width: 100%;
+    overflow: hidden;
+}
+#scroller{
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+#scroller ul{
+    list-style: none;
+    padding: 0;
+    margin:0;
+    width: 100%;
+    font-size:0.6rem;
+    color:#1cafad;
+}
+#pullDown,#pullUp {
+    height:1.65rem;
+    line-height: 1.65rem;
+    font-size:0.6rem;
+    color: #1cafad;
+    overflow:hidden;
+    text-align:center;
+}
+
+/* #pullDown .pullDownIcon,#pullUp .pullUpIcon {
+    display: block;
+    float: left;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: green;
+    -webkit-background-size: 40px 80px;
+    background-size: 40px 80px;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 250ms;
+} */
+
+/* #pullDown .pullDownIcon {
+    -webkit-transform: rotate(0deg) translateZ(0);
+}
+
+#pullUp .pullUpIcon {
+    -webkit-transform: rotate(-180deg) translateZ(0);
+}
+ */
+#pullDown.flip .pullDownIcon {
+    -webkit-transform: rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+    -webkit-transform: rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon,#pullUp.loading .pullUpIcon {
+    background-position: 0 100%;
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -webkit-transition-duration: 0ms;
+    -webkit-animation-name: loading;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+    from { 
+        -webkit-transform:rotate(0deg)translateZ(0);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg) translateZ(0);
+    }
+}

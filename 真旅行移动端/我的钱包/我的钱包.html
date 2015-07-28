@@ -9,14 +9,14 @@
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../mstatic/css/orderList.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/myWallet.css">
 
 	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
 	<!-- <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script> -->
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll-probe.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
-	<title>订单列表</title>
+	<title>我的钱包</title>
 
 	<script type="text/javascript">
 	/*IScroll下拉刷新开始*/
@@ -34,7 +34,7 @@
 				Downcount++;
 				li.text('new Add ' + Downcount + " ！");
 				el.prepend(li);
-				li.attr('class','orderinfo');
+				li.attr('class','accountinfo');
 			}
 			pullDownEl.removeClass('loading');
 			pullDownL.html('下拉显示更多...');
@@ -53,7 +53,7 @@
 				Upcount++;
 				li.text('new Add ' + Upcount + " ！");
 				el.append(li);
-				li.attr('class','orderinfo');
+				li.attr('class','accountinfo');
 			}
 			pullUpEl.removeClass('loading');
 			pullUpL.html('上拉显示更多...');
@@ -101,7 +101,8 @@
 				}else if (this.y < (this.maxScrollY - 5)){
 					//上拉刷新效果
 					pullUpEl.attr('class',pullUpEl['class'])
-					pullUpEl.show();
+					pullUpEl.show
+					();
 					myScroll.refresh();
 					pullUpEl.addClass('flip');
 					pullUpL.html('准备刷新...');
@@ -142,8 +143,8 @@
 	<div data-role="page">
 		<div class="headerBar">
 			<div class="header">
-				<span class="logo"></span>
-				<!-- <span class="til"></span> -->
+				<!-- <span class="logo"></span>
+				<span class="til"></span>
 				<span class="modleList">
 					<i class="headerAvator"></i><i class="headerListbtn"></i>
 				</span>
@@ -156,97 +157,80 @@
 						<li><a href="javascript:void(0);">我的钱包</a></li>
 						<li><a href="javascript:void(0);">私信</a></li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="wrapper">
-			<div class="orderNumber">
-				<span class="orderSum"><em>4</em>个订单</span>
-				<span class="orderNumberDetail">（待支付<em>1</em>待评价<em>1</em>)</span>
+			<div class="myWalletTab">
+				<div class="tab">
+					<span class="accountBtn current">账户余额</span><span class="cashCouponBtn">代金券</span>
+				</div>
+				<div class="account">￥<em>47780.00</em></div>	
 			</div>
-			<div class="orderList" id="wrapper">
-				<div id="scroller">
-					<div id="pullDown">
-						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
-					</div>
-					<ul id="thelist">
-						<li class="orderinfo">
-							<div class="orderHeader">
-								<span class="orderNum">订单号:<em>0225151515566</em></span>
-								<span class="orderDate">2015-05-20</span>
-							</div>
-							<div class="orderDetail">
-								<div class="travelInfo">
-									<span class="travelTitle">广州至首尔4晚5天深度游</span>
-									<span class="travelDate"><em>2015年07月24日</em>出发</span>
+			<div class="accountCon">
+				<div class="makeMoney"  data-role="none">
+					<a href="javascrip:void(0);" class="HelpMakeMoney" data-role="none">好友帮赚钱</a><a href="javascript:void(0);" class="aboutMakeMoney" data-role="none">关于赚钱</a>
+				</div>
+				<div class="accountList" id="wrapper">	
+					<div id="scroller">
+						<div id="pullDown">
+							<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+						</div>
+						<ul id="thelist">
+							<li class="accountinfo">
+								<div class="accountUser">
+									<span class="username">太平洋的鲸鱼</span>
+									<span class="isRegister">已注册</span>
+									<!-- <span class="istreaveled">已出游</span> -->
 								</div>
-								<div class="payInfo">
-									<span class="travelPrice">￥<em>99999</em></span>
-									<a href="javascript:void();" class="pay" data-role="none">去支付</a>
-									<!-- <a href="javascript:void();" class="evaluate" data-role="none">去评价</a>
-									<a href="javascript:void();" class="completed" data-role="none">已完成</a> -->
+								<div class="accountBlance">
+									<span class="accountNum">￥<em>100</em></span>
+									<span class="isGiveOut">已发放</span>
+									<!-- <span class="willGiveOut">预备发放</span> -->
 								</div>
-							</div>
-						</li>
-						<li class="orderinfo">
-							<div class="orderHeader">
-								<span class="orderNum">订单号:<em>0225151515566</em></span>
-								<span class="orderDate">2015-05-20</span>
-							</div>
-							<div class="orderDetail">
-								<div class="travelInfo">
-									<span class="travelTitle">jgfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</span>
-									<span class="travelDate"><em>2015年07月24日</em>出发</span>
+							</li>
+							<li class="accountinfo">
+								<div class="accountUser">
+									<span class="username">太平洋的鲸鱼</span>
+									<span class="isRegister">已注册</span>
+									<!-- <span class="istreaveled">已出游</span> -->
 								</div>
-								<div class="payInfo">
-									<span class="travelPrice">￥<em>10367</em></span>
-									<!-- <a href="javascript:void();" class="pay" data-role="none">去支付</a> -->
-									<a href="javascript:void();" class="evaluate" data-role="none">去评价</a>
-									<!-- <a href="javascript:void();" class="completed" data-role="none">已完成</a> -->
+								<div class="accountBlance">
+									<span class="accountNum">￥<em>100</em></span>
+									<!-- <span class="isGiveOut">已发放</span> -->
+									<span class="willGiveOut">预备发放</span>
 								</div>
-							</div>
-						</li>
-						<li class="orderinfo">
-							<div class="orderHeader">
-								<span class="orderNum">订单号:<em>0225151515566</em></span>
-								<span class="orderDate">2015-05-20</span>
-							</div>
-							<div class="orderDetail">
-								<div class="travelInfo">
-									<span class="travelTitle">广州至首尔4ytrtehtyjytttttttttttttttttttttt晚5天深度游</span>
-									<span class="travelDate"><em>2015年07月24日</em>出发</span>
+							</li>
+							<li class="accountinfo">
+								<div class="accountUser">
+									<span class="username">太平洋的鲸鱼</span>
+									<!-- <span class="isRegister">已注册</span> -->
+									<span class="istreaveled">已出游</span>
 								</div>
-								<div class="payInfo">
-									<span class="travelPrice">￥<em>10367</em></span>
-									<!-- <a href="javascript:void();" class="pay" data-role="none">去支付</a> -->
-									<!-- <a href="javascript:void();" class="evaluate" data-role="none">去评价</a> -->
-									<a href="javascript:void();" class="completed" data-role="none">已完成</a>
+								<div class="accountBlance">
+									<span class="accountNum">￥<em>100</em></span>
+									<span class="isGiveOut gray">已发放</span>
+									<!-- <span class="willGiveOut gray">预备发放</span> -->
 								</div>
-							</div>
-						</li>
-						<li class="orderinfo">
-							<div class="orderHeader">
-								<span class="orderNum">订单号:<em>0225151515566</em></span>
-								<span class="orderDate">2015-05-20</span>
-							</div>
-							<div class="orderDetail">
-								<div class="travelInfo">
-									<span class="travelTitle">广州至首尔4晚5天深度游</span>
-									<span class="travelDate"><em>2015年07月24日</em>出发</span>
+							</li>
+							<li class="accountinfo">
+								<div class="accountUser">
+									<span class="username">太平洋的鲸鱼</span>
+									<!-- <span class="isRegister">已注册</span> -->
+									<span class="istreaveled">已出游</span>
 								</div>
-								<div class="payInfo">
-									<span class="travelPrice">￥<em>111</em></span>
-									<a href="javascript:void();" class="pay" data-role="none">去支付</a>
-									<!-- <a href="javascript:void();" class="evaluate" data-role="none">去评价</a>
-									<a href="javascript:void();" class="completed" data-role="none">已完成</a> -->
+								<div class="accountBlance">
+									<span class="accountNum">￥<em>100</em></span>
+									<!-- <span class="isGiveOut">已发放</span> -->
+									<span class="willGiveOut gray">预备发放</span>
 								</div>
-							</div>
-						</li>
-					</ul>
-					<div id="pullUp">
-						<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
-					</div>
-				</div>	
+							</li>
+						</ul>
+						<div id="pullUp">
+							<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+						</div>
+					</div>	
+				</div>
 			</div>
 		</div>
 	</div>
@@ -263,7 +247,25 @@
 		}else{
 			$('.navlist').slideDown(200);
 		}
-	})
+	});
+
+	$(".accountBtn").click(function(){
+			$(this).addClass("current").siblings("span").removeClass("current");
+			/*$('.registerFrame').show();
+			$('.loginFrame').hide();
+			$(".cont-block .bottom-btn").css({
+				"margin-top": 0
+			});*/
+		});
+
+	$(".cashCouponBtn").click(function(){
+		$(this).addClass("current").siblings("span").removeClass("current");
+		/*$('.registerFrame').hide();
+		$('.loginFrame').show();
+		$(".cont-block .bottom-btn").css({
+			"margin-top": 0
+		});*/
+	});
 </script>
 </body>
 </html>

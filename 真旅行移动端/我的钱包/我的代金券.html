@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/myWallet.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/myCoupon.css">
+
+	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+	<!-- <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script> -->
+	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll-probe.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+	<title>我的代金券</title>
+
+	<script type="text/javascript">
+		// 设置页面根字大小
+		var root = document.getElementsByTagName("html")[0],
+			w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+		root.style.fontSize = (w / 320) * 20 + "px";
+		root.style.minHeight = window.innerHeight + "px";
+	</script>
+</head>
+<body>
+	<div data-role="page">
+		<div class="headerBar">
+			<div class="header">
+				<!-- <span class="logo"></span>
+				<span class="til"></span>
+				<span class="modleList">
+					<i class="headerAvator"></i><i class="headerListbtn"></i>
+				</span>
+				<div class="navlist">
+					<ul>
+						<li><a href="javascript:void(0);">首页</a></li>
+						<li><a href="javascript:void(0);">产品列表</a></li>
+						<li><a href="javascript:void(0);">我的订单</a></li>
+						<li><a href="javascript:void(0);">心愿清单</a></li>
+						<li><a href="javascript:void(0);">我的钱包</a></li>
+						<li><a href="javascript:void(0);">私信</a></li>
+					</ul>
+				</div> -->
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="myWalletTab">
+				<div class="tab">
+					<span class="accountBtn">账户余额</span><span class="cashCouponBtn current">代金券</span>
+				</div>
+				<ul class="voucher-switch clearfix">
+					<li class="nopadding current">未使用(<em>2</em>)</li>
+					<li>已使用(<em>2</em>)</li>
+					<li class="noborder">已过期(<em>2</em>)</li>
+				</ul>	
+			</div>
+			<div class="voucherCon">
+				<div class="voucherContainer">	
+					<div class="voucherList unused">
+						<div class="voucherItem voucher-bg-0">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">夏至节·盛夏清凉</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满1000元减</div>
+								<div class="validity">2015.6.1 - 2015.6.6</div>
+								<div class="applicability">适用范围：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+								<span class="price"><span class="price-number">10</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="#alert-dialog" data-rel="popup" data-transition="pop" data-position-to="window">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<!-- 偶数个没有右侧外边距值 -->
+						<div class="voucherItem voucher-bg-1" style="margin-right: 0;">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">最游惠</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满2000元减</div>
+								<div class="validity">2015.6.1 - 2015.6.6</div>
+								<div class="applicability">适用范围：东南亚产品</div>
+								<span class="price"><span class="price-number">20</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<div class="voucherItem voucher-bg-2">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">任意券任意券任意券任意券任意券任意券任意券任意券任意券</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满3000元减</div>
+								<div class="validity">2015.11.11 - 2015.12.12</div>
+								<div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+								<span class="price"><span class="price-number">50</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<div class="voucherItem voucher-bg-3" style="margin-right: 0;">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">蜜月甜蜜之旅</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满4000元减</div>
+								<div class="validity">2015.1.1 - 2015.1.31</div>
+								<div class="applicability">适用范围：蜜月产品</div>
+								<span class="price"><span class="price-number">9999</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<!--点击分享按钮弹窗-->
+						<div class="ui-content" data-role="popup" id="alert-dialog" data-overlay-theme="b">
+							<span class="dlg-title">分享代金券</span>
+							<div class="dlg-cont">
+								<input type="text" placeholder="请输入对方手机号或邮箱" data-role="none">
+							</div>
+							<div class="dlg-foot">
+								<a class="btn-com btn-share" data-role="none" href="javascript:void(0);" data-rel="back">分 享</a>
+								<a class="btn-com btn-cancel" data-role="none" href="javascript:void(0);" data-rel="back">取 消</a>
+							</div>
+						</div>
+					</div>
+					<div class="voucherList used">
+						<div class="voucherItem voucher-bg-0">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">夏至节·盛夏清凉</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满1000元减</div>
+								<div class="validity">2015.6.1 - 2015.6.6</div>
+								<div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+								<span class="price"><span class="price-number">10</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<!-- 偶数个没有右侧外边距值 -->
+						<div class="voucherItem voucher-bg-1" style="margin-right: 0;">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">最游惠</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满2000元减</div>
+								<div class="validity">2015.6.1 - 2015.6.6</div>
+								<div class="applicability">适用范围：东南亚产品</div>
+								<span class="price"><span class="price-number">20</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<div class="voucherItem voucher-bg-2">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">任意券任意券任意券任意券任意券任意券任意券任意券任意券</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满3000元减</div>
+								<div class="validity">2015.11.11 - 2015.12.12</div>
+								<div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+								<span class="price"><span class="price-number">50</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<div class="voucherItem voucher-bg-3" style="margin-right: 0;">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">蜜月甜蜜之旅</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满4000元减</div>
+								<div class="validity">2015.1.1 - 2015.1.31</div>
+								<div class="applicability">适用范围：蜜月产品</div>
+								<span class="price"><span class="price-number">9999</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+					</div>
+					<div class="voucherList expired">
+						<div class="voucherItem voucher-bg-0">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">夏至节·盛夏清凉</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满1000元减</div>
+								<div class="validity">2015.6.1 - 2015.6.6</div>
+								<div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+								<span class="price"><span class="price-number">10</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<!-- 偶数个没有右侧外边距值 -->
+						<div class="voucherItem voucher-bg-1" style="margin-right: 0;">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">最游惠</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满2000元减</div>
+								<div class="validity">2015.6.1 - 2015.6.6</div>
+								<div class="applicability">适用范围：东南亚产品</div>
+								<span class="price"><span class="price-number">20</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<div class="voucherItem voucher-bg-2">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">任意券任意券任意券任意券任意券任意券任意券任意券任意券</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满3000元减</div>
+								<div class="validity">2015.11.11 - 2015.12.12</div>
+								<div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+								<span class="price"><span class="price-number">50</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+						<div class="voucherItem voucher-bg-3" style="margin-right: 0;">
+							<div class="flag"></div>
+							<div class="rightBorder"></div>
+							<div class="top">
+								<span class="title">蜜月甜蜜之旅</span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="middle">
+								<div class="privilege">满4000元减</div>
+								<div class="validity">2015.1.1 - 2015.1.31</div>
+								<div class="applicability">适用范围：蜜月产品</div>
+								<span class="price"><span class="price-number">9999</span><em>元</em></span>
+							</div>
+							<div class="horizontal-white-split-line"></div>
+							<div class="bottom">
+								<a href="javascript:;">分享代金券</a>
+								<!-- <a href="javascript:;">分享轨迹</a> -->
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	$(function(){
+		FastClick.attach(document.body);
+
+		$('.headerListbtn').click(function(event){
+			event.stopPropagation();
+			if($('.navlist').is(':visible')){
+				$('.navlist').slideUp(200);
+			}else{
+				$('.navlist').slideDown(200);
+			}
+		});
+
+		$(".accountBtn").click(function(){
+				$(this).addClass("current").siblings("span").removeClass("current");
+				/*$('.registerFrame').show();
+				$('.loginFrame').hide();
+				$(".cont-block .bottom-btn").css({
+					"margin-top": 0
+				});*/
+		});
+
+		$(".cashCouponBtn").click(function(){
+			$(this).addClass("current").siblings("span").removeClass("current");
+			/*$('.registerFrame').hide();
+			$('.loginFrame').show();
+			$(".cont-block .bottom-btn").css({
+				"margin-top": 0
+			});*/
+		});
+
+		$(".voucher-switch li").click(function(){
+			$(this).addClass("current").siblings().removeClass("current");
+			$(".voucherList").hide();
+			$(".voucherList").eq($(this).index()).show();
+		});
+
+
+	});
+</script>
+</body>
+</html>
