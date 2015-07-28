@@ -246,12 +246,14 @@
 .bannerBottomHint .hintContent{
     float: left;
     width: 195px;
+    margin-top: -5px;
 }
 
 .bannerBottomHint .hintContent .title {
     font-size: 22px;
     color: #fff;
     margin: 0;
+    margin-bottom: 8px;
 }
 
 .bannerBottomHint .hintContent .cont {
@@ -262,6 +264,7 @@
     margin: 0;
     height: 42px;
     overflow: hidden;
+    line-height: 19px;
 }
 
 .mainContent{
