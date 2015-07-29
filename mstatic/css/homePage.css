@@ -158,7 +158,302 @@
 .nav-content .navWrap-box{
     margin-left:1.35rem;
 }
+.navWrap-box > li{
+    position: relative;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
 .navWrap-til{
+    padding:0.5rem 0;
     color:#3fc0ae;
+    vertical-align: middle;
+}
+.wuge-img{
+    width:13.55rem;
+    height:7.6rem;
+    display: block;
+}
+.icon-dest{
+    width:0.75rem;
+    height:0.85rem;
+    position: absolute;
+    display: inline-block;
+    top:0.65rem;
+    left: -1.3rem;
+    vertical-align: middle;
+    background: url("../../mstatic/images/icon-dest.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.common-icon{
+    width:0.75rem;
+    height:0.75rem;
+    position: absolute;
+    display: inline-block;
+    top:0.65rem;
+    left: -1.3rem;
+    vertical-align: middle;
+}
+.icon-disc{
+    background: url("../../mstatic/images/icon-disc.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.num-1{
+    background: url("../../mstatic/images/num-1.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.num-2{
+    background: url("../../mstatic/images/num-2.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.num-5{
+    background: url("../../mstatic/images/num-5.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.box-border{
+    height:100%;
+    display: inline-block;
+    border: 1px #8cd9ce solid;
+    position: absolute;
+    top:1.8rem;
+    left:-1rem;
+    z-index: 1;
+}
+.wuge-txt{
+    line-height:1.2rem;
+    margin-top:0.5rem;
+}
+.common-tips{
+    width:1.05rem;
+    height:1rem;
+    margin-left:0.6rem;
+    margin-right:0.4rem;
+    display: inline-block;
+    vertical-align: top;
+}
+.common-tips:first-child{
+    margin-left: 1rem;
+}
+.common-tips:last-child{
+    margin-right:0;
+}
+.tips-sun{
+    background: url("../../mstatic/images/tips-sun.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-sun-press{
+    background: url("../../mstatic/images/tips-sun-press.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-bag{
+    background: url("../../mstatic/images/tips-bag.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-bag-press{
+    background: url("../../mstatic/images/tips-bag-press.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-tower{
+    background: url("../../mstatic/images/tips-tower.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-tower-press{
+    background: url("../../mstatic/images/tips-tower-press.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-loca{
+    background: url("../../mstatic/images/tips-loca.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-loca-press{
+    background: url("../../mstatic/images/tips-loca-press.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-list{
+    background: url("../../mstatic/images/tips-list.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-list-press{
+    background: url("../../mstatic/images/tips-list-press.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tip-box{
+    padding:0.75rem 0.35rem;
+    margin-right:0.25rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 1px #3fc0ae solid;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+}
+.common-travel{
+    width:0.975rem;
+    height:1.05rem;
+    margin-right:0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.travel-hotel{
+    background: url("../../mstatic/images/travel-hotel.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.travel-food{
+    background: url("../../mstatic/images/travel-food.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.travel-cloth{
+    background: url("../../mstatic/images/travel-cloth.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.yellow-star{
+    width:0.775rem;
+    height:0.775rem;
+    display: inline-block;
+    margin-right:0.5rem;
+    vertical-align: middle;
+    background: url("../../mstatic/images/yellow-star.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.travel-one > div{
+    margin-top:0.5rem;
+}
+.travel-one .ui-grid-a .ui-block-a{
+    width:15%;
+}
+.travel-one .ui-grid-a .ui-block-b{
+    width:85%;
+}
+.travel-spot{
+    width:13.575rem;
+    height:7.575rem;
+    margin-bottom: 0.25rem;
+    position: relative;
+}
+.spot1{
+    background-image: url("../../mstatic/images/spot01.png");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.spot2{
+    background-image: url("../../mstatic/images/spot02.png");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.spot3{
+    background-image: url("../../mstatic/images/spot03.png");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.spot4{
+    background-image: url("../../mstatic/images/spot04.png");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.spot5{
+    background-image: url("../../mstatic/images/spot05.jpg");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.icon-video{
+    width:3.275rem;
+    height:3.275rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-1.6375rem;
+    margin-left:-1.6375rem;
+    background-image: url("../../mstatic/images/icon-video.png");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.icon-audio{
+    width:3.275rem;
+    height:3.275rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-1.6375rem;
+    margin-left:-1.6375rem;
+    background-image: url("../../mstatic/images/icon-audio.png");
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.judge-num{
+    font-size: 0.7rem;
+    padding:0 0.25rem;
+    color:#3fc0ae;
+}
+.judge-cnt{
+    padding:0.75rem 0.75rem 0 0.75rem;
+    font-size:0.6rem;
+    line-height:1rem;
+    color:#616161;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.pop-img{
+    width:2rem;
+    height:2rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.pop-name{
+    font-size: 0.75rem;
+    color:#333;
+    margin-left:0.9rem;
+}
+.judge-date{
+    line-height:2rem;
+    font-size: 0.6rem;
+    color:#9f9f9f;
+}
+.judge-stars{
+    margin:0.75rem 0;
+}
+.judge-txt{
+    padding-bottom:0.75rem;
+    border-bottom: 1px #dcf5f4 solid;
+}
+.judge-more{
+    margin:2rem 0.5rem;
+    text-align: center;
+}
+.judge-link{
+    padding:0.6rem 0;
+    display: block;
+    color:#3fc0ae !important;
+    font-size: 0.8rem;
+    border: 1px #3fc0ae solid;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+
+}
+.prd-footer{
+    background-color:#1dafae;
+    text-align: center;
+    color:#8efff5;
+    font-size: 0.6rem;
+    line-height:1.2rem;
 }
 /** end **/
