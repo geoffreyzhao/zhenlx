@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
-	<!-- <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll-infinite.js"></script> -->
+	<script type="text/javascript" src="../../mstatic/js/vendor/datepicker-scroll.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
 	<title>插件</title>
 
@@ -180,6 +180,13 @@
 				</div>
 			</div>
 		</div>
+
+		<a href="#popup-datepicker" data-rel="popup">选择日期</a>
+ 
+		<div data-role="popup" id="popup-datepicker" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false" data-dismissible="false">
+			<div class="pop-select-title">请选择</div>
+			<div class="datepicker-scroll"></div>
+		</div>
 		
 		<style type="text/css">
 			.datepicker-scroll {
@@ -213,121 +220,10 @@
 				overflow: hidden;
 			}
 		</style>
-
-		<div class="datepicker-scroll">
-			<div class="selected-date-bar"></div>
-			<div id="year-wrapper" class="date-wrapper">
-				<div id="year-scroller">
-					<ul>
-						<li></li>
-						<li></li>
-						<li>1979年</li>
-						<li>1980年</li>
-						<li>1981年</li>
-						<li>1982年</li>
-						<li>1983年</li>
-						<li>1984年</li>
-						<li>1985年</li>
-						<li>1986年</li>
-						<li>1987年</li>
-						<li>1988年</li>
-						<li>1989年</li>
-						<li>1990年</li>
-						<li>1991年</li>
-						<li>1992年</li>
-						<li>1993年</li>
-						<li>1994年</li>
-						<li>1995年</li>
-						<li>1996年</li>
-						<li>1997年</li>
-						<li>1998年</li>
-					    <li>1999年</li>
-					    <li>2000年</li>
-					    <li>2001年</li>
-					    <li>2002年</li>
-					    <li>2003年</li>
-					    <li>2004年</li>
-					    <li>2005年</li>
-					    <li>2006年</li>
-					    <li>2007年</li>
-					    <li>2008年</li>
-					    <li>2009年</li>
-					    <li>2010年</li>
-					    <li>2011年</li>
-					    <li>2012年</li>
-					    <li>2013年</li>
-					    <li>2014年</li>
-					    <li>2015年</li>
-					    <li></li>
-					    <li></li>
-					</ul>
-				</div>
-			</div>
-			<div id="month-wrapper" class="date-wrapper">
-				<div id="month-scroller">
-					<ul>
-						<li></li>
-						<li></li>
-					    <li>1月</li>
-					    <li>2月</li>
-					    <li>3月</li>
-					    <li>4月</li>
-					    <li>5月</li>
-					    <li>6月</li>
-					    <li>7月</li>
-					    <li>8月</li>
-					    <li>9月</li>
-					    <li>10月</li>
-					    <li>11月</li>
-					    <li>12月</li>
-					    <li></li>
-					    <li></li>
-					</ul>
-				</div>
-			</div>
-			<div id="day-wrapper" class="date-wrapper">
-				<div id="day-scroller">
-					<ul>
-						<li></li>
-						<li></li>
-					    <li>1日</li>
-					    <li>2日</li>
-					    <li>3日</li>
-					    <li>4日</li>
-					    <li>5日</li>
-					    <li>6日</li>
-					    <li>7日</li>
-					    <li>8日</li>
-					    <li>9日</li>
-					    <li>10日</li>
-					    <li>11日</li>
-					    <li>12日</li>
-					    <li>13日</li>
-					    <li>14日</li>
-					    <li>15日</li>
-					    <li>16日</li>
-					    <li>17日</li>
-					    <li>18日</li>
-					    <li>19日</li>
-					    <li>20日</li>
-					    <li>21日</li>
-					    <li>22日</li>
-					    <li>23日</li>
-					    <li>24日</li>
-					    <li>25日</li>
-					    <li>26日</li>
-					    <li>27日</li>
-					    <li>28日</li>
-					    <li>29日</li>
-					    <li>30日</li>
-					    <li></li>
-					    <li></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
 		
+		<input type="text" id="birthdate" value="1990年6月25日"/>
+
+		<label id="birthdate"></label>
 	</div>
 
 <script type="text/javascript">
@@ -351,75 +247,11 @@
             }
         });
 
-        var scroll_year = new IScroll('#year-wrapper', {});
-        var scroll_month = new IScroll('#month-wrapper', {});
-        var scroll_day = new IScroll('#day-wrapper', {});
-
-        var start_posY,
-        	end_posY,
-        	dist,
-        	liHeight = $("#year-scroller li:eq(0)").outerHeight(),
-        	half_liHeight = liHeight / 2,
-        	flag,
-        	offset;
-
-        scroll_year.on("scrollStart", function(){
-        	start_posY = this.y;
-        });
-
-        scroll_year.on("scrollEnd", function(){
-        	end_posY = this.y;
-        	dist = Math.abs(end_posY - start_posY);
-
-        	console.log("scrollEnd: " + end_posY);
-        	setLiStyle(this.y, liHeight);
-
-        	// if (end_posY - start_posY > 0) {  //  向上滚
-	        	
-	        // 	if (dist % liHeight != 0) { // 没有滚动到有效位置
-	        // 		if (dist % liHeight < half_liHeight) {  //  滚至前一个
-	        // 			scroll_year.scrollBy(0, -dist % liHeight, 300, IScroll.utils.ease.circular);
-	        // 		} else if (dist % liHeight >= half_liHeight) {  //  滚至后一个
-	        // 			scroll_year.scrollBy(0, dist % liHeight, 300, IScroll.utils.ease.circular);
-	        // 		}
-	        // 	}
-        	// } else {  // 向下滚
-
-	        // 	if (dist % liHeight != 0) { // 没有滚动到有效位置
-	        // 		if (dist % liHeight < half_liHeight) {  //  滚至前一个
-	        // 			scroll_year.scrollBy(0, dist % liHeight, 300, IScroll.utils.ease.circular);
-	        // 		} else if (dist % liHeight >= half_liHeight) {  //  滚至后一个
-	        // 			scroll_year.scrollBy(0, -dist % liHeight, 300, IScroll.utils.ease.circular);
-	        // 		}
-	        // 	}
-        	// }
-
-        	// scrollBy  Y 为正 上滚动,  Y 为负  下滚动
-
-        	offset = dist % liHeight;
-
-        	if (offset != 0) {
-
-        		flag = (end_posY - start_posY > 0) ? 1 : -1;   //  判断滚动方向 上|下
-
-        		if (offset < half_liHeight) {  //  滚至前一个
-        			scroll_year.scrollBy(0, -offset * flag, 50, IScroll.utils.ease.circular);
-        		} else if (offset >= half_liHeight) {  //  滚至后一个
-        			scroll_year.scrollBy(0, offset * flag, 50, IScroll.utils.ease.circular);
-        		}
-        	}
+        $(".datepicker-scroll").dpscroll({
+        	showDateEle: "#birthdate"
         });
 
 	});
-
-	function setLiStyle(scrollY, liHeight) {
-		var scroll_num = Math.abs(scrollY) / liHeight;
-
-		if (Math.round(scroll_num) == scroll_num) {
-			$("#year-scroller li").removeClass("current");
-			$("#year-scroller li").eq(scroll_num+2).addClass("current");
-		}
-	}
 
 </script>
 </body>
