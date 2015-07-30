@@ -89,6 +89,146 @@
     text-align: right;
     width:25%;
 }
+.navWrap-ticket, .navWrap-hotel, .navWrap-cost, .navWrap-inst{
+    margin-top:0.5rem;
+}
+.tkt-til{
+    background-color:#3fc0ae;
+    padding:0.5rem 0.4rem;
+    font-size: 0.8rem;
+    color:#fff;
+}
+.tkt-cnt{
+    padding:0 0.5rem;
+}
+.tkt-agenda{
+    padding:0.5rem 0;
+    font-size: 0.75rem;
+    color:#11b9b7;
+    vertical-align: middle;
+    border-bottom: 1px #d5efee dashed;
+}
+.common-agenda{
+    font-size:0.5rem;
+    line-height:0.5rem;
+    color:#fff;
+    padding:0.1rem 0.4rem;
+    margin-left:0.4rem;
+    vertical-align: middle;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+}
+.agenda-flag1{
+    background-color:#0fd730;
+}
+.agenda-flag2{
+    background-color:#11b9b7;
+}
+.tkt-flight{
+    padding:0.45rem 0;
+}
+.tkt-flight .ui-grid-b .ui-block-a, .tkt-trip .ui-grid-b .ui-block-a{
+    text-align: right;
+}
+.tkt-flight .ui-grid-b .ui-block-b, .tkt-trip .ui-grid-b .ui-block-b{
+    text-align: center;
+}
+.flt-start{
+    font-size: 0.75rem;
+    color:#11b9b7;
+}
+.flt-icon{
+    width:0.725rem;
+    height:0.725rem;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../mstatic/images/plane.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.plane-start, .plane-stop{
+    font-size: 1.2rem;
+    line-height:1.8rem;
+    color:#484848;
+    font-weight: bold;
+}
+.plane-add{
+    font-size: 0.6rem;
+    color:#666;
+}
+.plane-num{
+    font-size: 0.5rem;
+    line-height:1rem;
+    color:#999;
+}
+.plane-time{
+    font-size: 0.5rem;
+    line-height:1.15rem;
+    color:#11b9b7;
+    margin-top:0.4rem;
+    margin-bottom: 0.4rem;
+    vertical-align: middle;
+}
+.tkt-trip{
+    padding:0.75rem 0;
+    border-top: 1px #d5efee dashed;
+}
+.trip-start{
+    padding-top:1.2rem;
+}
+.trip-time{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color:#484848;
+}
+.trip-station{
+    font-size: 0.65rem;
+}
+.trip-station-icon{
+    font-size:0.5rem;
+    line-height:0.5rem;
+    color:#0fd730;
+    padding:0.1rem 0.4rem;
+    vertical-align: middle;
+    border: 1px #0fd730 solid;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+}
+.trip-time-sum{
+    font-size: 0.5rem;
+    color:#999;
+}
+.trip-space{
+    height:0.55rem;
+    background-color:#f0f0f0;
+}
+.cost-til{
+    padding:0.5rem;
+    color:#3fc0ae;
+}
+.navWrap-cost p, .inst-txt{
+    padding:0 0.7rem;
+    font-size: 0.7rem;
+    line-height:1.3rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.navWrap-inst ul{
+    margin-left:1.1rem;
+}
+.navWrap-inst ul li{
+    position: relative;
+}
+.inst-disc{
+    display: inline-block;
+    position: absolute;
+    top: 0.2rem;
+    left:-0.3rem;
+    color:#3fc0ae;
+}
+
 .path-til{
     padding:0.5rem;
     font-size: 0.8rem;
@@ -105,12 +245,12 @@
     text-align: center;
 }
 .path-icon{
-    width:0.95rem;
+    width:0.975rem;
     height:0.975rem;
     vertical-align: middle;
 }
 .path-img-til{
-    color:#585481;
+    color:#3fc0ae;
     padding:0.4rem 0;
     text-align: center;
 }
@@ -153,12 +293,14 @@
     border-bottom: 2px #3fc0ae solid !important;
 }
 .nav-content{
-    padding:0.5rem;
+    background-color:#fff;
 }
-.nav-content .navWrap-box{
+.nav-content .navWrap-path{
+    padding:0 0.5rem;
+    margin-top:0.5rem;
     margin-left:1.35rem;
 }
-.navWrap-box > li{
+.navWrap-path > ul > li{
     position: relative;
     margin-bottom: 1.5rem;
     word-wrap: break-word;
@@ -291,6 +433,16 @@
     background: url("../../mstatic/images/tips-list-press.png") no-repeat;
     -webkit-background-size: 100%;
     background-size: 100%;
+}
+.arrow-up{
+    width:1.025rem;
+    height:0.25rem;
+    background: url("../../mstatic/images/arrow-up.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    position: absolute;
+    top: 1.9rem;
+    left: 4.3rem;
 }
 .tip-box{
     padding:0.75rem 0.35rem;
@@ -450,6 +602,7 @@
 
 }
 .prd-footer{
+    padding:0.25rem 0;
     background-color:#1dafae;
     text-align: center;
     color:#8efff5;
