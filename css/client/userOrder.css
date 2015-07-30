@@ -838,7 +838,11 @@
     height:157px;
     display: inline-block;
     vertical-align: middle;
-    background-image: url("../../images/client/withImg_02.jpg");
+    background: url("../../images/client/wechat-qrcode.jpg") no-repeat center center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/client/wechat-qrcode.jpg',
+    sizingMethod='scale');
 }
 .withoutDivision{
     padding:10px;
@@ -1019,9 +1023,13 @@
 .paybox-center-img{
     width:157px;
     height:157px;
-    background:url("../../images/client/withImg_02.jpg") no-repeat;
+    background:url("../../images/client/wechat-qrcode.jpg") no-repeat center center;
     display: inline-block;
     vertical-align: middle;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/client/wechat-qrcode.jpg',
+    sizingMethod='scale');
 }
 .paybox-bottom{
     padding-top:44px;

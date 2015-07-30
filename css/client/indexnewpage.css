@@ -400,6 +400,66 @@ body {
     color: #7f7f7f;
     margin-top: 10px;
 }
+.aboutUs .workmate-img {
+    width: 108px;
+    height: 127px;
+    background: url(../../images/client/workmates-img.png) no-repeat;
+    margin: 0 auto!important;
+}
+.aboutUs .workmate-img.img-1 {
+    background-position: 0 0;
+}
+.aboutUs .workmate-img.img-2 {
+    background-position: -113px 0;
+}
+.aboutUs .workmate-img.img-3 {
+    background-position: -226px 0;
+}
+.aboutUs .workmate-img.img-4 {
+    background-position: -339px 0;
+}
+.aboutUs .workmate-img.img-5 {
+    background-position: -452px 0;
+}
+.aboutUs .workmate-img.img-6 {
+    background-position: 0 -132px;
+}
+.aboutUs .workmate-img.img-7 {
+    background-position: -113px -132px;
+}
+.aboutUs .workmate-img.img-8 {
+    background-position: -226px -132px;
+}
+.aboutUs .workmate-img.img-9 {
+    background-position: -339px -132px;
+}
+.aboutUs .workmate-img.img-10 {
+    background-position: -452px -132px;
+}
+.aboutUs .workmate-img.img-11 {
+    background-position: 0 -264px;
+}
+.aboutUs .workmate-img.img-12 {
+    background-position: -113px -264px;
+}
+.aboutUs .workmate-img.img-13 {
+    background-position: -226px -264px;
+}
+.aboutUs .workmate-img.img-14 {
+    background-position: -339px -264px;
+}
+.aboutUs .workmate-img.img-15 {
+    background-position: -452px -264px;
+}
+.aboutUs .workmate-img.img-16 {
+    background-position: 0 -396px;
+}
+.aboutUs .workmate-img.img-17 {
+    background-position: -113px -396px;
+}
+.aboutUs .workmate-img.img-18 {
+    background-position: -226px -396px;
+}
 .partnersModel{
     margin: 20px 90px;
     text-align: center;
@@ -408,6 +468,10 @@ body {
     display: inline-block;
     margin-left: 45px;
     vertical-align: middle;
+    background: url(../../images/client/partners-logo.png) no-repeat;
+}
+.partnersModel a:hover {
+    cursor: default;
 }
 .partnersModel a:first-child{
     margin-left: 0;
@@ -422,84 +486,84 @@ body {
     -ms-filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ffffff, endColorstr=#ffffff);/* IE8+  */
 }
 
-.partnerImg-1 {
+.partnersModel a.partnerImg-1 {
     width: 82px;
     height: 43px;
-    background: url(../../images/client/partner-img-1-gray.png) no-repeat center center;
+    background-position: 0 0;
 }
 
-.partnerImg-1:hover {
-    background: url(../../images/client/partner-img-1.png) no-repeat center center;
+.partnersModel a.partnerImg-1:hover {
+    background-position: 0 -50px;
 }
 
-.partnerImg-2 {
+.partnersModel a.partnerImg-2 {
     width: 135px;
     height: 33px;
-    background: url(../../images/client/partner-img-2-gray.png) no-repeat center center;
+    background-position: -87px 0;
 }
 
-.partnerImg-2:hover {
-    background: url(../../images/client/partner-img-2.png) no-repeat center center;
+.partnersModel a.partnerImg-2:hover {
+    background-position: -87px -50px;
 }
 
-.partnerImg-3 {
+.partnersModel a.partnerImg-3 {
     width: 92px;
     height: 41px;
-    background: url(../../images/client/partner-img-3-gray.png) no-repeat center center;
+    background-position: -227px -1px;
 }
 
-.partnerImg-3:hover {
-    background: url(../../images/client/partner-img-3.png) no-repeat center center;
+.partnersModel a.partnerImg-3:hover {
+    background-position: -227px -50px;
 }
 
-.partnerImg-4 {
+.partnersModel a.partnerImg-4 {
     width: 103px;
     height: 46px;
-    background: url(../../images/client/partner-img-4-gray.png) no-repeat center center;
+    background-position: -324px 0;
 }
 
-.partnerImg-4:hover {
-    background: url(../../images/client/partner-img-4.png) no-repeat center center;
+.partnersModel a.partnerImg-4:hover {
+    background-position: -324px -50px;
 }
 
-.partnerImg-5 {
+.partnersModel a.partnerImg-5 {
     width: 104px;
     height: 33px;
-    background: url(../../images/client/partner-img-5-gray.png) no-repeat center center;
+    background-position: -432px 0;
 }
 
-.partnerImg-5:hover {
-    background: url(../../images/client/partner-img-5.png) no-repeat center center;
+.partnersModel a.partnerImg-5:hover {
+    background-position: -432px -50px;
 }
 
-.partnerImg-6 {
+.partnersModel a.partnerImg-6 {
     width: 58px;
     height: 43px;
-    background: url(../../images/client/partner-img-6-gray.png) no-repeat center center;
+    background-position: -541px 0;
 }
 
-.partnerImg-6:hover {
-    background: url(../../images/client/partner-img-6.png) no-repeat center center;
+.partnersModel a.partnerImg-6:hover {
+    background-position: -541px -50px;
 }
 
-.partnerImg-7 {
+.partnersModel a.partnerImg-7 {
     width: 69px;
     height: 44px;
-    background: url(../../images/client/partner-img-7-gray.png) no-repeat center center;
+    background-position: -607px 0;
 }
 
-.partnerImg-7:hover {
-    background: url(../../images/client/partner-img-7.png) no-repeat center center;
+.partnersModel a.partnerImg-7:hover {
+    background-position: -607px -50px;
 }
 
-.partnerImg-8 {
+.partnersModel a.partnerImg-8 {
     width: 103px;
     height: 41px;
-    background: url(../../images/client/partner-img-8-gray.png) no-repeat center center;
+    background-position: -679px 0;
 }
 
-.partnerImg-8:hover {
-    background: url(../../images/client/partner-img-8.png) no-repeat center center;
+.partnersModel a.partnerImg-8:hover {
+    background-position: -679px -50px;
 }
 
 
