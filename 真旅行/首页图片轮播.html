@@ -791,8 +791,19 @@ $(function(){
         event.stopPropagation();
     });
  
-    //banner轮播
-    $('.product').cycle({
+
+    window.onload = function() {
+
+      $('.cont-slide').cycle({
+        fx:'fade',
+        timeout: 7000,
+        speed: 1500, 
+        pause: true,
+        prev:".bannerbtn .leftbtn",
+        next:".bannerbtn .rightbtn"
+      });
+      //banner轮播
+      $('.product').cycle({
         fx:'scrollHorz',
         timeout: 7000,
         speed: 1500, 
@@ -801,14 +812,7 @@ $(function(){
         next:".bannerbtn .rightbtn"
       });
 
-    $('.cont-slide').cycle({
-        fx:'fade',
-        timeout: 7000,
-        speed: 1500, 
-        pause: true,
-        prev:".bannerbtn .leftbtn",
-        next:".bannerbtn .rightbtn"
-      });
+    }
 
     window.onresize = function(){
       // window.location.reload();
