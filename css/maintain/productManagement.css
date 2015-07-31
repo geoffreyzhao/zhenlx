@@ -729,7 +729,6 @@ input[type="text"].tagInput {
 
 .set-price-container .oper-btn .save {
     background-color: #f8864e;
-    margin-right: 10px;
 }
 
 .set-price-container .oper-btn .cancel {
@@ -1492,3 +1491,54 @@ input[type="text"].tagInput {
 }
 
 /*  新增产品-底价维护   end  */
+
+.addi-info-block {
+    border-bottom: 1px solid #dadada;
+}
+
+.addi-info-block .top {
+    margin-top: 15px;
+}
+
+.addi-info-block .sub-title {
+    float: left;
+}
+
+.addi-info-block .oper-block {
+    float: right;
+}
+
+.addi-info-block .form-module input[readonly='readonly'] {
+    background-color: #dadada;
+    border: 1px solid #dadada;
+}
+
+.addi-info-block .form-module input[readonly='readonly']:focus {
+    border: 1px solid #dadada!important;
+}
+
+.form-module {
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+.form-module .costs {
+
+}
+
+.form-module .timeline {
+    margin-bottom: 10px;
+}
+
+.form-module .provider {
+    margin-left: 20px;
+}
+
+.dropdown.disabled .dropdownBtn {
+    background-color: #dadada;
+    cursor: default;
+}
+
+.dropdown.disabled .dropdownBtn:focus {
+    border: 1px solid #dadada;
+}

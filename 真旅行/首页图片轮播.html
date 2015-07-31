@@ -794,25 +794,37 @@ $(function(){
 
     window.onload = function() {
 
-      $('.cont-slide').cycle({
-        fx:'fade',
-        timeout: 7000,
+      //banner轮播
+      $('.product').cycle({
+        fx:'scrollHorz',
+        timeout: 2000,
         speed: 1500, 
         pause: true,
         prev:".bannerbtn .leftbtn",
         next:".bannerbtn .rightbtn"
       });
-      //banner轮播
-      $('.product').cycle({
-        fx:'scrollHorz',
-        timeout: 7000,
+      $('.cont-slide').cycle({
+        fx:'fade',
+        timeout: 2000,
         speed: 1500, 
         pause: true,
         prev:".bannerbtn .leftbtn",
         next:".bannerbtn .rightbtn"
       });
 
+      $(".product li").hover(function(){
+        $('.cont-slide').cycle("pause");
+      }, function(){
+        $('.cont-slide').cycle("resume");
+      });
+
+      $(".cont-slide li").hover(function(){
+        $('.product').cycle("pause");
+      }, function(){
+        $('.product').cycle("resume");
+      });
     }
+
 
     window.onresize = function(){
       // window.location.reload();

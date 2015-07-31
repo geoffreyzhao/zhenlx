@@ -838,6 +838,7 @@ div.datepicker table tr td span.active {
     overflow: hidden;
     white-space: nowrap;
     vertical-align: middle;
+    color: #333!important;
 }
 .dropdown .dropdownBtn,
 .dropdown .dropdownBtn .activeFonts,
