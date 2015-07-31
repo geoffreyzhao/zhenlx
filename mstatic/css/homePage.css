@@ -92,6 +92,168 @@
 .navWrap-ticket, .navWrap-hotel, .navWrap-cost, .navWrap-inst{
     margin-top:0.5rem;
 }
+.hotel-til{
+    font-size: 0.75rem;
+    color:#333;
+    padding:0.6rem 0.5rem;
+    border-bottom: 1px #dcdcdc solid;
+}
+.pack-up{
+    font-size: 0.75rem;
+    color:#333;
+    text-align: center;
+    vertical-align: middle;
+    padding:0.6rem 0.5rem;
+    border-top: 1px #dcdcdc solid;
+    border-bottom: 1px #dcdcdc solid;
+}
+.p-bg{
+    background-color:#fafafa;
+    border-bottom: 1px #dcdcdc solid;
+}
+.hotel-occu{
+    padding:0.5rem;
+}
+.hotel-occu span{
+    color:#11b9b7;
+    padding:0 0.2rem;
+}
+.moon{
+    width:0.8rem;
+    height:0.8rem;
+    vertical-align: middle;
+    margin-right:0.3rem !important;
+    background: url("../../mstatic/images/moon.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.hotel-model{
+    padding-bottom: 0.5rem;
+    padding-left:0.5rem;
+    font-size: 0.7rem;
+    color:#999;
+    vertical-align: middle;
+}
+.swiper-container{
+    width: 16rem;
+    height: 8rem;
+    margin: 0 auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.slide-img{
+    width: 16rem;
+    height:8rem;
+    display: block;
+}
+.swiper-container .swiper-pagination-bullet-active{
+    background: #3fc0ae;
+}
+.hotel-box{
+    padding:0.5rem;
+}
+.hotel-box ul{
+    margin-left:0.75rem;
+    margin-bottom: 0.5rem;
+}
+.hotel-box ul li{
+    position: relative;
+}
+.hotel-disc{
+    display: inline-block;
+    position: absolute;
+    top: 0.1rem;
+    left:-0.8rem;
+    color:#3fc0ae;
+}
+.hotel-txt{
+    font-size: 0.75rem;
+    color:#333;
+    line-height:1.2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.hotel-room{
+    padding:0.2rem;
+    border-top:1px #dcdcdc solid;
+}
+.hotel-room ul{
+    margin-left:3rem;
+}
+.hotel-room ul li{
+    position: relative;
+    font-size: 0.6rem;
+    margin:0.6rem 0;
+}
+.room-type{
+    display: inline-block;
+    position: absolute;
+    top:0;
+    left:-3rem;
+    color:#999;
+}
+.arr-upside{
+    width:0.625rem;
+    height:0.4rem;
+    margin:0.3rem;
+    vertical-align: middle;
+    display: inline-block;
+    background: #fff url("../../mstatic/images/arr-upside.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.arr-downside{
+    width:0.625rem;
+    height:0.4rem;
+    margin:0.3rem;
+    vertical-align: middle;
+    display: inline-block;
+    background: #fff url("../../mstatic/images/arr-bottom.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.hotel-info{
+    padding:0.5rem;
+    background-color:#fafafa;
+    font-size: 0.65rem;
+    line-height:1.2rem;
+}
+.hotel-info h3{
+    color:#11b9b7;
+    font-size: 0.75rem;
+    padding:0.6rem 0;
+}
+.inst-til{
+    margin-top:0.8rem;
+    border-top:1px #dcdcdc solid;
+}
+.inst-til h3{
+    padding:0.8rem 0;
+    font-size: 0.75rem;
+    color:#3fbfae;
+}
+.inst-til p{
+    font-size: 0.65rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
 .tkt-til{
     background-color:#3fc0ae;
     padding:0.5rem 0.4rem;
@@ -106,7 +268,7 @@
     font-size: 0.75rem;
     color:#11b9b7;
     vertical-align: middle;
-    border-bottom: 1px #d5efee dashed;
+    border-bottom: 1px #d5efee solid;
 }
 .common-agenda{
     font-size:0.5rem;
@@ -373,7 +535,7 @@
 .common-tips{
     width:1.05rem;
     height:1rem;
-    margin-left:0.6rem;
+    margin-left:0.5rem;
     margin-right:0.4rem;
     display: inline-block;
     vertical-align: top;
@@ -454,10 +616,10 @@
     -moz-border-radius: 0.125rem;
     border-radius: 0.125rem;
 }
-.common-travel{
+.common-travel, .inst-icon{
     width:0.975rem;
     height:1.05rem;
-    margin-right:0.5rem;
+    margin-right:0.5rem !important;
     display: inline-block;
     vertical-align: middle;
 }
@@ -476,12 +638,32 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
+.inst01{
+    background: url("../../mstatic/images/inst-01.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.inst02{
+    background: url("../../mstatic/images/inst-02.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.inst03{
+    background: url("../../mstatic/images/inst-03.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.inst04{
+    background: url("../../mstatic/images/inst-04.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
 .yellow-star{
     width:0.775rem;
     height:0.775rem;
     display: inline-block;
-    margin-right:0.5rem;
     vertical-align: middle;
+    margin-right:0.5rem;
     background: url("../../mstatic/images/yellow-star.png") no-repeat;
     -webkit-background-size: 100%;
     background-size: 100%;
@@ -599,7 +781,6 @@
     -webkit-border-radius: 0.125rem;
     -moz-border-radius: 0.125rem;
     border-radius: 0.125rem;
-
 }
 .prd-footer{
     padding:0.25rem 0;

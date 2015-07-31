@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no, email=no">
     <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/swiper.min.css">
     <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
     <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
     <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
@@ -12,6 +13,7 @@
     <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
     <title>产品详情</title>
 
@@ -108,12 +110,18 @@
                     </li>
                     <li>
                         <h3 class="navWrap-til">当地Tips:
-                            <span class="common-tips tips-sun-press live"></span><span class="common-tips tips-bag"></span><span class="common-tips tips-tower"></span><span class="common-tips tips-loca"></span><span class="common-tips tips-list"></span>
+                            <span class="common-tips tips-sun tips-sun-press live"></span><span class="common-tips tips-bag"></span><span class="common-tips tips-tower"></span><span class="common-tips tips-loca"></span><span class="common-tips tips-list"></span>
                         </h3>
                         <span class="common-icon icon-disc"></span>
                         <span class="box-border"></span>
                         <label class="arrow-up" data-role="none"></label>
-                        <div class="tip-box">小圈和大圈是暹粒旅行中  不可不知的两条经典游览线路。无数实践证明，这两条线路是最高效省时的游览方式。柬埔寨是热带国家，温度普遍很高，多准备一些夏天衣服1-3月平均参考温度是21-35摄氏度，天气稍炎热。在参观寺庙时女性请勿穿着吊带和膝盖以上的短裙，同时请注意防晒，使用防晒指数较高的防晒霜。</div>
+                        <div class="tip-box">
+                            <p class="sun-cnt">小圈和大圈是暹粒旅行中  不可不知的两条经典游览线路。无数实践证明，这两条线路是最高效省时的游览方式。柬埔寨是热带国家，温度普遍很高，多准备一些夏天衣服1-3月平均参考温度是21-35摄氏度，天气稍炎热。在参观寺庙时女性请勿穿着吊带和膝盖以上的短裙，同时请注意防晒，使用防晒指数较高的防晒霜。</p>
+                            <p class="bag-cnt hidden">购物提示，购物提示，购物提示……</p>
+                            <p class="tower-cnt hidden">通讯提示，通讯提示，通讯提示……</p>
+                            <p class="loca-cnt hidden">风俗提示，风俗提示，风俗提示……</p>
+                            <p class="list-cnt hidden">其他提示，其他提示，其他提示……</p>
+                        </div>
                     </li>
                     <li>
                         <h3 class="navWrap-til">第一天：抵达暹粒</h3>
@@ -296,7 +304,116 @@
                 </div>
             </div>
             <div class="navWrap-hotel hidden">
-                酒店
+                <h3 class="hotel-til">阿尔巴套房式度假酒店及水疗中心 </h3>
+                <div class="hotel-occu"><label class="moon"></label>入住第<span>1.3.5</span>晚</div>
+                <div class="hotel-model">酒店星级：<span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span></div>
+                <div class="swiper-container" id="swiper-container01">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/slide-img01.jpg"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot01.png"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot02.png"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot03.png"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="hotel-box">
+                    <ul>
+                        <li>
+                            <span class="hotel-disc">●</span>
+                            <p class="hotel-txt">Kong Kea 餐厅供应传统的高棉美食和西式佳肴。</p>
+                        </li>
+                        <li>
+                            <span class="hotel-disc">●</span>
+                            <p class="hotel-txt">酒廊酒吧和池畔酒吧提供美食和西式相应饮品。</p>
+                        </li>
+                    </ul>
+                    <div class="hotel-room">
+                        <ul>
+                            <li>
+                                <span class="room-type">房间类型：</span>
+                                <p class="room-txt">豪华双人房</p>
+                            </li>
+                            <li>
+                                <span class="room-type">房间位置：</span>
+                                <p class="room-txt">National Road No. 6A, Khum Sra-Nge (opposite of Cambodian Cultural)</p>
+                            </li>
+                            <li>
+                                <span class="room-type">房间电话：</span>
+                                <p class="room-txt">084-56898452</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="prd-space"></div>
+                <h3 class="hotel-til clearfix">查看入住须知及酒店设施<span class="fr arr-upside"></span></h3>
+                <div class="hotel-info">
+                    <h3>入住须知</h3>
+                    <p>入住时间：14:30 - 00:00 时</p>
+                    <p>退房时间：06:00 - 12:00 时</p>
+                    <h3>预订取消/预付政策</h3>
+                    <p>不同类型的客房附带不同的取消预订和预先付费政策，请输入您的入住日期并参阅您所需的客房的条款</p>
+                    <h3>儿童和加床</h3>
+                    <p>允许客人携带儿童入住</p>
+                    <h3>宠物</h3>
+                    <p>不允许携带宠物入住</p>
+                    <div class="inst-til">
+                        <h3><label class="inst-icon inst01"></label>综合设施：</h3>
+                        <p>报纸  保险箱  禁烟客房  适合残疾人士的设施 电梯  暖气  酒店各处禁烟  空调  隔音  手提电脑  保险箱  熨衣设备  保险箱  暖气  熨斗</p>
+                        <h3><label class="inst-icon travel-food"></label>餐饮设施：</h3>
+                        <p>酒吧 单点餐厅 小吃吧</p>
+                        <h3><label class="inst-icon inst02"></label>网络设施：</h3>
+                        <p>免费WIFI</p>
+                        <h3><label class="inst-icon inst03"></label>活动设施：</h3>
+                        <p>图书馆</p>
+                        <h3><label class="inst-icon inst04"></label>服务项目：</h3>
+                        <p>24小时前台 快速办理入住/退房手续 旅游咨询台 票务服务 行李寄存 礼宾服务 办理私人登记入住/退房手续</p>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+                <div class="pack-up">收起<span class="arr-upside"></span></div>
+                <p class="p-bg">&nbsp;</p>
+                <h3 class="hotel-til">阿尔巴套房式度假酒店及水疗中心 </h3>
+                <div class="hotel-occu"><label class="moon"></label>入住第<span>1.3.5</span>晚</div>
+                <div class="hotel-model">酒店星级：<span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span></div>
+                <div class="swiper-container" id="swiper-container02">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/slide-img01.jpg"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot01.png"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot02.png"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot03.png"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="hotel-box">
+                    <ul>
+                        <li>
+                            <span class="hotel-disc">●</span>
+                            <p class="hotel-txt">Kong Kea 餐厅供应传统的高棉美食和西式佳肴。</p>
+                        </li>
+                        <li>
+                            <span class="hotel-disc">●</span>
+                            <p class="hotel-txt">酒廊酒吧和池畔酒吧提供美食和西式相应饮品。</p>
+                        </li>
+                    </ul>
+                    <div class="hotel-room">
+                        <ul>
+                            <li>
+                                <span class="room-type">房间类型：</span>
+                                <p class="room-txt">豪华双人房</p>
+                            </li>
+                            <li>
+                                <span class="room-type">房间位置：</span>
+                                <p class="room-txt">National Road No. 6A, Khum Sra-Nge (opposite of Cambodian Cultural)</p>
+                            </li>
+                            <li>
+                                <span class="room-type">房间电话：</span>
+                                <p class="room-txt">084-56898452</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="navWrap-cost hidden">
                 <h3 class="cost-til">费用包含</h3>
@@ -445,21 +562,43 @@
         tipsObj.click(function(){
             var tipsInd = $(this).index();
             var pressInd = pressArr[tipsInd];
-            console.info(tipsInd+"数组："+pressInd);
+
             if(!$(this).hasClass("live")){
-                var theInd = tipsObj.find("live").index();
-                console.info("当前："+theInd);
+                var theInd = tipsObj.parent().find(".live").index();
+                tipsObj.eq(theInd).removeClass(pressArr[theInd]);
                 $(this).siblings().removeClass("live");
-                tipsObj.eq(tipsInd).addClass("pressInd");
+                tipsObj.eq(tipsInd).addClass(pressInd);
                 $(this).addClass("live");
+
+                var num = tipsInd * 2 + 4.3;
+                $(".arrow-up").css("left", num+"rem");
+                var boxObj = $(".tip-box > p").eq(tipsInd);
+                if(boxObj.hasClass("hidden")){
+                    boxObj.removeClass("hidden");
+                    boxObj.siblings().addClass("hidden");
+                }
             }
         });
 
-        tipsArr.click(function(){
+        var swiper01 = new Swiper('#swiper-container01', {
+            pagination: '#swiper-container01 .swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 5
+        });
 
-            var tipsObj = tipsArr.eq(tipsInd);
-            if(!tipsObj.hasClass("live")){
+        var swiper02 = new Swiper('#swiper-container02', {
+            pagination: '#swiper-container02 .swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 5
+        });
 
+        $(".arr-upside").click(function(){
+            $(".arr-upside").toggleClass("arr-downside");
+            $(".hotel-info").slideToggle("fast");
+            if($(".arr-upside").hasClass("arr-downside")){
+                $(".pack-up").slideUp();
+            }else{
+                $(".pack-up").slideDown();
             }
         });
     });
