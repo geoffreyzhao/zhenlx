@@ -664,3 +664,39 @@ input[type="text"], input[type="password"]{
     padding-top: 10px;
 }
 
+/*  联系我们  */
+.contactUs-block {
+    padding-left: 46px;
+}
+
+.contactUs-block .title {
+    font-size: 16px;
+    color: #11b9b7;
+    margin-bottom: 10px;
+}
+
+.contactUs-block .addr-cont {
+    font-size: 14px;
+    color: #666;
+}
+
+.contactUs-block .tel {
+    font-size: 22px;
+    color: #666;
+}
+
+.contactUs-block .email {
+    font-size: 14px;
+    color: #999;
+}
+
+.contactUs-block .wechat-name {
+    font-size: 14px;
+    color: #999;
+}
+
+.contactUs-block img {
+    width: 142px;
+    height: 142px;
+    margin-left: -10px;
+}
