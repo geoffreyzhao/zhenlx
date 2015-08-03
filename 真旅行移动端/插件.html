@@ -183,12 +183,12 @@
 
 		<a href="#popup-datepicker" data-rel="popup">选择日期</a>
  
-		<div data-role="popup" id="popup-datepicker" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false" data-dismissible="false">
+		<div data-role="popup" id="popup-datepicker" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false">
 			<div class="pop-select-title">请选择</div>
-			<div class="datepicker-scroll"></div>
+			<div id="datepicker-scroll" class="datepicker-scroll"></div>
 		</div>
 
-		<div class="datepicker-scroll"></div>
+		<div id="birthdate" class="datepicker-scroll"></div>
 		
 		<style type="text/css">
 			.datepicker-scroll {
@@ -229,7 +229,7 @@
 	</div>
 
 <script type="text/javascript">
-	var dp1;
+	var dp1, dp2;
 
 	$(function(){
 		
@@ -251,7 +251,9 @@
             }
         });
 
-        dp1 = new DatepickerScroll(".datepicker-scroll", {}).init();
+        dp1 = new DatepickerScroll("#datepicker-scroll", {}).init();
+        dp2 = new DatepickerScroll("#birthdate", {}).init();
+
         // dp1.getDate();
 	});
 

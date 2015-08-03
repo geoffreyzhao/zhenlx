@@ -2,6 +2,7 @@
 	function DatepickerScroll(element, options) {
 
 		this.element = $(element);
+		this.elementId = element;
 
 		// 默认参数
 		var date = new Date();
@@ -13,21 +14,6 @@
 		};
 
 		this.opts = $.extend({}, defaults, options);
-
-		// //  获取当前年份数字
-		// function getCurrentYearNum() {
-		// 	return parseInt($("#yearScroller li.current").html());
-		// }
-
-		// //  获取当前月份数字
-		// function getCurrentMonthNum() {
-		// 	return parseInt($("#monthScroller li.current").html());
-		// }
-
-		// //  获取当前日期数字
-		// function getCurrentDayNum() {
-		// 	return parseInt($("#dayScroller li.current").html());
-		// }
 	};
 
 	DatepickerScroll.prototype = {
@@ -47,7 +33,7 @@
 		//  初始化滚动日历
 		init: function(){
 			initDateDOM(this.element, this.opts);
-			var scrollArr = initDateIscroll();
+			var scrollArr = initDateIscroll(this.elementId);
 
 			this.scroll_year = scrollArr[0];
 			this.scroll_month = scrollArr[1];
@@ -144,20 +130,28 @@
 	}
 
 	//   初始化 IScroll, 绑定滚动事件
-	function initDateIscroll() {
+	function initDateIscroll(elementId) {
 
-		var arr = [];
+		var arr = [],
+			_ele = document.querySelector(elementId);
+
+		var yearWrapper = _ele.childNodes[1],
+			yearScroller = yearWrapper.childNodes[0],
+			monthWrapper = _ele.childNodes[2],
+			monthScroller = monthWrapper.childNodes[0],
+			dayWrapper = _ele.childNodes[3],
+			dayScroller = dayWrapper.childNodes[0];
 
 		//  初始化 IScroll
-		var scroll_year = new IScroll('#yearWrapper', {
+		var scroll_year = new IScroll(yearWrapper, {
 			mouseWheel: true,
 			mouseWheelSpeed: 22
 		});
-    	var scroll_month = new IScroll('#monthWrapper', {
+    	var scroll_month = new IScroll(monthWrapper, {
     		mouseWheel: true,
     		mouseWheelSpeed: 22
     	});
-    	var scroll_day = new IScroll('#dayWrapper', {
+    	var scroll_day = new IScroll(dayWrapper, {
     		mouseWheel: true,
     		mouseWheelSpeed: 22
     	});
@@ -169,12 +163,12 @@
     	//  年份滚动结束，重置月份和日期并回滚至1月1日
     	scroll_year.on("scrollEnd", function(){
 
-    		$("#monthScroller").html(geneMonthDOM());
+    		$(monthScroller).html(geneMonthDOM());
     		scroll_month.refresh();
     		scroll_month.scrollTo(0, 0);
 
     		var days = calDays(getCurrentYearNum(), getCurrentMonthNum());
-    		$("#dayScroller").html(geneDayDOM(days));
+    		$(dayScroller).html(geneDayDOM(days));
     		scroll_day.refresh();
     		scroll_day.scrollTo(0, 0);
     	});
@@ -183,7 +177,7 @@
     	scroll_month.on("scrollEnd", function(){
 
     		var days = calDays(getCurrentYearNum(), getCurrentMonthNum());
-    		$("#dayScroller").html(geneDayDOM(days));
+    		$(dayScroller).html(geneDayDOM(days));
     		scroll_day.refresh();
     		scroll_day.scrollTo(0, 0);
     	});
@@ -193,15 +187,15 @@
 	}
 
 	function getCurrentYearNum() {
-		return parseInt($("#yearScroller li.current").html());
+		return parseInt($(yearScroller).find("li.current").html());
 	}
 
 	function getCurrentMonthNum() {
-		return parseInt($("#monthScroller li.current").html());
+		return parseInt($(monthScroller).find("li.current").html());
 	}
 
 	function getCurrentDayNum() {
-		return parseInt($("#dayScroller li.current").html());
+		return parseInt($(dayScroller).find("li.current").html());
 	}
 
 	//  生成月份DOM
