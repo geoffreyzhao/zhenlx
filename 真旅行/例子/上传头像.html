@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>裁剪-上传头像</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/register.css">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.Jcrop.min.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/client/common.js"></script>
+    <!--  渐变背景和mainbox 需要调整距离和位置，引入adjust.js  -->
+    <script type="text/javascript" src="../../js/client/adjust.js"></script>
+    <script type="text/javascript" src="../../js/vendor/jquery.Jcrop.min.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<header>
+		<div class="head clearfix">
+			<div class="logo"></div>
+		</div>
+	</header>
+
+	<div class="main-container">
+		<div class="main-wrapper" id="main-wrapper">
+			<div class="main-box" id="main-box" style="width:840px;">
+				<div class="top-border"><span class="clip"></span></div>
+				<div class="box-container">
+					<div class="top-block">
+						<span class="title-flight-icon" style="margin-left:65px;"></span>
+						<span class="title">欢迎开启真旅行</span>
+						<span class="skip-container">
+							<span class="skip-icon"></span>
+							<span class="skip-text">跳过</span>
+						</span>
+					</div>
+					<div class="cont-block">
+						<div class="sec-tab">
+							<span class="uploadBtn current">上传头像</span>
+							<em class="decoraline"></em>
+							<span class="pickupBtn">选择头像</span>
+							<div class="slidline"></div>
+						</div>
+
+						<!--  上传头像  start  -->
+						<section class="upload-avatar">
+							<div class="upload-block clearfix">								
+								<!-- <div class="upload-btn">
+									<input type="file" />
+								</div> -->
+								<!-- <div class="line"></div>
+								<div class="review-avatar">
+									<div class="title">预览</div>
+									<img src="../../images/client/storyBg.jpg" alt="">
+								</div> -->
+								<div class="targe-container">
+									<img src="../../images/client/storyBg.jpg" id="target" />
+								</div>
+
+								<div id="preview-pane">
+								  <div class="preview-container">
+								    <img src="../../images/client/storyBg.jpg" class="jcrop-preview" alt="Preview" />
+								  </div>
+								</div>
+							</div>
+							<div class="upload-tip-text">( 请使用小于2M的 png,jpg,gif 格式图片 )</div>
+						</section>
+						<!--  上传头像  end  -->
+
+						<!--  选择默认头像 start -->
+
+						<section class="pickup-default-avatar" style="display: none;">
+							<div class="default-avatar-list">
+								<span class="default-avatar-item current">
+									<img src="../../images/client/avatar-01.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-02.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-03.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-04.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-05.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-06.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-07.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-08.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-09.jpg" alt="">
+								</span>
+								<span class="default-avatar-item">
+									<img src="../../images/client/avatar-10.jpg" alt="">
+								</span>
+							</div>
+							<span class="changeViewpoints">
+							    <span class="commonIcon changeIcon"></span>换一换
+							</span>
+						</section>
+
+						<!--  选择默认头像 end -->
+					</div>
+					<div class="bottom-block">
+						<a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
+						<a href="javascript:void(0);" class="commonBtn grayBtn">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="foot clearfix">
+			<span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+			<span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+		</div>
+	</div>
+
+	<style type="text/css">
+		.targe-container {
+			background-color: #dadada;
+			width: 290px;
+			height: 290px;
+			padding: 10px;
+		}
+		.jcrop-holder #preview-pane {
+		  display: block;
+		  position: absolute;
+		  z-index: 2000;
+		  top: 10px;
+		  right: -280px;
+		}
+		#preview-pane .preview-container {
+		  width: 180px;
+		  height: 180px;
+		  overflow: hidden;
+		}
+	</style>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".sec-tab span").click(function(){
+				$(".sec-tab span").removeClass("current");
+				$(this).addClass("current");
+
+				if($(this).index()==0){
+					$(".sec-tab .slidline").animate({'margin-left':'-108'},500);
+				}else{
+					$(".sec-tab .slidline").animate({'margin-left':'7'},500);
+				}
+
+				if ($(this).hasClass("uploadBtn")) {
+					$(".pickup-default-avatar").hide();
+					$(".upload-avatar").show();
+				} else if ($(this).hasClass("pickupBtn")) {
+					$(".upload-avatar").hide();
+					$(".pickup-default-avatar").show();
+				}
+			});
+
+			$(".default-avatar-item").click(function(){
+				$(".default-avatar-item").removeClass("current");
+				$(this).addClass("current");
+			});
+
+			var w = $("#target").width(),
+				h = $("#targe").height();
+
+			if (w > h) {
+				$("#target").css({width: "270px"});
+			} else {
+				$("#target").css({height: "270px"});
+			}
+
+			// Create variables (in this scope) to hold the API and image size
+			var jcrop_api,
+			    boundx,
+			    boundy,
+
+			    // Grab some information about the preview pane
+			    $preview = $('#preview-pane'),
+			    $pcnt = $('#preview-pane .preview-container'),
+			    $pimg = $('#preview-pane .preview-container img'),
+
+			    xsize = $pcnt.width(),
+			    ysize = $pcnt.height();
+			
+			$('#target').Jcrop({
+			  onChange: updatePreview,
+			  onSelect: updatePreview,
+			  aspectRatio: xsize / ysize
+			},function(){
+			  // Use the API to get the real image size
+			  var bounds = this.getBounds();
+			  boundx = bounds[0];
+			  boundy = bounds[1];
+			  // Store the API in the jcrop_api variable
+			  jcrop_api = this;
+
+			  // Move the preview into the jcrop container for css positioning
+			  $preview.appendTo(jcrop_api.ui.holder);
+
+			  jcrop_api.animateTo([0,0,180,180]);
+
+			});
+
+			function updatePreview(c) {
+	      		if (parseInt(c.w) > 0) {
+	        		var rx = xsize / c.w;
+	        		var ry = ysize / c.h;
+
+			        $pimg.css({
+			          width: Math.round(rx * boundx) + 'px',
+			          height: Math.round(ry * boundy) + 'px',
+			          marginLeft: '-' + Math.round(rx * c.x) + 'px',
+			          marginTop: '-' + Math.round(ry * c.y) + 'px'
+			        });
+	      		}
+	    	};
+		});		
+		
+	</script>
+	
+</body>
+</html>

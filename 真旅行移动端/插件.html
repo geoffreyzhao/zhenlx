@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
-	<script type="text/javascript" src="../../mstatic/js/vendor/datepicker-scroll.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/vendor/datepicker-scroll-update.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
 	<title>插件</title>
 
@@ -187,6 +187,8 @@
 			<div class="pop-select-title">请选择</div>
 			<div class="datepicker-scroll"></div>
 		</div>
+
+		<div class="datepicker-scroll"></div>
 		
 		<style type="text/css">
 			.datepicker-scroll {
@@ -227,6 +229,8 @@
 	</div>
 
 <script type="text/javascript">
+	var dp1;
+
 	$(function(){
 		
 		FastClick.attach(document.body);
@@ -247,10 +251,8 @@
             }
         });
 
-        $(".datepicker-scroll").dpscroll({
-        	showDateEle: "#birthdate"
-        });
-
+        dp1 = new DatepickerScroll(".datepicker-scroll", {}).init();
+        // dp1.getDate();
 	});
 
 </script>
