@@ -83,7 +83,7 @@
 
 	//  生成 DOM 结构
 	function initDateDOM($this, opts) {
-		$this.append('<div class="selected-date-bar"></div>');   //  当前条
+		$this.append('<div class="selected-date-bar">');   //  当前条
 
 		//  年
 		var yearDomStr = '<div id="yearWrapper" class="date-wrapper">'
@@ -144,16 +144,15 @@
 
 		//  初始化 IScroll
 		var scroll_year = new IScroll(yearWrapper, {
-			mouseWheel: true,
-			mouseWheelSpeed: 22
+			mouseWheel: true
+			// scrollbars: true
+			// momentum: false
 		});
     	var scroll_month = new IScroll(monthWrapper, {
-    		mouseWheel: true,
-    		mouseWheelSpeed: 22
+    		mouseWheel: true
     	});
     	var scroll_day = new IScroll(dayWrapper, {
-    		mouseWheel: true,
-    		mouseWheelSpeed: 22
+    		mouseWheel: true
     	});
 
     	dealScroll(scroll_year);
@@ -258,9 +257,9 @@
     			flag = (end_posY - start_posY > 0) ? 1 : -1;   //  判断滚动方向 上|下
 
     			if (offset < half_liHeight) {  //  滚至前一个
-    				scroll.scrollBy(0, -offset * flag, 50, IScroll.utils.ease.circular);
+    				scroll.scrollBy(0, -offset * flag, 300, IScroll.utils.ease.quadratic);
     			} else if (offset >= half_liHeight) {  //  滚至后一个
-    				scroll.scrollBy(0, offset * flag, 50, IScroll.utils.ease.circular);
+    				scroll.scrollBy(0, offset * flag, 300, IScroll.utils.ease.quadratic);
     			}
     		}
     	});

@@ -197,35 +197,55 @@
 				position: relative;
 			}
 			.datepicker-scroll li {
-				height: 22px;
-				line-height: 22px;
+				height: 35px;
+				line-height: 35px;
+
+				-webkit-transition: all 0.3s;
+				-o-transition: all 0.3s;
+				transition: all 0.3s;
 			}
 			.datepicker-scroll li.current {
-				font-size: 16px;
+				-webkit-transform: scale(1.2, 1.2);
+				   -moz-transform: scale(1.2, 1.2);
+				    -ms-transform: scale(1.2, 1.2);
+				     -o-transform: scale(1.2, 1.2);
+				        transform: scale(1.2, 1.2);
 				color: red;
 			}
 			.selected-date-bar {
 				position: absolute;
-				top: 44px;
+				top: 70px;
 				border-top: 1px solid red;
 				border-bottom: 1px solid red;
 				background-color: transparent;
 				width: 100%;
-				height: 22px;
+				height: 35px;
+			}
+			.top-hidden-bar {
+				height: 20px;
+				opacity: 0.4;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				background-color: #000;
+			}
+			.bottom-hidden-bar {
+				height: 20px;
+				opacity: 0.4;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				background-color: #000;
 			}
 			.date-wrapper {
 				display: inline-block;
 				text-align: center;
 				font-size: 18px;
 				width: 33%;
-				height: 110px;
+				height: 175px;
 				overflow: hidden;
 			}
 		</style>
-		
-		<input type="text" id="birthdate" value="1990年6月25日"/>
-
-		<label id="birthdate"></label>
 	</div>
 
 <script type="text/javascript">
@@ -251,8 +271,16 @@
             }
         });
 
-        dp1 = new DatepickerScroll("#datepicker-scroll", {}).init();
-        dp2 = new DatepickerScroll("#birthdate", {}).init();
+        dp1 = new DatepickerScroll("#datepicker-scroll", {
+        	startYear: 1980,
+			endYear: 2015,
+			defaultDate: new Date(1990,1,1)
+        }).init();
+        dp2 = new DatepickerScroll("#birthdate", {
+        	startYear: 1980,
+			endYear: 2015,
+			defaultDate: new Date(1990,0,1)
+        }).init();
 
         // dp1.getDate();
 	});
