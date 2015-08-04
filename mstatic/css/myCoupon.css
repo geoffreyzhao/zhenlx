@@ -17,6 +17,7 @@
 }
 .voucher-switch .noborder{
 	border-right:0;
+	padding-right:0;
 }
 .voucherItem {
 	width:15.05rem;
@@ -261,6 +262,9 @@
 	display:inline-block;
 	line-height:2rem;
 	text-align:center;
+	-webkit-border-radius: 0.125rem;
+	-moz-border-radius: 0.125rem;
+	border-radius: 0.125rem;
 }
 .dlg-foot .btn-share,.dlg-foot .btn-share:link,.dlg-foot .btn-share:visited{
 	background:#3fc0ae;

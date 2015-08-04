@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/orderList.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>订单详情</title>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div class="headerBar">
+        <div class="header">
+            <span class="back">
+                <i class="back-arrow"></i>
+                <em class="back-border"></em>
+            </span>
+            <span class="title">订单详情</span>
+            <span class="acut-menu">
+                <a class="acut-box" href="javascript:void(0);"><img class="acut-img" src="../../mstatic/images/acut-img.png"></a>
+                <a href="javascript:void(0);"><img class="menu-img" src="../../mstatic/images/menu-list.png"></a>
+            </span>
+        </div>
+    </div>
+    <div class="order-prg">
+
+    </div>
+    <div class="order-sum">
+        <div class="order-til">
+            <span class="order-num">订单号:0225151515566</span><span class="order-date">2015-05-20</span>
+        </div>
+        <div class="order-row">
+            <span class="order-name">广州至首尔4晚5天深度游</span><span class="order-price"><span class="rmb">￥</span>10367</span>
+        </div>
+        <div class="order-row clearfix">
+            <span class="order-start">2015年07月24日 出发</span><a class="order-pay" href="javascript:void(0);">去支付</a>
+        </div>
+    </div>
+    <div class="divide-space"></div>
+    <div class="row-til">联系人信息</div>
+    <div class="row-content">
+        <div><span class="row-txt">姓名：</span><span class="row-val">蓝桥</span></div>
+        <div><span class="row-txt">电话：</span><span class="row-val">18612345678</span></div>
+        <div><span class="row-txt">邮箱：</span><span class="row-val">lanqiao@gmail.com</span></div>
+        <div><span class="row-txt">地址：</span><span class="row-val">上海市黄浦区东方明珠特1号</span></div>
+    </div>
+    <div class="divide-space"></div>
+    <div class="row-til">旅客信息</div>
+    <div class="row-content">
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <div><span class="row-span">姓名：</span><span class="row-val">GU/LOU</span></div>
+                <div><span class="row-span">性别：</span><span class="row-val">男</span></div>
+                <div><span class="row-span">国籍：</span><span class="row-val">中国</span></div>
+            </div>
+            <div class="ui-block-b">
+                <div><span class="row-span">生日：</span><span class="row-val">1989.11.21</span></div>
+                <div><span class="row-span">乘客类型：</span><span class="row-val">成人</span></div>
+                <div><span class="row-span">手机号：</span><span class="row-val">18600000000</span></div>
+            </div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <div><span class="row-span">姓名：</span><span class="row-val">LABBER</span></div>
+                <div><span class="row-span">性别：</span><span class="row-val">男</span></div>
+                <div><span class="row-span">国籍：</span><span class="row-val">中国</span></div>
+            </div>
+            <div class="ui-block-b">
+                <div><span class="row-span">生日：</span><span class="row-val">1990.10.08</span></div>
+                <div><span class="row-span">乘客类型：</span><span class="row-val">儿童</span></div>
+                <div><span class="row-span">手机号：</span><span class="row-val">18600000000</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="divide-space"></div>
+    <div class="row-til">机票信息</div>
+    <div class="order-ticket">
+        <div class="tkt-cnt">
+            <div class="tkt-agenda">第一天<span class="common-agenda agenda-flag1">去程</span><span class="tkt-date">2015-08-23出发</span></div>
+            <div class="tkt-flight">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <p class="flt-start">上海</p>
+                        <p class="plane-start">07:30</p>
+                        <p class="plane-add">上海浦东国际机场</p>
+                        <p class="plane-num">人韩航空KE007</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <span class="flt-icon"></span>
+                        <p class="plane-time">历时5小时30分</p>
+                        <p class="plane-num">头等舱</p>
+                    </div>
+                    <div class="ui-block-c">
+                        <p class="flt-start">金边</p>
+                        <p class="plane-stop">12:45</p>
+                        <p class="plane-add">金边国际机场</p>
+                        <p class="plane-num">波音/7/</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tkt-cnt">
+            <div class="tkt-agenda">第五天<span class="common-agenda agenda-flag1">去程</span><span class="tkt-date">2015-08-23出发</span></div>
+            <div class="tkt-flight">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <p class="flt-start">上海</p>
+                        <p class="plane-start">07:30</p>
+                        <p class="plane-add">上海虹桥国际机场</p>
+                        <p class="plane-num">东方韩航空KE007</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <span class="flt-icon"></span>
+                        <p class="plane-time">历时3小时</p>
+                        <p class="plane-num">头等舱</p>
+                    </div>
+                    <div class="ui-block-c">
+                        <p class="flt-start">首尔</p>
+                        <p class="plane-stop">10:30</p>
+                        <p class="plane-add">首尔国际机场</p>
+                        <p class="plane-num">波音/7/</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divide-space"></div>
+    <div class="row-til">酒店信息</div>
+    <div class="order-hotel-box">
+        <div class="order-hotel-til">首尔明洞地区优选五星级酒店</div>
+        <div class="ui-grid-b">
+            <div class="ui-block-a order-hotel-left">
+                <p><span class="order-lab03">入住</span></p>
+                <p><span class="order-lab04">离店</span></p>
+            </div>
+            <div class="ui-block-b order-hotel-center">
+                <p class="class-hotel-time">2015-03-24</p>
+                <p class="class-hotel-time01">2015-03-26</p>
+            </div>
+            <div class="ui-block-c order-hotel-right">
+                <p class="order-hotel-txt">共<span class="hotel-num">2</span>晚</p>
+                <p class="order-hotel-name">豪华观景房</p>
+            </div>
+        </div>
+        <div class="order-hotel-til">金边五星级酒店</div>
+        <div class="ui-grid-b">
+            <div class="ui-block-a order-hotel-left">
+                <p><span class="order-lab03">入住</span></p>
+                <p><span class="order-lab04">离店</span></p>
+            </div>
+            <div class="ui-block-b order-hotel-center">
+                <p class="class-hotel-time">2015-03-24</p>
+                <p class="class-hotel-time01">2015-03-26</p>
+            </div>
+            <div class="ui-block-c order-hotel-right">
+                <p class="order-hotel-txt">共<span class="hotel-num">2</span>晚</p>
+                <p class="order-hotel-name">豪华观景房</p>
+            </div>
+        </div>
+        <div class="hotel-bed">偏好的酒店床型：</div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a hotel-radbed">
+                <label>
+                    <input type="radio" name="bed" value="bigbed" data-role="none" checked>
+                    <label class="cus_radio"></label>
+                </label>优选大床房
+            </div>
+            <div class="ui-block-b hotel-radbed">
+                <label>
+                    <input type="radio" name="bed" value="couplebed" data-role="none">
+                    <label class="cus_radio"></label>
+                </label>优选双床房
+            </div>
+        </div>
+    </div>
+    <div class="divide-space"></div>
+    <div class="row-til">费用说明</div>
+    <div class="row-box">
+        <div class="row-box-til">费用包含</div>
+        <p>1.上海往返首尔机票（含税）</p>
+        <p>2.四晚五星级度假酒店（含早）</p>
+        <p>3.机场至酒店接送机</p>
+        <p>4.7*24小时自由行大管家</p>
+        <div class="row-box-til">费用不包含</div>
+        <p>1.上海往返首尔机票（含税）</p>
+        <p>2.四晚五星级度假酒店（含早）</p>
+        <p>3.机场至酒店接送机</p>
+        <p>4.7*24小时自由行大管家</p>
+        <div class="row-box-til">赠送项目</div>
+        <p>1.首尔当地上网卡</p>
+        <p>2.楚国人员旅游意外伤害保险</p>
+        <p>3.专属旅转轴指南</p>
+    </div>
+    <div class="divide-space"></div>
+    <div class="row-til">价格明细</div>
+    <div class="order-price-detail">
+        <div class="order-price-box">
+            <div class="order-price-type">必选产品</div>
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <p>成人机票</p>
+                    <p>单房差</p>
+                </div>
+                <div class="ui-block-b">
+                    <p>¥9999×1人</p>
+                    <p>¥10000×1人</p>
+                </div>
+                <div class="ui-block-c">
+                    <p>¥9999</p>
+                    <p>¥10000</p>
+                </div>
+            </div>
+        </div>
+        <div class="order-price-box">
+            <div class="order-price-type">附加产品</div>
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <p>成人机票</p>
+                    <p>单房差</p>
+                </div>
+                <div class="ui-block-b">
+                    <p>¥9999×1人</p>
+                    <p>¥10000×1人</p>
+                </div>
+                <div class="ui-block-c">
+                    <p>¥9999</p>
+                    <p>¥10000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order-foot">
+        <div class="ui-grid-a">
+            <div class="ui-block-a">应付金额：<span class="foot-rmb">￥</span><span class="rmb-num">1500</span></div>
+            <div class="ui-block-b"><a class="order-link" href="javascript:void(0);">去支付</a></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
