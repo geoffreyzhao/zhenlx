@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/datepicker-scroll-update.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/vendor/cus-list-pop.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
 	<title>插件</title>
 
@@ -181,6 +182,8 @@
 			</div>
 		</div>
 
+		<div id="getData">点我，加载（延时模拟），弹出弹窗</div>
+
 		<a href="#popup-datepicker" data-rel="popup">选择日期</a>
  
 		<div data-role="popup" id="popup-datepicker" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false">
@@ -283,6 +286,30 @@
         }).init();
 
         // dp1.getDate();
+
+
+        $("#getData").click(function(){
+
+        	var $this = $(this);
+
+        	setTimeout(function(){
+        		$this.cusListPop({
+        			title: "请选择证件类型",  //  默认值：请选择
+					scrollId: "cardTypeWrapper",  //  id 必填且唯一
+					data: [{
+						name: "身份证"
+					}, {
+						name: "护照"
+					}, {
+						name: "同胞证"
+					}, {
+						name: "士官证"
+					}, {
+						name: "其他"
+					}]
+        		});
+        	}, 500);
+        });
 	});
 
 </script>
