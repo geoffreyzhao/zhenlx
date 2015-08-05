@@ -299,8 +299,22 @@ input[type="checkbox"]:checked + .cus_checkbox {
 	background-color: #fafafa;
 	font-size: 0.7rem;
 	color: #666;
+	position: relative;
 }
 
 #scroller li.current {
 	color: #1cb0ad;
+}
+
+#scroller li.current:after {
+	content: '';
+	display: inline-block;
+	background: url(../images/item-check-mark.png) no-repeat center center;
+	width: 0.725rem;
+	height: 0.525rem;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	position: absolute;
+	right: 0.625rem;
+	top: 0.7rem;
 }

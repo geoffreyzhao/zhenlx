@@ -6,6 +6,10 @@
 			scrollId: "scroll",
 			maxSize: 5,
 			data: [],
+			currentData: undefined,
+			callback: function(){
+				//  绑定弹窗上的事件操作    			
+			}
 		};
 
 		var opts = $.extend({}, defaults, options);
@@ -25,13 +29,34 @@
 					popupTemp += "<div id='" + wrapper + "' class='list-scroll-wrapper'>";
 					popupTemp += "<div id='scroller'><ul class='pop-ul-list'>";
 
+					var curIndex = -1;
+
+					if (opts.currentData !== undefined) {
+
+						if (typeof(opts.data[0]) == "number" || typeof(opts.data[0]) == "string") {
+
+							curIndex = $.inArray(opts.currentData, opts.data);
+
+						} else if (typeof(opts.data[0]) == "object") {
+
+							curIndex = _.findIndex(opts.data, opts.currentData);
+						}				
+					}
+
 					for (var i = 0; i < opts.data.length; i++) {
 						
 						var item = opts.data[i];
 
 						if (typeof(item) == "number" || typeof(item) == "string") {
 
-							popupTemp += "<li>" + item + "</li>";
+							if (curIndex == i) {
+
+								popupTemp += "<li class='current'>" + item + "</li>";
+								curIndex = -1;
+							} else {
+
+								popupTemp += "<li>" + item + "</li>";
+							}
 
 						} else if (typeof(item) == "object") {
 
@@ -40,7 +65,14 @@
 								tmp += " data-" + key + "='" + item[key] + "'";
 							}
 
-							popupTemp += "<li" + tmp + ">" + item.name + "</li>";
+							if (curIndex == i) {
+
+								popupTemp += "<li" + tmp + " class='current'>" + item.name + "</li>";
+								curIndex = -1;
+							} else {
+
+								popupTemp += "<li" + tmp + ">" + item.name + "</li>";
+							}
 
 						} else {
 							console.log('数据格式错误');
@@ -87,6 +119,13 @@
 			} else {   	//  如果已经有popup结构，跳过生成DOM和初始化，只控制弹窗
 				$("#" + container).popup("open");
 			}
+
+			$(".pop-ul-list li").on("click", function(){
+				$(this).closest("#scroller").find("li").removeClass("current");
+				$(this).addClass("current");
+			});
+
+			opts.callback();
 		});
 	}
 })(jQuery);

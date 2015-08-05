@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
 	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/vendor/underscore.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/datepicker-scroll-update.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/cus-list-pop.js"></script>
@@ -37,8 +38,10 @@
 <script type="text/javascript">
 
 	$(function(){
-		
+
 		FastClick.attach(document.body);
+
+		//  弹窗弹出，禁止页面滚动，待放入 common.js
 
 		// $("div[data-role='popup']").popup({
   //           afteropen: function(){
@@ -56,7 +59,8 @@
         	$(this).cusListPop({
         		title: "请选择性别",
         		scrollId: "sexType",
-        		data: ["男", "女"]
+        		data: ["男", "女"],
+        		currentData: '女'
         	});
         });
 
@@ -74,7 +78,13 @@
         			name: "士官证"
         		}, {
         			name: "其他"
-        		}]
+        		}],
+        		currentData: {
+        			name: "士官证"
+        		},
+        		callback: function() {
+        			//  可绑定弹窗上元素的事件操作
+        		}
         	});
         });
 
@@ -112,7 +122,8 @@
 					}]
         		});
         	}, 500);
-        });        
+        });
+        
 	});
 
 </script>
