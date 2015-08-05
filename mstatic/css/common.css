@@ -318,3 +318,80 @@ input[type="checkbox"]:checked + .cus_checkbox {
 	right: 0.625rem;
 	top: 0.7rem;
 }
+
+/*  滚动日历样式  */
+.datepicker-scroll {
+	position: absolute;
+    z-index: 2000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    top: 1.5rem;
+    background-color: #f5f5f5;
+}
+.datepicker-scroll li {
+	height: 1.75rem;
+	line-height: 1.75rem;
+	color: #999;
+	font-size: 0.65rem;
+
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.datepicker-scroll li.current {
+	-webkit-transform: scale(1.2, 1.2);
+	   -moz-transform: scale(1.2, 1.2);
+	    -ms-transform: scale(1.2, 1.2);
+	     -o-transform: scale(1.2, 1.2);
+	        transform: scale(1.2, 1.2);
+	color: #1cb0ad;
+}
+.selected-date-bar {
+	position: absolute;
+	top: 3.5rem;
+	background-color: #fff;
+	width: 100%;
+	height: 1.75rem;
+}
+.date-wrapper {
+	display: inline-block;
+	text-align: center;
+	width: 33%;
+	height: 8.75rem;
+	overflow: hidden;
+}
+
+.datepicker-top-block {
+	position: relative;
+	height: 1.5rem;
+    line-height: 1.5rem;
+    background-color: #1cb0ad;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.datepicker-top-block .dp-cancel-btn {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+
+.datepicker-top-block .dp-sure-btn {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+
+.datepicker-top-block .title {
+	display: inline-block;
+	position: static;
+	width: 33%;
+	text-align: center;
+}
+
+.ui-popup {
+	border: none;
+	box-shadow: none;
+}

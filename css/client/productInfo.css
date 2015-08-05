@@ -2156,7 +2156,7 @@ ul.common-tab > li.rest {
     font-size: 15px;
 }
 .pro-item-box {
-    height: 550px;  /*  图片显示出来的高度 */
+    height: 420px;  /*  图片显示出来的高度 */
     overflow: hidden;
     position: relative;
     width: 100%;

@@ -8,6 +8,7 @@
 		var date = new Date();
 
 		var defaults = {
+			title: "请选择日期",
 			startYear: date.getFullYear() - 100,
 			endYear: date.getFullYear(),
 			defaultDate: new Date("1980-1-1")
@@ -32,7 +33,7 @@
 
 		//  初始化滚动日历
 		init: function(){
-			initDateDOM(this.element, this.opts);
+			initDateDOM(this.element, this.opts, this.elementId);
 			var scrollArr = initDateIscroll(this.elementId);
 
 			this.scroll_year = scrollArr[0];
@@ -82,8 +83,12 @@
 	};
 
 	//  生成 DOM 结构
-	function initDateDOM($this, opts) {
-		$this.append('<div class="selected-date-bar">');   //  当前条
+	function initDateDOM($this, opts, id) {
+
+		var temp = '<div id="' + id.substring(1, id.length) + 'Datepicker" style="height:10.25rem;">';
+			temp += '<div class="datepicker-top-block"><div class="dp-cancel-btn">取消</div>';
+			temp += '<div class="title">' + opts.title + '</div>';
+			temp += '<div class="dp-sure-btn">确定</div></div><div class="datepicker-scroll"><div class="selected-date-bar"></div>';
 
 		//  年
 		var yearDomStr = '<div id="yearWrapper" class="date-wrapper">'
@@ -97,7 +102,7 @@
 			}
 			}
 			yearDomStr += '<li></li><li></li></ul></div></div>';
-			$this.append(yearDomStr);
+			temp += yearDomStr;
 
 		//  月
 		var monthDomStr = '<div id="monthWrapper" class="date-wrapper">'
@@ -111,7 +116,7 @@
 			}
 			}
 			monthDomStr += '<li></li><li></li></ul></div></div>';
-			$this.append(monthDomStr);
+			temp += monthDomStr;
 
 			// 获取默认时间，显示天数
 			var dayNum = calDays(opts.defaultDate.getFullYear(), opts.defaultDate.getMonth()+1);
@@ -126,27 +131,35 @@
 			}
 			}
 			dayDomStr += '<li></li><li></li></ul></div></div>';
-			$this.append(dayDomStr);
+			temp += dayDomStr + '</div></div>';
+
+			$this.after(temp);
+
+			$(id + "Datepicker").popup({
+				theme: 'a',
+				overlayTheme: 'b',
+				transition: 'slideup',
+				positionTo: 'window',
+				corners: false
+			});
 	}
 
 	//   初始化 IScroll, 绑定滚动事件
 	function initDateIscroll(elementId) {
 
 		var arr = [],
-			_ele = document.querySelector(elementId);
+			_ele = document.querySelector(elementId + "Datepicker");
 
-		var yearWrapper = _ele.childNodes[1],
+		var yearWrapper = _ele.childNodes[1].childNodes[1],
 			yearScroller = yearWrapper.childNodes[0],
-			monthWrapper = _ele.childNodes[2],
+			monthWrapper = _ele.childNodes[1].childNodes[2],
 			monthScroller = monthWrapper.childNodes[0],
-			dayWrapper = _ele.childNodes[3],
+			dayWrapper = _ele.childNodes[1].childNodes[3],
 			dayScroller = dayWrapper.childNodes[0];
 
 		//  初始化 IScroll
 		var scroll_year = new IScroll(yearWrapper, {
 			mouseWheel: true
-			// scrollbars: true
-			// momentum: false
 		});
     	var scroll_month = new IScroll(monthWrapper, {
     		mouseWheel: true
