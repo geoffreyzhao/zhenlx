@@ -39,7 +39,56 @@
         </div>
     </div>
     <div class="order-prg">
-
+        <div class="prg-bar">
+            <span class="prgline01"></span><img class="prg-current" src="../../mstatic/images/icon-disc.png"><span
+                class="prgline01"></span><img class="prg-now" src="../../mstatic/images/prg-now.png"><span class="prgline02"></span><img
+                class="prg-current" src="../../mstatic/images/prg-future.png"><span class="prgline02"></span>
+        </div>
+        <div class="prg-bar">
+            <div class="prg-txt prg-txt01">
+                <p>支付成功</p>
+                <p>2015-04-03</p>
+            </div>
+            <div class="prg-txt prg-txt02">
+                <p>真旅盒子</p>
+                <p>2015-04-12</p>
+            </div>
+            <div class="prg-txt prg-txt03">
+                <p>出行通知</p>
+                <p>2015-04-20</p>
+            </div>
+        </div>
+        <div class="prg-dialog hidden">
+            <div class="dialog-box">
+                <div class="prg-dlg-bar">
+                    <img class="prg-current" src="../../mstatic/images/icon-disc.png"><span class="column-line01"></span><img class="prg-current" src="../../mstatic/images/icon-disc.png">
+                    <span class="column-line01"></span><img class="prg-current01" src="../../mstatic/images/prg-current.png"><span class="column-line01"></span><img
+                        class="prg-current" src="../../mstatic/images/prg-future.png"><span class="column-line02"></span><img class="prg-current" src="../../mstatic/images/prg-future.png">
+                </div>
+                <div class="prg-dlg-box">
+                    <div class="prg-dlg-txt">
+                        <p>支付订单</p>
+                        <p>2015-04-03</p>
+                    </div>
+                    <div class="prg-dlg-txt">
+                        <p>支付成功</p>
+                        <p>2015-04-06</p>
+                    </div>
+                    <div class="prg-dlg-txt">
+                        <p>真旅盒子</p>
+                        <p>2015-04-08</p>
+                    </div>
+                    <div class="prg-dlg-txt01">
+                        <p>出行通知</p>
+                        <p>2015-04-12</p>
+                    </div>
+                    <div class="prg-dlg-txt01">
+                        <p>真旅管家</p>
+                        <p>2015-04-20</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="order-sum">
         <div class="order-til">
@@ -252,6 +301,20 @@
         </div>
     </div>
 </div>
+<script>
+    $(function () {
+        FastClick.attach(document.body);
 
+        $(".prg-now").click(function(){
+            $(".prg-dialog").toggle();
+
+            if(!$(".prg-dialog").hasClass("hidden")){
+                $(document).click(function(){
+                    $(".prg-dialog").removeClass("hidden");
+                });
+            }
+        });
+    });
+</script>
 </body>
 </html>

@@ -224,6 +224,134 @@
     background-color:#fff;
     padding:0.5rem 0;
     margin-bottom: 0.4rem;
+    position: relative;
+}
+.prg-bar{
+    margin:0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+.prg-txt{
+    display: inline-block;
+    line-height:1rem;
+}
+.prg-txt01{
+    font-size: 0.5rem;
+    color:#3fc0ae;
+}
+.prg-txt02{
+    margin:0.1rem 0.9rem;
+    font-size: 0.7rem;
+    color:#3fc0ae;
+}
+.prg-txt03{
+    font-size: 0.5rem;
+    color:#999;
+}
+.prg-dialog{
+    width:10.1rem;
+    height:14rem;
+    overflow: scroll;
+    margin-left:-5rem;
+    border: 15px transparent solid;
+    background-color:#fff;
+    position: absolute;
+    top:3.8rem;
+    left:50%;
+    -webkit-border-image: url(../../mstatic/images/prg-border.png) 25 25 round;
+    -moz-border-image: url(../../mstatic/images/prg-border.png) 25 25 round;
+    -o-border-image: url(../../mstatic/images/prg-border.png) 25 25 round;
+    border-image: url(../../mstatic/images/prg-border.png) 25 25 round;
+}
+.dialog-box{
+    position: relative;
+}
+.prg-dlg-bar{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:1.6rem;
+    padding-left:0.5rem;
+    display: inline-block;
+}
+.column-line01{
+    width: 1px;
+    height:1.8rem;
+    background: url("../images/column-line01.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    display: block;
+    margin-left:0.45rem;
+    vertical-align: middle;
+}
+.column-line02{
+    width: 1px;
+    height:1.8rem;
+    background: url("../images/column-line02.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    display: block;
+    margin-left:0.45rem;
+    vertical-align: middle;
+}
+.prg-dlg-box{
+    position: absolute;
+    top: 0;
+    left:2.3rem;
+    width:5rem;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height:1rem;
+}
+.prg-dlg-txt{
+    color:#3fc0ae;
+    margin-bottom: 0.7rem;
+}
+.prg-dlg-txt:last-child{
+    margin-bottom: 0;
+}
+.prg-dlg-txt01{
+    color:#999;
+    margin-bottom: 0.7rem;
+}
+.prg-dlg-txt01:last-child{
+    margin-bottom: 0;
+}
+.prgline01{
+    width:3rem;
+    height:0.05rem;
+    background: url("../images/prg-line01.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.prgline02{
+    width:3rem;
+    height:0.05rem;
+    background: url("../images/prg-line02.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.prg-current{
+    width: 0.75rem;
+    height:0.75rem;
+    margin:0 0.1rem;
+    vertical-align: middle;
+}
+.prg-current01{
+    width: 1.05rem;
+    height:1.05rem;
+    vertical-align: middle;
+}
+.prg-now{
+    width:0.95rem;
+    height:0.95rem;
+    margin:0 0.4rem;
+    vertical-align: middle;
 }
 .order-sum{
     background-color:#fff;
