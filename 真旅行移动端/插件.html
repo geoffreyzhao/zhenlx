@@ -149,9 +149,16 @@
 		<a href="#popupBasic" data-rel="popup">证件类型</a>
  
 		<div data-role="popup" id="popupBasic" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false">
+			<div class="pop-select-title">请选择</div>
 			<div id="wrapper1" class="height-1">
 				<div id="scroller">
 			  		<ul class="pop-ul-list">
+			  			<li>身份证</li>
+			  			<li>护照</li>
+			  			<li>港澳通行证</li>
+			  			<li>身份证</li>
+			  			<li>护照</li>
+			  			<li>港澳通行证</li>
 			  			<li>身份证</li>
 			  			<li>护照</li>
 			  			<li>港澳通行证</li>
@@ -183,6 +190,8 @@
 		</div>
 
 		<div id="getData">点我，加载（延时模拟），弹出弹窗</div>
+
+		<div id="sexType">点我，性别</div>
 
 		<a href="#popup-datepicker" data-rel="popup">选择日期</a>
  
@@ -306,9 +315,27 @@
 						name: "士官证"
 					}, {
 						name: "其他"
+					},{
+						name: "身份证"
+					}, {
+						name: "护照"
+					}, {
+						name: "同胞证"
+					}, {
+						name: "士官证"
+					}, {
+						name: "其他"
 					}]
         		});
         	}, 500);
+        });
+
+        $("#sexType").click(function(){
+        	$(this).cusListPop({
+        		title: "请选择乘客性别",
+        		scrollId: "sexTypeWrapper",
+        		data: ["男", "女", "男1", "女1", "男2", "女2", "男3", "女3"]
+        	});
         });
 	});
 

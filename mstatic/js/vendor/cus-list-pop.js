@@ -3,7 +3,7 @@
 
 		var defaults = {
 			title: "请选择",
-			scrollId: "wrapper",
+			scrollId: "scroll",
 			maxSize: 5,
 			data: [],
 		};
@@ -13,15 +13,16 @@
 		return this.each(function(){
 			$this = $(this);
 
-			var contId = opts.scrollId + "PopContainer";
+			var container = opts.scrollId + "PopContainer",
+				wrapper = opts.scrollId + "Wrapper";
 
-			if ($("#" + contId).length == 0) {     //  生成DOM并且初始化Popup,IScroll
+			if ($("#" + container).length == 0) {     //  生成DOM并且初始化Popup,IScroll
 
 				if (opts.data.length > 0) {
 
-					var popupTemp = "<div id='" + contId + "' class='list-pop-container'>";
+					var popupTemp = "<div id='" + container + "' class='list-pop-container'>";
 					popupTemp += "<div class='pop-select-title'>" + opts.title + "</div>";
-					popupTemp += "<div id='" + opts.scrollId + "' style='height:200px;'>";
+					popupTemp += "<div id='" + wrapper + "' class='list-scroll-wrapper'>";
 					popupTemp += "<div id='scroller'><ul class='pop-ul-list'>";
 
 					for (var i = 0; i < opts.data.length; i++) {
@@ -49,21 +50,42 @@
 					popupTemp += "</ul></div></div></div>";
 
 					$(this).after(popupTemp);
-					$("#" + contId).popup({
+
+					var liHeight = $("#" + wrapper).find("li:eq(0)").outerHeight(),
+						listHeight = (opts.data.length >= opts.maxSize) ? 
+										opts.maxSize * liHeight : opts.data.length * liHeight,
+						titleHeight = $("#" + container).find(".pop-select-title").outerHeight();
+
+					$("#" + container).css({
+						height: (listHeight + titleHeight) + "px"
+					});
+
+					$("#" + wrapper).css({
+						top: titleHeight + "px"
+					});
+
+					setTimeout(function(){
+						new IScroll("#" + wrapper, {
+							mouseWheel: true
+						});
+					}, 200);
+
+						
+					$("#" + container).popup({
 						theme: 'a',
 						overlayTheme: 'b',
-						transition: 'slideup',
 						positionTo: 'window',
+						transition: 'slideup',
 						corners: false
 					});
 
-					$("#" + contId).popup("open");
+					$("#" + container).popup("open");
 
 				} else {
 					console.log('未获取到数据');
 				}
 			} else {   	//  如果已经有popup结构，跳过生成DOM和初始化，只控制弹窗
-				$("#" + contId).popup("open");
+				$("#" + container).popup("open");
 			}
 		});
 	}
