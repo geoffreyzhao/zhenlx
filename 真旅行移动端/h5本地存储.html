@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试本地存储</title>
+	<script type="text/javascript" src="../../mstatic/js/vendor/underscore.js"></script>
+</head>
+<body>
+
+	<button type="button" onclick="setLocalStorage()">设置localStorage</button>
+	<button type="button" onclick="getLocalStorage()">获取localStorage</button>
+
+	<button type="button" onclick="setSessionStorage()">设置sessionStorage</button>
+	<button type="button" onclick="getProvince()">获取所有省份</button>
+
+	<input type="text" id="text" value="" />
+	<button type="button" onclick="getAddress()">根据输入内容获取地址</button>
+
+	<script type="text/javascript">
+
+		function setLocalStorage() {
+			localStorage.setItem("省", "上海市");	
+		}
+
+		function getLocalStorage() {
+			alert(localStorage.getItem("省"));
+		}
+
+		function setSessionStorage() {
+			sessionStorage.setItem("province", province);
+			sessionStorage.setItem("city", city);
+			sessionStorage.setItem("county", county);
+		}		
+
+		function getProvince() {
+			alert(sessionStorage.getItem("province"));
+		}
+
+		function getAddress() {
+			var val = document.getElementById("text").value;
+
+			if (val == "") {
+				alert(sessionStorage.getItem("province"));		
+			} else {
+				
+			}
+		}
+
+		var province = ["上海市", "北京市", "安徽省", "江苏省", "浙江省"];
+
+		var city = [{
+			'上海市': '上海市'
+		}, {
+			'北京市': '北京市'
+		}, {
+			'安徽省': ['安徽市1', '安徽市2', '安徽市3', '安徽市4', '安徽市5']
+		}, {
+			'江苏省': ['江苏市1', '江苏市2', '江苏市3', '江苏市4', '江苏市5']
+		}, {
+			'浙江省': ['浙江市1', '浙江市2', '浙江市3', '浙江市4', '浙江市5']
+		}];
+
+		var county = [{
+			'上海市': ['宝山区', '闸北区', '浦东新区', '杨浦区', '黄浦区']
+		}, {
+			'安徽市1': ['安徽县1', '安徽县2', '安徽县3', '安徽县4']
+		}, {
+			'江苏市2': ['江苏县']
+		}, {
+			'浙江市3': ['浙江县']
+		}];
+
+	</script>
+	
+</body>
+</html>

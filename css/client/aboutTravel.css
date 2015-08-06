@@ -676,23 +676,23 @@ input[type="text"], input[type="password"]{
 }
 
 .contactUs-block .addr-cont {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
 }
 
 .contactUs-block .tel {
-    font-size: 22px;
+    font-size: 16px;
     color: #666;
 }
 
 .contactUs-block .email {
-    font-size: 14px;
-    color: #999;
+    font-size: 16px;
+    color: #666;
 }
 
 .contactUs-block .wechat-name {
-    font-size: 14px;
-    color: #999;
+    font-size: 16px;
+    color: #666;
 }
 
 .contactUs-block img {
