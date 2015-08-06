@@ -1023,7 +1023,7 @@ input.datepicker {
 
 div.datepicker {
     padding: 15px;
-    background-color: #3c96ca;
+    background-color: #fff;
 }
 
 div.datepicker td,
@@ -1031,23 +1031,25 @@ div.datepicker th {
     width: 35px;
     height: 35px;
     border-radius: 0;
-    color: #fff;
+    color: #666;
     font-size: 12px;
+    border-radius: 3px;
 }
 
 div.datepicker table tr td.day:hover,
 div.datepicker table tr td.day.focused {
-    background-color: #3685bc;
+    background-color: #11b9b7;
     cursor: pointer;
+    color: #fff;
 }
 
 div.datepicker table tr td.today {
-    background: #3685bc;
+    background: #46dcba;
     color: #fff;
 }
 
 div.datepicker table tr td.today:hover {
-    background: #3685bc!important;
+    background: #11b9b7!important;
     color: #fff!important;
 }
 
@@ -1055,25 +1057,25 @@ div.datepicker table tr td.active,
 div.datepicker table tr td.active:hover,
 div.datepicker table tr td.active.disabled,
 div.datepicker table tr td.active.disabled:hover {
-    background: #2472a9!important;
+    background: #11b9b7!important;
     color: #fff;
 }
 
 div.datepicker table tr td.old,
 div.datepicker table tr td.new {
-    color: #7ec0e7;
+    color: #ccc;
 }
 
 .datepicker table tr td span.disabled,
 .datepicker table tr td span.disabled:hover {
-    color: #7ec0e7;
-    background-color: #3c96ca!important;
+    color: #ccc;
+    background-color: #11b9b7!important;
 }
 
 .datepicker table tr td.disabled,
 .datepicker table tr td.disabled:hover {
-    color: #7ec0e7;
-    background-color: #3c96ca!important;
+    color: #ccc;
+    background-color: #11b9b7!important;
 }
 
 div.datepicker table thead .dow {
@@ -1082,11 +1084,11 @@ div.datepicker table thead .dow {
 
 div.datepicker table thead .prev:after {
     content: '';
-    background: url(../../images/datepicker-change-icon.png) no-repeat 0 0;
+    background: url(../../images/client/datepicker-change-icon.png) no-repeat 0 0;
     display: inline-block;
     vertical-align: middle; 
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
 }
 
 div.datepicker table thead .prev:hover {
@@ -1094,7 +1096,7 @@ div.datepicker table thead .prev:hover {
 }
 
 div.datepicker table thead .prev:after:hover {
-    background: url(../../images/datepicker-change-icon.png) no-repeat 0 0;
+    background: url(../../images/client/datepicker-change-icon.png) no-repeat 0 0;
 }
 
 div.datepicker table thead .prev.disabled:after {
@@ -1103,11 +1105,11 @@ div.datepicker table thead .prev.disabled:after {
 
 div.datepicker table thead .next:after {
     content: '';
-    background: url(../../images/datepicker-change-icon.png) no-repeat -26px 0;
+    background: url(../../images/client/datepicker-change-icon.png) no-repeat -28px 0;
     display: inline-block;
     vertical-align: middle; 
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
     cursor: pointer;
 }
 
@@ -1116,7 +1118,7 @@ div.datepicker table thead .next:hover {
 }
 
 div.datepicker table thead .next:after:hover {
-    background: url(../../images/datepicker-change-icon.png) no-repeat -26px 0!important;
+    background: url(../../images/client/datepicker-change-icon.png) no-repeat -28px 0!important;
 }
 
 div.datepicker table thead .next.disabled:after {
@@ -1128,34 +1130,37 @@ div.datepicker .datepicker-switch {
 }
 
 div.datepicker .datepicker-switch:hover {
-    background: #3685bc!important;
+    background: #11b9b7!important;
+    color: #fff;
 }
 
 div.datepicker table tr td span {
-    border-radius: 0;
+    border-radius: 3px;
 }
 
 div.datepicker table tr td span.old,
 div.datepicker table tr td span.new {
-    color: #7ec0e7;
+    color: #ccc;
 }
 
 div.datepicker table tr td span:hover {
-    background-color: #3685bc;
+    background-color: #11b9b7;
+    color: #fff;
 }
 
 div.datepicker table tr td span.active {
-    background: #2472a9!important;
+    background: #11b9b7!important;
+    color: #fff;
 }
 
 .datepicker-dropdown:before,
 .datepicker-dropdown:after {
-    border-bottom-color: #3c96ca!important;
+    /*border-bottom-color: #ccc!important;*/
 }
 
 .datepicker-dropdown.datepicker-orient-bottom:before,
 .datepicker-dropdown.datepicker-orient-bottom:after {
-    border-top-color: #3c96ca!important;
+    /*border-top-color: #ccc!important;*/
 }
 
 /*  重置 bootstrap datepicker 样式（单日历） end  */
