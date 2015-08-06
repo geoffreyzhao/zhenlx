@@ -61,11 +61,12 @@
 	border-radius:3px;
 	margin-bottom:2px;
 	display:inline-block;
-	background:url(../../images/client/feedbackbtn.png) #7f7f7f center center no-repeat;
+	background:url(../../images/client/feedbackbtn.png) #000 center center no-repeat;
+	opacity: 0.6;
 	cursor:pointer;
 }
 .wechatbtn{
-	background:url(../../images/client/wechatbtn.png) #7f7f7f center center no-repeat;
+	background:url(../../images/client/wechatbtn.png) #000 center center no-repeat;
 }
 .feedbackbtn:hover,.wechatbtn:hover,.returnTop:hover{
 	background-color:#11b9b7;
@@ -96,5 +97,5 @@
 }
 .returnTop{
 	display:none;
-	background:url(../../images/client/returnTop.png) #7f7f7f center center no-repeat;
+	background:url(../../images/client/returnTop.png) #000 center center no-repeat;
 }

@@ -799,7 +799,6 @@ $(function(){
         fx:'fade',
         timeout: 2000,
         speed: 1500, 
-        pause: true,
         prev:".bannerbtn .leftbtn",
         next:".bannerbtn .rightbtn"
       });
@@ -807,20 +806,23 @@ $(function(){
         fx:'fade',
         timeout: 2000,
         speed: 1500, 
-        pause: true,
         prev:".bannerbtn .leftbtn",
         next:".bannerbtn .rightbtn"
       });
 
-      $(".product li").hover(function(){
+      $(".plus-icon-1").hover(function(){
         $('.cont-slide').cycle("pause");
-      }, function(){
-        $('.cont-slide').cycle("resume");
-      });
-
-      $(".cont-slide li").hover(function(){
         $('.product').cycle("pause");
       }, function(){
+        $('.cont-slide').cycle("resume");
+        $('.product').cycle("resume");
+      });
+
+      $(".plus-icon-2").hover(function(){
+        $('.cont-slide').cycle("pause");
+        $('.product').cycle("pause");
+      }, function(){
+        $('.cont-slide').cycle("resume");
         $('.product').cycle("resume");
       });
     }

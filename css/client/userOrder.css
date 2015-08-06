@@ -184,20 +184,20 @@
 .order-titleBlock .left-semicircle {
     position: absolute;
     bottom:-6px;
-    left:0px;
+    left:-1px;
     width:6px;
     height: 12px;
     border-radius:0 6px 6px 0;
-    background: #0b7e96;
+    background: #0c8295;
 }
 .order-titleBlock .right-semicircle {
     position: absolute;
     bottom:-6px;
-    right:0px;
+    right:-1px;
     width:6px;
     height: 12px;
     border-radius:6px 0 0 6px;
-    background: #0b7e96;
+    background: #0c8295;
 }
 /* 机票 */
 .order-conBlock {
