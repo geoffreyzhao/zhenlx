@@ -41,7 +41,7 @@
     <div class="order-prg">
         <div class="prg-bar">
             <span class="prgline01"></span><img class="prg-current" src="../../mstatic/images/icon-disc.png"><span
-                class="prgline01"></span><img class="prg-now" src="../../mstatic/images/prg-now.png"><span class="prgline02"></span><img
+                class="prgline01"></span><img class="prg-now" id="prg-now" src="../../mstatic/images/prg-now.png"><span class="prgline02"></span><img
                 class="prg-current" src="../../mstatic/images/prg-future.png"><span class="prgline02"></span>
         </div>
         <div class="prg-bar">
@@ -305,15 +305,17 @@
     $(function () {
         FastClick.attach(document.body);
 
-        $(".prg-now").click(function(){
-            $(".prg-dialog").toggle();
+        $("#prg-now").click(function(event){
+            $(".prg-dialog").toggleClass("hidden");
 
             if(!$(".prg-dialog").hasClass("hidden")){
                 $(document).click(function(){
-                    $(".prg-dialog").removeClass("hidden");
+                    $(".prg-dialog").addClass("hidden");
                 });
             }
+            event.stopPropagation();
         });
+
     });
 </script>
 </body>

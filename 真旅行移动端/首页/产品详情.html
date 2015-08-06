@@ -117,10 +117,10 @@
                         <label class="arrow-up" data-role="none"></label>
                         <div class="tip-box">
                             <p class="sun-cnt">小圈和大圈是暹粒旅行中  不可不知的两条经典游览线路。无数实践证明，这两条线路是最高效省时的游览方式。柬埔寨是热带国家，温度普遍很高，多准备一些夏天衣服1-3月平均参考温度是21-35摄氏度，天气稍炎热。在参观寺庙时女性请勿穿着吊带和膝盖以上的短裙，同时请注意防晒，使用防晒指数较高的防晒霜。</p>
-                            <p class="bag-cnt hidden">购物提示，购物提示，购物提示……</p>
-                            <p class="tower-cnt hidden">通讯提示，通讯提示，通讯提示……</p>
-                            <p class="loca-cnt hidden">风俗提示，风俗提示，风俗提示……</p>
-                            <p class="list-cnt hidden">其他提示，其他提示，其他提示……</p>
+                            <p class="bag-cnt hidden">购物提示，购物提示，购物提示，购物提示，购物提示，购物提示……</p>
+                            <p class="tower-cnt hidden">通讯提示，通讯提示，通讯提示，通讯提示，通讯提示，通讯提示……</p>
+                            <p class="loca-cnt hidden">风俗提示，风俗提示，风俗提示，风俗提示，风俗提示，风俗提示……</p>
+                            <p class="list-cnt hidden">其他提示，其他提示，其他提示，其他提示，其他提示，其他提示……</p>
                         </div>
                     </li>
                     <li>
@@ -348,14 +348,14 @@
                 <div class="prd-space"></div>
                 <h3 class="hotel-til clearfix">查看入住须知及酒店设施<span class="fr arr-upside"></span></h3>
                 <div class="hotel-info">
-                    <h3>入住须知</h3>
+                    <p>入住须知</p>
                     <p>入住时间：14:30 - 00:00 时</p>
                     <p>退房时间：06:00 - 12:00 时</p>
-                    <h3>预订取消/预付政策</h3>
+                    <p>预订取消/预付政策</p>
                     <p>不同类型的客房附带不同的取消预订和预先付费政策，请输入您的入住日期并参阅您所需的客房的条款</p>
-                    <h3>儿童和加床</h3>
+                    <p>儿童和加床</p>
                     <p>允许客人携带儿童入住</p>
-                    <h3>宠物</h3>
+                    <p>宠物</p>
                     <p>不允许携带宠物入住</p>
                     <div class="inst-til">
                         <h3><label class="inst-icon inst01"></label>综合设施：</h3>
@@ -549,6 +549,14 @@
 <script>
     $(function(){
         FastClick.attach(document.body);
+
+        $(window).scroll(function(){
+            if($(this).scrollTop() >= 800){
+                $(".navbar").addClass("navbarFix");
+            }else{
+                $(".navbar").removeClass("navbarFix");
+            }
+        });
 
         var til = $(".title").text().trim();
         var subtil = '';

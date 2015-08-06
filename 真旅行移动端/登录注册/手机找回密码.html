@@ -44,11 +44,18 @@
         <div class="main-row01">
             <div class="row-til">验证码</div>
             <input class="row-input" type="text" data-role="none">
-            <div class="row-vld">获取验证码</div>
+            <a class="row-vld" href="#alert-dialog" data-rel="popup" data-transition="pop" data-position-to="window">获取验证码</a>
             <div style="clear: both;"></div>
         </div>
         <div class="main-next">
             <a class="link-fin" href="重置密码.html" data-transition="slidefade">下一步</a>
+        </div>
+    </div>
+    <!--弹窗-->
+    <div class="ui-content" data-role="popup" id="alert-dialog" data-theme="a" data-overlay-theme="b">
+        <p class="dlg-cnt">验证码获取失败,请重新获取</p>
+        <div class="dlg-foot">
+            <a class="btn-confirm" data-role="none" href="javascript:void(0);" data-rel="back">好的</a>
         </div>
     </div>
 </div>
