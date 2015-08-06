@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/underscore.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
-	<script type="text/javascript" src="../../mstatic/js/vendor/datepicker-scroll-update.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/vendor/datepicker-scroll.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/cus-list-pop.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
 	<title>插件--带样式</title>
@@ -45,17 +45,17 @@
 
 		//  弹窗弹出，禁止页面滚动，待放入 common.js
 
-		// $("div[data-role='popup']").popup({
-  //           afteropen: function(){
-  //               $(".ui-popup-screen").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
-  //                   return false;
-  //               });
+		$("div[data-role='popup']").popup({
+            afteropen: function(){
+                $(".ui-popup-screen").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
+                    return false;
+                });
 
-  //               $(".pop-select-title").bind("touchmove", function(){
-  //                   return false;
-  //               });
-  //           }
-  //       });
+                $(".pop-select-title").bind("touchmove", function(){
+                    return false;
+                });
+            }
+        });
 
         $("#sexType").click(function(){
         	$(this).cusListPop({
@@ -129,37 +129,22 @@
         var dp = new DatepickerScroll("#birthdate", {
         	startYear: 1900,
 			endYear: 2015,
-			defaultDate: new Date(1980,0,1)
+			defaultDate: new Date(1980,0,1),
+			cancelCallback: function(){
+				console.log(1);
+			},
+			confirmCallback: function() {
+				console.log(2);
+			}
         }).init();
 
         $("#birthdate").click(function(){
+        	dp.setDate(new Date(1980,0,1));
         	$("#birthdateDatepicker").popup("open");
-
-        	$(".dp-cancel-btn").click(function(){
-
-        		$("#birthdateDatepicker").popup("close");
-
-        		$("#birthdateDatepicker").popup({
-        			afterclose: function() {
-        				dp.setDate(new Date(1980,0,1));
-        			}
-        		});
-        	});
-
-        	$(".dp-sure-btn").click(function(){
-
-        		$("#birthdateDatepicker").popup("close");
-
-        		$("#birthdateDatepicker").popup({
-        			afterclose: function() {
-        				alert(dp.getDate());
-        			}
-        		});        		
-        	});
         });
 
-        // dp.setDate(new Date());
-        // dp.getDate();
+        // dp.setDate(new Date());   设置时间
+        // dp.getDate();  //  获取时间
         
 	});
 
