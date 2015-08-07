@@ -535,13 +535,147 @@
                 <p>出行日期：<span class="prd-order-span">6月7日</span></p>
                 <p>出行人数：<span>成人1 儿童2</span></p>
             </div>
-            <div class="ui-block-b arr-click">
-                <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn-inline"><span class="arr-up"></span></a>
-                <div data-role="popup" id="popupMenu" data-overlay-theme="b" data-corners="false" class="order-detail">
-                    <div class="">6月份</div>
-                </div>
+            <div class="ui-block-b">
+                <a href="#popupMenu" id="popup-click" data-rel="popup"><span class="arr-up"></span></a>
             </div>
             <div class="ui-block-c"><a class="order-link" href="javascript:void(0);">立即预订</a></div>
+        </div>
+    </div>
+
+    <!--底部弹窗-->
+    <div class="menu-dlg" id="popupMenu" data-role="popup" data-transition="slideup" data-position-to="window" data-theme="a" data-overlay-theme="b" data-corners="false">
+        <div class="menu-list">
+            <ul class="clearfix">
+                <li class="list-cut">6月季</li>
+                <li>7月季</li>
+                <li>8月季</li>
+            </ul>
+        </div>
+        <div id="menu-row-box">
+            <div class="menu-row">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">6月1日</div>
+                    <div class="ui-block-b">周四</div>
+                    <div class="ui-block-c">余票10</div>
+                    <div class="ui-block-d">￥2888</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">6月4日</div>
+                    <div class="ui-block-b">周五</div>
+                    <div class="ui-block-c sold-out">售罄</div>
+                    <div class="ui-block-d">￥1978</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">6月5日</div>
+                    <div class="ui-block-b">周六</div>
+                    <div class="ui-block-c">余票6</div>
+                    <div class="ui-block-d">￥2888</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">6月5日</div>
+                    <div class="ui-block-b">周日</div>
+                    <div class="ui-block-c">余票3</div>
+                    <div class="ui-block-d">￥2888</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">6月5日</div>
+                    <div class="ui-block-b">周一</div>
+                    <div class="ui-block-c">余票7</div>
+                    <div class="ui-block-d">
+                        <p><span class="menu-row-til">成人：</span>￥1978</p>
+                        <p><span class="menu-row-til">儿童：</span><span class="nenu-row-num">￥1256</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-row hidden">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">7月2日</div>
+                    <div class="ui-block-b">周三</div>
+                    <div class="ui-block-c">余票20</div>
+                    <div class="ui-block-d">￥1988</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">7月3日</div>
+                    <div class="ui-block-b">周四</div>
+                    <div class="ui-block-c sold-out">售罄</div>
+                    <div class="ui-block-d">￥2199</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">7月4日</div>
+                    <div class="ui-block-b">周五</div>
+                    <div class="ui-block-c">余票11</div>
+                    <div class="ui-block-d">￥3888</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">7月5日</div>
+                    <div class="ui-block-b">周六</div>
+                    <div class="ui-block-c">余票21</div>
+                    <div class="ui-block-d">￥2888</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">7月6日</div>
+                    <div class="ui-block-b">周日</div>
+                    <div class="ui-block-c sold-out">售罄</div>
+                    <div class="ui-block-d">￥2199</div>
+                </div>
+            </div>
+            <div class="menu-row hidden">
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">8月1日</div>
+                    <div class="ui-block-b">周四</div>
+                    <div class="ui-block-c">余票28</div>
+                    <div class="ui-block-d">￥2008</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">8月2日</div>
+                    <div class="ui-block-b">周五</div>
+                    <div class="ui-block-c sold-out">余票12</div>
+                    <div class="ui-block-d">
+                        <p><span class="menu-row-til">成人：</span>￥1978</p>
+                        <p><span class="menu-row-til">儿童：</span><span class="nenu-row-num">￥1256</span></p>
+                    </div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">8月3日</div>
+                    <div class="ui-block-b">周六</div>
+                    <div class="ui-block-c">余票6</div>
+                    <div class="ui-block-d">￥2888</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">8月4日</div>
+                    <div class="ui-block-b">周日</div>
+                    <div class="ui-block-c">余票14</div>
+                    <div class="ui-block-d">￥2888</div>
+                </div>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">8月5日</div>
+                    <div class="ui-block-b">周一</div>
+                    <div class="ui-block-c sold-out">售罄</div>
+                    <div class="ui-block-d">￥2888</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-sum-box">
+            <i class="left-semicircle"></i>
+            <i class="right-semicircle"></i>
+            <div class="menu-sum clearfix">
+                成人<span class="pop-num">1</span><span class="menu-arr-down"></span>
+            </div>
+            <div class="menu-sum clearfix">
+                儿童数<span class="menu-arr-down"></span>
+            </div>
+        </div>
+        <div class="menu-order">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <p>出行日期：<span class="prd-order-span">6月7日</span></p>
+                    <p>出行人数：<span>成人1 儿童2</span></p>
+                </div>
+                <div class="ui-block-b arr-click">
+                    <a href="javascript:void(0);" data-rel="back"><span class="arr-down"></span></a>
+                </div>
+                <div class="ui-block-c"><a class="order-link" href="javascript:void(0);">立即预订</a></div>
+            </div>
         </div>
     </div>
 </div>
@@ -624,6 +758,34 @@
                 $(".pack-up").slideDown();
             }
         });
+
+        $(".menu-row").bind("touchmove", function(event){
+            $(".detail-content").touchmove(function(){
+                return false;
+            })
+
+        });
+
+//        if($("#popupMenu").parents().hasClass("ui-screen-hidden")){
+//            $("html,body").css( "overflow-y", "visible");
+//        }
+
+        $(".menu-list ul li").click(function(){
+            var listInd = $(this).index();
+            var listObj = $(".menu-list ul li").eq(listInd);
+
+            listObj.siblings().removeClass("list-cut");
+            if(!listObj.hasClass("list-cut")){
+                listObj.addClass("list-cut");
+            }
+
+            var rowboxObj = $("#menu-row-box .menu-row").eq(listInd);
+            rowboxObj.siblings().addClass("hidden");
+            if(rowboxObj.hasClass("hidden")){
+                rowboxObj.removeClass("hidden");
+            }
+        });
+
     });
 </script>
 </body>

@@ -792,6 +792,7 @@
 }
 .prd-footer{
     padding:0.25rem 0;
+    margin-bottom: 2.4rem;
     background-color:#1dafae;
     text-align: center;
     color:#8efff5;
@@ -806,12 +807,12 @@
     right: 0;
     background-color:#fff;
 }
-.prd-order .ui-grid-b .ui-block-a{
+.prd-order .ui-grid-b .ui-block-a, .menu-order .ui-grid-b .ui-block-a{
     width:50%;
     padding:0.2rem 0.5rem;
     font-size: 0.55rem;
     color:#999;
-    line-height:1rem;
+    line-height:0.8rem;
 }
 .arr-up{
     width:0.75rem;
@@ -831,11 +832,11 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-.prd-order .ui-grid-b .ui-block-b{
+.prd-order .ui-grid-b .ui-block-b, .menu-order .ui-grid-b .ui-block-b{
     width:10%;
     padding:0.5rem 0;
 }
-.prd-order .ui-grid-b .ui-block-c{
+.prd-order .ui-grid-b .ui-block-c, .menu-order .ui-grid-b .ui-block-c{
     width:40%;
     text-align: center;
     background-color: #ffa200;
@@ -846,9 +847,10 @@
 }
 .order-link{
     display: inline-block;
-    padding:0.85rem 0;
+    padding:0.7rem 0;
     color:#fff !important;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
+    font-weight: normal !important;
 }
 .order-detail{
     width:100%;
@@ -858,6 +860,148 @@
     left:0;
     background-color: #fff;
     z-index: 2;
-
+}
+.menu-dlg{
+    background-color:#f0f0f0;
+    font-size: 0.75rem;
+    color:#666;
+}
+.menu-list{
+    padding:0.4rem 0.5rem 0.2rem;
+}
+.menu-list ul{
+    width:15rem;
+}
+.menu-list ul li{
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+    background-color:#fff;
+}
+.menu-list ul li:first-child{
+    width:33%;
+    border: 1px #3fc0ae solid;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.menu-list ul li:nth-child(2){
+    width:34%;
+    border-top:1px #3fc0ae solid;
+    border-bottom:1px #3fc0ae solid;
+}
+.menu-list ul li:last-child{
+    width:33%;
+    border: 1px #3fc0ae solid;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.list-cut{
+    background-color:#3fc0ae !important;
+    color:#fff;
+}
+.sold-out{
+    color:#999 !important;
+}
+.menu-row{
+    width:100%;
+    height:10rem;
+    overflow: scroll;
+}
+.menu-row-focus{
+    border:4px #3fc0ae solid;
+}
+.menu-row .ui-grid-c{
+    margin:0.25rem 0;
+    padding:0 0.5rem;
+    background-color: #fff;
+}
+.menu-row .ui-grid-c .ui-block-a{
+    width:25%;
+    text-align: center;
+    padding:0.5rem 0;
+}
+.menu-row .ui-grid-c .ui-block-b{
+    width:15%;
+    font-size: 0.6rem;
+    text-align: center;
+    padding:0.5rem 0;
+}
+.menu-row .ui-grid-c .ui-block-c{
+    width:25%;
+    text-align: right;
+    color:#ffa200;
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right:0.5rem;
+    border-right:1px #f0f0f0 dashed;
+}
+.menu-row .ui-grid-c .ui-block-d{
+    width:35%;
+    text-align: right;
+    color:#ffa200;
+    font-size: 1rem;
+    line-height:2rem;
+    vertical-align: middle;
+}
+.menu-row .ui-grid-c .ui-block-d p{
+    font-size: 0.9rem;
+    line-height:0.9rem;
+}
+.menu-row-til{
+    font-size: 0.6rem;
+    color:#999;
+}
+.nenu-row-num{
+    color:#999;
+}
+.left-semicircle{
+    position: absolute;
+    top:-0.25rem;
+    left:0;
+    width:0.2rem;
+    height: 0.4rem;
+    border-radius:0 0.2rem 0.2rem 0;
+    background: #3fc0ae;
+}
+.right-semicircle{
+    position: absolute;
+    top:-0.25rem;
+    right:0;
+    width:0.2rem;
+    height: 0.4rem;
+    border-radius:0.2rem 0 0 0.2rem;
+    background: #3fc0ae;
+}
+.menu-order{
+    background-color:#fff;
+}
+.menu-sum-box{
+    position: relative;
+    margin-top:0.5rem;
+    padding-top:0.2rem;
+    border-top: 1px #3fc0ae dashed;
+}
+.menu-sum{
+    background-color:#fff;
+    padding:0.5rem;
+    margin:0.25rem 0;
+}
+.pop-num{
+    color:#ffa200;
+    padding:0 0.2rem;
+}
+.menu-arr-down{
+    width:0.625rem;
+    height:0.4rem;
+    margin:0.3rem;
+    vertical-align: middle;
+    display: inline-block;
+    float: right;
+    background: #fff url("../../mstatic/images/arr-bottom.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
 }
 /** end **/
