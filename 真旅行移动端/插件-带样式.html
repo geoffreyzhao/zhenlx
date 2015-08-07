@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="../../mstatic/js/vendor/addresspicker-scroll.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/cus-list-pop.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+	<script src="http://10.3.40.76:8080/target/target-script-min.js#anonymous"></script>
 	<title>插件--带样式</title>
 
 	<script type="text/javascript">
@@ -37,7 +38,16 @@
 
 		<div id="birthdate">点击选择日期</div>
 
-		<div id="birthdate">点击选择地址</div>		
+		<div id="address">点击选择地址</div>
+
+		<div data-role="popup" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false" style="height:10.25rem;">
+			<div class="addresspicker-top-block">
+				<div class="dp-cancel-btn">取消</div>
+				<div class="title">请选择城市</div>
+				<div class="dp-sure-btn">确定</div>
+			</div>
+			<div id="addressWrapperContainer" class="addresspicker-scroll"></div>
+		</div>
 	</div>
 
 <script type="text/javascript">
@@ -58,6 +68,53 @@
                     return false;
                 });
             }
+        });
+
+        var province = ["上海市", "北京市", "安徽省", "江苏省", "浙江省"];
+
+        var city = [{
+        	parent: "上海市",
+        	children: ['上海市', '上海市']
+        }, {
+        	parent: "北京市",
+        	children: ['北京市']
+        }, {
+        	parent: "安徽省",
+        	children: ['安徽市1', '安徽市2', '安徽市3', '安徽市4', '安徽市5']
+        }, {
+        	parent: "江苏省",
+        	children: ['江苏市1', '江苏市2', '江苏市3', '江苏市4', '江苏市5']
+        }, {
+        	parent: "浙江省",
+        	children: ['浙江市1', '浙江市2', '浙江市3', '浙江市4', '浙江市5']
+        }];
+
+        var county = [{
+        	parent: "上海市",
+        	children: ['宝山区', '闸北区', '浦东区', '杨浦区', '黄浦区']
+        }, {
+        	parent: "北京市",
+        	children: ['朝阳区']
+        }, {
+        	parent: "安徽市2",
+        	children: ['安徽县1', '安徽县2', '安徽县3', '安徽县4']
+        }, {
+        	parent: "江苏市3",
+        	children: ['江苏县']
+        }, {
+        	parent: "浙江市4",
+        	children: ['浙江县']
+        }];
+
+        sessionStorage.clear();
+        sessionStorage.setItem("province", JSON.stringify(province));
+        sessionStorage.setItem("city", JSON.stringify(city));
+        sessionStorage.setItem("county", JSON.stringify(county));
+
+        $("#addressWrapperContainer").addressPicker({});
+
+        $("#address").click(function(){
+        	$("#addressWrapperContainer").closest("div[data-role='popup']").popup("open");
         });
 
         $("#sexType").click(function(){

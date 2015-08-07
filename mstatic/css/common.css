@@ -395,3 +395,87 @@ input[type="checkbox"]:checked + .cus_checkbox {
 	border: none;
 	box-shadow: none;
 }
+
+/*  城市选择插件样式  */
+.address-wrapper {
+	display: inline-block;
+	text-align: center;
+	width: 33%;
+	height: 8.75rem;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 33%;
+}
+
+.address-wrapper:nth-child(2) {
+	left: 0;
+}
+
+.address-wrapper:last-child {
+	left: 66%;
+}
+
+.selected-address-bar {
+	position: absolute;
+	top: 3.5rem;
+	background-color: #fff;
+	width: 100%;
+	height: 1.75rem;
+}
+.addresspicker-scroll {
+	position: absolute;
+    z-index: 2000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    top: 1.5rem;
+    background-color: #f5f5f5;
+}
+.addresspicker-scroll li {
+	height: 1.75rem;
+	line-height: 1.75rem;
+	color: #999;
+	font-size: 0.65rem;
+
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.addresspicker-scroll li.current {
+	-webkit-transform: scale(1.2, 1.2);
+	   -moz-transform: scale(1.2, 1.2);
+	    -ms-transform: scale(1.2, 1.2);
+	     -o-transform: scale(1.2, 1.2);
+	        transform: scale(1.2, 1.2);
+	color: #1cb0ad;
+}
+
+.addresspicker-top-block {
+	position: relative;
+	height: 1.5rem;
+    line-height: 1.5rem;
+    background-color: #1cb0ad;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.addresspicker-top-block .dp-cancel-btn {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+
+.addresspicker-top-block .dp-sure-btn {
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+}
+
+.addresspicker-top-block .title {
+	display: inline-block;
+	position: static;
+	width: 33%;
+	text-align: center;
+}

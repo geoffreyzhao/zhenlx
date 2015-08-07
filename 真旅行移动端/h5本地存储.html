@@ -3,72 +3,102 @@
 <head>
 	<meta charset="UTF-8">
 	<title>测试本地存储</title>
+	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/underscore.js"></script>
 </head>
 <body>
 
-	<button type="button" onclick="setLocalStorage()">设置localStorage</button>
-	<button type="button" onclick="getLocalStorage()">获取localStorage</button>
 
-	<button type="button" onclick="setSessionStorage()">设置sessionStorage</button>
-	<button type="button" onclick="getProvince()">获取所有省份</button>
+	<button type="button" onclick="setSessionStorage()">设置sessionStorage</button><br>
 
-	<input type="text" id="text" value="" />
+	省<input type="text" id="province" value="" /><br>
+	城市<input type="text" id="city" value="" /><br>
+
 	<button type="button" onclick="getAddress()">根据输入内容获取地址</button>
+
+	<button type="button" onclick="sessionStorage.clear();">清除sessionStorage</button>
 
 	<script type="text/javascript">
 
-		function setLocalStorage() {
-			localStorage.setItem("省", "上海市");	
-		}
-
-		function getLocalStorage() {
-			alert(localStorage.getItem("省"));
-		}
-
 		function setSessionStorage() {
-			sessionStorage.setItem("province", province);
-			sessionStorage.setItem("city", city);
-			sessionStorage.setItem("county", county);
+			sessionStorage.setItem("province", JSON.stringify(province));
+			sessionStorage.setItem("city", JSON.stringify(city));
+			sessionStorage.setItem("county", JSON.stringify(county));
 		}		
 
-		function getProvince() {
-			alert(sessionStorage.getItem("province"));
-		}
-
 		function getAddress() {
-			var val = document.getElementById("text").value;
 
-			if (val == "") {
-				alert(sessionStorage.getItem("province"));		
+			var val_p = document.getElementById("province").value,
+				val_c = document.getElementById("city").value;
+
+			var pro_arr = JSON.parse(sessionStorage.getItem("province")),
+				city_arr = JSON.parse(sessionStorage.getItem("city")),
+				county_arr = JSON.parse(sessionStorage.getItem("county"));
+
+			if (val_p == "") {
+				// console.log(JSON.parse(sessionStorage.getItem("province")));
+				alert(JSON.parse(sessionStorage.getItem("province")));
 			} else {
-				
+				var pluck_pro_arr = _.pluck(city_arr, 'parent'),
+					index_1 = _.indexOf(pluck_pro_arr, val_p);
+
+				if (index_1 != -1) {
+					// console.log(city_arr[index_1].children);
+					alert(city_arr[index_1].children);
+				} else {
+					// console.log('没有这个省');
+					alert('没有这个省');
+				}
+			}
+
+			var pluck_city_arr = _.pluck(county_arr, 'parent'),
+				index_2 = _.indexOf(pluck_city_arr, val_c);
+
+			if (index_2 != -1) {
+				// console.log(county_arr[index_2].children);
+				alert(county_arr[index_2].children);
+			} else {
+				// console.log('没有这个市');
+				alert('没有这个市');
 			}
 		}
 
 		var province = ["上海市", "北京市", "安徽省", "江苏省", "浙江省"];
 
 		var city = [{
-			'上海市': '上海市'
+			parent: "上海市",
+			children: ['上海市']
 		}, {
-			'北京市': '北京市'
+			parent: "北京市",
+			children: ['北京市']
 		}, {
-			'安徽省': ['安徽市1', '安徽市2', '安徽市3', '安徽市4', '安徽市5']
+			parent: "安徽省",
+			children: ['安徽市1', '安徽市2', '安徽市3', '安徽市4', '安徽市5']
 		}, {
-			'江苏省': ['江苏市1', '江苏市2', '江苏市3', '江苏市4', '江苏市5']
+			parent: "江苏省",
+			children: ['江苏市1', '江苏市2', '江苏市3', '江苏市4', '江苏市5']
 		}, {
-			'浙江省': ['浙江市1', '浙江市2', '浙江市3', '浙江市4', '浙江市5']
+			parent: "浙江省",
+			children: ['浙江市1', '浙江市2', '浙江市3', '浙江市4', '浙江市5']
 		}];
 
 		var county = [{
-			'上海市': ['宝山区', '闸北区', '浦东新区', '杨浦区', '黄浦区']
+			parent: "上海市",
+			children: ['宝山区', '闸北区', '浦东新区', '杨浦区', '黄浦区']
 		}, {
-			'安徽市1': ['安徽县1', '安徽县2', '安徽县3', '安徽县4']
+			parent: "北京市",
+			children: ['朝阳区']
 		}, {
-			'江苏市2': ['江苏县']
+			parent: "安徽市2",
+			children: ['安徽县1', '安徽县2', '安徽县3', '安徽县4']
 		}, {
-			'浙江市3': ['浙江县']
+			parent: "江苏市3",
+			children: ['江苏县']
+		}, {
+			parent: "浙江市4",
+			children: ['浙江县']
 		}];
+		
 
 	</script>
 	
