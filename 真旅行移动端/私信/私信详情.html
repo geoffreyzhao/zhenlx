@@ -38,14 +38,20 @@
 			</div>
 		</div>
 		<div class="wrapper backGauge">
-			<div id="wrapper">
-				<div id="scroller">
+			<!--<div id="wrapper">-->
+				<!--<div id="scroller">-->
 					<!--<div id="pullDown">
 						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
 					</div>-->
                     <div class="dialogue clearfix">
                         <span class="dialogueTitle">对话</span>
-                        <span class="blueBigBtn deleteAllInfo">删除对话</span>
+                        <a class="blueBigBtn deleteAllInfo" data-rel="popup" href="#confirmWindow">删除对话</a>
+                        <div class="ui-content" data-role="popup" id="confirmWindow" data-transition="pop" data-position-to="window" data-theme="a" data-overlay-theme="b">
+                            <p class="dlg-cnt">删除全部对话吗？</p>
+                            <div class="dlg-foot">
+                                <a class="btn-com btn-confirm" data-role="none" href="javascript:void(0);">确 定</a><a class="btn-com btn-cancel" data-role="none" href="javascript:void(0);" data-rel="back">取 消</a>
+                            </div>
+                        </div>
                     </div>
                     <ul class="listContent changeList">
                         <li class="current">
@@ -124,26 +130,38 @@
                                 </div>
                             </div>
                         </li>
+                        <li>
+                            <div class="leftPhoto">
+                                <img src="../../mstatic/images/privatePhoto02.png">
+                            </div>
+                            <div class="rightDetails">
+                                <div class="nameAndTime clearfix">
+                                    <span class="nameFonts">鳄鱼妈妈</span>
+                                    <span class="timeFonts">2015-05-02</span>
+                                </div>
+                                <div>
+                                    <p>图片都是盗自小爆，她负责美图和高冷；我负责路线安排和吃喝。</p>
+                                </div>
+                                <div class="deleteInfo">
+                                    <span class="clickArea">
+                                        <span class="deleteIcon"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
 					<!--<div id="pullUp">
 						<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
 					</div>-->
-				</div>
-			</div>
-		</div>
-	</div>
-    <div class="bottomFixModel">
-        <input type="text" class="bottomFixInput" placeholder="请输入……">
-        <a href="javascript:void(0);" class="blueSolidBtn">发送</a>
-    </div>
+				<!--</div>-->
+			<!--</div>-->
 
-    <div data-role="popup" id="confirmWindow">
-        <div class="cont">删除所有对话吗？</div>
-        <div class="confirmBtn">
-            <div class="leftBtn">确 认</div>
-            <div class="rightBtn">取 消</div>
+		</div>
+        <div class="bottomFixModel">
+            <input type="text" class="bottomFixInput" data-role="none" placeholder="请输入……">
+            <a href="javascript:void(0);" class="blueSolidBtn">发送</a>
         </div>
-    </div>
+	</div>
     
 <script type="text/javascript">
 	$(function(){
@@ -182,6 +200,11 @@
         });
         
         $(".leftBtn, .rightBtn").click(function(){   // 使用tap方法有穿透现象
+            $("#confirmWindow").popup("close");
+        });
+
+        $(".dlg-foot .btn-confirm").click(function(){
+            $(".listContent li").hide("fast");
             $("#confirmWindow").popup("close");
         });
         

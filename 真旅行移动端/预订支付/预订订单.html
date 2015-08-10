@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/cus-list-pop.js"></script>
     <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
     <title>预订订单</title>
 
@@ -134,14 +135,8 @@
     <div class="order-hotel-bed">
         <div class="order-hotel-bedTil">偏好的酒店床型：</div>
         <div class="order-hotel-op">
-            <label>
-                <input type="radio" name="bed" value="single" data-role="none" checked>
-                <label class="cus_radio"></label>
-            </label>优选大床房
-            <label>
-                <input type="radio" name="bed" value="couple" data-role="none">
-                <label class="cus_radio"></label>
-            </label>优选双床房
+            <label class="order-checkbox order-checkbox-checked"></label>优选大床房
+            <label class="order-checkbox"></label>优选双床房
         </div>
     </div>
     <div class="order-traveler-til clearfix">
@@ -152,7 +147,7 @@
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">旅客中文名</div>
             <div class="ui-block-b"><input class="traveler-val" type="text" placeholder="请输入姓" data-role="none"></div>
-            <div class="ui-block-c"><span class="travel-lab">常旅客</span></div>
+            <div class="ui-block-c"><a class="travel-lab" href="javascript:void(0);">常旅客</a></div>
         </div>
         <div class="ui-grid-a">
             <div class="ui-block-a">&nbsp;</div>
@@ -169,7 +164,7 @@
         </div>
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">旅客类型</div>
-            <div class="ui-block-b traveler-val">成人</div>
+            <div class="ui-block-b traveler-val"><input class="traveler-val" type="text" value="成人" data-role="none"></div>
             <div class="ui-block-c">&nbsp;</div>
         </div>
         <div class="ui-grid-b traveler-row">
@@ -210,7 +205,7 @@
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">旅客中文名</div>
             <div class="ui-block-b"><input class="traveler-val" type="text" placeholder="请输入姓" value="耶" data-role="none"></div>
-            <div class="ui-block-c"><span class="travel-lab">常旅客</span></div>
+            <div class="ui-block-c"><a class="travel-lab" href="javascript:void(0);">常旅客</a></div>
         </div>
         <div class="ui-grid-a">
             <div class="ui-block-a">&nbsp;</div>
@@ -227,7 +222,7 @@
         </div>
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">旅客类型</div>
-            <div class="ui-block-b traveler-val">成人</div>
+            <div class="ui-block-b traveler-val"><input class="traveler-val" type="text" value="成人" data-role="none"></div>
             <div class="ui-block-c">&nbsp;</div>
         </div>
         <div class="ui-grid-b traveler-row">
@@ -274,17 +269,17 @@
     <div class="order-traveler-box">
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">旅客姓名</div>
-            <div class="ui-block-b traveler-val">蓝桥</div>
+            <div class="ui-block-b traveler-val"><input class="traveler-val" type="text" placeholder="旅客姓名" value="蓝桥" data-role="none"></div>
             <div class="ui-block-c">&nbsp;</div>
         </div>
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">手机号码</div>
-            <div class="ui-block-b traveler-val">18612345678</div>
+            <div class="ui-block-b traveler-val"><input class="traveler-val" type="text" placeholder="手机号码" value="18612345678" data-role="none"></div>
             <div class="ui-block-c">&nbsp;</div>
         </div>
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">邮箱地址</div>
-            <div class="ui-block-b traveler-val">lanqiao@gmail.com</div>
+            <div class="ui-block-b traveler-val"><input class="traveler-val" type="email" placeholder="邮箱地址" value="lanqiao@gmail.com" data-role="none"></div>
             <div class="ui-block-c">&nbsp;</div>
         </div>
         <div class="ui-grid-b traveler-row">
@@ -294,7 +289,7 @@
         </div>
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">详细地址</div>
-            <div class="ui-block-b traveler-val">东方明珠特1号</div>
+            <div class="ui-block-b traveler-val"><input class="traveler-val" type="text" placeholder="详细地址" value="东方明珠特1号" data-role="none"></div>
             <div class="ui-block-c">&nbsp;</div>
         </div>
     </div>
@@ -307,10 +302,17 @@
         <div class="fr order-coupon-right">￥30代金券<label class="arr-btm"></label></div>
     </div>
     <div class="agreement">
-        <label>
-            <input type="checkbox" name="agr" value="agreement" data-role="none">
-            <label class="cus_checkbox"></label>
-        </label>我阅读并同意遵守<span class="agr-txt">《真旅行产品预订协议书》</span>
+        <label class="order-checkbox"></label>我阅读并同意遵守<a class="agr-txt" href="javascript:void(0);">《真旅行产品预订协议书》</a>
+        <!--协议书弹窗-->
+        <div class="agr-dialog" id="agr-dialog" data-role="popup" data-transition="pop" data-position-to="window" data-theme="a" data-overlay-theme="b">
+            <div data-role="header">
+                <h3>真旅行产品预订协议书</h3>
+            </div>
+            <div class="agr-dialog-content">鉴于百度以非人工检索方式、根据您键入的关键字自动生成到第三方网页的链接，除百度注明之服务条款外，其他一切因使用百度而可能遭致的意外、疏忽、侵权及其造成的损失（包括因下载被搜索链接到的第三方网站内容而感染电脑病毒），百度对其概不负责，亦不承担任何法律责任。 任何通过使用百度而搜索链接到的第三方网页均系他人制作或提供，您可能从该第三方网页上获得资讯及享用服务，百度对其合法性概不负责，亦不承担任何法律责任。 百度搜索结果根据您键入的关键字自动搜索获得并生成，不代表百度赞成被搜索链接到的第三方网页上的内容或立场。 您应该对使用搜索引擎的结果自行承担风险。百度不做任何形式的保证：不保证搜索结果满足您的要求，不保证搜索服务不中断，不保证搜索结果的安全性、正确性、及时性、合法性。因网络状况、通讯线路、第三方网站等任何原因而导致您不能正常使用百度，百度不承担任何法律责任。 百度尊重并保护所有使用百度用户的个人隐私权，您注册的用户名、电子邮件地址等个人资料，非经您亲自许可或根据相关法律、法规的强制性规定，百度不会主动地泄露给第三方。百度提醒您：您在使用搜索引擎时输入的关键字将不被认为是您的个人隐私资料。 任何网站如果不想被百度收录（即不被搜索到），应该及时向百度反映，或者在其网站页面中根据拒绝蜘蛛协议（Robots Exclusion Protocol）加注拒绝收录的标记，否则，百度将依照惯例视其为可收录网站。 任何单位或个人认为通过百度搜索链接到的第三方网页内容可能涉嫌侵犯其信息网络传播权，应该及时向百度提出书面权利通知，并提供身份证明、权属证明及详细侵权情况证明。百度在收到上述法律文件后，将会依法尽快断开相关链接内容。详情参见特定频道的著作权保护声明。 </div>
+            <div class="agr-dialog-foot">
+                <a class="btn-com btn-confirm" data-role="none" href="javascript:void(0);">同意并继续</a><a class="btn-com btn-cancel" data-role="none" href="javascript:void(0);">取 消</a>
+            </div>
+        </div>
     </div>
     <div class="order-sub">
         <div class="ui-grid-b">
@@ -367,6 +369,60 @@
     $(function () {
         FastClick.attach(document.body);
 
+        $(".agreement .order-checkbox").click(function(){
+            $(".order-checkbox").toggleClass("order-checkbox-checked");
+        });
+
+        $(".agr-txt").click(function(){
+            $("#agr-dialog").popup("open");
+
+            $("#agr-dialog-screen").touchmove(function(){
+                return false;
+            })
+        });
+        $(".agr-dialog-foot .btn-confirm").click(function(){
+            $(".order-checkbox").addClass("order-checkbox-checked");
+            $("#agr-dialog").popup("close");
+        });
+        $(".agr-dialog-foot .btn-cancel").click(function(){
+            $(".order-checkbox").removeClass("order-checkbox-checked");
+            $("#agr-dialog").popup("close");
+        });
+
+        $(".travel-lab").click(function(){
+
+            var $this = $(this);
+            $this.cusListPop({
+                title: "请选择常旅客",  //  默认值：请选择
+                scrollId: "travellerInfoWrapper",  //  id 必填且唯一
+                data: [{
+                    name: "常旅客1"
+                }, {
+                    name: "常旅客2"
+                }, {
+                    name: "常旅客3"
+                }, {
+                    name: "常旅客4"
+                }, {
+                    name: "常旅客5"
+                },{
+                    name: "常旅客6"
+                }, {
+                    name: "常旅客7"
+                }, {
+                    name: "常旅客8"
+                }, {
+                    name: "常旅客9"
+                }, {
+                    name: "常旅客10"
+                }]
+            });
+        });
+
+        $(".order-hotel-op label").click(function(){
+            $(this).siblings().removeClass("order-checkbox-checked");
+            $(this).addClass("order-checkbox-checked");
+        });
 
     });
 </script>

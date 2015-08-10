@@ -76,16 +76,50 @@ div[data-role="page"] {
     float: left;
 }
 .dialogue .blueBigBtn{
-    padding: 0 0.25rem;
-    height: 1.25rem;
-    line-height: 1.25rem;
-    color: #11b9b7;
+    padding: 0.2rem 0.4rem;
+    color: #11b9b7 !important;
     border: 1px solid #11b9b7;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
+    border-radius: 0.125rem;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    -ms-border-radius: 0.125rem;
     float: right;
+}
+.ui-content{
+    padding: 0;
+    font-size: 0.75rem;
+    color:#333;
+}
+.dlg-cnt{
+    font-size: 0.7rem;
+    color:#666;
+    text-align: center;
+    padding:1.5rem 0;
+}
+.dlg-foot{
+    text-align: center;
+    padding:0.5rem 1.5rem;
+}
+.btn-com{
+    width:4.5rem;
+    height:2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 2rem;
+    color:#fff !important;
+    display: inline-block;
+    font-weight: normal !important;
+    text-decoration: none;
+    -webkit-border-radius: 0.0125rem;
+    -moz-border-radius: 0.0125rem;
+    border-radius: 0.125rem;
+}
+.btn-confirm{
+    background-color:#11b9b7;
+    margin-right:0.5rem;
+}
+.btn-cancel{
+    background-color:#d4d4d4;
 }
 .listContent.changeList{
     margin-bottom: 3rem;
@@ -118,8 +152,9 @@ div[data-role="page"] {
 }
 .bottomFixModel{
     width: 100%;
+    text-align: center;
     background-color: #f0f0f0;
-    padding: 0.5rem 0.375rem;
+    padding: 0.4rem 0.3rem;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -131,16 +166,17 @@ div[data-role="page"] {
     width: 12rem;
     height: 1.5rem;
     min-height: inherit;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
 }
 .bottomFixModel .ui-input-text{
     display: inline-block;
 }
 .bottomFixModel .blueSolidBtn{
     display: inline-block;
+    vertical-align: middle;
     font-size: 0.8rem;
     width: 2.5rem;
     height: 1.45rem;
@@ -148,10 +184,10 @@ div[data-role="page"] {
     text-align: center;
     background-color: #11b9b7;
     color: #fff;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
+    border-radius: 0.125rem;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    -ms-border-radius: 0.125rem;
 }
 .bottomFixModel .blueSolidBtn:hover{
     color: #fff;

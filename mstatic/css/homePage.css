@@ -910,13 +910,14 @@
     height:10rem;
     overflow: scroll;
 }
-.menu-row-focus{
-    border:4px #3fc0ae solid;
-}
 .menu-row .ui-grid-c{
     margin:0.25rem 0;
     padding:0 0.5rem;
     background-color: #fff;
+    border:3px transparent solid;
+}
+.menu-row-focus{
+    border:3px #3fc0ae solid !important;
 }
 .menu-row .ui-grid-c .ui-block-a{
     width:25%;
@@ -943,7 +944,7 @@
     text-align: right;
     color:#ffa200;
     font-size: 1rem;
-    line-height:2rem;
+    line-height:1.8rem;
     vertical-align: middle;
 }
 .menu-row .ui-grid-c .ui-block-d p{

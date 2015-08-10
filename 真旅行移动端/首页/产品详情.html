@@ -760,7 +760,7 @@
         });
 
         $(".menu-row").bind("touchmove", function(event){
-            $(".detail-content").touchmove(function(){
+            $("#popupMenu-screen").touchmove(function(){
                 return false;
             })
 
@@ -786,6 +786,12 @@
             }
         });
 
+        $(".menu-row .ui-grid-c").click(function(){
+            $(".menu-row .ui-grid-c").removeClass("menu-row-focus");
+
+
+            $(this).toggleClass("menu-row-focus");
+        });
     });
 </script>
 </body>

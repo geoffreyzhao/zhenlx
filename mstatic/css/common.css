@@ -71,7 +71,8 @@ input[type="checkbox"] {
 }
 
 .cus_checkbox,
-.cus_radio {
+.cus_radio,
+.order-checkbox{
 	background: url(../images/input-radio-normal.png) no-repeat;
 	width: 0.8rem;
 	height: 0.8rem;
@@ -81,7 +82,8 @@ input[type="checkbox"] {
 	vertical-align: middle;
 }
 input[type="radio"]:checked + .cus_radio,
-input[type="checkbox"]:checked + .cus_checkbox {
+input[type="checkbox"]:checked + .cus_checkbox,
+.order-checkbox-checked{
 	background: url(../images/input-radio-active.png) no-repeat;
 	width: 0.8rem;
 	height: 0.8rem;
@@ -90,7 +92,6 @@ input[type="checkbox"]:checked + .cus_checkbox {
 	display: inline-block;
 	vertical-align: middle;
 }
-
 
 /* header头部 */
 .headerBar {
@@ -169,6 +170,8 @@ input[type="checkbox"]:checked + .cus_checkbox {
 	z-index: 1;
 	width: 100%;
 	background: #f0f0f0;
+	overflow: scroll;
+	margin-bottom: 1rem;
 }
 .logo{
 	width:3.025rem;

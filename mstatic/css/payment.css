@@ -601,9 +601,10 @@ input[type="radio"]:checked + .pay-check{
     padding-left:0.5rem;
     padding-bottom: 0.6rem;
     display: inline-block;
+    vertical-align: middle;
 }
 .order-hotel-op > label{
-    vertical-align: bottom;
+    vertical-align: middle;
     margin-left:0;
     margin-right:0.4rem;
 }
@@ -694,11 +695,14 @@ input[type="radio"]:checked + .pay-check{
 .travel-lab{
     font-size: 0.75rem;
     padding:0.2rem 0.3rem;
-    color:#fff;
+    color:#fff !important;
     background-color:#3fc0ae;
     -webkit-border-radius: 0.125rem;
     -moz-border-radius: 0.125rem;
     border-radius: 0.125rem;
+}
+.travel-lab:active{
+    background-color:#38aa9a;
 }
 .travel-arrow{
     width:0.4rem;
@@ -779,14 +783,50 @@ input[type="radio"]:checked + .pay-check{
     font-size: 0.6rem;
     color:#666;
     margin-bottom: 2.5rem;
+    vertical-align: middle;
+}
+.agr-dialog{
+    font-size: 0.65rem;
+    color:#666;
+    line-height:0.8rem;
+}
+.agr-dialog-content{
+    padding:0.5rem;
+    height:8rem;
+    overflow: scroll;
+}
+.agr-dialog-foot{
+    text-align: center;
+    padding:0.5rem 1.5rem;
+}
+.btn-com{
+    width:4.5rem;
+    height:1.5rem;
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    color:#fff !important;
+    display: inline-block;
+    font-weight: normal !important;
+    text-decoration: none;
+    -webkit-border-radius: 0.0125rem;
+    -moz-border-radius: 0.0125rem;
+    border-radius: 0.125rem;
+}
+.btn-confirm{
+    background-color:#11b9b7;
+    margin-right:0.5rem;
+}
+.btn-cancel{
+    background-color:#d4d4d4;
 }
 .agreement > label{
-    vertical-align: bottom;
+    vertical-align: middle;
     margin-left:0;
     margin-right:0.4rem;
 }
 .agr-txt{
-    color:#3fc0ae;
+    color:#3fc0ae !important;
 }
 .order-sub{
     position: fixed;
@@ -869,7 +909,9 @@ input[type="radio"]:checked + .pay-check{
     color:#999;
     padding:0 0.5rem;
 }
-
+.order-foot .ui-grid-b .ui-block-a p{
+    line-height:1.1rem;
+}
 .order-foot .ui-grid-b .ui-block-b{
     width:35%;
     color:#666;
