@@ -1,0 +1,202 @@
+@charset "utf-8";
+body {
+	height: 100%;
+	font-size:20px;
+}
+html,body,img,span{
+	margin:0;
+	padding:0;
+}
+.swiper-container{
+	width:100%;
+	height:100%;
+}
+.swiper-slide{
+	width:100%;
+	height:100%;
+}
+.slide1{
+	background:url(../images/wave.png) left bottom repeat-x #7dc7db;
+	background-size:6rem 0.65rem;
+	position:relative;
+}
+.slide1-container1{
+	position:relative;
+}
+.hot-balloon{
+	width:100%;
+}
+.airplane{
+	width:5.325rem;
+	height:1.125rem;
+	position:absolute;
+	right:1.875%;
+	bottom:9.124%;
+}
+.cloudRT{
+	width:1.925rem;
+	height:1.125rem;
+	position: absolute;
+	right:9.375%;
+	bottom:27%;
+}
+.cloudB{
+	width:2.925rem;
+	height:1.725rem;
+	position: absolute;
+	bottom:-1.5rem;
+	right:30%;
+}
+.cloudLC{
+	width:2.55rem;
+	height:1.475rem;
+	position: absolute;
+	bottom:2.55%;
+	left:7.8%;
+}
+.slide1-container2{
+	width:13.55rem;
+	height:7.8rem;
+	margin:0 auto;
+	position:absolute;
+	left:50%;
+	margin-left:-6.775rem;
+	bottom:12%;
+}
+.slide1text{
+	width:13.1rem;
+	height:2.375rem;
+	position:absolute;
+	top:0;
+}
+.slide1text2{
+	width:13.55rem;
+	height:3.875rem;
+	position: absolute;
+	bottom:0;
+}
+.dolphin{
+	width:2.3rem;
+	height:1.1rem;
+	position: absolute;
+	bottom:3%;
+	left:50%;
+	margin-left:-1.15rem
+}
+.slide2{
+	background:url(../images/globle.png) center center no-repeat #c6e8f3;
+	background-size:100%;
+}
+.slide2-containter1{
+	position:absolute;
+	width:10.8rem;
+	height:1.2rem;
+	top:12%;
+	left:50%;
+	margin-left:-5.4rem;
+}
+.title2{
+	width:100%;
+	height:100%;
+}
+.slide2-containter2{
+	width:15rem;
+	height:16rem;
+	position:absolute;
+	top:29%;
+	left:50%;
+	margin-left:-7.5rem;
+}
+.slide2text1{
+	width:4.75rem;
+	height:2.925rem;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.slide2text2{
+	width:7.375rem;
+	height:2.875rem;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.person-net{
+	width:12.65rem;
+	height:6.05rem;
+	position:absolute;
+	top:29%;
+	/* top:30.94%; */
+	left:8.6%;
+}
+.pig-box{
+	width:4.1rem;
+	height:7.2rem;
+	position:absolute;
+	bottom:0;
+	left:50%;
+	margin-left:-2.05rem;
+}
+.pig{
+	width:3.1rem;
+	height:2.4rem;
+	position:absolute;
+	bottom:0;
+	left:50%;
+	margin-left:-1.55rem;
+	z-index:2;
+}
+.purse1{
+	width:1.375rem;
+	height:1.8rem;
+	position:absolute;
+	left:50%;
+	margin-left:-0.686rem;
+	bottom:47.57%;
+	z-index:2;
+}
+.purse2{
+	width:1.175rem;
+	height:1.5rem;
+	position:absolute;
+	left:15.24%;
+	bottom:56.94%;
+}
+.purse3{
+	width:1.375rem;
+	height:1.8rem;
+	position:absolute;
+	right:10%;
+	bottom:53.47%;
+}
+.money1{
+	width:1.45rem;
+	height:1.275rem;
+	position: absolute;
+	left:0;
+	bottom:38.9%;
+}
+.money2{
+	width:1.7rem;
+	height:1.4rem;
+	position:absolute;
+	left:50%;
+	margin-left:-0.85rem;
+	bottom:25.7%;
+}
+.money3{
+	width:1.025rem;
+	height:1.025rem;
+	position:absolute;
+	right:0;
+	bottom:41.67%;
+}
+.star{
+	width:1.8rem;
+	height:1.375rem;
+	position:absolute;
+	left:50%;
+	margin-left:-0.9rem;
+	top:0;
+	z-index:2;
+}

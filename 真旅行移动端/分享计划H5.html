@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>真旅行招募|内测帝快粗来</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../mstatic/css/animate.min.css">
+	<link rel="stylesheet" href="../mstatic/css/sharePlanH5.css">
+
+	<script type="text/javascript" src="../mstatic/js/base/jquery.min.js"></script>
+	<script type="text/javascript" src="../mstatic/js/vendor/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="../mstatic/js/vendor/swiper.animate.min.js"></script>
+	<script>
+	window.onload = function(){	
+		var mySwiper = new Swiper ('.swiper-container', {
+		direction : 'vertical',
+		mousewheelControl : true,
+		onInit: function(swiper){
+			swiperAnimateCache(swiper);
+			swiperAnimate(swiper);
+		},
+		onSlideChangeEnd: function(swiper){
+			swiperAnimate(swiper);
+		},
+		onTransitionEnd: function(swiper){
+			swiperAnimate(swiper);
+		},
+		watchSlidesProgress: true,
+		onProgress: function(swiper){
+			for (var i = 0; i < swiper.slides.length; i++){
+				var slide = swiper.slides[i];
+				var progress = slide.progress;
+				var translate = progress*swiper.height/4;  
+					scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+				var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
+					slide.style.opacity = opacity;
+					es = slide.style;
+					es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
+			}
+		},
+		onSetTransition: function(swiper, speed) {
+			for (var i = 0; i < swiper.slides.length; i++){
+				es = swiper.slides[i].style;
+				es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+			}
+		},
+		onTransitionStart: function(swiper) {
+		}
+	}); 
+}
+	</script>
+</head>
+<body>
+	<div class="swiper-container">
+	  <div class="swiper-wrapper">    
+	    <div class="swiper-slide slide1">
+	    	<div class="slide1-container1">
+		    	<img class="hot-balloon" src="../mstatic/images/hot-balloon.png" alt="">
+		    	<img class="airplane" src="../mstatic/images/airplane.png" alt="">
+		    	<img class="cloudRT" src="../mstatic/images/cloudRT.png" alt="">
+		    	<img class="cloudB" src="../mstatic/images/cloudB.png" alt="">
+		    	<img class="cloudLC" src="../mstatic/images/cloudLC.png" alt="">
+	    	</div>
+	    	<div class="slide1-container2">
+		    	<img class="slide1text" src="../mstatic/images/slide1text.png" alt="">
+		    	<img class="slide1text2" src="../mstatic/images/slide1text2.png" alt="">
+	    	</div>
+		    <img class="dolphin" src="../mstatic/images/dolphin.png" alt="">
+	    </div>
+	    <div class="swiper-slide slide2">
+	    	<div class="slide2-containter1">
+		    	<img class="title2" src="../mstatic/images/title2.png" alt="">
+	    	</div>
+	    	<div class="slide2-containter2">
+		    	<img class="slide2text1" src="../mstatic/images/slide2text1.png" alt="">
+		    	<img class="slide2text2" src="../mstatic/images/slide2text2.png" alt="">
+		    	<img class="person-net" src="../mstatic/images/person-net.png" alt="">
+		    	<div class="pig-box">
+			    	<img class="pig" src="../mstatic/images/pig.png" alt="">
+			    	<img class="purse1" src="../mstatic/images/purse1.png" alt="">
+			    	<img class="purse2" src="../mstatic/images/purse2.png" alt="">
+			    	<img class="purse3" src="../mstatic/images/purse3.png" alt="">
+			    	<img class="money1" src="../mstatic/images/money1.png" alt="">
+			    	<img class="money2" src="../mstatic/images/money2.png" alt="">
+			    	<img class="money3" src="../mstatic/images/money3.png" alt="">
+			    	<img class="star" src="../mstatic/images/star.png" alt="">
+		    	</div>
+	    	</div>
+	    </div>
+	    <div class="swiper-slide slide3">
+	    	<div class="slide3-containter1">
+		    	告诉朋友真旅行网站
+	    	</div>
+	    	<div class="slide3-containter2">
+		    	
+	    	</div>
+	    	
+	    </div>
+	    <div class="swiper-slide slide4">
+        	<div class="slide4-containter1">
+		    	gaffffffffffff
+	    	</div>
+	    	<div class="slide4-containter2">
+		    	
+	    	</div>
+	    </div>
+        <div class="swiper-slide slide5">
+        	<div class="slide5-containter1">
+		    	hgfssssssssss
+	    	</div>
+	    	<div class="slide5-containter2">
+		    	
+	    	</div>
+        </div>
+        <div class="swiper-slide slide6">
+        	<div class="slide6-containter1">
+		    	jfhgjtytdyj
+	    	</div>
+	    	<div class="slide6-containter2">
+		    	
+	    	</div>
+        </div>
+	  </div>
+	 </div>
+	<script type="text/javascript">
+		var root = document.getElementsByTagName("html")[0],
+			w = window.innerWidth >= 640 ? 640 : window.innerWidth,
+			h = window.innerHeight >= 1136 ? 1136 : window.innerHeight,
+			base_ratio = 640 / 1136,
+			actual_ratio = window.innerWidth / window.innerHeight;
+
+		if (actual_ratio > base_ratio) {  // 宽屏，按高度算
+
+			root.style.fontSize = (h / 568) * 20 + "px";
+
+		} else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+			root.style.fontSize = (w / 320) * 20 + "px";
+		}
+		
+		root.style.height = window.innerHeight + "px";
+	</script>
+
+</body>
+</html>
