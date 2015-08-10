@@ -13,10 +13,9 @@
 	<script type="text/javascript" src="../../mstatic/js/vendor/underscore.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/datepicker-scroll.js"></script>
-	<script type="text/javascript" src="../../mstatic/js/vendor/addresspicker-scroll.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/vendor/addresspicker-scroll-update.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/cus-list-pop.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
-	<script src="http://10.3.40.76:8080/target/target-script-min.js#anonymous"></script>
 	<title>插件--带样式</title>
 
 	<script type="text/javascript">
@@ -74,7 +73,7 @@
 
         var city = [{
         	parent: "上海市",
-        	children: ['上海市', '上海市']
+        	children: ['上海市']
         }, {
         	parent: "北京市",
         	children: ['北京市']
@@ -96,13 +95,16 @@
         	parent: "北京市",
         	children: ['朝阳区']
         }, {
-        	parent: "安徽市2",
+        	parent: "安徽市1",
         	children: ['安徽县1', '安徽县2', '安徽县3', '安徽县4']
+        },{
+        	parent: "安徽市2",
+        	children: ['安徽县21', '安徽县22', '安徽县23', '安徽县24']
         }, {
-        	parent: "江苏市3",
+        	parent: "江苏市1",
         	children: ['江苏县']
         }, {
-        	parent: "浙江市4",
+        	parent: "浙江市1",
         	children: ['浙江县']
         }];
 
@@ -111,7 +113,13 @@
         sessionStorage.setItem("city", JSON.stringify(city));
         sessionStorage.setItem("county", JSON.stringify(county));
 
-        $("#addressWrapperContainer").addressPicker({});
+        var address_1 = new AddressPicker("#addressWrapperContainer", {
+        	currentAddress: ["北京市", "北京市", "朝阳区"]
+        }).init();
+
+        console.log(address_1.getAddress());
+
+        address_1.setAddress(["上海市", "上海市", "闸北区"]);
 
         $("#address").click(function(){
         	$("#addressWrapperContainer").closest("div[data-role='popup']").popup("open");
