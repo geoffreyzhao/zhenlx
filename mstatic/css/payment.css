@@ -77,6 +77,7 @@
     margin:0 auto;
     font-size: 0.6rem;
     color:#999;
+    border-top:1px #dcdcdc solid;
     border-bottom:1px #dcdcdc solid;
 }
 .prgbar-img{
@@ -418,6 +419,30 @@ input[type="radio"]:checked + .pay-check{
     border-top:1px #dcdcdc solid;
     border-bottom: 1px #dcdcdc solid;
 }
+.warn-info{
+    height:1.75rem;
+    margin-bottom: 0.5rem;
+    background-color:#c2ecf3;
+    padding:0.5rem;
+    text-align: center;
+
+}
+.warn-info a{
+    font-size: 0.6rem;
+    line-height:0.75rem;
+    color:#3fc0ae !important;
+    vertical-align: top;
+}
+.btn-close{
+    width:0.75rem;
+    height:0.75rem;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    background:url("../../mstatic/images/btn-close.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
 .order-row{
     font-size: 0.75rem;
     color:#333;
@@ -674,7 +699,7 @@ input[type="radio"]:checked + .pay-check{
     display: inline-block;
     color:#666;
 }
-.traveler-val{
+.traveler-val, .submit-dlg-val{
     width: 100%;
     font-size: 0.75rem;
     color:#333;
@@ -925,5 +950,68 @@ input[type="radio"]:checked + .pay-check{
 .block-link{
     color:#666 !important;
     font-weight: normal !important;
+}
+#submit-dlg-popup{
+    top:2rem !important;
+}
+.submit-dlg{
+    width:12.5rem;
+    padding:1rem 0.5rem;
+    line-height:1.2rem;
+    background-color: #fff;
+}
+.submit-dlg .input-box{
+    position: relative;
+}
+.submit-dlg .ui-grid-a{
+    padding:0.5rem 0;
+    border-bottom: 1px #ccc solid;
+}
+.submit-dlg .ui-grid-a:last-child{
+    border-bottom: 0;
+}
+.submit-dlg .ui-grid-a .ui-block-a{
+    width:15%;
+    text-align: center;
+}
+.submit-dlg .ui-grid-a .ui-block-b{
+    width:85%;
+}
+.person-icon {
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.975rem;
+    background: url(../images/telicon.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.lock-icon {
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.95rem;
+    background: url(../images/passwordicon.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.dlg-foot{
+    margin-top: 1.2rem;
+    text-align: center;
+}
+.submit-dlg-confirm{
+    width:8rem;
+    height:1.8rem;
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.8rem;
+    color:#fff !important;
+    display: inline-block;
+    font-weight: normal !important;
+    text-decoration: none;
+    -webkit-border-radius: 0.0125rem;
+    -moz-border-radius: 0.0125rem;
+    border-radius: 0.125rem;
+    background-color:#ffa200;
 }
 /** end **/

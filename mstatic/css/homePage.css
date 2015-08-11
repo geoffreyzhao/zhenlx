@@ -780,6 +780,9 @@
     margin:2rem 0.5rem;
     text-align: center;
 }
+.judge-more:active{
+    background-color:#fafafa;
+}
 .judge-link{
     padding:0.6rem 0;
     display: block;
@@ -792,7 +795,7 @@
 }
 .prd-footer{
     padding:0.25rem 0;
-    margin-bottom: 2.4rem;
+    margin-bottom: 2rem;
     background-color:#1dafae;
     text-align: center;
     color:#8efff5;

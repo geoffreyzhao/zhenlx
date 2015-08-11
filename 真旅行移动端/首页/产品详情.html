@@ -536,7 +536,7 @@
                 <p>出行人数：<span>成人1 儿童2</span></p>
             </div>
             <div class="ui-block-b">
-                <a href="#popupMenu" id="popup-click" data-rel="popup"><span class="arr-up"></span></a>
+                <a href="javascript:void(0);" id="popup-click"><span class="arr-up"></span></a>
             </div>
             <div class="ui-block-c"><a class="order-link" href="javascript:void(0);">立即预订</a></div>
         </div>
@@ -759,16 +759,12 @@
             }
         });
 
-        $(".menu-row").bind("touchmove", function(event){
+        $("#popup-click").click(function(){
+            $("#popupMenu").popup("open");
             $("#popupMenu-screen").touchmove(function(){
                 return false;
             })
-
         });
-
-//        if($("#popupMenu").parents().hasClass("ui-screen-hidden")){
-//            $("html,body").css( "overflow-y", "visible");
-//        }
 
         $(".menu-list ul li").click(function(){
             var listInd = $(this).index();

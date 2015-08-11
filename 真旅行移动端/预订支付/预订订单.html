@@ -35,6 +35,7 @@
             <img class="head-img" src="../../mstatic/images/logo-new.png">
         </div>
     </div>
+    <div class="warn-info clearfix"><a href="../登录注册/登录注册.html" rel="external">您还未登录账号，点此登录</a><span class="btn-close"></span></div>
     <div class="progressBar">
         <div class="prgbar-img">
             <img class="prgbar" src="../../mstatic/images/prgbar-after01.png"><span class="prgline01"></span><img
@@ -329,8 +330,8 @@
                 <p>应付总额</p>
                 <p class="price-icon">￥<span class="price-num">10367</span></p>
             </div>
-            <div class="ui-block-b"><a href="#order-detail" data-rel="popup">查看明细<label class="arr-up"></label></a></div>
-            <div class="ui-block-c"><a class="sub-link" href="在线支付.html" data-role="none" data-transition="slidefade">提交</a></div>
+            <div class="ui-block-b"><a href="#order-detail" id="scan-detail" data-rel="popup">查看明细<label class="arr-up"></label></a></div>
+            <div class="ui-block-c"><a class="sub-link" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a></div>
         </div>
     </div>
     <!--产看明细弹窗-->
@@ -368,8 +369,22 @@
                     <p class="price-icon">￥<span class="price-num">10367</span></p>
                 </div>
                 <div class="ui-block-b"><a class="block-link" href="javascript:void(0);" data-rel="back">查看明细<label class="arr-down"></label></a></div>
-                <div class="ui-block-c"><a class="sub-link" href="在线支付.html" data-role="none" data-transition="slidefade">提交</a></div>
+                <div class="ui-block-c"><a class="sub-link" id="sub-link" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a></div>
             </div>
+        </div>
+    </div>
+    <!--提交弹窗-->
+    <div class="submit-dlg" id="submit-dlg" data-role="popup" data-transition="pop" data-theme="a" data-overlay-theme="b">
+        <div class="ui-grid-a">
+            <div class="ui-block-a"><i class="person-icon"></i></div>
+            <div class="ui-block-b"><input class="submit-dlg-val" type="text" placeholder="手机号" data-role="none"></div>
+        </div>
+        <div class="ui-grid-a">
+            <div class="ui-block-a"><i class="lock-icon"></i></div>
+            <div class="ui-block-b"><input class="submit-dlg-val" type="password" placeholder="密码" data-role="none"></div>
+        </div>
+        <div class="dlg-foot">
+            <a class="submit-dlg-confirm" data-role="none" href="javascript:void(0);">继续预订</a>
         </div>
     </div>
 </div>
@@ -380,6 +395,16 @@
 
         $(".agreement .order-checkbox").click(function(){
             $(".order-checkbox").toggleClass("order-checkbox-checked");
+        });
+
+        $(".btn-close").click(function(){
+            $(".warn-info").slideUp("fast");
+        });
+
+        $("#scan-detail").click(function(){
+            $("#order-detail").touchmove(function(){
+                return false;
+            });
         });
 
         $(".agr-txt").click(function(){
@@ -428,6 +453,21 @@
             });
         });
 
+        $(".order-hotel-op label").click(function(){
+            $(this).siblings().removeClass("order-checkbox-checked");
+            $(this).addClass("order-checkbox-checked");
+        });
+
+        $(".sub-link").click(function(){
+            $("#submit-dlg").popup("open");
+        })
+        $("#sub-link").click(function(){
+            $("#order-detail").popup("close");
+            $("#submit-dlg").popup("open");
+        });
+        $(".submit-dlg-confirm").click(function(){
+            $("#submit-dlg").popup("close");
+        })
     });
 </script>
 </body>
