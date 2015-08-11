@@ -267,7 +267,8 @@
 
 .upload-avatar .upload-block {
     width: 380px;
-    margin: 78px auto;
+    /*margin: 78px auto;*/
+    margin-left: 150px;
 }
 
 .upload-avatar .upload-btn {
@@ -308,7 +309,8 @@
 .upload-avatar .upload-tip-text {
     font-size: 16px;
     color: #a3a3a3;
-    margin: 60px 0 56px;
+    /*margin: 60px 0 56px;*/
+    margin: 33px 0 30px;
 }
 
 .view-pwd {
@@ -326,6 +328,40 @@
 .view-pwd.active {
     background-position: 0 -15px;
 }
+
+.targe-container {
+    background-color: #dadada;
+    width: 290px;
+    height: 290px;
+    padding: 10px;
+}
+.jcrop-holder #preview-pane {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  top: 10px;
+  right: -250px;
+}
+#preview-pane .preview-container {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.reupload-avatar {
+    position: absolute;
+    right: 195px;
+    bottom: 185px;
+}
+
+.reupload-avatar a input {
+    position: absolute;
+    top: 0;
+    width: 108px;
+    height: 42px;
+    opacity: 0;
+}
+
 
 /*  完善个人资料--选择头像  end  */
 
