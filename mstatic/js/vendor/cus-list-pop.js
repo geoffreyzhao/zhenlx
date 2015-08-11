@@ -112,6 +112,12 @@
 						corners: false
 					});
 
+					if (opts.reCreate) {
+						$("#" + container).on("popupafterclose", function(){
+							$("#" + container).remove();
+						});
+					}
+
 					$("#" + container).popup("open");
 
 				} else {
