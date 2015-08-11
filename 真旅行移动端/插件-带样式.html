@@ -158,6 +158,7 @@
         			name: "士官证",
                     id: 4
         		},
+                reCreate: true,
         		callback: function() {
         			//  可绑定弹窗上元素的事件操作
         		}
@@ -213,7 +214,7 @@
         }).init();
 
         $("#birthdate").click(function(){
-        	dp.setDate(new Date(1980,0,1));
+        	dp.setDate(new Date(1990,5,12));
         	$("#birthdateDatepicker").popup("open");
         });
 

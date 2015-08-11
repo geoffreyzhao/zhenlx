@@ -7,6 +7,7 @@
 			maxSize: 5,
 			data: [],
 			currentData: undefined,
+			reCreate: false,   //   是否每次弹窗关闭时销毁列表DOM，弹出时重新生成列表DOM
 			callback: function(){
 				//  绑定弹窗上的事件操作    			
 			}
@@ -20,7 +21,7 @@
 			var container = opts.scrollId + "PopContainer",
 				wrapper = opts.scrollId + "Wrapper";
 
-			if ($("#" + container).length == 0) {     //  生成DOM并且初始化Popup,IScroll
+			if ($("#" + container).length == 0) {
 
 				if (opts.data.length > 0) {
 
@@ -116,9 +117,11 @@
 				} else {
 					console.log('未获取到数据');
 				}
-			} else {   	//  如果已经有popup结构，跳过生成DOM和初始化，只控制弹窗
+			} else {
+
 				$("#" + container).popup("open");
 			}
+
 
 			$(".pop-ul-list li").on("click", function(){
 				$(this).closest("#scroller").find("li").removeClass("current");
