@@ -135,8 +135,14 @@
     <div class="order-hotel-bed">
         <div class="order-hotel-bedTil">偏好的酒店床型：</div>
         <div class="order-hotel-op">
-            <label class="order-checkbox order-checkbox-checked"></label>优选大床房
-            <label class="order-checkbox"></label>优选双床房
+            <label>
+                <input type="checkbox" name="" value="" data-role="none">
+                <span>优选大床房</span>
+            </label>
+            <label>
+                <input type="checkbox" name="" value="" data-role="none">
+                <span>优选双床房</span>
+            </label>
         </div>
     </div>
     <div class="order-traveler-til clearfix">
@@ -420,11 +426,6 @@
                     name: "常旅客10"
                 }]
             });
-        });
-
-        $(".order-hotel-op label").click(function(){
-            $(this).siblings().removeClass("order-checkbox-checked");
-            $(this).addClass("order-checkbox-checked");
         });
 
     });
