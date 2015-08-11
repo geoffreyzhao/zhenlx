@@ -42,12 +42,14 @@
     float: right;
     position: relative;
     right: 50%;
-    top: -340px;
+    /*top: -340px;*/
+    top: -450px;   /* 偏移至图片顶部开始显示（默认有50px的显示高度）  */
 }
 .productDetailBanner .pro-detail-img img {
     position: relative;
-    top: -600px;
+    /*top: -600px;*/
     right: -50%;
+    top: -300px;  /* 距离图片顶部300px开始显示内容 */
 }
 .productDetailModel .themeContent{    
     position: absolute;
