@@ -90,6 +90,11 @@ input[type="checkbox"]:checked {
 	vertical-align: middle;
 }
 
+input[type="radio"] + span,
+input[type="checkbox"] + span {
+	font-size: 0.7rem;
+}
+
 /* header头部 */
 .headerBar {
 	height: 2.25rem;
