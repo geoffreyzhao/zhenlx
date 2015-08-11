@@ -963,6 +963,9 @@ input[type="radio"]:checked + .pay-check{
     font-weight: normal !important;
 }
 
+#submit-dlg-popup{
+    top:2rem !important;
+}
 .submit-dlg{
     width:12.5rem;
     padding:1rem 0.5rem;
