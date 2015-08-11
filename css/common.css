@@ -14,7 +14,7 @@ input,img{vertical-align:middle;}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {display: block;}
 [hidden],template {display: none;}
 mark {background: #ff0;}
-address,caption,cite,code,dfn,em,strong,th,var,optgroup {font-style: normal;font-weight: normal;}
+address,caption,cite,code,dfn,em,th,var,optgroup {font-style: normal;font-weight: normal;}
 a {background: transparent;}
 a:focus {outline: thin dotted;}
 a:active,a:hover {outline: 0;}
