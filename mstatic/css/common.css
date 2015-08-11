@@ -52,6 +52,7 @@ blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}
 button,input,select,textarea {font-family: inherit;font-size: 100%;}
 button,input{-webkit-appearance: none; border-radius: 0;}
 button[disabled],html input[disabled] {cursor: default;}
+*:focus {outline: 0;}
 
 /*common css*/
 .clearfix:after{display:block;content:'';clear:both;visibility:hidden;}
@@ -63,16 +64,12 @@ button[disabled],html input[disabled] {cursor: default;}
 .fl { float: left; }
 .fr { float: right; }
 
+label span { vertical-align: middle; }
+
 /*  自定义 checkbox radio 样式  */
 
 input[type="radio"],
 input[type="checkbox"] {
-	display: none;
-}
-
-.cus_checkbox,
-.cus_radio,
-.order-checkbox{
 	background: url(../images/input-radio-normal.png) no-repeat;
 	width: 0.8rem;
 	height: 0.8rem;
@@ -81,9 +78,9 @@ input[type="checkbox"] {
 	display: inline-block;
 	vertical-align: middle;
 }
-input[type="radio"]:checked + .cus_radio,
-input[type="checkbox"]:checked + .cus_checkbox,
-.order-checkbox-checked{
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
 	background: url(../images/input-radio-active.png) no-repeat;
 	width: 0.8rem;
 	height: 0.8rem;
