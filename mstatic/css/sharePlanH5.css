@@ -33,12 +33,38 @@ html,body,img,span{
 	right:1.875%;
 	bottom:9.124%;
 }
+@-webkit-keyframes cloudmove {
+	0%{-webkit-transform:translate3d(0,-0.1rem,0);}
+	100%{-webkit-transform:translate3d(0,0.1rem,0);}
+}
+@-khtml-keyframes cloudmove {
+	0%{-khtml-transform:translate3d(0,-0.2rem,0);}
+	100%{-khtml-transform:translate3d(0,0.2rem,0);}
+}
+@-o-keyframes cloudmove{
+	0%{-o-transform:translate3d(0,-0.2rem,0);}
+	100%{-o-transform:translate3d(0,0.2rem,0);}
+}
+@-moz-keyframes cloudmove {
+	0%{-moz-transform:translate3d(0,-0.2rem,0);}
+	100%{-moz-transform:translate3d(0,0.2rem,0);}
+}
+@keyframes cloudmove{
+	0%{transform:translate3d(0,-0.1rem,0);}
+	100%{transform:translate3d(0,0.1rem,0);}
+}
 .cloudRT{
 	width:1.925rem;
 	height:1.125rem;
 	position: absolute;
 	right:9.375%;
 	bottom:27%;
+	-webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 0s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 0s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 0s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 0s infinite alternate;
+	        animation:cloudmove 1.2s ease 0s infinite alternate;  
 }
 .cloudB{
 	width:2.925rem;
@@ -46,6 +72,12 @@ html,body,img,span{
 	position: absolute;
 	bottom:-1.5rem;
 	right:30%;
+	-webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 0s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 0s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 0s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 0s infinite alternate;
+	        animation:cloudmove 1.2s ease 0s infinite alternate;  
 }
 .cloudLC{
 	width:2.55rem;
@@ -53,6 +85,12 @@ html,body,img,span{
 	position: absolute;
 	bottom:2.55%;
 	left:7.8%;
+	-webkit-animation:cloudmove 1.2s ease 1s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 1s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 1s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 1s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 1s infinite alternate;
+	        animation:cloudmove 1.2s ease 1s infinite alternate;  
 }
 .slide1-container2{
 	width:13.55rem;
@@ -61,15 +99,16 @@ html,body,img,span{
 	position:absolute;
 	left:50%;
 	margin-left:-6.775rem;
-	bottom:12%;
+	/* bottom:12%; */
+	top: 65%;
 }
-.slide1text{
+.slide1dialog{
 	width:13.1rem;
 	height:2.375rem;
 	position:absolute;
 	top:0;
 }
-.slide1text2{
+.slide1dialog2{
 	width:13.55rem;
 	height:3.875rem;
 	position: absolute;
@@ -87,19 +126,24 @@ html,body,img,span{
 	background:url(../images/globle.png) center center no-repeat #c6e8f3;
 	background-size:100%;
 }
-.slide2-containter1{
+.slide2-container1,.slide3-container1,.slide4-container1,.slide5-container1,.slide6-container1{
 	position:absolute;
-	width:10.8rem;
+	width:14rem;
 	height:1.2rem;
+	font-size:1.2rem;
+	text-align:center;
+	font-family:"Microsoft YaHei";
+	line-height:1.2rem;
+	color:#fff;
 	top:12%;
 	left:50%;
-	margin-left:-5.4rem;
+	margin-left:-7rem;
 }
 .title2{
 	width:100%;
 	height:100%;
 }
-.slide2-containter2{
+.slide2-container2{
 	width:15rem;
 	height:16rem;
 	position:absolute;
@@ -107,14 +151,14 @@ html,body,img,span{
 	left:50%;
 	margin-left:-7.5rem;
 }
-.slide2text1{
+.slide2dialog1{
 	width:4.75rem;
 	height:2.925rem;
 	position:absolute;
 	top:0;
 	left:0;
 }
-.slide2text2{
+.slide2dialog2{
 	width:7.375rem;
 	height:2.875rem;
 	position:absolute;
@@ -199,4 +243,418 @@ html,body,img,span{
 	margin-left:-0.9rem;
 	top:0;
 	z-index:2;
+}
+.slide3{
+	background: #6bc5c2;
+}
+.slide3-container2{
+	width:9.5rem;
+	height:6.45rem;
+	position:absolute;
+	left:7.8%;
+	top:24.07%;
+}
+.slide3dialog1{
+	width:9.5rem;
+	height:2.375rem;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.slide3person1{
+	width:3.65rem;
+	height:3.65rem;
+	position: absolute;
+	bottom:0;
+	left:20%;
+}
+.slide3-container3{
+	width:10.95rem;
+	height:7.45rem;
+	position: absolute;
+	left:20.3125%;
+	top:50%;
+}
+.slide3-pc{
+	width:7.9rem;
+	height:5.675rem;
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+.slide3-line{
+	width:3.5rem;
+	height:4.5rem;
+	position:absolute;
+	left:5.375rem;
+	top:0.9rem;
+}
+.slide3dialog2{
+	width:10.5rem;
+	height:0.825rem;
+	position: absolute;
+	left: 2.55rem;
+	top:0;
+	font-size:0.6rem;
+	color:#fff;
+	font-family:"Microsoft YaHei";
+}
+.slide3-lamp{
+	width:0.875rem;
+	height:0.825rem;
+	margin-right:0.25rem;
+}
+.slide3-container4{
+	width:9.25rem;
+	height:3.875rem;
+	position: absolute;
+	right:21.4%;
+	bottom:3%;
+}
+.slide3dialog3{
+	width:3.3rem;
+	height:1.55rem;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.slide3person2{
+	width:3.65rem;
+	height:3.65rem;
+	position: absolute;
+	top: 0.225rem;
+	right:0;
+}
+.slide4{
+	background:#1762a0;
+}
+.slide4title2{
+	width:12.4rem;
+	height:0.75rem;
+	margin-top:0.65rem;
+}
+.slide4-container2{
+	width:12.5rem;
+	height:9.45rem;
+	position:absolute;
+	/* top:28.11%; */
+	top:30%;
+	right:4.68%;
+}
+.slide4person1{
+	width:11.05rem;
+	height:8.9rem;
+	position: absolute;
+	right:0.175rem;
+	top:0;
+}
+.slide4-cloud1{
+	width:2.675rem;
+	height:1.2rem;
+	position:absolute;
+	left:0;
+	bottom:0;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide4-cloud2{
+	width:2.05rem;
+	height:1.1rem;
+	position: absolute;
+	bottom:0;
+	left:40%;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide4-cloud3{
+	width:1.375rem;
+	height:0.75rem;
+	position:absolute;
+	right:0;
+	bottom:2rem;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide4-container3{
+	width:6.8rem;
+	height:7.375rem;
+	position:absolute;
+	left:21.56%;
+	bottom:12%;
+}
+.slide4-globle{
+	width:6.8rem;
+	height:7.375rem;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.slide4-star1{
+	width:8rem;
+	height:7.65rem;
+	position:absolute;
+	left:-3.125rem;
+	top:-2.675rem;
+}
+.slide4-star2{
+	width:5.8rem;
+	height:5.375rem;
+	position:absolute;
+	right:-5.6rem;
+	top:0.85rem;
+}
+.slide4-star3{
+	width:7.075rem;
+	height:6.175rem;
+	position:absolute;
+	left:-1.35rem;
+	bottom:-1.45rem;
+}
+.slide5{
+	background:#e2b369;
+}
+.slide5title2{
+	width:9.3rem;
+	height:0.75rem;
+	margin-top:0.65rem;
+}
+.slide5-container2{
+	width:14.6rem;
+	height:20.2rem;
+	position:absolute;
+	left: 50%;
+  	margin-left: -7.3rem;
+	/* top:30%; */
+	top:28%;
+}
+.slide5-person1{
+	width:8.5rem;
+	height:12.35rem;
+	position: absolute;
+	left:2.35rem;
+	bottom:0;
+}
+.slide5money1{
+	width:0.8rem;
+	height:0.625rem;
+	position:absolute;
+	left:4rem;
+	bottom:11.5rem;
+}
+.slide5money2{
+	width:1.575rem;
+	height:1.625rem;
+	position:absolute;
+	left:1.9rem;
+	bottom:9.05rem;
+}
+.slide5money3{
+	width:1.7rem;
+	height:2.1rem;
+	position:absolute;
+	left:2.35rem;
+	bottom:3.65rem;
+}
+.slide5money4{
+	width:2.15rem;
+	height:1.825rem;
+	position:absolute;
+	right:2.875rem;
+	bottom:4.95rem;
+}
+.slide5money5{
+	width:0.8rem;
+	height:0.625rem;
+	position:absolute;
+	right: 3.5rem;
+	bottom:8.925rem;
+}
+.slide5goldcoin1{
+	width:1.425rem;
+	height:1.8rem;
+	position:absolute;
+	left:3rem;
+	bottom:0.5rem;
+}
+.slide5goldcoin2{
+	width:2.2rem;
+	height:1.5rem;
+	position:absolute;
+	right:3.9rem;
+	bottom:0;
+}
+.slide5goldcoin3{
+	width:1.6rem;
+	height:1.45rem;
+	position:absolute;
+	right:4.35rem;
+	bottom:3.2rem;
+}
+.slide5-bubble{
+	width:1.4rem;
+	height:1.875rem;
+	position:absolute;
+	left:8.25rem;
+	top:6.35rem;
+}
+.slide5-thinkimg{
+	width:6.7rem;
+	height:6.7rem;
+	position: absolute;
+	right:0;
+	top:0;
+}
+.slide5-cloud1{
+	width:3.65rem;
+	height:1.125rem;
+	position: absolute;
+	left:1.9rem;
+	top:0.375rem;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide5-cloud2{
+	width:2.75rem;
+	height:0.85rem;
+	position: absolute;
+	left:0;
+	top:5rem;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide5-cloud3{
+	width:2.575rem;
+	height:0.8rem;
+	position: absolute;
+	left:5.875rem;
+	top:3.8rem;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide6{
+	background:url(../images/slide6bg.png) no-repeat;
+	background-size:100% 100%;
+	font-family:"Microsoft YaHei";
+}
+.slide6-container1{
+	color:#1b99cc;
+}
+.slide6-container2{
+	width:13.9rem;
+	height:14.5rem;
+	position: absolute;
+	/* top:10.5%; */
+	top:12.5%;
+	/* left:5.625%; */
+	left: 50%;
+  	margin-left: -6.95rem;
+}
+.slide6-container2 span{
+	display:inline-block;
+	font-size:0.7rem;
+	text-align:center;
+	line-height:1.2rem;
+	width: 12.5rem;
+	color:#37add5;
+	position: absolute;
+	top:6.125rem;
+	left:50%;
+	margin-left:-6rem;
+}
+.slide6-cloud1{
+	width:2.15rem;
+	height:0.675rem;
+	position: absolute;
+	left:0;
+	top:5.35rem;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide6-cloud2{
+	width:2.675rem;
+	height:0.875rem;
+	position: absolute;
+	right:3.5rem;
+	top:4.15rem;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide6-cloud3{
+	width:1.45rem;
+	height:0.5rem;
+	position: absolute;
+	right:0;
+	top:6.7rem;
+	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
+	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
+	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
+	     -o-animation:cloudmove 1s ease 2s infinite alternate;
+	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
+	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide6-wildgoose1{
+	width:1.95rem;
+	height:0.85rem;
+	position: absolute;
+	right:2.75rem;
+	top:2.75rem;
+}
+.slide6-wildgoose2{
+	width:1.275rem;
+	height:0.325rem;
+	position: absolute;
+	right:0.25rem;
+	top:0;
+}
+.register{
+	width:7.35rem;
+	height:2rem;
+	display:inline-block;
+	background:#37add5;
+	color:#fff;
+	font-size:0.85rem;
+	text-align:center;
+	line-height:2rem;
+	border-radius:0.25rem;
+	position: absolute;
+	left:50%;
+	margin-left:-3.675rem;
+	bottom:0;
+	text-decoration:none;
+}
+.register:focus{
+	outline:none;
+	border:0;
 }
