@@ -208,6 +208,7 @@
     display: inline-block;
     float: right;
 }
+
 .acut-box{
     margin-right:1rem;
 }
@@ -696,5 +697,51 @@
 .rmb-num{
     font-size: 1.5rem;
     color:#fb1933;
+}
+/** end **/
+
+/** 无订单 start **/
+.without-order{
+    background-color:#fff;
+}
+.without-order-header{
+    padding:0.5rem;
+    border-bottom: 1px #dcdcdc solid;
+    -webkit-box-shadow: 0 2px 2px #ebebeb;
+    -moz-box-shadow: 0 2px 2px #ebebeb;
+    box-shadow: 0 2px 2px #ebebeb;
+}
+.without-order-header .head-logo{
+    width: 1.625rem;
+    display: inline-block;
+}
+.without-order-header .head-menu{
+    display: inline-block;
+    float: right;
+}
+.head-img{
+    width:3rem;
+    height:1.2rem;
+    vertical-align: middle;
+}
+.without-order-cnt{
+    width:100%;
+    min-height:21rem;
+    margin-top:0.2rem;
+    text-align: center;
+    background-color:#fff;
+}
+.without-img{
+    width:3.05rem;
+    height:4rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top:20%;
+}
+.without-txt{
+    font-size: 0.7rem;
+    color:#666;
+    line-height:1.1rem;
+    margin-top:2rem;
 }
 /** end **/
