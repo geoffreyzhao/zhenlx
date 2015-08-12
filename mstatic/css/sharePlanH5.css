@@ -26,28 +26,60 @@ html,body,img,span{
 .hot-balloon{
 	width:100%;
 }
-.airplane{
+@-webkit-keyframes airplanemove {
+	0%{-webkit-transform:translate3d(-0.1rem,0,0);}
+	100%{-webkit-transform:translate3d(0.1rem,0,0);}
+}
+@-khtml-keyframes airplanemove {
+	0%{-khtml-transform:translate3d(-0.1rem,0,0);}
+	100%{-khtml-transform:translate3d(0.1rem,0,0);}
+}
+@-o-keyframes airplanemove{
+	0%{-o-transform:translate3d(-0.1rem,0,0);}
+	100%{-o-transform:translate3d(0.1rem,0,0);}
+}
+@-moz-keyframes airplanemove {
+	0%{-moz-transform:translate3d(-0.1rem,0,0);}
+	100%{-moz-transform:translate3d(0.1rem,0,0);}
+}
+@keyframes airplanemove{
+	0%{transform:translate3d(-0.1rem,0,0);}
+	100%{transform:translate3d(0.1rem,0,0);}
+}
+.airplaneBox{
 	width:5.325rem;
 	height:1.125rem;
 	position:absolute;
 	right:1.875%;
 	bottom:9.124%;
+	overflow:hidden;
+	-webkit-animation:airplanemove 1s linear 0s infinite alternate;
+	   -moz-animation:airplanemove 1s linear 0s infinite alternate;
+	    -ms-animation:airplanemove 1s linear 0s infinite alternate;
+	     -o-animation:airplanemove 1s linear 0s infinite alternate;
+	 -khtml-animation:airplanemove 1s linear 0s infinite alternate;
+	        animation:airplanemove 1s linear 0s infinite alternate;
+}
+.airplane{
+	width:5.325rem;
+	height:1.125rem;
+	position:absolute;
 }
 @-webkit-keyframes cloudmove {
 	0%{-webkit-transform:translate3d(0,-0.1rem,0);}
 	100%{-webkit-transform:translate3d(0,0.1rem,0);}
 }
-@-khtml-keyframes cloudmove {
-	0%{-khtml-transform:translate3d(0,-0.2rem,0);}
-	100%{-khtml-transform:translate3d(0,0.2rem,0);}
+@-khtml-keyframes airplanemove {
+	0%{-khtml-transform:translate3d(0,-0.1rem,0);}
+	100%{-khtml-transform:translate3d(0,0.1rem,0);}
 }
 @-o-keyframes cloudmove{
-	0%{-o-transform:translate3d(0,-0.2rem,0);}
-	100%{-o-transform:translate3d(0,0.2rem,0);}
+	0%{-o-transform:translate3d(0,-0.1rem,0);}
+	100%{-o-transform:translate3d(0,0.1rem,0);}
 }
 @-moz-keyframes cloudmove {
-	0%{-moz-transform:translate3d(0,-0.2rem,0);}
-	100%{-moz-transform:translate3d(0,0.2rem,0);}
+	0%{-moz-transform:translate3d(0,-0.1rem,0);}
+	100%{-moz-transform:translate3d(0,0.1rem,0);}
 }
 @keyframes cloudmove{
 	0%{transform:translate3d(0,-0.1rem,0);}
@@ -110,7 +142,13 @@ html,body,img,span{
 }
 .slide1dialog2{
 	width:13.55rem;
-	height:3.875rem;
+	height:1.95rem;
+	position: absolute;
+	bottom:1.925rem;
+}
+.slide1dialog3{
+	width:13.55rem;
+	height:1.925rem;
 	position: absolute;
 	bottom:0;
 }
@@ -156,14 +194,14 @@ html,body,img,span{
 	height:2.925rem;
 	position:absolute;
 	top:0;
-	left:0;
+	left:0.375rem;
 }
 .slide2dialog2{
 	width:7.375rem;
 	height:2.875rem;
 	position:absolute;
 	top:0;
-	right:0;
+	right:0.25rem;
 }
 .person-net{
 	width:12.65rem;
@@ -172,6 +210,20 @@ html,body,img,span{
 	top:29%;
 	/* top:30.94%; */
 	left:8.6%;
+}
+.person-net1{
+	width:1.875rem;
+	height:6.05rem;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.person-net2{
+	width:10.75rem;
+	height:6.05rem;
+	position:absolute;
+	right:0;
+	top:0;
 }
 .pig-box{
 	width:4.1rem;
@@ -281,13 +333,61 @@ html,body,img,span{
 	position:absolute;
 	left:0;
 	bottom:0;
+	z-index:-1;
+}
+.slide3-lineBox{
+	width:0.65rem;
+	height:0.65rem;
+	position:absolute;
+	left:5.375rem;
+	bottom:2rem;
+	overflow:hidden;
+}
+@-webkit-keyframes lineBoxchange {
+	0%{width:0.65rem;height:0.65rem;}
+	50%{width:3.5rem;height:0.65rem;}
+	100%{width:3.5rem;height:4.5rem;}
+}
+@-khtml-keyframes lineBoxchange {
+	0%{width:0.65rem;height:0.65rem;}
+	50%{width:3.5rem;height:0.65rem;}
+	100%{width:3.5rem;height:4.5rem;}
+}
+@-o-keyframes lineBoxchange{
+	0%{width:0.65rem;height:0.65rem;}
+	50%{width:3.5rem;height:0.65rem;}
+	100%{width:3.5rem;height:4.5rem;}
+}
+@-moz-keyframes lineBoxchange {
+	0%{width:0.65rem;height:0.65rem;}
+	50%{width:3.5rem;height:0.65rem;}
+	100%{width:3.5rem;height:4.5rem;}
+}
+@keyframes lineBoxchange{
+	0%{width:0.65rem;height:0.65rem;}
+	50%{width:3.5rem;height:0.65rem;}
+	100%{width:3.5rem;height:4.5rem;}
+}
+.slide3-lineBox.active{
+	-webkit-animation:lineBoxchange 1s ease 0s;
+	   -moz-animation:lineBoxchange 1s ease 0s;
+	    -ms-animation:lineBoxchange 1s ease 0s;
+	     -o-animation:lineBoxchange 1s ease 0s;
+	 -khtml-animation:lineBoxchange 1s ease 0s;
+	        animation:lineBoxchange 1s ease 0s;
+	-webkit-animation-fill-mode:forwards;
+	   -moz-animation-fill-mode:forwards;
+	    -ms-animation-fill-mode:forwards;
+	     -o-animation-fill-mode:forwards;
+	 -khtml-animation-fill-mode:forwards;
+	        animation-fill-mode:forwards;
 }
 .slide3-line{
 	width:3.5rem;
 	height:4.5rem;
 	position:absolute;
-	left:5.375rem;
-	top:0.9rem;
+	left:0;
+	bottom:0;
 }
 .slide3dialog2{
 	width:10.5rem;
@@ -316,7 +416,7 @@ html,body,img,span{
 	height:1.55rem;
 	position: absolute;
 	top:0;
-	left:0;
+	left:2rem;
 }
 .slide3person2{
 	width:3.65rem;
@@ -342,11 +442,19 @@ html,body,img,span{
 	right:4.68%;
 }
 .slide4person1{
-	width:11.05rem;
+	/* width:11.05rem; */
+	width:10.75rem;
 	height:8.9rem;
 	position: absolute;
-	right:0.175rem;
+	right:0.6rem;
 	top:0;
+}
+.slide4-coupon{
+	width:1.35rem;
+	height:0.925rem;
+	position: absolute;
+	right:0.3rem;
+	top:1.55rem;
 }
 .slide4-cloud1{
 	width:2.675rem;
@@ -354,12 +462,12 @@ html,body,img,span{
 	position:absolute;
 	left:0;
 	bottom:0;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+	-webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 0s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 0s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 0s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 0s infinite alternate;
+	        animation:cloudmove 1.2s ease 0s infinite alternate;  
 }
 .slide4-cloud2{
 	width:2.05rem;
@@ -367,12 +475,12 @@ html,body,img,span{
 	position: absolute;
 	bottom:0;
 	left:40%;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+	-webkit-animation:cloudmove 1.2s ease 1s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 1s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 1s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 1s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 1s infinite alternate;
+	        animation:cloudmove 1.2s ease 1s infinite alternate;  
 }
 .slide4-cloud3{
 	width:1.375rem;
@@ -380,12 +488,12 @@ html,body,img,span{
 	position:absolute;
 	right:0;
 	bottom:2rem;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+	-webkit-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	        animation:cloudmove 1.2s ease 0.5s infinite alternate;  
 }
 .slide4-container3{
 	width:6.8rem;
@@ -401,12 +509,39 @@ html,body,img,span{
 	left:0;
 	top:0;
 }
+@-webkit-keyframes twitle {
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+@-khtml-keyframes twitle {
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+}
+@-o-keyframes twitle {
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+@-moz-keyframes twitle {
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+@keyframes twitle {
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
 .slide4-star1{
 	width:8rem;
 	height:7.65rem;
 	position:absolute;
 	left:-3.125rem;
 	top:-2.675rem;
+	-webkit-animation: twitle 0.5s linear 1.5s infinite alternate;
+	   -moz-animation: twitle 0.5s linear 1.5s infinite alternate;
+	    -ms-animation: twitle 0.5s linear 1.5s infinite alternate;
+	     -o-animation: twitle 0.5s linear 1.5s infinite alternate;
+	 -khtml-animation: twitle 0.5s linear 1.5s infinite alternate;
+	        animation: twitle 0.5s linear 1.5s infinite alternate;
 }
 .slide4-star2{
 	width:5.8rem;
@@ -414,6 +549,12 @@ html,body,img,span{
 	position:absolute;
 	right:-5.6rem;
 	top:0.85rem;
+	-webkit-animation: twitle 0.5s linear 1s infinite alternate;
+	   -moz-animation: twitle 0.5s linear 1s infinite alternate;
+	    -ms-animation: twitle 0.5s linear 1s infinite alternate;
+	     -o-animation: twitle 0.5s linear 1s infinite alternate;
+	 -khtml-animation: twitle 0.5s linear 1s infinite alternate;
+	        animation: twitle 0.5s linear 1s infinite alternate;
 }
 .slide4-star3{
 	width:7.075rem;
@@ -421,6 +562,12 @@ html,body,img,span{
 	position:absolute;
 	left:-1.35rem;
 	bottom:-1.45rem;
+	-webkit-animation: twitle 0.5s linear 0.5s infinite alternate;
+	   -moz-animation: twitle 0.5s linear 0.5s infinite alternate;
+	    -ms-animation: twitle 0.5s linear 0.5s infinite alternate;
+	     -o-animation: twitle 0.5s linear 0.5s infinite alternate;
+	 -khtml-animation: twitle 0.5s linear 0.5s infinite alternate;
+	        animation: twitle 0.5s linear 0.5s infinite alternate;
 }
 .slide5{
 	background:#e2b369;
@@ -522,12 +669,14 @@ html,body,img,span{
 	position: absolute;
 	left:1.9rem;
 	top:0.375rem;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide5-cloud1.active{
+	-webkit-animation:cloudmove 1.2s ease 1s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 1s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 1s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 1s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 1s infinite alternate;
+	        animation:cloudmove 1.2s ease 1s infinite alternate;  
 }
 .slide5-cloud2{
 	width:2.75rem;
@@ -535,12 +684,14 @@ html,body,img,span{
 	position: absolute;
 	left:0;
 	top:5rem;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide5-cloud2.active{
+	-webkit-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	        animation:cloudmove 1.2s ease 0.5s infinite alternate;
 }
 .slide5-cloud3{
 	width:2.575rem;
@@ -548,12 +699,14 @@ html,body,img,span{
 	position: absolute;
 	left:5.875rem;
 	top:3.8rem;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+}
+.slide5-cloud3.active{
+	-webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 0s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 0s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 0s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 0s infinite alternate;
+	        animation:cloudmove 1.2s ease 0s infinite alternate; 
 }
 .slide6{
 	background:url(../images/slide6bg.png) no-repeat;
@@ -591,12 +744,12 @@ html,body,img,span{
 	position: absolute;
 	left:0;
 	top:5.35rem;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+	-webkit-animation:cloudmove 1.2s ease 1s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 1s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 1s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 1s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 1s infinite alternate;
+	        animation:cloudmove 1.2s ease 1s infinite alternate;  
 }
 .slide6-cloud2{
 	width:2.675rem;
@@ -604,12 +757,12 @@ html,body,img,span{
 	position: absolute;
 	right:3.5rem;
 	top:4.15rem;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+	-webkit-animation:cloudmove 1.2s ease 1.5s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 1.5s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 1.5s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 1.5s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 1.5s infinite alternate;
+	        animation:cloudmove 1.2s ease 1.5s infinite alternate;  
 }
 .slide6-cloud3{
 	width:1.45rem;
@@ -617,12 +770,32 @@ html,body,img,span{
 	position: absolute;
 	right:0;
 	top:6.7rem;
-	-webkit-animation:cloudmove 1s ease 2s infinite alternate;
-	   -moz-animation:cloudmove 1s ease 2s infinite alternate;
-	    -ms-animation:cloudmove 1s ease 2s infinite alternate;
-	     -o-animation:cloudmove 1s ease 2s infinite alternate;
-	 -khtml-animation:cloudmove 1s ease 2s infinite alternate;
-	        animation:cloudmove 1s ease 2s infinite alternate;  
+	-webkit-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 0.5s infinite alternate;
+	        animation:cloudmove 1.2s ease 0.5s infinite alternate;  
+}
+@-webkit-keyframes wildgoose {
+	from {-webkit-transform: scale(0.3,0.3);}
+	to {-webkit-transform: scale(1,1);}
+}
+@-khtml-keyframes wildgoose {
+	from {-khtml-transform: scale(0.3,0.3);}
+	to {-khtml-transform: scale(1,1);}
+}
+@-o-keyframes wildgoose {
+	from {-o-transform: scale(0.3,0.3);}
+	to {-o-transform: scale(1,1);}
+}
+@-moz-keyframes wildgoose {
+	from {-moz-transform: scale(0.3,0.3);}
+	to {-moz-transform: scale(1,1);}
+}
+@keyframes wildgoose {
+	from {transform: scale(0.3,0.3);}
+	to {transform: scale(1,1);}
 }
 .slide6-wildgoose1{
 	width:1.95rem;
@@ -630,6 +803,25 @@ html,body,img,span{
 	position: absolute;
 	right:2.75rem;
 	top:2.75rem;
+	-webkit-transform:scale(0.3,0.3);
+	-khtml-transform:scale(0.3,0.3);
+	-o-transform:scale(0.3,0.3);
+	-moz-transform:scale(0.3,0.3);
+			transform:scale(0.3,0.3);
+}
+.slide6-wildgoose1.active{
+	-webkit-animation: wildgoose 2s linear 0s;
+	   -moz-animation: wildgoose 2s linear 0s;
+	    -ms-animation: wildgoose 2s linear 0s;
+	     -o-animation: wildgoose 2s linear 0s;
+	 -khtml-animation: wildgoose 2s linear 0s;
+	        animation: wildgoose 2s linear 0s;
+	        -webkit-animation-fill-mode:forwards;
+	   -moz-animation-fill-mode:forwards;
+	    -ms-animation-fill-mode:forwards;
+	     -o-animation-fill-mode:forwards;
+	 -khtml-animation-fill-mode:forwards;
+	        animation-fill-mode:forwards;
 }
 .slide6-wildgoose2{
 	width:1.275rem;
@@ -637,6 +829,25 @@ html,body,img,span{
 	position: absolute;
 	right:0.25rem;
 	top:0;
+	-webkit-transform: scale(0.3,0.3);
+	-khtml-transform: scale(0.3,0.3);
+	-o-transform: scale(0.3,0.3);
+	-moz-transform: scale(0.3,0.3);
+			transform: scale(0.3,0.3);
+}
+.slide6-wildgoose2.active{
+	-webkit-animation: wildgoose 2s linear 0.5s;
+	   -moz-animation: wildgoose 2s linear 0.5s;
+	    -ms-animation: wildgoose 2s linear 0.5s;
+	     -o-animation: wildgoose 2s linear 0.5s;
+	 -khtml-animation: wildgoose 2s linear 0.5s;
+	        animation: wildgoose 2s linear 0.5s;
+	        -webkit-animation-fill-mode:forwards;
+	   -moz-animation-fill-mode:forwards;
+	    -ms-animation-fill-mode:forwards;
+	     -o-animation-fill-mode:forwards;
+	 -khtml-animation-fill-mode:forwards;
+	        animation-fill-mode:forwards;
 }
 .register{
 	width:7.35rem;

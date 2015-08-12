@@ -25,6 +25,20 @@
 		},
 		onTransitionEnd: function(swiper){
 			swiperAnimate(swiper);
+			if (swiper.activeIndex !== 2) {
+				$(".slide3-lineBox").fadeOut();
+				$(".slide3-lineBox").removeClass('active');
+			}
+			if (swiper.activeIndex !== 3) {
+				$(".slide4-cloudBox").fadeOut()/*.children('img').removeClass('active')*/;
+			}
+			if (swiper.activeIndex !== 4) {
+				$(".slide5-cloudBox").fadeOut()/*.children('img').removeClass('active')*/;
+			}
+			if (swiper.activeIndex !== 5) {
+				$(".slide6-wildgoose1").removeClass('active');
+				$(".slide6-wildgoose2").removeClass('active');
+			}
 		},
 		watchSlidesProgress: true,
 		onProgress: function(swiper){
@@ -46,8 +60,28 @@
 			}
 		},
 		onTransitionStart: function(swiper) {
+			if (swiper.activeIndex == 2) {
+				setTimeout(function(){
+					$(".slide3-lineBox").fadeIn();
+					$(".slide3-lineBox").addClass('active');
+				},2000);
+			}
+			if (swiper.activeIndex == 3) {
+				setTimeout(function(){
+					$(".slide4-cloudBox").fadeIn();
+				},2000);
+			}
+			/*if (swiper.activeIndex == 4) {
+				setTimeout(function(){
+					$(".slide5-cloudBox").fadeIn()/*.children('img').addClass('active')*/;
+			/*	},4000);
+			}*/
+			if (swiper.activeIndex == 5) {
+				$(".slide6-wildgoose1").addClass('active');
+				$(".slide6-wildgoose2").addClass('active');
+			}
 		}
-	}); 
+	});
 }
 	</script>
 </head>
@@ -56,15 +90,24 @@
 	  <div class="swiper-wrapper">    
 	    <div class="swiper-slide slide1">
 	    	<div class="slide1-container1">
-		    	<img class="hot-balloon" src="../mstatic/images/hot-balloon.png" alt="">
-		    	<img class="airplane ani" src="../mstatic/images/airplane.png" alt="" swiper-animate-effect="slideInRight" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
-		    	<img class="cloudRT" src="../mstatic/images/cloudRT.png" alt="">
-		    	<img class="cloudB" src="../mstatic/images/cloudB.png" alt="">
-		    	<img class="cloudLC" src="../mstatic/images/cloudLC.png" alt="">
+		    	<img class="hot-balloon ani" src="../mstatic/images/hot-balloon.png" alt="" swiper-animate-effect="slideInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+		    	<div class="airplaneBox">
+		    		<img class="airplane ani" src="../mstatic/images/airplane.png" alt="" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+		    	</div>
+		    	<div class="slide1-cloudBox ani"  swiper-animate-effect="slideInRight" swiper-animate-duration="3s" swiper-animate-delay="1.5s">
+		    		<img class="cloudRT" src="../mstatic/images/cloudRT.png" alt="">
+		    	</div>
+		    	<div class="slide1-cloudBox ani"  swiper-animate-effect="slideInRight" swiper-animate-duration="3s" swiper-animate-delay="1.8s">
+			    	<img class="cloudB" src="../mstatic/images/cloudB.png" alt="">
+			    </div>
+			    <div class="slide1-cloudBox ani"  swiper-animate-effect="slideInLeft" swiper-animate-duration="3s" swiper-animate-delay="1.7s">
+			    	<img class="cloudLC" src="../mstatic/images/cloudLC.png" alt="">
+		    	</div>
 	    	</div>
 	    	<div class="slide1-container2">
-		    	<img class="slide1dialog" src="../mstatic/images/slide1dialog.png" alt="">
-		    	<img class="slide1dialog2" src="../mstatic/images/slide1dialog2.png" alt="">
+		    	<img class="slide1dialog ani" src="../mstatic/images/slide1dialog.png" alt="" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="3s">
+		    	<img class="slide1dialog2 ani" src="../mstatic/images/slide1dialog2.png" alt="" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="3.5s">
+		    	<img class="slide1dialog3 ani" src="../mstatic/images/slide1dialog2.png" alt="" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="4s">
 	    	</div>
 		    <img class="dolphin" src="../mstatic/images/dolphin.png" alt="">
 	    </div>
@@ -74,18 +117,21 @@
 		    	<!-- <img class="title2" src="../mstatic/images/title2.png" alt=""> -->
 	    	</div>
 	    	<div class="slide2-container2">
-		    	<img class="slide2dialog1 ani" src="../mstatic/images/slide2dialog1.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="1.6s">
-		    	<img class="slide2dialog2 ani" src="../mstatic/images/slide2dialog2.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.2s" swiper-animate-delay="0.3s">
-		    	<img class="person-net" src="../mstatic/images/person-net.png" alt="">
+		    	<img class="slide2dialog1 ani" src="../mstatic/images/slide2dialog1.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s" swiper-animate-delay="3.2s">
+		    	<img class="slide2dialog2 ani" src="../mstatic/images/slide2dialog2.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s" swiper-animate-delay="2.2s">
+		    	<div class="person-net">
+		    		<img class="person-net1 ani" src="../mstatic/images/person-net1.png" alt="" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.3s">
+		    		<img class="person-net2 ani" src="../mstatic/images/person-net2.png" alt="" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+		    	</div>
 		    	<div class="pig-box">
-			    	<img class="pig" src="../mstatic/images/pig.png" alt="">
-			    	<img class="purse1 ani" src="../mstatic/images/purse1.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.3s" swiper-animate-delay="1.6s">
-			    	<img class="purse2 ani" src="../mstatic/images/purse2.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.3s" swiper-animate-delay="1.7s">
-			    	<img class="purse3 ani" src="../mstatic/images/purse3.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.3s" swiper-animate-delay="1.8s">
-			    	<img class="money1 ani" src="../mstatic/images/money1.png" alt="" swiper-animate-effect="slideInDown" swiper-animate-duration="0.3s" swiper-animate-delay="1.9s">
-			    	<img class="money2 ani" src="../mstatic/images/money2.png" alt="" swiper-animate-effect="slideInDown" swiper-animate-duration="0.3s" swiper-animate-delay="1.9s">
-			    	<img class="money3 ani" src="../mstatic/images/money3.png" alt="" swiper-animate-effect="slideInDown" swiper-animate-duration="0.3s" swiper-animate-delay="1.9s">
-			    	<img class="star ani infinite" src="../mstatic/images/star.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.9s">
+			    	<img class="pig ani" src="../mstatic/images/pig.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.8s" swiper-animate-delay="3.2s">
+			    	<img class="star ani" src="../mstatic/images/star.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.8s" swiper-animate-delay="3.2s">
+			    	<img class="purse1 ani" src="../mstatic/images/purse1.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.8s" swiper-animate-delay="3.2s">
+			    	<img class="purse2 ani" src="../mstatic/images/purse2.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.8s" swiper-animate-delay="3.3s">
+			    	<img class="purse3 ani" src="../mstatic/images/purse3.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.8s" swiper-animate-delay="3.3s">
+			    	<img class="money1 ani" src="../mstatic/images/money1.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="3.4s">
+			    	<img class="money2 ani" src="../mstatic/images/money2.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="3.4s">
+			    	<img class="money3 ani" src="../mstatic/images/money3.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="3.4s">
 		    	</div>
 	    	</div>
 	    </div>
@@ -94,19 +140,21 @@
 		    	注册填写推荐人手机号
 	    	</div>
 	    	<div class="slide3-container2">
-			    <img class="slide3dialog1" src="../mstatic/images/slide3dialog1.png" alt="">
-			    <img class="slide3person1" src="../mstatic/images/slide3person1.png" alt="">
+			    <img class="slide3dialog1 ani" src="../mstatic/images/slide3dialog1.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.3s" swiper-animate-delay="0.5s">
+			    <img class="slide3person1" src="../mstatic/images/slide3person1.png" alt="" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
 	    	</div>
 	    	<div class="slide3-container3">
-			    <img class="slide3-pc" src="../mstatic/images/slide3-pc.png" alt="">
-			    <img class="slide3-line" src="../mstatic/images/slide3-line.png" alt="">
-			    <div class="slide3dialog2">
+			    <img class="slide3-pc " src="../mstatic/images/slide3-pc.png" alt="" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="1s">
+			    <div class="slide3-lineBox">
+			    	<img class="slide3-line" src="../mstatic/images/slide3-line.png" alt="">
+			    </div>
+			    <div class="slide3dialog2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.5s">
 			    	<img class="slide3-lamp" src="../mstatic/images/slide3-lamp.png" alt="">要在这里填写真真的手机号
 			    </div>
 	    	</div>
 	    	<div class="slide3-container4">
-			    <img class="slide3dialog3" src="../mstatic/images/slide3dialog3.png" alt="">
-			    <img class="slide3person2" src="../mstatic/images/slide3person2.png" alt="">
+			    <img class="slide3dialog3 ani" src="../mstatic/images/slide3dialog3.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.1s" swiper-animate-delay="3.5s">
+			    <img class="slide3person2 " src="../mstatic/images/slide3person2.png" alt="" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="3s">
 	    	</div>
 	    </div>
 	    <div class="swiper-slide slide4">
@@ -115,13 +163,16 @@
 			    <img class="slide4title2" src="../mstatic/images/slide4title2.png" alt="">
 	    	</div>
 	    	<div class="slide4-container2">
-			    <img class="slide4person1" src="../mstatic/images/slide4person1.png" alt="">
-			    <img class="slide4-cloud1" src="../mstatic/images/slide4-cloud1.png" alt="">
-			    <img class="slide4-cloud2" src="../mstatic/images/slide4-cloud2.png" alt="">
-			    <img class="slide4-cloud3" src="../mstatic/images/slide4-cloud3.png" alt="">
+			    <img class="slide4person1 ani" src="../mstatic/images/slide4person1.png" alt="" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+			    <img class="slide4-coupon ani" src="../mstatic/images/slide4-coupon.png" alt="" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+			    <div class="slide4-cloudBox">
+			    	<img class="slide4-cloud1" src="../mstatic/images/slide4-cloud1.png" alt="">
+			    	<img class="slide4-cloud2" src="../mstatic/images/slide4-cloud2.png" alt="">
+			    	<img class="slide4-cloud3" src="../mstatic/images/slide4-cloud3.png" alt="">
+			    </div>
 	    	</div>
 	    	<div class="slide4-container3">
-			    <img class="slide4-globle" src="../mstatic/images/slide4-globle.png" alt="">
+			    <img class="slide4-globle ani" src="../mstatic/images/slide4-globle.png" alt="" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s">
 			    <img class="slide4-star1" src="../mstatic/images/slide4-star1.png" alt="">
 			    <img class="slide4-star2" src="../mstatic/images/slide4-star2.png" alt="">
 			    <img class="slide4-star3" src="../mstatic/images/slide4-star3.png" alt="">
@@ -133,20 +184,21 @@
 			    <img class="slide5title2" src="../mstatic/images/slide5title2.png" alt="">
 	    	</div>
 	    	<div class="slide5-container2">
-			    <img class="slide5-person1" src="../mstatic/images/slide5-person1.png" alt="">
-			    <img class="slide5money1" src="../mstatic/images/slide5money1.png" alt="">
-			    <img class="slide5money2" src="../mstatic/images/slide5money2.png" alt="">
-			    <img class="slide5money3" src="../mstatic/images/slide5money3.png" alt="">
-			    <img class="slide5money4" src="../mstatic/images/slide5money4.png" alt="">
-			    <img class="slide5money5" src="../mstatic/images/slide5money5.png" alt="">
-			    <img class="slide5goldcoin1" src="../mstatic/images/slide5goldcoin1.png" alt="">
-			    <img class="slide5goldcoin2" src="../mstatic/images/slide5goldcoin2.png" alt="">
-			    <img class="slide5goldcoin3" src="../mstatic/images/slide5goldcoin3.png" alt="">
-			    <img class="slide5-bubble" src="../mstatic/images/slide5-bubble.png" alt="">
-			    <img class="slide5-thinkimg" src="../mstatic/images/slide5-thinkimg.png" alt="">
-			    <img class="slide5-cloud1" src="../mstatic/images/slide5-cloud1.png" alt="">
-			    <img class="slide5-cloud2" src="../mstatic/images/slide5-cloud2.png" alt="">
-			    <img class="slide5-cloud3" src="../mstatic/images/slide5-cloud3.png" alt="">
+			    <img class="slide5-person1 ani" src="../mstatic/images/slide5-person1.png" alt="" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+			    <img class="slide5money1 ani" src="../mstatic/images/slide5money1.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+			    <img class="slide5money2 ani" src="../mstatic/images/slide5money2.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+			    <img class="slide5money3 ani" src="../mstatic/images/slide5money3.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+			    <img class="slide5money4 ani" src="../mstatic/images/slide5money4.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+			    <img class="slide5money5 ani" src="../mstatic/images/slide5money5.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.7s">
+			    <img class="slide5goldcoin1 ani" src="../mstatic/images/slide5goldcoin1.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+			    <img class="slide5goldcoin2 ani" src="../mstatic/images/slide5goldcoin2.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">
+			    <img class="slide5goldcoin3 ani" src="../mstatic/images/slide5goldcoin3.png" alt="" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+			    <img class="slide5-bubble ani" src="../mstatic/images/slide5-bubble.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">
+			    <img class="slide5-thinkimg ani" src="../mstatic/images/slide5-thinkimg.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.5s">
+			    <!-- <div class="slide5-cloudBox"></div> -->
+			    	<img class="slide5-cloud1 active" src="../mstatic/images/slide5-cloud1.png">
+				    <img class="slide5-cloud2 active" src="../mstatic/images/slide5-cloud2.png">
+				    <img class="slide5-cloud3 active" src="../mstatic/images/slide5-cloud3.png" alt="">
 	    	</div>
         </div>
         <div class="swiper-slide slide6">
@@ -159,10 +211,9 @@
 			    <img class="slide6-cloud1" src="../mstatic/images/slide6-cloud1.png" alt="">
 			    <img class="slide6-cloud2" src="../mstatic/images/slide6-cloud2.png" alt="">
 			    <img class="slide6-cloud3" src="../mstatic/images/slide6-cloud3.png" alt="">
-		    	<span>你喜欢跟朋友分享旅行中的故事<br>是因为路途中的美好心情<br>可以通过回忆感染他人<br>故事、画面、声音，都是你的分享素材<br>....</span>
-		    	<a href="javascript:void(0);" class="register">立即注册</a>
+		    	<span class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">你喜欢跟朋友分享旅行中的故事<br>是因为路途中的美好心情<br>可以通过回忆感染他人<br>故事、画面、声音，都是你的分享素材<br>....</span>
+		    	<a href="javascript:void(0);" class="register ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">立即注册</a>
 	    	</div>
-	    	
         </div>
 	  </div>
 	 </div>
