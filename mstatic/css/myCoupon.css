@@ -173,10 +173,10 @@
 
 
 .voucherList.used{
-	display:none;
+	/*display:none;*/
 }
 .voucherList.expired{
-	display:none;
+	/*display:none;*/
 }
 .voucherList.used .voucherItem div, .voucherList.used .voucherItem span, .voucherList.used .voucherItem em, .voucherList.used .voucherItem a {
 	opacity: 0.7;

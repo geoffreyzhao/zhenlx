@@ -144,6 +144,36 @@ input[type="checkbox"] + span {
 	right: 2rem;
 	color:#3fc0ae;
 	font-size:0.75rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.header .acut-menu {
+    margin-right: 0.5rem;
+    display: inline-block;
+    float: right;
+}
+.header .acut-menu .acut-box {
+    margin-right: 0.7rem;
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1;
+    position: relative;
+    top: -0.125rem;
+}
+.header .acut-menu .acut-box img {
+	width: 100%;
+}
+.header .acut-menu .menu-img {
+	display: inline-block;
+	background: url(../images/menu-list.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	width: 1.1rem;
+	height: 1.075rem;
+	position: relative;
+	top: 0.35rem;
 }
 .header .til{
 	display: inline-block;
@@ -152,6 +182,44 @@ input[type="checkbox"] + span {
 	right:2rem;
 	color:#3fc0ae;
 	font-size: 0.6rem;
+}
+.header .menu-btn {
+	position: relative;
+}
+.header .menu-list-container {
+	border: 1px solid #3fc0ae;
+	border-radius: 0.125rem;
+	width: 7.5rem;
+	padding: 0 0.375rem;
+	background-color: #fff;
+	position: absolute;
+	right: -0.5rem;
+	margin-top: -1px;
+	display: none;
+	z-index: 2;
+}
+.header .menu-list-container .arrow-up {
+	position: absolute;
+	background: url(../images/arrow-up.png) no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	width: 1.025rem;
+	height: 0.25rem;
+	top: -0.25rem;
+	right: 0.5rem;
+}
+.header .menu-list-container .menu-list {
+
+}
+.header .menu-list-container .menu-list li {
+	height: 2.25rem;
+	line-height: 2.25rem;
+	border-bottom: 1px solid #f0f0f0;
+	font-size: 0.75rem;
+	color: #333;
+}
+.header .menu-list-container .menu-list li:last-child {
+	border-bottom: none;
 }
 .footer {
 	position: absolute;

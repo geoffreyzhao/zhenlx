@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/common.js"></script>
 
-	<title>登录注册</title>
+	<title>公共样式</title>
 
 	<script type="text/javascript">
 		var root = document.getElementsByTagName("html")[0],
@@ -23,6 +23,13 @@
 		root.style.fontSize = (w / 320) * 20 + "px";
 		root.style.minHeight = window.innerHeight + "px";
 	</script>
+
+	<style type="text/css">
+		.header {
+			/*  只为当前页面测试所用 */
+			position: static;
+		}
+	</style>
 </head>
 <body>
 	<div data-role="page">
@@ -70,6 +77,108 @@
             </div>
         </div>
 
+        <div>===========================================================</div>
+
+		<div style="margin: 1rem 0;">头部一</div>
+        <div class="headerBar">
+			<div class="header">
+				<span class="back">
+					<i class="back-arrow"></i>
+					<em class="back-border"></em>
+				</span>
+				<span class="title">欢迎来到真旅行</span>
+			</div>
+		</div>
+
+		<div style="margin: 1rem 0;">头部二</div>
+        <div class="headerBar">
+			<div class="header">
+				<a href="javascript:;"><span class="logo"></span></a>
+				<span class="title">欢迎来到真旅行</span>
+			</div>
+		</div>
+
+		<div style="margin: 1rem 0;">头部三</div>
+        <div class="headerBar">
+			<div class="header">
+				<a data-role="none" href="javascript:;"><span class="logo"></span></a>
+				<span class="title">欢迎来到真旅行</span>
+				<span class="acut-menu">
+	                <a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+	                	<img class="acut-img" src="../../mstatic/images/acut-img.png">
+	                </a>
+	                <span class="menu-btn">
+	                	<span class="menu-img"></span>
+	                	<div class="menu-list-container">
+	                		<i class="arrow-up"></i>
+		                	<ul class="menu-list">
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">首页</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">产品列表</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">我的订单</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">心愿清单</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">我的钱包</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">私信</a>
+		                	    </li>
+		                	</ul>
+	                	</div>
+	                </span>
+	            </span>
+			</div>
+		</div>
+
+		<div style="margin: 1rem 0;">头部四</div>
+        <div class="headerBar">
+			<div class="header">
+				<a href="javascript:;" class="back">
+					<i class="back-arrow"></i>
+					<em class="back-border"></em>
+				</a>
+				<span class="title">欢迎来到真旅行</span>
+				<span class="acut-menu">
+	                <a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+	                	<img class="acut-img" src="../../mstatic/images/acut-img.png">
+	                </a>
+	                <span class="menu-btn">
+	                	<span class="menu-img"></span>
+	                	<div class="menu-list-container">
+	                		<i class="arrow-up"></i>
+		                	<ul class="menu-list">
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">首页</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">产品列表</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">我的订单</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">心愿清单</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">我的钱包</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">私信</a>
+		                	    </li>
+		                	</ul>
+	                	</div>
+	                </span>
+	            </span>
+			</div>
+		</div>
+
 	</div>
 
 <script type="text/javascript">
@@ -83,6 +192,10 @@
 
 		$(".confirm-trigger").click(function(){
 			$("#confirm-dialog").popup("open");
+		});
+
+		$(".menu-btn").click(function(){
+			$(this).find(".menu-list-container").toggle();
 		});
 
 	});
