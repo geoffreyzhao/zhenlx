@@ -112,9 +112,11 @@
 								+'<ul><li></li><li></li>';
 		for (var i = 1; i <= 12; i++) {
 			if (opts.defaultDate.getMonth() + 1 == i) {
-				monthDomStr += '<li data-month='+ i +' class="current">' + i + '月</li>';
+
+
+				monthDomStr += '<li data-month='+ (i < 10 ? '0'+i : i) +' class="current">' + i + '月</li>';
 			} else {
-				monthDomStr += '<li data-month='+ i +'>' + i + '月</li>';
+				monthDomStr += '<li data-month='+ (i < 10 ? '0'+i : i) +'>' + i + '月</li>';
 			}
 			}
 			monthDomStr += '<li></li><li></li></ul></div></div>';
@@ -127,9 +129,9 @@
 								+'<ul><li></li><li></li>';
 		for (var i = 1; i <= dayNum; i++) {
 			if (opts.defaultDate.getDate() == i) {
-				dayDomStr += '<li data-day='+ i +' class="current">' + i + '日</li>';
+				dayDomStr += '<li data-day='+ (i < 10 ? '0'+i : i) +' class="current">' + i + '日</li>';
 			} else {
-				dayDomStr += '<li data-day='+ i +'>' + i + '日</li>';
+				dayDomStr += '<li data-day='+ (i < 10 ? '0'+i : i) +'>' + i + '日</li>';
 			}
 			}
 			dayDomStr += '<li></li><li></li></ul></div></div>';
@@ -240,9 +242,9 @@
 		var monthDomStr = '<ul><li></li><li></li>';
 		for (var i = 1; i <= 12; i ++) {
 			if (i == 1) {
-				monthDomStr += '<li data-month='+ i +' class="current">' + i + '月</li>';
+				monthDomStr += '<li data-month='+ (i < 10 ? '0'+i : i) +' class="current">' + i + '月</li>';
 			} else {
-				monthDomStr += '<li data-month='+ i +'>' + i + '月</li>';
+				monthDomStr += '<li data-month='+ (i < 10 ? '0'+i : i) +'>' + i + '月</li>';
 			}
 		}
 		monthDomStr += '<li></li><li></li></ul>';
@@ -254,9 +256,9 @@
 		var dayDomStr = '<ul><li></li><li></li>';
 		for (var i = 1; i <= day; i ++) {
 			if (i == 1) {
-				dayDomStr += '<li data-day='+ i +' class="current">' + i + '日</li>';	
+				dayDomStr += '<li data-day='+ (i < 10 ? '0'+i : i) +' class="current">' + i + '日</li>';	
 			} else {
-				dayDomStr += '<li data-day='+ i +'>' + i + '日</li>';
+				dayDomStr += '<li data-day='+ (i < 10 ? '0'+i : i) +'>' + i + '日</li>';
 			}
 		}
 		dayDomStr += '<li></li><li></li></ul>';
