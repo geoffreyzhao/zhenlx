@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/homePage.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>产品列表</title>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div class="prdlist-header">
+        <div class="prdlist-header-cnt">
+            <div class="head-logo"><img class="head-img" src="../../mstatic/images/logo-new.png"></div>
+            <div class="head-menu">
+                <a class="acut-box" href="javascript:void(0);"><img class="acut-img" src="../../mstatic/images/acut-img.png"></a>
+                <a href="javascript:void(0);"><img class="menu-img" src="../../mstatic/images/menu-list.png"></a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="prdlist-address">
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><a class="addresslist-org add-current" href="javascript:void(0);"><span id="origin-name">上海</span><span class="list-down down02"></span></a></div>
+                <div class="ui-block-b"><a class="addresslist-des" href="javascript:void(0);"><span id="dest-name">目的地</span><span class="list-down down01"></span></a></div>
+            </div>
+            <div class="address-origin">
+                <ul>
+                    <li>不限</li>
+                    <li>北京</li>
+                    <li class="add-current">上海</li>
+                    <li>广州</li>
+                    <li>深圳</li>
+                </ul>
+            </div>
+            <div class="address-destination">
+                <ul>
+                    <li>
+                        <span>不限</span>
+                        <ul class="add-second-menu">
+                            <li>&nbsp;</li>
+                        </ul>
+                    </li>
+                    <li class="add-current">
+                        <span>亚洲</span>
+                        <ul class="add-second-menu">
+                            <li>台湾</li>
+                            <li>日本</li>
+                            <li>泰国</li>
+                            <li>香港</li>
+                            <li>韩国</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>欧洲</span>
+                        <ul class="add-second-menu">
+                            <li>瑞典</li>
+                            <li>俄罗斯</li>
+                            <li>德国</li>
+                            <li>英国</li>
+                            <li>西班牙</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>非洲</span>
+                        <ul class="add-second-menu">
+                            <li>摩洛哥</li>
+                            <li>埃及</li>
+                            <li>突尼斯</li>
+                            <li>阿尔及利亚</li>
+                            <li>乌干达</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>美洲</span>
+                        <ul class="add-second-menu">
+                            <li>美国</li>
+                            <li>加拿大</li>
+                            <li>墨西哥</li>
+                            <li>阿根廷</li>
+                            <li>巴西</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="prdlist-box">
+            <ul>
+                <li>
+                    <a class="prdlist-link" href="产品详情.html" rel="external" data-role="none">
+                        <img class="prdlist-img" src="../../mstatic/images/spot01.png">
+                        <p class="prdlist-tips">[爆款2688]年轻人第一次治愈小清新之旅，上海-普吉岛5天4晚净化身心修性之旅</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prdlist-link" href="产品详情.html" rel="external" data-role="none">
+                        <img class="prdlist-img" src="../../mstatic/images/spot02.png">
+                        <p class="prdlist-tips">[爆款2688]年轻人第一次治愈小清新之旅，上海-普吉岛5天4晚净化身心修性之旅</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prdlist-link" href="产品详情.html" rel="external" data-role="none">
+                        <img class="prdlist-img" src="../../mstatic/images/spot03.png">
+                        <p class="prdlist-tips">[爆款2688]年轻人第一次治愈小清新之旅，上海-普吉岛5天4晚净化身心修性之旅</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(function(){
+        FastClick.attach(document.body);
+
+        var til = $(".prdlist-tips").text().trim();
+        var subtil = '';
+        var maxwidth = 40;
+        if (til.length > maxwidth) {
+            subtil = til.substring(0, maxwidth);
+            $(".prdlist-tips").html(subtil + '...');
+        }
+
+        $(".addresslist-org").click(function(){
+            $(".address-origin").slideToggle("fast");
+            $(".address-origin ul li").click(function(){
+                $(this).siblings().removeClass("add-current");
+                $(this).addClass("add-current");
+                $("#origin-name").text($(this).text());
+                $(".address-origin").slideUp("fast");
+            });
+
+        });
+        $(".addresslist-des").click(function(){
+            $(".address-destination").slideToggle("fast");
+            var obj = $(".address-destination ul").find(".add-current");
+            obj.addClass("without-border-right");
+            obj.children(".add-second-menu").show();
+            $(".address-destination ul li").click(function(){
+                if($(this).index() == 0){
+                    $("#dest-name").text($(this).children("span").text());
+                    $(".address-destination").slideUp("fast");
+                    $(this).siblings().removeClass("add-current");
+                    $(this).siblings().removeClass("without-border-right");
+                    $(this).addClass("add-current");
+                    $(".add-second-menu").hide();
+                    $(this).children(".add-second-menu").show();
+                    return;
+                }
+                if(!$(this).hasClass("add-current")){
+                    $(this).siblings().removeClass("add-current");
+                    $(this).siblings().removeClass("without-border-right");
+                    $(this).addClass("add-current").addClass("without-border-right");
+                    $(".add-second-menu").hide();
+                    $(this).children(".add-second-menu").show();
+                }
+                $(".add-second-menu li").click(function(){
+                    console.info($(this).text());
+                    $(this).addClass("add-current");
+                    $("#dest-name").text($(this).text());
+                    $(".address-destination").slideUp("fast");
+                    return false;
+                });
+
+            });
+        });
+
+    })
+</script>
+</body>
+</html>
