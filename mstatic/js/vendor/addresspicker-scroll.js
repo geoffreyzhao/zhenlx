@@ -64,6 +64,27 @@
 			domStr += provinceDomStr + cityDomStr + countyDomStr;
 
 			$(this.elementId).append(domStr);
+
+			//  设置弹窗基本方法
+			$(this.elementId).closest("div[data-role='popup']").on("popupafteropen", function(){
+
+				$(".ui-popup-screen").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
+			        return false;
+			    });
+
+			    $(".addresspicker-top-block").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
+			        return false;
+			    });
+			});
+
+			var tmp = this.elementId;
+			$(tmp).closest("div[data-role='popup']").find(".dp-cancel-btn").click(function(){
+				$(tmp).closest("div[data-role='popup']").popup("close");
+			});
+
+			$(tmp).closest("div[data-role='popup']").find(".dp-sure-btn").click(function(){
+				$(tmp).closest("div[data-role='popup']").popup("close");
+			});
 		},
 
 		_initIScroll: function() {

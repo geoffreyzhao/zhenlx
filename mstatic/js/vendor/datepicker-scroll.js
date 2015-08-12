@@ -143,7 +143,17 @@
 				transition: 'slideup',
 				positionTo: 'window',
 				corners: false,
-				dismissible: false
+				dismissible: false,
+				afteropen: function() {
+					
+					$(".ui-popup-screen").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
+					    return false;
+					});
+
+					$(".datepicker-top-block").bind("touchmove", function(){
+						return false;
+					});
+				}
 			});
 
 			$(id + "Datepicker").bind("click", function(e){

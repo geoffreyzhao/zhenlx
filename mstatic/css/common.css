@@ -484,3 +484,65 @@ input[type="checkbox"] + span {
 	width: 33%;
 	text-align: center;
 }
+
+/*  报错弹窗样式  */
+
+.ui-content{
+	padding:0;
+}
+.dlg-cnt{
+	width:12.5rem;
+	padding:1.25rem 0;
+	text-align: center;
+	font-size: 0.65rem;
+	line-height:1rem;
+	color:#333;
+	border-bottom: 1px #c0c0c0 solid;
+}
+.dlg-foot{
+	padding-bottom: 0.35rem;
+	text-align: center;
+}
+.btn-confirm{
+	font-weight: normal !important;
+	color:#3fc0ae !important;
+	font-size: 0.7rem;
+	display: inline-block;
+	width: 100%;
+	height: 1.5rem;
+	line-height: 1.5rem;
+}
+
+/*  二次确认弹窗样式  */
+
+.confirm-ui-content .dlg-cnt{
+    font-size: 0.7rem;
+    color:#666;
+    text-align: center;
+    padding:1.5rem 0;
+}
+.confirm-ui-content .dlg-foot{
+    text-align: center;
+    padding:0.5rem 1.5rem;
+}
+.confirm-ui-content .btn-com{
+    width:4.5rem;
+    height:2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 2rem;
+    color:#fff !important;
+    display: inline-block;
+    font-weight: normal !important;
+    text-decoration: none;
+    -webkit-border-radius: 0.0125rem;
+    -moz-border-radius: 0.0125rem;
+    border-radius: 0.125rem;
+}
+.confirm-ui-content .btn-confirm{
+    background-color:#11b9b7;
+    margin-right:0.5rem;    
+}
+.confirm-ui-content .btn-cancel{
+    background-color:#d4d4d4;
+}

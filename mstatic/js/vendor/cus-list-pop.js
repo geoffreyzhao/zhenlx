@@ -109,7 +109,16 @@
 						overlayTheme: 'b',
 						positionTo: 'window',
 						transition: 'slideup',
-						corners: false
+						corners: false,
+						afteropen: function() {
+							$(".ui-popup-screen").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
+							    return false;
+							});
+
+							$(".pop-select-title").bind("touchmove", function(){   //  自定义列表框标题禁止滑动
+							    return false;
+							});
+						}
 					});
 
 					if (opts.reCreate) {

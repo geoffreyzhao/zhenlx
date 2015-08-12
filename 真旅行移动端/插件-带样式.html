@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="../../mstatic/js/vendor/addresspicker-scroll.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/cus-list-pop.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
 	<title>插件--带样式</title>
 
 	<script type="text/javascript">
@@ -39,7 +40,7 @@
 
 		<div id="address">点击选择地址</div>
 
-		<div data-role="popup" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false" style="height:10.25rem;">
+		<div data-role="popup" data-theme="a" data-overlay-theme="b" data-transition="slideup" data-position-to="window" data-corners="false" data-dismissible="false" style="height:10.25rem;">
 			<div class="addresspicker-top-block">
 				<div class="dp-cancel-btn">取消</div>
 				<div class="title">请选择城市</div>
@@ -47,6 +48,18 @@
 			</div>
 			<div id="addressWrapperContainer" class="addresspicker-scroll"></div>
 		</div>
+
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
+        <div style="width:100%;height:2rem;border-top:1px solid #666;">为了产生滚动条</div>
 	</div>
 
 <script type="text/javascript">
@@ -57,17 +70,17 @@
 
 		//  弹窗弹出，禁止页面滚动，待放入 common.js
 
-		$("div[data-role='popup']").popup({
-            afteropen: function(){
-                $(".ui-popup-screen").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
-                    return false;
-                });
+		// $("div[data-role='popup']").popup({
+  //           afteropen: function(){
+  //               $(".ui-popup-screen").bind("touchmove", function(){  //  弹窗遮罩层禁止滑动
+  //                   return false;
+  //               });
 
-                $(".pop-select-title").bind("touchmove", function(){
-                    return false;
-                });
-            }
-        });
+  //               $(".pop-select-title").bind("touchmove", function(){
+  //                   return false;
+  //               });
+  //           }
+  //       });
 
         var province = ["上海市", "北京市", "安徽省", "江苏省", "浙江省"];
 

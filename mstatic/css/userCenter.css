@@ -189,37 +189,6 @@
     height:1.65rem;
     padding:0 0.45rem;
 }
-.dlg-cnt{
-    font-size: 0.7rem;
-    color:#666;
-    text-align: center;
-    padding:1.5rem 0;
-}
-.dlg-foot{
-    text-align: center;
-    padding:0.5rem 1.5rem;
-}
-.btn-com{
-    width:4.5rem;
-    height:2rem;
-    text-align: center;
-    font-size: 0.85rem;
-    line-height: 2rem;
-    color:#fff !important;
-    display: inline-block;
-    font-weight: normal !important;
-    text-decoration: none;
-    -webkit-border-radius: 0.0125rem;
-    -moz-border-radius: 0.0125rem;
-    border-radius: 0.125rem;
-}
-.btn-confirm{
-    background-color:#11b9b7;
-    margin-right:0.5rem;    
-}
-.btn-cancel{
-    background-color:#d4d4d4;
-}
 .dlg-box{
     max-width: 8.5rem;
 

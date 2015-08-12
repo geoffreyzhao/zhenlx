@@ -436,28 +436,6 @@
     padding:0 0.5rem;
     margin-top:1.55rem;
 }
-.ui-content{
-	padding:0;
-}
-.dlg-cnt{
-	width:12.5rem;
-	padding:1.25rem 0;
-	text-align: center;
-	font-size: 0.65rem;
-	line-height:1rem;
-	color:#333;
-	border-bottom: 1px #c0c0c0 solid;
-}
-.dlg-foot{
-	padding-bottom: 0.75rem;
-	text-align: center;
-}
-.btn-confirm{
-	width:4.5rem;
-	font-weight: normal !important;
-	color:#3fc0ae !important;
-	font-size: 0.7rem;
-}
 
 /** 重置密码 -start **/
 .reset-row{
