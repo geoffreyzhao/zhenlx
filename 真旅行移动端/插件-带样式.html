@@ -68,16 +68,16 @@
                 cardData = ["身份证", "护照", "港澳通行证"];
 
             $(".cardType").each(function(){
-                cardData = _.without(cardData, $(this).html());
+                if ($(this).html() != currentName) {
+                    cardData = _.without(cardData, $(this).html());
+                }
             });
 
             $this.cusListPop({
                 title: "请选择证件类型",
                 scrollId: $this.get(0).id,
                 data: cardData,
-                currentData: {
-                    name: $this.html()
-                },
+                currentData: currentName,
                 reCreate: true,
                 callback: function() {
 
