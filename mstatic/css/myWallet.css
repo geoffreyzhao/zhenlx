@@ -206,3 +206,69 @@
         -webkit-transform: rotate(360deg) translateZ(0);
     }
 }
+
+/** 无代金券 -start **/
+.without-wallet{
+	background-color:#fff;
+}
+.without-wallet-box{
+	height:2.25rem;
+	background-color:#fff;
+}
+.without-wallet-header{
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding:0.5rem;
+	border-bottom: 1px #dcdcdc solid;
+	-webkit-box-shadow: 0 2px 2px #ebebeb;
+	-moz-box-shadow: 0 2px 2px #ebebeb;
+	box-shadow: 0 2px 2px #ebebeb;
+}
+.without-wallet-header .head-logo{
+	width: 1.625rem;
+	display: inline-block;
+}
+.without-wallet-header .head-menu{
+	display: inline-block;
+	float: right;
+}
+.head-img{
+	width:3rem;
+	height:1.2rem;
+	vertical-align: middle;
+}
+.acut-box{
+	margin-right:1rem;
+}
+.acut-img{
+	width:1.075rem;
+	height:1.075rem;
+	vertical-align: middle;
+}
+.menu-img{
+	width:1.1rem;
+	height:0.825rem;
+}
+.without-wallet-cnt{
+	width:100%;
+	min-height:21rem;
+	text-align: center;
+	background-color:#fff;
+}
+.without-img{
+	width:3.575rem;
+	height:2.45rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 30%;
+}
+.without-txt{
+	font-size: 0.7rem;
+	color:#666;
+	line-height:1.1rem;
+	margin-top:2rem;
+}
+/** end **/
