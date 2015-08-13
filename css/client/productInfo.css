@@ -2105,11 +2105,28 @@ ul.common-tab > li.rest {
     word-break: break-all;
 }
 .locImg{
-    width:34px;
-    height:37px;
-    display: inline-block;
+    background: url(../../images/client/prolist-hint-icon.png) no-repeat;
     vertical-align: middle;
-    background:url("../../images/client/locIcon.png") no-repeat 0 0;
+}
+.locImg.img-1 {
+    width: 38px;
+    height: 38px;
+    background-position: 0 0;
+}
+.locImg.img-2 {
+    width: 38px;
+    height: 36px;
+    background-position: -41px 0;
+}
+.locImg.img-3 {
+    width: 35px;
+    height: 39px;
+    background-position: -82px 0;
+}
+.locImg.img-4 {
+    width: 38px;
+    height: 40px;
+    background-position: -120px 0;
 }
 .product-container .foot {
     width: 1130px;
