@@ -848,11 +848,12 @@ input[type="radio"]:checked + .pay-check{
 .agreement > label{
     vertical-align: middle;
     margin-left:0;
-    margin-right:0.4rem;
+    margin-right:0.2rem;
 }
 .agr-txt{
+
     color:#3fc0ae !important;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 .order-sub{
     position: fixed;
@@ -885,6 +886,16 @@ input[type="radio"]:checked + .pay-check{
     display: inline-block;
     background-color: #ffa200;
     color:#fff !important;
+    font-size: 0.85rem;
+    line-height:2.5rem;
+    text-align: center;
+    font-weight: normal !important;
+}
+.sub-disable{
+    width:100%;
+    display: inline-block;
+    background-color: #d3d7d6;
+    color:#666 !important;
     font-size: 0.85rem;
     line-height:2.5rem;
     text-align: center;
@@ -951,9 +962,7 @@ input[type="radio"]:checked + .pay-check{
     color:#666 !important;
     font-weight: normal !important;
 }
-#submit-dlg-popup{
-    top:2rem !important;
-}
+
 .submit-dlg{
     width:12.5rem;
     padding:1rem 0.5rem;
