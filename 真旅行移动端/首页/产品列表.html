@@ -100,6 +100,16 @@
                 </ul>
             </div>
         </div>
+        <div class="recom-path">
+            <div class="recom-content">
+                <p>上海-台湾 线路还未上线</p>
+                <p>推荐您以下路线</p>
+                <p><label class="path-img02"></label></p>
+                <span class="path-img01"></span>
+            </div>
+            <div class="path-space"></div>
+            <div class="path-til">推荐路线</div>
+        </div>
         <div class="prdlist-box">
             <ul>
                 <li>
@@ -139,6 +149,7 @@
         }
 
         $(".addresslist-org").click(function(){
+            $(".address-destination").hide("fast");
             $(".address-origin").slideToggle("fast");
             $(".address-origin ul li").click(function(){
                 $(this).siblings().removeClass("add-current");
@@ -149,37 +160,42 @@
 
         });
         $(".addresslist-des").click(function(){
+            $(".address-origin").hide("fast");
             $(".address-destination").slideToggle("fast");
             var obj = $(".address-destination ul").find(".add-current");
             obj.addClass("without-border-right");
             obj.children(".add-second-menu").show();
-            $(".address-destination ul li").click(function(){
-                if($(this).index() == 0){
-                    $("#dest-name").text($(this).children("span").text());
-                    $(".address-destination").slideUp("fast");
-                    $(this).siblings().removeClass("add-current");
-                    $(this).siblings().removeClass("without-border-right");
-                    $(this).addClass("add-current");
-                    $(".add-second-menu").hide();
-                    $(this).children(".add-second-menu").show();
-                    return;
-                }
-                if(!$(this).hasClass("add-current")){
-                    $(this).siblings().removeClass("add-current");
-                    $(this).siblings().removeClass("without-border-right");
-                    $(this).addClass("add-current").addClass("without-border-right");
-                    $(".add-second-menu").hide();
-                    $(this).children(".add-second-menu").show();
-                }
-                $(".add-second-menu li").click(function(){
-                    console.info($(this).text());
-                    $(this).addClass("add-current");
-                    $("#dest-name").text($(this).text());
-                    $(".address-destination").slideUp("fast");
-                    return false;
-                });
 
-            });
+        });
+        $(".address-destination > ul > li").click(function(){
+            if($(this).index() == 0){
+                $("#dest-name").text($(this).children("span").text());
+                $(".address-destination").slideUp("fast");
+                $(this).siblings().removeClass("add-current");
+                $(this).siblings().removeClass("without-border-right");
+                $(this).addClass("add-current");
+                $(".add-second-menu").hide();
+                $(this).children(".add-second-menu").show();
+                return;
+            }
+            if(!$(this).hasClass("add-current")){
+                $(this).siblings().removeClass("add-current");
+                $(this).siblings().removeClass("without-border-right");
+                $(this).addClass("add-current").addClass("without-border-right");
+                $(".add-second-menu").hide();
+                $(this).children(".add-second-menu").show();
+            }
+        });
+        $(".add-second-menu > li").click(function(){
+            var spot = $(this).text().trim();
+            if(spot == "台湾"){
+                $(".recom-path").slideDown();
+            }
+            $(".add-second-menu li").removeClass("add-current");
+            $(this).addClass("add-current");
+            $("#dest-name").text($(this).text());
+            $(".address-destination").slideUp("fast");
+            return false;
         });
 
     })

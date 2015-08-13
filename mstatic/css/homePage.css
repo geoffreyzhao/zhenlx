@@ -1146,3 +1146,65 @@
     padding:0.3rem;
 }
 /** end **/
+
+/** 用户评论 -start **/
+.judge-content{
+    background-color:#fff;
+    padding-bottom: 5rem;
+}
+/** end **/
+
+/** 推荐路线 -start **/
+.recom-path{
+    display: none;
+    width:100%;
+}
+.recom-content{
+    padding-top:0.8rem;
+    height:4.5rem;
+    position: relative;
+    text-align: center;
+    border-top:1px #3fc0ae solid;
+    border-bottom:1px #3fc0ae solid;
+    background-color:#d0eff4;
+}
+.recom-content p{
+    font-size: 0.7rem;
+    color:#666;
+    line-height:1.2rem;
+}
+.path-img01{
+    width:3.125rem;
+    height:2.025rem;
+    position: absolute;
+    bottom: 0;
+    left:1rem;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../mstatic/images/path-img01.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.path-img02{
+    width:0.525rem;
+    height:0.4rem;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../../mstatic/images/path-img02.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.path-space{
+    height:0.7rem;
+    background-color:#f0f0f0;
+    border-bottom: 1px #dcdcdc solid;
+}
+.path-til{
+    background-color:#fff;
+    padding:0.5rem;
+    font-size: 0.8rem;
+    color:#333;
+    line-height:1.2rem;
+}
+/** end **/
