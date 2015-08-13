@@ -259,6 +259,7 @@
     position: absolute;
     top:3.8rem;
     left:50%;
+    z-index: 60;
     -webkit-border-image: url(../../mstatic/images/prg-border.png) 25 25 round;
     -moz-border-image: url(../../mstatic/images/prg-border.png) 25 25 round;
     -o-border-image: url(../../mstatic/images/prg-border.png) 25 25 round;
@@ -266,11 +267,13 @@
 }
 .dialog-box{
     position: relative;
+    z-index: 60;
 }
 .prg-dlg-bar{
     position: absolute;
     top: 0;
     left:0;
+    z-index: 61;
     width:1.6rem;
     padding-left:0.5rem;
     display: inline-block;
@@ -300,6 +303,8 @@
     top: 0;
     left:2.3rem;
     width:5rem;
+    background-color:#fff;
+    z-index: 62;
     display: inline-block;
     text-align: center;
     font-size: 0.75rem;
@@ -416,6 +421,149 @@
     border-top:1px #dcdcdc solid;
     border-bottom:1px #dcdcdc solid;
 }
+.order-pop, .order-traveler{
+    width:100%;
+    z-index: 10;
+    position: relative;
+}
+.black_overlay, .black_overlay-sec{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 11;
+    -moz-opacity: 0.6;
+    opacity: .60;
+    filter: alpha(opacity=60);
+}
+.order-pop-edt, .order-traveler-edt{
+    display: none;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 21;
+    background-color:#fff;
+}
+.row-edt-til{
+    padding:0.5rem;
+    background-color:#fff;
+    font-size: 0.8rem;
+    color:#333;
+    border-bottom:1px #ebebeb solid;
+}
+.row-edt-til > span{
+    line-height:1.5rem;
+    vertical-align: middle;
+}
+.pop-edt-btn, .travel-edt-btn{
+    float: right;
+    display: inline-block;
+}
+.edt-cancel{
+    display: inline-block;
+    font-size: 0.6rem;
+    color:#666;
+    padding:0.4rem 1rem;
+}
+.edt-save{
+    display: inline-block;
+    font-size: 0.6rem;
+    color:#fff;
+    padding:0.4rem 1rem;
+    background-color:#3fc0ae;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+}
+.order-edt-box, .traveler-edt-box{
+    padding:0 0.5rem;
+    font-size: 0.7rem;
+    color:#666;
+}
+.order-edt-box .ui-grid-a{
+    border-bottom:1px #ebebeb solid;
+    line-height:1.2rem;
+    padding:0.5rem 0;
+}
+.order-edt-box .ui-grid-a .ui-block-a{
+    width:35%;
+}
+.order-edt-box .ui-grid-a .ui-block-b{
+    width:65%;
+}
+.block-val{
+    padding:0.5rem 0;
+}
+.travel-arrow{
+    width:0.4rem;
+    height:0.625rem;
+    margin-right:0.5rem !important;
+    display: inline-block;
+    background:url("../../mstatic/images/u_lr.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.traveler-edt-box .ui-grid-b{
+    border-bottom:1px #ebebeb solid;
+    line-height:1.2rem;
+}
+.traveler-edt-box .ui-grid-b .ui-block-a{
+    width:35%;
+    padding:0.5rem 0;
+    font-size: 0.7rem;
+    color:#666;
+}
+.traveler-edt-box .ui-grid-b .ui-block-b{
+    width:45%;
+    padding:0.5rem 0;
+}
+.traveler-edt-box .ui-grid-b .ui-block-c{
+    padding:0.4rem 0;
+    text-align: right;
+    width:20%;
+}
+.traveler-edt-box .ui-grid-a .ui-block-a{
+    width:35%;
+}
+.traveler-edt-box .ui-grid-a .ui-block-b{
+    width:65%;
+    padding:0.5rem 0;
+    border-bottom:1px #ebebeb solid;
+}
+.travel-lab{
+    font-size: 0.75rem;
+    padding:0.2rem 0.3rem;
+    color:#fff !important;
+    background-color:#3fc0ae;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+}
+.traveler-val{
+    width:100%;
+    display: inline-block;
+    font-size: 0.75rem;
+    color:#333;
+}
+.traveler-val01{
+    width: 8.5rem;
+    display: inline-block;
+    font-size: 0.75rem;
+    color:#333;
+}
+.block-val > label{
+    vertical-align: bottom;
+    margin-left:0;
+    margin-right:0.4rem;
+}
+.block-val > label:last-child{
+    margin-left:1.2rem;
+}
 .row-til{
     padding:0.5rem;
     background-color:#fff;
@@ -423,14 +571,30 @@
     color:#333;
     border-bottom:1px #dcdcdc solid;
 }
+.row-edt-pop, .row-edt-traveler{
+    font-size: 0.5rem;
+    color:#1dafae;
+    float: right;
+    display: inline-block;
+}
+.edt-icon{
+    width:0.8rem;
+    height:0.8rem;
+    margin-left:0.3rem;
+    background: url("../images/pencil.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
 .row-content, .order-ticket{
-    padding:0 0.5rem;
+    padding:0.3rem 0.5rem;
     background-color:#fff;
     line-height:1.3rem;
 }
 .row-content .ui-grid-a{
-    padding-top:0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top:0.3rem;
+    padding-bottom: 0.3rem;
 }
 .row-content .ui-grid-a:first-child{
     border-bottom:1px #dcdcdc solid;

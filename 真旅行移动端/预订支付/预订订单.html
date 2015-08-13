@@ -331,7 +331,10 @@
                 <p class="price-icon">￥<span class="price-num">10367</span></p>
             </div>
             <div class="ui-block-b"><a href="#order-detail" id="scan-detail" data-rel="popup">查看明细<label class="arr-up"></label></a></div>
-            <div class="ui-block-c"><a class="sub-link" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a></div>
+            <div class="ui-block-c">
+                <a class="sub-disable" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a>
+                <!--<a class="sub-link" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a>-->
+            </div>
         </div>
     </div>
     <!--产看明细弹窗-->
@@ -374,7 +377,7 @@
         </div>
     </div>
     <!--提交弹窗-->
-    <div class="submit-dlg" id="submit-dlg" data-role="popup" data-transition="pop" data-theme="a" data-overlay-theme="b">
+    <div class="submit-dlg" id="submit-dlg" data-role="popup" data-transition="pop" data-position-to="window" data-theme="a" data-overlay-theme="b">
         <div class="ui-grid-a">
             <div class="ui-block-a"><i class="person-icon"></i></div>
             <div class="ui-block-b"><input class="submit-dlg-val" type="text" placeholder="手机号" data-role="none"></div>
