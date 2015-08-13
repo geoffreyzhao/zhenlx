@@ -181,13 +181,23 @@
 .voucherList.used .voucherItem div, .voucherList.used .voucherItem span, .voucherList.used .voucherItem em, .voucherList.used .voucherItem a {
 	opacity: 0.7;
 }
-.voucherList.used .flag,.voucherList.expired .flag {
+.voucherList.used .flag {
 	position: absolute;
 	right: -0.875rem;
 	top: -1.875rem;
 	background: url(../images/usedcover.png) no-repeat 0 0;
 	background-size:7.1rem 7.35rem;
 	width: 7.1rem;
+	height: 7.35rem;
+	opacity: 1!important;
+}
+.voucherList.expired .flag {
+	position: absolute;
+	right: -0.875rem;
+	top: -1.875rem;
+	background: url(../images/expireCover.png) no-repeat 0 0;
+	background-size:100%;
+	width: 7.15rem;
 	height: 7.35rem;
 	opacity: 1!important;
 }
