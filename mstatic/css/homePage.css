@@ -990,23 +990,36 @@
 }
 .menu-sum{
     background-color:#fff;
-    padding:0.5rem;
+    padding:0 0.5rem;
+    line-height: 2rem;
     margin:0.25rem 0;
 }
-.pop-num{
-    color:#ffa200;
-    padding:0 0.2rem;
-}
-.menu-arr-down{
-    width:0.625rem;
-    height:0.4rem;
-    margin:0.3rem;
-    vertical-align: middle;
+.counter{
     display: inline-block;
+    vertical-align: middle;
     float: right;
-    background: #fff url("../../mstatic/images/arr-bottom.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
+}
+.counter-item{
+    width:2.5rem;
+    display: inline-block;
+    line-height: 2.25rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.counter-minus, .counter-add{
+    background-color:#a4ebe1;
+    color:#fff;
+    font-size: 1.5rem;
+}
+.counter-disable{
+    background-color:#e7e7e7;
+    color:#fff;
+    font-size: 1.5rem;
+}
+.counter-num{
+    background-color:#fff;
+    color:#ffa200;
+    font-size: 0.75rem;
 }
 /** end **/
 

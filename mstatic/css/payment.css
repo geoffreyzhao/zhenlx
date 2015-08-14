@@ -894,7 +894,7 @@ input[type="radio"]:checked + .pay-check{
 .sub-disable{
     width:100%;
     display: inline-block;
-    background-color: #d3d7d6;
+    background-color: #e7e7e7;
     color:#666 !important;
     font-size: 0.85rem;
     line-height:2.5rem;
