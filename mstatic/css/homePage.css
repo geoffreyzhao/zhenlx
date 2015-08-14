@@ -529,33 +529,27 @@
     background-size: 100%;
 }
 .common-icon{
-    width:0.75rem;
-    height:0.75rem;
+    width:0.8rem;
+    height:0.8rem;
     position: absolute;
     display: inline-block;
     top:0.65rem;
-    left: -1.3rem;
+    left: -1.35rem;
+    background-color:#3fc0ae;
+    font-size: 0.55rem;
+    line-height:1rem;
+    color:#fff;
+    text-align: center;
     vertical-align: middle;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    border-radius: 0.4rem;
 }
 .icon-disc{
-    background: url("../../mstatic/images/icon-disc.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-}
-.num-1{
-    background: url("../../mstatic/images/num-1.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-}
-.num-2{
-    background: url("../../mstatic/images/num-2.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-}
-.num-5{
-    background: url("../../mstatic/images/num-5.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    width:0.6rem;
+    height:0.6rem;
+    top:0.75rem;
+    left: -1.2rem;
 }
 .box-border{
     height:100%;
