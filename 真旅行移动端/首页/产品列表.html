@@ -189,7 +189,9 @@
         $(".add-second-menu > li").click(function(){
             var spot = $(this).text().trim();
             if(spot == "台湾"){
-                $(".recom-path").slideDown();
+                $(".recom-path").slideDown("normal");
+            }else{
+                $(".recom-path").slideUp("fast");
             }
             $(".add-second-menu li").removeClass("add-current");
             $(this).addClass("add-current");

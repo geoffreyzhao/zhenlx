@@ -332,8 +332,8 @@
             </div>
             <div class="ui-block-b"><a href="#order-detail" id="scan-detail" data-rel="popup">查看明细<label class="arr-up"></label></a></div>
             <div class="ui-block-c">
-                <a class="sub-disable" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a>
-                <!--<a class="sub-link" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a>-->
+                <!--<a class="sub-disable" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a>-->
+                <a class="sub-link" href="javascript:void(0);" data-role="none" data-transition="slidefade">提交</a>
             </div>
         </div>
     </div>
@@ -412,7 +412,6 @@
 
         $(".agr-txt").click(function(){
             $("#agr-dialog").popup("open");
-
             $("#agr-dialog-screen").touchmove(function(){
                 return false;
             })
@@ -463,10 +462,12 @@
 
         $(".sub-link").click(function(){
             $("#submit-dlg").popup("open");
-        })
+        });
         $("#sub-link").click(function(){
             $("#order-detail").popup("close");
-            $("#submit-dlg").popup("open");
+            setTimeout(function(){
+                $("#submit-dlg").popup("open");
+            }, 500);
         });
         $(".submit-dlg-confirm").click(function(){
             $("#submit-dlg").popup("close");

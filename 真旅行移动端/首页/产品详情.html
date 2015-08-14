@@ -658,11 +658,19 @@
         <div class="menu-sum-box">
             <i class="left-semicircle"></i>
             <i class="right-semicircle"></i>
-            <div class="menu-sum clearfix">
-                成人<span class="pop-num">1</span><span class="menu-arr-down"></span>
+            <div class="menu-sum clearfix">成人
+                <div class="counter">
+                    <span class="counter-item counter-minus">－</span>
+                    <span class="counter-item counter-num">1</span>
+                    <span class="counter-item counter-add">＋</span>
+                </div>
             </div>
-            <div class="menu-sum clearfix">
-                儿童数<span class="menu-arr-down"></span>
+            <div class="menu-sum clearfix">儿童数
+                <div class="counter">
+                    <span class="counter-item counter-minus">－</span>
+                    <span class="counter-item counter-num">1</span>
+                    <span class="counter-item counter-add">＋</span>
+                </div>
             </div>
         </div>
         <div class="menu-order">
@@ -787,6 +795,33 @@
 
 
             $(this).toggleClass("menu-row-focus");
+        });
+
+        var least = 0;
+        $(".counter > .counter-minus").click(function(){
+            var minus_num = parseInt($(this).next().text());
+            minus_num--;
+            if(minus_num <= least){
+                $(this).addClass("counter-disable");
+                $(this).next().text(least);
+                return false;
+            }else{
+                if($(this).hasClass("counter-disable")){
+                    $(this).removeClass("counter-disable");
+                }
+            }
+            $(this).next().text(minus_num);
+        });
+        $(".counter > .counter-add").click(function(){
+            var add_num = parseInt($(this).prev().text());
+            add_num++;
+            if(add_num > least){
+                var obj = $(this).parent().find(".counter-minus");
+                if(obj.hasClass("counter-disable")){
+                    obj.removeClass("counter-disable");
+                }
+            }
+            $(this).prev().text(add_num);
         });
     });
 </script>
