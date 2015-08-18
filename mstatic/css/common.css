@@ -138,10 +138,12 @@ input[type="checkbox"] + span {
 	margin-top: 0.675rem;
 }
 .header .title {
+	width:8rem;
+	margin:0 auto;
 	display: inline-block;
 	position: absolute;
 	left: 2rem;
-	right: 2rem;
+	right: 4rem;
 	color:#3fc0ae;
 	font-size:0.75rem;
 	overflow: hidden;
@@ -196,7 +198,7 @@ input[type="checkbox"] + span {
 	right: -0.5rem;
 	margin-top: -1px;
 	display: none;
-	z-index: 2;
+	z-index: 5;
 }
 .header .menu-list-container .arrow-up {
 	position: absolute;

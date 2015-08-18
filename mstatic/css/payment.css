@@ -962,13 +962,9 @@ input[type="radio"]:checked + .pay-check{
     color:#666 !important;
     font-weight: normal !important;
 }
-
-#submit-dlg-popup{
-    top:2rem !important;
-}
 .submit-dlg{
     width:12.5rem;
-    padding:1rem 0.5rem;
+    padding:0.5rem;
     line-height:1.2rem;
     background-color: #fff;
 }
@@ -976,7 +972,7 @@ input[type="radio"]:checked + .pay-check{
     position: relative;
 }
 .submit-dlg .ui-grid-a{
-    padding:0.5rem 0;
+    padding:0.4rem 0;
     border-bottom: 1px #ccc solid;
 }
 .submit-dlg .ui-grid-a:last-child{
@@ -988,6 +984,33 @@ input[type="radio"]:checked + .pay-check{
 }
 .submit-dlg .ui-grid-a .ui-block-b{
     width:85%;
+}
+.verify-block{
+    padding-top:0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left:1.8rem;
+    border-bottom: 1px #ccc solid;
+}
+.input-txt{
+    width:5rem;
+    margin-right:0.2rem;
+    padding-top:0.2rem;
+    font-size: 0.75rem;
+    color:#333;
+    vertical-align: middle;
+}
+.btn-vld{
+    display: inline-block;
+    float: right;
+    color:#11b9b7 !important;
+    font-weight: normal !important;
+    padding:0.2rem 0.3rem;
+    font-size: 0.75rem;
+    border:1px #11b9b7 solid;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+    text-decoration: none;
 }
 .person-icon {
     display: inline-block;
@@ -1008,7 +1031,7 @@ input[type="radio"]:checked + .pay-check{
     vertical-align: middle;
 }
 .dlg-foot{
-    margin-top: 1.2rem;
+    margin-top: 0.8rem;
     text-align: center;
 }
 .submit-dlg-confirm{

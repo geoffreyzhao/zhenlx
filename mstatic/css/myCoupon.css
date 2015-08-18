@@ -2,22 +2,22 @@
 .voucherContainer{
 	padding:0 0.5rem;
 }
+.voucher-switch{
+	width: 100%;
+	text-align: center;
+}
+.voucher-switch .nopadding{
+	border-left: 1px solid #ececec;
+	border-right: 1px solid #ececec;
+}
 .voucher-switch li {
-	float: left;
+	display: inline-block;
 	font-size:0.8rem;
 	color: #7f7f7f;
-	border-right: 1px solid #ececec;
-	padding:0 0.9rem;
+	padding:0 0.6rem;
 }
 .voucher-switch li:hover, .voucher-switch li.current {
 	color: #11b9b7;
-}
-.voucher-switch .nopadding{
-	padding-left:0;
-}
-.voucher-switch .noborder{
-	border-right:0;
-	padding-right:0;
 }
 .voucherItem {
 	width:15.05rem;
@@ -32,7 +32,8 @@
 	position: relative;
 }
 .voucherItem .top {
-	padding-left:0.85rem;
+	padding-left:0.5rem;
+	padding-right:0.5rem;
 }
 .voucherItem .top .title {
 	width: 100%;
@@ -49,7 +50,7 @@
 }
 .voucherItem .middle {
 	position: relative;
-	padding: 0.45rem 0.875rem;
+	padding: 0.4rem 0.5rem;
 }
 .voucherItem .privilege {
 	width:4.375rem;
@@ -70,30 +71,21 @@
   overflow: hidden;
 }
 .voucherItem .price {
-	width:6rem;
+	width:8rem;
 	height:2.65rem;
 	position: absolute;
-	right:2.2rem;
+	right:0.5rem;
 	top:0.25rem;
+	text-align: right;
 	font-size:1.2rem;
 	display: inline-block;
 }
 .voucherItem .price-number {
-	width:6rem;
-	height:2.65rem;
-	font-size:2.65rem;
+	font-size:2.6rem;
 	text-align: right;
 	line-height:2.65rem;
 	font-family: "Arial";
-	position: absolute;
-	right: 0;
-	top:0;
-	margin-right:0.35rem;
-}
-.voucherItem .price em {
-	position: absolute;
-	top:1rem;
-	right:-1.1rem;
+	margin-right:0.2rem;
 }
 .voucherItem .bottom {
 	width:4.95rem;
@@ -106,7 +98,6 @@
 	margin-right:0.6rem;
 	background:url(../images/sharebtnbg.png) 0.3rem center no-repeat;
 	background-size:0.45rem 0.6rem;
-	
 	border:1px solid #fff;
 	border-radius:0.125rem;
 	float:right;
@@ -120,57 +111,59 @@
 .voucherItem.voucher-bg-0 {
 	background-color: #1ddd89;
 }
-.voucherItem.voucher-bg-0 .rightBorder {
+.com-voucher{
+	width:0.075rem;
+	height:100%;
 	display: inline-block;
 	position: absolute;
-	right:-0.05rem;
-	background: url(../images/voucher-short-border.png) repeat-y 0 0;
-	width:0.05rem;
-	height: 100%;
+	right:-0.075rem;
 }
+.rightBorder-green{
+	background: url(../../mstatic/images/voucher-green.png) repeat-y;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.rightBorder-blue{
+	background: url(../../mstatic/images/voucher-blue.png) repeat-y;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.rightBorder-pink{
+	background: url(../../mstatic/images/voucher-pink.png) repeat-y;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.rightBorder-yellow{
+	background: url(../../mstatic/images/voucher-yellow.png) repeat-y;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.rightBorder-grey{
+	background: url(../../mstatic/images/voucher-grey.png) repeat-y;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+
 .voucherItem.voucher-bg-1 {
 	background-color: #2dd3e7;
 }
 .voucherItem.voucher-bg-1 .privilege {
 	color: #2dd3e7;
 }
-.voucherItem.voucher-bg-1 .rightBorder {
-	display: inline-block;
-	position: absolute;
-	right:-0.05rem;
-	background: url(../../images/client/voucher-short-border.png) repeat-y -4px 0;
-	width:0.05rem;
-	height: 100%;
-}
+
 .voucherItem.voucher-bg-2 {
 	background-color: #f683ac;
 }
 .voucherItem.voucher-bg-2 .privilege {
 	color: #f683ac;
 }
-.voucherItem.voucher-bg-2 .rightBorder {
-	display: inline-block;
-	position: absolute;
-	right:-0.05rem;
-	background: url(../../images/client/voucher-short-border.png) repeat-y -8px 0;
-	width:0.05rem;
-	height: 100%;
-}
+
 .voucherItem.voucher-bg-3 {
 	background-color: #f5b75e;
 }
 .voucherItem.voucher-bg-3 .privilege {
 	color: #f5b75e;
 }
-.voucherItem.voucher-bg-3 .rightBorder {
-	display: inline-block;
-	position: absolute;
-	right:-0.05rem;
-	background: url(../../images/client/voucher-short-border.png) repeat-y -12px 0;
-	width:0.05rem;
-	height: 100%;
-}
-
 
 .voucherList.used{
 	/*display:none;*/
@@ -181,27 +174,17 @@
 .voucherList.used .voucherItem div, .voucherList.used .voucherItem span, .voucherList.used .voucherItem em, .voucherList.used .voucherItem a {
 	opacity: 0.7;
 }
-.voucherList.used .flag {
+.voucherList.used .flag, .voucherList.expired .flag {
 	position: absolute;
-	right: -0.875rem;
-	top: -1.875rem;
-	background: url(../images/usedcover.png) no-repeat 0 0;
-	background-size:7.1rem 7.35rem;
-	width: 7.1rem;
-	height: 7.35rem;
+	right: 0;
+	top: 0;
+	width: 6.75rem;
+	height: 5.65rem;
 	opacity: 1!important;
+	background: url("../../mstatic/images/expireCover.png") no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
 }
-.voucherList.expired .flag {
-	position: absolute;
-	right: -0.875rem;
-	top: -1.875rem;
-	background: url(../images/expireCover.png) no-repeat 0 0;
-	background-size:100%;
-	width: 7.15rem;
-	height: 7.35rem;
-	opacity: 1!important;
-}
-
 .voucherList.expired .voucherItem {
 	background-color: #ccc;
 }
