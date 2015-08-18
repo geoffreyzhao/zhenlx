@@ -670,6 +670,7 @@
             <i class="right-semicircle"></i>
             <div class="menu-sum clearfix">成人
                 <div class="counter">
+                    <span class="count-tips">还剩下<span class="popNum">11</span></span>
                     <span class="counter-item counter-minus">－</span>
                     <span class="counter-item counter-num">1</span>
                     <span class="counter-item counter-add">＋</span>
@@ -677,6 +678,7 @@
             </div>
             <div class="menu-sum clearfix">儿童数
                 <div class="counter">
+                    <span class="count-tips">还剩下<span class="popNum">9</span></span>
                     <span class="counter-item counter-minus">－</span>
                     <span class="counter-item counter-num">1</span>
                     <span class="counter-item counter-add">＋</span>
@@ -800,14 +802,13 @@
             }
         });
 
-        $(".menu-row .ui-grid-c").click(function(){
-            $(".menu-row .ui-grid-c").removeClass("menu-row-focus");
-
-
+        $(".menu-row > .ui-grid-c").click(function(){
+            $(".menu-row > .ui-grid-c").removeClass("menu-row-focus");
             $(this).toggleClass("menu-row-focus");
         });
 
         var least = 0;
+        var most = 0;
         $(".counter > .counter-minus").click(function(){
             var minus_num = parseInt($(this).next().text());
             minus_num--;
@@ -819,10 +820,43 @@
                 if($(this).hasClass("counter-disable")){
                     $(this).removeClass("counter-disable");
                 }
+                var obj = $(this).parent().find(".counter-add");
+                if(obj.hasClass("counter-disable")){
+                    obj.removeClass("counter-disable");
+                }
             }
             $(this).next().text(minus_num);
         });
         $(".counter > .counter-add").click(function(){
+
+            var row = $("#menu-row-box > .menu-row > .ui-grid-c").filter(".menu-row-focus");
+            var txt = row.children(".ui-block-c").text();
+            var num = parseInt(txt.replace(/[^0-9]/ig, ""));
+
+            var temp = $(this).parent().find(".count-tips");
+            if(row.length == 0){
+                temp.html("<span class='popNum'>请先选择日期</span>");
+                temp.fadeIn("normal", function(){
+                    setTimeout(function(){
+                        temp.fadeOut("fast");
+                    }, 2000);
+                });
+                return;
+            }
+            if(isNaN(num)){
+                temp.html("<span class='popNum'>售罄</span>");
+                temp.fadeIn("normal", function(){
+                    setTimeout(function(){
+                        temp.fadeOut("fast");
+                    }, 2000);
+                });
+                return;
+            }else{
+                most = num;
+            }
+            if($(this).hasClass("counter-disable")){
+                $(this).removeClass("counter-disable");
+            }
             var add_num = parseInt($(this).prev().text());
             add_num++;
             if(add_num > least){
@@ -830,8 +864,20 @@
                 if(obj.hasClass("counter-disable")){
                     obj.removeClass("counter-disable");
                 }
+
+                if(add_num > most){
+                    temp.html('库存只有<span class="popNum">'+most+'</span>张');
+                    temp.fadeIn("normal", function(){
+                        setTimeout(function(){
+                            temp.fadeOut("fast");
+                        }, 2000);
+                    });
+                    $(this).addClass("counter-disable");
+                    return;
+                }
             }
             $(this).prev().text(add_num);
+
         });
     });
 </script>

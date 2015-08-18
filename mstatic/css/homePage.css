@@ -1018,6 +1018,15 @@
     line-height: 2rem;
     margin:0.25rem 0;
 }
+.count-tips{
+    display: none;
+    font-size: 0.6rem;
+    color:#666;
+}
+.popNum{
+    padding:0 0.1rem;
+    color:red;
+}
 .counter{
     display: inline-block;
     vertical-align: middle;
