@@ -117,28 +117,23 @@
 			$(this).addClass("current").siblings("span").removeClass("current");
 			$('.registerFrame').show();
 			$('.loginFrame').hide();
-			$(".cont-block .bottom-btn").css({
-				"margin-top": 0
-			});
-			setBodyMinHeight();
 		});
 
 		$(".mloginBtn").click(function(){
 			$(this).addClass("current").siblings("span").removeClass("current");
 			$('.registerFrame').hide();
 			$('.loginFrame').show();
-			$(".cont-block .bottom-btn").css({
-				"margin-top": 0
-			});
-			setBodyMinHeight();
 		});
+
+		window.resize = function() {
+			setBodyMinHeight();
+		}
 	});
 
 	function setBodyMinHeight() {
-		var topValue = window.innerHeight - $(".headerBar").height() - $(".wrapper").height();
-
-		$(".cont-block .bottom-btn").css({
-			"margin-top": (topValue < 0 ? 0 : topValue) + "px"
+		var topValue = window.innerHeight - $(".headerBar").outerHeight() - $(".mloginTab").outerHeight();
+		$(".cont-block").css({
+			"height": topValue + "px"
 		});
 	}
 

@@ -78,6 +78,8 @@
 	z-index: 1;
 	width: 100%;
 	background: #f0f0f0;
+	overflow: initial;
+	margin-bottom: 0;
 }
 .mloginTab{
 	padding: 0.6rem 0.5rem;
@@ -116,6 +118,7 @@
 .registerFrame{
 	display:block;
 	position: relative;
+	height: 100%;
 }
 .person-icon {
 	display: inline-block;
@@ -163,6 +166,9 @@
 	font-size: 0.85rem;
 	padding: 0;
 	border: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 .cont-block .person-icon {
 	margin-top: 0.25rem;
@@ -205,6 +211,7 @@
 }
 .loginFrame{
 	display:none;
+	height: 100%;
 }
 .loginFrame li.last {
 	border-bottom: none;
