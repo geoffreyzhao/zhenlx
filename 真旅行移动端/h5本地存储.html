@@ -5,6 +5,14 @@
 	<title>测试本地存储</title>
 	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/vendor/underscore.js"></script>
+
+	<script type="text/javascript">
+		var root = document.getElementsByTagName("html")[0],
+			w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+		root.style.fontSize = (w / 320) * 20 + "px";
+		root.style.minHeight = window.innerHeight + "px";
+	</script>
 </head>
 <body>
 
@@ -18,7 +26,13 @@
 
 	<button type="button" onclick="sessionStorage.clear();">清除sessionStorage</button>
 
+	<button type="button" onclick="addDom()">增加DOM</button>
+
 	<script type="text/javascript">
+
+		function addDom() {
+			$("<div class='placeholder' style='width:100%;height:4rem;border-bottom:1px solid red;'>测试</div>").appendTo("body");
+		}
 
 		function setSessionStorage() {
 			sessionStorage.setItem("province", JSON.stringify(province));
