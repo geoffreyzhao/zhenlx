@@ -137,11 +137,11 @@
         <div class="order-hotel-bedTil">偏好的酒店床型：</div>
         <div class="order-hotel-op">
             <label>
-                <input type="checkbox" name="" value="" data-role="none">
+                <input type="radio" name="bed" value="bed01" data-role="none" checked>
                 <span>优选大床房</span>
             </label>
             <label>
-                <input type="checkbox" name="" value="" data-role="none">
+                <input type="radio" name="bed" value="bed02" data-role="none">
                 <span>优选双床房</span>
             </label>
         </div>
@@ -475,7 +475,7 @@
         });
         $(".submit-dlg-confirm").click(function(){
             $("#submit-dlg").popup("close");
-        })
+        });
     });
 </script>
 </body>

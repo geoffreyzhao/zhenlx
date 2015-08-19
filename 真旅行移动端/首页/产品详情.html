@@ -141,7 +141,7 @@
                             <div class="ui-grid-a">
                                 <div class="ui-block-a"><span class="common-travel travel-hotel"></span></div>
                                 <div class="ui-block-b">
-                                    <p>金边奇迹温泉度假酒店（King Miracle Resort & Spa）</p><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span>
+                                    <p>金边奇迹温泉度假酒店（King Miracle Resort & Spa）</p><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="half-yellow-star"></span>
                                 </div>
                             </div>
                             <div class="ui-grid-a">
@@ -345,7 +345,7 @@
                     </div>
                 </div>
                 <div class="prd-space"></div>
-                <h3 class="hotel-til clearfix">查看入住须知及酒店设施<span class="fr arr-upside"></span></h3>
+                <h3 class="hotel-til clearfix" id="hotel-tips">查看入住须知及酒店设施<span class="fr arr-upside"></span></h3>
                 <div class="hotel-info">
                     <p>入住须知</p>
                     <p>入住时间：14:30 - 00:00 时</p>
@@ -680,7 +680,7 @@
                 $(this).addClass("live");
 
                 var num = tipsInd * 2 + 4.3;
-                $(".arrow-up").css("left", num+"rem");
+                $(".navWrap-path .arrow-up").css("left", num+"rem");
                 var boxObj = $(".tip-box > p").eq(tipsInd);
                 if(boxObj.hasClass("hidden")){
                     boxObj.removeClass("hidden");
@@ -690,24 +690,33 @@
         });
 
         var swiper01 = new Swiper('#swiper-container01', {
-            pagination: '#swiper-container01 .swiper-pagination',
+            pagination: '#swiper-container01 > .swiper-pagination',
             paginationClickable: true,
             spaceBetween: 5
         });
 
         var swiper02 = new Swiper('#swiper-container02', {
-            pagination: '#swiper-container02 .swiper-pagination',
+            pagination: '#swiper-container02 > .swiper-pagination',
             paginationClickable: true,
             spaceBetween: 5
         });
 
-        $(".arr-upside").click(function(){
+        $("#hotel-tips").click(function(){
             $(".arr-upside").toggleClass("arr-downside");
             $(".hotel-info").slideToggle("fast");
-            if($(".arr-upside").hasClass("arr-downside")){
-                $(".pack-up").slideUp();
+            if($(".pack-up > .arr-upside").hasClass("arr-downside")){
+                $(".pack-up").slideUp("fast");
             }else{
-                $(".pack-up").slideDown();
+                $(".pack-up").slideDown("fast");
+            }
+        });
+        $(".pack-up").click(function(){
+            $(".arr-upside").toggleClass("arr-downside");
+            $(".hotel-info").slideToggle("fast");
+            if($(".pack-up > .arr-upside").hasClass("arr-downside")){
+                $(".pack-up").slideUp("fast");
+            }else{
+                $(".pack-up").slideDown("fast");
             }
         });
 

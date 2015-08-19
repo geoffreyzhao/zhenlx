@@ -13,7 +13,7 @@
     margin-right:1rem;
 }
 .acut-img{
-    width:1.075rem;
+    width:1.075rem !important;
     height:1.075rem;
     vertical-align: middle;
 }
@@ -598,7 +598,7 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-.arrow-up{
+.navWrap-path .arrow-up{
     width:1.025rem;
     height:0.25rem;
     background: url("../../mstatic/images/arrow-up.png") no-repeat;
@@ -667,6 +667,16 @@
     vertical-align: middle;
     margin-right:0.5rem;
     background: url("../../mstatic/images/yellow-star.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.half-yellow-star{
+    width:0.775rem;
+    height:0.775rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:0.5rem;
+    background: url("../../mstatic/images/half-yellow-star.png") no-repeat;
     -webkit-background-size: 100%;
     background-size: 100%;
 }
@@ -1083,7 +1093,7 @@
     position: absolute;
     top:2rem;
     left:0;
-    z-index:10;
+    z-index:5;
     background-color:#fff;
     font-size: 0.75rem;
     color:#666;
@@ -1112,6 +1122,7 @@
     display: none;
     width:9rem;
     position: absolute;
+    z-index:5;
     top:0;
     left:6.5rem;
 }
