@@ -363,33 +363,15 @@
     vertical-align: middle;
 }
 .tkt-trip{
-    padding:0.75rem 0;
+    padding:0.5rem 0;
+    font-size: 0.6rem;
+    line-height:1rem;
     border-top: 1px #d5efee dashed;
 }
-.trip-start{
-    padding-top:1.2rem;
+.tkt-trip-til{
+    color:#11b9b7;
 }
-.trip-time{
-    font-size: 0.9rem;
-    font-weight: bold;
-    color:#484848;
-}
-.trip-station{
-    font-size: 0.65rem;
-}
-.trip-station-icon{
-    font-size:0.5rem;
-    line-height:0.5rem;
-    color:#0fd730;
-    padding:0.1rem 0.4rem;
-    vertical-align: middle;
-    border: 1px #0fd730 solid;
-    -webkit-border-radius: 0.125rem;
-    -moz-border-radius: 0.125rem;
-    border-radius: 0.125rem;
-}
-.trip-time-sum{
-    font-size: 0.5rem;
+.tkt-trip-txt{
     color:#999;
 }
 .trip-space{
@@ -400,25 +382,12 @@
     padding:0.5rem;
     color:#3fc0ae;
 }
-.navWrap-cost p, .inst-txt{
-    padding:0 0.7rem;
+.navWrap-cost p, .navWrap-inst p{
+    padding:0 0.5rem;
     font-size: 0.7rem;
     line-height:1.3rem;
     word-wrap: break-word;
     word-break: break-all;
-}
-.navWrap-inst ul{
-    margin-left:1.1rem;
-}
-.navWrap-inst ul li{
-    position: relative;
-}
-.inst-disc{
-    display: inline-block;
-    position: absolute;
-    top: 0.2rem;
-    left:-0.3rem;
-    color:#3fc0ae;
 }
 
 .path-til{
@@ -464,7 +433,8 @@
     padding-right:0.4rem;
 }
 .navbar{
-    padding:0.7rem 0.5rem;
+    padding:0.6rem 0.4rem;
+    text-align: center;
     border-bottom: 1px #dcdcdc solid;
     -webkit-box-shadow: 0 2px 2px #ebebeb;
     -moz-box-shadow: 0 2px 2px #ebebeb;
