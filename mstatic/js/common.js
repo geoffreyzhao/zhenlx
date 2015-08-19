@@ -13,6 +13,10 @@ $(function(){
             $(".ui-content").bind("touchmove", function(){   //  报错框，二次确认框禁止滑动
                 return false;
             });
+        },
+        afterclose: function() {
+            $(document).unbind('touchmove');
+            $(document).unbind('touchmove');
         }
     });
 
