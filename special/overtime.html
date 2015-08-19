@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>真旅行</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../special/css/swiper.min.css">
+	<link rel="stylesheet" href="../special/css/animate.min.css">
+	<link rel="stylesheet" href="../special/css/publicity.css">
+
+	<script type="text/javascript" src="../special/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../special/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../special/js/swiper.animate.min.js"></script>
+	<script>
+        $(function(){
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction : 'vertical',
+                mousewheelControl : true,
+                onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                    swiperAnimateCache(swiper); //隐藏动画元素 
+                    swiperAnimate(swiper); //初始化完成开始动画
+                },
+                onSlideChangeEnd: function(swiper){
+                    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                }
+            });
+            
+        })
+	</script>
+</head>
+<body>	
+	
+	<div class="swiper-container">
+          <div class="swiper-wrapper">    
+                <div class="swiper-slide">
+                    <div class="">
+                        <img class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s" src="../special/images/eye1.png">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    02
+                </div>
+                <div class="swiper-slide">
+                    03
+                </div>
+          </div>
+	 </div>
+    
+	<script type="text/javascript">
+		var root = document.getElementsByTagName("html")[0],
+			w = window.innerWidth >= 750 ? 750 : window.innerWidth,
+			h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
+			base_ratio = 750 / 1334,
+			actual_ratio = window.innerWidth / window.innerHeight;
+
+		if (actual_ratio > base_ratio) {  // 宽屏，按高度算
+
+			root.style.fontSize = (h / 667) * 20 + "px";
+
+		} else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+			root.style.fontSize = (w / 375) * 20 + "px";
+		}
+		
+		root.style.height = window.innerHeight + "px";
+        
+	</script>
+
+</body>
+</html>
