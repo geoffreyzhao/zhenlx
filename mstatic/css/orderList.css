@@ -319,6 +319,7 @@
     margin-bottom: 0;
 }
 .prg-dlg-txt01{
+    height:2rem;
     color:#999;
     margin-bottom: 0.7rem;
 }
@@ -838,7 +839,7 @@
 }
 .order-foot .ui-grid-a .ui-block-a{
     width:60%;
-    padding:0.5rem;
+    padding:0.2rem 0.5rem;
     font-size: 0.65rem;
     color:#333;
 }
@@ -854,13 +855,20 @@
     font-size: 0.85rem;
 }
 .foot-rmb{
-    padding-left:0.4rem;
-    padding-right:0.15rem;
+    padding-left:0.2rem;
     color:#fb1933;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 .rmb-num{
-    font-size: 1.5rem;
+    width:7.5rem;
+    padding-top:0.1rem;
+    display: inline-block;
+    vertical-align: text-bottom;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.3rem;
     color:#fb1933;
 }
 /** end **/

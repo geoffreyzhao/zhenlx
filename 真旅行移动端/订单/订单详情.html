@@ -27,15 +27,45 @@
 <div class="viewport" data-role="page">
     <div class="headerBar">
         <div class="header">
-            <span class="back">
+            <a href="javascript:;" class="back">
                 <i class="back-arrow"></i>
                 <em class="back-border"></em>
-            </span>
+            </a>
             <span class="title">订单详情</span>
-            <span class="acut-menu">
-                <a class="acut-box" href="javascript:void(0);"><img class="acut-img" src="../../mstatic/images/acut-img.png"></a>
-                <a href="javascript:void(0);"><img class="menu-img" src="../../mstatic/images/menu-list.png"></a>
-            </span>
+				<span class="acut-menu">
+					<span class="menu-pop">
+						<a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+                            <img class="acut-img" src="../../mstatic/images/acut-img.png">
+                        </a>
+						<div class="menu-pop-container">
+                            <i class="arrow-up"></i>
+                            <ul>
+                                <li><a data-role="none" href="javascript:;">用户中心</a></li>
+                                <li><a data-role="none" href="javascript:;">退出账号</a></li>
+                            </ul>
+                        </div>
+					</span>
+	                <span class="menu-btn">
+	                	<span class="menu-img"></span>
+	                	<div class="menu-list-container">
+                            <i class="arrow-up"></i>
+                            <ul class="menu-list">
+                                <li>
+                                    <a data-role="none" href="javascript:;">产品列表</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的订单</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的钱包</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">私信</a>
+                                </li>
+                            </ul>
+                        </div>
+	                </span>
+	            </span>
         </div>
     </div>
     <div class="order-prg">
@@ -72,7 +102,7 @@
                     </div>
                     <div class="prg-dlg-txt">
                         <p>支付成功</p>
-                        <p>2015-04-06</p>
+
                     </div>
                     <div class="prg-dlg-txt">
                         <p>真旅盒子</p>
@@ -80,11 +110,11 @@
                     </div>
                     <div class="prg-dlg-txt01">
                         <p>出行通知</p>
-                        <p>2015-04-12</p>
+
                     </div>
                     <div class="prg-dlg-txt01">
                         <p>真旅管家</p>
-                        <p>2015-04-20</p>
+
                     </div>
                 </div>
             </div>
@@ -383,7 +413,9 @@
     </div>
     <div class="order-foot">
         <div class="ui-grid-a">
-            <div class="ui-block-a">应付金额：<span class="foot-rmb">￥</span><span class="rmb-num">1500</span></div>
+            <div class="ui-block-a">应付金额：
+                <div><span class="foot-rmb">￥</span><span class="rmb-num">150036.00</span></div>
+            </div>
             <div class="ui-block-b"><a class="order-link" href="javascript:void(0);">去支付</a></div>
         </div>
     </div>
@@ -432,7 +464,21 @@
                 $(".black_overlay-sec").fadeOut("fast");
             })
         });
+        $(".menu-btn").click(function(){
+            var pop = $(this).prev().find(".menu-pop-container");
+            if(pop.is(":visible")){
+                pop.slideUp("fast");
+            }
+            $(this).find(".menu-list-container").toggle();
+        });
 
+        $(".menu-pop").click(function(){
+            var btn = $(this).next().find(".menu-list-container");
+            if(btn.is(":visible")){
+                btn.slideUp("fast");
+            }
+            $(this).find(".menu-pop-container").toggle();
+        });
     });
 </script>
 </body>
