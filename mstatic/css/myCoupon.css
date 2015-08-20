@@ -16,6 +16,12 @@
 	color: #7f7f7f;
 	padding:0 0.6rem;
 }
+.voucher-switch li:first-child{
+	padding-left:0;
+}
+.voucher-switch li:last-child{
+	padding-right:0;
+}
 .voucher-switch li:hover, .voucher-switch li.current {
 	color: #11b9b7;
 }
