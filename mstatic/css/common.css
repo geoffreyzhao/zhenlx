@@ -49,10 +49,10 @@ sup {top: -0.5em;}
 sub {bottom: -0.25em;}
 blockquote,q{quotes: none;}
 blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}
-button,input,select,textarea {font-family: inherit;font-size: 100%;}
+button,input,select,textarea {font-family: inherit;font-size: 100%;	outline: none;}
 button,input{-webkit-appearance: none; border-radius: 0;}
 button[disabled],html input[disabled] {cursor: default;}
-*:focus {outline:none !important;}
+*:focus, input:focus {outline:none !important;}
 
 /*common css*/
 .clearfix:after{display:block;content:'';clear:both;visibility:hidden;}
@@ -611,7 +611,12 @@ input[type="checkbox"] + span {
 	height: 1.5rem;
 	line-height: 1.5rem;
 }
-
+.row-link:active{
+	background-color:#f7f7f7;
+}
+.row-grey-link:active{
+	background-color:#f0f0f0;
+}
 /*  二次确认弹窗样式  */
 
 .confirm-ui-content .dlg-cnt{
@@ -642,6 +647,12 @@ input[type="checkbox"] + span {
     background-color:#11b9b7;
     margin-right:0.5rem;    
 }
+.confirm-ui-content .btn-confirm:active{
+	background-color: #1a9d9c;
+}
 .confirm-ui-content .btn-cancel{
     background-color:#d4d4d4;
+}
+.confirm-ui-content .btn-cancel:active{
+	background-color: #ccc;
 }

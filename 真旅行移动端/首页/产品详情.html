@@ -74,10 +74,9 @@
         <img class="detail-banner" src="../../mstatic/images/detail-banner.jpg" alt="产品详情banner">
         <div class="prd-til">[爆款2688]年轻人第一次治愈小清新之旅，上海-普吉岛5天4晚净化身心修性之旅</div>
         <div class="prd-sum">
-            <div class="ui-grid-b">
+            <div class="ui-grid-a">
                 <div class="ui-block-a">起始地点：</div>
-                <div class="ui-block-b prd-des">上海-暹粒</div>
-                <div class="ui-block-c">&nbsp;</div>
+                <div class="ui-block-b">上海-暹粒，[爆款2688]年轻人第一次治愈小清新之旅</div>
             </div>
             <div class="ui-grid-b prd-grid">
                 <div class="ui-block-a prd-block">真旅价：</div>
@@ -405,16 +404,16 @@
                 <h3 class="hotel-til">阿尔巴套房式度假酒店及水疗中心 </h3>
                 <div class="hotel-occu"><label class="moon"></label>入住第<span>1.3.5</span>晚</div>
                 <div class="hotel-model">酒店星级：<span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span></div>
-                <div class="swiper-container" id="swiper-container02">
+                <!--<div class="swiper-container" id="swiper-container02">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/slide-img01.jpg"></div>
                         <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot01.png"></div>
                         <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot02.png"></div>
                         <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot03.png"></div>
                     </div>
-                    <!-- Add Pagination -->
+                    &lt;!&ndash; Add Pagination &ndash;&gt;
                     <div class="swiper-pagination"></div>
-                </div>
+                </div>-->
                 <div class="hotel-box">
                     <ul>
                         <li>
@@ -682,6 +681,18 @@
             }
         });
 
+        var swiper01 = new Swiper('#swiper-container01', {
+            pagination: '#swiper-container01 > .swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 5
+        });
+
+        /*var swiper02 = new Swiper('#swiper-container02', {
+         pagination: '#swiper-container02 > .swiper-pagination',
+         paginationClickable: true,
+         spaceBetween: 5
+         });*/
+
         $("#navMenu > li").click(function(){
             var ind = $(this).index();
             if(!$(this).hasClass("link-active")){
@@ -719,17 +730,7 @@
             }
         });
 
-        var swiper01 = new Swiper('#swiper-container01', {
-            pagination: '#swiper-container01 > .swiper-pagination',
-            paginationClickable: true,
-            spaceBetween: 5
-        });
 
-        var swiper02 = new Swiper('#swiper-container02', {
-            pagination: '#swiper-container02 > .swiper-pagination',
-            paginationClickable: true,
-            spaceBetween: 5
-        });
 
         $("#hotel-tips").click(function(){
             $(".arr-upside").toggleClass("arr-downside");

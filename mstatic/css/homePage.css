@@ -41,9 +41,6 @@
 .prd-sum{
     padding:0.5rem;
 }
-.prd-des{
-    font-size: 1rem;
-}
 .prd-grid{
     margin-top:0.5rem;
 }
@@ -74,6 +71,15 @@
     background-color:#f0f0f0;
     border-top:1px #dcdcdc solid;
     border-bottom: 1px #dcdcdc solid;
+}
+.prd-sum .ui-grid-a .ui-block-a{
+    font-size: 0.7rem;
+    width:25%;
+}
+.prd-sum .ui-grid-a .ui-block-b{
+    font-size: 0.9rem;
+    line-height:1.2rem;
+    width:75%;
 }
 .prd-sum .ui-grid-b .ui-block-a{
     font-size: 0.7rem;
@@ -605,7 +611,7 @@
     -webkit-background-size: 100%;
     background-size: 100%;
     position: absolute;
-    top: 1.9rem;
+    top: 1.89rem;
     left: 4.3rem;
 }
 .tip-box{

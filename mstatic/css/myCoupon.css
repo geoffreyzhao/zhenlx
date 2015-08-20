@@ -86,12 +86,14 @@
 	font-size:1.2rem;
 	display: inline-block;
 }
+.price em{
+	font-size: 1rem;
+}
 .voucherItem .price-number {
 	font-size:2.5rem;
 	text-align: right;
 	line-height:2.65rem;
 	font-family: "Arial";
-	margin-right:0.2rem;
 }
 .voucherItem .bottom {
 	width:4.95rem;

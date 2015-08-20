@@ -94,15 +94,23 @@
 	float:right;
 	margin-top:0.45rem;
 }
+.pay:active{
+    background-color:#dc8e06;
+}
 .evaluate{
 	background:#1cafad;
+}
+.evaluate:active{
+    background-color:#1a9d9c;
 }
 .completed{
 	background:#fff;
 	border:1px solid #1cafad;
 	color:#1cafad!important;
 }
-
+.completed:active{
+    background-color:#f7f7f7;
+}
 
 #wrapper{
     position: absolute;

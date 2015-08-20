@@ -116,6 +116,9 @@
     line-height: 2.05rem;
     display: inline-block;
 }
+.edt-info:active{
+    background-color:#f7f7f7;
+}
 .content-box .ui-grid-a .ui-block-a{
     border-right:1px #dcdcdc solid;
 }
@@ -380,6 +383,7 @@
 .btn-vld{
     display: inline-block;
     float: right;
+    background-color: #fff;
     color:#11b9b7 !important;
     font-weight: normal !important;
     padding:0.4rem 0.3rem;
@@ -389,6 +393,9 @@
     border-radius: 0.125rem;
     text-decoration: none;
 }
+.btn-vld:active{
+    background-color: #f7f7f7;
+}
 .u-add{
     width:9rem;
     display: inline-block;
@@ -397,7 +404,7 @@
 .arr-lr{
     height:100%;
     width:0.95rem;
-    text-align: center;
+    text-align: right;
     display: inline-block;
 }
 .arr-lr:active{
@@ -416,6 +423,7 @@
 .edt-textEara{
     width:100%;
     min-height:4.9rem;
+    margin-top:0.5rem;
     padding:0.4rem;
     border:1px #dcdcdc solid;
     -webkit-border-radius: 0.0125rem;
@@ -458,17 +466,25 @@
     display: inline-block;
 }
 .revise-val{
+    width:9rem;
     color:#333;
     padding:0.75rem 0;
+    vertical-align: middle;
     display: inline-block;
+}
+.revise-val input[type="text"]{
+    width:6rem;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .revise-val input:focus{
     outline: none;
 }
 .revise-val > label{
     vertical-align: bottom;
-    margin-left:0.8rem;
-    margin-right:0.25rem;
+    margin-left:0.4rem;
 }
 .revise-val > label:first-child{
     margin-left:0;
@@ -499,6 +515,9 @@
     border-radius: 0.125rem;
     text-decoration: none;
     display: inline-block;
+}
+.btn-add:active, .edt-save:active{
+    background-color:#1a9d9c;
 }
 .revise-contain01{
     padding:0.65rem 0.45rem;
@@ -541,7 +560,7 @@
     outline: none;
 }
 .rev-term{
-    width:8.5rem;
+    width:7.5rem;
     display: inline-block;
     vertical-align: middle;
 }
@@ -559,6 +578,9 @@
     border-radius: 0.125rem;
     text-decoration: none;
     display: inline-block;
+}
+.rev-del:active{
+    background-color:#f7f7f7;
 }
 .revise-contain02{
     padding:0 0.45rem;

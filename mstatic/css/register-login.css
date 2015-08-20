@@ -82,14 +82,19 @@
 	margin-bottom: 0;
 }
 .mloginTab{
+	width:100%;
 	padding: 0.6rem 0.5rem;
 	background: #fff;
+	text-align: center;
 	border-bottom: 1px solid #dcdcdc;
 	font-size: 0;
 }
-.mloginTab .tab span {
+.mloginTab span {
 	display: inline-block;
 	width: 50%;
+	float:left;
+	margin:0;
+	padding:0;
 	height: 1.75rem;
 	line-height: 1.75rem;
 	text-align: center;
@@ -190,8 +195,8 @@
 .cont-block input[type="password"] {
 	background: transparent;
 	font-size: 0.75rem;
-	padding-left: 1rem;
-	width: 6rem;
+	padding-left: 0.7rem;
+	width: 8rem;
 }
 .checkCodeBtn{
 	width:6rem;
@@ -229,6 +234,10 @@
 }
 .remindPwd input {
 	margin: 0 0.4rem;
+}
+.remindPwd input:focus{
+	border: none;
+	outline: none !important;
 }
 .remindPwd .cus_checkbox {	
 	margin: -0.25rem 0.375rem 0 0.5rem!important;
