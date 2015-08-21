@@ -23,6 +23,7 @@
 
         root.style.fontSize = (w / 320) * 20 + "px";
         root.style.minHeight = window.innerHeight + "px";
+
     </script>
 </head>
 <body>
@@ -226,7 +227,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="navWrap-ticket hidden">
+            <div class="navWrap-ticket">
                 <div class="tkt-cnt">
                     <div class="tkt-agenda">第一天<span class="common-agenda agenda-flag1">去程</span></div>
                     <div class="tkt-flight">
@@ -331,7 +332,7 @@
                     </div>
                 </div>
             </div>
-            <div class="navWrap-hotel hidden">
+            <div class="navWrap-hotel">
                 <h3 class="hotel-til">阿尔巴套房式度假酒店及水疗中心 </h3>
                 <div class="hotel-occu"><label class="moon"></label>入住第<span>1.3.5</span>晚</div>
                 <div class="hotel-model">酒店星级：<span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span></div>
@@ -370,6 +371,10 @@
                                 <span class="room-type">房间电话：</span>
                                 <p class="room-txt">084-56898452</p>
                             </li>
+                            <li>
+                                <span class="room-type">房间电话：</span>
+                                <p class="room-txt">不同类型的客房附带不同的取消预订和预先付费政策，请输入您的入住日期并参阅您所需的客房的条款</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -404,16 +409,16 @@
                 <h3 class="hotel-til">阿尔巴套房式度假酒店及水疗中心 </h3>
                 <div class="hotel-occu"><label class="moon"></label>入住第<span>1.3.5</span>晚</div>
                 <div class="hotel-model">酒店星级：<span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span></div>
-                <!--<div class="swiper-container" id="swiper-container02">
+                <div class="swiper-container" id="swiper-container02">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/slide-img01.jpg"></div>
                         <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot01.png"></div>
                         <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot02.png"></div>
                         <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot03.png"></div>
                     </div>
-                    &lt;!&ndash; Add Pagination &ndash;&gt;
+                    <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
-                </div>-->
+                </div>
                 <div class="hotel-box">
                     <ul>
                         <li>
@@ -443,10 +448,10 @@
                     </div>
                 </div>
             </div>
-            <div class="navWrap-cost hidden">
+            <div class="navWrap-cost">
                 <h3 class="cost-til">费用包含</h3>
-                <p>1. 北京往返普吉岛含税机票；</p>
-                <p>2. 当地精品海明威丝绸酒店5晚住宿(含早；或同级)；</p>
+                <p>当地精品海明威丝绸酒店5晚住宿(含早；或</p>
+                <p>当地精品海明威丝绸酒店5晚住宿(含早；或同级)；</p>
                 <p>3. 目的地机场至酒店的往返接送服务</p>
                 <p>&nbsp;</p>
                 <div class="prd-space"></div>
@@ -460,7 +465,7 @@
                 <p>7. 全程单房差：700元/人起（如客人单人报名，所产生单房差费用，需客人承担）。</p>
                 <p>&nbsp;</p>
             </div>
-            <div class="navWrap-inst hidden">
+            <div class="navWrap-inst">
                 <h3 class="cost-til">预订须知</h3>
                 <p>为了确保您能够按时出行，产品确认后请尽快付款。</p>
                 <p>此产品为发现旅行爆款产品，预订完成后，不退不改，行程无法变更，请谨慎购买。</p>
@@ -515,7 +520,7 @@
                 <p>出行人数：<span>成人1 儿童2</span></p>
             </div>
             <div class="ui-block-b">
-                <a href="javascript:void(0);" id="popup-click"><span class="arr-up"></span></a>
+                <a class="order-btn-link" href="javascript:void(0);" id="popup-click"><span class="arr-up"></span></a>
             </div>
             <div class="ui-block-c"><a class="order-link" href="javascript:void(0);">立即预订</a></div>
         </div>
@@ -661,7 +666,7 @@
                     <p>出行人数：<span>成人1 儿童2</span></p>
                 </div>
                 <div class="ui-block-b arr-click">
-                    <a href="javascript:void(0);" data-rel="back"><span class="arr-down"></span></a>
+                    <a class="order-btn-link" href="javascript:void(0);" data-rel="back"><span class="arr-down"></span></a>
                 </div>
                 <div class="ui-block-c"><a class="order-link" href="javascript:void(0);">立即预订</a></div>
             </div>
@@ -681,30 +686,31 @@
             }
         });
 
-        var swiper01 = new Swiper('#swiper-container01', {
-            pagination: '#swiper-container01 > .swiper-pagination',
-            paginationClickable: true,
-            spaceBetween: 5
-        });
-
-        /*var swiper02 = new Swiper('#swiper-container02', {
-         pagination: '#swiper-container02 > .swiper-pagination',
-         paginationClickable: true,
-         spaceBetween: 5
-         });*/
-
+        $(".nav-content > div:first").nextAll().hide("fast");
+        var obj = $(".nav-content > div[class^='navWrap']");
         $("#navMenu > li").click(function(){
             var ind = $(this).index();
             if(!$(this).hasClass("link-active")){
                 $("#navMenu > li").removeClass("link-active");
                 $(this).addClass("link-active");
 
-                var obj = $(".nav-content > div[class^='navWrap']");
-                if(obj.eq(ind).hasClass("hidden")){
-                    obj.addClass("hidden");
-                    obj.eq(ind).removeClass("hidden");
+                if(obj.eq(ind).is(":hidden")){
+                    obj.eq(ind).siblings().fadeOut("fast");
+                    obj.eq(ind).fadeIn("fast");
                 }
             }
+        });
+
+        var mySwiper01 = new Swiper('#swiper-container01', {
+            pagination: '#swiper-container01 > .swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 5
+        });
+
+        var mySwiper02 = new Swiper('#swiper-container02', {
+            pagination: '#swiper-container02 > .swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 5
         });
 
         var pressArr = ["tips-sun-press", "tips-bag-press", "tips-tower-press", "tips-loca-press", "tips-list-press"];
@@ -729,8 +735,6 @@
                 }
             }
         });
-
-
 
         $("#hotel-tips").click(function(){
             $(".arr-upside").toggleClass("arr-downside");

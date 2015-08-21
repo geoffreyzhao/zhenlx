@@ -20,7 +20,8 @@ html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
 body {
 	line-height:1;
 	position: relative;
-	word-break: break-word;
+	word-wrap: break-word;
+	word-break: break-all;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	font-family: "microsoft yahei",Verdana,Arial,Helvetica,sans-serif!important;
 	-webkit-font-smoothing: antialiased;
@@ -77,6 +78,8 @@ input[type="checkbox"] {
 	background-size: 100%;
 	display: inline-block;
 	vertical-align: middle;
+	border:none;
+	outline: none;
 }
 
 input[type="radio"]:checked,
@@ -271,8 +274,6 @@ input[type="checkbox"] + span {
 	z-index: 1;
 	width: 100%;
 	background: #f0f0f0;
-	overflow: scroll;
-	margin-bottom: 1rem;
 }
 .logo{
 	width:3.025rem;
@@ -627,7 +628,7 @@ input[type="checkbox"] + span {
 }
 .confirm-ui-content .dlg-foot{
     text-align: center;
-    padding:0.5rem 1.5rem;
+    padding:0.5rem 1rem;
 }
 .confirm-ui-content .btn-com{
     width:4.5rem;

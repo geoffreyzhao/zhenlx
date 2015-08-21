@@ -32,21 +32,45 @@
 	<div data-role="page">
 		<div class="headerBar">
 			<div class="header">
-				<!-- <span class="logo"></span>
-				<span class="til"></span>
-				<span class="modleList">
-					<i class="headerAvator"></i><i class="headerListbtn"></i>
-				</span>
-				<div class="navlist">
-					<ul>
-						<li><a href="javascript:void(0);">首页</a></li>
-						<li><a href="javascript:void(0);">产品列表</a></li>
-						<li><a href="javascript:void(0);">我的订单</a></li>
-						<li><a href="javascript:void(0);">心愿清单</a></li>
-						<li><a href="javascript:void(0);">我的钱包</a></li>
-						<li><a href="javascript:void(0);">私信</a></li>
-					</ul>
-				</div> -->
+				<a href="javascript:;" class="back">
+					<i class="back-arrow"></i>
+					<em class="back-border"></em>
+				</a>
+				<span class="title">欢迎来到真旅行欢迎来到真旅行</span>
+				<span class="acut-menu">
+					<span class="menu-pop">
+						<a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+							<img class="acut-img" src="../../mstatic/images/acut-img.png">
+						</a>
+						<div class="menu-pop-container">
+							<i class="arrow-up"></i>
+							<ul>
+								<li><a data-role="none" href="javascript:;">用户中心</a></li>
+								<li><a data-role="none" href="javascript:;">退出账号</a></li>
+							</ul>
+						</div>
+					</span>
+	                <span class="menu-btn">
+	                	<span class="menu-img"></span>
+	                	<div class="menu-list-container">
+							<i class="arrow-up"></i>
+							<ul class="menu-list">
+								<li>
+									<a data-role="none" href="javascript:;">产品列表</a>
+								</li>
+								<li>
+									<a data-role="none" href="javascript:;">我的订单</a>
+								</li>
+								<li>
+									<a data-role="none" href="javascript:;">我的钱包</a>
+								</li>
+								<li>
+									<a data-role="none" href="javascript:;">私信</a>
+								</li>
+							</ul>
+						</div>
+	                </span>
+	            </span>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -141,7 +165,7 @@
 							</div>
 						</div>
 						<!--点击分享按钮弹窗-->
-						<div class="ui-content" data-role="popup" id="alert-dialog" data-overlay-theme="b">
+						<div class="ui-content confirm-ui-content" data-role="popup" id="alert-dialog" data-theme="a" data-overlay-theme="b">
 							<span class="dlg-title">分享代金券</span>
 							<div class="dlg-cont">
 								<input type="text" placeholder="请输入对方手机号或邮箱" data-role="none">
@@ -154,7 +178,7 @@
 					</div>
 					<div class="voucherList used">
 						<div class="voucherItem voucher-bg-0">
-
+							<div class="flag"></div>
 							<div class="com-voucher rightBorder-green"></div>
 							<div class="top">
 								<span class="title">夏至节·盛夏清凉</span>
@@ -174,7 +198,7 @@
 						</div>
 						<!-- 偶数个没有右侧外边距值 -->
 						<div class="voucherItem voucher-bg-1" style="margin-right: 0;">
-
+							<div class="flag"></div>
 							<div class="com-voucher rightBorder-blue"></div>
 							<div class="top">
 								<span class="title">最游惠</span>
@@ -193,7 +217,7 @@
 							</div>
 						</div>
 						<div class="voucherItem voucher-bg-2">
-
+							<div class="flag"></div>
 							<div class="com-voucher rightBorder-pink"></div>
 							<div class="top">
 								<span class="title">任意券任意券任意券任意券任意券任意券任意券任意券任意券</span>
@@ -212,7 +236,7 @@
 							</div>
 						</div>
 						<div class="voucherItem voucher-bg-3" style="margin-right: 0;">
-
+							<div class="flag"></div>
 							<div class="com-voucher rightBorder-yellow"></div>
 							<div class="top">
 								<span class="title">蜜月甜蜜之旅</span>
@@ -351,7 +375,21 @@
 			$(".voucherList").hide();
 			$(".voucherList").eq($(this).index()).show();
 		});
+		$(".menu-btn").click(function(){
+			var pop = $(this).prev().find(".menu-pop-container");
+			if(pop.is(":visible")){
+				pop.slideUp("fast");
+			}
+			$(this).find(".menu-list-container").toggle();
+		});
 
+		$(".menu-pop").click(function(){
+			var btn = $(this).next().find(".menu-list-container");
+			if(btn.is(":visible")){
+				btn.slideUp("fast");
+			}
+			$(this).find(".menu-pop-container").toggle();
+		});
 
 	});
 </script>

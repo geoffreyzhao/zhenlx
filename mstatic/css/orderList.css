@@ -858,17 +858,19 @@
     line-height:1.5rem;
 }
 .order-foot{
-    margin-top:8.75rem;
+    margin-top:2rem;
     background-color:#fff;
 }
 .order-foot .ui-grid-a .ui-block-a{
     width:60%;
+    height:2.45rem;
     padding:0.2rem 0.5rem;
     font-size: 0.65rem;
     color:#333;
 }
 .order-foot .ui-grid-a .ui-block-b{
     width:40%;
+    height:2.45rem;
     text-align: center;
 }
 .order-link{
@@ -884,7 +886,6 @@
     background-color: #dc8e06;
 }
 .foot-rmb{
-    padding-left:0.2rem;
     color:#fb1933;
     font-size: 0.7rem;
 }
