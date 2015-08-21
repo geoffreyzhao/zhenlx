@@ -244,7 +244,7 @@
         var dp = new DatepickerScroll("#birthdate", {
         	startYear: 1900,
 			endYear: 2015,
-			defaultDate: new Date(1980,0,1),
+			defaultDate: new Date(1980,5,14),
 			cancelCallback: function(){
 				console.log(1);
 			},
@@ -255,7 +255,7 @@
 
         $("#birthdate").click(function(){
         	// dp.setDate(new Date(1990,5,12));
-            dp.setDate(new Date());
+            // dp.setDate(new Date());
         	$("#birthdateDatepicker").popup("open");
         });
 

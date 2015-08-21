@@ -15,7 +15,8 @@ $(function(){
             });
         },
         afterclose: function() {
-            $(document).unbind('touchmove');
+            $(".ui-popup-screen").unbind("touchmove");
+            $(".ui-content").unbind("touchmove");
             $(document).unbind('touchmove');
         }
     });

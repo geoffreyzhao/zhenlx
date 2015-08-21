@@ -11,7 +11,7 @@
 			title: "请选择日期",
 			startYear: date.getFullYear() - 100,
 			endYear: date.getFullYear(),
-			defaultDate: new Date("1980-1-1"),
+			defaultDate: new Date(1980,0,1),
 			cancelCallback: function(){},
 			confirmCallback: function(){}
 		};
@@ -41,6 +41,8 @@
 			this.scroll_year = scrollArr[0];
 			this.scroll_month = scrollArr[1];
 			this.scroll_day = scrollArr[2];
+
+			this.setDate(this.opts.defaultDate);
 
 			return this;
 		},
@@ -249,6 +251,7 @@
     	});
 
 		$(scroll_month.scroller).on("scrollstop", function(){
+
 			month_end_posY = scroll_month.y;
 
     		var dist = Math.abs(month_end_posY - month_start_posY),
