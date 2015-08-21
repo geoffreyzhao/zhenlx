@@ -13,8 +13,360 @@ html, body ,.wrapper{
 }
 
 /*  加班太苦  Start  */
+.waitContent{
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.waitContent .waitImg{
+    width: 11.175rem;
+    height: 2.225rem;
+    margin: -1.13rem 0 0 -5.59rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
 
 
+.slide01{
+    background: url("../images/P1Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side02{
+    background: url("../images/P2Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side03{
+    background: url("../images/P3Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side04{
+    background: url("../images/P4Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side05{
+    background: url("../images/P5Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side06{
+    background: url("../images/P6Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side07{
+    background: url("../images/P7Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side08{
+    background: url("../images/P8Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side09{
+    background: url("../images/P9Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.side10{
+    background: url("../images/P10Bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.p1_01{
+    width: 15.525rem;
+    height: 5.625rem;
+    position: absolute;
+    left: 50%;
+    top: 1.75rem;
+    margin-left: -7.5rem;
+}
+.p1_02{
+    width: 7.725rem;
+    height: 2.325rem;
+    position: absolute;
+    left: 6%;
+    top: 29%;
+}
+.p1_03{
+    width: 3.425rem;
+    height: 3.4rem;
+    position: absolute;
+    left: 16%;
+    top: 37%;
+}
+.p2_01,
+.p2_02,
+.p2_03{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    margin-left: -8.75rem;
+}
+.p2_01{
+    width: 17.5rem;
+    height: 9.95rem;
+}
+.p2_02{
+    width: 17.475rem;
+    height: 9.5rem;
+}
+.p2_03{
+    width: 17.475rem;
+    height: 9.775rem;
+}
+.p2_04{
+    width: 5.625rem;
+    height: 2.425rem;
+    position: absolute;
+    left: 10%;
+    top: 39%;
+}
+.p3_01,
+.p3_02{
+    width: 17.425rem;
+    height: 13.1rem;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    margin-left: -8.5rem;
+}
+.p3_03{
+    width: 17.225rem;
+    height: 10.2rem;
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    margin-left: -8.5rem;
+}
+.p3_04{
+    width: 2.4rem;
+    height: 2.85rem;
+    position: absolute;
+    left: 9%;
+    bottom: 25%;
+}
+.p3_05{
+    width: 3.675rem;
+    height: 3.275rem;
+    position: absolute;
+    right: 5%;
+    bottom: 44%;
+}
+.p4_01{
+    width: 0.875rem;
+    height: 0.475rem;
+    position: absolute;
+    left: 44%;
+    bottom: 38%;
+}
+.p4_02{
+    width: 1.025rem;
+    height: 0.6rem;
+    position: absolute;
+    left: 47%;
+    bottom: 40%;
+}
+.p4_03{
+    width: 1.15rem;
+    height: 1rem;
+    position: absolute;
+    left: 51%;
+    bottom: 42%;
+}
+.p4_04{
+    width: 13.4rem;
+    height: 16.025rem;
+    position: absolute;
+    left: 23%;
+    top: 4%;
+}
+.p4_05{
+    width: 3.65rem;
+    height: 3.275rem;
+    position: absolute;
+    right: 4%;
+    bottom: 40%;
+}
+.p4_06{
+    width: 6.05rem;
+    height: 5.525rem;
+    position: absolute;
+    left: 2.5%;
+    bottom: 34%;
+}
+.p4_07{
+    width: 5.225rem;
+    height: 10.775rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.p5_01{
+    width: 12.8rem;
+    height: 6.175rem;
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    margin-left: -6.4rem;
+}
+.p5_02,
+.p5_03,
+.p5_04,
+.p5_05{
+    width: 2.175rem;
+    height: 2.05rem;
+    position: absolute;
+}
+.p5_02{
+    left: 50%;
+    top: 6%;
+    margin-left: -2.8rem;
+}
+.p5_03{
+    right: 50%;
+    top: 6%;
+    margin-right: -6.5rem;
+}
+.p5_04{
+    left: 50%;
+    top: 17%;
+    margin-left: -2.8rem;
+}
+.p5_05{
+    right: 50%;
+    top: 17%;
+    margin-right: -6.5rem;
+}
+.p5_06{
+    width: 12.775rem;
+    height: 3.4rem;
+    position: absolute;
+    left: 50%;
+    top: 29%;
+    margin-left: -6.3rem;
+}
+.p5_07{
+    width: 7.875rem;
+    height: 3.4rem;
+    position: absolute;
+    left: 12%;
+    bottom: 45%;
+}
+.p5_08{
+    width: 7.4rem;
+    height: 17.4rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.p6_01{
+    width: 14.375rem;
+    height: 23.4rem;
+    position: absolute;
+    left: 5%;
+    top: 6.5%;
+}
+.p6_02{
+    width: 1.4rem;
+    height: 1.375rem;
+    position: absolute;
+    right: 23%;
+    top: 6%;
+}
+.p6_03{
+    width: 1.075rem;
+    height: 1rem;
+    position: absolute;
+    left: 43%;
+    top: 4%;
+}
+.p6_04{
+    width: 3.25rem;
+    height: 2.15rem;
+    position: absolute;
+    right: 15%;
+    top: 42%;
+}
+.p6_05{
+    width: 6.725rem;
+    height: 5.55rem;
+    position: absolute;
+    right: 3%;
+    bottom: 26%;
+}
+.p6_06{
+    width: 1.05rem;
+    height: 0.925rem;
+    position: absolute;
+    right: 13%;
+    top: 13%;
+}
+.p6_07{
+    width: 1.6rem;
+    height: 1.15rem;
+    position: absolute;
+    left: 11%;
+    top: 42%;
+}
+
+.p7_01{
+    width: 1.55rem;
+    height: 1rem;
+    position: absolute;
+    left: 25%;
+    top: 4%;
+}
+.p7_02{
+    width: 15.5rem;
+    height: 11.925rem;
+    position: absolute;
+    left: 8%;
+    top: 3%;
+}
+.p7_03{
+    width: 12.525rem;
+    height: 12.05rem;
+    position: absolute;
+    left: 21%;
+    bottom: 3.5%;
+}
+.p7_04{
+    width: 17.05rem;
+    height: 12.325rem;
+    position: absolute;
+    left: 5.5%;
+    bottom: 3%;
+}
+
+.p8_01{
+    width: 13.2rem;
+    height: 6rem;
+    position: absolute;
+    left: 7%;
+    top: 3%;
+}
+.p8_02{
+    width: 6.15rem;
+    height: 5.625rem;
+    position: absolute;
+    left: 3%;
+    bottom: 33%;
+}
+.p8_03{
+    width: 13.575rem;
+    height: 17.65rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.p8_04{
+    width: 5.475rem;
+    height: 4.125rem;
+    position: absolute;
+    left: 5%;
+    bottom: 6%;
+}
 
 /*  加班太苦  End  */
 

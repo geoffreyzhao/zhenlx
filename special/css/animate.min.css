@@ -166,10 +166,6 @@ Copyright (c) 2015 Daniel Eden
 
 
 
-
-
-
-
 @-webkit-keyframes handrotate {
 	0%,100%,20%,40%,60%,80% {
 	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
@@ -309,8 +305,139 @@ Copyright (c) 2015 Daniel Eden
 	-webkit-animation-name:arrowbgopacity;
 	animation-name:arrowbgopacity
 }
+ 
+ 
+
+@-webkit-keyframes fiveStepsOpacity {
+	0%,100%,20%,40%,60%,80% {
+	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
+	transition-timing-function:cubic-bezier(0.215,.61,.355,1)
+}
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}@keyframes fiveStepsOpacity {
+	0%,100%,20%,40%,60%,80% {
+	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
+	transition-timing-function:cubic-bezier(0.215,.61,.355,1)
+}
+     0% {
+         opacity: 0;
+     }
+     25% {
+         opacity: 0.5;
+     }
+     50% {
+         opacity: 1;
+     }
+     75% {
+         opacity: 0.5;
+     }
+     100% {
+         opacity: 0;
+     }
+}
+.fiveStepsOpacity {
+	-webkit-animation-name:fiveStepsOpacity;
+	animation-name:fiveStepsOpacity;
+}
+ 
 
 
+
+@-webkit-keyframes flicker {
+	0%,100%,20%,40%,60%,80% {
+	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
+	transition-timing-function:cubic-bezier(0.215,.61,.355,1)
+}
+    0% {
+        -webkit-transform:scale(1,1);
+    }
+    50% {
+        -webkit-transform:scale(0.5,0.5);
+    }
+    100% {
+        -webkit-transform:scale(1,1);
+    }
+}@keyframes flicker {
+	0%,100%,20%,40%,60%,80% {
+	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
+	transition-timing-function:cubic-bezier(0.215,.61,.355,1)
+}
+     0% {
+         -webkit-transform:scale(1,1);
+         -ms-transform:scale(1,1);
+         transform:scale(1,1);
+     }
+     50% {
+         -webkit-transform:scale(0.5,0.5);
+         -ms-transform:scale(0.5,0.5);
+         transform:scale(0.5,0.5);
+     }
+     100% {
+         -webkit-transform:scale(1,1);
+         -ms-transform:scale(1,1);
+         transform:scale(1,1);
+     }
+}
+.flicker {
+	-webkit-animation-name:flicker;
+	animation-name:flicker;
+}
+ 
+
+
+@-webkit-keyframes slideUpToDown {
+	0%,100%,20%,40%,60%,80% {
+	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
+	transition-timing-function:cubic-bezier(0.215,.61,.355,1)
+}
+    0% {
+        -webkit-transform:translateY(0);
+    }
+    50% {
+        -webkit-transform:translateY(10px);
+    }
+    100% {
+        -webkit-transform:translateY(0);
+    }
+}@keyframes slideUpToDown {
+	0%,100%,20%,40%,60%,80% {
+	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
+	transition-timing-function:cubic-bezier(0.215,.61,.355,1)
+}
+     0% {
+         -webkit-transform:translateY(0);
+         -ms-transform:translateY(0);
+         transform:translateY(0);
+     }
+     50% {
+         -webkit-transform:translateY(10px);
+         -ms-transform:translateY(10px);
+         transform:translateY(10px);
+     }
+     100% {
+         -webkit-transform:translateY(0);
+         -ms-transform:translateY(0);
+         transform:translateY(0);
+     }
+}
+.slideUpToDown {
+	-webkit-animation-name:slideUpToDown;
+	animation-name:slideUpToDown;
+}
 
 
 
