@@ -7,6 +7,8 @@
 			currentAddress: ['上海市', '上海市', '宝山区']
 		}, options);
 
+		this.opts = opts;
+
 		this.cur_province = opts.currentAddress[0];
 		this.cur_city = opts.currentAddress[1];
 		this.cur_county = opts.currentAddress[2];
@@ -89,22 +91,59 @@
 
 		_initIScroll: function() {
 			var province_scroll = new IScroll(this.elementId + " #provinceWrapper", {
-				mouseWheel: true
+				mouseWheel: true,
+				bounce: false
 			});
 			var city_scroll = new IScroll(this.elementId + " #cityWrapper", {
-				mouseWheel: true
+				mouseWheel: true,
+				bounce: false
 			});
 			var county_scroll = new IScroll(this.elementId + " #countyWrapper", {
-				mouseWheel: true
+				mouseWheel: true,
+				bounce: false
 			});
 
-			dealScroll(province_scroll);
-			dealScroll(city_scroll);
-			dealScroll(county_scroll);
+			// dealScroll(province_scroll);
+			// dealScroll(city_scroll);
+			// dealScroll(county_scroll);
 
 			var global_provinceArr = this.provinceArr,
 				global_cityArr = this.cityArr,
 				global_countyArr = this.countyArr;
+
+
+			var liHeight = $(province_scroll.wrapper).find("li:eq(0)").outerHeight();
+
+	    	var province_start_posY,
+	    		province_end_posY,
+	    		city_start_posY,
+	    		city_end_posY,
+	    		county_start_posY,
+	    		county_end_posY;
+
+	    	//  省份滚动处理
+
+	    	province_scroll.on("scrollStart", function(){
+	    		province_start_posY = province_scroll.y;
+	    	});
+
+			$(province_scroll.scroller).on("scrollstop", function(){
+				province_end_posY = province_scroll.y;
+
+	    		var dist = Math.abs(province_end_posY - province_start_posY),
+	    			passLiNum = Math.round(dist / liHeight),
+	    			offset = dist % liHeight,
+	    			curLiNum = $(province_scroll.scroller).find("li.current").index() + 1,
+	    			flag = (province_end_posY - province_start_posY > 0) ? 1 : -1,
+	    			scrollNum = curLiNum - (flag * passLiNum);
+
+	    		province_scroll.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
+
+	    		setTimeout(function(){
+		    		$(province_scroll.wrapper).find("li").removeClass("current");
+					$(province_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
+	    		}, 300);
+			});
 
 			//  省滚动结束，重置市和县/区(第一个市下面的县区)，并滚至第一个
 			province_scroll.on("scrollEnd", function(){
@@ -124,6 +163,30 @@
 				county_scroll.scrollTo(0, 0);
 			});
 
+			//  市滚动处理
+
+			city_scroll.on("scrollStart", function(){
+	    		city_start_posY = city_scroll.y;
+	    	});
+
+			$(city_scroll.scroller).on("scrollstop", function(){
+				city_end_posY = city_scroll.y;
+
+	    		var dist = Math.abs(city_end_posY - city_start_posY),
+	    			passLiNum = Math.round(dist / liHeight),
+	    			offset = dist % liHeight,
+	    			curLiNum = $(city_scroll.scroller).find("li.current").index() + 1,
+	    			flag = (city_end_posY - city_start_posY > 0) ? 1 : -1,
+	    			scrollNum = curLiNum - (flag * passLiNum);
+
+	    		city_scroll.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
+
+	    		setTimeout(function(){
+		    		$(city_scroll.wrapper).find("li").removeClass("current");
+					$(city_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
+	    		}, 300);
+			});
+
 			//  市滚动结束，重置县区列表内容，并滚至第一个
 			city_scroll.on("scrollEnd", function(){
 
@@ -134,6 +197,30 @@
 				$(county_scroll.scroller).html(geneCountyDomByCity(city, county, global_countyArr));
 				county_scroll.refresh();
 				county_scroll.scrollTo(0, 0);
+			});
+
+			//  县滚动处理
+
+			county_scroll.on("scrollStart", function(){
+	    		county_start_posY = county_scroll.y;
+	    	});
+
+			$(county_scroll.scroller).on("scrollstop", function(){
+				county_end_posY = county_scroll.y;
+
+	    		var dist = Math.abs(county_end_posY - county_start_posY),
+	    			passLiNum = Math.round(dist / liHeight),
+	    			offset = dist % liHeight,
+	    			curLiNum = $(county_scroll.scroller).find("li.current").index() + 1,
+	    			flag = (county_end_posY - county_start_posY > 0) ? 1 : -1,
+	    			scrollNum = curLiNum - (flag * passLiNum);
+
+	    		county_scroll.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
+
+	    		setTimeout(function(){
+		    		$(county_scroll.wrapper).find("li").removeClass("current");
+					$(county_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
+	    		}, 300);
 			});
 
 			return [province_scroll, city_scroll, county_scroll];
@@ -147,6 +234,8 @@
 			this.province_scroll = scrollArr[0];
 			this.city_scroll = scrollArr[1];
 			this.county_scroll = scrollArr[2];
+
+			this.setAddress(this.opts.currentAddress);
 
 			return this;
 		},
