@@ -103,10 +103,6 @@
 				bounce: false
 			});
 
-			// dealScroll(province_scroll);
-			// dealScroll(city_scroll);
-			// dealScroll(county_scroll);
-
 			var global_provinceArr = this.provinceArr,
 				global_cityArr = this.cityArr,
 				global_countyArr = this.countyArr;
