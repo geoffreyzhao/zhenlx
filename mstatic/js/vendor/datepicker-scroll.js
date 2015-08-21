@@ -186,20 +186,50 @@
 
 		//  初始化 IScroll
 		var scroll_year = new IScroll(yearWrapper, {
-			mouseWheel: true
+			mouseWheel: true,
+			bounce: false
 		});
     	var scroll_month = new IScroll(monthWrapper, {
-    		mouseWheel: true
+    		mouseWheel: true,
+    		bounce: false
     	});
     	var scroll_day = new IScroll(dayWrapper, {
-    		mouseWheel: true
+    		mouseWheel: true,
+    		bounce: false
     	});
 
-    	dealScroll(scroll_year);
-    	dealScroll(scroll_month);
-    	dealScroll(scroll_day);
+    	var liHeight = $(scroll_year.wrapper).find("li:eq(0)").outerHeight();
 
     	//  年份滚动结束，重置月份和日期并回滚至1月1日
+    	var year_start_posY,
+    		year_end_posY,
+    		month_start_posY,
+    		month_end_posY,
+    		day_start_posY,
+    		day_end_posY;
+
+    	scroll_year.on("scrollStart", function(){
+    		year_start_posY = scroll_year.y;
+    	});
+
+		$(scroll_year.scroller).on("scrollstop", function(){
+			year_end_posY = scroll_year.y;
+
+    		var dist = Math.abs(year_end_posY - year_start_posY),
+    			passLiNum = Math.round(dist / liHeight),
+    			offset = dist % liHeight,
+    			curLiNum = $(scroll_year.scroller).find("li.current").index() + 1,
+    			flag = (year_end_posY - year_start_posY > 0) ? 1 : -1,
+    			scrollNum = curLiNum - (flag * passLiNum);
+
+    		scroll_year.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
+
+    		setTimeout(function(){
+	    		$(scroll_year.wrapper).find("li").removeClass("current");
+				$(scroll_year.wrapper).find("li").eq(scrollNum-1).addClass("current");
+    		}, 300);
+		});
+
     	scroll_year.on("scrollEnd", function(){
 
     		$(monthScroller).html(geneMonthDOM());
@@ -213,6 +243,29 @@
     	});
 
     	//  月份滚动结束，重新生成日期DOM并回滚至1日
+
+    	scroll_month.on("scrollStart", function(){
+    		month_start_posY = scroll_month.y;
+    	});
+
+		$(scroll_month.scroller).on("scrollstop", function(){
+			month_end_posY = scroll_month.y;
+
+    		var dist = Math.abs(month_end_posY - month_start_posY),
+    			passLiNum = Math.round(dist / liHeight),
+    			offset = dist % liHeight,
+    			curLiNum = $(scroll_month.scroller).find("li.current").index() + 1,
+    			flag = (month_end_posY - month_start_posY > 0) ? 1 : -1,
+    			scrollNum = curLiNum - (flag * passLiNum);
+
+    		scroll_month.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
+
+    		setTimeout(function(){
+	    		$(scroll_month.wrapper).find("li").removeClass("current");
+				$(scroll_month.wrapper).find("li").eq(scrollNum-1).addClass("current");
+    		}, 300);
+		});
+
     	scroll_month.on("scrollEnd", function(){
 
     		var days = calDays(getCurrentYearNum(), getCurrentMonthNum());
@@ -220,6 +273,30 @@
     		scroll_day.refresh();
     		scroll_day.scrollTo(0, 0);
     	});
+
+    	//  日子滚动处理
+
+    	scroll_day.on("scrollStart", function(){
+    		day_start_posY = scroll_day.y;
+    	});
+
+		$(scroll_day.scroller).on("scrollstop", function(){
+			day_end_posY = scroll_day.y;
+
+    		var dist = Math.abs(day_end_posY - day_start_posY),
+    			passLiNum = Math.round(dist / liHeight),
+    			offset = dist % liHeight,
+    			curLiNum = $(scroll_day.scroller).find("li.current").index() + 1,
+    			flag = (day_end_posY - day_start_posY > 0) ? 1 : -1,
+    			scrollNum = curLiNum - (flag * passLiNum);
+
+    		scroll_day.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
+
+    		setTimeout(function(){
+	    		$(scroll_day.wrapper).find("li").removeClass("current");
+				$(scroll_day.wrapper).find("li").eq(scrollNum-1).addClass("current");
+    		}, 300);
+		});
 
     	arr.push(scroll_year, scroll_month, scroll_day);
     	return arr;
@@ -297,9 +374,9 @@
     			flag = (end_posY - start_posY > 0) ? 1 : -1;   //  判断滚动方向 上|下
 
     			if (offset < half_liHeight) {  //  滚至前一个
-    				scroll.scrollBy(0, -offset * flag, 300, IScroll.utils.ease.quadratic);
+    				scroll.scrollBy(0, -offset * flag, 10, IScroll.utils.ease.quadratic);
     			} else if (offset >= half_liHeight) {  //  滚至后一个
-    				scroll.scrollBy(0, offset * flag, 300, IScroll.utils.ease.quadratic);
+    				scroll.scrollBy(0, offset * flag, 10, IScroll.utils.ease.quadratic);
     			}
     		}
     	});
