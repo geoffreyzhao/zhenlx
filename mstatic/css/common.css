@@ -628,7 +628,7 @@ input[type="checkbox"] + span {
 }
 .confirm-ui-content .dlg-foot{
     text-align: center;
-    padding:0.5rem 1rem;
+    padding:0.5rem;
 }
 .confirm-ui-content .btn-com{
     width:4.5rem;
@@ -644,9 +644,11 @@ input[type="checkbox"] + span {
     -moz-border-radius: 0.0125rem;
     border-radius: 0.125rem;
 }
+.confirm-ui-content .btn-com:first-child{
+	margin-right:0.5rem;
+}
 .confirm-ui-content .btn-confirm{
     background-color:#11b9b7;
-    margin-right:0.5rem;    
 }
 .confirm-ui-content .btn-confirm:active{
 	background-color: #1a9d9c;

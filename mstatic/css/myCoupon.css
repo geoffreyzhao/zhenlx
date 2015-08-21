@@ -276,10 +276,10 @@
     color:#cccccc;
 }
 .dlg-foot a{
-	width:6.5rem;
-	height:2rem;
+	width:5rem;
+	height:1.8rem;
 	display:inline-block;
-	line-height:2rem;
+	line-height:1.8rem;
 	text-align:center;
 	-webkit-border-radius: 0.125rem;
 	-moz-border-radius: 0.125rem;
@@ -294,7 +294,6 @@
 }
 .dlg-foot .btn-cancel,.dlg-foot .btn-cancel:link,.dlg-foot .btn-cancel:visited{
 	background:#e3e0e0;
-	margin-left:0.5rem;
 	color:#999999;
 }
 .dlg-foot .btn-cancel:active{
