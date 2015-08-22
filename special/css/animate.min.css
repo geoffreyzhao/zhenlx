@@ -353,8 +353,49 @@ Copyright (c) 2015 Daniel Eden
 	-webkit-animation-name:fiveStepsOpacity;
 	animation-name:fiveStepsOpacity;
 }
- 
 
+
+@-webkit-keyframes changeShareBg {
+	0%,100%,20%,40%,60%,80% {
+	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
+	transition-timing-function:cubic-bezier(0.215,.61,.355,1)
+}
+    0% {
+        background: url("../images/P10_09.png") no-repeat;
+        background-size: cover;
+    }
+    50% {
+
+        background: url("../images/P10_09_1.png") no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/P10_09.png") no-repeat;
+        background-size: cover;
+    }
+}@keyframes changeShareBg {
+	0%,100%,20%,40%,60%,80% {
+	-webkit-transition-timing-function:cubic-bezier(0.215,.61,.355,1);
+	transition-timing-function:cubic-bezier(0.215,.61,.355,1)
+}
+     0% {
+         background: url("../images/P10_09.png") no-repeat;
+         background-size: cover;
+     }
+     50% {
+
+         background: url("../images/P10_09_1.png") no-repeat;
+         background-size: cover;
+     }
+     100% {
+         background: url("../images/P10_09.png") no-repeat;
+         background-size: cover;
+     }
+}
+.changeShareBg {
+	-webkit-animation-name:changeShareBg;
+	animation-name:changeShareBg;
+}
 
 
 @-webkit-keyframes flicker {

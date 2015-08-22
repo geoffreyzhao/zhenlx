@@ -12,6 +12,25 @@ html, body ,.wrapper{
     width: 100%;
     height: 100%;
 }
+button{
+    background-color: transparent !important;
+    outline: none;
+    border: none;
+}
+.musicbtn{
+    width:2rem;
+    height:2rem;
+    display:inline-block;
+    position:fixed;
+    right:2%;
+    top:2%;
+    background:url(../images/music_play.png) no-repeat;
+    background-size:cover;
+    z-index:9;
+    tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -ms-tap-highlight-color:rgba(0,0,0,0);
+}
 
 /*  加班太苦  Start  */
 .waitContent{
@@ -69,7 +88,7 @@ html, body ,.wrapper{
     background: url("../images/P9Bg.jpg") no-repeat;
     background-size: 100% 100%;
 }
-.side10{
+.side010{
     background: url("../images/P10Bg.jpg") no-repeat;
     background-size: 100% 100%;
 }
@@ -322,7 +341,7 @@ html, body ,.wrapper{
     width: 15.5rem;
     height: 11.925rem;
     position: absolute;
-    left: 8%;
+    left: 8.5%;
     top: 3%;
 }
 .p7_03{
@@ -367,6 +386,251 @@ html, body ,.wrapper{
     position: absolute;
     left: 5%;
     bottom: 6%;
+}
+
+.p9_01{
+    width: 1.875rem;
+    height: 1.825rem;
+    position: absolute;
+    left: 3%;
+    top: 33%;
+}
+.p9_02{
+    width: 3.475rem;
+    height: 4.275rem;
+    position: absolute;
+    right: 18%;
+    top: 35%;
+}
+.p9_03{
+    width: 12.2rem;
+    height: 16.925rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.p10_01{
+    width: 13.675rem;
+    height: 6.575rem;
+    position: absolute;
+    left: 50%;
+    top: 3%;
+    margin-left: -6.7rem;
+}
+.goPlace{
+    position: absolute;
+    left: 50%;
+    top: 26%;
+    margin-left: -8.3rem;
+}
+.goPlace .place01,
+.goPlace .place02,
+.goPlace .place03{
+    display: inline-block;
+    width: 3.775rem;
+    height: 1.575rem;
+}
+.goPlace .place01{
+    background: url("../images/P10_02_1.png") no-repeat;
+    background-size: cover;
+    animation:infiniteDirection01 2s linear 3s infinite normal;
+    -moz-animation:infiniteDirection01 2s linear 3s infinite normal;
+    -webkit-animation:infiniteDirection01 2s linear 3s infinite normal;
+    -o-animation:infiniteDirection01 2s linear 3s infinite normal;
+}
+@keyframes infiniteDirection01{
+    0% {
+        background: url("../images/P10_02_1.png") no-repeat;
+        background-size: cover;
+    }
+    20% {
+        background: url("../images/P10_02_1.png") no-repeat;
+        background-size: cover;
+    }
+    80% {
+        background: url("../images/P10_02.png") no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/P10_02_1.png") no-repeat;
+        background-size: cover;
+    }
+}
+@-webkit-keyframes infiniteDirection01{
+    0% {
+        background: url("../images/P10_02_1.png") no-repeat;
+        background-size: cover;
+    }
+    20% {
+        background: url("../images/P10_02_1.png") no-repeat;
+        background-size: cover;
+    }
+    80% {
+        background: url("../images/P10_02.png") no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/P10_02_1.png") no-repeat;
+        background-size: cover;
+    }
+}
+.goPlace .place02{
+    background: url("../images/P10_03.png") no-repeat;
+    background-size: cover;
+    animation:infiniteDirection02 2s linear 6s infinite normal;
+    -moz-animation:infiniteDirection02 2s linear 6s infinite normal;
+    -webkit-animation:infiniteDirection02 2s linear 6s infinite normal;
+    -o-animation:infiniteDirection02 2s linear 6s infinite normal;
+}
+@keyframes infiniteDirection02{
+    0% {
+        background: url("../images/P10_03.png") no-repeat;
+        background-size: cover;
+    }
+    45% {
+        background: url("../images/P10_03_1.png") no-repeat;
+        background-size: cover;
+    }
+    60% {
+        background: url("../images/P10_03_1.png") no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/P10_03.png") no-repeat;
+        background-size: cover;
+    }
+}
+@-webkit-keyframes infiniteDirection02{
+    0% {
+        background: url("../images/P10_03.png") no-repeat;
+        background-size: cover;
+    }
+    45% {
+        background: url("../images/P10_03_1.png") no-repeat;
+        background-size: cover;
+    }
+    60% {
+        background: url("../images/P10_03_1.png") no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/P10_03.png") no-repeat;
+        background-size: cover;
+    }
+}
+.goPlace .place03{
+    background: url("../images/P10_04.png") no-repeat;
+    background-size: cover;
+    animation:infiniteDirection03 2s linear 9s infinite normal;
+    -moz-animation:infiniteDirection03 2s linear 9s infinite normal;
+    -webkit-animation:infiniteDirection03 2s linear 9s infinite normal;
+    -o-animation:infiniteDirection03 2s linear 9s infinite normal;
+}
+@keyframes infiniteDirection03{
+    0% {
+        background: url("../images/P10_04.png") no-repeat;
+        background-size: cover;
+    }
+    65% {
+        background: url("../images/P10_04_1.png") no-repeat;
+        background-size: cover;
+    }
+    80% {
+        background: url("../images/P10_04_1.png") no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/P10_04.png") no-repeat;
+        background-size: cover;
+    }
+}
+@-webkit-keyframes infiniteDirection03{
+    0% {
+        background: url("../images/P10_04.png") no-repeat;
+        background-size: cover;
+    }
+    65% {
+        background: url("../images/P10_04_1.png") no-repeat;
+        background-size: cover;
+    }
+    80% {
+        background: url("../images/P10_04_1.png") no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url("../images/P10_04.png") no-repeat;
+        background-size: cover;
+    }
+}
+.p10_05{
+    width: 3.225rem;
+    height: 1rem;
+    position: absolute;
+    top: 18%;
+    right: -33%;
+}
+.zhenlxURL{
+    display: inline-block;
+    width: 12.225rem;
+    height: 3.175rem;
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    z-index: 3;
+    margin-left: -6.1rem;
+    background: url("../images/P10_06.png") no-repeat;
+    background-size: cover;
+}
+.zhenlxURL:focus{
+    background: url("../images/P10_06_1.png") no-repeat;
+    background-size: cover;
+}
+.p10_07{
+    width: 2.575rem;
+    height: 2.55rem;
+    position: absolute;
+    right: 16%;
+    top: 45%;
+}
+.p10_08{
+    width: 7.275rem;
+    height: 4.35rem;
+    position: absolute;
+    left: 4%;
+    top: 47%;
+}
+.shareBtn{
+    width: 13.125rem;
+    height: 3.375rem;
+    position: absolute;
+    left: 50%;
+    bottom: 7%;
+    margin-left: -6.5rem;
+    background: url("../images/P10_09.png") no-repeat;
+    background-size: cover;
+}
+.arrow-containter{
+    width:100%;
+    height:1.05rem;
+    position:absolute;
+    bottom:2.6%;
+    left: 50%;
+}
+.arrowbox{
+    width:3rem;
+    height:3rem;
+    border-radius:100%;
+    background:#fff;
+    margin-left: -0.85rem;
+    margin-top: -1.1rem;
+    z-index:-1;
+}
+.arrow{
+    width:1.3rem;
+    height:1.05rem;
+    position:absolute;
+    bottom: 2.6%;
 }
 
 /*  加班太苦  End  */
