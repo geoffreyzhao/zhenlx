@@ -12,15 +12,17 @@
 	<script type="text/javascript" src="../special/js/swiper.min.js"></script>
 	<script type="text/javascript" src="../special/js/swiper.animate.min.js"></script>
 	<script>
+        $('.waitContent').css({"display":"block"});
         window.onload = function(){
             setTimeout(function(){
                 $('.waitContent').hide();
                 audio.play();
                 if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
                     $('.musicbtn').css("background-image","url(images/music_pause.png)");
-                }
+                };
+                
             },1500);
-
+            
             var mySwiper = new Swiper ('.swiper-container', {
                 direction : 'vertical',
                 mousewheelControl : true,
@@ -30,6 +32,13 @@
                 },
                 onSlideChangeEnd: function(swiper){
                     swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                },
+                onTransitionStart: function(swiper){
+                    if(mySwiper.activeIndex>5){
+                        audio.pause();
+                    }else{
+                        audio.play();
+                    }
                 }
             });
             
@@ -43,6 +52,7 @@
                     this.style.backgroundImage="url(images/music_pause.png)";
                 }
             });
+
            
         };
 	</script>
@@ -59,14 +69,14 @@
     </div>
 
 	<div class="swiper-container">
-          <div class="swiper-wrapper">    
+          <div class="swiper-wrapper">
                 <div class="swiper-slide slide01">
-                    <img class="ani p1_01" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" src="images/P1_01.png">
-                    <img class="ani p1_02" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1s" src="images/P1_02.png">
-                    <img class="ani p1_03" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s" src="images/P1_03.gif">
+                    <img class="ani p1_01" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s" src="images/P1_01.png">
+                    <img class="ani p1_02" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2s" src="images/P1_02.png">
+                    <img class="ani p1_03" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2.5s" src="images/P1_03.gif">
                     <div class="arrow-containter">
-                        <div class="arrowbox ani"  swiper-animate-effect="arrowbgopacity" swiper-animate-duration="0.8s" swiper-animate-delay="2.5s"></div>
-                        <img src="images/arrow.png" class="arrow ani infinite" swiper-animate-effect="arrowmove" swiper-animate-duration="0.8s" swiper-animate-delay="2.5s">
+                        <div class="arrowbox ani"  swiper-animate-effect="arrowbgopacity" swiper-animate-duration="0.8s" swiper-animate-delay="3s"></div>
+                        <img src="images/arrow.png" class="arrow ani infinite" swiper-animate-effect="arrowmove" swiper-animate-duration="0.8s" swiper-animate-delay="3s">
                     </div>
                 </div>
                 <div class="swiper-slide side02">
@@ -133,11 +143,12 @@
                 <div class="swiper-slide side07">
                     <img class="ani p7_01" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s" src="images/P7_01.png">
                     <img class="ani p7_02 infinite" swiper-animate-effect="fiveStepsOpacity" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="images/P7_02.png">
+                    <img class="ani p7_02_1 infinite" swiper-animate-effect="fiveStepsOpacity" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" src="images/P7_02_1.png">
                     <img class="ani p7_03" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.3s" src="images/P7_03.png">
                     <img class="ani p7_04" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.8s" src="images/P7_04.png">
                     <div class="arrow-containter" >
                         <div class="arrowbox ani"  swiper-animate-effect="arrowbgopacity" swiper-animate-duration="0.8s" swiper-animate-delay="2s"></div>
-                        <img src="../images/mobile/arrow.png" class="arrow ani infinite" swiper-animate-effect="arrowmove" swiper-animate-duration="0.8s" swiper-animate-delay="2s">
+                        <img src="images/arrow.png" class="arrow ani infinite" swiper-animate-effect="arrowmove" swiper-animate-duration="0.8s" swiper-animate-delay="2s">
                     </div>
                 </div>
                 <div class="swiper-slide side08">
@@ -160,17 +171,15 @@
                     </div>
                 </div>
                 <div class="swiper-slide side010">
-                    <img class="ani p10_01" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" src="images/P10_01.png">
+                    <img class="ani p10_01" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" src="images/P10_01.png">
                     <div class="goPlace">
-                        <div class="ani place01 infiniteDirection01"></div>
-                        <div class="ani place02 infiniteDirection02"></div>
-                        <div class="ani place03 infiniteDirection03"></div>
+                        <img class="ani placeGif" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" src="images/place.gif">
                         <img class="ani p10_05" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" src="images/P10_05.png">
                     </div>
-                    <button type="button" onclick="window.location.href='javascript:void(0);'" class="ani zhenlxURL" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1s"></button>
-                    <img class="ani p10_07 infinite" swiper-animate-effect="slideUpToDown" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s" src="images/P10_07.png">
-                    <img class="ani p10_08" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2s" src="images/P10_08.png">
-                    <button type="button" onclick="window.location.href='javascript:void(0);'" class="shareBtn infinite" swiper-animate-effect="changeShareBg" swiper-animate-duration="0.7s" swiper-animate-delay="0.5s"></button>
+                    <button type="button" onclick="window.location.href='javascript:void(0);'" class="ani zhenlxURL" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.3s"></button>
+                    <img class="ani p10_07 infinite" swiper-animate-effect="slideUpToDown" swiper-animate-duration="1.5s" swiper-animate-delay="1s" src="images/P10_07.png">
+                    <img class="ani p10_08" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s" src="images/P10_08.png">
+                    <a href="javascript:void(0);" class="ani shareBtn infinite" swiper-animate-effect="changeShareBg" swiper-animate-duration="0.7s" swiper-animate-delay="0.5s"></a>
                 </div>
           </div>
 	 </div>
@@ -191,7 +200,7 @@
 			root.style.fontSize = (w / 375) * 20 + "px";
 		}
 		
-		root.style.height = window.innerHeight + "px";                
+		root.style.height = window.innerHeight + "px"; 
         
 	</script>
 

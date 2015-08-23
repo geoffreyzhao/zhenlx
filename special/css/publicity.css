@@ -5,17 +5,21 @@ html,body,img,span,div,ul,li{
     padding:0;
     list-style:none;
 }
-html, body ,.wrapper{
+html, body,.wrapper{
     height: 100%;
 }
 .swiper-container,.swiper-wrapper,.swiper-slide{
     width: 100%;
     height: 100%;
 }
-button{
-    background-color: transparent !important;
+img,
+a,
+button,
+button:focus{
     outline: none;
     border: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
 }
 .musicbtn{
     width:2rem;
@@ -54,43 +58,43 @@ button{
 
 .slide01{
     background: url("../images/P1Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side02{
     background: url("../images/P2Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side03{
     background: url("../images/P3Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side04{
     background: url("../images/P4Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side05{
     background: url("../images/P5Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side06{
     background: url("../images/P6Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side07{
     background: url("../images/P7Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side08{
     background: url("../images/P8Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side09{
     background: url("../images/P9Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .side010{
     background: url("../images/P10Bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 33.35rem;
 }
 .p1_01{
     width: 15.525rem;
@@ -338,11 +342,18 @@ button{
     top: 4%;
 }
 .p7_02{
-    width: 15.5rem;
+    width: 9.1rem;
     height: 11.925rem;
     position: absolute;
     left: 8.5%;
     top: 3%;
+}
+.p7_02_1{
+    width: 3.625rem;
+    height: 10.375rem;
+    position: absolute;
+    right: 8%;
+    top: 8%;
 }
 .p7_03{
     width: 12.525rem;
@@ -424,144 +435,9 @@ button{
     top: 26%;
     margin-left: -8.3rem;
 }
-.goPlace .place01,
-.goPlace .place02,
-.goPlace .place03{
-    display: inline-block;
-    width: 3.775rem;
-    height: 1.575rem;
-}
-.goPlace .place01{
-    background: url("../images/P10_02_1.png") no-repeat;
-    background-size: cover;
-    animation:infiniteDirection01 2s linear 3s infinite normal;
-    -moz-animation:infiniteDirection01 2s linear 3s infinite normal;
-    -webkit-animation:infiniteDirection01 2s linear 3s infinite normal;
-    -o-animation:infiniteDirection01 2s linear 3s infinite normal;
-}
-@keyframes infiniteDirection01{
-    0% {
-        background: url("../images/P10_02_1.png") no-repeat;
-        background-size: cover;
-    }
-    20% {
-        background: url("../images/P10_02_1.png") no-repeat;
-        background-size: cover;
-    }
-    80% {
-        background: url("../images/P10_02.png") no-repeat;
-        background-size: cover;
-    }
-    100% {
-        background: url("../images/P10_02_1.png") no-repeat;
-        background-size: cover;
-    }
-}
-@-webkit-keyframes infiniteDirection01{
-    0% {
-        background: url("../images/P10_02_1.png") no-repeat;
-        background-size: cover;
-    }
-    20% {
-        background: url("../images/P10_02_1.png") no-repeat;
-        background-size: cover;
-    }
-    80% {
-        background: url("../images/P10_02.png") no-repeat;
-        background-size: cover;
-    }
-    100% {
-        background: url("../images/P10_02_1.png") no-repeat;
-        background-size: cover;
-    }
-}
-.goPlace .place02{
-    background: url("../images/P10_03.png") no-repeat;
-    background-size: cover;
-    animation:infiniteDirection02 2s linear 6s infinite normal;
-    -moz-animation:infiniteDirection02 2s linear 6s infinite normal;
-    -webkit-animation:infiniteDirection02 2s linear 6s infinite normal;
-    -o-animation:infiniteDirection02 2s linear 6s infinite normal;
-}
-@keyframes infiniteDirection02{
-    0% {
-        background: url("../images/P10_03.png") no-repeat;
-        background-size: cover;
-    }
-    45% {
-        background: url("../images/P10_03_1.png") no-repeat;
-        background-size: cover;
-    }
-    60% {
-        background: url("../images/P10_03_1.png") no-repeat;
-        background-size: cover;
-    }
-    100% {
-        background: url("../images/P10_03.png") no-repeat;
-        background-size: cover;
-    }
-}
-@-webkit-keyframes infiniteDirection02{
-    0% {
-        background: url("../images/P10_03.png") no-repeat;
-        background-size: cover;
-    }
-    45% {
-        background: url("../images/P10_03_1.png") no-repeat;
-        background-size: cover;
-    }
-    60% {
-        background: url("../images/P10_03_1.png") no-repeat;
-        background-size: cover;
-    }
-    100% {
-        background: url("../images/P10_03.png") no-repeat;
-        background-size: cover;
-    }
-}
-.goPlace .place03{
-    background: url("../images/P10_04.png") no-repeat;
-    background-size: cover;
-    animation:infiniteDirection03 2s linear 9s infinite normal;
-    -moz-animation:infiniteDirection03 2s linear 9s infinite normal;
-    -webkit-animation:infiniteDirection03 2s linear 9s infinite normal;
-    -o-animation:infiniteDirection03 2s linear 9s infinite normal;
-}
-@keyframes infiniteDirection03{
-    0% {
-        background: url("../images/P10_04.png") no-repeat;
-        background-size: cover;
-    }
-    65% {
-        background: url("../images/P10_04_1.png") no-repeat;
-        background-size: cover;
-    }
-    80% {
-        background: url("../images/P10_04_1.png") no-repeat;
-        background-size: cover;
-    }
-    100% {
-        background: url("../images/P10_04.png") no-repeat;
-        background-size: cover;
-    }
-}
-@-webkit-keyframes infiniteDirection03{
-    0% {
-        background: url("../images/P10_04.png") no-repeat;
-        background-size: cover;
-    }
-    65% {
-        background: url("../images/P10_04_1.png") no-repeat;
-        background-size: cover;
-    }
-    80% {
-        background: url("../images/P10_04_1.png") no-repeat;
-        background-size: cover;
-    }
-    100% {
-        background: url("../images/P10_04.png") no-repeat;
-        background-size: cover;
-    }
+.placeGif{
+    width: 12rem;
+    height: 1.7rem;
 }
 .p10_05{
     width: 3.225rem;
