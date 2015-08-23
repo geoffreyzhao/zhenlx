@@ -80,6 +80,7 @@
 	})
 
 	$('.test li').on('click',function(){
+		$(this).addClass('testpressbg').siblings().removeClass('testpressbg');
 		mySwiper.slideNext();
 	})
 
@@ -103,8 +104,11 @@
 	<div class="swiper-container">
 	  	<div class="swiper-wrapper">    
 	    	<div class="swiper-slide slide1">
-	    		<div class="slide1-container1">
-			    	<img class="slide1bg" src="images/slide1bg.jpg" alt="">
+	    		<div class="slide1-containter1">
+			    	<img class="slide1title" src="images/slide1title.png" alt="">
+	    		</div>
+	    		<div class="slide1-container2">
+			    	<img class="slide1bg" src="images/slide1bg.png" alt="">
 			    	<div class="slide1btn" alt="">
 			    	<img class="slide1clickme ani" src="images/slide1clickme.png" swiper-animate-effect="tada" swiper-animate-duration="3s" swiper-animate-delay="0.5s"></div>
 	    		</div>
@@ -119,7 +123,7 @@
 			    	<img class="slide2person1" src="images/slide2person1.png" alt="">
 			    	<img class="slide2-legleft" src="images/slide2-legleft.png" alt="">
 			    	<img class="slide2-legright" src="images/slide2-legright.png" alt="">
-			    	<img class="slide2-light" src="images/slide2-light.png" alt="">
+			    	<img class="slide2-light ani" src="images/slide2-light.png" alt="" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
 	    		</div>
 	    		<div class="slide-test">
 			    	<ul class="test">
@@ -198,8 +202,8 @@
 	    		<div class="slide6-containter1">
 			    	<img class="slide6person1" src="images/slide6person1.png" alt="">
 			    	<img class="slide6character" src="images/slide6character.png" alt="">
-			    	<img class="slide6words1" src="images/slide6words1.png" alt="">
-			    	<img class="slide6words2" src="images/slide6words2.png" alt="">
+			    	<img class="slide6words1 ani infinite" src="images/slide6words1.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+			    	<img class="slide6words2 ani infinite" src="images/slide6words2.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
 	    		</div>
 	    		<div class="slide-test">
 			    	<ul class="test">
@@ -218,10 +222,11 @@
 	    		</div>
 	    		<div class="slide7-containter1">
 			    	<img class="slide7person1" src="images/slide7person1.png" alt="">
-			    	<img class="slide7sweat1" src="images/slide7sweat1.png" alt="">
+			    	<!-- <img class="slide7sweat1" src="images/slide7sweat1.png" alt="">
 			    	<img class="slide7sweat2" src="images/slide7sweat2.png" alt="">
-			    	<img class="slide7sweat3" src="images/slide7sweat3.png" alt="">
-			    	<img class="slide7words" src="images/slide7words.png" alt="">
+			    	<img class="slide7sweat3" src="images/slide7sweat3.png" alt=""> -->
+			    	<img src="images/sweat.gif" alt="">
+			    	<img class="slide7words ani" src="images/slide7words.png" alt="" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s">
 	    		</div>
 	    		<div class="slide-test">
 			    	<ul class="test">
@@ -312,6 +317,131 @@
 			    	</ul>
 	    		</div>
 	    	</div>
+	    	<div class="swiper-slide testResult1">
+	    		<div class="slide-containerHeader testResult1Header">
+			    	<img class="title" src="images/title.png" alt="">
+			    	<img class="logo1" src="images/logo.png" alt="">
+			    	<img class="logo2" src="images/logo.png" alt="">
+	    		</div>
+	    		<div class="testResult1Con">
+	    			<span class="result1title">经诊断你患有</span>
+			    	<img class="testResult1person" src="images/testResult1person.png" alt="">
+			    	<img class="testResult1text" src="images/testResult1text.png" alt="">
+	    		</div>
+	    		<div class="testResult1btn">
+			    	<img class="testResultzc" src="images/testResult1zc.png" alt="">
+			    	<img class="testResultfx" src="images/testResult1fx.png" alt="">
+	    		</div>
+	    	</div>
+	    	<div class="swiper-slide testResult2">
+	    		<div class="slide-containerHeader testResult2Header">
+			    	<img class="title" src="images/title.png" alt="">
+			    	<img class="logo1" src="images/logo.png" alt="">
+			    	<img class="logo2" src="images/logo.png" alt="">
+	    		</div>
+	    		<div class="testResult2Con">
+	    			<span class="result2title">经诊断你患有</span>
+			    	<img class="testResult2person" src="images/testResult2person.png" alt="">
+			    	<img class="testResult2text" src="images/testResult2text.png" alt="">
+	    		</div>
+	    		<div class="testResult2btn">
+			    	<img class="testResultzc" src="images/testResult2zc.png" alt="">
+			    	<img class="testResultfx" src="images/testResult2fx.png" alt="">
+	    		</div>
+	    	</div>
+	    	<div class="swiper-slide testResult3">
+	    		<div class="slide-containerHeader testResult3Header">
+			    	<img class="title" src="images/title.png" alt="">
+			    	<img class="logo1" src="images/logo.png" alt="">
+			    	<img class="logo2" src="images/logo.png" alt="">
+	    		</div>
+	    		<div class="testResult3Con">
+	    			<span class="result3title">经诊断你患有</span>
+			    	<img class="testResult3person" src="images/testResult3person.png" alt="">
+			    	<img class="testResult3text" src="images/testResult3text.png" alt="">
+	    		</div>
+	    		<div class="testResult3btn">
+			    	<img class="testResultzc" src="images/testResult3zc.png" alt="">
+			    	<img class="testResultfx" src="images/testResult3fx.png" alt="">
+	    		</div>
+	    	</div>
+	    	<div class="swiper-slide testResult4">
+	    		<div class="slide-containerHeader testResult4Header">
+			    	<img class="title" src="images/title.png" alt="">
+			    	<img class="logo1" src="images/logo.png" alt="">
+			    	<img class="logo2" src="images/logo.png" alt="">
+	    		</div>
+	    		<div class="testResult4Con">
+	    			<span class="result4title">经诊断你患有</span>
+			    	<img class="testResult4person" src="images/testResult4person.png" alt="">
+			    	<img class="testResult4text" src="images/testResult4text.png" alt="">
+	    		</div>
+	    		<div class="testResult4btn">
+			    	<img class="testResultzc" src="images/testResult4zc.png" alt="">
+			    	<img class="testResultfx" src="images/testResult4fx.png" alt="">
+	    		</div>
+	    	</div>
+	    	<div class="swiper-slide testResult1">
+	    		<div class="slide-containerHeader testResult1Header">
+			    	<img class="title" src="images/title.png" alt="">
+			    	<img class="logo1" src="images/logo.png" alt="">
+			    	<img class="logo2" src="images/logo.png" alt="">
+	    		</div>
+	    		<div class="testResult1Con">
+	    			<span class="result1title">经诊断×××患有</span>
+			    	<img class="testResult1person" src="images/testResult1person.png" alt="">
+			    	<img class="testResult1text" src="images/testResult1text.png" alt="">
+	    		</div>
+	    		<div class="testResult1btn">
+			    	<img class="testResultjc" src="images/testResult1jc.png" alt="">
+	    		</div>
+	    	</div>
+	    	<div class="swiper-slide testResult2">
+	    		<div class="slide-containerHeader testResult2Header">
+			    	<img class="title" src="images/title.png" alt="">
+			    	<img class="logo1" src="images/logo.png" alt="">
+			    	<img class="logo2" src="images/logo.png" alt="">
+	    		</div>
+	    		<div class="testResult2Con">
+	    			<span class="result2title">经诊断×××患有</span>
+			    	<img class="testResult2person" src="images/testResult2person.png" alt="">
+			    	<img class="testResult2text" src="images/testResult2text.png" alt="">
+	    		</div>
+	    		<div class="testResult2btn">
+			    	<img class="testResultjc" src="images/testResult2jc.png" alt="">
+	    		</div>
+	    	</div>
+	    	<div class="swiper-slide testResult3">
+	    		<div class="slide-containerHeader testResult3Header">
+			    	<img class="title" src="images/title.png" alt="">
+			    	<img class="logo1" src="images/logo.png" alt="">
+			    	<img class="logo2" src="images/logo.png" alt="">
+	    		</div>
+	    		<div class="testResult3Con">
+	    			<span class="result3title">经诊断×××患有</span>
+			    	<img class="testResult3person" src="images/testResult3person.png" alt="">
+			    	<img class="testResult3text" src="images/testResult3text.png" alt="">
+	    		</div>
+	    		<div class="testResult3btn">
+			    	<img class="testResultjc" src="images/testResult3jc.png" alt="">
+	    		</div>
+	    	</div>
+	    	<div class="swiper-slide testResult4">
+	    		<div class="slide-containerHeader testResult4Header">
+			    	<img class="title" src="images/title.png" alt="">
+			    	<img class="logo1" src="images/logo.png" alt="">
+			    	<img class="logo2" src="images/logo.png" alt="">
+	    		</div>
+	    		<div class="testResult4Con">
+	    			<span class="result4title">经诊断×××患有</span>
+			    	<img class="testResult4person" src="images/testResult4person.png" alt="">
+			    	<img class="testResult4text" src="images/testResult4text.png" alt="">
+	    		</div>
+	    		<div class="testResult4btn">
+			    	<img class="testResultjc" src="images/testResult4jc.png" alt="">
+	    		</div>
+	    	</div>
+	    	<!-- <div class="cover"><img src="images/coverfx.png" alt=""></div> -->
 		</div>
 	</div>
 	<script type="text/javascript">
