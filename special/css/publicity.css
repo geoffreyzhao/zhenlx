@@ -60,43 +60,43 @@ button:focus{
 
 .slide01{
     background: url("../images/P1Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side02{
     background: url("../images/P2Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side03{
     background: url("../images/P3Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side04{
     background: url("../images/P4Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side05{
     background: url("../images/P5Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side06{
     background: url("../images/P6Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side07{
     background: url("../images/P7Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side08{
     background: url("../images/P8Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side09{
     background: url("../images/P9Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .side010{
     background: url("../images/P10Bg.jpg") no-repeat;
-    background-size: 100% 33.35rem;
+    background-size: 100% 100%;
 }
 .p1_01{
     width: 15.525rem;
@@ -265,7 +265,7 @@ button:focus{
 }
 .p5_06{
     width: 12.775rem;
-    height: 3.4rem;
+    height: 4.525rem;
     position: absolute;
     left: 50%;
     top: 29%;
@@ -366,10 +366,17 @@ button:focus{
     z-index: -2;
 }
 .p7_04{
-    width: 17.05rem;
-    height: 12.325rem;
+    width: 2.55rem;
+    height: 5rem;
     position: absolute;
     left: 5.5%;
+    bottom: 8%;
+}
+.p7_04_1{
+    width: 3.45rem;
+    height: 12.325rem;
+    position: absolute;
+    right: 4%;
     bottom: 3%;
 }
 
