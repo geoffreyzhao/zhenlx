@@ -256,6 +256,9 @@
     -moz-border-radius: 0.125rem;
     border-radius: 0.125rem;
 }
+.sub-link:active{
+    background-color:#1a9d9c;
+}
 .some-type{
     text-align: right;
     padding-right:0.75rem;

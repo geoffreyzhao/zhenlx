@@ -85,14 +85,17 @@
 .pay,.evaluate,.completed{
 	width:3rem;
 	height:1.5rem;
+    display: inline-block;
 	line-height:1.5rem;
-	background:#ffa200;
 	border-radius:0.075rem;
 	font-size:0.75rem;
 	color:#fff!important;
 	text-align:center;
 	float:right;
 	margin-top:0.45rem;
+}
+.pay{
+    background-color:#ffa200;
 }
 .pay:active{
     background-color:#dc8e06;
@@ -233,10 +236,15 @@
     background-color:#fff;
     padding:0.5rem 0;
     margin-bottom: 0.4rem;
-    position: relative;
 }
 .prg-bar{
     margin:0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+.prg-bar-content{
+    height:2rem;
+    position: relative;
     text-align: center;
     overflow: hidden;
 }
@@ -246,21 +254,29 @@
     line-height:1rem;
 }
 .prg-txt01{
-    width:3rem;
+    width:4rem;
     height:2rem;
+    position: absolute;
+    top:0;
+    left:1.5rem;
     font-size: 0.5rem;
     color:#3fc0ae;
 }
 .prg-txt02{
-    width:4rem;
+    width:5rem;
     height:2rem;
-    margin:0.1rem 0.8rem;
+    position: absolute;
+    top:0;
+    left:5.4rem;
     font-size: 0.7rem;
     color:#3fc0ae;
 }
 .prg-txt03{
-    width:3rem;
+    width:4rem;
     height:2rem;
+    position: absolute;
+    top:0;
+    left:10.2rem;
     font-size: 0.5rem;
     color:#999;
 }
@@ -434,6 +450,21 @@
 }
 .order-pay:active{
     background-color:#dc8e06;
+}
+.order-judge{
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+    background-color:#1cafad;
+    font-size: 0.75rem;
+    color:#fff !important;
+    padding:0.45rem 0.4rem;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+}
+.order-judge:active{
+    background-color:#1a9d9c;
 }
 .divide-space{
     height:0.7rem;

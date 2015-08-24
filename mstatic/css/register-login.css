@@ -175,6 +175,9 @@
 	bottom: 0;
 	left: 0;
 }
+.cont-block .bottom-btn:active{
+	background-color:#dc8e06;
+}
 .cont-block .person-icon {
 	margin-top: 0.25rem;
 	margin-left: 0.5rem;
@@ -337,6 +340,9 @@
     margin-top:0.85rem;
     padding:0.575rem 0;
 }
+.link-fin:active{
+	background-color: #1a9d9c;
+}
 .link-ign{
     font-size: 0.85rem;
     font-weight:normal !important;
@@ -350,6 +356,9 @@
     display: block;
     margin-top:0.85rem;
     padding:0.575rem 0;
+}
+.link-ign:active{
+	background-color:#f7f7f7;
 }
 /** end **/
 
@@ -386,6 +395,9 @@
     margin-top:0.7rem;
     border:3px #ccc solid;
     background-color:#fff;
+}
+.type-one:active, .type-two:active{
+	background-color:#f7f7f7;
 }
 .mail-box{
     width:2.2rem;
@@ -460,6 +472,9 @@
     -moz-border-radius: 0.125rem;
     border-radius: 0.125rem;
     text-decoration: none;
+}
+.row-vld:active{
+	background-color:#f7f7f7;
 }
 .main-next{
     padding:0 0.5rem;

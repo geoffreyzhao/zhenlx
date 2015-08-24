@@ -89,13 +89,19 @@
 .submitbtn{
 	width:15rem;
 	height:2rem;
+	display: block;
 	line-height:2rem;
-	background: #3fc0ae;
 	text-align:center;
 	margin:2rem auto;
 	border-radius:0.1rem;
 }
 .submitbtn a{
+	width:100%;
+	display: block;
+	background-color: #3fc0ae;
 	font-size: 0.85rem;
-	color:#fff;
+	color:#fff !important;
+}
+.submitbtn a:active{
+	background-color:#1a9d9c;
 }

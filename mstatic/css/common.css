@@ -612,7 +612,7 @@ input[type="checkbox"] + span {
 	height: 1.5rem;
 	line-height: 1.5rem;
 }
-.row-link:active{
+.row-link:active, .btn-confirm:active{
 	background-color:#f7f7f7;
 }
 .row-grey-link:active{
