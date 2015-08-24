@@ -813,6 +813,7 @@
     line-height:1.2rem;
 }
 .prd-order{
+    height:2.2rem;
     position: fixed;
     z-index: 5;
     bottom: 0;
@@ -821,11 +822,16 @@
     background-color:#fff;
 }
 .prd-order .ui-grid-b .ui-block-a, .menu-order .ui-grid-b .ui-block-a{
-    width:45%;
-    padding:0.2rem 0 0.2rem 0.5rem;
+    width:50%;
+    padding-top:0.3rem;
+    padding-left:0.5rem;
     font-size: 0.55rem;
     color:#999;
     line-height:0.8rem;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .arr-up{
     width:0.75rem;
@@ -846,7 +852,7 @@
     background-size: 100%;
 }
 .prd-order .ui-grid-b .ui-block-b, .menu-order .ui-grid-b .ui-block-b{
-    width:20%;
+    width:15%;
 }
 .prd-order .ui-grid-b .ui-block-c, .menu-order .ui-grid-b .ui-block-c{
     width:35%;
@@ -854,10 +860,10 @@
 }
 .prd-order-span{
     color:#666;
-    padding-left:0.2rem;
 }
 .order-btn-link{
     width:100%;
+    height:2.2rem;
     text-align: center;
     vertical-align: middle;
     padding:0.5rem 0;
@@ -869,6 +875,7 @@
 }
 .order-link{
     width:100%;
+    height:2.2rem;
     display: inline-block;
     background-color: #ffa200;
     padding:0.7rem 0;
@@ -1010,6 +1017,7 @@
     background: #3fc0ae;
 }
 .menu-order{
+    height:2.2rem;
     background-color:#fff;
 }
 .menu-sum-box{

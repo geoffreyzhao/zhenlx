@@ -238,9 +238,29 @@
     margin-bottom: 0.4rem;
 }
 .prg-bar{
+    height:1.3rem;
     margin:0 auto;
+    position: relative;
     text-align: center;
     overflow: hidden;
+}
+.prg-bar-left{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left:0.4rem;
+}
+.prg-bar-center{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left:7.2rem;
+}
+.prg-bar-right{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left:8.8rem;
 }
 .prg-bar-content{
     height:2rem;
@@ -258,7 +278,7 @@
     height:2rem;
     position: absolute;
     top:0;
-    left:1.5rem;
+    left:1.6rem;
     font-size: 0.5rem;
     color:#3fc0ae;
 }
@@ -267,7 +287,7 @@
     height:2rem;
     position: absolute;
     top:0;
-    left:5.4rem;
+    left:5.5rem;
     font-size: 0.7rem;
     color:#3fc0ae;
 }
@@ -379,7 +399,18 @@
     width: 0.75rem;
     height:0.75rem;
     margin:0 0.1rem;
+    display: inline-block;
     vertical-align: middle;
+}
+.icon-disc{
+    background: url("../images/icon-disc.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.prg-future{
+    background: url("../images/prg-future.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
 }
 .prg-current01{
     width: 1.05rem;
@@ -391,6 +422,10 @@
     height:0.95rem;
     margin:0 0.4rem;
     vertical-align: middle;
+    display: inline-block;
+    background: url("../images/prg-now.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
 }
 .order-sum{
     background-color:#fff;
