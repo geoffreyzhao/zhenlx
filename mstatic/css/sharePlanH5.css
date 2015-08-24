@@ -144,13 +144,13 @@ html,body,img,span{
 	width:13.55rem;
 	height:1.95rem;
 	position: absolute;
-	bottom:1.925rem;
+	bottom:2rem;
 }
 .slide1dialog3{
 	width:13.55rem;
 	height:1.925rem;
 	position: absolute;
-	bottom:0;
+	bottom: 0.5rem
 }
 .dolphin{
 	width:2.3rem;
@@ -390,10 +390,10 @@ html,body,img,span{
 	bottom:0;
 }
 .slide3dialog2{
-	width:10.5rem;
+	width:12.5rem;
 	height:0.825rem;
 	position: absolute;
-	left: 2.55rem;
+	right: -1rem;
 	top:0;
 	font-size:0.6rem;
 	color:#fff;
@@ -429,7 +429,7 @@ html,body,img,span{
 	background:#1762a0;
 }
 .slide4title2{
-	width:12.4rem;
+	width:13.25rem;
 	height:0.75rem;
 	margin-top:0.65rem;
 }
@@ -573,7 +573,7 @@ html,body,img,span{
 	background:#e2b369;
 }
 .slide5title2{
-	width:10.85rem;
+	width:12.5rem;
 	height:0.75rem;
 	margin-top:0.65rem;
 	margin-left:-0.1rem;

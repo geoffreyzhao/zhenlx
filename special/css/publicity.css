@@ -710,6 +710,11 @@ button:focus{
     position:absolute;
     left:1rem;
     bottom:0.3rem;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -webkit-user-select:none;
 }
 .slide1btnpress{
     background:url(../images/slide1btnpress.png) no-repeat;
@@ -844,6 +849,11 @@ from{transform:rotateZ(-5deg);}
     padding-left:0.5rem;
     margin-bottom:0.2rem;
     box-sizing: border-box;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -webkit-user-select:none;
 }
 .test li.testpressbg{
     /* background:#f1a433; */
@@ -852,7 +862,6 @@ from{transform:rotateZ(-5deg);}
     border:none;
     outline:none;
     background:#f1a433;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
     tap-highlight-color:rgba(0,0,0,0);
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     -ms-tap-highlight-color:rgba(0,0,0,0);
@@ -861,7 +870,6 @@ from{transform:rotateZ(-5deg);}
     border:0;
     outline:none;
     vertical-align:middle;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
     tap-highlight-color:rgba(0,0,0,0);
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     -ms-tap-highlight-color:rgba(0,0,0,0);
