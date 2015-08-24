@@ -18,7 +18,7 @@
 			$('.loadingPage').hide();
 			audio.play();
 			if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
-				$('.musicbtn').css("background-image","url(images/music_pause.png)");			
+				$('.musicbtn').css("background-image","url(images/music_pause1.png)");			
 			}
 		},1500);
 		var mySwiper = new Swiper ('.swiper-container', {
@@ -70,10 +70,10 @@
 	$('.musicbtn').on('click',function(){
 		 if(audio.paused){
             audio.play();
-            this.style.backgroundImage="url(images/music_play.png)";
+            this.style.backgroundImage="url(images/music_play1.png)";
         }else{
             audio.pause();
-            this.style.backgroundImage="url(images/music_pause.png)";
+            this.style.backgroundImage="url(images/music_pause1.png)";
         }
 	});
 
@@ -84,24 +84,27 @@
 	var selectItem = new Array();
 	var selectType = new Array();
 	var selectScore = new Array();
-	$('.test:not(last) li').on('click',function(){
+	$('.test:not(last) a').on('click',function(){
 		$(this).addClass('testpressbg').siblings().removeClass('testpressbg');
 		selectItem.push($(this).index()+1);
 		selectType.push($(this).attr('data-seletype'));
 		if($(this).attr('data-seletype')=='m'){
-				selectScore.push(1);
-			}else if($(this).attr('data-seletype')=='f'){
-				selectScore.push(2);
-			}else if($(this).attr('data-seletype')=='l'){
-				selectScore.push(3);
-			}else if($(this).attr('data-seletype')=='w'){
-				selectScore.push(4);
-			}
+			selectScore.push(1);
+		}else if($(this).attr('data-seletype')=='f'){
+			selectScore.push(2);
+		}else if($(this).attr('data-seletype')=='l'){
+			selectScore.push(3);
+		}else if($(this).attr('data-seletype')=='w'){
+			selectScore.push(4);
+		}
 		mySwiper.slideNext();
+		console.log(selectItem);
+		console.log(selectType);
+		console.log(selectScore);
 	});
 	var score=0;
 	var resultnum=0;
-	$('.final li').click(function(){
+	$('.final a').click(function(){
 		$(this).addClass('testpressbg').siblings().removeClass('testpressbg');
 		$('.swiper-container').hide();
 		for(var i=0;i<10;i++){
@@ -116,6 +119,7 @@
 		}else if(score>30&&score<=40){
 			resultnum=3;
 		}
+		console.log(score);
 		$('.testReault').show();
 		$('.testReault>div').eq(resultnum).show();
 	});
@@ -175,12 +179,15 @@
 			    	<img class="slide2-light ani" src="images/slide2-light.png" alt="" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="m"><img class="test1a" src="images/slide2-test1-a.png" alt=""></li>
-			    		<li data-seletype="l"><img class="test1b" src="images/slide2-test1-b.png" alt=""></li>
-			    		<li data-seletype="w"><img class="test1c" src="images/slide2-test1-c.png" alt=""></li>
-			    		<li data-seletype="f" style="margin-bottom:0;"><img class="test1d" src="images/slide2-test1-d.png" alt=""></li>
-			    	</ul>
+	    				<!-- <a href="javascript:void(0);" class="test1a">
+	    					<img class="test1a" src="images/slide2-test1-a.png" alt="">
+	    				</a> -->
+			    	<div class="test">
+			    		<a data-seletype="m"><img class="test1a" src="images/slide2-test1-a.png" alt=""></a>
+			    		<a data-seletype="l"><img class="test1b" src="images/slide2-test1-b.png" alt=""></a>
+			    		<a data-seletype="w"><img class="test1c" src="images/slide2-test1-c.png" alt=""></a>
+			    		<a data-seletype="f" style="margin-bottom:0;"><img class="test1d" src="images/slide2-test1-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide3">
@@ -195,12 +202,12 @@
 			    	<img class="slide3-starright" src="images/slide3-starright.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="m"><img class="test2a" src="images/slide3-test2-a.png" alt=""></li>
-			    		<li data-seletype="l"><img class="test2b" src="images/slide3-test2-b.png" alt=""></li>
-			    		<li data-seletype="f"><img class="test2c" src="images/slide3-test2-c.png" alt=""></li>
-			    		<li data-seletype="w" style="margin-bottom:0;"><img class="test2d" src="images/slide3-test2-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test">
+			    		<a data-seletype="m"><img class="test2a" src="images/slide3-test2-a.png" alt=""></a>
+			    		<a data-seletype="l"><img class="test2b" src="images/slide3-test2-b.png" alt=""></a>
+			    		<a data-seletype="f"><img class="test2c" src="images/slide3-test2-c.png" alt=""></a>
+			    		<a data-seletype="w" style="margin-bottom:0;"><img class="test2d" src="images/slide3-test2-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide4">
@@ -214,12 +221,12 @@
 			    	<img class="slide4-snore" src="images/slide4-snore.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="l"><img class="test3a" src="images/slide4-test3-a.png" alt=""></li>
-			    		<li data-seletype="m"><img class="test3b" src="images/slide4-test3-b.png" alt=""></li>
-			    		<li data-seletype="w"><img class="test3c" src="images/slide4-test3-c.png" alt=""></li>
-			    		<li data-seletype="f" style="margin-bottom:0;"><img class="test3d" src="images/slide4-test3-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test">
+			    		<a data-seletype="l"><img class="test3a" src="images/slide4-test3-a.png" alt=""></a>
+			    		<a data-seletype="m"><img class="test3b" src="images/slide4-test3-b.png" alt=""></a>
+			    		<a data-seletype="w"><img class="test3c" src="images/slide4-test3-c.png" alt=""></a>
+			    		<a data-seletype="f" style="margin-bottom:0;"><img class="test3d" src="images/slide4-test3-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide5">
@@ -234,12 +241,12 @@
 			    	<img class="slide5hand" src="images/slide5hand.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="f"><img class="test4a" src="images/slide5-test4-a.png" alt=""></li>
-			    		<li data-seletype="l"><img class="test4b" src="images/slide5-test4-b.png" alt=""></li>
-			    		<li data-seletype="w"><img class="test4c" src="images/slide5-test4-c.png" alt=""></li>
-			    		<li data-seletype="m" style="margin-bottom:0;"><img class="test4d" src="images/slide5-test4-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test">
+			    		<a data-seletype="f"><img class="test4a" src="images/slide5-test4-a.png" alt=""></a>
+			    		<a data-seletype="l"><img class="test4b" src="images/slide5-test4-b.png" alt=""></a>
+			    		<a data-seletype="w"><img class="test4c" src="images/slide5-test4-c.png" alt=""></a>
+			    		<a data-seletype="m" style="margin-bottom:0;"><img class="test4d" src="images/slide5-test4-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide6">
@@ -255,12 +262,12 @@
 			    	<img class="slide6words2 ani infinite" src="images/slide6words2.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="w"><img class="test5a" src="images/slide6-test5-a.png" alt=""></li>
-			    		<li data-seletype="m"><img class="test5b" src="images/slide6-test5-b.png" alt=""></li>
-			    		<li data-seletype="f"><img class="test5c" src="images/slide6-test5-c.png" alt=""></li>
-			    		<li data-seletype="l" style="margin-bottom:0;"><img class="test5d" src="images/slide6-test5-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test">
+			    		<a data-seletype="w"><img class="test5a" src="images/slide6-test5-a.png" alt=""></a>
+			    		<a data-seletype="m"><img class="test5b" src="images/slide6-test5-b.png" alt=""></a>
+			    		<a data-seletype="f"><img class="test5c" src="images/slide6-test5-c.png" alt=""></a>
+			    		<a data-seletype="l" style="margin-bottom:0;"><img class="test5d" src="images/slide6-test5-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide7">
@@ -277,12 +284,12 @@
 			    	<img class="slide7words ani" src="images/slide7words.png" alt="" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="m"><img class="test6a" src="images/slide7-test6-a.png" alt=""></li>
-			    		<li data-seletype="f"><img class="test6b" src="images/slide7-test6-b.png" alt=""></li>
-			    		<li data-seletype="w"><img class="test6c" src="images/slide7-test6-c.png" alt=""></li>
-			    		<li data-seletype="l" style="margin-bottom:0;"><img class="test6d" src="images/slide7-test6-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test">
+			    		<a data-seletype="m"><img class="test6a" src="images/slide7-test6-a.png" alt=""></a>
+			    		<a data-seletype="f"><img class="test6b" src="images/slide7-test6-b.png" alt=""></a>
+			    		<a data-seletype="w"><img class="test6c" src="images/slide7-test6-c.png" alt=""></a>
+			    		<a data-seletype="l" style="margin-bottom:0;"><img class="test6d" src="images/slide7-test6-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide8">
@@ -296,12 +303,12 @@
 			    	<img class="slide8leg-cat" src="images/slide8leg-cat.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="f"><img class="test7a" src="images/slide8-test7-a.png" alt=""></li>
-			    		<li data-seletype="w"><img class="test7b" src="images/slide8-test7-b.png" alt=""></li>
-			    		<li data-seletype="m"><img class="test7c" src="images/slide8-test7-c.png" alt=""></li>
-			    		<li data-seletype="l" style="margin-bottom:0;"><img class="test7d" src="images/slide8-test7-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test">
+			    		<a data-seletype="f"><img class="test7a" src="images/slide8-test7-a.png" alt=""></a>
+			    		<a data-seletype="w"><img class="test7b" src="images/slide8-test7-b.png" alt=""></a>
+			    		<a data-seletype="m"><img class="test7c" src="images/slide8-test7-c.png" alt=""></a>
+			    		<a data-seletype="l" style="margin-bottom:0;"><img class="test7d" src="images/slide8-test7-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide9">
@@ -316,12 +323,12 @@
 			    	<img class="slide9anger ani" src="images/slide9anger.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="l"><img class="test8a" src="images/slide9-test8-a.png" alt=""></li>
-			    		<li data-seletype="f"><img class="test8b" src="images/slide9-test8-b.png" alt=""></li>
-			    		<li data-seletype="w"><img class="test8c" src="images/slide9-test8-c.png" alt=""></li>
-			    		<li data-seletype="m" style="margin-bottom:0;"><img class="test8d" src="images/slide9-test8-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test">
+			    		<a data-seletype="l"><img class="test8a" src="images/slide9-test8-a.png" alt=""></a>
+			    		<a data-seletype="f"><img class="test8b" src="images/slide9-test8-b.png" alt=""></a>
+			    		<a data-seletype="w"><img class="test8c" src="images/slide9-test8-c.png" alt=""></a>
+			    		<a data-seletype="m" style="margin-bottom:0;"><img class="test8d" src="images/slide9-test8-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide10">
@@ -338,12 +345,12 @@
 			    	<img class="slide10words4" src="images/slide10words4.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test">
-			    		<li data-seletype="l"><img class="test9a" src="images/slide10-test9-a.png" alt=""></li>
-			    		<li data-seletype="m"><img class="test9b" src="images/slide10-test9-b.png" alt=""></li>
-			    		<li data-seletype="f"><img class="test9c" src="images/slide10-test9-c.png" alt=""></li>
-			    		<li data-seletype="w" style="margin-bottom:0;"><img class="test9d" src="images/slide10-test9-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test">
+			    		<a data-seletype="l"><img class="test9a" src="images/slide10-test9-a.png" alt=""></a>
+			    		<a data-seletype="m"><img class="test9b" src="images/slide10-test9-b.png" alt=""></a>
+			    		<a data-seletype="f"><img class="test9c" src="images/slide10-test9-c.png" alt=""></a>
+			    		<a data-seletype="w" style="margin-bottom:0;"><img class="test9d" src="images/slide10-test9-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide11">
@@ -357,12 +364,12 @@
 			    	<img class="slide11questionmark ani" src="images/slide11questionmark.png" alt=""  swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
 	    		</div>
 	    		<div class="slide-test">
-			    	<ul class="test final">
-			    		<li data-seletype="m"><img class="test10a" src="images/slide11-test10-a.png" alt=""></li>
-			    		<li data-seletype="f"><img class="test10b" src="images/slide11-test10-b.png" alt=""></li>
-			    		<li data-seletype="l"><img class="test10c" src="images/slide11-test10-c.png" alt=""></li>
-			    		<li data-seletype="w" style="margin-bottom:0;"><img class="test10d" src="images/slide11-test10-d.png" alt=""></li>
-			    	</ul>
+			    	<div class="test final">
+			    		<a data-seletype="m"><img class="test10a" src="images/slide11-test10-a.png" alt=""></a>
+			    		<a data-seletype="f"><img class="test10b" src="images/slide11-test10-b.png" alt=""></a>
+			    		<a data-seletype="l"><img class="test10c" src="images/slide11-test10-c.png" alt=""></a>
+			    		<a data-seletype="w" style="margin-bottom:0;"><img class="test10d" src="images/slide11-test10-d.png" alt=""></a>
+			    	</div>
 	    		</div>
 	    	</div>
 		</div>
@@ -514,6 +521,5 @@
 		
 		root.style.height = window.innerHeight + "px";
 	</script>
-
 </body>
 </html>
