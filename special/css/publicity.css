@@ -526,6 +526,7 @@ button:focus{
     background-size: ;
     position:relative;
     z-index:12;
+    overflow:hidden;
 }
 .loadingBox{
     width:17.85rem;
@@ -539,6 +540,13 @@ button:focus{
 .loadingbg{
     width:17.85rem;
     height:32.45rem;
+}
+.loading-pipe{
+    width:9rem;
+    height:0.5rem;
+    position:absolute;
+    top:13.725rem;
+    left:-8.9rem;
 }
 @-webkit-keyframes loadingdotshow {
     0%{width:0rem; }
@@ -611,7 +619,6 @@ button:focus{
        -moz-animation:loadingdotshow 5s linear 1s infinite ;
         -ms-animation:loadingdotshow 5s linear 1s infinite ;
          -o-animation:loadingdotshow 5s linear 1s infinite ;
-     -khtml-animation:loadingdotshow 5s linear 1s infinite ;
             animation:loadingdotshow 5s linear 1s infinite ;
 }
 .loadingdot{
@@ -631,7 +638,6 @@ button:focus{
        -moz-animation: sweat1 3s linear 0s infinite;
         -ms-animation: sweat1 3s linear 0s infinite;
          -o-animation: sweat1 3s linear 0s infinite;
-     -khtml-animation: sweat1 3s linear 0s infinite;
             animation: sweat1 3s linear 0s infinite;
 }
 .bubble2{
@@ -644,7 +650,6 @@ button:focus{
        -moz-animation: sweat2 3s linear 0s infinite;
         -ms-animation: sweat2 3s linear 0s infinite;
          -o-animation: sweat2 3s linear 0s infinite;
-     -khtml-animation: sweat2 3s linear 0s infinite;
             animation: sweat2 3s linear 0s infinite;
 }
 .bubble3{
@@ -657,7 +662,6 @@ button:focus{
        -moz-animation: sweat3 3s linear 0s infinite;
         -ms-animation: sweat3 3s linear 0s infinite;
          -o-animation: sweat3 3s linear 0s infinite;
-     -khtml-animation: sweat3 3s linear 0s infinite;
             animation: sweat3 3s linear 0s infinite;
 }
 .slide1{
@@ -793,13 +797,11 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: legrotate 0.25s linear 0s infinite alternate;
         -ms-animation: legrotate 0.25s linear 0s infinite alternate;
          -o-animation: legrotate 0.25s linear 0s infinite alternate;
-     -khtml-animation: legrotate 0.25s linear 0s infinite alternate;
             animation: legrotate 0.25s linear 0s infinite alternate;
     -webkit-transform-origin:right top;
        -moz-transform-origin:right top;
         -ms-transform-origin:right top;
          -o-transform-origin:right top;
-     -khtml-transform-origin:right top;
             transform-origin:right top;
 }
 .slide2-legright{
@@ -812,13 +814,11 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: legrotate 0.25s linear 0.25s infinite alternate;
         -ms-animation: legrotate 0.25s linear 0.25s infinite alternate;
          -o-animation: legrotate 0.25s linear 0.25s infinite alternate;
-     -khtml-animation: legrotate 0.25s linear 0.25s infinite alternate;
             animation: legrotate 0.25s linear 0.25s infinite alternate;
     -webkit-transform-origin:left top;
        -moz-transform-origin:left top;
         -ms-transform-origin:left top;
          -o-transform-origin:left top;
-     -khtml-transform-origin:left top;
             transform-origin:left top;
 }
 .slide2-light{
@@ -846,16 +846,25 @@ from{transform:rotateZ(-5deg);}
     box-sizing: border-box;
 }
 .test li.testpressbg{
-    background:#f1a433;
+    /* background:#f1a433; */
 }
 .test li:focus{
     border:none;
     outline:none;
-    -webkit-tap-highlight-color:rgba(0,0,0,0); 
-    -webkit-user-modify:read-write-plaintext-only;
+    background:#f1a433;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -ms-tap-highlight-color:rgba(0,0,0,0);
 }
 .test li img{
+    border:0;
+    outline:none;
     vertical-align:middle;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -ms-tap-highlight-color:rgba(0,0,0,0);
 }
 .test1a{
     width:10.675rem;
@@ -882,12 +891,6 @@ from{transform:rotateZ(-5deg);}
     50%{opacity:0;}
     100%{opacity:1;}
 }
-@-khtml-keyframes twitle {
-    0%{opacity:1;}
-    50%{opacity:0;}
-    100%{opacity:1;}
-}
-}
 @-o-keyframes twitle {
     0%{opacity:1;}
     50%{opacity:0;}
@@ -913,7 +916,6 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: twitle 1.2s linear 0s infinite alternate;
         -ms-animation: twitle 1.2s linear 0s infinite alternate;
          -o-animation: twitle 1.2s linear 0s infinite alternate;
-     -khtml-animation: twitle 1.2s linear 0s infinite alternate;
             animation: twitle 1.2s linear 0s infinite alternate;
 }
 .slide3-starright{
@@ -926,7 +928,6 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: twitle 1.2s linear 0.3s infinite alternate;
         -ms-animation: twitle 1.2s linear 0.3s infinite alternate;
          -o-animation: twitle 1.2s linear 0.3s infinite alternate;
-     -khtml-animation: twitle 1.2s linear 0.3s infinite alternate;
             animation: twitle 1.2s linear 0.3s infinite alternate;
 }
 .test2a{
@@ -953,10 +954,6 @@ from{transform:rotateZ(-5deg);}
     from {-webkit-transform: scale(0.3,0.3);}
     to {-webkit-transform: scale(1,1);}
 }
-@-khtml-keyframes snore {
-    from {-khtml-transform: scale(0.3,0.3);}
-    to {-khtml-transform: scale(1,1);}
-}
 @-o-keyframes snore {
     from {-o-transform: scale(0.3,0.3);}
     to {-o-transform: scale(1,1);}
@@ -976,7 +973,6 @@ from{transform:rotateZ(-5deg);}
     bottom:7rem;
     left:4.6rem;
     -webkit-transform:scale(0.3,0.3);
-    -khtml-transform:scale(0.3,0.3);
     -o-transform:scale(0.3,0.3);
     -moz-transform:scale(0.3,0.3);
         transform:scale(0.3,0.3);
@@ -984,13 +980,11 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: snore 2s linear 0s infinite;
         -ms-animation: snore 2s linear 0s infinite;
          -o-animation: snore 2s linear 0s infinite;
-     -khtml-animation: snore 2s linear 0s infinite;
             animation: snore 2s linear 0s infinite;
     -webkit-transform-origin:right center;
        -moz-transform-origin:right center;
         -ms-transform-origin:right center;
          -o-transform-origin:right center;
-     -khtml-transform-origin:right center;
             transform-origin:right center;
 }
 .test3a{
@@ -1031,13 +1025,11 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: legrotate 0.3s linear 0s infinite alternate;
         -ms-animation: legrotate 0.3s linear 0s infinite alternate;
          -o-animation: legrotate 0.3s linear 0s infinite alternate;
-     -khtml-animation: legrotate 0.3s linear 0s infinite alternate;
             animation: legrotate 0.3s linear 0s infinite alternate;
     -webkit-transform-origin:1.15rem top;
        -moz-transform-origin:1.15rem top;
         -ms-transform-origin:1.15rem top;
          -o-transform-origin:1.15rem top;
-     -khtml-transform-origin:1.15rem top;
             transform-origin:1.15rem top;
 }
 .test4a{
@@ -1113,17 +1105,6 @@ from{transform:rotateZ(-5deg);}
     99%{opacity:1;}
     100%{opacity:0;}
 }
-@-khtml-keyframes sweat1{
-    1%{opacity:0;}
-    5%{opacity:1;}
-    35%{opacity:1;}
-    40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
-    99%{opacity:1;}
-    100%{opacity:0;}
-}
-}
 @-o-keyframes sweat1{
     1%{opacity:0;}
     5%{opacity:1;}
@@ -1164,7 +1145,6 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: sweat1 3s linear 0s infinite;
         -ms-animation: sweat1 3s linear 0s infinite;
          -o-animation: sweat1 3s linear 0s infinite;
-     -khtml-animation: sweat1 3s linear 0s infinite;
             animation: sweat1 3s linear 0s infinite;
 }
 @-webkit-keyframes sweat2{
@@ -1176,17 +1156,6 @@ from{transform:rotateZ(-5deg);}
     75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
-}
-@-khtml-keyframes sweat2{
-    1%{opacity:0;}
-    5%{opacity:0;}
-    35%{opacity:0;}
-    40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
-    99%{opacity:1;}
-    100%{opacity:0;}
-}
 }
 @-o-keyframes sweat2{
     1%{opacity:0;}
@@ -1228,7 +1197,6 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: sweat2 3s linear 0s infinite;
         -ms-animation: sweat2 3s linear 0s infinite;
          -o-animation: sweat2 3s linear 0s infinite;
-     -khtml-animation: sweat2 3s linear 0s infinite;
             animation: sweat2 3s linear 0s infinite;
 }
 @-webkit-keyframes sweat3{
@@ -1240,17 +1208,6 @@ from{transform:rotateZ(-5deg);}
     75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
-}
-@-khtml-keyframes sweat3{
-    1%{opacity:0;}
-    5%{opacity:0;}
-    35%{opacity:0;}
-    40%{opacity:0;}
-    70%{opacity:0;}
-    75%{opacity:1;}
-    99%{opacity:1;}
-    100%{opacity:0;}
-}
 }
 @-o-keyframes sweat3{
     1%{opacity:0;}
@@ -1292,7 +1249,6 @@ from{transform:rotateZ(-5deg);}
        -moz-animation: sweat3 3s linear 0s infinite;
         -ms-animation: sweat3 3s linear 0s infinite;
          -o-animation: sweat3 3s linear 0s infinite;
-     -khtml-animation: sweat3 3s linear 0s infinite;
             animation: sweat3 3s linear 0s infinite;
 }
 .slide7words{
@@ -1326,10 +1282,6 @@ from{transform:rotateZ(-5deg);}
 from{-webkit-transform:rotateZ(-4deg);}
     to{-webkit-transform:rotateZ(4deg);}
 }
-@-khtml-keyframes leg-catrotate {
-from{-khtml-transform:rotateZ(-4deg);}
-    to{-khtml-transform:rotateZ(4deg);}
-}
 @-ms-keyframes leg-catrotate {
 from{-ms-transform:rotateZ(-4deg);}
     to{-ms-transform:rotateZ(4deg);}
@@ -1356,13 +1308,11 @@ from{transform:rotateZ(-4deg);}
        -moz-animation: leg-catrotate 0.2s linear 0s infinite;
         -ms-animation: leg-catrotate 0.2s linear 0s infinite;
          -o-animation: leg-catrotate 0.2s linear 0s infinite;
-     -khtml-animation: leg-catrotate 0.2s linear 0s infinite;
             animation: leg-catrotate 0.2s linear 0s infinite;
     -webkit-transform-origin:left 1.2rem;
        -moz-transform-origin:left 1.2rem;
         -ms-transform-origin:left 1.2rem;
          -o-transform-origin:left 1.2rem;
-     -khtml-transform-origin:left 1.2rem;
             transform-origin:left 1.2rem;
 }
 .test7a{
@@ -1395,13 +1345,11 @@ from{transform:rotateZ(-4deg);}
        -moz-animation: leg-catrotate 0.3s linear 0s infinite;
         -ms-animation: leg-catrotate 0.3s linear 0s infinite;
          -o-animation: leg-catrotate 0.3s linear 0s infinite;
-     -khtml-animation: leg-catrotate 0.3s linear 0s infinite;
             animation: leg-catrotate 0.3s linear 0s infinite;
     -webkit-transform-origin:1.5rem 0.5rem;
        -moz-transform-origin:1.5rem 0.5rem;
         -ms-transform-origin:1.5rem 0.5rem;
          -o-transform-origin:1.5rem 0.5rem;
-     -khtml-transform-origin:1.5rem 0.5rem;
             transform-origin:1.5rem 0.5rem;
 }
 .slide9anger{
@@ -1440,17 +1388,6 @@ from{transform:rotateZ(-4deg);}
     65%{opacity:1;}
     90%{opacity:1;} */
     100%{opacity:1;}
-}
-@-khtml-keyframes words1{
-    1%{opacity:0;}
-    5%{opacity:1;}
-    /* 30%{opacity:1;}
-    35%{opacity:1;}
-    60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
-    100%{opacity:1;}
-}
 }
 @-o-keyframes words1{
     1%{opacity:0;}
@@ -1492,7 +1429,6 @@ from{transform:rotateZ(-4deg);}
        -moz-animation: words1 4s linear 0s infinite;
         -ms-animation: words1 4s linear 0s infinite;
          -o-animation: words1 4s linear 0s infinite;
-     -khtml-animation: words1 4s linear 0s infinite;
             animation: words1 4s linear 0s infinite;
 }
 @-webkit-keyframes words2{
@@ -1504,17 +1440,6 @@ from{transform:rotateZ(-4deg);}
     65%{opacity:1;}
     90%{opacity:1;} */
     100%{opacity:1;}
-}
-@-khtml-keyframes words2{
-    1%{opacity:0;}
-    /* 5%{opacity:0;} */
-    30%{opacity:0;}
-    35%{opacity:1;}
-    /* 60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
-    100%{opacity:1;}
-}
 }
 @-o-keyframes words2{
     1%{opacity:0;}
@@ -1556,7 +1481,6 @@ from{transform:rotateZ(-4deg);}
        -moz-animation: words2 4s linear 0s infinite;
         -ms-animation: words2 4s linear 0s infinite;
          -o-animation: words2 4s linear 0s infinite;
-     -khtml-animation: words2 4s linear 0s infinite;
             animation: words2 4s linear 0s infinite;
 }
 @-webkit-keyframes words3{
@@ -1568,17 +1492,6 @@ from{transform:rotateZ(-4deg);}
     65%{opacity:1;}
     /* 90%{opacity:1;} */
     100%{opacity:1;}
-}
-@-khtml-keyframes words3{
-    1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;} */
-    60%{opacity:0;}
-    65%{opacity:1;}
-    /* 90%{opacity:1;} */
-    100%{opacity:1;}
-}
 }
 @-o-keyframes words3{
     1%{opacity:0;}
@@ -1620,7 +1533,6 @@ from{transform:rotateZ(-4deg);}
        -moz-animation: words3 4s linear 0s infinite;
         -ms-animation: words3 4s linear 0s infinite;
          -o-animation: words3 4s linear 0s infinite;
-     -khtml-animation: words3 4s linear 0s infinite;
             animation: words3 4s linear 0s infinite;
 }
 @-webkit-keyframes words4{
@@ -1633,18 +1545,6 @@ from{transform:rotateZ(-4deg);}
     90%{opacity:0;}
     95%{opacity:1;}
     100%{opacity:1;}
-}
-@-khtml-keyframes words4{
-    1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;}
-    60%{opacity:0;}
-    65%{opacity:0;} */
-    90%{opacity:0;}
-    95%{opacity:1;}
-    100%{opacity:1;}
-}
 }
 @-o-keyframes words4{
     1%{opacity:0;}
@@ -1689,7 +1589,6 @@ from{transform:rotateZ(-4deg);}
        -moz-animation: words4 4s linear 0s infinite;
         -ms-animation: words4 4s linear 0s infinite;
          -o-animation: words4 4s linear 0s infinite;
-     -khtml-animation: words4 4s linear 0s infinite;
             animation: words4 4s linear 0s infinite;
 }
 .test9a{
