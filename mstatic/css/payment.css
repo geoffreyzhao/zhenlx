@@ -550,7 +550,14 @@ input[type="radio"]:checked + .pay-check{
     line-height:1.8rem;
     color:#484848;
     font-weight: bold;
-
+    position: relative;
+}
+.plane-stop em{
+    position: absolute;
+    top:-0.5rem;
+    right:0.4rem;
+    color: #FE7800;
+    font-size: 0.6rem;
 }
 .plane-add{
     font-size: 0.6rem;
