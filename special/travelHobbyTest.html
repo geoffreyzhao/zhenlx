@@ -18,7 +18,7 @@
 			$('.loadingPage').hide();
 			audio.play();
 			if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
-				$('.musicbtn').css("background-image","url(../images/mobile/music_pause.png)");			
+				$('.musicbtn').css("background-image","url(images/music_pause.png)");			
 			}
 		},1500);
 		var mySwiper = new Swiper ('.swiper-container', {
@@ -70,10 +70,10 @@
 	$('.musicbtn').on('click',function(){
 		 if(audio.paused){
             audio.play();
-            this.style.backgroundImage="url(../images/mobile/music_play.png)";
+            this.style.backgroundImage="url(images/music_play.png)";
         }else{
             audio.pause();
-            this.style.backgroundImage="url(../images/mobile/music_pause.png)";
+            this.style.backgroundImage="url(images/music_pause.png)";
         }
 	});
 
@@ -102,6 +102,7 @@
 	var score=0;
 	var resultnum=0;
 	$('.final li').click(function(){
+		$(this).addClass('testpressbg').siblings().removeClass('testpressbg');
 		$('.swiper-container').hide();
 		for(var i=0;i<10;i++){
 			score+=selectScore[i];
@@ -135,14 +136,17 @@
 	<audio loop id="music" preload="auto">
 		<source src="music.mp3" type="audio/mpeg">
 	</audio>
-	<div class="musicbtn"></div>
+	<div class="musicbtn musicbtnChange"></div>
 	
 	<div class="loadingPage" style="margin-bottom:14px;">
-		<img class="bubble1" src="images/bubble1.png"  >
-		<img class="bubble2" src="images/bubble2.png"  >
-		<img class="bubble3" src="images/bubble3.png"  >
-		<div class="loading">
-			<img class="loadingdot" src="images/loadingdot.png" alt="">
+		<div class="loadingBox">
+			<img class="loadingbg" src="images/loadingbg.png">
+			<img class="bubble1" src="images/bubble1.png"  >
+			<img class="bubble2" src="images/bubble2.png"  >
+			<img class="bubble3" src="images/bubble3.png"  >
+			<div class="loading">
+				<img class="loadingdot" src="images/loadingdot.png" alt="">
+			</div>
 		</div>
 	</div>
 	<div class="swiper-container" style="margin-bottom:14px;">

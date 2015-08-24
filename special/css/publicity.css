@@ -515,12 +515,30 @@ button:focus{
 /*  加班太苦  End  */
 
 /* 旅行癖测试 */
+.musicbtnChange{
+    right: 4%;
+    top: 15%;
+}
 .loadingPage{
     width:100%;
     height:100%;
-    background:url(../images/loadingbg.png) #1caead center center no-repeat;
-    background-size:17.85rem 32.45rem;
+    background:#1caead;
+    background-size: ;
     position:relative;
+    z-index:12;
+}
+.loadingBox{
+    width:17.85rem;
+    height:32.45rem;
+    position:absolute;
+    right:50%;
+    margin-right:-8.925rem;
+    top:50%;
+    margin-top:-16.225rem;
+}
+.loadingbg{
+    width:17.85rem;
+    height:32.45rem;
 }
 @-webkit-keyframes loadingdotshow {
     0%{width:0rem; }
@@ -586,8 +604,8 @@ button:focus{
     width:1.55rem;
     height:0.15rem;
     position:absolute;
-    top: 61.5%;
-    left: 68%;
+    top:20.85rem;
+    left:12.8rem;
     overflow:hidden;
     -webkit-animation:loadingdotshow 5s linear 1s infinite ;
        -moz-animation:loadingdotshow 5s linear 1s infinite ;
@@ -607,22 +625,40 @@ button:focus{
     width:0.8rem;
     height:1.75rem;
     position:absolute;
-    left: 49%;
-    top: 49.5%;
+    left:8.6rem;
+    top:16.15rem;
+    -webkit-animation: sweat1 3s linear 0s infinite;
+       -moz-animation: sweat1 3s linear 0s infinite;
+        -ms-animation: sweat1 3s linear 0s infinite;
+         -o-animation: sweat1 3s linear 0s infinite;
+     -khtml-animation: sweat1 3s linear 0s infinite;
+            animation: sweat1 3s linear 0s infinite;
 }
 .bubble2{
     width:0.7rem;
     height:0.7rem;
     position:absolute;
-    left: 52%;
-    top: 46%;
+    left:8.95rem;
+    top:14.55rem;
+    -webkit-animation: sweat2 3s linear 0s infinite;
+       -moz-animation: sweat2 3s linear 0s infinite;
+        -ms-animation: sweat2 3s linear 0s infinite;
+         -o-animation: sweat2 3s linear 0s infinite;
+     -khtml-animation: sweat2 3s linear 0s infinite;
+            animation: sweat2 3s linear 0s infinite;
 }
 .bubble3{
     width:1.2rem;
     height:1.2rem;
     position:absolute;
-    left: 50%;
-    top: 41%;
+    left:9rem;
+    top:12.9rem;
+    -webkit-animation: sweat3 3s linear 0s infinite;
+       -moz-animation: sweat3 3s linear 0s infinite;
+        -ms-animation: sweat3 3s linear 0s infinite;
+         -o-animation: sweat3 3s linear 0s infinite;
+     -khtml-animation: sweat3 3s linear 0s infinite;
+            animation: sweat3 3s linear 0s infinite;
 }
 .slide1{
     width:100%;
@@ -811,6 +847,12 @@ from{transform:rotateZ(-5deg);}
 }
 .test li.testpressbg{
     background:#f1a433;
+}
+.test li:focus{
+    border:none;
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0); 
+    -webkit-user-modify:read-write-plaintext-only;
 }
 .test li img{
     vertical-align:middle;
@@ -1770,9 +1812,9 @@ from{transform:rotateZ(-4deg);}
 .result1title,.result2title,.result3title,.result4title{
     width:18rem;
     position:absolute;
-    top:-3rem;
+    top:-1.8rem;
     color:#f39800;
-    font-size:1.5rem;
+    font-size:1.2rem;
     left:50%;
     margin-left:-9rem;
     text-align:center;
