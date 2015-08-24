@@ -12,14 +12,16 @@ html, body,.wrapper{
     width: 100%;
     height: 100%;
 }
-img,
 a,
+a:focus,
 button,
 button:focus{
+    display: inline-block;
     outline: none;
     border: none;
+    tap-highlight-color:rgba(0,0,0,0);
     -webkit-tap-highlight-color:rgba(0,0,0,0);
-    -webkit-user-modify:read-write-plaintext-only;
+    -ms-tap-highlight-color:rgba(0,0,0,0);
 }
 .musicbtn{
     width:2rem;
@@ -361,6 +363,7 @@ button:focus{
     position: absolute;
     left: 21%;
     bottom: 3.5%;
+    z-index: -2;
 }
 .p7_04{
     width: 17.05rem;
@@ -392,11 +395,11 @@ button:focus{
     bottom: 0;
 }
 .p8_04{
-    width: 5.475rem;
-    height: 4.125rem;
+    width: 4.325rem;
+    height: 3.225rem;
     position: absolute;
-    left: 5%;
-    bottom: 6%;
+    left: 8%;
+    bottom: 7%;
 }
 
 .p9_01{
@@ -727,10 +730,6 @@ button:focus{
 @-webkit-keyframes legrotate {
 from{-webkit-transform:rotateZ(-5deg);}
     to{-webkit-transform:rotateZ(5deg);}
-}
-@-khtml-keyframes legrotate {
-from{-khtml-transform:rotateZ(-5deg);}
-    to{-khtml-transform:rotateZ(5deg);}
 }
 @-ms-keyframes legrotate {
 from{-ms-transform:rotateZ(-5deg);}
