@@ -18,7 +18,7 @@
                 $('.waitContent').hide();
                 audio01.play();
                 if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
-                    $('.musicbtn').css("background-image","url(images/music_pause.png)");
+                    $('.musicbtn').css("background-image","url(images/music_pause1.png)");
                 };
             },500);
             
@@ -57,22 +57,21 @@
                 if(thisIndex<4){
                     if(audio01.paused){
                         audio01.play();
-                        this.style.backgroundImage="url(images/music_play.png)";
+                        this.style.backgroundImage="url(images/music_play1.png)";
                     }else{
                         audio01.pause();
-                        this.style.backgroundImage="url(images/music_pause.png)";
+                        this.style.backgroundImage="url(images/music_pause1.png)";
                     }
                 }else{
                     if(audio02.paused){
                         audio02.play();
-                        this.style.backgroundImage="url(images/music_play.png)";
+                        this.style.backgroundImage="url(images/music_play1.png)";
                     }else{
                         audio02.pause();
-                        this.style.backgroundImage="url(images/music_pause.png)";
+                        this.style.backgroundImage="url(images/music_pause1.png)";
                     }
                 }
             });
-
            
         };
 	</script>
@@ -84,8 +83,7 @@
     </audio>
     <audio loop preload="auto" id="music02">
         <source src="music02.mp3" type="audio/mpeg">
-    </audio>
-    
+    </audio>    
     <div class="musicbtn"></div>
 
     <div class="waitContent">
@@ -198,7 +196,9 @@
                 <div class="swiper-slide side010">
                     <img class="ani p10_01" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" src="images/P10_01.png">
                     <div class="goPlace">
-                        <img class="ani placeGif" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" src="images/place.gif">
+                        <a href="javascript:void(0);">
+                            <img class="ani placeGif" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" src="images/place.gif">
+                        </a>
                         <img class="ani p10_05" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" src="images/P10_05.png">
                     </div>
                     <a href="javascript:void(0);" class="ani zhenlxURL" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.3s"></a>
@@ -226,8 +226,28 @@
         }
 
         root.style.height = window.innerHeight + "px";
-        
-	</script>
+
+
+    </script>
+
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        (function(){ var u=(("https:" == document.location.protocol) ? "https://" : "http://");
+            _paq.push(['setSiteId', 3]);
+            _paq.push(['setTrackerUrl', u+'pangu.tdxinfo.com/tracker.do']);
+            _paq.push(['setCookieDomain', '*.zhenlx.com']);
+            _paq.push(['setDomains', '*.zhenlx.com']);
+            var account = '';
+            if(account)_paq.push(['setUserId', account]);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript';
+            g.defer=true;
+            g.async=true;
+            g.src=u+'scpg.tdxinfo.com/js/pangumini.js?v=1.0.6';
+            s.parentNode.insertBefore(g,s); })();
+    </script>
 
 </body>
 </html>
