@@ -136,11 +136,11 @@
         <div class="nav-fixed-placeholder"></div>
         <nav class="navbar clearfix">
             <ul id="navMenu">
-                <li class="navbar-path link-active">推荐行程</li><li class="navbar-ticket">机票</li><li class="navbar-hotel">酒店</li><li class="navbar-cost">费用说明</li><li class="navbar-inst">预订须知</li>
+                <li class="link-active" id="navbar-path">推荐行程</li><li id="navbar-ticket">机票</li><li id="navbar-hotel">酒店</li><li id="navbar-cost">费用说明</li><li id="navbar-inst">预订须知</li>
             </ul>
         </nav>
         <div class="nav-content">
-            <div class="navWrap-path">
+            <div class="navWrap-path navbar-path">
                 <ul>
                     <li>
                         <h3 class="navWrap-til">目的地概览</h3>
@@ -228,7 +228,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="navWrap-ticket">
+            <div class="navWrap-ticket navbar-ticket">
                 <div class="tkt-cnt">
                     <div class="tkt-agenda">第一天<span class="common-agenda agenda-flag1">去程</span></div>
                     <div class="tkt-flight">
@@ -333,7 +333,7 @@
                     </div>
                 </div>
             </div>
-            <div class="navWrap-hotel">
+            <div class="navWrap-hotel navbar-hotel">
                 <h3 class="hotel-til">阿尔巴套房式度假酒店及水疗中心 </h3>
                 <div class="hotel-occu"><label class="moon"></label>入住第<span>1.3.5</span>晚</div>
                 <div class="hotel-model">酒店星级：<span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span></div>
@@ -449,7 +449,7 @@
                     </div>
                 </div>
             </div>
-            <div class="navWrap-cost">
+            <div class="navWrap-cost navbar-cost">
                 <h3 class="cost-til">费用包含</h3>
                 <div class="navWrap-val">
                     <p>当地精品海明威丝绸酒店5晚住宿(含早；或</p>
@@ -468,7 +468,7 @@
                     <p>7. 全程单房差：700元/人起（如客人单人报名，所产生单房差费用，需客人承担）。</p>
                 </div>
             </div>
-            <div class="navWrap-inst">
+            <div class="navWrap-inst navbar-inst">
                 <h3 class="cost-til">预订须知</h3>
                 <div class="navWrap-val">
                     <p>为了确保您能够按时出行，产品确认后请尽快付款。</p>
@@ -699,18 +699,29 @@
         });
 
         $(".nav-content > div:first").nextAll().hide("fast");
-        var obj = $(".nav-content > div[class^='navWrap']");
+//        var obj = $(".nav-content > div[class^='navWrap']");
         $("#navMenu > li").click(function(){
-            var ind = $(this).index();
+            var navBar = $(this).prop("id");
+            var navItem = $(".nav-content").children("."+navBar);
             if(!$(this).hasClass("link-active")){
                 $("#navMenu > li").removeClass("link-active");
                 $(this).addClass("link-active");
 
-                if(obj.eq(ind).is(":hidden")){
-                    obj.eq(ind).siblings().fadeOut("fast");
-                    obj.eq(ind).fadeIn("fast");
+                if(navItem.is(":hidden")){
+                    navItem.siblings().fadeOut("fast");
+                    navItem.fadeIn("fast");
                 }
             }
+/*            var ind = $(this).index();
+             if(!$(this).hasClass("link-active")){
+                 $("#navMenu > li").removeClass("link-active");
+                 $(this).addClass("link-active");
+
+             if(obj.eq(ind).is(":hidden")){
+                 obj.eq(ind).siblings().fadeOut("fast");
+                 obj.eq(ind).fadeIn("fast");
+                 }
+             }*/
         });
 
         var mySwiper01 = new Swiper('#swiper-container01', {
