@@ -16,7 +16,8 @@ audio,source{font-size: 0; width: 0; height: 0; visibility: hidden;}
 a,
 a:focus,
 button,
-button:focus{
+button:focus,
+img:focus{
     display: inline-block;
     outline: none;
     border: none;
@@ -523,6 +524,13 @@ button:focus{
 /*  加班太苦  End  */
 
 /* 旅行癖测试 */
+div:focus{
+    border:none;
+    outline:none;
+    tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -ms-tap-highlight-color:rgba(0,0,0,0);
+}
 .musicbtnChange{
     right: 4%;
     top: 15%;
@@ -708,8 +716,13 @@ button:focus{
     position:absolute;
     bottom:2.25rem;
     left:2.25rem;
+    display:inline-block;
     background:url(../images/slide1btn.png) no-repeat;
-    background-size:100% 100%;
+    background-size:cover;
+}
+.slide1btn:active{
+    background:url(../images/slide1btnpress.png) no-repeat;
+    background-size:cover;
 }
 .slide1clickme{
     width:3.85rem;
@@ -717,15 +730,6 @@ button:focus{
     position:absolute;
     left:1rem;
     bottom:0.3rem;
-    -webkit-user-select:none;
-    -ms-user-select:none;
-    -moz-user-select:none;
-    -o-user-select:none;
-    -webkit-user-select:none;
-}
-.slide1btnpress{
-    background:url(../images/slide1btnpress.png) no-repeat;
-    background-size:100% 100%;
 }
 .slide2,.slide3,.slide4,.slide5,.slide6,.slide7,.slide8,.slide9,.slide10,.slide11,
 .testResult1,.testResult2,.testResult3,.testResult4{
@@ -736,12 +740,14 @@ button:focus{
 }
 .slide-containerHeader{
     width:100%;
-    height:2.125rem;
-    background:url(../images/triangle.png) repeat-x left bottom #1caead;
-    background-size:0.65rem 0.325rem;
+    height:2.175rem;
+    border:0;
+    outline:none;
+    background:url(../images/triangle.png) repeat-x;
+    background-size:0.65rem 2.175rem;
     text-align:center;
     overflow:hidden;
-    line-height:2.125rem;
+    line-height:2.175rem;
 }
 .title{
     width:13.875rem;
@@ -858,16 +864,8 @@ from{transform:rotateZ(-5deg);}
     margin-bottom:0.2rem;
     box-sizing: border-box;
 }
-.test a.testpressbg{
+.test a:active{
     background:#f1a433;
-}
-.test a:focus{
-    border:none;
-    outline:none;
-    background:#f1a433;
-    tap-highlight-color:rgba(0,0,0,0);
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-    -ms-tap-highlight-color:rgba(0,0,0,0);
 }
 .test a img{
     display: inline-block;
@@ -878,10 +876,10 @@ from{transform:rotateZ(-5deg);}
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     -ms-tap-highlight-color:rgba(0,0,0,0);
 }
-
-.test a img:focus{
+img:focus{
     border:none;
     outline:none;
+    border:0;
     tap-highlight-color:rgba(0,0,0,0);
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     -ms-tap-highlight-color:rgba(0,0,0,0);
@@ -1402,41 +1400,21 @@ from{transform:rotateZ(-4deg);}
 @-webkit-keyframes words1{
     1%{opacity:0;}
     5%{opacity:1;}
-    /* 30%{opacity:1;}
-    35%{opacity:1;}
-    60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
     100%{opacity:1;}
 }
 @-o-keyframes words1{
     1%{opacity:0;}
     5%{opacity:1;}
-    /* 30%{opacity:1;}
-    35%{opacity:1;}
-    60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
     100%{opacity:1;}
 }
 @-moz-keyframes words1{
     1%{opacity:0;}
     5%{opacity:1;}
-    /* 30%{opacity:1;}
-    35%{opacity:1;}
-    60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
     100%{opacity:1;}
 }
 @keyframes words1{
     1%{opacity:0;}
     5%{opacity:1;}
-    /* 30%{opacity:1;}
-    35%{opacity:1;}
-    60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
     100%{opacity:1;}
 }
 .slide10words1{
@@ -1453,42 +1431,26 @@ from{transform:rotateZ(-4deg);}
 }
 @-webkit-keyframes words2{
     1%{opacity:0;}
-    /* 5%{opacity:0;} */
     30%{opacity:0;}
     35%{opacity:1;}
-    /* 60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
     100%{opacity:1;}
 }
 @-o-keyframes words2{
     1%{opacity:0;}
-    /* 5%{opacity:0;} */
     30%{opacity:0;}
     35%{opacity:1;}
-    /* 60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
     100%{opacity:1;}
 }
 @-moz-keyframes words2{
     1%{opacity:0;}
-    /* 5%{opacity:0;} */
     30%{opacity:0;}
     35%{opacity:1;}
-    /* 60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
     100%{opacity:1;}
 }
 @keyframes words2{
     1%{opacity:0;}
-    /* 5%{opacity:0;} */
     30%{opacity:0;}
     35%{opacity:1;}
-    /* 60%{opacity:1;}
-    65%{opacity:1;}
-    90%{opacity:1;} */
     100%{opacity:1;}
 }
 .slide10words2{
@@ -1505,42 +1467,26 @@ from{transform:rotateZ(-4deg);}
 }
 @-webkit-keyframes words3{
     1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;} */
     60%{opacity:0;}
     65%{opacity:1;}
-    /* 90%{opacity:1;} */
     100%{opacity:1;}
 }
 @-o-keyframes words3{
     1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;} */
     60%{opacity:0;}
     65%{opacity:1;}
-    /* 90%{opacity:1;} */
     100%{opacity:1;}
 }
 @-moz-keyframes words3{
     1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;} */
     60%{opacity:0;}
     65%{opacity:1;}
-    /* 90%{opacity:1;} */
     100%{opacity:1;}
 }
 @keyframes words3{
     1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;} */
     60%{opacity:0;}
     65%{opacity:1;}
-    /* 90%{opacity:1;} */
     100%{opacity:1;}
 }
 .slide10words3{
@@ -1557,44 +1503,24 @@ from{transform:rotateZ(-4deg);}
 }
 @-webkit-keyframes words4{
     1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;}
-    60%{opacity:0;}
-    65%{opacity:0;} */
     90%{opacity:0;}
     95%{opacity:1;}
     100%{opacity:1;}
 }
 @-o-keyframes words4{
     1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;}
-    60%{opacity:0;}
-    65%{opacity:0;} */
     90%{opacity:0;}
     95%{opacity:1;}
     100%{opacity:1;}
 }
 @-moz-keyframes words4{
     1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;}
-    60%{opacity:0;}
-    65%{opacity:0;} */
     90%{opacity:0;}
     95%{opacity:1;}
     100%{opacity:1;}
 }
 @keyframes words4{
     1%{opacity:0;}
-    /* 5%{opacity:0;}
-    30%{opacity:0;}
-    35%{opacity:0;}
-    60%{opacity:0;}
-    65%{opacity:0;} */
     90%{opacity:0;}
     95%{opacity:1;}
     100%{opacity:1;}
@@ -1683,42 +1609,45 @@ from{transform:rotateZ(-4deg);}
     line-height:2.45rem;
 }
 .testResult1Header{
-    background:url(../images/testResult1T.png) repeat-x left bottom #f39800;
-    background-size:0.6rem 0.325rem;
+    background:url(../images/testResult1T.png) repeat-x;
+    background-size:0.6rem 2.45rem;
 }
 .testResult2Header{
-    background:url(../images/testResult2T.png) repeat-x left bottom #24b4ca;
-    background-size:0.6rem 0.325rem;
+    background:url(../images/testResult2T.png) repeat-x;
+    background-size:0.6rem 2.45rem;
 }
 .testResult3Header{
-    background:url(../images/testResult3T.png) repeat-x left bottom #e17aad;
-    background-size:0.6rem 0.325rem;
+    background:url(../images/testResult3T.png) repeat-x;
+    background-size:0.6rem 2.45rem;
 }
 .testResult4Header{
-    background:url(../images/testResult4T.png) repeat-x left bottom #3db363;
-    background-size:0.6rem 0.325rem;
+    background:url(../images/testResult4T.png) repeat-x;
+    background-size:0.6rem 2.45rem;
 }
 .testResult1btn,.testResult2btn,.testResult3btn,.testResult4btn{
     width:100%;
-    height:4rem;
+    height:3.95rem;
     position:absolute; 
     bottom:0;
-    line-height:4rem;
+    line-height:3.95rem;
     text-align:center;
-    background:url(../images/testResult1B.png) repeat-x left -1px #f39800;
-    background-size:0.6rem 0.325rem;
+    background:url(../images/testResult1B.png) repeat-x;
+    background-size:0.6rem 3.95rem;
+}
+.testResult1btn a:active,.testResult2btn a:active,.testResult3btn a:active,.testResult4btn a:active{
+    opacity:0.8;
 }
 .testResult2btn{
-    background:url(../images/testResult2B.png) repeat-x left -1px #24b4ca;
-    background-size:0.6rem 0.325rem;
+    background:url(../images/testResult2B.png) repeat-x;
+    background-size:0.6rem 3.95rem;
 }
 .testResult3btn{
-    background:url(../images/testResult3B.png) repeat-x left -1px #e17aad;
-    background-size:0.6rem 0.325rem;
+    background:url(../images/testResult3B.png) repeat-x;
+    background-size:0.6rem 3.95rem; 
 }
 .testResult4btn{
-    background:url(../images/testResult4B.png) repeat-x left -1px #3db363;
-    background-size:0.6rem 0.325rem;
+    background:url(../images/testResult4B.png) repeat-x;
+    background-size:0.6rem 3.95rem;
 }
 .testResultzc,.testResultfx{
     width:7.7rem;
