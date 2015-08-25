@@ -506,6 +506,10 @@
         $(".span-cancel").click(function(){
             $(".hotel-bed-op").fadeOut("fast");
         });
+        $(".choice-bed").click(function(){
+            $(this).find("input[type='radio']").prop("checked", "checked");
+        })
+
     });
 </script>
 </body>

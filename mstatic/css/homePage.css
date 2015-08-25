@@ -128,6 +128,14 @@
 .navWrap-ticket, .navWrap-hotel, .navWrap-cost, .navWrap-inst{
     margin-top:0.5rem;
 }
+.navWrap-val{
+    padding:0 0.5rem;
+    font-size: 0.7rem;
+    line-height:1.3rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-bottom: 0.5rem;
+}
 .hotel-til{
     font-size: 0.75rem;
     color:#333;
@@ -236,6 +244,9 @@
     position: relative;
     font-size: 0.6rem;
     margin:0.6rem 0;
+}
+.hotel-room ul li p{
+    min-height:1rem;
 }
 .room-type{
     display: inline-block;
@@ -395,13 +406,6 @@
 .cost-til{
     padding:0.5rem;
     color:#3fc0ae;
-}
-.navWrap-cost p, .navWrap-inst p{
-    padding:0 0.5rem;
-    font-size: 0.7rem;
-    line-height:1.3rem;
-    word-wrap: break-word;
-    word-break: break-all;
 }
 
 .path-til{
