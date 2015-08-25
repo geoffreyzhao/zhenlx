@@ -257,6 +257,9 @@ input[type="checkbox"] + span {
 .header .menu-list-container .menu-list li:last-child {
 	border-bottom: none;
 }
+.header .menu-list-container .menu-list li a {
+	position: relative;
+}
 .footer {
 	position: absolute;
 	z-index: 2;
@@ -326,6 +329,18 @@ input[type="checkbox"] + span {
 }
 .navlist li a{
 	color:#3fc0ae;
+}
+
+.has-notice-icon:after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: -0.3rem;
+	top: -0.2rem;
+	width: 0.25rem;
+	height: 0.25rem;
+	border-radius: 0.25rem;
+	background-color: #ffa200;
 }
 
 /*  列表弹窗样式  */

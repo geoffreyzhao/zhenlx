@@ -350,6 +350,14 @@
     line-height:1.8rem;
     color:#484848;
     font-weight: bold;
+    position: relative;
+}
+.plane-stop em {
+    position: absolute;
+    top: -0.5rem;
+    right: 0.4rem;
+    color: #FE7800;
+    font-size: 0.6rem;
 }
 .plane-add{
     font-size: 0.6rem;
@@ -438,12 +446,17 @@
     padding-left:0.25rem;
     padding-right:0.4rem;
 }
+.nav-fixed-placeholder {
+    height: 2.5rem;
+    width: 100%;
+}
 .navbar{
     padding:0.6rem 0.4rem;
     border-bottom: 1px #dcdcdc solid;
     -webkit-box-shadow: 0 2px 2px #ebebeb;
     -moz-box-shadow: 0 2px 2px #ebebeb;
     box-shadow: 0 2px 2px #ebebeb;
+    position: relative;
 }
 .navbarFix{
     position: fixed;

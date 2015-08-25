@@ -133,6 +133,7 @@
             </ul>
         </div>
         <div class="prd-space"></div>
+        <div class="nav-fixed-placeholder"></div>
         <nav class="navbar clearfix">
             <ul id="navMenu">
                 <li class="link-active">推荐行程</li><li>机票</li><li>酒店</li><li>费用说明</li><li>预订须知</li>
@@ -245,7 +246,7 @@
                             </div>
                             <div class="ui-block-c">
                                 <p class="flt-start">金边</p>
-                                <p class="plane-stop">12:45</p>
+                                <p class="plane-stop">12:45<em>+1天</em></p>
                                 <p class="plane-add">金边国际机场</p>
                                 <p class="plane-num">波音/7/</p>
                             </div>
@@ -338,10 +339,10 @@
                 <div class="hotel-model">酒店星级：<span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span><span class="yellow-star"></span></div>
                 <div class="swiper-container" id="swiper-container01">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/slide-img01.jpg"></div>
-                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot01.png"></div>
-                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot02.png"></div>
-                        <div class="swiper-slide"><img class="slide-img" src="../../mstatic/images/spot03.png"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="http://192.168.161.121:8980/ztravel-common-mediaserver/imageservice?mediaImageId=55d46953e4b01297be79130e"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="http://192.168.161.121:8980/ztravel-common-mediaserver/imageservice?mediaImageId=55d46956e4b01297be79130f"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="http://192.168.161.121:8980/ztravel-common-mediaserver/imageservice?mediaImageId=55d46958e4b01297be791310"></div>
+                        <div class="swiper-slide"><img class="slide-img" src="http://192.168.161.121:8980/ztravel-common-mediaserver/imageservice?mediaImageId=55d4695ae4b01297be791311"></div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -679,10 +680,12 @@
         FastClick.attach(document.body);
 
         $(window).scroll(function(){
-            if($(this).scrollTop() >= 800){
+            if($(this).scrollTop() >= $(".nav-content").offset().top - $(".headerBar").outerHeight() - $(".narbar").outerHeight()){
                 $(".navbar").addClass("navbarFix");
+                $(".nav-fixed-placeholder").show();
             }else{
                 $(".navbar").removeClass("navbarFix");
+                $(".nav-fixed-placeholder").hide();
             }
         });
 
