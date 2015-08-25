@@ -36,6 +36,12 @@
 			},
 			onTransitionEnd: function(swiper){
 				swiperAnimate(swiper);
+				if (swiper.activeIndex == 8 || swiper.activeIndex == 10) {
+				$(".slide10words1").removeClass("active");
+				$(".slide10words2").removeClass("active");
+				$(".slide10words3").removeClass("active");
+				$(".slide10words4").removeClass("active");
+			}
 			},
 			watchSlidesProgress: true,
 			onProgress: function(swiper){
@@ -57,6 +63,12 @@
 				}
 			},
 			onTransitionStart: function(swiper) {
+				if (swiper.activeIndex == 9) {
+				$(".slide10words1").addClass("active");
+				$(".slide10words2").addClass("active");
+				$(".slide10words3").addClass("active");
+				$(".slide10words4").addClass("active");
+			}
 			}
 		}); 
 
@@ -165,7 +177,7 @@
 	    		<div class="slide1-container2">
 			    	<img class="slide1bg" src="images/slide1bg.png" alt="">
 			    	<a class="slide1btn" alt="">
-			    	<img class="slide1clickme ani" src="images/slide1clickme.png" swiper-animate-effect="tada" swiper-animate-duration="3s" swiper-animate-delay="0.5s"></a>
+			    	<img class="slide1clickme ani infinite" src="images/slide1clickme.png" swiper-animate-effect="tada" swiper-animate-duration="3s" swiper-animate-delay="0.5s"></a>
 	    		</div>
 	    	</div>
 	    	<div class="swiper-slide slide2">
@@ -178,9 +190,10 @@
 			    	<img class="slide2person1" src="images/slide2person1.png" alt="">
 			    	<img class="slide2-legleft" src="images/slide2-legleft.png" alt="">
 			    	<img class="slide2-legright" src="images/slide2-legright.png" alt="">
-			    	<img class="slide2-light ani" src="images/slide2-light.png" alt="" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+			    	<img class="slide2-light" src="images/slide2-light.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">1/10</div>
 			    	<div class="test">
 			    		<a data-seletype="m"><img class="test1a" src="images/slide2-test1-a.png" alt=""></a>
 			    		<a data-seletype="l"><img class="test1b" src="images/slide2-test1-b.png" alt=""></a>
@@ -201,6 +214,7 @@
 			    	<img class="slide3-starright" src="images/slide3-starright.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">2/10</div>
 			    	<div class="test">
 			    		<a data-seletype="m"><img class="test2a" src="images/slide3-test2-a.png" alt=""></a>
 			    		<a data-seletype="l"><img class="test2b" src="images/slide3-test2-b.png" alt=""></a>
@@ -220,6 +234,7 @@
 			    	<img class="slide4-snore" src="images/slide4-snore.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">3/10</div>
 			    	<div class="test">
 			    		<a data-seletype="l"><img class="test3a" src="images/slide4-test3-a.png" alt=""></a>
 			    		<a data-seletype="m"><img class="test3b" src="images/slide4-test3-b.png" alt=""></a>
@@ -240,6 +255,7 @@
 			    	<img class="slide5hand" src="images/slide5hand.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">4/10</div>
 			    	<div class="test">
 			    		<a data-seletype="f"><img class="test4a" src="images/slide5-test4-a.png" alt=""></a>
 			    		<a data-seletype="l"><img class="test4b" src="images/slide5-test4-b.png" alt=""></a>
@@ -261,6 +277,7 @@
 			    	<img class="slide6words2 ani infinite" src="images/slide6words2.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">5/10</div>
 			    	<div class="test">
 			    		<a data-seletype="w"><img class="test5a" src="images/slide6-test5-a.png" alt=""></a>
 			    		<a data-seletype="m"><img class="test5b" src="images/slide6-test5-b.png" alt=""></a>
@@ -280,9 +297,10 @@
 			    	<img class="slide7sweat1" src="images/slide7sweat1.png" alt="">
 			    	<img class="slide7sweat2" src="images/slide7sweat2.png" alt="">
 			    	<img class="slide7sweat3" src="images/slide7sweat3.png" alt="">
-			    	<img class="slide7words ani" src="images/slide7words.png" alt="" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.3s" swiper-animate-delay="0.3s">
+			    	<img class="slide7words" src="images/slide7words.png">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">6/10</div>
 			    	<div class="test">
 			    		<a data-seletype="m"><img class="test6a" src="images/slide7-test6-a.png" alt=""></a>
 			    		<a data-seletype="f"><img class="test6b" src="images/slide7-test6-b.png" alt=""></a>
@@ -302,6 +320,7 @@
 			    	<img class="slide8leg-cat" src="images/slide8leg-cat.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">7/10</div>
 			    	<div class="test">
 			    		<a data-seletype="f"><img class="test7a" src="images/slide8-test7-a.png" alt=""></a>
 			    		<a data-seletype="w"><img class="test7b" src="images/slide8-test7-b.png" alt=""></a>
@@ -322,6 +341,7 @@
 			    	<img class="slide9anger ani" src="images/slide9anger.png" alt="" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">8/10</div>
 			    	<div class="test">
 			    		<a data-seletype="l"><img class="test8a" src="images/slide9-test8-a.png" alt=""></a>
 			    		<a data-seletype="f"><img class="test8b" src="images/slide9-test8-b.png" alt=""></a>
@@ -344,6 +364,7 @@
 			    	<img class="slide10words4" src="images/slide10words4.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">9/10</div>
 			    	<div class="test">
 			    		<a data-seletype="l"><img class="test9a" src="images/slide10-test9-a.png" alt=""></a>
 			    		<a data-seletype="m"><img class="test9b" src="images/slide10-test9-b.png" alt=""></a>
@@ -360,9 +381,10 @@
 	    		</div>
 	    		<div class="slide11-containter1">
 			    	<img class="slide11person1" src="images/slide11person1.png" alt="">
-			    	<img class="slide11questionmark ani" src="images/slide11questionmark.png" alt=""  swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+			    	<img class="slide11questionmark" src="images/slide11questionmark.png" alt="">
 	    		</div>
 	    		<div class="slide-test">
+	    			<div class="pagenum">10/10</div>
 			    	<div class="test final">
 			    		<a data-seletype="m"><img class="test10a" src="images/slide11-test10-a.png" alt=""></a>
 			    		<a data-seletype="f"><img class="test10b" src="images/slide11-test10-b.png" alt=""></a>

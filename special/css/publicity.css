@@ -532,8 +532,11 @@ div:focus{
     -ms-tap-highlight-color:rgba(0,0,0,0);
 }
 .musicbtnChange{
-    right: 4%;
-    top: 15%;
+    width:1.5rem;
+    height:1.5rem;
+    right:25px;
+    top: inherit;
+    bottom:15.8rem;
     background:url(../images/music_play.png) no-repeat;
     background-size:cover;
 }
@@ -765,7 +768,7 @@ div:focus{
     float:right;
 }
 .slide2-containter1,.slide2person1{
-    width:16.175rem;
+    width:15.875rem;
     height:15.175rem;
 }
 .slide2-containter1,.slide3-containter1,.slide4-containter1,.slide5-containter1,
@@ -812,7 +815,7 @@ from{transform:rotateZ(-5deg);}
     height:1.6rem;
     position:absolute;
     bottom:2.5rem;
-    right:6.5rem;
+    right:6.2rem;
     -webkit-animation: legrotate 0.25s linear 0s infinite alternate;
        -moz-animation: legrotate 0.25s linear 0s infinite alternate;
         -ms-animation: legrotate 0.25s linear 0s infinite alternate;
@@ -828,8 +831,8 @@ from{transform:rotateZ(-5deg);}
     width:0.65rem;
     height:1.85rem;
     position:absolute;
-    right:3.15rem;
-    bottom:2.3rem;
+    right: 2.8rem;
+    bottom: 2.4rem;
     -webkit-animation: legrotate 0.25s linear 0.25s infinite alternate;
        -moz-animation: legrotate 0.25s linear 0.25s infinite alternate;
         -ms-animation: legrotate 0.25s linear 0.25s infinite alternate;
@@ -841,12 +844,33 @@ from{transform:rotateZ(-5deg);}
          -o-transform-origin:left top;
             transform-origin:left top;
 }
+@-webkit-keyframes light {
+    from {-webkit-transform: scale(0.8,0.8);}
+    to {-webkit-transform: scale(1,1);}
+}
+@-o-keyframes light {
+    from {-o-transform: scale(0.8,0.8);}
+    to {-o-transform: scale(1,1);}
+}
+@-moz-keyframes light {
+    from {-moz-transform: scale(0.8,0.8);}
+    to {-moz-transform: scale(1,1);}
+}
+@keyframes light {
+    from {transform: scale(0.8,0.8);}
+    to {transform: scale(1,1);}
+}
 .slide2-light{
     width:1.5rem;
     height:1.575rem;
     position:absolute;
-    right: 1.9rem;
+    right: 1.6rem;
     top:2.95rem;
+    -webkit-animation:light 0.5s linear 0.25s infinite alternate;
+       -moz-animation:light 0.5s linear 0.25s infinite alternate;
+        -ms-animation:light 0.5s linear 0.25s infinite alternate;
+         -o-animation:light 0.5s linear 0.25s infinite alternate;
+            animation:light 0.5s linear 0.25s infinite alternate;
 }
 .slide-test{
     width:100%;
@@ -855,6 +879,13 @@ from{transform:rotateZ(-5deg);}
     bottom:0;
     left:0;
     box-sizing: border-box;
+}
+.pagenum{
+    position:absolute;
+    right:14px;
+    top:-1.2rem;
+    color:#1caead;
+    font-size:1rem;
 }
 .test a{
     display: inline-block;
@@ -903,7 +934,7 @@ img:focus{
     height:1.675rem;
 }
 .slide3-containter1,.slide3person1{
-    width:14.975rem;
+    width:13.5rem;
     height:15.15rem;
 }
 @-webkit-keyframes twitle {
@@ -942,7 +973,7 @@ img:focus{
     width:1.025rem;
     height:1.475rem;
     position:absolute;
-    right:3.15rem;
+    right:1.2rem;
     top:3.8rem;
     -webkit-animation: twitle 1.2s linear 0.3s infinite alternate;
        -moz-animation: twitle 1.2s linear 0.3s infinite alternate;
@@ -967,7 +998,7 @@ img:focus{
     height:1.675rem;
 }
 .slide4-containter1,.slide4person1{
-    width:14.9rem;
+    width:14.05rem;
     height:15.175rem;
 }
 @-webkit-keyframes snore {
@@ -1032,7 +1063,7 @@ img:focus{
     height:9.575rem;
     position:absolute;
     top:2.5rem;
-    left:-1rem;
+    left:-0.5rem;
 }
 .slide5hand{
     width:1.6rem;
@@ -1112,7 +1143,7 @@ img:focus{
     height:2.25rem;
 }
 .slide7-containter1,.slide7person1{
-    width:15.55rem;
+    width:14.25rem;
     height:15.125rem;
 }
 @-webkit-keyframes sweat1{
@@ -1159,13 +1190,13 @@ img:focus{
     width:1.475rem;
     height:0.525rem;
     position:absolute;
-    right:3.45rem;
+    right:2.1rem;
     bottom:5.2rem;
-    -webkit-animation: sweat1 3s linear 0s infinite;
-       -moz-animation: sweat1 3s linear 0s infinite;
-        -ms-animation: sweat1 3s linear 0s infinite;
-         -o-animation: sweat1 3s linear 0s infinite;
-            animation: sweat1 3s linear 0s infinite;
+    -webkit-animation: sweat1 2s linear 0s infinite;
+       -moz-animation: sweat1 2s linear 0s infinite;
+        -ms-animation: sweat1 2s linear 0s infinite;
+         -o-animation: sweat1 2s linear 0s infinite;
+            animation: sweat1 2s linear 0s infinite;
 }
 @-webkit-keyframes sweat2{
     1%{opacity:0;}
@@ -1211,13 +1242,13 @@ img:focus{
     width:0.9rem;
     height:0.5rem;
     position:absolute;
-    right:3.75rem;
+    right:2.4rem;
     bottom:4.8rem;
-    -webkit-animation: sweat2 3s linear 0s infinite;
-       -moz-animation: sweat2 3s linear 0s infinite;
-        -ms-animation: sweat2 3s linear 0s infinite;
-         -o-animation: sweat2 3s linear 0s infinite;
-            animation: sweat2 3s linear 0s infinite;
+    -webkit-animation: sweat2 2s linear 0s infinite;
+       -moz-animation: sweat2 2s linear 0s infinite;
+        -ms-animation: sweat2 2s linear 0s infinite;
+         -o-animation: sweat2 2s linear 0s infinite;
+            animation: sweat2 2s linear 0s infinite;
 }
 @-webkit-keyframes sweat3{
     1%{opacity:0;}
@@ -1263,20 +1294,41 @@ img:focus{
     width:0.3rem;
     height:0.475rem;
     position:absolute;
-    right:4.05rem;
+    right:2.7rem;
     bottom:4.2rem;
-    -webkit-animation: sweat3 3s linear 0s infinite;
-       -moz-animation: sweat3 3s linear 0s infinite;
-        -ms-animation: sweat3 3s linear 0s infinite;
-         -o-animation: sweat3 3s linear 0s infinite;
-            animation: sweat3 3s linear 0s infinite;
+    -webkit-animation: sweat3 2s linear 0s infinite;
+       -moz-animation: sweat3 2s linear 0s infinite;
+        -ms-animation: sweat3 2s linear 0s infinite;
+         -o-animation: sweat3 2s linear 0s infinite;
+            animation: sweat3 2s linear 0s infinite;
+}
+@-webkit-keyframes slide7words {
+    from {-webkit-transform: scale(0.9,0.9);}
+    to {-webkit-transform: scale(1,1);}
+}
+@-o-keyframes slide7words {
+    from {-o-transform: scale(0.9,0.9);}
+    to {-o-transform: scale(1,1);}
+}
+@-moz-keyframes slide7words {
+    from {-moz-transform: scale(0.9,0.9);}
+    to {-moz-transform: scale(1,1);}
+}
+@keyframes slide7words {
+    from {transform: scale(0.9,0.9);}
+    to {transform: scale(1,1);}
 }
 .slide7words{
     width:5.525rem;
     height:3.35rem;
     position:absolute;
     top: 4.5rem;
-    right: 1.05rem;
+    right:-0.3rem;
+    -webkit-animation:slide7words 0.5s linear 0.25s infinite alternate;
+       -moz-animation:slide7words 0.5s linear 0.25s infinite alternate;
+        -ms-animation:slide7words 0.5s linear 0.25s infinite alternate;
+         -o-animation:slide7words 0.5s linear 0.25s infinite alternate;
+            animation:slide7words 0.5s linear 0.25s infinite alternate;
 }
 .test6a{
     width:11.35rem;
@@ -1295,7 +1347,7 @@ img:focus{
     height:1.675rem;
 }
 .slide8-containter1,.slide8person1{
-    width:16.225rem;
+    width:15.925rem;
     height:15.15rem;
 }
 @-webkit-keyframes leg-catrotate {
@@ -1396,7 +1448,7 @@ from{transform:rotateZ(-4deg);}
     height:1.675rem;
 }
 .slide10-containter1,.slide10person1{
-    width:16.1rem;
+    width:15.1rem;
     height:17.425rem;
 }
 @-webkit-keyframes words1{
@@ -1425,11 +1477,13 @@ from{transform:rotateZ(-4deg);}
     position:absolute;
     bottom:3.55rem;
     left:5.4rem;
-    -webkit-animation: words1 4s linear 0s infinite;
-       -moz-animation: words1 4s linear 0s infinite;
-        -ms-animation: words1 4s linear 0s infinite;
-         -o-animation: words1 4s linear 0s infinite;
-            animation: words1 4s linear 0s infinite;
+}
+.slide10words1.active{
+    -webkit-animation: words1 2.4s linear 0.3s infinite;
+       -moz-animation: words1 2.4s linear 0.3s infinite;
+        -ms-animation: words1 2.4s linear 0.3s infinite;
+         -o-animation: words1 2.4s linear 0.3s infinite;
+            animation: words1 2.4s linear 0.3s infinite;
 }
 @-webkit-keyframes words2{
     1%{opacity:0;}
@@ -1461,11 +1515,13 @@ from{transform:rotateZ(-4deg);}
     position:absolute;
     bottom:3.55rem;
     left:6.65rem;
-    -webkit-animation: words2 4s linear 0s infinite;
-       -moz-animation: words2 4s linear 0s infinite;
-        -ms-animation: words2 4s linear 0s infinite;
-         -o-animation: words2 4s linear 0s infinite;
-            animation: words2 4s linear 0s infinite;
+}
+.slide10words2.active{
+    -webkit-animation: words2 2.4s linear 0.3s infinite;
+       -moz-animation: words2 2.4s linear 0.3s infinite;
+        -ms-animation: words2 2.4s linear 0.3s infinite;
+         -o-animation: words2 2.4s linear 0.3s infinite;
+            animation: words2 2.4s linear 0.3s infinite;
 }
 @-webkit-keyframes words3{
     1%{opacity:0;}
@@ -1497,11 +1553,13 @@ from{transform:rotateZ(-4deg);}
     position:absolute;
     bottom:3.6rem;
     left:7.95rem;
-    -webkit-animation: words3 4s linear 0s infinite;
-       -moz-animation: words3 4s linear 0s infinite;
-        -ms-animation: words3 4s linear 0s infinite;
-         -o-animation: words3 4s linear 0s infinite;
-            animation: words3 4s linear 0s infinite;
+}
+.slide10words3.active{
+    -webkit-animation: words3 2.4s linear 0.3s infinite;
+       -moz-animation: words3 2.4s linear 0.3s infinite;
+        -ms-animation: words3 2.4s linear 0.3s infinite;
+         -o-animation: words3 2.4s linear 0.3s infinite;
+            animation: words3 2.4s linear 0.3s infinite;
 }
 @-webkit-keyframes words4{
     1%{opacity:0;}
@@ -1533,11 +1591,13 @@ from{transform:rotateZ(-4deg);}
     position:absolute;
     bottom:3.55rem;
     left:9.15rem;
-    -webkit-animation: words4 4s linear 0s infinite;
-       -moz-animation: words4 4s linear 0s infinite;
-        -ms-animation: words4 4s linear 0s infinite;
-         -o-animation: words4 4s linear 0s infinite;
-            animation: words4 4s linear 0s infinite;
+}
+.slide10words4.active{
+    -webkit-animation: words4 2.4s linear 0.3s infinite;
+       -moz-animation: words4 2.4s linear 0.3s infinite;
+        -ms-animation: words4 2.4s linear 0.3s infinite;
+         -o-animation: words4 2.4s linear 0.3s infinite;
+            animation: words4 2.4s linear 0.3s infinite;
 }
 .test9a{
     width:13.85rem;
@@ -1559,12 +1619,33 @@ from{transform:rotateZ(-4deg);}
     width:16.45rem;
     height:15.125rem;
 }
+@-webkit-keyframes questionmark {
+    from {-webkit-transform: scale(0.8,0.8);}
+    to {-webkit-transform: scale(1,1);}
+}
+@-o-keyframes questionmark {
+    from {-o-transform: scale(0.8,0.8);}
+    to {-o-transform: scale(1,1);}
+}
+@-moz-keyframes questionmark {
+    from {-moz-transform: scale(0.8,0.8);}
+    to {-moz-transform: scale(1,1);}
+}
+@keyframes questionmark {
+    from {transform: scale(0.8,0.8);}
+    to {transform: scale(1,1);}
+}
 .slide11questionmark{
     width:1.675rem;
     height:2.125rem;
     position:absolute;
     top:6.25rem;
     right:1.2rem;
+    -webkit-animation: questionmark 1s linear 0s infinite alternate;
+       -moz-animation: questionmark 1s linear 0s infinite alternate;
+        -ms-animation: questionmark 1s linear 0s infinite alternate;
+         -o-animation: questionmark 1s linear 0s infinite alternate;
+            animation: questionmark 1s linear 0s infinite alternate;
 }
 .test10a{
     width:10.325rem;
