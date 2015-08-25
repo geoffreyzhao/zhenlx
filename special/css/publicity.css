@@ -534,6 +534,8 @@ div:focus{
 .musicbtnChange{
     right: 4%;
     top: 15%;
+    background:url(../images/music_play.png) no-repeat;
+    background-size:cover;
 }
 .loadingPage{
     width:100%;
@@ -741,7 +743,7 @@ div:focus{
 .slide-containerHeader{
     width:100%;
     height:2.175rem;
-    border:0;
+    border:none!important;
     outline:none;
     background:url(../images/triangle.png) repeat-x;
     background-size:0.65rem 2.175rem;
