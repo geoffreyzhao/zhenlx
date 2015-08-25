@@ -136,7 +136,7 @@
 }
 .orderStatus li{
     float: left;
-    margin-left: 90px;
+    margin-left: 80px;
     cursor: pointer;
     position: relative;
 }
