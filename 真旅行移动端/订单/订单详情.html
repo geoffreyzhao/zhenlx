@@ -344,19 +344,24 @@
                         <p class="order-hotel-name">豪华观景房</p>
                     </div>
                 </div>
-                <div class="hotel-bed">偏好的酒店床型：</div>
-                <div class="ui-grid-a">
-                    <div class="ui-block-a hotel-radbed">
-                        <label>
-                            <input type="radio" name="bed" value="bigbed" data-role="none" checked>
-                            <span>优选大床房</span>
-                        </label>
-                    </div>
-                    <div class="ui-block-b hotel-radbed">
-                        <label>
-                            <input type="radio" name="bed" value="couplebed" data-role="none">
-                            <span>优选双床房</span>
-                        </label>
+                <div class="hotel-bed">偏好的酒店床型：<label class="hotel-bed-type"><span id="bed-type">优选大床房</span><span class="edt-icon"></span></label></div>
+                <div class="hotel-bed-op">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <label class="choice-bed">
+                                <input type="radio" name="bed" value="bigbed" data-role="none" checked>
+                                <span>优选大床房</span>
+                            </label>
+                        </div>
+                        <div class="ui-block-b">
+                            <label class="choice-bed">
+                                <input type="radio" name="bed" value="couplebed" data-role="none">
+                                <span>优选双床房</span>
+                            </label>
+                        </div>
+                        <div class="ui-block-c">
+                            <span class="span-confirm">确定</span><span class="span-cancel">取消</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -486,6 +491,20 @@
                 btn.slideUp("fast");
             }
             $(this).find(".menu-pop-container").toggle();
+        });
+
+        $(".hotel-bed-type").click(function(){
+            if($(".hotel-bed-op").is(":hidden")){
+                $(".hotel-bed-op").fadeIn("fast");
+            }
+        });
+        $(".span-confirm").click(function(){
+            var bedType = $(".choice-bed input[type='radio']:checked").next().text();
+            $("#bed-type").text(bedType);
+            $(".hotel-bed-op").fadeOut("fast");
+        });
+        $(".span-cancel").click(function(){
+            $(".hotel-bed-op").fadeOut("fast");
         });
     });
 </script>

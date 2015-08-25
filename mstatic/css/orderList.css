@@ -228,6 +228,7 @@
     height:1.075rem;
     vertical-align: middle;
 }
+
 .menu-img{
     width:1.1rem;
     height:0.825rem;
@@ -870,18 +871,46 @@
     color:#3fc0ae;
 }
 .hotel-bed{
-    padding:1rem 0;
+    height:2rem;
+    padding-top:0.5rem;
     background-color:#fff;
     font-size: 0.8rem;
     color:#333;
 }
-.hotel-radbed{
-    padding-bottom: 0.8rem;
+.hotel-bed-type{
+    padding-left:1rem;
+}
+.hotel-bed-op{
+    display: none;
+}
+.hotel-bed-op > .ui-grid-b{
+    height:2rem;
     font-size: 0.6rem;
     color:#666;
+    border-bottom: 0;
 }
-.hotel-radbed label{
-    margin-right: 0.2rem;
+.hotel-bed-op > .ui-grid-b > .ui-block-a{
+    width:38%;
+}
+.hotel-bed-op > .ui-grid-b > .ui-block-b{
+    width:38%;
+}
+.hotel-bed-op > .ui-grid-b > .ui-block-c{
+    width:24%;
+    padding-top:0.2rem;
+}
+.span-confirm{
+    padding:0 0.2rem;
+    color:#3fc0ae;
+    margin-right:0.3rem;
+    vertical-align: middle;
+}
+.span-cancel{
+    padding:0 0.2rem;
+    vertical-align: middle;
+}
+.span-confirm:active, .span-cancel:active{
+    background-color:#f7f7f7;
 }
 .row-box{
     padding:0.5rem;

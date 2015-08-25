@@ -366,7 +366,7 @@
     color: #ccc;
 }
 .input-txt{
-    width:3rem;
+    width:3.5rem;
     display: inline-block;
     vertical-align: middle;
     padding-top:0.3rem;
@@ -472,7 +472,7 @@
     width:9rem;
     color:#333;
     padding:0.75rem 0;
-    vertical-align: middle;
+    vertical-align: top;
     display: inline-block;
 }
 .revise-val input[type="text"]{

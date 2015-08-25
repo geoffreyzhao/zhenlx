@@ -441,7 +441,6 @@ input[type="radio"]:checked + .pay-check{
     background-color:#c2ecf3;
     padding:0.5rem;
     text-align: center;
-
 }
 .warn-info a{
     font-size: 0.6rem;

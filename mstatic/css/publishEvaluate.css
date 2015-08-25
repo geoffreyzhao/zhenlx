@@ -31,6 +31,15 @@
 	border-bottom:1px solid #dcdcdc;
 	margin-bottom:1.6rem;
 }
+.submit-tip{
+	height:1.75rem;
+	background-color:#c2ecf3;
+	padding:0.5rem;
+	text-align: center;
+	font-size: 0.6rem;
+	line-height: 0.75rem;
+	color: #3FC0AE !important;
+}
 .evaluateStars{
 	font-size:0.75rem;
 	color:#333333;
