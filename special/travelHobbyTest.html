@@ -101,7 +101,7 @@
 	$('.final a').click(function(){
 		$(this).addClass('testpressbg').siblings().removeClass('testpressbg');
 		$('.swiper-container').hide();
-		audio.pause();
+		musicpause();
 		for(var i=0;i<10;i++){
 			score+=selectScore[i];
 		}
@@ -128,6 +128,13 @@
 		$('.shareResult').show();
 		$('.shareResult>div').eq(resultnum).show();
 	});
+
+	function musicpause(){
+		if(!$('.swiper-container').is(':visible')){
+			$('.musicbtn').hide();
+			audio.pause();
+		}
+	}
 }
 	</script>
 </head>
