@@ -74,8 +74,11 @@
     border-bottom: 1px #dcdcdc solid;
 }
 .account-img{
-    width:3.75rem;
-    padding:0.875rem 1rem 0.875rem 0;
+    /*width:3.75rem;*/
+    /*padding:0.875rem 1rem 0.875rem 0;*/
+    width: 3.9rem;
+    height: 3.9rem;
+    border-radius: 3.9rem;
     display: inline-block;
 
 }
@@ -377,9 +380,12 @@
     display: inline-block;
 }
 .edt-popimg{
-    width:2.85rem;
+    /*width:2.85rem;
     height:3.35rem;
-    padding:0.5rem 0.25rem;
+    padding:0.5rem 0.25rem;*/
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
     display: inline-block;
     vertical-align: middle;
 }
