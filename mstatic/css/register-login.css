@@ -193,13 +193,18 @@
 .cont-block .input-box {
 	position: relative;
 }
-.cont-block input[type="tel"],
-.cont-block input[type="text"],
-.cont-block input[type="password"] {
+.cont-block input[type="text"]{
 	background: transparent;
 	font-size: 0.75rem;
 	padding-left: 0.7rem;
 	width: 8rem;
+}
+.cont-block input[type="tel"],
+.cont-block input[type="password"] {
+	background: transparent;
+	font-size: 0.75rem;
+	padding-left: 0.7rem;
+	width: 13rem;
 }
 .checkCodeBtn{
 	width:6rem;
@@ -258,9 +263,19 @@
 .pop-img{
     width:4.6rem;
     height:4.6rem;
+	background:#eeeeee url("../../mstatic/images/acut-img.png") no-repeat center;
+	font-size: 0.6rem;
+	line-height:4rem;
+	color:#999;
+	text-align: center;
+	border:1px #e1e1e1 solid;
+	-webkit-border-radius: 2.3rem;
+	-moz-border-radius: 2.3rem;
+	border-radius: 2.3rem;
+	display: inline-block;
 }
 .wrap-row{
-    padding:0 1rem;
+    padding:0 0.8rem;
     margin-bottom: 1.2rem;
 }
 .row-img{
@@ -279,7 +294,9 @@
     display: inline-block;
 }
 .row-box input{
+	width:10rem;
     color:#333;
+	overflow: hidden;
     display: inline-block;
     background-color:#f0f0f0;
 }

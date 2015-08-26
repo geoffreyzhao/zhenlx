@@ -773,6 +773,14 @@
 .pop-img{
     width:2rem;
     height:2rem;
+    background:#f0f0f0 url("../../mstatic/images/acut-img.png") no-repeat center;
+    font-size: 0.6rem;
+    line-height:2rem;
+    color:#999;
+    text-align: center;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
     display: inline-block;
     vertical-align: middle;
 }

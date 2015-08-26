@@ -76,11 +76,17 @@
 .account-img{
     /*width:3.75rem;*/
     /*padding:0.875rem 1rem 0.875rem 0;*/
-    width: 3.9rem;
-    height: 3.9rem;
-    border-radius: 3.9rem;
+    width: 4rem;
+    height: 4rem;
+    background:#f0f0f0 url("../../mstatic/images/acut-img.png") no-repeat center;
+    font-size: 0.6rem;
+    line-height:4rem;
+    color:#999;
+    text-align: center;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    border-radius: 2rem;
     display: inline-block;
-
 }
 .account-info{
     width:10.35rem;
@@ -383,7 +389,14 @@
 .edt-popimg{
     height: 3rem;
     width: 3rem;
-    border-radius: 3rem;
+    background:#f0f0f0 url("../../mstatic/images/acut-img.png") no-repeat center;
+    font-size: 0.6rem;
+    line-height:3rem;
+    color:#999;
+    text-align: center;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    border-radius: 1.5rem;
     margin: 0.5rem 0;
     display: inline-block;
     vertical-align: middle;
