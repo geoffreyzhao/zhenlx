@@ -548,9 +548,9 @@
     margin-top:0.5rem;
 }
 .common-tips{
-    width:1.05rem;
+    width:1rem;
     height:1rem;
-    margin-left:0.4rem;
+    margin-left:0.3rem;
     margin-right:0.4rem;
     display: inline-block;
     vertical-align: middle;
@@ -619,7 +619,7 @@
     background-size: 100%;
     position: absolute;
     top: 1.89rem;
-    left: 4.2rem;
+    left: 4rem;
 }
 .tip-box{
     padding:0.75rem 0.35rem;
