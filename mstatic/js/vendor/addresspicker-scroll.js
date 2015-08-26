@@ -135,10 +135,8 @@
 
 	    		province_scroll.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
 
-	    		setTimeout(function(){
-		    		$(province_scroll.wrapper).find("li").removeClass("current");
-					$(province_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
-	    		}, 300);
+	    		$(province_scroll.wrapper).find("li").removeClass("current");
+				$(province_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
 			});
 
 			//  省滚动结束，重置市和县/区(第一个市下面的县区)，并滚至第一个
@@ -177,10 +175,8 @@
 
 	    		city_scroll.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
 
-	    		setTimeout(function(){
-		    		$(city_scroll.wrapper).find("li").removeClass("current");
-					$(city_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
-	    		}, 300);
+	    		$(city_scroll.wrapper).find("li").removeClass("current");
+				$(city_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
 			});
 
 			//  市滚动结束，重置县区列表内容，并滚至第一个
@@ -213,10 +209,8 @@
 
 	    		county_scroll.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
 
-	    		setTimeout(function(){
-		    		$(county_scroll.wrapper).find("li").removeClass("current");
-					$(county_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
-	    		}, 300);
+	    		$(county_scroll.wrapper).find("li").removeClass("current");
+				$(county_scroll.wrapper).find("li").eq(scrollNum-1).addClass("current");
 			});
 
 			return [province_scroll, city_scroll, county_scroll];

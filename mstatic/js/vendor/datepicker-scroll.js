@@ -215,6 +215,7 @@
     	});
 
 		$(scroll_year.scroller).on("scrollstop", function(){
+			console.log('scrollstop');
 			year_end_posY = scroll_year.y;
 
     		var dist = Math.abs(year_end_posY - year_start_posY),
@@ -226,13 +227,12 @@
 
     		scroll_year.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
 
-    		setTimeout(function(){
-	    		$(scroll_year.wrapper).find("li").removeClass("current");
-				$(scroll_year.wrapper).find("li").eq(scrollNum-1).addClass("current");
-    		}, 300);
+    		$(scroll_year.wrapper).find("li").removeClass("current");
+			$(scroll_year.wrapper).find("li").eq(scrollNum-1).addClass("current");
 		});
 
     	scroll_year.on("scrollEnd", function(){
+    		console.log('scrollEnd======');
 
     		$(monthScroller).html(geneMonthDOM());
     		scroll_month.refresh();
@@ -263,10 +263,8 @@
 
     		scroll_month.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
 
-    		setTimeout(function(){
-	    		$(scroll_month.wrapper).find("li").removeClass("current");
-				$(scroll_month.wrapper).find("li").eq(scrollNum-1).addClass("current");
-    		}, 300);
+    		$(scroll_month.wrapper).find("li").removeClass("current");
+			$(scroll_month.wrapper).find("li").eq(scrollNum-1).addClass("current");
 		});
 
     	scroll_month.on("scrollEnd", function(){
@@ -295,10 +293,8 @@
 
     		scroll_day.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
 
-    		setTimeout(function(){
-	    		$(scroll_day.wrapper).find("li").removeClass("current");
-				$(scroll_day.wrapper).find("li").eq(scrollNum-1).addClass("current");
-    		}, 300);
+    		$(scroll_day.wrapper).find("li").removeClass("current");
+			$(scroll_day.wrapper).find("li").eq(scrollNum-1).addClass("current");
 		});
 
     	arr.push(scroll_year, scroll_month, scroll_day);
