@@ -1,10 +1,10 @@
 @charset "utf-8";
 .evaluateHeader{
-	height:4.95rem;
 	background:#fff;
 	border-bottom:1px solid #dcdcdc;
 	margin-bottom:0.55rem;
-	padding:0.6rem 0 0 0.4rem;
+	padding:0.5rem;
+	line-height:1.2rem;
 }
 .evaluateImg{
 	width:5rem;
@@ -32,13 +32,24 @@
 	margin-bottom:1.6rem;
 }
 .submit-tip{
+	position: fixed;
+	z-index: 11;
+	top: 2.25rem;
+	left: 0;
+	right: 0;
 	height:1.75rem;
-	background-color:#c2ecf3;
-	padding:0.5rem;
+	display: none;
 	text-align: center;
 	font-size: 0.6rem;
-	line-height: 0.75rem;
-	color: #3FC0AE !important;
+	line-height: 1.75rem;
+}
+.tips-cuccess{
+	background-color:#c2ecf3;
+	color: #3FC0AE;
+}
+.tips-fail{
+	background-color:#fff3de;
+	color: #fe7800;
 }
 .evaluateStars{
 	font-size:0.75rem;
