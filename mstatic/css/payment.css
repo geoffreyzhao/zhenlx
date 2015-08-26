@@ -545,6 +545,7 @@ input[type="radio"]:checked + .pay-check{
     color:#11b9b7;
 }
 .plane-start, .plane-stop{
+    width:100%;
     font-size: 1.2rem;
     line-height:1.8rem;
     color:#484848;
@@ -554,7 +555,7 @@ input[type="radio"]:checked + .pay-check{
 .plane-stop em{
     position: absolute;
     top:-0.5rem;
-    right:0.4rem;
+    right:-0.1rem;
     color: #FE7800;
     font-size: 0.6rem;
 }
@@ -792,6 +793,7 @@ input[type="radio"]:checked + .pay-check{
     -moz-border-radius: 0.0125rem;
     border-radius: 0.125rem;
     resize: none;
+    -webkit-appearance: none;
 }
 .order-coupon{
     font-size: 0.7rem;

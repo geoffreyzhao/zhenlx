@@ -93,6 +93,7 @@
 	font-weight:normal;
 	resize:none;
 	text-align:justify;
+	-webkit-appearance: none;
 }
 .evaluateFrame textarea:focus{
 	outline:none;

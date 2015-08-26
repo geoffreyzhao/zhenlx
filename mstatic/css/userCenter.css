@@ -438,6 +438,7 @@
     -moz-border-radius: 0.0125rem;
     border-radius: 0.125rem;
     resize: none;
+    -webkit-appearance: none;
 }
 .save-box{
     padding:0.9rem 0;
