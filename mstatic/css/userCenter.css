@@ -378,14 +378,13 @@
 .edt-til{
     width:4.6rem;
     display: inline-block;
+    vertical-align: middle;
 }
 .edt-popimg{
-    /*width:2.85rem;
-    height:3.35rem;
-    padding:0.5rem 0.25rem;*/
     height: 3rem;
     width: 3rem;
     border-radius: 3rem;
+    margin: 0.5rem 0;
     display: inline-block;
     vertical-align: middle;
 }
