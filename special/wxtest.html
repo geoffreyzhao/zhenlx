@@ -14,6 +14,8 @@
 	<script>
 		$.ajax({
 		   type: "GET",
+		   dataType: 'jsonp',
+		   jsonp: 'callback',
 		   url: "http://wx.extdev.travelzen.cn/ztravel-front-weixin/weixinShareServlet?url="+location.href.split('#')[0],
 		   success: function(data){
 		   	$("#response").html(data);
