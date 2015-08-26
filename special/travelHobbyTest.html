@@ -127,7 +127,7 @@
 				resultnum=3;
 			}
 			/*console.log(score);*/
-			setInterval(function(){
+			setTimeout(function(){
 				/*$('.swiper-container').hide();*/
 				$('.swiper-container').fadeOut(400);
 				$('.testReault').show();
@@ -137,12 +137,12 @@
 			
 		});
 		$('.testResultfx').click(function(){
-			$('.cover').show(500);
+			$('.cover').fadeIn(200);
 		});
 		$('.cover img').click(function(){
 			$('.testReault').hide();
-			$('.testReault>div').hide();
-			$('.cover').hide();
+			$('.testReault>div').eq(resultnum).fadeOut();
+			$('.cover').fadeOut();
 			$('.shareResult').show();
 			$('.shareResult>div').eq(resultnum).show();
 		});
