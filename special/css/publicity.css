@@ -540,6 +540,10 @@ div:focus{
     background:url(../images/music_play.png) no-repeat;
     background-size:cover;
 }
+.musicbtnpausebg{
+    background:url(../images/music_pause.png) no-repeat;
+    background-size:cover;
+}
 .loadingPage{
     width:100%;
     height:100%;
@@ -736,12 +740,15 @@ div:focus{
     left:1rem;
     bottom:0.3rem;
 }
-.slide2,.slide3,.slide4,.slide5,.slide6,.slide7,.slide8,.slide9,.slide10,.slide11,
+.slide2,.slide3,.slide4,.slide5,.slide6,.slide7,.slide8,.slide9,.slide10,.slide11,.slide12
 .testResult1,.testResult2,.testResult3,.testResult4{
     width:100%;
     height:100%;
     border:0.125rem solid #1caead;
     box-sizing:border-box;
+}
+.slide12{
+    background:#1caead;
 }
 .slide-containerHeader{
     width:100%;
@@ -1662,6 +1669,17 @@ from{transform:rotateZ(-4deg);}
 .test10d{
     width:13.425rem;
     height:1.675rem;
+}
+.slide12diagnosewords{
+    width:5.125rem;
+    height:1rem;
+    position: absolute;
+    left: 5.6rem;
+    top: 21.65rem;
+}
+.diagdot{
+    left: 11rem;
+    top: 22.4rem;
 }
 .testReault,.shareResult{
     width: 100%;

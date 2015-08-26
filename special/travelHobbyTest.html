@@ -18,15 +18,15 @@
 			$('.loadingPage').hide();
 			audio.play();
 			if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
-				$('.musicbtn').css("background-image","url(images/music_pause.png)");			
+				$('.musicbtn').addClass('musicbtnpausebg');			
 			}
 		},1500);
 		var mySwiper = new Swiper ('.swiper-container', {
 			direction : 'vertical',
-			mousewheelControl : true,
 			onlyExternal : true,
 			simulateTouch : false,
 			mousewheelControl : false,
+
 			onInit: function(swiper){
 				swiperAnimateCache(swiper);
 				swiperAnimate(swiper);
@@ -64,94 +64,100 @@
 			},
 			onTransitionStart: function(swiper) {
 				if (swiper.activeIndex == 9) {
-				$(".slide10words1").addClass("active");
-				$(".slide10words2").addClass("active");
-				$(".slide10words3").addClass("active");
-				$(".slide10words4").addClass("active");
+					$(".slide10words1").addClass("active");
+					$(".slide10words2").addClass("active");
+					$(".slide10words3").addClass("active");
+					$(".slide10words4").addClass("active");
+				}
 			}
+		});
+
+		var audio =  document.getElementById("music");
+		$('.musicbtn').on('click',function(){
+			 if(audio.paused){
+	            audio.play();
+	            this.removeClass('musicbtnpausebg');
+	        }else{
+	            audio.pause();
+	            this.addClass('musicbtnpausebg');
+	        }
+		});
+
+		$('.slide1btn').on('click',function(){
+			$(this).addClass('slide1btnpress');
+			mySwiper.slideNext();
+		});
+		var selectItem = new Array();   //例如：[1, 2, 4, 4, 4, 3, 3, 3, 4, 1]  选择的项1代表a，2代表b，3代表c，4代表d
+		var selectType = new Array();   //例如：["m", "l", "f", "m", "l", "w", "m", "w", "w", "m"]
+		var selectScore = new Array();   //例如：[1, 3, 2, 1, 3, 4, 1, 4, 4, 1]   10道题每题的得分
+		$('.test a').on('click',function(){
+			selectItem.push($(this).index()+1);
+			selectType.push($(this).attr('data-seletype'));
+			if($(this).attr('data-seletype')=='m'){
+				selectScore.push(1);
+			}else if($(this).attr('data-seletype')=='f'){
+				selectScore.push(2);
+			}else if($(this).attr('data-seletype')=='l'){
+				selectScore.push(3);
+			}else if($(this).attr('data-seletype')=='w'){
+				selectScore.push(4);
 			}
-		}); 
+			if(mySwiper.activeIndex<12){
+				mySwiper.slideNext();
+			}
+			
+			/*console.log(selectItem);
+			console.log(selectType);
+			console.log(selectScore);*/
+		});
+		var score=0;
+		var resultnum=0;
+		$('.final a').click(function(){
+			musicpause();
+			for(var i=0;i<10;i++){
+				score+=selectScore[i];
+			}
+			if(score>0&&score<=20){
+				resultnum=0;
+			}else if(score>20&&score<=25){
+				resultnum=1;
+			}else if(score>25&&score<=30){
+				resultnum=2;
+			}else if(score>30&&score<=40){
+				resultnum=3;
+			}
+			/*console.log(score);*/
+			setInterval(function(){
+				/*$('.swiper-container').hide();*/
+				$('.swiper-container').fadeOut(400);
+				$('.testReault').show();
+				/*$('.testReault>div').eq(resultnum).show();*/
+				$('.testReault>div').eq(resultnum).fadeIn(500);
+			},4000);
+			
+		});
+		$('.testResultfx').click(function(){
+			$('.cover').show(500);
+		});
+		$('.cover img').click(function(){
+			$('.testReault').hide();
+			$('.testReault>div').hide();
+			$('.cover').hide();
+			$('.shareResult').show();
+			$('.shareResult>div').eq(resultnum).show();
+		});
 
-	var audio =  document.getElementById("music");
-	$('.musicbtn').on('click',function(){
-		 if(audio.paused){
-            audio.play();
-            this.style.backgroundImage="url(images/music_play.png)";
-        }else{
-            audio.pause();
-            this.style.backgroundImage="url(images/music_pause.png)";
-        }
-	});
-
-	$('.slide1btn').on('click',function(){
-		$(this).addClass('slide1btnpress');
-		mySwiper.slideNext();
-	});
-	var selectItem = new Array();   //例如：[1, 2, 4, 4, 4, 3, 3, 3, 4, 1]  选择的项1代表a，2代表b，3代表c，4代表d
-	var selectType = new Array();   //例如：["m", "l", "f", "m", "l", "w", "m", "w", "w", "m"]
-	var selectScore = new Array();   //例如：[1, 3, 2, 1, 3, 4, 1, 4, 4, 1]   10道题每题的得分
-	$('.test:not(last) a').on('click',function(){
-		$(this).addClass('testpressbg').siblings().removeClass('testpressbg');
-		selectItem.push($(this).index()+1);
-		selectType.push($(this).attr('data-seletype'));
-		if($(this).attr('data-seletype')=='m'){
-			selectScore.push(1);
-		}else if($(this).attr('data-seletype')=='f'){
-			selectScore.push(2);
-		}else if($(this).attr('data-seletype')=='l'){
-			selectScore.push(3);
-		}else if($(this).attr('data-seletype')=='w'){
-			selectScore.push(4);
+		function musicpause(){
+			if(!$('.swiper-container').is(':visible')){
+				$('.musicbtn').hide();
+				audio.pause();
+			}
 		}
-		mySwiper.slideNext();
-		/*console.log(selectItem);
-		console.log(selectType);
-		console.log(selectScore);*/
-	});
-	var score=0;
-	var resultnum=0;
-	$('.final a').click(function(){
-		$(this).addClass('testpressbg').siblings().removeClass('testpressbg');
-		$('.swiper-container').hide();
-		musicpause();
-		for(var i=0;i<10;i++){
-			score+=selectScore[i];
-		}
-		if(score>0&&score<=20){
-			resultnum=0;
-		}else if(score>20&&score<=25){
-			resultnum=1;
-		}else if(score>25&&score<=30){
-			resultnum=2;
-		}else if(score>30&&score<=40){
-			resultnum=3;
-		}
-		/*console.log(score);*/
-		$('.testReault').show();
-		$('.testReault>div').eq(resultnum).show();
-	});
-	$('.testResultfx').click(function(){
-		$('.cover').show(500);
-	});
-	$('.cover img').click(function(){
-		$('.testReault').hide();
-		$('.testReault>div').hide();
-		$('.cover').hide();
-		$('.shareResult').show();
-		$('.shareResult>div').eq(resultnum).show();
-	});
-
-	function musicpause(){
-		if(!$('.swiper-container').is(':visible')){
-			$('.musicbtn').hide();
-			audio.pause();
-		}
-	}
 }
 	</script>
 </head>
 <body style="padding:14px 12px; box-sizing:border-box;">
-	<audio loop id="music" preload="auto">
+	<audio loop id="music" autoplay="autoplay">
 		<source src="music.mp3" type="audio/mpeg">
 	</audio>
 	<div class="musicbtn musicbtnChange"></div>
@@ -393,6 +399,17 @@
 			    	</div>
 	    		</div>
 	    	</div>
+			<div class="swiper-slide slide12">
+				<div class="loadingBox">
+					<img class="loadingbg" src="images/slide12diagnosebg.png">
+					<img class="slide12diagnosewords" src="images/slide12diagnosewords.png"  ><!-- 
+					<img class="bubble2" src="images/bubble2.png"  >
+					<img class="bubble3" src="images/bubble3.png"  > -->
+					<div class="loading diagdot">
+						<img class="loadingdot" src="images/loadingdot.png" alt="">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="testReault">
