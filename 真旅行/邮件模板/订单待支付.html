@@ -19,7 +19,6 @@
         html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
         .contain-box {
             width:770px;
-            border:1px #ececec solid;
             margin:0px auto;
             font-size: 14px;
             font-family: Microsoft YaHei, Arial;
@@ -38,28 +37,30 @@
         .rightSet{float: right;}
         .head-box{
             width:100%;
-            background-color: #ececec;
-            padding:10px 15px;
+            padding:20px 20px 10px;
+            border-bottom: 1px solid #a4dfde;
         }
         .head-left{
             width:121px;
             height:44px;
         }
         .head-right{
-            padding-top:30px;
+            padding-top:15px;
+            font-size: 18px;
         }
         .divide{
             padding:0 10px;
+            color: #3fc0ae;
         }
         .head-right a{ font-size: 16px; line-height:18px; color:#484848; text-decoration: none;}
         .head-right a:hover, .head-right a:focus{ color:#484848; text-decoration: underline;}
-        .mainContent{width:100%; background-color:#ffffff; min-height: 400px;}
+        .mainContent{width:100%; background-color:#ffffff; min-height: 400px;margin-top:35px;}
         .content-news{ border-bottom: 1px #ececec dashed; padding:10px 15px;}
         .content-news p{font-size: 16px;margin:3px 0px;}
         .content-news p span{padding:0px 5px; color:#fe7800;}
         .content-order{margin-top:10px;padding:10px 15px;}
         .order-title{padding-bottom:5px; border-bottom: 1px #ececec solid;}
-        .order-title a{color:#11b9b7; padding-right:5px; text-decoration: none}
+        .order-title a{color:#11b9b7; padding-right:5px; text-decoration: none;}
         .order-title a:hover, .order-title a:focus{text-decoration: underline;}
         .order-box{padding:20px 0px;}
         .order-col{width:110px;height:69px; float:left;border-right:1px #ececec solid; text-align: center;display: inline-block;
@@ -68,7 +69,7 @@
         .order-col-th p{color:#9f9f9f;font-size: 12px;}
         .order-btn{float:left; padding-top:20px; padding-left:18px;}
         .order-link{text-align: center; color:#ffffff;text-decoration: none;width:100px; height:50px; background-color: #ffa200; padding:5px 8px;}
-        .foot-box{width:100%; padding:15px; background-color:#ececec;}
+        .foot-box{width:100%; padding:20px 30px; background-color:#1cafad;color:#fff;}
         .foot-left-p{font-size:14px; line-height:18px;}
         .foot-right{width:78px; height:78px;}
     </style>
@@ -77,7 +78,7 @@
 <div class="contain-box">
 <header>
     <div class="head-box">
-        <div class="leftSet"><a href="javascript:void(0);"><img class="head-left" src="http://static.travelzensh.com:82/images/client/logo-new.png"></a></div>
+        <div class="leftSet"><a href="javascript:void(0);"><img class="head-left" src="http://static.zhenlx.com/images/client/logo-new.png"></a></div>
         <div class="head-right rightSet">
             <a href="javascript:void(0);">首页</a><span class="divide">|</span><a href="javascript:void(0);">个人中心</a>
         </div>
@@ -86,7 +87,7 @@
 </header>
 <div class="mainContent">
     <div class="content-news">
-        <h2 style="margin-bottom: 20px;">亲爱的联系人，您好：</h2>
+        <h2 style="margin-bottom: 20px;">亲爱的***：</h2>
         <p>感谢您选择真旅行。</p>
         <p>您的订单<span>53402268</span>已创建成功！</p>
         <p>请在30分钟内尽快支付，否则订单将被取消，预订成功以完成支付为准。</p>
@@ -130,12 +131,19 @@
 </div>
 <footer>
     <div class="foot-box">
-        <div class="leftSet">
+        <div class="leftSet" style="border-right:1px solid #8efff5;padding-right:60px;">
             <p style="font-size: 16px; margin:5px 0px;">关注我们</p>
-            <p class="foot-left-p">扫描关注“真旅行”微信，可以在您出游途中24小时享受无缝的专属服务；</p>
-            <p class="foot-left-p">参与真旅行故事分享，更有随时的微信促销优惠。</p>
+            <div style="color:#8efff5;line-height: 28px;margin-top: 15px;">
+                <p>微信客服: zhenlx2015</p>
+                <p>服务热线：400-888-666</p>
+                <p>服务邮箱：service@zhenlx.com</p>
+            </div>
         </div>
-        <div class="rightSet"><img class="foot-right" src="http://static.travelzensh.com:82/images/client/wechat-qrcode.jpg"></div>
+        <div class="leftSet" style="margin-top: 20px;">
+            <div class="leftSet" style="width:300px;padding-left: 60px;margin-right: 40px;">扫描关注“真旅行”微信，可以在您出游途中24小时享受无缝的专属服务；参与真旅行故事分享，更有随时的微信促销优惠。
+            </div>
+            <img class="rightSet foot-right" src="http://static.zhenlx.com/images/client/wechat-qrcode.jpg">
+        </div>
         <div class="clearFix"></div>
     </div>
 </footer>
