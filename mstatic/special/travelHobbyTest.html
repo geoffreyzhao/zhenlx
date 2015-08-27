@@ -14,20 +14,24 @@
 	<script> 
 	$('.loadingPage').css({"display":"block"});
 
-	$.ajax({
-		type: 'GET',
-     	dataType: 'jsonp',
-   		jsonp: 'callback',
-     	url: 'http://wx.extdev.travelzen.cn/ztravel-front-weixin/weixinShareController/getUserNickName',
-     	success: function(data) {
-     		alert(data);
-     	},
-     	error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
-        }
-	});
+	// $.ajax({
+	// 	type: 'GET',
+ //     	dataType: 'jsonp',
+ //   		jsonp: 'callback',
+ //     	url: 'http://wx.extdev.travelzen.cn/ztravel-front-weixin/weixinShareController/getUserNickName',
+ //     	success: function(data) {
+ //     		alert(data);
+ //     	},
+ //     	error: function(XMLHttpRequest, textStatus, errorThrown) {
+ //            alert(XMLHttpRequest.status);
+ //            alert(XMLHttpRequest.readyState);
+ //            alert(textStatus);
+ //        }
+	// });
+
+	window.open('https://open.weixin.qq.com/connect/oauth2/authorize?
+appid=wxe9ed2ca46ee5bd4d&redirect_uri=http%3A%2F%2Fwx.extdev.travelzen.cn%2Fztravel-front-weixin
+%2FweixinShareController%2FgetUserNickName&response_type=code&scope=snsapi_userinfo&state=111#wechat_redirect');
 
 
 	window.onload = function(){	
