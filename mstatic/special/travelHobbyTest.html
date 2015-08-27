@@ -41,7 +41,7 @@
 //      	}
 // 	});
 
-	<iframe src="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe9ed2ca46ee5bd4d&redirect_uri=http%3A%2F%2Fwx.extdev.travelzen.cn%2Fztravel-front-weixin%2FweixinShareController%2FcreateUserNickName&response_type=code&scope=snsapi_userinfo&state=111#wechat_redirect" width="200" height="500"></iframe>
+	
 
 
 // 	window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?'+
@@ -190,9 +190,16 @@
 // 			}
 // 		}
 // }
+
+	window.onload = function() {
+		alert($("#framePage").contents().find("#userNickName").html());
+	}
 	</script>
 </head>
 <body style="padding:14px 12px; box-sizing:border-box;">
+
+	<iframe id="framePage" src="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe9ed2ca46ee5bd4d&redirect_uri=http%3A%2F%2Fwx.extdev.travelzen.cn%2Fztravel-front-weixin%2FweixinShareController%2FgetUserNickName&response_type=code&scope=snsapi_userinfo&state=111#wechat_redirect" width="200" height="500"></iframe>
+
 	<audio loop id="music" autoplay="autoplay">
 		<source src="music.mp3" type="audio/mpeg">
 	</audio>
