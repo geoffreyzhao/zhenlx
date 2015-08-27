@@ -39,42 +39,58 @@
 		         jsApiList: ['onMenuShareTimeline'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 		     });
 
-		     $.ajax({
+		     // $.ajax({
+		     // 	type: 'GET',
+		     // 	dataType: 'jsonp',
+		   		// jsonp: 'callback',
+		     // 	url: 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe9ed2ca46ee5bd4d&redirect_uri=http%3A%2F%2Fwx.extdev.travelzen.cn%2Fztravel-front-weixin%2FweixinShareController%2FgetUserNickName&response_type=code&scope=snsapi_userinfo&state=111#wechat_redirect',
+		     // 	success: function(data){
+
+		     // 		alert(data);
+		     // 		var nickname = data;
+		     // 		alert(nickname);
+
+				     // wx.ready(function(){
+			     	//     wx.onMenuShareTimeline({
+			      //          title: nickname + '患有浪漫癖',
+			      //          link: 'http://wxstatic.extdev.travelzen.cn/special/travelHobbyTest.html',
+			      //          imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg',
+			      //          trigger: function (res) {
+			      //            // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+			      //            alert('用户点击分享到朋友圈');
+			      //          },
+			      //          success: function (res) {
+			      //            alert('已分享');
+			      //          },
+			      //          cancel: function (res) {
+			      //            alert('已取消');
+			      //          },
+			      //          fail: function (res) {
+			      //            alert(JSON.stringify(res));
+			      //          }
+			      //        });
+				     // });
+		     	// }
+		     // });
+
+		   }
+		});
+
+		
+		$("#share").click(function(){
+			$.ajax({
 		     	type: 'GET',
 		     	dataType: 'jsonp',
 		   		jsonp: 'callback',
 		     	url: 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe9ed2ca46ee5bd4d&redirect_uri=http%3A%2F%2Fwx.extdev.travelzen.cn%2Fztravel-front-weixin%2FweixinShareController%2FgetUserNickName&response_type=code&scope=snsapi_userinfo&state=111#wechat_redirect',
 		     	success: function(data){
-
 		     		alert(data);
 		     		var nickname = data;
 		     		alert(nickname);
-
-				     wx.ready(function(){
-			     	    wx.onMenuShareTimeline({
-			               title: nickname + '患有浪漫癖',
-			               link: 'http://wxstatic.extdev.travelzen.cn/special/travelHobbyTest.html',
-			               imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg',
-			               trigger: function (res) {
-			                 // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
-			                 alert('用户点击分享到朋友圈');
-			               },
-			               success: function (res) {
-			                 alert('已分享');
-			               },
-			               cancel: function (res) {
-			                 alert('已取消');
-			               },
-			               fail: function (res) {
-			                 alert(JSON.stringify(res));
-			               }
-			             });
-				     });
 		     	}
 		     });
-
-		   }
 		});
+
 	</script>
 	
 </body>
