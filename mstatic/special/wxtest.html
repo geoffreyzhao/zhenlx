@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微信测试页面</title>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+	<div id="time"></div>
+
+	<button type="button" id="share">我也测测</button>
+
+	<script type="text/javascript">
+
+		setInterval(function(){
+			$("#time").html(new Date().toString());
+		}, 1000);		
+
+		$("#share").click(function(){
+			window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe9ed2ca46ee5bd4d&redirect_uri=http%3A%2F%2Fwx.extdev.travelzen.cn&response_type=code&scope=snsapi_userinfo&state=111#wechat_redirect';
+		});
+
+
+	</script>
+	
+</body>
+</html>
