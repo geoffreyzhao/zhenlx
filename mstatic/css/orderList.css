@@ -885,6 +885,7 @@
 }
 .hotel-bed-op > .ui-grid-b{
     height:2rem;
+    padding:0;
     font-size: 0.6rem;
     color:#666;
     border-bottom: 0;
@@ -897,7 +898,7 @@
 }
 .hotel-bed-op > .ui-grid-b > .ui-block-c{
     width:24%;
-    padding-top:0.2rem;
+    line-height:1.3rem;
 }
 .span-confirm{
     padding:0 0.2rem;

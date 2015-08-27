@@ -21,4 +21,10 @@ $(function(){
         }
     });
 
+    //移动端点击<label>包围的input控件后面的文本触发相应的事件
+    $("label").click(function(){
+        $(this).find("input[type='radio']").prop("checked", "checked");
+        $(this).find("input[type='checkbox']").prop("checked", "checked");
+    });
+
 });

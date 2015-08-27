@@ -206,7 +206,7 @@
     padding:0 0.5rem;
 }
 .prg-payOp{
-    padding:0.7rem 0.3rem;
+    padding:0.5rem 0.3rem;
     border-bottom: 1px #dcdcdc solid;
 }
 .prg-payOp:last-child{
@@ -727,6 +727,7 @@ input[type="radio"]:checked + .pay-check{
 .traveler-til{
     display: inline-block;
     color:#666;
+    line-height:1.3rem;
 }
 .traveler-val, .submit-dlg-val{
     width: 100%;
@@ -755,6 +756,7 @@ input[type="radio"]:checked + .pay-check{
     padding:0.2rem 0.3rem;
     color:#fff !important;
     background-color:#3fc0ae;
+    vertical-align: middle;
     -webkit-border-radius: 0.125rem;
     -moz-border-radius: 0.125rem;
     border-radius: 0.125rem;
@@ -889,7 +891,8 @@ input[type="radio"]:checked + .pay-check{
 }
 .agr-txt{
     color:#3fc0ae !important;
-    vertical-align: bottom;
+    line-height:1.3rem;
+    vertical-align: middle;
 }
 .agr-txt:active{
     background-color: #e1e1e1;

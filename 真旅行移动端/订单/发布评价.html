@@ -69,7 +69,7 @@
 		});
 		/*输入框内字数控制*/
 		$(".evaluateFrame textarea").keyup(function(){
-			var len = $(this).val().length;
+			var len = $(this).val().trim().length;
 			if(len > 499){
 				$(this).val($(this).val().substring(0,500));
 			}

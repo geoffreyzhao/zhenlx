@@ -122,6 +122,9 @@
 	background-color: #3fc0ae;
 	font-size: 0.85rem;
 	color:#fff !important;
+	-webkit-border-radius: 0.125rem;
+	-moz-border-radius: 0.125rem;
+	border-radius: 0.125rem;
 }
 .submitbtn a:active{
 	background-color:#1a9d9c;

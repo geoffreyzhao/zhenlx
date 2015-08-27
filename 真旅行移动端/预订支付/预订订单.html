@@ -14,6 +14,7 @@
     <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="../../mstatic/js/vendor/cus-list-pop.js"></script>
     <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
     <title>预订订单</title>
 
     <script type="text/javascript">
@@ -136,11 +137,11 @@
     <div class="order-hotel-bed">
         <div class="order-hotel-bedTil">偏好的酒店床型：</div>
         <div class="order-hotel-op">
-            <label class="choice-bed">
+            <label>
                 <input type="radio" name="bed" value="bed01" data-role="none" checked>
                 <span>优选大床房</span>
             </label>
-            <label class="choice-bed">
+            <label>
                 <input type="radio" name="bed" value="bed02" data-role="none">
                 <span>优选双床房</span>
             </label>
@@ -154,7 +155,7 @@
         <div class="ui-grid-b traveler-row">
             <div class="ui-block-a traveler-til">旅客中文名</div>
             <div class="ui-block-b"><input class="traveler-val" type="text" placeholder="请输入姓" data-role="none"></div>
-            <div class="ui-block-c"><a class="travel-lab" href="javascript:void(0);">常旅客</a></div>
+            <div class="ui-block-c"><a class="travel-lab" data-role="none" href="javascript:void(0);">常旅客</a></div>
         </div>
         <div class="ui-grid-a">
             <div class="ui-block-a">&nbsp;</div>
@@ -312,7 +313,7 @@
         <label>
             <input type="checkbox" name="" value="" data-role="none">
             <span>我阅读并同意遵守</span>
-        </label><a class="agr-txt" href="javascript:void(0);">《真旅行产品预订协议书》</a>
+        </label><a class="agr-txt" href="javascript:void(0);" data-role="none">《真旅行产品预订协议书》</a>
         <!--协议书弹窗-->
         <div class="agr-dialog" id="agr-dialog" data-role="popup" data-transition="pop" data-position-to="window" data-theme="a" data-overlay-theme="b">
             <div data-role="header">
@@ -476,9 +477,6 @@
         $(".submit-dlg-confirm").click(function(){
             $("#submit-dlg").popup("close");
         });
-        $(".choice-bed").click(function(){
-            $(this).find("input[type='radio']").prop("checked", "checked");
-        })
     });
 </script>
 </body>

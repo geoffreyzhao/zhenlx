@@ -67,7 +67,7 @@
     <div class="prg-pay">
         <div class="prg-paytil">支付方式</div>
         <div class="prg-payType">
-            <div class="prg-payOp choice-bed clearfix">
+            <div class="prg-payOp clearfix">
                 <img class="prg-payImg" src="../../mstatic/images/wechat.png"><span class="prg-payName">微信支付</span>
                 <label>
                     <input type="radio" name="type" value="wechat" data-role="none" checked>
@@ -92,7 +92,7 @@
     $(function () {
         FastClick.attach(document.body);
 
-        $(".choice-bed").click(function(){
+        $(".prg-payOp").click(function(){
             $(this).find("input[type='radio']").prop("checked", "checked");
         });
     });
