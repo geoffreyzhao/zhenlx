@@ -59,7 +59,7 @@
 			onSetTransition: function(swiper, speed) {
 				for (var i = 0; i < swiper.slides.length; i++){
 					es = swiper.slides[i].style;
-					es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration =	 es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = 	speed + 'ms';
+					es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
 				}
 			},
 			onTransitionStart: function(swiper) {
@@ -112,7 +112,8 @@
 		var score=0;
 		var resultnum=0;
 		$('.final a').click(function(){
-			musicpause();
+			$('.musicbtn').hide();
+			audio.pause();
 			for(var i=0;i<10;i++){
 				score+=selectScore[i];
 			}
@@ -145,13 +146,6 @@
 			/*$('.shareResult').show();
 			$('.shareResult>div').eq(resultnum).show();*/
 		});
-
-		function musicpause(){
-			if(!$('.swiper-container').is(':visible')){
-				$('.musicbtn').hide();
-				audio.pause();
-			}
-		}
 }
 	</script>
 </head>
