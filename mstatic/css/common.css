@@ -424,6 +424,9 @@ input[type="checkbox"] + span {
 	font-size: 0.7rem;
 	color: #666;
 	position: relative;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .list-pop-container #scroller li.current {
