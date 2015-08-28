@@ -78,10 +78,10 @@
 </head>
 <body>
 
-    <audio loop autoplay="autoplay" id="music01">
+    <audio loop preload="auto" id="music01">
         <source src="music01.mp3" type="audio/mpeg">
     </audio>
-    <audio loop autoplay="autoplay" id="music02">
+    <audio loop preload="auto" id="music02">
         <source src="music02.mp3" type="audio/mpeg">
     </audio>    
     <div class="musicbtn"></div>
@@ -207,6 +207,9 @@
                     <a href="javascript:void(0);" class="ani shareBtn infinite" swiper-animate-effect="changeShareBg" swiper-animate-duration="0.7s" swiper-animate-delay="0.5s"></a>
                 </div>
           </div>
+        <div class="clickShare">
+            <img src="images/shareImg.png" class="shareImg">
+        </div>
 	 </div>
     
 	<script type="text/javascript">
@@ -227,6 +230,15 @@
 
         root.style.height = window.innerHeight + "px";
 
+        $(".shareBtn").click(function(){
+            $(".clickShare").show(500, function(){
+                $(".clickShare").bind("touchmove", function() {
+                    return false;
+                });
+                $(".musicbtn").hide();
+            });
+        });
+        
 
     </script>
 
