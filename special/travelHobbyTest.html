@@ -76,15 +76,14 @@
 		$('.musicbtn').on('click',function(){
 			 if(audio.paused){
 	            audio.play();
-	            this.removeClass('musicbtnpausebg');
+	            $('.musicbtn').removeClass('musicbtnpausebg');
 	        }else{
 	            audio.pause();
-	            this.addClass('musicbtnpausebg');
+	            $('.musicbtn').addClass('musicbtnpausebg');
 	        }
 		});
 
 		$('.slide1btn').on('click',function(){
-			$(this).addClass('slide1btnpress');
 			mySwiper.slideNext();
 		});
 		var selectItem = new Array();   //例如：[1, 2, 4, 4, 4, 3, 3, 3, 4, 1]  选择的项1代表a，2代表b，3代表c，4代表d
@@ -143,8 +142,8 @@
 			$('.testReault').hide();
 			$('.testReault>div').eq(resultnum).fadeOut();
 			$('.cover').fadeOut();
-			$('.shareResult').show();
-			$('.shareResult>div').eq(resultnum).show();
+			/*$('.shareResult').show();
+			$('.shareResult>div').eq(resultnum).show();*/
 		});
 
 		function musicpause(){
@@ -478,68 +477,6 @@
 	    	</div>
 	    </div>
 	    <div class="cover"><img src="images/coverfx.png" alt=""></div>
-	</div>
-	<div class="shareResult">
-		<div class="testResult1">
-	    	<div class="slide-containerHeader testResult1Header">
-		    	<img class="title" src="images/title.png" alt="">
-		    	<img class="logo1" src="images/logo.png" alt="">
-		    	<img class="logo2" src="images/logo.png" alt="">
-	    	</div>
-	    	<div class="testResult1Con">
-	    		<span class="result1title">经诊断×××患有</span>
-		    	<img class="testResult1person" src="images/testResult1person.png" alt="">
-		    	<img class="testResult1text" src="images/testResult1text.png" alt="">
-	    	</div>
-	    	<div class="testResult1btn">
-		    	<a href="javascript:void(0);"><img class="testResultjc" src="images/testResult1jc.png" alt=""></a>
-	    	</div>
-	    </div>
-	    <div class="testResult2">
-	    	<div class="slide-containerHeader testResult2Header">
-		    	<img class="title" src="images/title.png" alt="">
-		    	<img class="logo1" src="images/logo.png" alt="">
-		    	<img class="logo2" src="images/logo.png" alt="">
-	    	</div>
-	    	<div class="testResult2Con">
-	    		<span class="result2title">经诊断×××患有</span>
-		    	<img class="testResult2person" src="images/testResult2person.png" alt="">
-		    	<img class="testResult2text" src="images/testResult2text.png" alt="">
-	    	</div>
-	    	<div class="testResult2btn">
-		    	<a href="javascript:void(0);"><img class="testResultjc" src="images/testResult2jc.png" alt=""></a>
-	    	</div>
-	    </div>
-	    <div class="testResult3">
-	    	<div class="slide-containerHeader testResult3Header">
-		    	<img class="title" src="images/title.png" alt="">
-		    	<img class="logo1" src="images/logo.png" alt="">
-		    	<img class="logo2" src="images/logo.png" alt="">
-	    	</div>
-	    	<div class="testResult3Con">
-	    		<span class="result3title">经诊断×××患有</span>
-		    	<img class="testResult3person" src="images/testResult3person.png" alt="">
-		    	<img class="testResult3text" src="images/testResult3text.png" alt="">
-	    	</div>
-	    	<div class="testResult3btn">
-		    	<a href="javascript:void(0);"><img class="testResultjc" src="images/testResult3jc.png" alt=""></a>
-	    	</div>
-	    </div>
-	    <div class="testResult4">
-	    	<div class="slide-containerHeader testResult4Header">
-		    	<img class="title" src="images/title.png" alt="">
-		    	<img class="logo1" src="images/logo.png" alt="">
-		    	<img class="logo2" src="images/logo.png" alt="">
-	    	</div>
-	    	<div class="testResult4Con">
-	    		<span class="result4title">经诊断×××患有</span>
-		    	<img class="testResult4person" src="images/testResult4person.png" alt="">
-		    	<img class="testResult4text" src="images/testResult4text.png" alt="">
-	    	</div>
-	    	<div class="testResult4btn">
-		    	<a href="javascript:void(0);"><img class="testResultjc" src="images/testResult4jc.png" alt=""></a>
-	    	</div>
-	    </div>
 	</div>
 	<script type="text/javascript">
 		var root = document.getElementsByTagName("html")[0],
