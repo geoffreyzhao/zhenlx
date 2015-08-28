@@ -12,8 +12,12 @@
 	<script type="text/javascript" src="../special/js/swiper.min.js"></script>
 	<script type="text/javascript" src="../special/js/swiper.animate.min.js"></script>
 	<script> 
-	$('.loadingPage').css({"display":"block"});
 	window.onload = function(){	
+		if($('.loadingPage').is(':visible')){
+			$('.loadingPage').bind("touchmove", function(){
+				return false;
+			});
+		}
 		setTimeout(function(){
 			$('.loadingPage').hide();
 			audio.play();
