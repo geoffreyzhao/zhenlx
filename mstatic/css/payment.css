@@ -551,11 +551,12 @@ input[type="radio"]:checked + .pay-check{
     color:#484848;
     font-weight: bold;
     position: relative;
+    font-family: Arial;
 }
 .plane-stop em{
     position: absolute;
     top:-0.5rem;
-    right:-0.1rem;
+    right:0.3rem;
     color: #FE7800;
     font-size: 0.6rem;
 }
@@ -840,7 +841,7 @@ input[type="radio"]:checked + .pay-check{
     background-size: 100%;
 }
 .agreement{
-    padding:0.8rem;
+    padding:0.8rem 0.5rem;
     font-size: 0.6rem;
     color:#666;
     margin-bottom: 3rem;

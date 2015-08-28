@@ -116,9 +116,7 @@
 .btn-close{
     background-color:#11b9b7;
 }
-.navWrap-ticket, .navWrap-hotel, .navWrap-cost, .navWrap-inst{
-    margin-top:0.5rem;
-}
+
 .navWrap-val{
     padding:0 0.5rem;
     font-size: 0.7rem;
@@ -353,11 +351,12 @@
     color:#484848;
     font-weight: bold;
     position: relative;
+    font-family: Arial;
 }
 .plane-stop em {
     position: absolute;
     top: -0.5rem;
-    right: 0.4rem;
+    right: 0.3rem;
     color: #FE7800;
     font-size: 0.6rem;
 }
@@ -998,7 +997,7 @@
     vertical-align: middle;
 }
 .menu-row .ui-grid-c .ui-block-d p{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height:0.9rem;
 }
 .menu-row-til{
