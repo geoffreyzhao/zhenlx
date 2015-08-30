@@ -1734,7 +1734,7 @@ from{transform:rotateZ(-4deg);}
     width: 100%;
     height:100%;
     margin-bottom:14px;
-    /*display:none;*/
+    display: none;
 }
 .shareResult{
     display:block;
@@ -1746,7 +1746,13 @@ from{transform:rotateZ(-4deg);}
     box-sizing: border-box;
     position:relative;
     margin-bottom:14px;
-    display:none; 
+    display: none;
+}
+.shareResult .testResult1,
+.shareResult .testResult2,
+.shareResult .testResult3,
+.shareResult .testResult4 {
+    display: block;
 }
 .testResult2{
     border-color:#24b4ca;
