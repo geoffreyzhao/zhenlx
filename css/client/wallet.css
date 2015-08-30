@@ -383,7 +383,9 @@
 	border-bottom: 1px solid #ececec;
 	margin-bottom: 50px;
 }
-
+.accountBalance .accountInfo img {
+	border-radius: 67px;
+}
 .accountBalance .accountInfo .piggyBank {
 	display: inline-block;
 	background: url(../../images/client/piggy-bank-icon.png) no-repeat 0 0;

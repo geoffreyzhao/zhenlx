@@ -294,6 +294,9 @@
 .detail-cnt-left{
     float: left;
 }
+.detail-cnt-left img {
+    border-radius: 60px;
+}
 .detail-cnt-right{
     width:736px;
     float: left;
