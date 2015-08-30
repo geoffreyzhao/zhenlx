@@ -14,26 +14,23 @@
 	<script type="text/javascript" src="../special/js/fastclick.js"></script>
 	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script>
-
 	window.onload = function(){	
-		// setTimeout(function(){
-			$('.loadingPage').hide('1', function() {
-				// alert();
-				audio.play();
-			});
-			// audio.play();
-			if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
-				$('.musicbtn').addClass('musicbtnpausebg');		
-				$('.musicbtn').removeClass('pause');	
-			};
-			$(".swiper-container").show();
-		// },1500);
+		
+		$(".swiper-container").show();
+		$('.loadingPage').hide();
+		var audio =  document.getElementById("music"),
+			audio_2 = document.getElementById("music_2");
+		if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
+			$('.musicbtn').addClass('musicbtnpausebg');		
+			$('.musicbtn').removeClass('pause');	
+		};
+		audio.play();
+
 		var mySwiper = new Swiper ('.swiper-container', {
 			direction : 'vertical',
 			onlyExternal : true,
 			simulateTouch : false,
 			mousewheelControl : false,
-
 			onInit: function(swiper){
 				swiperAnimateCache(swiper);
 				swiperAnimate(swiper);
@@ -44,11 +41,11 @@
 			onTransitionEnd: function(swiper){
 				swiperAnimate(swiper);
 				if (swiper.activeIndex == 8 || swiper.activeIndex == 10) {
-				$(".slide10words1").removeClass("active");
-				$(".slide10words2").removeClass("active");
-				$(".slide10words3").removeClass("active");
-				$(".slide10words4").removeClass("active");
-			}
+					$(".slide10words1").removeClass("active");
+					$(".slide10words2").removeClass("active");
+					$(".slide10words3").removeClass("active");
+					$(".slide10words4").removeClass("active");
+				}
 			},
 			watchSlidesProgress: true,
 			onProgress: function(swiper){
@@ -78,18 +75,33 @@
 				}
 			}
 		});
-
-		var audio =  document.getElementById("music");
+		
 		$('.musicbtn').on('click',function(){
-			 if(audio.paused){
-	            audio.play();
-	            $('.musicbtn').removeClass('pause');
-	            $('.musicbtn').removeClass('musicbtnpausebg');
+			if (flag) {  //  答题结束后只能播放第二首音乐
+
+				audio.pause();
+				if(audio_2.paused){
+		            audio_2.play();
+		            $('.musicbtn').removeClass('pause');
+		            $('.musicbtn').removeClass('musicbtnpausebg');
+	        	}else{
+		            audio_2.pause();
+		            $('.musicbtn').addClass('pause');
+		            $('.musicbtn').addClass('musicbtnpausebg');
+		        }
+			} else {   //  答题结束前只能播放第一首音乐
+
+				audio_2.pause();
+				if(audio.paused){
+		            audio.play();
+		            $('.musicbtn').removeClass('pause');
+		            $('.musicbtn').removeClass('musicbtnpausebg');
 	        	}else{
 		            audio.pause();
 		            $('.musicbtn').addClass('pause');
 		            $('.musicbtn').addClass('musicbtnpausebg');
 		        }
+			};
 		});
 
 		$('.slide1btn').on('click',function(){
@@ -116,10 +128,14 @@
 		});
 		var score=0;
 		var resultnum=0;
+		var flag = false;  //  标识答题是否结束，默认 false
 		$('.final a').click(function(){
-			$('.musicbtn').hide();
-			$('.musicbtn').addClass('pause');
-			audio.pause();
+			
+			flag = true;
+			if (!audio.paused) {
+				audio.pause();
+				audio_2.play();
+			}
 			for(var i=0;i<10;i++){
 				score+=selectScore[i];
 			}
@@ -198,25 +214,28 @@
 			});
 
 			setTimeout(function(){
-				$('.swiper-container').fadeOut(400);
+				$('.swiper-container').hide();
 				$('.testReault').show();
-				$('.testReault>div').eq(resultnum).fadeIn(500);
+				$('.testReault>div').eq(resultnum).show();
 			}, 2000);
 		});
 		$('.testResultfx').click(function(){
-			$('.cover').fadeIn(200);
+			$('.cover').show();
 		});
 
 		$(".cover").click(function(){
-			$(this).fadeOut();
+			$(this).hide();
 		});
 	}
 
 	</script>
 </head>
 <body style="padding:14px 12px; box-sizing:border-box;">
-	<audio loop id="music" autoplay="autoplay">
+	<audio loop id="music" autoplay="autoplay" preload="auto">
 		<source src="music.mp3" type="audio/mpeg">
+	</audio>
+	<audio loop id="music_2" preload="auto">
+		<source src="music_2.mp3" type="audio/mpeg">
 	</audio>
 	<div class="musicbtn musicbtnChange"></div>
 	
@@ -642,9 +661,9 @@
 			wx.config({
 			    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 			    appId: 'wxe9ed2ca46ee5bd4d', // 必填，公众号的唯一标识
-			    timestamp: '1440918554', // 必填，生成签名的时间戳
-			    nonceStr: '7fdf00b6-6062-4a68-a5fb-b5efaa2e3628', // 必填，生成签名的随机串
-			    signature: '33cf1341fc21dc1b3239dff5125abb5b4ae946a0',// 必填，签名，见附录1
+			    timestamp: '1440930104', // 必填，生成签名的时间戳
+			    nonceStr: '6436773b-0c86-4498-a081-6a5fe02f77b8', // 必填，生成签名的随机串
+			    signature: 'f5cc4812b0c650f50230fe000e0d65f08919065b',// 必填，签名，见附录1
 			    jsApiList: ['onMenuShareTimeline'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 			});
 
