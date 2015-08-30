@@ -408,7 +408,7 @@ img:focus{
     height: 3.225rem;
     position: absolute;
     left: 8%;
-    bottom: 7%;
+    bottom: 5%;
 }
 
 .p9_01{
@@ -521,6 +521,25 @@ img:focus{
     bottom: 2.6%;
 }
 
+.clickShare{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+.clickShare .shareImg{
+    width: 10.2rem;
+    height: 4.725rem;
+    position: absolute;
+    right: 7%;
+    top: 1%;
+    z-index: 20;
+}
 /*  加班太苦  End  */
 
 /* 旅行癖测试 */
@@ -531,14 +550,44 @@ div:focus{
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     -ms-tap-highlight-color:rgba(0,0,0,0);
 }
+@-webkit-keyframes rotate360 {
+from{-webkit-transform:rotateZ(0deg);}
+    to{-webkit-transform:rotateZ(360deg);}
+}
+@-ms-keyframes rotate360 {
+from{-ms-transform:rotateZ(0deg);}
+    to{-ms-transform:rotateZ(360deg);}
+}
+@-o-keyframes rotate360 {
+from{-o-transform:rotateZ(0deg);}
+    to{-o-transform:rotateZ(360deg);}
+}
+@-moz-keyframes rotate360 {
+from{-moz-transform:rotateZ(0deg);}
+    to{-moz-transform:rotateZ(360deg);}
+}
+@keyframes rotate360 {
+from{transform:rotateZ(0deg);}
+    to{transform:rotateZ(360deg);}
+}
 .musicbtnChange{
     width:1.5rem;
     height:1.5rem;
-    right:25px;
-    top: inherit;
-    bottom:15.8rem;
+    right:16px;
+    top:6.5rem;
     background:url(../images/music_play.png) no-repeat;
-    background-size:cover;
+    background-size:cover; -webkit-animation:rotate360 5s linear 1s infinite;
+       -moz-animation:rotate360 5s linear 1s infinite;
+        -ms-animation:rotate360 5s linear 1s infinite;
+         -o-animation:rotate360 5s linear 1s infinite;
+            animation:rotate360 5s linear 1s infinite;
+}
+.musicbtnChange.pause{
+-webkit-animation-play-state:paused;
+   -moz-animation-play-state:paused;
+    -ms-animation-play-state:paused;
+     -o-animation-play-state:paused;
+        animation-play-state:paused;
 }
 .musicbtnpausebg{
     background:url(../images/music_pause.png) no-repeat;
@@ -1687,6 +1736,9 @@ from{transform:rotateZ(-4deg);}
     margin-bottom:14px;
     display:none;
 }
+.shareResult{
+    display:block;
+}
 .testResult1,.testResult2,.testResult3,.testResult4{
     width: 100%;
     height: 100%;
@@ -1694,7 +1746,7 @@ from{transform:rotateZ(-4deg);}
     box-sizing: border-box;
     position:relative;
     margin-bottom:14px;
-    display:none;
+ /*    display:none; */
 }
 .testResult2{
     border-color:#24b4ca;
