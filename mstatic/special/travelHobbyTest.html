@@ -11,10 +11,9 @@
 	<script type="text/javascript" src="../special/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../special/js/swiper.min.js"></script>
 	<script type="text/javascript" src="../special/js/swiper.animate.min.js"></script>
+	<script type="text/javascript" src="../special/js/fastclick.js"></script>
 	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script>
-
-	var resultnum;
 
 	window.onload = function(){	
 		if($('.loadingPage').is(':visible')){
@@ -115,12 +114,12 @@
 			if(mySwiper.activeIndex<12){
 				mySwiper.slideNext();
 			}
-			/*console.log(selectItem);
+			console.log(selectItem);
 			console.log(selectType);
-			console.log(selectScore);*/
+			console.log(selectScore);
 		});
 		var score=0;
-		resultnum=0;
+		var resultnum=0;
 		$('.final a').click(function(){
 			$('.musicbtn').hide();
 			$('.musicbtn').addClass('pause');
@@ -129,13 +128,13 @@
 				score+=selectScore[i];
 			}
 			if(score>0&&score<=20){
-				resultnum=0;
+				resultnum=0;	//  美食控
 			}else if(score>20&&score<=25){
-				resultnum=1;
+				resultnum=1;	//  享受犯
 			}else if(score>25&&score<=30){
-				resultnum=2;
+				resultnum=2;	//  美食癖
 			}else if(score>30&&score<=40){
-				resultnum=3;
+				resultnum=3;	//  文艺葩
 			}
 			/*  结果存入数据库
 			$.ajax({
@@ -195,21 +194,21 @@
 			setTimeout(function(){
 				/*$('.swiper-container').hide();*/
 				$('.swiper-container').fadeOut(400);
-				$('.testReault').show();
-				/*$('.testReault>div').eq(resultnum).show();*/
+				// $('.testReault').show();
+				// $('.testReault>div').eq(resultnum).show();
 				$('.testReault>div').eq(resultnum).fadeIn(500);
 			},2000);
 		});
 		$('.testResultfx').click(function(){
 			$('.cover').fadeIn(200);
 		});
-		$('.cover img').click(function(){
-			$('.testReault').hide();
-			$('.testReault>div').eq(resultnum).fadeOut();
-			$('.cover').fadeOut();
-			/*$('.shareResult').show();
-			$('.shareResult>div').eq(resultnum).show();*/
-		});
+		// $('.cover img').click(function(){
+		// 	$('.testReault').hide();
+		// 	$('.testReault>div').eq(resultnum).fadeOut();
+		// 	$('.cover').fadeOut();
+		// 	/*$('.shareResult').show();
+		// 	$('.shareResult>div').eq(resultnum).show();*/
+		// });
 	}
 
 	</script>
@@ -634,6 +633,9 @@
 			   }
 			});
 			*/
+
+			FastClick.attach(document.body);
+
 			/*  配置参数本地先写死  */
 
 			wx.config({
