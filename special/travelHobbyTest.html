@@ -11,7 +11,10 @@
 	<script type="text/javascript" src="../special/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../special/js/swiper.min.js"></script>
 	<script type="text/javascript" src="../special/js/swiper.animate.min.js"></script>
-	<script> 
+	<script>
+
+	var resultnum;
+
 	window.onload = function(){	
 		if($('.loadingPage').is(':visible')){
 			$('.loadingPage').bind("touchmove", function(){
@@ -116,7 +119,7 @@
 			console.log(selectScore);*/
 		});
 		var score=0;
-		var resultnum=0;
+		resultnum=0;
 		$('.final a').click(function(){
 			$('.musicbtn').hide();
 			$('.musicbtn').addClass('pause');
@@ -134,6 +137,20 @@
 				resultnum=3;
 			}
 			/*console.log(score);*/
+
+			$.ajax({
+				type: 'GET',
+				url: 'http://wx.extdev.travelzen.cn/ztravel-front-weixin/weixinShareController/saveGameRecord',
+				data: {
+					gameId: 'travelHobbyTest',
+					gameResult: selectScore.toString(),
+					gameScore: score,
+				},
+				success: function(data) {
+					console.log(data);
+				}
+			});
+
 			setTimeout(function(){
 				/*$('.swiper-container').hide();*/
 				$('.swiper-container').fadeOut(400);
@@ -514,6 +531,68 @@
     	g.async=true;
     	g.src=u+'scpg.tdxinfo.com/js/pangumini.js?v=1.0.6';
     	s.parentNode.insertBefore(g,s); })();
+	</script>
+
+	<script type="text/javascript">
+		$(function(){
+			// 美食控 享受犯 浪漫癖 文艺葩
+			$.ajax({
+			   type: "GET",
+			   dataType: 'jsonp',
+			   jsonp: 'callback',
+			   url: "http://wx.extdev.travelzen.cn/ztravel-front-weixin/weixinShareServlet?url="+location.href.split('#')[0],
+			   success: function(data){
+			     wx.config({
+			         debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+			         appId: 'wxe9ed2ca46ee5bd4d', // 必填，公众号的唯一标识
+			         timestamp: data.timestamp, // 必填，生成签名的时间戳
+			         nonceStr: data.nonceStr, // 必填，生成签名的随机串
+			         signature: data.signature,// 必填，签名，见附录1
+			         jsApiList: ['onMenuShareTimeline'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+			     });
+
+			     var title = "",
+			     	link = "",
+			     	imgUrl = "";
+
+			     if (resultnum == 0) {
+
+			     	title = "美食控";
+			     	link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult1.html";
+			     	imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/shareResultImg01.jpg";
+			     } else if (resultnum == 1) {
+
+			     	title = "享受犯";
+			     	link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult2.html";
+			     	imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/shareResultImg02.jpg";
+			     } else if (resultnum == 2) {
+
+			     	title = "浪漫癖";
+			     	link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult3.html";
+			     	imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/shareResultImg03.jpg";
+			     } else if (resultnum == 3) {
+
+			     	title = "文艺葩";
+			     	link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult4.html";
+			     	imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/shareResultImg04.jpg";
+			     }
+
+			     wx.ready(function(){
+			     	wx.onMenuShareTimeline({
+			     	    title: '我是' + title, // 分享标题
+			     	    link: link, // 分享链接
+			     	    imgUrl: imgUrl, // 分享图标
+			     	    success: function () { 
+			     	        // 用户确认分享后执行的回调函数
+			     	    },
+			     	    cancel: function () { 
+			     	        // 用户取消分享后执行的回调函数
+			     	    }
+			     	});
+			     });
+			   }
+			});
+		});
 	</script>
 </body>
 
