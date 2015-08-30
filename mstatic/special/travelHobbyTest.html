@@ -16,19 +16,18 @@
 	<script>
 
 	window.onload = function(){	
-		if($('.loadingPage').is(':visible')){
-			$('.loadingPage').bind("touchmove", function(){
-				return false;
+		// setTimeout(function(){
+			$('.loadingPage').hide('1', function() {
+				// alert();
+				audio.play();
 			});
-		}
-		setTimeout(function(){
-			$('.loadingPage').hide();
-			audio.play();
+			// audio.play();
 			if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
 				$('.musicbtn').addClass('musicbtnpausebg');		
 				$('.musicbtn').removeClass('pause');	
-			}
-		},1500);
+			};
+			$(".swiper-container").show();
+		// },1500);
 		var mySwiper = new Swiper ('.swiper-container', {
 			direction : 'vertical',
 			onlyExternal : true,
@@ -114,9 +113,6 @@
 			if(mySwiper.activeIndex<12){
 				mySwiper.slideNext();
 			}
-			// console.log(selectItem);
-			// console.log(selectType);
-			// console.log(selectScore);
 		});
 		var score=0;
 		var resultnum=0;
@@ -144,9 +140,6 @@
 					gameId: 'travelHobbyTest',
 					gameResult: selectScore.toString(),
 					gameScore: score,
-				},
-				success: function(data) {
-					console.log(data);
 				}
 			});
 			*/
@@ -189,27 +182,34 @@
 				        // 用户取消分享后执行的回调函数
 				    }
 				});
+
+				wx.onMenuShareAppMessage({
+				    title: '经诊断，我是' + title, // 分享标题
+				    desc: '测试你不为人知的旅行癖好', // 分享描述
+				    link: link, // 分享链接
+				    imgUrl: imgUrl, // 分享图标
+				    success: function () { 
+				        // 用户确认分享后执行的回调函数
+				    },
+				    cancel: function () { 
+				        // 用户取消分享后执行的回调函数
+				    }
+				});
 			});
 
 			setTimeout(function(){
-				/*$('.swiper-container').hide();*/
 				$('.swiper-container').fadeOut(400);
-				console.log(resultnum);
 				$('.testReault').show();
-				// $('.testReault>div').eq(resultnum).show();
 				$('.testReault>div').eq(resultnum).fadeIn(500);
-			},2000);
+			}, 2000);
 		});
 		$('.testResultfx').click(function(){
 			$('.cover').fadeIn(200);
 		});
-		// $('.cover img').click(function(){
-		// 	$('.testReault').hide();
-		// 	$('.testReault>div').eq(resultnum).fadeOut();
-		// 	$('.cover').fadeOut();
-		// 	/*$('.shareResult').show();
-		// 	$('.shareResult>div').eq(resultnum).show();*/
-		// });
+
+		$(".cover").click(function(){
+			$(this).fadeOut();
+		});
 	}
 
 	</script>
@@ -232,7 +232,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="swiper-container" style="margin-bottom:14px;">
+	<div class="swiper-container" style="margin-bottom:14px;display: none;">
 	  	<div class="swiper-wrapper">    
 	    	<div class="swiper-slide slide1">
 	    		<div class="slide1-containter1">
@@ -483,7 +483,7 @@
 		    	<img class="testResult1text" src="images/testResult1text.png" alt="">
 	    	</div>
 	    	<div class="testResult1btn">
-		    	<a href="javascript:void(0);"><img class="testResultzc" src="images/testResult1zc.png" alt=""></a>
+		    	<a href="http://m.zhenlx.com/rl/torl"><img class="testResultzc" src="images/testResult1zc.png" alt=""></a>
 		    	<a href="javascript:void(0);"><img class="testResultfx" src="images/testResult1fx.png" alt=""></a>
 	    	</div>
 	    </div>
@@ -499,7 +499,7 @@
 		    	<img class="testResult2text" src="images/testResult2text.png" alt="">
 	    	</div>
 	    	<div class="testResult2btn">
-		    	<a href="javascript:void(0);"><img class="testResultzc" src="images/testResult2zc.png" alt=""></a>
+		    	<a href="http://m.zhenlx.com/rl/torl"><img class="testResultzc" src="images/testResult2zc.png" alt=""></a>
 		    	<a href="javascript:void(0);"><img class="testResultfx" src="images/testResult2fx.png" alt=""></a>
 	    	</div>
 	    </div>
@@ -515,7 +515,7 @@
 		    	<img class="testResult3text" src="images/testResult3text.png" alt="">
 	    	</div>
 	    	<div class="testResult3btn">
-		    	<a href="javascript:void(0);"><img class="testResultzc" src="images/testResult3zc.png" alt=""></a>
+		    	<a href="http://m.zhenlx.com/rl/torl"><img class="testResultzc" src="images/testResult3zc.png" alt=""></a>
 		    	<a href="javascript:void(0);"><img class="testResultfx" src="images/testResult3fx.png" alt=""></a>
 	    	</div>
 	    </div>
@@ -531,7 +531,7 @@
 		    	<img class="testResult4text" src="images/testResult4text.png" alt="">
 	    	</div>
 	    	<div class="testResult4btn">
-		    	<a href="javascript:void(0);"><img class="testResultzc" src="images/testResult4zc.png" alt=""></a>
+		    	<a href="http://m.zhenlx.com/rl/torl"><img class="testResultzc" src="images/testResult4zc.png" alt=""></a>
 		    	<a href="javascript:void(0);"><img class="testResultfx" src="images/testResult4fx.png" alt=""></a>
 	    	</div>
 	    </div>
@@ -640,7 +640,7 @@
 			/*  配置参数本地先写死  */
 
 			wx.config({
-			    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+			    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 			    appId: 'wxe9ed2ca46ee5bd4d', // 必填，公众号的唯一标识
 			    timestamp: '1440918554', // 必填，生成签名的时间戳
 			    nonceStr: '7fdf00b6-6062-4a68-a5fb-b5efaa2e3628', // 必填，生成签名的随机串
