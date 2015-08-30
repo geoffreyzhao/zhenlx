@@ -215,7 +215,6 @@
     	});
 
 		$(scroll_year.scroller).on("scrollstop", function(){
-			console.log('scrollstop');
 			year_end_posY = scroll_year.y;
 
     		var dist = Math.abs(year_end_posY - year_start_posY),
@@ -232,7 +231,6 @@
 		});
 
     	scroll_year.on("scrollEnd", function(){
-    		console.log('scrollEnd======');
 
     		$(monthScroller).html(geneMonthDOM());
     		scroll_month.refresh();
