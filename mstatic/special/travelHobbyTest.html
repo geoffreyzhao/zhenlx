@@ -167,23 +167,23 @@
 			if (resultnum == 0) {
 
 				title = "美食控";
-				link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult1.html";
-				imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/images/shareResultImg01.jpg";
+				link = "http://static.zhenlx.com/mstatic/special/shareResult1.html";
+				imgUrl = "http://static.zhenlx.com/mstatic/special/images/shareResultImg01.gif";
 			} else if (resultnum == 1) {
 
 				title = "享受犯";
-				link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult2.html";
-				imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/images/shareResultImg02.jpg";
+				link = "http://static.zhenlx.com/mstatic/special/shareResult2.html";
+				imgUrl = "http://static.zhenlx.com/mstatic/special/images/shareResultImg02.gif";
 			} else if (resultnum == 2) {
 
 				title = "浪漫癖";
-				link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult3.html";
-				imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/images/shareResultImg03.jpg";
+				link = "http://static.zhenlx.com/mstatic/special/shareResult3.html";
+				imgUrl = "http://static.zhenlx.com/mstatic/special/images/shareResultImg03.gif";
 			} else if (resultnum == 3) {
 
 				title = "文艺葩";
-				link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult4.html";
-				imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/images/shareResultImg04.jpg";
+				link = "http://static.zhenlx.com/mstatic/special/shareResult4.html";
+				imgUrl = "http://static.zhenlx.com/mstatic/special/images/shareResultImg04.gif";
 			}
 
 			wx.ready(function(){
@@ -597,7 +597,7 @@
 		$(function(){
 
 			FastClick.attach(document.body);
-			/*
+			
 			$.ajax({
 			   type: "GET",
 			   dataType: 'jsonp',
@@ -610,21 +610,9 @@
 			         timestamp: data.timestamp, // 必填，生成签名的时间戳
 			         nonceStr: data.nonceStr, // 必填，生成签名的随机串
 			         signature: data.signature,// 必填，签名，见附录1
-			         jsApiList: ['onMenuShareTimeline'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+			         jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 			     });			     
 			   }
-			});
-			*/			
-
-			/*  配置参数本地先写死  */
-
-			wx.config({
-			    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-			    appId: 'wxe9ed2ca46ee5bd4d', // 必填，公众号的唯一标识
-			    timestamp: '1440930104', // 必填，生成签名的时间戳
-			    nonceStr: '6436773b-0c86-4498-a081-6a5fe02f77b8', // 必填，生成签名的随机串
-			    signature: 'f5cc4812b0c650f50230fe000e0d65f08919065b',// 必填，签名，见附录1
-			    jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 			});
 
 		});
