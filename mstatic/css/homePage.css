@@ -196,11 +196,12 @@
     height:8rem;
     display: block;
 }
+.swiper-container .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+}
 .swiper-container .swiper-pagination-bullet-active{
     background: #3fc0ae;
-}
-.swiper-container .swiper-pagination-bullet {
-    background: #fff!important;
 }
 .hotel-box{
     padding:0.5rem;

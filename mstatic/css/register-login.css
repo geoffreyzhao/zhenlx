@@ -255,6 +255,10 @@
 	font-size: 0.6rem!important;
 }
 
+.login-regis-btn {
+	margin: 1.5rem 0.5rem 0 0.5rem!important;
+}
+
 /** 完善信息 -start **/
 .pop-head{
     padding:1.45rem 0;
