@@ -85,6 +85,13 @@ html,body,img,span{
 	0%{transform:translate3d(0,-0.1rem,0);}
 	100%{transform:translate3d(0,0.1rem,0);}
 }
+/* .slide1-cloudBox{
+	width:100%;
+	height:6.6rem;
+	position:absolute;
+	left:0;
+	top:26.8%;
+} */
 .cloudRT{
 	width:1.925rem;
 	height:1.125rem;
