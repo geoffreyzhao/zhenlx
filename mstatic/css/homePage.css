@@ -199,6 +199,9 @@
 .swiper-container .swiper-pagination-bullet-active{
     background: #3fc0ae;
 }
+.swiper-container .swiper-pagination-bullet {
+    background: #fff!important;
+}
 .hotel-box{
     padding:0.5rem;
 }
@@ -462,7 +465,7 @@
     z-index: 2;
 }
 .navbar ul li{
-    margin-right:0.7rem;
+    margin-right:0.6rem;
     display: inline-block;
     color:#333;
     line-height:1.2rem;
