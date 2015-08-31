@@ -19,6 +19,8 @@
                 audio01.play();
                 if((navigator.userAgent.indexOf("Safari") > -1) && (navigator.userAgent.indexOf("iPhone")>-1)){
                     $('.musicbtn').css("background-image","url(images/music_pause1.png)");
+                    $('.musicbtn').removeClass('pause');
+                    audio01.pause();
                 };
             },500);
             
@@ -57,17 +59,21 @@
                 if(thisIndex<4){
                     if(audio01.paused){
                         audio01.play();
+                        $('.musicbtn').removeClass('pause');
                         this.style.backgroundImage="url(images/music_play1.png)";
                     }else{
                         audio01.pause();
+                        $('.musicbtn').addClass('pause');
                         this.style.backgroundImage="url(images/music_pause1.png)";
                     }
                 }else{
                     if(audio02.paused){
                         audio02.play();
+                        $('.musicbtn').removeClass('pause');
                         this.style.backgroundImage="url(images/music_play1.png)";
                     }else{
                         audio02.pause();
+                        $('.musicbtn').addClass('pause');
                         this.style.backgroundImage="url(images/music_pause1.png)";
                     }
                 }
@@ -84,7 +90,7 @@
     <audio loop preload="auto" id="music02">
         <source src="music02.mp3" type="audio/mpeg">
     </audio>    
-    <div class="musicbtn"></div>
+    <div class="musicbtn btnrotate"></div>
 
     <div class="waitContent">
         <img class="waitImg" src="images/wait.gif">

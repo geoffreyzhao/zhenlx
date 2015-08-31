@@ -39,7 +39,20 @@ img:focus{
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     -ms-tap-highlight-color:rgba(0,0,0,0);
 }
-
+.btnrotate{
+    -webkit-animation:rotate360 5s linear 1s infinite;
+       -moz-animation:rotate360 5s linear 1s infinite;
+        -ms-animation:rotate360 5s linear 1s infinite;
+         -o-animation:rotate360 5s linear 1s infinite;
+            animation:rotate360 5s linear 1s infinite;
+}
+.btnrotate.pause{
+-webkit-animation-play-state:paused;
+   -moz-animation-play-state:paused;
+    -ms-animation-play-state:paused;
+     -o-animation-play-state:paused;
+        animation-play-state:paused;
+}
 /*  加班太苦  Start  */
 .waitContent{
     width: 100%;
