@@ -81,7 +81,7 @@
             </div>
             <div class="ui-grid-b prd-grid">
                 <div class="ui-block-a prd-block">真旅价：</div>
-                <div class="ui-block-b"><span class="prd-price">￥2888</span>起/人次<br/><del class="prd-mart">市场价：￥3335</del></div>
+                <div class="ui-block-b"><span class="prd-price">￥2888</span>起<br/><del class="prd-mart">市场价：￥3335</del></div>
                 <div class="ui-block-c prd-block"><a href="#inst-dialog" data-rel="popup" data-role="none"><label class="icon-qus"></label>起价说明</a></div>
             </div>
             <!--协议书弹窗-->
@@ -132,7 +132,7 @@
                 <li><span class="disc">●</span>专属真旅出行手册及心意礼盒1份</li>
             </ul>
         </div>
-        <div class="prd-space"></div>
+        <div class="prd-space" name="scroll-top" id="scroll-top"></div>
         <div class="nav-fixed-placeholder"></div>
         <nav class="navbar clearfix">
             <ul id="navMenu">
@@ -714,6 +714,7 @@
         $(".nav-content > div:first").nextAll().hide("fast");
 //        var obj = $(".nav-content > div[class^='navWrap']");
         $("#navMenu > li").click(function(){
+            $("html,body").animate({scrollTop: $("#scroll-top").offset().top-$(".navbar").outerHeight()}, 50);
             var navBar = $(this).prop("id");
             var navItem = $(".nav-content").children("."+navBar);
             if(!$(this).hasClass("link-active")){

@@ -29,11 +29,38 @@
 <div class="viewport" data-role="page">
     <div class="headerBar">
         <div class="header">
-            <span class="back">
+            <a href="javascript:;" class="back">
                 <i class="back-arrow"></i>
                 <em class="back-border"></em>
-            </span>
-            <img class="head-img" src="../../mstatic/images/logo-new.png">
+            </a>
+            <span class="title">欢迎来到真旅行欢迎来到真旅行</span>
+				<span class="acut-menu">
+					<span class="menu-pop">
+						<a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+                            <img class="acut-img" src="../../mstatic/images/acut-img.png">
+                        </a>
+					</span>
+	                <span class="menu-btn">
+	                	<span class="menu-img"></span>
+	                	<div class="menu-list-container">
+                            <i class="arrow-up"></i>
+                            <ul class="menu-list">
+                                <li>
+                                    <a data-role="none" href="javascript:;">产品列表</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的订单</a>
+                                </li>
+                                <li style="border-bottom:2px solid #666;">
+                                    <a data-role="none" href="javascript:;">我的钱包</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">私信</a>
+                                </li>
+                            </ul>
+                        </div>
+	                </span>
+	            </span>
         </div>
     </div>
     <div class="warn-info clearfix"><a href="../登录注册/登录注册.html" rel="external">您还未登录账号，点此登录</a><span class="btn-close"></span></div>
@@ -408,6 +435,16 @@
 <script>
     $(function () {
         FastClick.attach(document.body);
+        $(".menu-btn").click(function(event){
+
+            $(this).find(".menu-list-container").toggle();
+            if($(".menu-list-container").is(":visible")){
+                $(document).click(function(){
+                    $(".menu-list-container").fadeOut("fast");
+                });
+            }
+            event.stopPropagation();
+        });
 
         $(".agreement .order-checkbox").click(function(){
             $(".order-checkbox").toggleClass("order-checkbox-checked");
