@@ -706,22 +706,37 @@ input[type="radio"]:checked + .pay-check{
     white-space: nowrap;
     border-bottom: 1px #dcdcdc solid;
 }
-.order-traveler-box .ui-grid-b .ui-block-a{
+.order-traveler-box > .ui-grid-b > .ui-block-a{
     width:35%;
 }
-.order-traveler-box .ui-grid-b .ui-block-b{
-    width:42%;
-    padding-right:0.2rem;
+.order-traveler-box > .ui-grid-b > .ui-block-b{
+    width:55%;
 }
-.order-traveler-box .ui-grid-b .ui-block-c{
-    width:20%;
+.order-traveler-box > .ui-grid-b > .ui-block-c{
+    width:10%;
     text-align: right;
 }
-.order-traveler-box .ui-grid-a .ui-block-a{
+.order-traveler-box > .ui-grid-a > .ui-block-a{
     width:35%;
 }
-.order-traveler-box .ui-grid-a .ui-block-b{
+.order-traveler-box > .ui-grid-a > .ui-block-b{
     width:65%;
+}
+.order-traveler-box > .order-traveler-wrap > .ui-grid-b{
+    padding:0.8rem 0;
+    border-bottom: 1px #dcdcdc solid;
+    font-size: 0.7rem;
+}
+.order-traveler-box > .order-traveler-wrap > .ui-grid-b > .ui-block-a{
+    width:35%;
+}
+.order-traveler-box > .order-traveler-wrap > .ui-grid-b > .ui-block-b{
+    width:45%;
+    padding-right:0.3rem;
+}
+.order-traveler-box > .order-traveler-wrap > .ui-grid-b > .ui-block-c{
+    width:20%;
+    text-align: right;
 }
 .traveler-row{
     padding:0.8rem 0;
