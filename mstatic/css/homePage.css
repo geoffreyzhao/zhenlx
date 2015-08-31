@@ -955,8 +955,14 @@
     background-color:#1dafae;
     text-align: center;
     color:#8efff5;
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     line-height:1.2rem;
+}
+.bottom-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;
 }
 .prd-order{
     height:2.2rem;
