@@ -70,7 +70,7 @@
 	margin-top:0.95rem;
 }
 .payInfo{
-    width:4.5rem;
+    width:4.8rem;
 	float: right;
 	/*margin:0.75rem 0 0 0.45rem;*/
 }
@@ -751,6 +751,18 @@
 }
 .tkt-flight .ui-grid-b .ui-block-b, .tkt-trip .ui-grid-b .ui-block-b{
     text-align: center;
+}
+.tkt-trip{
+    padding:0.5rem 0;
+    font-size: 0.6rem;
+    line-height:1rem;
+    border-top: 1px #d5efee dashed;
+}
+.tkt-trip-til{
+    color:#11b9b7;
+}
+.tkt-trip-txt{
+    color:#999;
 }
 .flt-start{
     font-size: 0.75rem;

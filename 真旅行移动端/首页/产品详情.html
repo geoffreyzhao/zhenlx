@@ -150,18 +150,24 @@
                         <p class="wuge-txt">提到柬埔寨，最先跃入脑海的一定是吴哥窟。面对宏伟壮观的护城长廊，内心深处的敬畏感油然而生。巴戎庙内宝塔林立，塔布隆寺演绎树与塔的爱恨交缠。置身佛的国度，不经意间就会撞见充满友善和微笑的眼神，一切皆有佛性。所以，当你站在“微笑的高棉”前时，看着他那深邃的眼睛，你会读懂一切，也无需再问那个很多人会问起的问题“为什么叫他微笑的高棉呢”所以，当你站在“微笑的高棉”前时，看着他那深邃的眼睛，你会读懂一切，也无需再问那个很多人会问起的问题“为什么叫他微笑的高棉呢”</p>
                     </li>
                     <li>
-                        <h3 class="navWrap-til">当地Tips:
-                            <span class="common-tips tips-sun tips-sun-press live"></span><span class="common-tips tips-bag"></span><span class="common-tips tips-tower"></span><span class="common-tips tips-loca"></span><span class="common-tips tips-list"></span>
-                        </h3>
+                        <h3 class="navWrap-til">当地Tips:</h3>
+                        <ul class="tips-wrap">
+                            <li class="live"><span class="common-tips tips-sun tips-sun-press"></span></li>
+                            <li><span class="common-tips tips-bag"></span></li>
+                            <li><span class="common-tips tips-tower"></span></li>
+                            <li><span class="common-tips tips-loca"></span></li>
+                            <li><span class="common-tips tips-list"></span></li>
+                        </ul>
                         <span class="common-icon icon-disc"></span>
                         <span class="box-border"></span>
-                        <div class="tip-box">
-                            <span class="arrow-up"></span>
-                            <p class="sun-cnt">小圈和大圈是暹粒旅行中  不可不知的两条经典游览线路。无数实践证明，这两条线路是最高效省时的游览方式。柬埔寨是热带国家，温度普遍很高，多准备一些夏天衣服1-3月平均参考温度是21-35摄氏度，天气稍炎热。在参观寺庙时女性请勿穿着吊带和膝盖以上的短裙，同时请注意防晒，使用防晒指数较高的防晒霜。</p>
-                            <p class="bag-cnt hidden">购物提示，购物提示，购物提示，购物提示，购物提示，购物提示……</p>
-                            <p class="tower-cnt hidden">通讯提示，通讯提示，通讯提示，通讯提示，通讯提示，通讯提示……</p>
-                            <p class="loca-cnt hidden">风俗提示，风俗提示，风俗提示，风俗提示，风俗提示，风俗提示……</p>
-                            <p class="list-cnt hidden">其他提示，其他提示，其他提示，其他提示，其他提示，其他提示……</p>
+                        <div class="tips-content">
+                            <span class="com-bot0" id="tips-bot"></span>
+                            <span class="com-top0" id="tips-top"></span>
+                            <div class="tips-detail sun-cnt">小圈和大圈是暹粒旅行中  不可不知的两条经典游览线路。无数实践证明，这两条线路是最高效省时的游览方式。柬埔寨是热带国家，温度普遍很高，多准备一些夏天衣服1-3月平均参考温度是21-35摄氏度，天气稍炎热。在参观寺庙时女性请勿穿着吊带和膝盖以上的短裙，同时请注意防晒，使用防晒指数较高的防晒霜。</div>
+                            <div class="tips-detail bag-cnt hidden">购物提示，购物提示，购物提示，购物提示，购物提示，购物提示……</div>
+                            <div class="tips-detail tower-cnt hidden">通讯提示，通讯提示，通讯提示，通讯提示，通讯提示，通讯提示……</div>
+                            <div class="tips-detail loca-cnt hidden">风俗提示，风俗提示，风俗提示，风俗提示，风俗提示，风俗提示……</div>
+                            <div class="tips-detail list-cnt hidden">其他提示，其他提示，其他提示，其他提示，其他提示，其他提示……</div>
                         </div>
                     </li>
                     <li>
@@ -744,24 +750,24 @@
         });
 
         var pressArr = ["tips-sun-press", "tips-bag-press", "tips-tower-press", "tips-loca-press", "tips-list-press"];
-        var tipsObj = $(".navWrap-til > .common-tips");
+        var tipsObj = $(".tips-wrap > li");
         tipsObj.click(function(){
             var tipsInd = $(this).index();
             var pressInd = pressArr[tipsInd];
 
             if(!$(this).hasClass("live")){
                 var theInd = tipsObj.parent().find(".live").index();
-                tipsObj.eq(theInd).removeClass(pressArr[theInd]);
+                tipsObj.eq(theInd).find(".common-tips").removeClass(pressArr[theInd]);
                 $(this).siblings().removeClass("live");
-                tipsObj.eq(tipsInd).addClass(pressInd);
+                tipsObj.eq(tipsInd).find(".common-tips").addClass(pressInd);
                 $(this).addClass("live");
 
-                var num = tipsInd * 1.85 + 4.1;
-                $(".tip-box > .arrow-up").css("left", num+"rem");
-                var boxObj = $(".tip-box > p").eq(tipsInd);
+                $("#tips-bot").attr("class",'com-bot'+tipsInd+'');
+                $("#tips-top").attr("class",'com-top'+tipsInd+'');
+                var boxObj = $(".tips-content > .tips-detail").eq(tipsInd);
                 if(boxObj.hasClass("hidden")){
                     boxObj.removeClass("hidden");
-                    boxObj.siblings().addClass("hidden");
+                    boxObj.siblings(".tips-detail").addClass("hidden");
                 }
             }
         });

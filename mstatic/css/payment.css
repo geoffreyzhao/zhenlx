@@ -458,6 +458,18 @@ input[type="radio"]:checked + .pay-check{
     -webkit-background-size: 100%;
     background-size: 100%;
 }
+.tkt-trip{
+    padding:0.5rem 0;
+    font-size: 0.6rem;
+    line-height:1rem;
+    border-top: 1px #d5efee dashed;
+}
+.tkt-trip-til{
+    color:#11b9b7;
+}
+.tkt-trip-txt{
+    color:#999;
+}
 .order-row{
     font-size: 0.75rem;
     color:#333;
@@ -533,11 +545,13 @@ input[type="radio"]:checked + .pay-check{
     border-radius: 0.125rem;
 }
 .order-list-box{
-    padding:0.7rem 0;
     border-bottom: 1px #d5efee solid;
 }
 .order-list-box:last-child{
-    border-bottom: none;
+    border-bottom: 0;
+}
+.order-list-box .ui-grid-b{
+    padding:0.5rem 0;
 }
 .order-box-left{
     text-align: right;

@@ -519,7 +519,7 @@
     left: -1.35rem;
     background-color:#3fc0ae;
     font-size: 0.55rem;
-    line-height:1rem;
+    line-height:0.8rem;
     color:#fff;
     text-align: center;
     vertical-align: middle;
@@ -546,10 +546,34 @@
     line-height:1.2rem;
     margin-top:0.5rem;
 }
+.tips-top{
+    width:13.475rem;
+    height:0.075rem;
+    position: absolute;
+    top:2rem;
+    left:0;
+    display: inline-block;
+    background: url("../../mstatic/images/tips-top.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.tips-wrap{
+    list-style: none;
+    position: absolute;
+    top:0.4rem;
+    left:4rem;
+}
+.tips-wrap > li{
+    margin-right:1rem;
+    display: inline-block;
+    float: left;
+}
+.tips-wrap > li:last-child{
+    margin-right: 0;
+}
 .common-tips{
     width:1rem;
     height:1rem;
-    margin-left:0.85rem;
     display: inline-block;
     vertical-align: middle;
 }
@@ -603,27 +627,139 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-.tip-box{
+
+.tips-content{
+    width: 13.45rem;
+    min-height:5rem;
     position: relative;
-    padding:0.75rem 0.35rem;
-    margin-right:0.25rem;
-    word-wrap: break-word;
-    word-break: break-all;
-    border: 1px #3fc0ae solid;
+    padding:0.5rem 0.35rem;
+    border: 1px solid #3fc0ae;
     -webkit-border-radius: 0.125rem;
     -moz-border-radius: 0.125rem;
     border-radius: 0.125rem;
+    word-wrap: break-word;
+    word-break: break-all;
 }
-.tip-box > .arrow-up{
-    width:1.025rem;
-    height:0.25rem;
+
+.com-bot0{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
     position: absolute;
-    top: -0.25rem;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #3fc0ae ;
     left: 4.1rem;
-    display: inline-block;
-    background: url("../../mstatic/images/arrow-up.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    top: -0.6rem;
+}
+.com-bot1{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #3fc0ae ;
+    left: 6.1rem;
+    top: -0.6rem;
+}
+.com-bot2{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #3fc0ae ;
+    left: 8.1rem;
+    top: -0.6rem;
+}
+.com-bot3{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #3fc0ae ;
+    left: 10.1rem;
+    top: -0.6rem;
+}
+.com-bot4{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #3fc0ae ;
+    left: 12.1rem;
+    top: -0.6rem;
+}
+.com-top0 {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #ffffff;
+    left: 4.1rem;
+    top: -0.52rem;
+}
+.com-top1 {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #ffffff;
+    left: 6.1rem;
+    top: -0.52rem;
+}
+.com-top2 {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #ffffff;
+    left: 8.1rem;
+    top: -0.52rem;
+}
+.com-top3 {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #ffffff;
+    left: 10.1rem;
+    top: -0.52rem;
+}
+.com-top4 {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    border-width: 0.3rem;
+    border-style: dashed dashed solid ;
+    border-color: transparent transparent #ffffff;
+    left: 12.1rem;
+    top: -0.52rem;
 }
 .common-travel, .inst-icon{
     width:0.975rem;
@@ -1113,6 +1249,7 @@
     vertical-align: middle;
 }
 .prdlist-address{
+    margin-top:0.4rem;
     position: relative;
 }
 .prdlist-address .ui-grid-a{
@@ -1217,6 +1354,7 @@
     bottom: 0;
     left:0;
     padding:0.3rem;
+    font-size: 0.85rem;
 }
 /** end **/
 
