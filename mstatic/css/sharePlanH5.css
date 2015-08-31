@@ -92,18 +92,26 @@ html,body,img,span{
 	left:0;
 	top:26.8%;
 } */
+.cloudBox{
+	-webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
+	   -moz-animation:cloudmove 1.2s ease 0s infinite alternate;
+	    -ms-animation:cloudmove 1.2s ease 0s infinite alternate;
+	     -o-animation:cloudmove 1.2s ease 0s infinite alternate;
+	 -khtml-animation:cloudmove 1.2s ease 0s infinite alternate;
+	        animation:cloudmove 1.2s ease 0s infinite alternate; 
+}
 .cloudRT{
 	width:1.925rem;
 	height:1.125rem;
 	position: absolute;
 	right:9.375%;
 	bottom:27%;
-	-webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
+	/* -webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
 	   -moz-animation:cloudmove 1.2s ease 0s infinite alternate;
 	    -ms-animation:cloudmove 1.2s ease 0s infinite alternate;
 	     -o-animation:cloudmove 1.2s ease 0s infinite alternate;
 	 -khtml-animation:cloudmove 1.2s ease 0s infinite alternate;
-	        animation:cloudmove 1.2s ease 0s infinite alternate;  
+	        animation:cloudmove 1.2s ease 0s infinite alternate;   */
 }
 .cloudB{
 	width:2.925rem;
@@ -111,12 +119,12 @@ html,body,img,span{
 	position: absolute;
 	bottom:-1.5rem;
 	right:30%;
-	-webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
+	/* -webkit-animation:cloudmove 1.2s ease 0s infinite alternate;
 	   -moz-animation:cloudmove 1.2s ease 0s infinite alternate;
 	    -ms-animation:cloudmove 1.2s ease 0s infinite alternate;
 	     -o-animation:cloudmove 1.2s ease 0s infinite alternate;
 	 -khtml-animation:cloudmove 1.2s ease 0s infinite alternate;
-	        animation:cloudmove 1.2s ease 0s infinite alternate;  
+	        animation:cloudmove 1.2s ease 0s infinite alternate;   */
 }
 .cloudLC{
 	width:2.55rem;
@@ -124,12 +132,12 @@ html,body,img,span{
 	position: absolute;
 	bottom:2.55%;
 	left:7.8%;
-	-webkit-animation:cloudmove 1.2s ease 1s infinite alternate;
+	/* -webkit-animation:cloudmove 1.2s ease 1s infinite alternate;
 	   -moz-animation:cloudmove 1.2s ease 1s infinite alternate;
 	    -ms-animation:cloudmove 1.2s ease 1s infinite alternate;
 	     -o-animation:cloudmove 1.2s ease 1s infinite alternate;
 	 -khtml-animation:cloudmove 1.2s ease 1s infinite alternate;
-	        animation:cloudmove 1.2s ease 1s infinite alternate;  
+	        animation:cloudmove 1.2s ease 1s infinite alternate;   */
 }
 .slide1-container2{
 	width:13.55rem;

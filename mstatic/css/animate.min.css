@@ -351,3 +351,60 @@ Copyright (c) 2015 Daniel Eden
 	-webkit-animation-name:btnscale;
 	animation-name:btnscale
 }
+
+
+
+@-webkit-keyframes slideInLeftOuter{
+	0%{
+		-webkit-transform:translateX(-300%);
+		transform:translateX(-300%);
+		visibility:visible
+	}
+	100%{
+		-webkit-transform:translateX(0);
+		transform:translateX(0)
+	}
+}
+@keyframes slideInLeftOuter{
+	0%{
+		-webkit-transform:translateX(-300%);
+		-ms-transform:translateX(-300%);
+		transform:translateX(-300%);
+		visibility:visible
+	}
+	100%{
+		-webkit-transform:translateX(0);
+		-ms-transform:translateX(0);transform:translateX(0)
+	}
+}.slideInLeftOuter{
+	-webkit-animation-name:slideInLeftOuter;
+	animation-name:slideInLeftOuter
+}
+
+@-webkit-keyframes slideInRightOuter{
+	0%{
+		-webkit-transform:translateX(300%);
+		transform:translateX(300%);
+		visibility:visible
+	}
+	100%{
+		-webkit-transform:translateX(0);
+		transform:translateX(0)
+	}
+}
+@keyframes slideInRightOuter{
+	0%{
+		-webkit-transform:translateX(300%);
+		-ms-transform:translateX(300%);
+		transform:translateX(300%);
+		visibility:visible
+	}
+	100%{
+		-webkit-transform:translateX(0);
+		-ms-transform:translateX(0);
+		transform:translateX(0)
+	}
+}.slideInRightOuter{
+	-webkit-animation-name:slideInRightOuter;
+	animation-name:slideInRightOuter
+}
