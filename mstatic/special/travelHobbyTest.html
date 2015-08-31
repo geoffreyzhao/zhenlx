@@ -148,17 +148,17 @@
 			}else if(score>30&&score<=40){
 				resultnum=3;	//  文艺葩
 			}
-			/*  结果存入数据库
+
+			// 结果存入数据库（上线时记得清楚数据库）
 			$.ajax({
 				type: 'GET',
-				url: 'http://wx.extdev.travelzen.cn/ztravel-front-weixin/weixinShareController/saveGameRecord',
+				url: 'http://m.zhenlx.com/weixinShareController/saveGameRecord',
 				data: {
 					gameId: 'travelHobbyTest',
 					gameResult: selectScore.toString(),
 					gameScore: score,
 				}
 			});
-			*/
 
 			var title = "",
 				link = "",
@@ -595,6 +595,8 @@
 
 	<script type="text/javascript">
 		$(function(){
+
+			FastClick.attach(document.body);
 			/*
 			$.ajax({
 			   type: "GET",
@@ -609,52 +611,10 @@
 			         nonceStr: data.nonceStr, // 必填，生成签名的随机串
 			         signature: data.signature,// 必填，签名，见附录1
 			         jsApiList: ['onMenuShareTimeline'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-			     });
-
-			     var title = "",
-			     	link = "",
-			     	imgUrl = "";
-
-			     if (resultnum == 0) {
-
-			     	title = "美食控";
-			     	link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult1.html";
-			     	imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/images/shareResultImg01.jpg";
-			     } else if (resultnum == 1) {
-
-			     	title = "享受犯";
-			     	link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult2.html";
-			     	imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/images/shareResultImg02.jpg";
-			     } else if (resultnum == 2) {
-
-			     	title = "浪漫癖";
-			     	link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult3.html";
-			     	imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/images/shareResultImg03.jpg";
-			     } else if (resultnum == 3) {
-
-			     	title = "文艺葩";
-			     	link = "http://wx.extdev.travelzen.cn/mstatic/special/shareResult4.html";
-			     	imgUrl = "http://wx.extdev.travelzen.cn/mstatic/special/images/shareResultImg04.jpg";
-			     }
-
-			     wx.ready(function(){
-			     	wx.onMenuShareTimeline({
-			     	    title: '我是' + title, // 分享标题
-			     	    link: link, // 分享链接
-			     	    imgUrl: imgUrl, // 分享图标
-			     	    success: function () { 
-			     	        // 用户确认分享后执行的回调函数
-			     	    },
-			     	    cancel: function () { 
-			     	        // 用户取消分享后执行的回调函数
-			     	    }
-			     	});
-			     });
+			     });			     
 			   }
 			});
-			*/
-
-			FastClick.attach(document.body);
+			*/			
 
 			/*  配置参数本地先写死  */
 
