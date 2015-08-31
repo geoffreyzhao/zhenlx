@@ -1111,7 +1111,7 @@
 }
 .menu-row{
     width:100%;
-    height:10rem;
+    max-height:10rem;
     overflow: scroll;
 }
 .menu-row .ui-grid-c{
