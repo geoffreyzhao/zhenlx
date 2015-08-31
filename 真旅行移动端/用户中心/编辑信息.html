@@ -25,86 +25,84 @@
 </head>
 <body>
 <div class="viewport" data-role="page">
-    <div data-role="content">
-        <div class="headerBar">
-            <div class="header">
-				<span class="back">
-					<i class="back-arrow"></i>
-					<em class="back-border"></em>
-				</span>
-                <span class="title">编辑信息</span>
+    <div class="headerBar">
+        <div class="header">
+            <span class="back">
+                <i class="back-arrow"></i>
+                <em class="back-border"></em>
+            </span>
+            <span class="title">编辑信息</span>
+        </div>
+    </div>
+    <div class="edt-contain">
+        <div class="edt-row-box">
+            <div class="edt-til">头像</div>
+            <img class="edt-popimg" src="../../images/logo-login.png" alt="用户头像">
+        </div>
+        <div class="edt-row-box">
+            <div class="edt-box-left">昵称</div>
+            <div class="edt-box-right"><input type="text" value="太平洋的鲸鱼" data-role="none"></div>
+        </div>
+        <div class="edt-row-box">
+            <div class="edt-box-left">性别</div>
+            <div class="edt-box-right">
+                <label>
+                    <input type="radio" name="sex" value="male" data-role="none" checked>
+                    <span>男</span>
+                </label>
+                <label>
+                    <input type="radio" name="sex" value="female" data-role="none">
+                    <span>女</span>
+                </label>
             </div>
         </div>
-        <div class="edt-contain">
-            <div class="edt-row-box">
-                <div class="edt-til">头像</div>
-                <img class="edt-popimg" src="../../images/logo-login.png" alt="用户头像">
+        <div class="edt-row-box">
+            <div class="edt-box-left">邮箱</div>
+            <div class="edt-box-right">
+                <input type="text" value="dorianzhou@126.com" data-role="none">
             </div>
-            <div class="edt-row-box">
-                <div class="edt-box-left">昵称</div>
-                <div class="edt-box-right"><input type="text" value="太平洋的鲸鱼" data-role="none"></div>
+        </div>
+        <div class="edt-row-box">
+            <div class="edt-box-left">手机号</div>
+            <div class="edt-box-right">
+                <input type="text" value="13501723564" data-role="none">
             </div>
-            <div class="edt-row-box">
-                <div class="edt-box-left">性别</div>
-                <div class="edt-box-right">
-                    <label>
-                        <input type="radio" name="sex" value="male" data-role="none" checked>
-                        <span>男</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="sex" value="female" data-role="none">
-                        <span>女</span>
-                    </label>
+        </div>
+        <div class="edt-row-box">
+            <div class="edt-box-left">&nbsp;</div>
+            <div class="edt-box-right">
+                <input type="password" placeholder="登录密码" data-role="none">
+            </div>
+        </div>
+        <div class="edt-row-box">
+            <div class="edt-box-left">&nbsp;</div>
+            <div class="edt-box-right">
+                <input type="text" placeholder="新手机号" data-role="none">
+            </div>
+        </div>
+        <div class="edt-row-box">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">&nbsp;</div>
+                <div class="ui-block-b clearfix">
+                    <input class="input-txt" type="text" placeholder="验证码" data-role="none"><a class="btn-vld" data-role="none" href="javascript:void(0);">获取短信验证码</a>
                 </div>
             </div>
-            <div class="edt-row-box">
-                <div class="edt-box-left">邮箱</div>
-                <div class="edt-box-right">
-                    <input type="text" value="dorianzhou@126.com" data-role="none">
-                </div>
+        </div>
+        <div class="edt-row-box">
+            <div class="edt-box-left">真实姓名</div>
+            <div class="edt-box-right">
+                <input type="text" value="地瓜" data-role="none">
             </div>
-            <div class="edt-row-box">
-                <div class="edt-box-left">手机号</div>
-                <div class="edt-box-right">
-                    <input type="text" value="13501723564" data-role="none">
-                </div>
+        </div>
+        <div class="row-link">
+            <div class="edt-box-left">通信地址</div>
+            <div class="edt-box-right">
+                <span class="u-add">上海 上海市 黄浦区</span><span class="arr-lr"><label class="u-lr"></label></span>
             </div>
-            <div class="edt-row-box">
-                <div class="edt-box-left">&nbsp;</div>
-                <div class="edt-box-right">
-                    <input type="password" placeholder="登录密码" data-role="none">
-                </div>
-            </div>
-            <div class="edt-row-box">
-                <div class="edt-box-left">&nbsp;</div>
-                <div class="edt-box-right">
-                    <input type="text" placeholder="新手机号" data-role="none">
-                </div>
-            </div>
-            <div class="edt-row-box">
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">&nbsp;</div>
-                    <div class="ui-block-b clearfix">
-                        <input class="input-txt" type="text" placeholder="验证码" data-role="none"><a class="btn-vld" data-role="none" href="javascript:void(0);">获取短信验证码</a>
-                    </div>
-                </div>
-            </div>
-            <div class="edt-row-box">
-                <div class="edt-box-left">真实姓名</div>
-                <div class="edt-box-right">
-                    <input type="text" value="地瓜" data-role="none">
-                </div>
-            </div>
-            <div class="row-link">
-                <div class="edt-box-left">通信地址</div>
-                <div class="edt-box-right">
-                    <span class="u-add">上海 上海市 黄浦区</span><span class="arr-lr"><label class="u-lr"></label></span>
-                </div>
-            </div>
-            <textarea class="edt-textEara" data-role="none"></textarea>
-            <div class="save-box">
-                <a class="edt-save" href="javascript:void(0);">保存信息</a>
-            </div>
+        </div>
+        <textarea class="edt-textEara" data-role="none"></textarea>
+        <div class="save-box">
+            <a class="edt-save" href="javascript:void(0);">保存信息</a>
         </div>
     </div>
 </div>
