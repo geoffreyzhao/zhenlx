@@ -126,6 +126,14 @@
     word-break: break-all;
     margin-bottom: 0.5rem;
 }
+.navWrap-val ol {
+    font-size: 0.7rem!important;
+    color: #666!important;
+}
+.navWrap-val ol li span {
+    font-size: 0.7rem!important;
+    color: #666!important;
+}
 .hotel-til{
     font-size: 0.75rem;
     color:#333;
@@ -170,8 +178,6 @@
 }
 .hotel-model .yellow-star {
     vertical-align: text-top;
-    /*vertical-align: sub;*/
-    /*vertical-align: text-top;*/
 }
 .swiper-container{
     width: 16rem;
@@ -441,6 +447,10 @@
 }
 .present-list{
     padding:0.5rem;
+}
+.present-list ol {
+    font-size: 0.7rem!important;
+    color: #666!important;
 }
 .present-list ul li{
     line-height:1.4rem;
