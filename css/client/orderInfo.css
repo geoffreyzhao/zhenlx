@@ -317,9 +317,12 @@
     border: 1px solid #d4f0f0;
     text-align: center;
 }
+.commonLightBlueThead ol {
+    padding-left: 20px!important;
+}
 .commonLightBlueThead ol li {
     list-style-type: decimal!important;
-    padding-left: 12px!important;
+    padding-left: 0px!important;
 }
 .editContactInfoContent{
     font-size: 14px;
