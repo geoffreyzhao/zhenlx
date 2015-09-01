@@ -1075,3 +1075,9 @@
     color: #11b9b7;
     text-decoration: underline;
 }
+
+/* 扫码支付 */
+.qrCodePay{
+    text-align:center;
+    margin:150px auto;
+}
