@@ -7591,12 +7591,12 @@
         var dp = new DatepickerScroll("#birthdate", {
         	startYear: 1900,
 			endYear: 2015,
-			defaultDate: new Date(1980,5,14),
+			defaultDate: new Date(1900,0,1),
 			cancelCallback: function(){
 				console.log(1);
 			},
 			confirmCallback: function() {
-				console.log(2);
+				alert(dp.getDate());
 			}
         }).init();
 

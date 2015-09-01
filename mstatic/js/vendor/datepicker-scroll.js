@@ -224,7 +224,9 @@
     			flag = (year_end_posY - year_start_posY > 0) ? 1 : -1,
     			scrollNum = curLiNum - (flag * passLiNum);
 
-    		scroll_year.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
+    		console.log('scrollNum: '+scrollNum);
+    		// scroll_year.scrollTo(0, -(scrollNum - 3) * liHeight, 300, IScroll.utils.ease.quadratic);
+    		scroll_year.scrollToElement(document.querySelector('#'+scroll_year.scroller.id+' li:nth-child('+(scrollNum+4)+')'), 300, null, null, IScroll.utils.ease.quadratic);
 
     		$(scroll_year.wrapper).find("li").removeClass("current");
 			$(scroll_year.wrapper).find("li").eq(scrollNum-1).addClass("current");
