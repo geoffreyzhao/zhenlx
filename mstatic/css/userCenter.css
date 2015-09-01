@@ -355,9 +355,13 @@
     display: inline-block;
 }
 .edt-box-right{
+    width: 10rem;
     padding:0.3rem 0;
     display: inline-block;
     color:#333;
+}
+.edt-box-right > input{
+    width:9rem;
 }
 .edt-box-right input:focus{
     outline: none;
@@ -375,7 +379,7 @@
     color: #ccc;
 }
 .input-txt{
-    width:3.5rem;
+    width:4.5rem;
     display: inline-block;
     vertical-align: middle;
     padding-top:0.3rem;
