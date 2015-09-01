@@ -115,10 +115,47 @@
                                         </span>                                        
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="mailContent">
                                     <th>邮箱:</th>
                                     <td>
                                         <span>dorianzhou@126.com</span>
+                                        <span class="commonIcon editIcon"></span>
+                                    </td>
+                                </tr>
+                                <tr class="editModelInfo editMail">
+                                    <td colspan="2" class="noPadding">
+                                        <div class="editModelTabContainer" style="display: none;">
+                                            <table class="editModelTab">
+                                            <colgroup>
+                                                <col width="100">
+                                                <col width="">
+                                            </colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <th>登录密码:</th>
+                                                <td>
+                                                    <input type="password" class="verifyBox" style="width: 220px;">
+                                                    <div class="verifyStyle">
+                                                        <i class="commonIcon errorIcon"></i>请输入登录密码
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>新邮箱:</th>
+                                                <td>
+                                                    <input type="text" value="" style="width: 220px;" placeholder="请输入新邮箱地址">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th></th>
+                                                <td>
+                                                    <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
+                                                    <a href="javascript:void(0);" class="cancelOper">取消</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr class="phoneNumberContent">
@@ -429,6 +466,20 @@
             $(this).parents(".editPhoneNumber").find(".editModelTabContainer").slideUp(function(){
                 $(window).trigger("resize");
                 $(this).parents(".editPhoneNumber").siblings(".phoneNumberContent").find(".editIcon").show();
+            });
+        });
+
+        //  编辑邮箱
+        $(".mailContent .editIcon").click(function(){
+            $(this).hide();
+            $(this).parents(".mailContent").siblings(".editMail").find(".editModelTabContainer").slideDown(function(){
+                $(window).trigger("resize");
+            });
+        });
+        $(".editMail .cancelOper").click(function(){
+            $(this).parents(".editMail").find(".editModelTabContainer").slideUp(function(){
+                $(window).trigger("resize");
+                $(this).parents(".editMail").siblings(".mailContent").find(".editIcon").show();
             });
         });
         
