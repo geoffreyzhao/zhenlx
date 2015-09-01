@@ -701,11 +701,11 @@ from{transform:rotateZ(0deg);}
     top:20.85rem;
     left:12.8rem;
     overflow:hidden;
-    -webkit-animation:loadingdotshow 5s linear 1s infinite ;
-       -moz-animation:loadingdotshow 5s linear 1s infinite ;
-        -ms-animation:loadingdotshow 5s linear 1s infinite ;
-         -o-animation:loadingdotshow 5s linear 1s infinite ;
-            animation:loadingdotshow 5s linear 1s infinite ;
+  -webkit-animation:loadingdotshow 5s linear 1s infinite ;
+     -moz-animation:loadingdotshow 5s linear 1s infinite ;
+      -ms-animation:loadingdotshow 5s linear 1s infinite ;
+       -o-animation:loadingdotshow 5s linear 1s infinite ;
+          animation:loadingdotshow 5s linear 1s infinite ;
 }
 .loadingdot{
     width:1.55rem;
@@ -720,11 +720,11 @@ from{transform:rotateZ(0deg);}
     position:absolute;
     left:8.6rem;
     top:16.15rem;
-    -webkit-animation: sweat1 3s linear 0s infinite;
-       -moz-animation: sweat1 3s linear 0s infinite;
-        -ms-animation: sweat1 3s linear 0s infinite;
-         -o-animation: sweat1 3s linear 0s infinite;
-            animation: sweat1 3s linear 0s infinite;
+ -webkit-animation: sweat1 3s linear 0s infinite;
+    -moz-animation: sweat1 3s linear 0s infinite;
+     -ms-animation: sweat1 3s linear 0s infinite;
+      -o-animation: sweat1 3s linear 0s infinite;
+         animation: sweat1 3s linear 0s infinite;
 }
 .bubble2{
     width:0.7rem;
@@ -732,11 +732,11 @@ from{transform:rotateZ(0deg);}
     position:absolute;
     left:8.95rem;
     top:14.55rem;
-    -webkit-animation: sweat2 3s linear 0s infinite;
-       -moz-animation: sweat2 3s linear 0s infinite;
-        -ms-animation: sweat2 3s linear 0s infinite;
-         -o-animation: sweat2 3s linear 0s infinite;
-            animation: sweat2 3s linear 0s infinite;
+  -webkit-animation: sweat2 3s linear 0s infinite;
+     -moz-animation: sweat2 3s linear 0s infinite;
+      -ms-animation: sweat2 3s linear 0s infinite;
+       -o-animation: sweat2 3s linear 0s infinite;
+          animation: sweat2 3s linear 0s infinite;
 }
 .bubble3{
     width:1.2rem;
@@ -744,11 +744,11 @@ from{transform:rotateZ(0deg);}
     position:absolute;
     left:9rem;
     top:12.9rem;
-    -webkit-animation: sweat3 3s linear 0s infinite;
-       -moz-animation: sweat3 3s linear 0s infinite;
-        -ms-animation: sweat3 3s linear 0s infinite;
-         -o-animation: sweat3 3s linear 0s infinite;
-            animation: sweat3 3s linear 0s infinite;
+-webkit-animation: sweat3 3s linear 0s infinite;
+   -moz-animation: sweat3 3s linear 0s infinite;
+    -ms-animation: sweat3 3s linear 0s infinite;
+     -o-animation: sweat3 3s linear 0s infinite;
+        animation: sweat3 3s linear 0s infinite;
 }
 .slide1{
     width:100%;
@@ -810,6 +810,7 @@ from{transform:rotateZ(0deg);}
     box-sizing:border-box;
 }
 .slide12{
+    padding-top:14px;
     background:#1caead;
 }
 .slide-containerHeader{
@@ -902,16 +903,16 @@ from{transform:rotateZ(-5deg);}
     position:absolute;
     right: 2.8rem;
     bottom: 2.4rem;
-    -webkit-animation: legrotate 0.25s linear 0.25s infinite alternate;
-       -moz-animation: legrotate 0.25s linear 0.25s infinite alternate;
-        -ms-animation: legrotate 0.25s linear 0.25s infinite alternate;
-         -o-animation: legrotate 0.25s linear 0.25s infinite alternate;
-            animation: legrotate 0.25s linear 0.25s infinite alternate;
-    -webkit-transform-origin:left top;
-       -moz-transform-origin:left top;
-        -ms-transform-origin:left top;
-         -o-transform-origin:left top;
-            transform-origin:left top;
+   -webkit-animation: legrotate 0.25s linear 0.25s infinite alternate;
+      -moz-animation: legrotate 0.25s linear 0.25s infinite alternate;
+       -ms-animation: legrotate 0.25s linear 0.25s infinite alternate;
+        -o-animation: legrotate 0.25s linear 0.25s infinite alternate;
+           animation: legrotate 0.25s linear 0.25s infinite alternate;
+   -webkit-transform-origin:left top;
+      -moz-transform-origin:left top;
+       -ms-transform-origin:left top;
+        -o-transform-origin:left top;
+           transform-origin:left top;
 }
 @-webkit-keyframes light {
     from {-webkit-transform: scale(0.8,0.8);}
@@ -1032,11 +1033,11 @@ img:focus{
     position:absolute;
     top:2.15rem;
     left:4.1rem;
-    -webkit-animation: twitle 1.2s linear 0s infinite alternate;
-       -moz-animation: twitle 1.2s linear 0s infinite alternate;
-        -ms-animation: twitle 1.2s linear 0s infinite alternate;
-         -o-animation: twitle 1.2s linear 0s infinite alternate;
-            animation: twitle 1.2s linear 0s infinite alternate;
+   -webkit-animation: twitle 1.2s linear 0s infinite alternate;
+      -moz-animation: twitle 1.2s linear 0s infinite alternate;
+       -ms-animation: twitle 1.2s linear 0s infinite alternate;
+        -o-animation: twitle 1.2s linear 0s infinite alternate;
+           animation: twitle 1.2s linear 0s infinite alternate;
 }
 .slide3-starright{
     width:1.025rem;
@@ -1096,16 +1097,16 @@ img:focus{
     -o-transform:scale(0.3,0.3);
     -moz-transform:scale(0.3,0.3);
         transform:scale(0.3,0.3);
-    -webkit-animation: snore 2s linear 0s infinite;
-       -moz-animation: snore 2s linear 0s infinite;
-        -ms-animation: snore 2s linear 0s infinite;
-         -o-animation: snore 2s linear 0s infinite;
-            animation: snore 2s linear 0s infinite;
-    -webkit-transform-origin:right center;
-       -moz-transform-origin:right center;
-        -ms-transform-origin:right center;
-         -o-transform-origin:right center;
-            transform-origin:right center;
+  -webkit-animation: snore 2s linear 0s infinite;
+     -moz-animation: snore 2s linear 0s infinite;
+      -ms-animation: snore 2s linear 0s infinite;
+       -o-animation: snore 2s linear 0s infinite;
+          animation: snore 2s linear 0s infinite;
+  -webkit-transform-origin:right center;
+     -moz-transform-origin:right center;
+      -ms-transform-origin:right center;
+       -o-transform-origin:right center;
+          transform-origin:right center;
 }
 .test3a{
     width:12.4rem;
@@ -1141,16 +1142,16 @@ img:focus{
     bottom: 2.5rem;
     left: 5.8rem;
     z-index: -1;
-    -webkit-animation: legrotate 0.3s linear 0s infinite alternate;
-       -moz-animation: legrotate 0.3s linear 0s infinite alternate;
-        -ms-animation: legrotate 0.3s linear 0s infinite alternate;
-         -o-animation: legrotate 0.3s linear 0s infinite alternate;
-            animation: legrotate 0.3s linear 0s infinite alternate;
-    -webkit-transform-origin:1.15rem top;
-       -moz-transform-origin:1.15rem top;
-        -ms-transform-origin:1.15rem top;
-         -o-transform-origin:1.15rem top;
-            transform-origin:1.15rem top;
+  -webkit-animation: legrotate 0.3s linear 0s infinite alternate;
+     -moz-animation: legrotate 0.3s linear 0s infinite alternate;
+      -ms-animation: legrotate 0.3s linear 0s infinite alternate;
+       -o-animation: legrotate 0.3s linear 0s infinite alternate;
+          animation: legrotate 0.3s linear 0s infinite alternate;
+  -webkit-transform-origin:1.15rem top;
+     -moz-transform-origin:1.15rem top;
+      -ms-transform-origin:1.15rem top;
+       -o-transform-origin:1.15rem top;
+          transform-origin:1.15rem top;
 }
 .test4a{
     width:8.175rem;
@@ -1218,40 +1219,24 @@ img:focus{
 @-webkit-keyframes sweat1{
     1%{opacity:0;}
     5%{opacity:1;}
-    35%{opacity:1;}
-    40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
 }
 @-o-keyframes sweat1{
     1%{opacity:0;}
     5%{opacity:1;}
-    35%{opacity:1;}
-    40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
 }
 @-moz-keyframes sweat1{
     1%{opacity:0;}
     5%{opacity:1;}
-    35%{opacity:1;}
-    40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
 }
 @keyframes sweat1{
     1%{opacity:0;}
     5%{opacity:1;}
-    35%{opacity:1;}
-    40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
 }
@@ -1261,49 +1246,37 @@ img:focus{
     position:absolute;
     right:2.1rem;
     bottom:5.2rem;
-    -webkit-animation: sweat1 2s linear 0s infinite;
-       -moz-animation: sweat1 2s linear 0s infinite;
-        -ms-animation: sweat1 2s linear 0s infinite;
-         -o-animation: sweat1 2s linear 0s infinite;
-            animation: sweat1 2s linear 0s infinite;
+   -webkit-animation: sweat1 2s linear 0s infinite;
+      -moz-animation: sweat1 2s linear 0s infinite;
+       -ms-animation: sweat1 2s linear 0s infinite;
+        -o-animation: sweat1 2s linear 0s infinite;
+           animation: sweat1 2s linear 0s infinite;
 }
 @-webkit-keyframes sweat2{
     1%{opacity:0;}
-    5%{opacity:0;}
     35%{opacity:0;}
     40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
 }
 @-o-keyframes sweat2{
     1%{opacity:0;}
-    5%{opacity:0;}
     35%{opacity:0;}
     40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
 }
 @-moz-keyframes sweat2{
     1%{opacity:0;}
-    5%{opacity:0;}
     35%{opacity:0;}
     40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
 }
 @keyframes sweat2{
     1%{opacity:0;}
-    5%{opacity:0;}
     35%{opacity:0;}
     40%{opacity:1;}
-    70%{opacity:1;}
-    75%{opacity:1;}
     99%{opacity:1;}
     100%{opacity:0;}
 }
@@ -1313,17 +1286,14 @@ img:focus{
     position:absolute;
     right:2.4rem;
     bottom:4.8rem;
-    -webkit-animation: sweat2 2s linear 0s infinite;
-       -moz-animation: sweat2 2s linear 0s infinite;
-        -ms-animation: sweat2 2s linear 0s infinite;
-         -o-animation: sweat2 2s linear 0s infinite;
-            animation: sweat2 2s linear 0s infinite;
+   -webkit-animation: sweat2 2s linear 0s infinite;
+      -moz-animation: sweat2 2s linear 0s infinite;
+       -ms-animation: sweat2 2s linear 0s infinite;
+        -o-animation: sweat2 2s linear 0s infinite;
+           animation: sweat2 2s linear 0s infinite;
 }
 @-webkit-keyframes sweat3{
     1%{opacity:0;}
-    5%{opacity:0;}
-    35%{opacity:0;}
-    40%{opacity:0;}
     70%{opacity:0;}
     75%{opacity:1;}
     99%{opacity:1;}
@@ -1331,9 +1301,6 @@ img:focus{
 }
 @-o-keyframes sweat3{
     1%{opacity:0;}
-    5%{opacity:0;}
-    35%{opacity:0;}
-    40%{opacity:0;}
     70%{opacity:0;}
     75%{opacity:1;}
     99%{opacity:1;}
@@ -1341,9 +1308,6 @@ img:focus{
 }
 @-moz-keyframes sweat3{
     1%{opacity:0;}
-    5%{opacity:0;}
-    35%{opacity:0;}
-    40%{opacity:0;}
     70%{opacity:0;}
     75%{opacity:1;}
     99%{opacity:1;}
@@ -1351,9 +1315,6 @@ img:focus{
 }
 @keyframes sweat3{
     1%{opacity:0;}
-    5%{opacity:0;}
-    35%{opacity:0;}
-    40%{opacity:0;}
     70%{opacity:0;}
     75%{opacity:1;}
     99%{opacity:1;}
@@ -1365,11 +1326,11 @@ img:focus{
     position:absolute;
     right:2.7rem;
     bottom:4.2rem;
-    -webkit-animation: sweat3 2s linear 0s infinite;
-       -moz-animation: sweat3 2s linear 0s infinite;
-        -ms-animation: sweat3 2s linear 0s infinite;
-         -o-animation: sweat3 2s linear 0s infinite;
-            animation: sweat3 2s linear 0s infinite;
+   -webkit-animation: sweat3 2s linear 0s infinite;
+      -moz-animation: sweat3 2s linear 0s infinite;
+       -ms-animation: sweat3 2s linear 0s infinite;
+        -o-animation: sweat3 2s linear 0s infinite;
+           animation: sweat3 2s linear 0s infinite;
 }
 @-webkit-keyframes slide7words {
     from {-webkit-transform: scale(0.9,0.9);}
@@ -1393,11 +1354,11 @@ img:focus{
     position:absolute;
     top: 4.5rem;
     right:-0.3rem;
-    -webkit-animation:slide7words 0.5s linear 0.25s infinite alternate;
-       -moz-animation:slide7words 0.5s linear 0.25s infinite alternate;
-        -ms-animation:slide7words 0.5s linear 0.25s infinite alternate;
-         -o-animation:slide7words 0.5s linear 0.25s infinite alternate;
-            animation:slide7words 0.5s linear 0.25s infinite alternate;
+   -webkit-animation:slide7words 0.5s linear 0.25s infinite alternate;
+      -moz-animation:slide7words 0.5s linear 0.25s infinite alternate;
+       -ms-animation:slide7words 0.5s linear 0.25s infinite alternate;
+        -o-animation:slide7words 0.5s linear 0.25s infinite alternate;
+           animation:slide7words 0.5s linear 0.25s infinite alternate;
 }
 .test6a{
     width:11.35rem;
@@ -1445,16 +1406,16 @@ from{transform:rotateZ(-4deg);}
     position:absolute;
     right:3.7rem;
     bottom:0.8rem;
-    -webkit-animation: leg-catrotate 0.2s linear 0s infinite;
-       -moz-animation: leg-catrotate 0.2s linear 0s infinite;
-        -ms-animation: leg-catrotate 0.2s linear 0s infinite;
-         -o-animation: leg-catrotate 0.2s linear 0s infinite;
-            animation: leg-catrotate 0.2s linear 0s infinite;
-    -webkit-transform-origin:left 1.2rem;
-       -moz-transform-origin:left 1.2rem;
-        -ms-transform-origin:left 1.2rem;
-         -o-transform-origin:left 1.2rem;
-            transform-origin:left 1.2rem;
+   -webkit-animation: leg-catrotate 0.2s linear 0s infinite;
+      -moz-animation: leg-catrotate 0.2s linear 0s infinite;
+       -ms-animation: leg-catrotate 0.2s linear 0s infinite;
+        -o-animation: leg-catrotate 0.2s linear 0s infinite;
+           animation: leg-catrotate 0.2s linear 0s infinite;
+   -webkit-transform-origin:left 1.2rem;
+      -moz-transform-origin:left 1.2rem;
+       -ms-transform-origin:left 1.2rem;
+        -o-transform-origin:left 1.2rem;
+           transform-origin:left 1.2rem;
 }
 .test7a{
     width:9.275rem;
@@ -1482,16 +1443,16 @@ from{transform:rotateZ(-4deg);}
     position:absolute;
     top:6.1rem;
     left:3.65rem;
-    -webkit-animation: leg-catrotate 0.3s linear 0s infinite;
-       -moz-animation: leg-catrotate 0.3s linear 0s infinite;
-        -ms-animation: leg-catrotate 0.3s linear 0s infinite;
-         -o-animation: leg-catrotate 0.3s linear 0s infinite;
-            animation: leg-catrotate 0.3s linear 0s infinite;
-    -webkit-transform-origin:1.5rem 0.5rem;
-       -moz-transform-origin:1.5rem 0.5rem;
-        -ms-transform-origin:1.5rem 0.5rem;
-         -o-transform-origin:1.5rem 0.5rem;
-            transform-origin:1.5rem 0.5rem;
+ -webkit-animation: leg-catrotate 0.3s linear 0s infinite;
+    -moz-animation: leg-catrotate 0.3s linear 0s infinite;
+     -ms-animation: leg-catrotate 0.3s linear 0s infinite;
+      -o-animation: leg-catrotate 0.3s linear 0s infinite;
+         animation: leg-catrotate 0.3s linear 0s infinite;
+ -webkit-transform-origin:1.5rem 0.5rem;
+    -moz-transform-origin:1.5rem 0.5rem;
+     -ms-transform-origin:1.5rem 0.5rem;
+      -o-transform-origin:1.5rem 0.5rem;
+         transform-origin:1.5rem 0.5rem;
 }
 .slide9anger{
     width:0.525rem;
@@ -1549,10 +1510,10 @@ from{transform:rotateZ(-4deg);}
 }
 .slide10words1.active{
     -webkit-animation: words1 2.4s linear 0.3s infinite;
-       -moz-animation: words1 2.4s linear 0.3s infinite;
-        -ms-animation: words1 2.4s linear 0.3s infinite;
-         -o-animation: words1 2.4s linear 0.3s infinite;
-            animation: words1 2.4s linear 0.3s infinite;
+      -moz-animation: words1 2.4s linear 0.3s infinite;
+       -ms-animation: words1 2.4s linear 0.3s infinite;
+        -o-animation: words1 2.4s linear 0.3s infinite;
+           animation: words1 2.4s linear 0.3s infinite; 
 }
 @-webkit-keyframes words2{
     1%{opacity:0;}
@@ -1587,10 +1548,10 @@ from{transform:rotateZ(-4deg);}
 }
 .slide10words2.active{
     -webkit-animation: words2 2.4s linear 0.3s infinite;
-       -moz-animation: words2 2.4s linear 0.3s infinite;
-        -ms-animation: words2 2.4s linear 0.3s infinite;
-         -o-animation: words2 2.4s linear 0.3s infinite;
-            animation: words2 2.4s linear 0.3s infinite;
+     -moz-animation: words2 2.4s linear 0.3s infinite;
+      -ms-animation: words2 2.4s linear 0.3s infinite;
+       -o-animation: words2 2.4s linear 0.3s infinite;
+          animation: words2 2.4s linear 0.3s infinite; 
 }
 @-webkit-keyframes words3{
     1%{opacity:0;}
@@ -1625,10 +1586,10 @@ from{transform:rotateZ(-4deg);}
 }
 .slide10words3.active{
     -webkit-animation: words3 2.4s linear 0.3s infinite;
-       -moz-animation: words3 2.4s linear 0.3s infinite;
-        -ms-animation: words3 2.4s linear 0.3s infinite;
-         -o-animation: words3 2.4s linear 0.3s infinite;
-            animation: words3 2.4s linear 0.3s infinite;
+      -moz-animation: words3 2.4s linear 0.3s infinite;
+       -ms-animation: words3 2.4s linear 0.3s infinite;
+        -o-animation: words3 2.4s linear 0.3s infinite;
+           animation: words3 2.4s linear 0.3s infinite; 
 }
 @-webkit-keyframes words4{
     1%{opacity:0;}
@@ -1662,11 +1623,11 @@ from{transform:rotateZ(-4deg);}
     left:9.15rem;
 }
 .slide10words4.active{
-    -webkit-animation: words4 2.4s linear 0.3s infinite;
-       -moz-animation: words4 2.4s linear 0.3s infinite;
-        -ms-animation: words4 2.4s linear 0.3s infinite;
-         -o-animation: words4 2.4s linear 0.3s infinite;
-            animation: words4 2.4s linear 0.3s infinite;
+     -webkit-animation: words4 2.4s linear 0.3s infinite;
+      -moz-animation: words4 2.4s linear 0.3s infinite;
+       -ms-animation: words4 2.4s linear 0.3s infinite;
+        -o-animation: words4 2.4s linear 0.3s infinite;
+           animation: words4 2.4s linear 0.3s infinite; 
 }
 .test9a{
     width:13.85rem;
@@ -1710,11 +1671,11 @@ from{transform:rotateZ(-4deg);}
     position:absolute;
     top:6.25rem;
     right:1.2rem;
-    -webkit-animation: questionmark 1s linear 0s infinite alternate;
-       -moz-animation: questionmark 1s linear 0s infinite alternate;
-        -ms-animation: questionmark 1s linear 0s infinite alternate;
-         -o-animation: questionmark 1s linear 0s infinite alternate;
-            animation: questionmark 1s linear 0s infinite alternate;
+   -webkit-animation: questionmark 1s linear 0s infinite alternate;
+      -moz-animation: questionmark 1s linear 0s infinite alternate;
+       -ms-animation: questionmark 1s linear 0s infinite alternate;
+        -o-animation: questionmark 1s linear 0s infinite alternate;
+           animation: questionmark 1s linear 0s infinite alternate;
 }
 .test10a{
     width:10.325rem;
