@@ -690,9 +690,10 @@
 .row-content .ui-grid-a{
     padding-top:0.3rem;
     padding-bottom: 0.3rem;
-}
-.row-content .ui-grid-a:first-child{
     border-bottom:1px #dcdcdc solid;
+}
+.row-content .ui-grid-a:last-child{
+    border-bottom:0;
 }
 .row-txt{
     display: inline-block;
@@ -709,9 +710,6 @@
     display: inline-block;
     font-size: 0.75rem;
     color:#333;
-}
-.tkt-cnt:first-child{
-    border-bottom: 1px #b7eae9 solid;
 }
 .tkt-agenda{
     padding:0.5rem 0;
