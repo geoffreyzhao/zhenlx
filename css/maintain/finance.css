@@ -187,3 +187,37 @@
     color: red;
 }
 /** end **/
+
+/* 供应商付款申请 供应商付款审核 start*/
+.boxPaddingT{
+    padding-top:15px;
+}
+.boxPaddingB{
+    border-bottom:1px dotted #d5d5d5;
+    padding-bottom:10px;
+}
+.newVoucherTableBody th{
+    text-align: right;
+    padding: 8px 10px 8px 0;
+}
+.newVoucherTableBody td{
+    padding: 8px 0;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.newVoucherTableBody .fcf78c68,.payTotal .fcf78c68{
+    color:#f78c68;
+}
+.payTotal{
+    margin:20px 0;
+    float: left;
+}
+.payTotal span{
+    margin-left:20px;
+    margin-right:20px;
+}
+.boxPaddingB td,.boxPaddingT td.fweight{
+    font-size:15px;
+    font-weight:bold;
+}
+/* 供应商付款申请 供应商付款审核 end*/
