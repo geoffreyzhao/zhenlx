@@ -173,9 +173,11 @@
 				    imgUrl: imgUrl, // 分享图标
 				    success: function () { 
 				        // 用户确认分享后执行的回调函数
+				        _paq.push(['trackEvent', 'weixinShare', 'travelHobbyTest', 'timeLine']);
 				    },
 				    cancel: function () { 
 				        // 用户取消分享后执行的回调函数
+				        _paq.push(['trackEvent', 'weixinShareCancel', 'travelHobbyTest', 'timeLine']);
 				    }
 				});
 
@@ -186,9 +188,11 @@
 				    imgUrl: imgUrl, // 分享图标
 				    success: function () { 
 				        // 用户确认分享后执行的回调函数
+				         _paq.push(['trackEvent', 'weixinShare', 'travelHobbyTest', 'appMessage']);
 				    },
 				    cancel: function () { 
 				        // 用户取消分享后执行的回调函数
+				        _paq.push(['trackEvent', 'weixinShareCancel', 'travelHobbyTest', 'appMessage']);
 				    }
 				});
 			});
@@ -554,24 +558,6 @@
 		
 		root.style.height = window.innerHeight + "px";
 	</script>
-	<script type="text/javascript">
-    	var _paq = _paq || [];
-    	(function(){ var u=(("https:" == document.location.protocol) ? "https://" : "http://");
-    	_paq.push(['setSiteId', 3]);
-    	_paq.push(['setTrackerUrl', u+'pangu.tdxinfo.com/tracker.do']);
-    	_paq.push(['setCookieDomain', '*.zhenlx.com']);
-    	_paq.push(['setDomains', '*.zhenlx.com']);
-    	var account = '';
-    	if(account)_paq.push(['setUserId', account]);
-    	_paq.push(['trackPageView']);
-    	_paq.push(['enableLinkTracking']);
-    	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    	g.type='text/javascript';
-    	g.defer=true;
-    	g.async=true;
-    	g.src=u+'scpg.tdxinfo.com/js/pangumini.js?v=1.0.6';
-    	s.parentNode.insertBefore(g,s); })();
-	</script>
 
 	<script type="text/javascript">
 		$(function(){
@@ -594,8 +580,26 @@
 			     });			     
 			   }
 			});
-
 		});
+	</script>
+
+	<script type="text/javascript">
+    	var _paq = _paq || [];
+    	(function(){ var u=(("https:" == document.location.protocol) ? "https://" : "http://");
+    	_paq.push(['setSiteId', 3]);
+    	_paq.push(['setTrackerUrl', u+'pangu.tdxinfo.com/tracker.do']);
+    	_paq.push(['setCookieDomain', '*.zhenlx.com']);
+    	_paq.push(['setDomains', '*.zhenlx.com']);
+    	var account = '';
+    	if(account)_paq.push(['setUserId', account]);
+    	_paq.push(['trackPageView']);
+    	_paq.push(['enableLinkTracking']);
+    	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    	g.type='text/javascript';
+    	g.defer=true;
+    	g.async=true;
+    	g.src=u+'scpg.tdxinfo.com/js/pangumini.js?v=1.0.6';
+    	s.parentNode.insertBefore(g,s); })();
 	</script>
 </body>
 
