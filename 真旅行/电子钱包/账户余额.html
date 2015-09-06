@@ -65,7 +65,7 @@
 							<div class="accountInfo">
 								<span class="piggyBank"></span>
 								<span class="money">￥200</span>
-								<a href="javascript:;" class="commonBtn orangeBtn">去提现</a>
+								<a href="javascript:;" class="commonBtn blueBtn exchange">兑换</a>
 							</div>
                         	<div class="subTitle">好友帮赚钱
 								<span class="aboutMakeMoney green-border-tooltip" title="怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱怎么赚钱"><i class="question-mark-icon"></i>关于赚钱</span>
@@ -140,6 +140,55 @@
 		</div>
 	</div>
 
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="exchangeModal">
+        <div class="modal-dialog" style="width: 800px;height:350px;">
+            <div class="modal-content" style="height:350px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">                    
+                    <div class="exchangeBlance">本期兑换的是<span>电话充值卡</span>哦，你的账户余额为<em class="balance">10</em>元，你本次可兑换
+						<select>
+							<option>10</option>
+							<option>30</option>
+							<option>50</option>
+							<option>100</option>
+						</select> 元
+                    </div>
+                    <div class="tellNum">
+                    	<p><span>请确认您的手机号</span><input type="text"></p>
+						<p class="c999">请仔细核对充值手机号，已经提交不可更改；提交操作后，充值金额将在24小时内到账</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="commonBtn blueBtn goExchange" style="width: 150px;" data-dismiss="modal">好哒，去兑换</a>
+                    <a href="javascript:void(0);" class="commonBtn orangeBtn" style="width: 150px;">不用了，我是土豪</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="exchangeSuccesModal">
+        <div class="modal-dialog" style="width:400px;height:200px;">
+            <div class="modal-content" style="height:200px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">                    
+                    <p class="exchangeSucces">兑换成功，请注意查收</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="commonBtn blueBtn goExchange" style="width: 125px;" data-dismiss="modal">嗯呢，知道了</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 	<script type="text/javascript">
 		$(function(){
 			$(".green-border-tooltip").tooltip({
@@ -147,6 +196,19 @@
 	            placement: 'bottom',
 	            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
 	        });
+
+            $(".modal").modal({
+                backdrop: "static",
+                keyboard: false,
+                show: false
+            });
+            $(".exchange").click(function(){
+                $("#exchangeModal").modal("show");
+            });
+            $(".goExchange").click(function(){
+                $("#exchangeSuccesModal").modal("show");
+            });
+
 		});
 	</script>
 

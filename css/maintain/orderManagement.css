@@ -379,3 +379,21 @@
 }
 
 /*  自由行-订单详情 E  */
+
+/* 兑换订单 */
+.exchangeTable {
+    margin-top:30px;
+}
+.exchangeTable .orangefa7f1f{
+    color:#fa7f1f;
+}
+.exchangeTable th{
+    text-align:right;
+    font-weight:bold;
+    font-size:15px;
+    padding-right:10px;
+}
+.exchangeTime{
+    margin-top:30px;
+    margin-bottom:35px;
+}

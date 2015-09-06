@@ -458,5 +458,40 @@
 .person-reward-table .status {
 	color: #11b9b7;
 }
-
+.exchange {
+	float:right;
+}
+.balance{
+	color:#ffa200;
+	margin:0 5px;
+}
+.tellNum{
+	margin-top:30px;
+	padding-left: 20px;
+}
+.exchangeBlance{
+	font-size:16px;
+	margin-top:30px;
+	padding-left: 20px;
+}
+.tellNum p{
+	margin-bottom:15px;
+}
+.tellNum p.c999{
+	color:#999;
+}
+.tellNum span{
+	font-size:16px;
+	font-weight:bold;
+	margin-right:10px;
+}
+.tellNum input{
+	width:250px;
+	height:35px;
+}
+.modal-body .exchangeSucces{
+	text-align:center;
+	font-size:16px;
+	margin-top:20px;
+}
 /*  账户余额  end  */
