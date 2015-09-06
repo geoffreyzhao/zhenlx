@@ -1348,8 +1348,19 @@ ul.common-tab > li.rest {
     line-height: 20px;
 }
 
+.calTable .tdCont .canntorder .leftNum {
+    color: #696969;
+    line-height: 20px;
+}
+
+.calTable .tdCont .canntorder .price {
+    color: #696969;
+    line-height: 20px;
+}
+
 .calTable .tdCont .onsale:hover,
-.calTable .tdCont .soldout:hover {
+.calTable .tdCont .soldout:hover,
+.calTable .tdCont .canntorder:hover {
     cursor: pointer;
 }
 
@@ -1688,6 +1699,20 @@ ul.common-tab > li.rest {
 
 .order-block .order-btn:hover {
     background-color: #f29901;
+    cursor: pointer;
+}
+.order-block .want-order-btn {
+    background-color: #11b9b7;
+    text-align: center;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 3px;
+    margin: 15px 0;
+}
+.order-block .want-order-btn:hover {
+    background-color: #11AFAD;
     cursor: pointer;
 }
 .fixed-order-btn {

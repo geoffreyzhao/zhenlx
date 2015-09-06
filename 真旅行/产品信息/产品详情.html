@@ -235,6 +235,7 @@
                             <span class="price-text">￥3856<em>起</em></span>
                         </div>
                         <div class="order-btn">立即预定</div>
+                        <div class="want-order-btn">想去</div>
                         <div class="share-info">
                             <span class="share-icon"></span>
                             <span class="title">分享:</span>
@@ -1049,20 +1050,20 @@
                 { month : "2015/05/01",   //  数据月份
                   info : [
                     //  几号       剩余库存      售价
-                    {dayDate: 1, leftNum: 10, price: 2000},   //  当月下的每天数据
-                    {dayDate: 3, leftNum: 22, price: 998},
-                    {dayDate: 9, leftNum: 0, price: 20000},
-                    {dayDate: 22, leftNum: 10, price: 20000},
-                    {dayDate: 23, leftNum: 0, price: 88888},
-                    {dayDate: 26, leftNum: 12, price: 1999},
-                    {dayDate: 31, leftNum: 22, price: 2499}
+                    {dayDate: 1, leftNum: 10, price: 2000, canOrder: true},   //  当月下的每天数据
+                    {dayDate: 3, leftNum: 22, price: 998, canOrder: true},
+                    {dayDate: 9, leftNum: 0, price: 20000, canOrder: true},
+                    {dayDate: 22, leftNum: 10, price: 20000, canOrder: true},
+                    {dayDate: 23, leftNum: 0, price: 88888, canOrder: false},
+                    {dayDate: 26, leftNum: 12, price: 1999, canOrder: true},
+                    {dayDate: 31, leftNum: 22, price: 2499, canOrder: false}
                   ]
                 },
                 { month : "2015/06/01",   
-                  info : [{dayDate: 1, leftNum: 10, price: 2000}]
+                  info : [{dayDate: 1, leftNum: 10, price: 2000, canOrder: false}]
                 },
                 { month : "2015/07/01",   
-                  info : [{dayDate: 31, leftNum: 10, price: 2000}]
+                  info : [{dayDate: 31, leftNum: 10, price: 2000, canOrder: false}]
                 },
                 { month : "2015/08/01",  
                   info : []
@@ -1151,20 +1152,29 @@
         var d = currentDay < 10 ? '0' + currentDay : currentDay;
         var dateStr = monthInfo.month.slice(0, 7) + "/" + d;
         
-        if (!!dayInfo) {            
+        if (!!dayInfo) {  
 
-            if (dayInfo.leftNum == 0) {
-                tdCont += "<div class='tdCont'><div class='priceCover soldout clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
-                tdCont += "<div class='right-block'><div class='leftNum'>售完</div>";
+            if (!dayInfo.canOrder) {   //  不可预订, 显示未开放状态
+
+                tdCont += "<div class='tdCont'><div class='priceCover canntorder clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+                tdCont += "<div class='right-block'><div class='leftNum'>未开放</div>";
                 tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
-            } else {
-                tdCont += "<div class='tdCont'><div class='priceCover onsale clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
 
-                tdCont += "<div class='right-block'><div class='leftNum'>余" + dayInfo.leftNum + "</div>";
+            } else {   //   可预订，显示库存状态
 
-                tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
-                
-            }
+                if (dayInfo.leftNum == 0) {
+                    tdCont += "<div class='tdCont'><div class='priceCover soldout clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+                    tdCont += "<div class='right-block'><div class='leftNum'>售完</div>";
+                    tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+                } else {
+                    tdCont += "<div class='tdCont'><div class='priceCover onsale clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+
+                    tdCont += "<div class='right-block'><div class='leftNum'>余" + dayInfo.leftNum + "</div>";
+
+                    tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+                    
+                }
+            }    
         } else {
             tdCont += "<div class='tdCont'><div class='priceCover noPrice'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + currentDay + "</div></div></div>";
         }
