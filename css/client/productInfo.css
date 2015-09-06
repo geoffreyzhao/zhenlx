@@ -1962,14 +1962,26 @@ ul.common-tab > li.rest {
     font-size: 20px;
     line-height: 20px;
 }
-.start-trip{
-    /*padding: 9px 52px;*/
+.start-trip-wrapper {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+}
+.start-trip {
     padding: 9px 0;
     border: 2px solid #fff;
     border-radius: 6px;
     display: inline-block;
     width: 227px;
     text-align: center;
+    position: relative;
+    -webkit-transition: all .5s ease;
+       -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+         -o-transition: all .5s ease;
+            transition: all .5s ease;
 }
 .start-trip i {
     display: inline-block;
@@ -1977,12 +1989,29 @@ ul.common-tab > li.rest {
     height: 20px;
     background: url(../../images/client/white-right-arrow.png) no-repeat;
     vertical-align: middle;
-    margin-right: 3px;
-    margin-top: -10px;
+    position: absolute;
+    top: 16px;
+    right: 40px;
+    opacity: 0;
+    filter:alpha(opacity=0);    
+    -webkit-transition: all .5s ease;
+       -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+         -o-transition: all .5s ease;
+            transition: all .5s ease;
 }
 .start-trip span {
     font-size: 24px;
     color: #fff;
+}
+.start-trip:hover {
+    padding-right: 30px;
+    background-color: rgba(255,255,255,0.2);    
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33FFFFFF,endColorstr=#33FFFFFF);/*IE-8*/
+}
+.start-trip:hover i {
+    opacity: 1;
+    filter:alpha(opacity=100);
 }
 .product-clomu ul{
     list-style: none;
@@ -2185,6 +2214,7 @@ ul.common-tab > li.rest {
     width: 100%;
     height: 100%;
     z-index: 2;
+    display: block;
 }
 .content-above-image {
     position: relative;
@@ -2194,6 +2224,7 @@ ul.common-tab > li.rest {
     margin: 0;
     float: right;
     right: 50%;
+    top: -6%;
 }
 .content-above-image img {
     position: relative;
@@ -2201,8 +2232,9 @@ ul.common-tab > li.rest {
 }
 .content-above-image a {
     position: absolute;
-    left: 76.5%;
-    bottom: 69px;
+    /*left: 76.5%;*/
+    left: 94%;
+    bottom: 50px;
 }
 .content-above-image a:hover {
     background-color: rgba(255,255,255,0.2);    
