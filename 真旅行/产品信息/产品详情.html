@@ -234,7 +234,7 @@
                             <span class="title">市场价:</span>
                             <span class="price-text">￥3856<em>起</em></span>
                         </div>
-                        <div class="order-btn">立即预定</div>
+                        <!-- <div class="order-btn">立即预定</div> -->
                         <div class="want-order-btn">想去</div>
                         <div class="share-info">
                             <span class="share-icon"></span>
@@ -268,7 +268,8 @@
                             <a href="#userEvaluation">用户评价</a>
                         </li>
                         <li class="last">
-                            <div class="fixed-order-btn">立即预定</div>
+                            <!-- <div class="fixed-order-btn">立即预定</div> -->
+                            <div class="fixed-want-order-btn">想去</div>
                         </li>
                     </ul>
                 </div>
@@ -981,9 +982,35 @@
             <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
         </div>
     </div>
+
+    <!-- 想去弹窗提示 -->
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="interestedTip">
+        <div class="modal-dialog" style="width: 450px;height:195px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body interestedTipText">                    
+                    <p>抱歉该日期暂未开放购买</p>
+                    <p>我们已接收到您的需求，正在火速处理，敬请期待</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="commonBtn blueBtn width170">知道了</a>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script>
         $(function(){  
+
+            $(".want-order-btn, .fixed-want-order-btn").click(function(){
+                $("#interestedTip").modal("show");
+            });
+
             $(".fixedList").affix({
                 offset: {
                     top: function(){
@@ -2028,6 +2055,7 @@
         });
     }
 </script>
+
 <script type="text/javascript">
     $(".wishlist").click(function(){
         if (!$(this).hasClass("actived")) {

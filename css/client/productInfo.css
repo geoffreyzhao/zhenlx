@@ -1712,7 +1712,7 @@ ul.common-tab > li.rest {
     margin: 15px 0;
 }
 .order-block .want-order-btn:hover {
-    background-color: #11AFAD;
+    background-color: #0c9c9a;
     cursor: pointer;
 }
 .fixed-order-btn {
@@ -1728,6 +1728,21 @@ ul.common-tab > li.rest {
 }
 .fixed-order-btn:hover {
     background-color: #f29901;
+    cursor: pointer;
+}
+.fixed-want-order-btn {
+    background-color: #11b9b7;
+    text-align: center;
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    width: 160px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.fixed-want-order-btn:hover {
+    background-color: #0c9c9a;
     cursor: pointer;
 }
 
@@ -2489,4 +2504,13 @@ ul.common-tab > li.rest {
 #hotelInfo {
     position: relative;
     top: -75px;
+}
+
+.interestedTipText {
+    text-align: center;
+}
+
+.interestedTipText p {
+    margin: 10px 0;
+    font-size: 16px;
 }
