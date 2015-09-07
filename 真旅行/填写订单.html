@@ -441,6 +441,7 @@
                                             <span class="transName last">MING</span> -->
                                             <input type="text" style="width: 140px;" placeholder="姓(拼音或英文)"/>
                                             <input type="text" style="width: 140px;" placeholder="名(拼音或英文)"/>
+                                            <span class="inputTip">为确保出行，请仔细核对拼音名</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -687,6 +688,7 @@
                             </div>
                             <div class="buttonDiv">
                                 <a href="javascript:void(0);" class="bigOrangeBtn active checkUser submitted" style="width:220px;">提交订单</a>
+                                <a href="javascript:void(0);" class="bigOrangeBtn active checkUser submitted" style="width:220px;">提交订单2</a>
                                 <button class="priceChangeBtn">变价提示</button>
                             </div>
                         </div>
@@ -835,6 +837,47 @@
 
     </div>
 
+    <!--  提交订单，未注册  -->
+    <div class="modal fade" id="checkUserRegister">
+        <div class="modal-dialog" style="width:605px;height:319px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">欢迎加入真旅行</h4>
+                </div>
+                <div class="modal-body clearfix">                    
+                    <div class="row">
+                        <div class="componentInput phoneNumber mobileRow">
+                            <i class="commonIcon phoneNumberIcon"></i>
+                            <input type="text" placeholder="请输入手机号" style="width: 309px;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="componentInput verificationCode messageCodeRow">
+                            <i class="commonIcon verificationCodeIcon"></i>
+                            <input type="text" placeholder="请输入验证码" style="width: 185px;">
+                            <span class="getVerificationCode">获取短信验证码</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="componentInput PWStrong" style="margin-bottom:26px;position: relative;">
+                            <i class="commonIcon lockIcon"></i>
+                            <input type="password" placeholder="创建密码, 请输入6-28位字符" style="width: 261px;">
+                            <span class="strength weak">弱</span>
+                            <i class="view-pwd"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="javascript:void(0);" class="bigOrangeBtn active" style="width:345px;margin-bottom: 10px;">继续支付</a><br>
+                        <a href="javascript:void(0);" class="commonBtn blueBtn" style="width:345px;">返回修改预订信息</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 变价弹窗提示 -->
     <div class="modal fade" id="priceChangeTip">
         <div class="modal-dialog" style="width: 450px;height:195px;">
@@ -930,6 +973,20 @@
     <script type="text/javascript">
         $(function(){
 
+            $(".checkUser").eq(1).click(function(){
+                $("#checkUserRegister").modal("show");
+            });
+
+            $(".view-pwd").click(function() {
+                $(this).toggleClass("active");
+
+                if ($(this).hasClass("active")) {
+                    $(this).closest(".componentInput").find("input").attr("type", "text");
+                } else {
+                    $(this).closest(".componentInput").find("input").attr("type", "password");
+                }
+            });
+
             $(".stoppingPoint.transfer").attr("title", $("#transfer_flight_template").html());
             $(".stoppingPoint.stop").attr("title", $("#stop_flight_template").html());
 
@@ -950,9 +1007,8 @@
                 keyboard: false
             });
 
-            $(".checkUser").click(function(){
+            $(".checkUser").eq(0).click(function(){
                $("#checkUser").modal("show");
-
             });
 
             $(".priceChangeBtn").click(function(){

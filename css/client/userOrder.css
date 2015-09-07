@@ -545,7 +545,10 @@
 .submitOrderBlock .buttonDiv {
     margin: 20px auto 0 auto;
 }
-
+.guestContainer .inputTip {
+    color: #11b9b7;
+    margin-left: 6px;
+}
 
 /* 右侧 S */
 .right-orderPriceDetail {
@@ -1080,4 +1083,28 @@
 .qrCodePay{
     text-align:center;
     margin:150px auto;
+}
+
+.view-pwd {
+    display: inline-block;
+    width: 22px;
+    height: 13px;
+    background: url(../../images/client/view-pwd.png) no-repeat 0 0;
+    vertical-align: middle;
+    position: absolute;
+    right: -30px;
+    top: 14px;
+    cursor: pointer;
+}
+
+.view-pwd.active {
+    background-position: 0 -15px;
+}
+
+#checkUserRegister .modal-body {
+    text-align: center;
+}
+
+#checkUserRegister .row {
+    margin: 20px 0;
 }
