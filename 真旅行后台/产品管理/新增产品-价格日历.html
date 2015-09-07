@@ -276,12 +276,14 @@
                                 <input type="text" style="width:55px;" data-cv="required" />点前预订
                             </div>
                             <div class="oper-btn">
-                                <button class="commonButton orange-f79767Btn save">保 存</button>
                                 <button class="commonButton blue-45c8dcButton closeBtn">关 闭</button>
                                 <button class="commonButton red-fe6869Button deleteBtn">删 除</button>
+                                <button class="commonButton gray-bbbButton canOrderSet">设为未开放</button>
+                            </div>
+                            <div class="oper-btn">
+                                <button class="commonButton orange-f79767Btn save">保 存</button>
                                 <button class="commonButton gray-bbbButton cancel">取 消</button>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -303,7 +305,7 @@
             //  定义日期数据格式
 
             var data = [{
-                month: "2015-04",
+                month: "2015-09",
                     monthData: [{
                         day: 22,
                         soldNum: 3,
@@ -312,7 +314,8 @@
                         childPrice: 850,
                         flightFlag: true,
                         hotelFlag: true,
-                        isClosed: true
+                        isClosed: true,
+                        canOrder: true
                     }, {
                         day: 23,
                         soldNum: 10,
@@ -321,7 +324,8 @@
                         childPrice: 850,
                         flightFlag: false,
                         hotelFlag: true,
-                        isClosed: true
+                        isClosed: true,
+                        canOrder: false
                     }, {
                         day: 24,
                         soldNum: 3,
@@ -330,7 +334,8 @@
                         childPrice: null,
                         flightFlag: true,
                         hotelFlag: false,
-                        isClosed: false
+                        isClosed: false,
+                        canOrder: false
                     }, {
                         day: 25,
                         soldNum: 3,
@@ -339,11 +344,12 @@
                         childPrice: 850,
                         flightFlag: true,
                         hotelFlag: true,
-                        isClosed: false
+                        isClosed: false,
+                        canOrder: true
                     }]
                 },
                 {
-                month: "2015-05",
+                month: "2015-10",
                 monthData: [{
                     day: 3,
                     soldNum: 3,
@@ -352,7 +358,8 @@
                     childPrice: 850,
                     flightFlag: true,
                     hotelFlag: true,
-                    isClosed: false
+                    isClosed: false,
+                    canOrder: true
                 }, {
                     day: 6,
                     soldNum: 10,
@@ -361,7 +368,8 @@
                     childPrice: 850,
                     flightFlag: false,
                     hotelFlag: true,
-                    isClosed: false
+                    isClosed: false,
+                    canOrder: true
                 }]
             }];
 

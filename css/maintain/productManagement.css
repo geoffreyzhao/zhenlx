@@ -1123,8 +1123,7 @@ input[type="text"].tagInput {
     padding: 25px 0;
 }
 
-.pack-price-block,
-.vendor-info-block {
+.pack-price-block {
     border-bottom: 1px dashed #dadada;
 }
 
