@@ -654,6 +654,10 @@
 .bigOrangeBtn.submitted {
     cursor: wait;
 }
+.registerErrorRow {
+    width:345px;
+    text-align: left;
+}
 
 /* 填写订单 E */
 
