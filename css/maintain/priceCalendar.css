@@ -206,6 +206,19 @@
 	margin-right: 3px;
 }
 
+.price-calendar .tdCont .top-block .canntorder-icon {
+	display: inline-block;
+	width: 40px;
+	height: 18px;
+	line-height: 16px;
+	border: 1px solid #45c8dc;
+	color: #45c8dc;
+	font-size: 12px;
+	text-align: center;
+	float: right;
+	margin-right: 3px;
+}
+
 .price-calendar .tdCont .middle-block {
 	font-size: 14px;
 	font-family: Arial;
@@ -267,4 +280,11 @@
 .price-calendar .tdCont .bottom-block .right-btn {
 	background-color: #ff8a00;
 	width: 44px!important;
+}
+
+.price-calendar .tdCont .bottom-block .top-btn {
+	position: absolute;
+	left: 0;
+	bottom: 24px;
+	background-color: #45c8dc;
 }
