@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/myWallet.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/myCoupon.css">
+
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <!-- <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script> -->
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll-probe.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>余额兑换</title>
+
+    <script type="text/javascript">
+        // 设置页面根字大小
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div data-role="page">
+    <div class="headerBar">
+        <div class="header">
+				<span class="back">
+					<i class="back-arrow"></i>
+					<em class="back-border"></em>
+				</span>
+            <span class="title">余额兑换</span>
+        </div>
+    </div>
+    <div class="convert-tip clearfix">
+        <span class="convert-tip-til">您当前账户余额为：</span><span class="convert-tip-val">80元</span>
+    </div>
+    <div class="convert-wrap">
+        <div class="convert-til">本期活动为兑换电话充值卡,类型如下:</div>
+        <div class="convert-cnt clearfix">
+            <ul class="clearfix">
+                <li>10元话费</li>
+                <li>30元话费</li>
+                <li>50元话费</li>
+                <li>100元话费</li>
+            </ul>
+            <div class="convert-input">
+                <input type="text" placeholder="请输入手机号" data-role="none">
+            </div>
+            <div class="convert-notice clearfix">
+                <span class="notice-icon"></span>
+                <div class="notice-val">提交后手机号不可更改，请仔细核对，充值将在24小时内完成</div>
+            </div>
+            <div class="convert-link">
+                <a href="javascript:void(0);">确认兑换</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        FastClick.attach(document.body);
+
+        $(".convert-cnt > ul > li").click(function(){
+            $(this).siblings().removeClass("current-item");
+            $(this).addClass("current-item");
+        });
+    });
+</script>
+</body>
+</html>

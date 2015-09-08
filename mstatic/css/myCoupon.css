@@ -16,11 +16,17 @@
 	border-left: 1px solid #ececec;
 	border-right: 1px solid #ececec;
 }
+.voucher-switch .single-border{
+	border-right: 1px solid #ececec;
+}
 .voucher-switch li {
 	display: inline-block;
-	font-size:0.8rem;
+	font-size:0.7rem;
 	color: #7f7f7f;
-	padding:0 0.6rem;
+	padding:0 0.4rem;
+}
+.voucher-switch li em{
+	font-family: Arial;
 }
 .voucher-switch li:first-child{
 	padding-left:0;
@@ -185,7 +191,8 @@
 .voucherList.expired{
 	/*display:none;*/
 }
-.voucherList.used .voucherItem div, .voucherList.used .voucherItem span, .voucherList.used .voucherItem em, .voucherList.used .voucherItem a {
+.voucherList.used .voucherItem div, .voucherList.used .voucherItem span, .voucherList.used .voucherItem em, .voucherList.used .voucherItem a,
+.voucherList.donate .voucherItem div, .voucherList.donate .voucherItem span, .voucherList.donate .voucherItem em, .voucherList.donate .voucherItem a{
 	opacity: 0.7;
 }
 .voucherList.used .flag{
@@ -207,6 +214,17 @@
 	height: 5.5rem;
 	opacity: 1!important;
 	background: url("../../mstatic/images/expireCover.png") no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+.voucherList.donate .flag {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 6.75rem;
+	height: 5.5rem;
+	opacity: 1!important;
+	background: url("../../mstatic/images/expireCover02.png") no-repeat;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 }

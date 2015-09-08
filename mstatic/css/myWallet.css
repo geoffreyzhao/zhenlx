@@ -3,7 +3,7 @@
 	padding: 0.6rem 0.5rem;
 	background: #fff;
 	font-size: 0;
-	height:6rem;
+	height:5.5rem;
 	margin:0.5rem 0;
 }
 .myWalletTab .tab span {
@@ -107,11 +107,6 @@
 .gray{
 	color:#999999;
 }
-
-
-
-
-
 #wrapper{
     position: absolute;
     z-index:1;
@@ -158,7 +153,139 @@
     overflow:hidden;
     text-align:center;
 }
-
+.payment-foot{
+	height:2.45rem;
+	position: fixed;
+	z-index: 5;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.payment-foot a{
+	width:100%;
+	height:2.45rem;
+	display: block;
+	font-size:0.85rem;
+	color:#fff !important;
+	text-align: center;
+	line-height:2.45rem;
+	background-color:#ffa200;
+}
+.payment-foot a:active{
+	background-color:#dc8e06;
+}
+.convert-tip{
+	padding:1rem 0.5rem;
+	color:#fff;
+	background-color:#ffa200;
+	margin-bottom: 0.5rem;
+}
+.convert-tip-til{
+	font-size: 0.8rem;
+}
+.convert-tip-val{
+	float: right;
+	font-size: 1.2rem;
+	margin-right:2rem;
+}
+.convert-wrap{
+	background-color:#fff;
+	border-top:1px #dcdcdc solid;
+	font-weight: normal;
+}
+.convert-til{
+	font-size: 0.75rem;
+	color:#666;
+	padding:0.8rem 0.5rem;
+	border-bottom:1px #dcdcdc solid;
+}
+.convert-cnt{
+	padding:0.8rem 0.5rem;
+}
+.convert-cnt ul li{
+	display: inline-block;
+	float: left;
+	margin-right:0.5rem;
+	margin-bottom: 0.7rem;
+	padding:0.5rem;
+	font-size: 0.75rem;
+	color:#48c2b1;
+	border: 1px #48c2b1 solid;
+	-webkit-border-radius: 0.125rem;
+	-moz-border-radius: 0.125rem;
+	border-radius: 0.125rem;
+	background-color:#f4fbfa;
+}
+.convert-cnt ul .current-item{
+	color:#fff;
+	background-color:#48c2b1;
+}
+.convert-input{
+	height:1.9rem;
+	font-size: 0.75rem;
+}
+.convert-input input[type="text"]{
+	width:100%;
+	color:#666;
+	padding:0.5rem 0.3rem;
+	border: 1px solid #d0d0d0 !important;
+	background-color: transparent;
+	-webkit-border-radius: 0.125rem;
+	-moz-border-radius: 0.125rem;
+	border-radius: 0.125rem;
+}
+.convert-input input[type="text"]:-moz-placeholder,
+.convert-input input[type="text"]:-ms-input-placeholder,
+.convert-input input[type="text"]::-webkit-input-placeholder,
+.convert-input input[type="text"]::-moz-placeholder{
+	color:#c1c1c1;
+}
+.convert-input input:focus, .convert-input input:active{
+	border: 1px solid #11b9b7 !important;
+}
+.convert-notice{
+	margin-top:1rem;
+	font-size: 0.6rem;
+	color:#73d1c4;
+}
+.notice-val{
+	width:13.5rem;
+	margin-left:0.3rem;
+	float: left;
+	line-height:0.8rem;
+	display: inline-block;
+}
+.notice-icon{
+	width:0.75rem;
+	height:0.75rem;
+	display: inline-block;
+	float: left;
+	background:url("../../mstatic/images/notice.png") no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	vertical-align: top;
+}
+.convert-link{
+	height:2.45rem;
+	font-size: 0.85rem;
+	margin-top:2rem;
+	padding-bottom: 3rem;
+}
+.convert-link a{
+	display: block;
+	width:100%;
+	height:2.45rem;
+	color:#fff !important;
+	text-align: center;
+	line-height:2.45rem;
+	background-color:#3fc0ae;
+	-webkit-border-radius: 0.125rem;
+	-moz-border-radius: 0.125rem;
+	border-radius: 0.125rem;
+}
+.convert-link a:active{
+	background-color: #1a9d9c;
+}
 /* #pullDown .pullDownIcon,#pullUp .pullUpIcon {
     display: block;
     float: left;
