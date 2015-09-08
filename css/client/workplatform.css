@@ -20,9 +20,8 @@
     display: inline-block;
 }
 .componentInput{
-    
     margin-bottom:24px;
-    height:43px;
+    height:42px;
 }
 .workpla-login .componentInput input,.workpla-login .componentInput input:focus{
     background-color:rgba(255,255,255,0);
