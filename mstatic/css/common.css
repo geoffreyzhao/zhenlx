@@ -626,7 +626,7 @@ input[type="checkbox"] + span {
 	border-bottom: 1px #c0c0c0 solid;
 }
 .dlg-foot{
-	padding-bottom: 0.35rem;
+	padding-bottom: 0.3rem;
 	text-align: center;
 }
 .btn-confirm{
