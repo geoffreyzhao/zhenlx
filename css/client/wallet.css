@@ -389,7 +389,7 @@
 	line-height: 40px;
 	font-size: 14px;
 	border-radius: 2px;
-	margin: 0 auto 25px;
+	margin: 0 auto 10px;
 }
 
 .share-person-block .title {
@@ -418,7 +418,15 @@
 .share-person-block .refreshIcon {
 	margin: 0;
 }
-
+.modal-wrap{
+	height:240px;
+}
+.share-notice{
+	color:#3fc0ae;
+	font-size: 15px;
+	line-height:20px;
+	text-align: center;
+}
 /*  代金券   end */
 
 /*  账户余额  start  */

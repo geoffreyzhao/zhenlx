@@ -670,6 +670,9 @@ input[type="checkbox"] + span {
     -moz-border-radius: 0.0125rem;
     border-radius: 0.125rem;
 }
+.dlg-foot .hiddenBtn{
+	display: none;
+}
 .confirm-ui-content .btn-com:first-child{
 	margin-right:0.5rem;
 }

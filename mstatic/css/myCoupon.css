@@ -297,6 +297,8 @@
 	color:#3fc0ae;
 	font-size: 0.6rem;
 	line-height:1.2rem;
+	text-align: center;
+	margin-top:0.3rem;
 }
 .dlg-foot a{
 	width:5rem;
@@ -323,8 +325,9 @@
 	background-color:#cdcdcd;
 }
 .dlg-foot .btn-notice{
-	background-color:#e3e0e0;
+	background-color:#d2d2d2;
 	color:#666 !important;
+	border:1px #ccc solid;
 }
 .dlg-foot .btn-notice:active{
 	background-color:#cdcdcd;
