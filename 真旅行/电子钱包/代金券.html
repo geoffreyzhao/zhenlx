@@ -65,6 +65,8 @@
                                 <li class="current">未使用</li>
                                 <li>已使用</li>
                                 <li>已过期</li>
+                                <li class="voucher-last">已赠送</li>
+                                <span class="voucher-instruction green-border-tooltip"><span class="orderStatusTip"></span>代金券使用说明</span>
                             </ul>
                             <div class="voucherListContainer">
                                 <div class="voucherList unused">
@@ -304,6 +306,85 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="voucherList donate" style="display: none;">
+                                    <div class="voucherItem voucher-bg-0">
+                                        <div class="flag"></div>
+                                        <div class="rightBorder"></div>
+                                        <div class="top">
+                                            <span class="title">夏至节·盛夏清凉</span>
+                                        </div>
+                                        <div class="horizontal-white-split-line"></div>
+                                        <div class="middle">
+                                            <div class="privilege">满1000元减</div>
+                                            <div class="validity">2015.6.1 - 2015.6.6</div>
+                                            <div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+                                            <span class="price"><em>元</em></span>
+                                        </div>
+                                        <div class="horizontal-white-split-line"></div>
+                                        <div class="bottom">
+                                            <a href="javascript:;">分享代金券</a>
+                                            <!-- <a href="javascript:;">分享轨迹</a> -->
+                                        </div>
+                                    </div>
+                                    <!-- 偶数个没有右侧外边距值 -->
+                                    <div class="voucherItem voucher-bg-1" style="margin-right: 0;">
+                                        <div class="flag"></div>
+                                        <div class="rightBorder"></div>
+                                        <div class="top">
+                                            <span class="title">最游惠</span>
+                                        </div>
+                                        <div class="horizontal-white-split-line"></div>
+                                        <div class="middle">
+                                            <div class="privilege">满2000元减</div>
+                                            <div class="validity">2015.6.1 - 2015.6.6</div>
+                                            <div class="applicability">适用范围：东南亚产品</div>
+                                            <span class="price"><em>元</em></span>
+                                        </div>
+                                        <div class="horizontal-white-split-line"></div>
+                                        <div class="bottom">
+                                            <a href="javascript:;">分享代金券</a>
+                                            <!-- <a href="javascript:;">分享轨迹</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="voucherItem voucher-bg-2">
+                                        <div class="flag"></div>
+                                        <div class="rightBorder"></div>
+                                        <div class="top">
+                                            <span class="title">任意券任意券任意券任意券任意券任意券任意券任意券任意券</span>
+                                        </div>
+                                        <div class="horizontal-white-split-line"></div>
+                                        <div class="middle">
+                                            <div class="privilege">满3000元减</div>
+                                            <div class="validity">2015.11.11 - 2015.12.12</div>
+                                            <div class="applicability">适用范围：所有产品所有产品所有产品所有产品所有产品所有产品</div>
+                                            <span class="price"><em>元</em></span>
+                                        </div>
+                                        <div class="horizontal-white-split-line"></div>
+                                        <div class="bottom">
+                                            <a href="javascript:;">分享代金券</a>
+                                            <!-- <a href="javascript:;">分享轨迹</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="voucherItem voucher-bg-3" style="margin-right: 0;">
+                                        <div class="flag"></div>
+                                        <div class="rightBorder"></div>
+                                        <div class="top">
+                                            <span class="title">蜜月甜蜜之旅</span>
+                                        </div>
+                                        <div class="horizontal-white-split-line"></div>
+                                        <div class="middle">
+                                            <div class="privilege">满4000元减</div>
+                                            <div class="validity">2015.1.1 - 2015.1.31</div>
+                                            <div class="applicability">适用范围：蜜月产品</div>
+                                            <span class="price"><em>元</em></span>
+                                        </div>
+                                        <div class="horizontal-white-split-line"></div>
+                                        <div class="bottom">
+                                            <a href="javascript:;">分享代金券</a>
+                                            <!-- <a href="javascript:;">分享轨迹</a> -->
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="pagination">
                                     <span class="countNumber">共<em class="blueFonts">100</em>条记录</span>
                                     <span class="pageSize">
@@ -378,8 +459,52 @@
                 $(".appendContainer").html($voucherItem);
                 $("#share-voucher").modal("show");
             });
+
+            $(".voucher-instruction").attr("title", $("#voucherIns-tooltip").html());
+
+            $(".green-border-tooltip").tooltip({
+                html: true,
+                placement: 'bottom',
+                template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+            });
         });
     </script>
 
+    <!--代金券使用说明提示框-->
+    <script type="text/html" id="voucherIns-tooltip">
+        <table class="inst-table">
+            <tr>
+                <td colspan="2">使用说明：</td>
+            </tr>
+            <tr>
+                <td>1、</td>
+                <td>用户在购买产品时满足优惠券使用门槛，可在付款时选择使用代金券直接享受减免； </td>
+            </tr>
+            <tr>
+                <td>2、</td>
+                <td>每张代金券，用户仅可使用一次，每个订单仅可使用一张代金券；</td>
+            </tr>
+            <tr>
+                <td>3、</td>
+                <td>该代金券仅限在真旅行下单使用；</td>
+            </tr>
+            <tr>
+                <td>4、</td>
+                <td>代金券只能用于抵扣订单金额，不能用于兑换现金；</td>
+            </tr>
+            <tr>
+                <td>5、</td>
+                <td>代金券分享等效于赠送给他人；已分享的优惠券不能在购买产品时抵扣现金；</td>
+            </tr>
+            <tr>
+                <td>6、</td>
+                <td>已使用和已过期的代金券不能分享；</td>
+            </tr>
+            <tr>
+                <td>7、</td>
+                <td>活动最终解释权归真旅行所有。</td>
+            </tr>
+        </table>
+    </script>
 </body>
 </html>

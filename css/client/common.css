@@ -73,7 +73,7 @@ input[type="text"].errorStyle:focus{
     z-index: 3;
 }
 
-.componentInput{
+.row .componentInput{
     display: inline-block;
     border: 1px solid #d0d0d0;
     height: 43px !important;
