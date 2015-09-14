@@ -390,8 +390,9 @@
 .editTouristInfoTab .last th{
     padding-bottom: 20px;
 }
-.commonEditTab.operTab {
-    
+.inputTip {
+    color: #11b9b7;
+    margin-left: 6px;
 }
 .commonEditTab.operTab td:first-child {
     border-right: 1px solid #d4f0f0;
