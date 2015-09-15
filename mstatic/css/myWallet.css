@@ -286,6 +286,9 @@
 .convert-link a:active{
 	background-color: #1a9d9c;
 }
+.convert-link .forbid-link{
+	background-color:#ccc !important;
+}
 /* #pullDown .pullDownIcon,#pullUp .pullUpIcon {
     display: block;
     float: left;
