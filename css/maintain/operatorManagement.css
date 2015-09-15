@@ -524,7 +524,7 @@
 
 .voucherItem .price {
     position: absolute;
-    right: 54px;
+    right:14px;
     top: 14px;
     font-size: 30px;
     background: none;
@@ -533,7 +533,7 @@
 .voucherItem .price {
     display: inline-block;
     font-size: 30px;
-    text-align:center;
+    text-align:right;
     width: 140px;
     height: 60px;
 }
@@ -554,7 +554,6 @@
 .voucherItem.voucher-bg-0 .price em {
     position: relative;
     top: 20px;
-    left: 66px;
 }
 
 .voucherItem .privilege {
