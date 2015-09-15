@@ -159,7 +159,7 @@
 						</select> 元
                     </div>
                     <div class="tellNum">
-                    	<p><span>请确认您的手机号</span><input type="text"></p>
+                    	<p><span>请确认您的手机号</span><input id="cellphone" type="text"><span class="phoneTips">手机号码填错啦，再试试吧</span></p>
 						<p class="c999">请仔细核对充值手机号，已经提交不可更改；提交操作后，充值金额将在24小时内到账</p>
                     </div>
                 </div>
@@ -226,6 +226,15 @@
                 $("#exchangeModal").modal("show");
             });
             $(".goExchange").click(function(){
+				var cellphone = $("#cellphone").val().trim();
+				if(!cellphone.match(/^((1[0-9])+\d{9})$/)){
+					$(".phoneTips").fadeIn("normal", function(){
+						setTimeout(function(){
+							$(".phoneTips").fadeOut("fast");
+						}, 2000);
+					});
+					return false;
+				}
                 $("#exchangeSuccesModal").modal("show");
             });
 
