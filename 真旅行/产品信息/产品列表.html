@@ -22,7 +22,7 @@
     <script type="text/javascript" src="../../js/vendor/jquery.color-2.1.2.min.js"></script>
     <script type="text/javascript" src="../../js/global/global.js"></script>
     <script type="text/javascript" src="../../js/client/common.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../js/client/searchheader.js">
+    <script type="text/javascript" src="../../js/client/searchheader.js"></script>
     <script type="text/javascript" src="../../js/vendor/jquery.lazyload.js"></script>
     <script type="text/javascript" src="../../js/vendor/skrollr.min.js"></script>
 
@@ -246,7 +246,7 @@
         </div>
     </div>
     <section class="product-wrapper">        
-        <div class="pro-item-box img-target-1">
+        <div class="pro-item-box img-target-1"><!--  为该DIV写click事件，控制页面跳转  -->
             <div class="content-above-image">
              <!--    <div class="product-one-text">
                     <p>年轻人的第一次高逼格出国旅行</p>
@@ -258,18 +258,22 @@
                 <div class="product-list-flag">
                     <label class="lovetips"></label>
                 </div> -->
-                <img src="http://media.zhenlx.com/imageservice?mediaImageId=55e3c7cee4b00c4a90c507ae" alt="">                
+                <img src="http://media.zhenlx.com/imageservice?mediaImageId=55e3c7cee4b00c4a90c507ae" alt="">   
+                <a href="http://zhenlx.com" class="start-trip">
+                    <i></i>
+                    <span>开启旅程</span>
+                </a>        
             </div>
             <div class="parallax-image-wrapper" data-anchor-target=".img-target-1" data-bottom-top="bottom:-75%;" data-top-bottom="bottom:75%;">
                 <img src="../../images/client/pro-hd-img-03.jpg" data-original="../../images/client/pro-hd-img-03.jpg">
             </div>
-            <div class="start-trip-wrapper">
+            <!-- <div class="start-trip-wrapper">
                 <a href="javascript:void(0);" class="start-trip">
                     <i></i>
                     <span>开启旅程</span>
                 </a>
-            </div>
-            <a class="img-link" href="http://www.baidu.com"></a>
+            </div> -->
+            <!-- <a class="img-link" href="http://www.baidu.com"></a> -->
         </div>
         <div class="pro-list-white clearfix">
             <div class="list-white-left">

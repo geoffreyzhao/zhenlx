@@ -2003,11 +2003,11 @@ ul.common-tab > li.rest {
     line-height: 20px;
 }
 .start-trip-wrapper {
-    position: absolute;
+    /*position: absolute;
     bottom: 50px;
     width: 100%;
     text-align: center;
-    z-index: 3;
+    z-index: 3;*/
 }
 .start-trip {
     padding: 9px 0;
@@ -2249,6 +2249,9 @@ ul.common-tab > li.rest {
     position: relative;
     width: 100%;
 }
+.pro-item-box:hover {
+    cursor: pointer;
+}
 .pro-item-box .img-link {
     position: absolute;
     width: 100%;
@@ -2272,8 +2275,8 @@ ul.common-tab > li.rest {
 }
 .content-above-image a {
     position: absolute;
-    /*left: 76.5%;*/
-    left: 94%;
+    left: 76.5%;
+    /*left: 94%;*/
     bottom: 50px;
 }
 .content-above-image a:hover {
