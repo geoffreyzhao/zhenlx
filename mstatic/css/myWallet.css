@@ -16,7 +16,7 @@
 	color: #3fc0ae;
 }
 .myWalletTab .tab{
-	margin-bottom:1rem;
+	margin-bottom:0.8rem;
 }
 .myWalletTab .accountBtn {
 	border-top: 1px solid #3fc0ae;
@@ -38,9 +38,11 @@
 	color:#fff;
 }
 .account{
+	height:1.5rem;
+	line-height:1.5rem;
 	font-size:1.3rem;
 	color:#f98a31;
-	margin-left:1.75rem;
+	text-align: center;
 }
 .accountCon{
 	background:#fff;
@@ -51,8 +53,9 @@
 .makeMoney{
 	height:2.3rem;
 	font-size:0.8rem;
+	line-height:1.3rem;
 	color:#333!important;
-	padding:1rem 0.5rem 0;
+	padding:0.5rem;
 }
 .HelpMakeMoney{
 	float:left;
@@ -110,7 +113,7 @@
 #wrapper{
     position: absolute;
     z-index:1;
-    top:11.6rem;
+    top:10.6rem;
     bottom:2.45rem;
     left:0;
     width: 100%;
