@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>真旅行-文艺和吃货-西班牙</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/publicity.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+
+	<script type="text/javascript">
+		var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 750 ? 750 : window.innerWidth,
+                h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
+                base_ratio = 750 / 1334,
+                actual_ratio = window.innerWidth / window.innerHeight;
+
+        if (actual_ratio >= base_ratio) {  // 宽屏，按高度算
+
+            root.style.fontSize = (h / 667) * 20 + "px";
+
+        } else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+            root.style.fontSize = (w / 375) * 20 + "px";
+        }
+
+        root.style.height = window.innerHeight + "px";
+	</script>
+</head>
+<body>
+
+	<!-- <audio loop preload="auto" id="music01">
+        <source src="music01.mp3" type="audio/mpeg">
+    </audio> -->
+
+    <a href="javascript:;" class="p-music-btn"></a>
+
+    <div class="simple-swiper swiper-container">
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide x-slide-1">
+	    	<img src="images/x_01.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-2">
+	    	<img src="images/x_02.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-3">
+	    	<img src="images/x_03.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-4">
+	    	<img src="images/x_04.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-5">
+	    	<img src="images/x_05.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-6">
+	    	<img src="images/x_06.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-7">
+	    	<img src="images/x_07.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-8">
+	    	<img src="images/x_08.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-9">
+	    	<img src="images/x_09.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-10">
+	    	<img src="images/x_10.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-11">
+	    	<img src="images/x_11.jpg" alt="">
+	    </div>
+	    <div class="swiper-slide x-slide-12">
+	    	<img src="images/x_12.jpg" alt="">
+	    	<div class="x-link-block">
+	    		<a class="x-left-link" href="javascript:;">
+	    			<span>我要报名</span>
+					<span>让真旅行<br>请喝咖啡</span>
+	    		</a>
+	    		<a class="x-right-link" href="javascript:;">
+	    			<span>我要咨询</span>
+					<span>勾搭<br>真旅君</span>
+	    		</a>
+	    	</div>
+	    </div>
+	    <div class="swiper-slide x-slide-13">
+	    	<img src="images/x_13.jpg" alt="">
+	    </div>
+	  </div>
+	</div>
+
+	<script type="text/javascript">
+		var mySwiper = new Swiper('.swiper-container', {
+			direction : 'vertical',
+            mousewheelControl : true,
+            initialSlide: 11
+		});
+
+		$(".p-music-btn").click(function(e){
+			e.preventDefault();
+			$(this).toggleClass("pause");
+		});
+	</script>
+	
+</body>
+</html>	
