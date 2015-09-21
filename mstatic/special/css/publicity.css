@@ -2133,7 +2133,8 @@ from{transform:rotateZ(-4deg);}
 
 .x-link-block {
     position: absolute;
-    bottom: 26%;
+    /* bottom: 26%; */
+    bottom:21%;
     width: 100%;
     text-align: center;
 }
