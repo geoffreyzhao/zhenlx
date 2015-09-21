@@ -2187,3 +2187,100 @@ from{transform:rotateZ(-4deg);}
 }
 
 /*  越南 H5页面  */
+
+.y-slide-1 {
+    background: url(../images/y_01.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-2 {
+    background: url(../images/y_02.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-3 {
+    background: url(../images/y_03.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-4 {
+    background: url(../images/y_04.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-5 {
+    background: url(../images/y_05.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-6 {
+    background: url(../images/y_06.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-7 {
+    background: url(../images/y_07.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-8 {
+    background: url(../images/y_08.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-9 {
+    background: url(../images/y_09.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-10 {
+    background: url(../images/y_10.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-11 {
+    background: url(../images/y_11.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+.y-slide-11 .qrcode {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.y-link-block {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 5%;
+    text-align: center;
+}
+
+.y-link-block a {
+    background-color: #e04313;
+    color: #fff;
+    width: 100%;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.y-link-block p {
+    font-size: 0.75rem;
+    color: #e04313;
+    margin: 0.25rem 0;
+}
