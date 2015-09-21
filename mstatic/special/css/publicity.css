@@ -2150,25 +2150,18 @@ from{transform:rotateZ(-4deg);}
 }
 
 .x-link-block a:first-child {
-    width: 7.15rem;
-    height: 5.65rem;
-    border-radius: 7.15rem;
-    background-color: rgba(123,48,18,.7);
+    width:9.625rem;
+    height: 6.5rem;
+    background:url(../images/x-left-linkbg.png) no-repeat;
+    background-size:100% 100%;
+    position:absolute;
+    right:10.26%;
+    bottom:0;
 }
 
 .x-link-block a:first-child:active {
-    background-color: rgba(93,33,9,.7);
-}
-
-.x-link-block a:last-child {
-    width: 7.15rem;
-    height: 5.65rem;
-    border-radius: 7.15rem;
-    background-color: rgba(243,82,50,.7);
-}
-
-.x-link-block a:last-child:active {    
-    background-color: rgba(232,53,18,.7);
+    background:url(../images/x-left-linkactive.png) no-repeat;
+    background-size:100% 100%;
 }
 
 .x-link-block a span {
