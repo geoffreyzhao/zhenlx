@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>真旅行·慢生活·越南</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/publicity.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+
+	<script type="text/javascript">
+		var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 750 ? 750 : window.innerWidth,
+                h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
+                base_ratio = 750 / 1334,
+                actual_ratio = window.innerWidth / window.innerHeight;
+
+        // if (actual_ratio >= base_ratio) {  // 宽屏，按高度算
+
+        //     root.style.fontSize = (h / 667) * 20 + "px";
+
+        // } else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+        //     root.style.fontSize = (w / 375) * 20 + "px";
+        // }
+
+        root.style.fontSize = (w / 375) * 20 + "px";
+        root.style.height = window.innerHeight + "px";
+	</script>
+</head>
+<body>
+
+	<audio loop preload="auto" id="music01">
+        <source src="y_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <a href="javascript:;" class="p-music-btn"></a>
+
+    <div class="simple-swiper swiper-container">
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide y-slide-1"></div>
+	    <div class="swiper-slide y-slide-2"></div>
+	    <div class="swiper-slide y-slide-3"></div>
+	    <div class="swiper-slide y-slide-4"></div>
+	    <div class="swiper-slide y-slide-5"></div>
+	    <div class="swiper-slide y-slide-6"></div>
+	    <div class="swiper-slide y-slide-7"></div>
+	    <div class="swiper-slide y-slide-8"></div>
+	    <div class="swiper-slide y-slide-9"></div>
+	    <div class="swiper-slide y-slide-10"></div>
+	    <div class="swiper-slide y-slide-11"></div>
+	    <div class="swiper-slide y-slide-12">	    	
+	    	<a class="p-product-link" href="https://jinshuju.net/f/mTMDn5">我和ta要报名</a>
+	    </div>
+	    <div class="swiper-slide y-slide-13">
+	    	<img class="qrcode" src="images/p_13_qrcode.png" alt="">
+	    </div>
+	  </div>
+	</div>
+
+	<script type="text/javascript">
+
+		var audio = document.getElementById("music01");
+
+		window.onload = function(){
+
+			var mySwiper = new Swiper('.swiper-container', {
+				direction : 'vertical',
+	            mousewheelControl : true,
+	            initialSlide : 12
+			});
+			
+			audio.play();
+		}
+
+		$(".p-music-btn").click(function(e){
+			e.preventDefault();
+			$(this).toggleClass("pause");
+
+			if (audio.paused) {
+				audio.play();
+			} else {
+				audio.pause();
+			}
+		});
+	</script>
+
+	<script type="text/javascript">
+        var _paq = _paq || [];
+        (function(){ var u=(("https:" == document.location.protocol) ? "https://" : "http://");
+            _paq.push(['setSiteId', 4]);
+            _paq.push(['setTrackerUrl', u+'pangu.tdxinfo.com/tracker.do']);
+            _paq.push(['setCookieDomain', '*.zhenlx.com']);
+            _paq.push(['setDomains', '*.zhenlx.com']);
+            var account = '';
+            if(account)_paq.push(['setUserId', account]);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript';
+            g.defer=true;
+            g.async=true;
+            g.src=u+'scpg.tdxinfo.com/js/pangumini.js?v=1.0.6';
+            s.parentNode.insertBefore(g,s); })();
+    </script>
+	
+</body>
+</html>
