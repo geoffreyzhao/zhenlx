@@ -53,7 +53,7 @@
 	    <div class="swiper-slide x-slide-11"></div>
 	    <div class="swiper-slide x-slide-12">
 	    	<div class="x-link-block">
-	    		<a class="x-left-link" href="https://jinshuju.net/f/mCLuWf"></a>
+	    		<a class="x-left-link normal active" href="https://jinshuju.net/f/mCLuWf"></a>
 	    	</div>
 	    </div>
 	    <div class="swiper-slide x-slide-13">
@@ -74,6 +74,8 @@
 			});
 
 			audio.play();
+
+			$(".x-left-link").removeClass("active");
 		}		
 
 		$(".p-music-btn").click(function(e){
@@ -86,6 +88,16 @@
 				audio.pause();
 			}
 		});
+
+		$(".x-left-link").click(function(e){
+			e.preventDefault();
+			var $this = $(this);
+			$this.addClass('active');
+			setTimeout(function(){
+				window.location.href = $this.attr('href');
+			},300);
+		});
+
 	</script>
 
 	<script type="text/javascript">

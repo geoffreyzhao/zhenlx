@@ -2014,9 +2014,9 @@ from{transform:rotateZ(-4deg);}
     width: 10rem;
     height: 2.875rem;
     line-height: 2.875rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     text-align: center;
-    background-color: rgba(239,77,99,.67);
+    background-color: rgba(239,77,99,.9);
     color: #fff;
     bottom: 45%;
     left: 24%;
@@ -2141,43 +2141,21 @@ from{transform:rotateZ(-4deg);}
 
 .x-link-block a {
     text-decoration: none;
-    text-align: center;
-    padding-top: 1.5rem;
-}
-
-.x-link-block a:active,
-.x-link-block a:visited {
-    color: #fff;
-}
-
-.x-link-block a:first-child {
     width:9.625rem;
-    height: 6.5rem;
-    background:url(../images/x-left-linkbg.png) no-repeat;
-    background-size:100% 100%;
+    height: 8rem;
     position:absolute;
     right:10.26%;
     bottom:0;
 }
 
-.x-link-block a:first-child:active {
+.x-link-block a.normal {    
+    background:url(../images/x-left-linkbg.png) no-repeat;
+    background-size:100% 100%;    
+}
+
+.x-link-block a.active {
     background:url(../images/x-left-linkactive.png) no-repeat;
     background-size:100% 100%;
-}
-
-.x-link-block a span {
-    display: block;
-}
-
-.x-link-block a span:first-child {
-    color: #fff;
-    font-size: 1.25rem;
-    margin: 0.25rem 0 0.5rem 0;
-}
-
-.x-link-block a span:last-child {
-    color: #fff;
-    font-size: 0.85rem;
 }
 
 /*  越南 H5页面  */
