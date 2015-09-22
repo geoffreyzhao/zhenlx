@@ -267,8 +267,8 @@
 
 .upload-avatar .upload-block {
     width: 380px;
-    /*margin: 78px auto;*/
-    margin-left: 150px;
+    margin: 78px auto;  /* 默认样式  */
+    /*margin-left: 150px;   头像剪切上传样式  */
 }
 
 .upload-avatar .upload-btn {
