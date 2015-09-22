@@ -71,7 +71,6 @@
 
 			var link='http://static.zhenlx.com/mstatic/special/yuenan_h5.html';
 			var imgUrl='http://static.zhenlx.com/mstatic/special/images/y_share.jpg';
-			var title='在越南，做6天100%的生活家';
 
 			$.ajax({
 			   type: "GET",
@@ -92,7 +91,7 @@
 
 			wx.ready(function(){
 					wx.onMenuShareTimeline({
-					    title:title, // 分享标题
+					    title:'【越南越美】给自己一段慢活假期，越南行招募', // 分享标题
 					    link: link, // 分享链接
 					    imgUrl: imgUrl, // 分享图标
 					    success: function () { 
@@ -106,8 +105,8 @@
 					});
 
 					wx.onMenuShareAppMessage({
-					    title: title, // 分享标题
-					    desc: title, // 分享描述
+					    title: '【越南之行招募】', // 分享标题
+					    desc: '越南越美，给自己一段慢活假期', // 分享描述
 					    link: link, // 分享链接
 					    imgUrl: imgUrl, // 分享图标
 					    success: function () { 

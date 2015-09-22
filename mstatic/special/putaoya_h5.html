@@ -71,7 +71,6 @@
 
 			var link='http://static.zhenlx.com/mstatic/special/putaoya_h5.html';
 			var imgUrl='http://static.zhenlx.com/mstatic/special/images/p_share.jpg';
-			var title='葡萄牙的日与夜，爱让远方更甜蜜';
 
 			$.ajax({
 			   type: "GET",
@@ -92,7 +91,7 @@
 
 			wx.ready(function(){
 					wx.onMenuShareTimeline({
-					    title:title, // 分享标题
+					    title:'【浪漫之约】让远方更甜蜜，葡萄牙之行招募', // 分享标题
 					    link: link, // 分享链接
 					    imgUrl: imgUrl, // 分享图标
 					    success: function () { 
@@ -106,8 +105,8 @@
 					});
 
 					wx.onMenuShareAppMessage({
-					    title: title, // 分享标题
-					    desc: title, // 分享描述
+					    title: '【葡萄牙之行招募】', // 分享标题
+					    desc: '浪漫之约，让远方更甜蜜', // 分享描述
 					    link: link, // 分享链接
 					    imgUrl: imgUrl, // 分享图标
 					    success: function () { 

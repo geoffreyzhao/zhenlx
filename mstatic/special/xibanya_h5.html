@@ -72,7 +72,6 @@
 
 			var link='http://static.zhenlx.com/mstatic/special/xibanya_h5.html';
 			var imgUrl='http://static.zhenlx.com/mstatic/special/images/x_share.jpg';
-			var title='听说，西班牙是文青的Dreamland No.1';
 
 			$.ajax({
 			   type: "GET",
@@ -93,7 +92,7 @@
 
 			wx.ready(function(){
 					wx.onMenuShareTimeline({
-					    title:title, // 分享标题
+					    title:'【文艺朝圣】邂逅灵感，西班牙之行招募', // 分享标题
 					    link: link, // 分享链接
 					    imgUrl: imgUrl, // 分享图标
 					    success: function () { 
@@ -107,8 +106,8 @@
 					});
 
 					wx.onMenuShareAppMessage({
-					    title: title, // 分享标题
-					    desc: title, // 分享描述
+					    title: '【西班牙之行招募】', // 分享标题
+					    desc: '文艺朝圣，邂逅灵感', // 分享描述
 					    link: link, // 分享链接
 					    imgUrl: imgUrl, // 分享图标
 					    success: function () { 
