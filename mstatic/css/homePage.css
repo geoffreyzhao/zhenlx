@@ -181,7 +181,7 @@
 }
 .swiper-container{
     width: 16rem;
-    height: 8rem;
+    height: 10rem;
     margin: 0 auto;
 }
 .swiper-slide {
@@ -204,7 +204,7 @@
 }
 .slide-img{
     width: 16rem;
-    height:8rem;
+    height:10rem;
     display: block;
 }
 .swiper-container .swiper-pagination-bullet {
@@ -514,8 +514,8 @@
     vertical-align: middle;
 }
 .wuge-img{
-    width:13.55rem;
-    height:7.6rem;
+    width:13.6rem;
+    height:8.5rem;
     display: block;
 }
 .icon-dest{
@@ -856,35 +856,28 @@
     width:85%;
 }
 .travel-spot{
-    width:13.575rem;
-    height:7.575rem;
+    width:13.6rem;
+    height:8.5rem;
     margin-bottom: 0.25rem;
     position: relative;
+    background-repeat: no-repeat;
+    -webkit-background-size: 13.6rem 8.5rem;
+    background-size: 13.6rem 8.5rem;
 }
 .spot1{
     background-image: url("../../mstatic/images/spot01.png");
-    -webkit-background-size: 100%;
-    background-size: 100%;
 }
 .spot2{
     background-image: url("../../mstatic/images/spot02.png");
-    -webkit-background-size: 100%;
-    background-size: 100%;
 }
 .spot3{
     background-image: url("../../mstatic/images/spot03.png");
-    -webkit-background-size: 100%;
-    background-size: 100%;
 }
 .spot4{
     background-image: url("../../mstatic/images/spot04.png");
-    -webkit-background-size: 100%;
-    background-size: 100%;
 }
 .spot5{
     background-image: url("../../mstatic/images/spot05.jpg");
-    -webkit-background-size: 100%;
-    background-size: 100%;
 }
 .icon-video{
     width:3.275rem;
