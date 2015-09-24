@@ -134,6 +134,9 @@
     font-size: 0.7rem!important;
     color: #666!important;
 }
+.navWrap-val a {
+    color: #3fc0ae!important
+}
 .hotel-til{
     font-size: 0.75rem;
     color:#333;
@@ -223,6 +226,11 @@
 }
 .hotel-box ul li{
     position: relative;
+}
+.hotel-box pre {
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
 }
 .hotel-disc{
     display: inline-block;
