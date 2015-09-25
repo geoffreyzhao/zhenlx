@@ -505,6 +505,12 @@
 .nav-content{
     background-color:#fff;
 }
+.nav-content pre {
+    font-family: inherit;
+    font-size: 0.65rem;
+    padding: 0;
+    margin: 0;
+}
 .nav-content .navWrap-path{
     padding:0 0.5rem;
     margin-top:0.5rem;
