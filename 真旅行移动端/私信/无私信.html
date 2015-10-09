@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>无私信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/privateLetterList.css">
+
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+
+    <script type="text/javascript">
+        // 设置页面根字大小
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div class="without-letter" data-role="page">
+    <div class="without-letter-box">
+        <div class="without-letter-header">
+            <div class="head-logo"><img class="head-img" src="../../mstatic/images/logo-new.png"></div>
+            <div class="head-menu">
+                <a class="acut-box" href="javascript:void(0);"><img class="acut-img" src="../../mstatic/images/acut-img.png"></a>
+                <a href="javascript:void(0);"><img class="menu-img" src="../../mstatic/images/menu-list.png"></a>
+            </div>
+        </div>
+    </div>
+    <div class="without-order-cnt">
+        <img class="without-img" src="../../mstatic/images/without-letter.png">
+        <div class="without-txt">您现在还没有私信</div>
+    </div>
+</div>
+</body>
+</html>
