@@ -130,7 +130,7 @@
 .cancelOper:focus {
     color: #818181;
 }
-.bindWechat,.bindphone{
+.bindphone,.bindWechat,.unbindWechat{
     display:inline-block;
     margin-left:20px;
 }
@@ -143,8 +143,14 @@
     display:inline-block;
     position:absolute;
     background:url(../../images/client/wechatbindQRIcon.png) no-repeat;
-    margin-left:20px;
+    margin-left:15px;
     top:10px;
+}
+.green-border-tooltip .tooltip-arrow{
+    background-position: 0 -22px;
+}
+.green-border-tooltip .tooltip-inner{
+    padding:1px;
 }
 /*  个人资料 end  */
 

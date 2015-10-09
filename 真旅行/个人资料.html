@@ -390,51 +390,14 @@
                                         <a href="javascript:void(0);" class="bindWechat bindWechat-tooltip">扫码绑定微信<span class="wechatQRIcon"></span></a>
                                     </td>
                                 </tr>
-                                <!-- <tr class="editModelInfo bindWechatNumber">
-                                    <td colspan="2" class="noPadding">
-                                        <div class="editModelTabContainer" style="display: none;">
-                                            <table class="editModelTab">
-                                            <colgroup>
-                                                <col width="100">
-                                                <col width="">
-                                            </colgroup>
-                                            <tbody>
-                                            <tr>
-                                                <th>手机号:</th>
-                                                <td>
-                                                    <input type="text" value="" style="width: 220px;">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>验证码:</th>
-                                                <td>
-                                                    <div class="componentInput verificationCode">
-                                                        <input type="text" placeholder="请输入验证码" style="width: 100px;">
-                                                        <span class="getVerificationCode">获取短信验证码</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>密码:</th>
-                                                <td>
-                                                    <input type="password" class="verifyBox" style="width: 220px;">
-                                                    <div class="verifyStyle">
-                                                        <i class="commonIcon errorIcon"></i>请输入登录密码
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th></th>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="commonBtn blueBtn">提交</a>
-                                                    <a href="javascript:void(0);" class="cancelOper">取消</a>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                            </table>
-                                        </div>
+                                <tr class="wechatNumberContent">
+                                    <th>微信号:</th>
+                                    <td>
+                                        <span>zhenlvxing</span>
+                                        <!-- <span class="commonIcon editIcon"></span> -->
+                                        <a href="javascript:void(0);" class="unbindWechat unbindWechat-tooltip">解除绑定</a>
                                     </td>
-                                </tr> -->
+                                </tr>
                                 </tbody>
                             </table>
                         </section>
@@ -523,6 +486,11 @@
     <img src="../images/client/bindwechatQR.png" style="width:170px;height:170px;"/>
 </script>
 
+<script type="text/html" id="unbindwechat_template">
+    <img src="../images/client/unbindwechatQR.png" style="width:170px;height:170px;"/>
+    <p>扫描二维码解除微信号绑定</p>
+</script>
+
 <script>
     $(function(){        
         //编辑头像
@@ -597,6 +565,13 @@
         })*/
         $(".bindWechat").attr("title", $("#bindwechat_template").html());
         $(".bindWechat-tooltip").tooltip({
+            html: true,
+            placement: 'top',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+        //解除绑定微信
+        $(".unbindWechat").attr("title", $("#unbindwechat_template").html());
+        $(".unbindWechat-tooltip").tooltip({
             html: true,
             placement: 'top',
             template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
