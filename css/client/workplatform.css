@@ -128,6 +128,49 @@
     color: #11b9b7;
     cursor: pointer;
 }
+.maskingContent{
+    padding: 0 20px;
+    height: 0;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
+    position: absolute;
+    left: 0;
+    top: 122px;
+    z-index: 10;
+}
+.closeIcon{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../../images/client/commonIcon.png") no-repeat -36px -213px;
+    position: absolute;
+    right: 12px;
+    top: 2%;
+    cursor: pointer;
+}
+.maskingContent .loadingTwoDimension{
+    width: 168px;
+    height: 168px;
+    border: 1px solid #f1f1f1;
+    margin-top: 150px;
+}
+.twoDimensionFonts{
+    font-size: 14px;
+    color: #1cafad;
+    margin: 10px 0 20px;
+}
+.loadingHint{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    text-align: left;
+    margin-top: 40px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+
 /*栏目模块*/
 .columnModel{
     height:104px;

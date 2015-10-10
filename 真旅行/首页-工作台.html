@@ -423,6 +423,14 @@
               </div>
             </div>
           </div>
+            <div class="maskingContent">
+                <span class="closeIcon"></span>
+                <div>
+                    <img class="loadingTwoDimension" src="../images/client/loadingTwoDimension.jpg">
+                </div>
+                <div class="twoDimensionFonts">扫码二维码</div>
+                <div class="loadingHint">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</div>
+            </div>
         </div>
         <div class="workplabtn"><span></span></div>
       </div>
@@ -747,7 +755,7 @@ $(function(){
       $('.special .scanQR').stop().animate({'top':'0'},400);
     },function(){
       $('.special .scanQR').stop().animate({'top':'445px'},400);
-    })
+    });
 
     $(".loginBtn").click(function(event){
         $(".login-entrance").hide();
@@ -756,6 +764,8 @@ $(function(){
         $(".workpla-afterlogin").show();
         TabcontControl();
         event.stopPropagation();
+        
+        $(".maskingContent").animate({'top':'122px','height':'100%','opacity':"show"},1000);
     });
 
     $(".exitbtn").click(function(event){
@@ -765,7 +775,10 @@ $(function(){
         $(".workpla-afterlogin").hide();
         event.stopPropagation();
     });
-  
+      
+    $(".closeIcon").click(function(){
+        $(this).parents(".maskingContent").animate({'top':'122px','height':'0','opacity':"hide"},1000);
+    });
 
 });
 </script>
