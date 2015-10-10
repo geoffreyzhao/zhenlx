@@ -482,6 +482,38 @@
 		</div>
 	</div>
 
+    <div class="modal fade" id="ac-bindPhoneWindow">
+        <div class="modal-dialog" style="width: 450px;height:180px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">手机号绑定提示</h4>
+                </div>
+                <div class="modal-body">                    
+                    <p class="bindtip">该手机号已是真旅行会员，请更换其他手机号绑定</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ac-bindWechatWindow">
+        <div class="modal-dialog" style="width: 450px;height:180px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">微信绑定提示</h4>
+                </div>
+                <div class="modal-body">                    
+                    <p class="bindtip">该微信号已是真旅行会员，请更换其他微信号扫码</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <script type="text/html" id="bindwechat_template">
     <img src="../images/client/bindwechatQR.png" style="width:170px;height:170px;"/>
 </script>
@@ -560,9 +592,6 @@
             });
         });
         //绑定微信号
-        /*$(".wechatNumberContent .bindWechat").hover(function(){
-
-        })*/
         $(".bindWechat").attr("title", $("#bindwechat_template").html());
         $(".bindWechat-tooltip").tooltip({
             html: true,
@@ -576,19 +605,20 @@
             placement: 'top',
             template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
         });
-        /*$(".wechatNumberContent .bindWechat").click(function(){
-            $(this).hide();
-            $(this).parents(".wechatNumberContent").siblings(".bindWechatNumber").find(".editModelTabContainer").slideDown(function(){
-                $(window).trigger("resize");
-            });
+        //弹窗初始化
+        $(".modal").modal({
+            backdrop:"static",
+            keyboard: false,
+            show: false
         });
-        $(".bindWechatNumber .cancelOper").click(function(){
-            $(this).parents(".bindWechatNumber").find(".editModelTabContainer").slideUp(function(){
-                $(window).trigger("resize");
-                $(this).parents(".bindWechatNumber").siblings(".wechatNumberContent").find(".bindWechat").show();
-            });
-        });*/
-
+        //手机绑定弹窗
+        $(".bindphone").click(function(){
+            $("#ac-bindPhoneWindow").modal("show");
+        });
+        //微信绑定弹窗
+        $(".bindWechat").click(function(){
+            $("#ac-bindWechatWindow").modal("show");
+        });
         //  编辑邮箱
         $(".mailContent .editIcon").click(function(){
             $(this).hide();

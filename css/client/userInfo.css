@@ -133,6 +133,10 @@
 .bindphone,.bindWechat,.unbindWechat{
     display:inline-block;
     margin-left:20px;
+    color:#11b9b7;
+}
+.bindphone:hover,.bindWechat:hover,.unbindWechat:hover{
+    color:#0c9c9a;
 }
 .wechatNumberContent td{
     position: relative;
@@ -151,6 +155,11 @@
 }
 .green-border-tooltip .tooltip-inner{
     padding:1px;
+}
+.bindtip{
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
 }
 /*  个人资料 end  */
 
