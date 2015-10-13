@@ -771,7 +771,7 @@
             </div>
             <div class="ui-block-c">
                 <!-- <a class="order-link" href="javascript:void(0);">立即预订</a> -->
-                <a class="wantgo-link" data-rel="popup" href="#wantgoWindow">想去</a>
+                <a class="wantgo-link" data-rel="popup" >想去</a>
             </div>
         </div>
     </div>
@@ -932,7 +932,10 @@
                 <div class="ui-block-b arr-click">
                     <a class="order-btn-link" href="javascript:void(0);" data-rel="back"><span class="arr-down"></span></a>
                 </div>
-                <div class="ui-block-c"><a class="order-link" href="javascript:void(0);">立即预订</a></div>
+                <div class="ui-block-c">
+                    <!-- <a class="order-link" href="javascript:void(0);">立即预订</a> -->
+                    <a class="wantgo-link" data-rel="popup" >想去</a>
+                </div>
             </div>
         </div>
     </div>
@@ -1159,6 +1162,17 @@
                 });
             }
             event.stopPropagation();
+        });
+
+        $(".wantgo-link").click(function(){
+            if ($("#popupMenu-screen").is(":visible")) {
+                $("#popupMenu").popup("close");
+                setTimeout(function(){
+                    $("#wantgoWindow").popup("open");
+                }, 500);
+            } else {
+                $("#wantgoWindow").popup("open");
+            }
         });
     });
 </script>
