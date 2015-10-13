@@ -1141,6 +1141,9 @@
 .sold-out{
     color:#999 !important;
 }
+.cannt-order {
+    color: #11b9b7!important;
+}
 .menu-row{
     width:100%;
     max-height:10rem;
