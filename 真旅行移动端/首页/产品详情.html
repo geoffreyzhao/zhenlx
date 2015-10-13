@@ -14,6 +14,7 @@
     <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/vendor/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
     <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
     <title>产品详情</title>
 
@@ -768,7 +769,24 @@
             <div class="ui-block-b">
                 <a class="order-btn-link" href="javascript:void(0);" id="popup-click"><span class="arr-up"></span></a>
             </div>
-            <div class="ui-block-c"><a class="order-link" href="javascript:void(0);">立即预订</a></div>
+            <div class="ui-block-c">
+                <!-- <a class="order-link" href="javascript:void(0);">立即预订</a> -->
+                <a class="wantgo-link" data-rel="popup" href="#wantgoWindow">想去</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  想去弹窗  -->
+    <div class="ui-content" data-role="popup" id="wantgoWindow" data-transition="none" data-position-to="window" data-theme="a" data-overlay-theme="b" data-dismissible="false">
+        <div class="dlg-cnt pre-order-cnt">
+            <p>该日期暂未开放购买</p>
+            <p>当真想去？预留手机号等开卖通知吧！</p>
+            <p class="p-pre-order">手机号：<input type="tel" placeholder="请输入手机号" data-role="none">
+            </p>
+        </div>
+        <div class="dlg-foot">
+            <a class="btn-cancel pre-order-btn" data-role="none" data-rel="back" href="javascript:void(0);">再看看</a>
+            <a class="btn-confirm pre-order-btn" data-role="none" href="javascript:void(0);">OK</a>
         </div>
     </div>
 
