@@ -225,7 +225,7 @@
                             <th>启用</th>
                             <th>操作</th>
                         </thead>
-                        <tbody>
+                        <tbody class="body-menu">
                         <tr class="first-menu">
                             <td><input class="first-menu-num" type="text" value="1"></td>
                             <td><input class="first-menu-name" type="text" value="一级菜单"><a class="addBtn01" href="javascript:void(0);"></a></td>
@@ -241,7 +241,9 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td><input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU"></td>
+                            <td>
+                                <input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
+                            </td>
                             <td>
                                 <div class="checkboxContent checkboxAction">
                                     <label class="checkboxInfo">
@@ -270,7 +272,9 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td><a href="javascript:void(0);" class="teleText">选择图文信息</a></td>
+                            <td>
+                                <a href="javascript:void(0);" class="teleText">选择图文信息</a>
+                            </td>
                             <td>
                                 <div class="checkboxContent checkboxAction">
                                     <label class="checkboxInfo active">
@@ -299,7 +303,9 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td><a href="javascript:void(0);" class="teleText">选择图文信息</a></td>
+                            <td>
+                                <input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
+                            </td>
                             <td>
                                 <div class="checkboxContent checkboxAction">
                                     <label class="checkboxInfo">
@@ -328,7 +334,9 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td><a href="javascript:void(0);" class="teleText">选择图文信息</a></td>
+                            <td>
+                                <a href="javascript:void(0);" class="teleText">选择图文信息</a>
+                            </td>
                             <td>
                                 <div class="checkboxContent checkboxAction">
                                     <label class="checkboxInfo">
@@ -355,7 +363,9 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td><input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU"></td>
+                            <td>
+                                <input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
+                            </td>
                             <td>
                                 <div class="checkboxContent checkboxAction">
                                     <label class="checkboxInfo">
@@ -404,7 +414,7 @@
                                         <img src="../../images/wechat01.jpg" class="teleTxt-img" data-original="" alt="" />
                                         <div class="teleTxt-centent">
                                             <div>
-                                                <p>中秋大赏，教你辨识不安于室的女性欲望。</p>
+                                                <div class="teleTxt-detail">中秋大赏，教你辨识不安于室的女性欲望。</div>
                                             </div>
                                         </div>
                                     </div>
@@ -419,8 +429,8 @@
                                         <img src="../../images/wechat01.jpg" class="teleTxt-img" data-original="" alt="" />
                                         <div class="teleTxt-centent">
                                             <div>
-                                                <p>1、中秋大赏，教你辨识不安于室的女性欲望。</p>
-                                                <p>2、中秋大赏，教你辨识不安于室的女性欲望。</p>
+                                                <div class="teleTxt-detail">1、中秋大赏，教你辨识不安于室的女性欲望。</div>
+                                                <div class="teleTxt-detail">2、中秋大赏，教你辨识不安于室的女性欲望。</div>
                                             </div>
                                         </div>
                                     </div>
@@ -435,22 +445,24 @@
                                         <img src="../../images/wechat01.jpg" class="teleTxt-img" data-original="" alt="" />
                                         <div class="teleTxt-centent">
                                             <div>
-                                                <p>中秋大赏，教你辨识不安于室的女性欲望。</p>
+                                                <div class="teleTxt-detail">中秋大赏，教你辨识不安于室的女性欲望。</div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="teleTxt-left"><span class="teleTxt-cell">
-                                        <label class="radio">
-                                            <span class="radioIcon"></span>
-                                        </label>
-                                    </span></div>
+                                    <div class="teleTxt-left">
+                                        <span class="teleTxt-cell">
+                                            <label class="radio">
+                                                <span class="radioIcon"></span>
+                                            </label>
+                                        </span>
+                                    </div>
                                     <div class="teleTxt-right">
                                         <img src="../../images/wechat01.jpg" class="teleTxt-img" data-original="" alt="" />
                                         <div class="teleTxt-centent">
                                             <div>
-                                                <p>中秋大赏，教你辨识不安于室的女性欲望。</p>
+                                                <div class="teleTxt-detail">中秋大赏，教你辨识不安于室的女性欲望。</div>
                                             </div>
                                         </div>
                                     </div>
@@ -554,12 +566,44 @@
             keyboard: false,
             show: false
         });
-        $(".teleText").click(function(){
+        //选择弹窗
+        $(".body-menu").on("click", ".teleText", function(event){
             $("#dlg-teleText").modal("show");
+            event.stopPropagation();
+            var dlgParent = $(this).parent();
+
+            //选中微信图文
+            $(".wechat-dlg-confirm").click(function(e){
+                var cuRadio = $("#dlg-teleText").find("label[class='radio active']").parents("li");
+                var cuRadioTxt = cuRadio.find(".teleTxt-detail:first").text();
+                if(cuRadioTxt.length > 15){
+                    cuRadioTxt = cuRadioTxt.substring(0, 15);
+                }
+                var addTxt = '<div class="cuRadioTxt clearfix"><span>'+cuRadioTxt+'</span><a href="javascript:void(0);" class="wechat-close"></a></div>';
+                dlgParent.children(".teleText").addClass("hidden");
+                if(dlgParent.children().hasClass("cuRadioTxt")){
+                    dlgParent.children(".cuRadioTxt").remove();
+                }
+                dlgParent.append(addTxt);
+
+                $("#dlg-teleText").modal("hide");
+                e.stopPropagation();
+            });
         });
 
-        $(".first-menu-op").click(function(){
+        //删除文本
+        $(".body-menu").on("click", ".wechat-close", function(event){
+            var beforeLink = $(this).parents("td").find(".teleText");
+            if(beforeLink.hasClass("hidden")){
+                beforeLink.removeClass("hidden");
+                $(this).parent().remove();
+            }
+            event.stopPropagation();
+        });
+        //删除行
+        $(".body-menu").on("click", ".first-menu-op", function(event){
             $("#deleModal").modal("show");
+            event.stopPropagation();
         });
 
         //添加一级菜单行
@@ -593,15 +637,19 @@
                     '<a class="first-menu-op" href="javascript:void(0);">删除</a>' +
                     '</td>' +
                     '</tr>';
-            if(lastNum == 3){
+            var cntFirstMenu = $(".wechat-menuTab > tbody").children(".first-menu").length;
+            console.info(cntFirstMenu);
+            if(cntFirstMenu == 3){
                 return;
             }
             $(".wechat-menuTab > tbody").append(addTabRow);
         });
+
         $(".teleTxt-left .radio").click(function(){
             $(".teleTxt-left .radio").removeClass("active");
             $(this).addClass("active");
         });
+
         //同步微信素材
         $(".teleText-header-load").click(function(){
             $(".teleText-header-load .wechat-load").attr("src", "../../images/loading.gif");
@@ -614,10 +662,90 @@
         });
 
         //添加二级菜单
-        $(".addBtn01").click(function(){
+        $(".body-menu").on("click", ".addBtn01", function(event){
             var theParent = $(this).parents(".first-menu");
-            console.info(theParent);
+            var nextParent = theParent.nextAll(".first-menu:first");
+            var nextSndNum = parseInt(nextParent.prev().find(".second-menu-num").val());
+            var nextLastNum = (nextParent.length == 0)?0:nextSndNum;
+            var secondMenu = '<tr class="second-menu">' +
+                    '<td><input class="second-menu-num" type="text" value='+(nextLastNum+1)+'></td>' +
+                    '<td>' +
+                    '<i class="second-last-line"></i><input class="second-menu-name" type="text" value="二级子菜单">' +
+                    '</td>' +
+                    '<td>' +
+                    '<div class="dropdown first-menu-action">' +
+                    '<a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">' +
+                    '<span class="activeFonts">发送消息</span>' +
+                    '<span class="caret"></span>' +
+                    '</a>' +
+                    '<ul class="dropdown-menu">' +
+                    '<li><a href="javascript:void(0);">跳转链接</a></li>' +
+                    '<li class="active"><a href="javascript:void(0);">发送消息</a></li>' +
+                    '</ul>' +
+                    '</div>' +
+                    '</td>' +
+                    '<td>' +
+                    '<a href="javascript:void(0);" class="teleText">选择图文信息</a>' +
+                    '</td>' +
+                    '<td>' +
+                    '<div class="checkboxContent checkboxAction">' +
+                    '<label class="checkboxInfo active">' +
+                    '<span class="checkboxIcon"></span>' +
+                    '</label>' +
+                    '</div>' +
+                    '</td>' +
+                    '<td style="text-align: center;">' +
+                    '<a class="first-menu-op" href="javascript:void(0);">删除</a>' +
+                    '</td>' +
+                    '</tr>';
+
+            if(nextParent.length == 0){
+                var SndLeng = $(theParent).nextAll(".second-menu").length;
+                var sndNumVal = parseInt(theParent.nextAll(".second-menu").find(":last").find(".second-menu-num").val());
+                if(SndLeng == 0){
+                    $(".wechat-menuTab > tbody").append(secondMenu);
+                }else if(SndLeng == 5){
+                    return;
+                }else{
+                    var lastItem = $(theParent).nextAll(".second-menu:last").find(".second-last-line");
+                    console.info(lastItem);
+                    lastItem.removeClass("second-last-line").addClass("second-item-line");
+                    $(".wechat-menuTab > tbody").append(secondMenu);
+                }
+
+            }else{
+                if((nextParent.index() - theParent.index()) == 6){
+                    return;
+                }
+                var lastLine = $(nextParent.prev()).find(".second-last-line");
+                lastLine.removeClass("second-last-line").addClass("second-item-line");
+                $(nextParent).before(secondMenu);
+            }
+
         });
+
+        //改变响应动作
+        $(".body-menu").on("click", ".dropdown-menu li", function(){
+            var firstItem = $(this).parent().find("li:first");
+            var secondItem = $(this).parent().find("li:last");
+            var linkItem = '<input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">';
+            var teleItem = '<a href="javascript:void(0);" class="teleText">选择图文信息</a>';
+            var nextItem = $(this).parents("td").next();
+            console.info(nextItem.children());
+            if($(this).is(firstItem)){
+                if(nextItem.children().is("input[class='first-menu-response']")){
+                    return;
+                }
+                nextItem.empty().html(linkItem);
+            }
+            if($(this).is(secondItem)){
+                if(nextItem.children().is("a[class='teleText']")){
+                    return;
+                }
+                nextItem.empty().html(teleItem);
+            }
+        });
+
 
     });
 </script>

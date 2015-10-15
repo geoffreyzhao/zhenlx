@@ -97,6 +97,7 @@
     background: #45c8dc url("../../images/commonIcon.png") no-repeat -144px -144px;
 }
 .wechat-menuTab tbody tr{
+    width:100%;
     height:50px;
 }
 .wechat-menuTab tbody tr td{
@@ -116,6 +117,28 @@
     padding-left:10px !important;
     padding-right:10px;
     overflow: hidden;
+}
+.cuRadioTxt{
+    width:318px;
+    height: 35px;
+    line-height:35px;
+    border: 1px solid #DADADA;
+    background-color:#fff;
+    padding-left:10px;
+    margin-left:12px;
+}
+.cuRadioTxt .wechat-close{
+    width:15px;
+    height:15px;
+    float: right;
+    display: inline-block;
+    background: url("../../images/commonIcon.png") no-repeat -57px -129px;
+    vertical-align: middle;
+    margin-top:8px;
+    margin-right:10px;
+}
+.cuRadioTxt .wechat-close:hover{
+
 }
 .checkboxAction{
     margin-left:39px;
@@ -154,7 +177,7 @@
     width:318px;
     padding-left:20px !important;
 }
-.teleText{
+.teleText, .teleText:visited{
     width:155px;
     height:37px;
     line-height:37px;
@@ -167,7 +190,7 @@
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
-.teleText:hover{
+.teleText:hover, .teleText:focus{
     background-color:#45c8dc;
     color:white;
 }
@@ -233,6 +256,8 @@
 }
 .wechat-toolbars .toolbars-til{
     margin-left:15px;
+    padding-left:5px;
+    padding-right:5px;
     height:37px;
     width:277px;
 }
@@ -350,6 +375,9 @@
 .teleTxt-right .teleTxt-centent > div{
     display: table-cell;
     vertical-align: middle;
+}
+.teleTxt-detail .teleTxt-detail{
+    line-height:18px;
 }
 .teleTxt-right p{
     margin:0;
