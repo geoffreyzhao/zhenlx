@@ -230,7 +230,7 @@
                             <td><input class="first-menu-num" type="text" value="1"></td>
                             <td><input class="first-menu-name" type="text" value="一级菜单"><a class="addBtn01" href="javascript:void(0);"></a></td>
                             <td>
-                                <div class="dropdown first-menu-action">
+                                <div class="dropdown first-menu-action hidden">
                                     <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
                                         <span class="activeFonts">跳转链接</span>
                                         <span class="caret"></span>
@@ -242,7 +242,7 @@
                                 </div>
                             </td>
                             <td>
-                                <input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
+                                <input type="text" class="first-menu-response hidden" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
                             </td>
                             <td>
                                 <div class="checkboxContent checkboxAction">
@@ -628,7 +628,6 @@
                     }else{
                         var endInd = nextParentItem.first().index();
                         $("tbody tr").slice(startInd, endInd).remove();
-
                     }
                 }
                 if(parentItem.is(".second-menu")){
@@ -636,10 +635,16 @@
                     var nextSndItem = parentItem.next(".second-menu");
                     if(prevSndItem.length != 0 && nextSndItem.length == 0){
                         prevSndItem.find(".second-item-line").removeClass("second-item-line").addClass("second-last-line");
-                        parentItem.remove();
-                    }else{
-                        parentItem.remove();
                     }
+                    if((parentItem.prev().is(".first-menu")) && (parentItem.next().is(".first-menu"))){
+                        parentItem.prev().find(".first-menu-action").removeClass("hidden");
+                        parentItem.prev().find(".first-menu-response").removeClass("hidden");
+                    }
+                    if((parentItem.prev().is(".first-menu")) && (parentItem.next().length == 0)){
+                        parentItem.prev().find(".first-menu-action").removeClass("hidden");
+                        parentItem.prev().find(".first-menu-response").removeClass("hidden");
+                    }
+                    parentItem.remove();
                 }
                 $("#deleModal").modal("hide");
             });
@@ -762,6 +767,8 @@
                 lastLine.removeClass("second-last-line").addClass("second-item-line");
                 $(nextParent).before(secondMenu);
             }
+            theParent.find(".first-menu-action").addClass("hidden");
+            theParent.find(".first-menu-response").addClass("hidden");
         });
 
         //改变响应动作
