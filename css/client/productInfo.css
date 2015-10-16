@@ -416,6 +416,14 @@
     color: #11b9b7;
     text-decoration: underline;
 }
+.commonModel .listDetails a[href^=tel] {
+    color: #11b9b7;
+}
+.commonModel .listDetails a[href^=tel]:hover {
+    color: #11b9b7;
+    cursor: default;
+    text-decoration: none;
+}
 .commonTitle .journeyIcon{
     width: 20px;
     height: 22px;
