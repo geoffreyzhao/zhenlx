@@ -451,40 +451,4 @@
 .cancelBtn:hover{
     background-color: #a9a9a9;
 }
-.dlg-saveMenu{
-    width:426px;
-    height:135px;
-    background-color:#fff;
-    border:8px #b7c5cb solid;
-    display: none;
-    position: absolute;
-    left: 50%;
-    top:50%;
-    margin-left: -213px;
-    margin-top:-67px;
-    z-index: 5;
-}
-.common-dlgBox{
-    width:426px;
-    height:135px;
-    display: table;
-    text-align: center;
-}
-.common-dlgBox .dlgBox-content{
-    display: table-cell;
-    vertical-align: middle;
-}
-.common-dlgTips{
-    width:36px;
-    height:36px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right:13px;
-}
-.dlgTips-success{
-    background: transparent url("../../images/commonIcon.png") no-repeat -87px -46px;
-}
-.dlgTips-cancel{
-    background: transparent url("../../images/commonIcon.png") no-repeat -127px -46px;
-}
 /** end **/

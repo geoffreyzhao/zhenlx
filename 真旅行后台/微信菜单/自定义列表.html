@@ -379,7 +379,8 @@
                         </tr>
                         </tbody>
                     </table>
-                    <a href="javascript:void(0);" class="wechat-saveBtn">保 存</a><a href="javascript:void(0);" class="wechat-customMenu">生成自定义菜单</a>
+                    <a href="javascript:void(0);" class="wechat-saveBtn">保 存</a>
+                    <a href="javascript:void(0);" class="wechat-customMenu">生成自定义菜单</a>
                     <a href="javascript:void(0);" class="wechat-revokeMenu">撤销自定义菜单</a>
                 </div>
             </div>
@@ -546,17 +547,30 @@
             </div>
         </div>
     </div>
-
     <!--保存成功-->
-    <div class="dlg-saveMenu" id="dlg-saveMenu">
-        <div class="common-dlgBox">
-            <div class="dlgBox-content">
-                <span class="common-dlgTips dlgTips-success"></span><span>保存成功！</span>
+    <div class="popup-saveBox" id="dlg-saveMenu">
+        <div class="saveBox-wrapper">
+            <div class="saveBox-wrapperCnt">
+                <span class="popupCommonImg popupCommonImg-success"></span><span>保存成功！</span>
             </div>
         </div>
     </div>
     <!--生成成功-->
+    <div class="popup-saveBox" id="dlg-bliudMenu">
+        <div class="saveBox-wrapper">
+            <div class="saveBox-wrapperCnt">
+                <span class="popupCommonImg popupCommonImg-success"></span><span>生成成功！</span>
+            </div>
+        </div>
+    </div>
     <!--自定义菜单已撤销-->
+    <div class="popup-saveBox" id="dlg-cancelMenu">
+        <div class="saveBox-wrapper">
+            <div class="saveBox-wrapperCnt">
+                <span class="popupCommonImg popupCommonImg-cancel"></span><span>自定义菜单已撤销！</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -577,7 +591,7 @@
                 var cuRadio = $("#dlg-teleText").find("label[class='radio active']").parents("li");
                 var cuRadioTxt = cuRadio.find(".teleTxt-detail:first").text();
                 if(cuRadioTxt.length > 15){
-                    cuRadioTxt = cuRadioTxt.substring(0, 15);
+                    cuRadioTxt = cuRadioTxt.substring(0, 15)+"...";
                 }
                 var addTxt = '<div class="cuRadioTxt clearfix"><span>'+cuRadioTxt+'</span><a href="javascript:void(0);" class="wechat-close"></a></div>';
                 dlgParent.children(".teleText").addClass("hidden");
@@ -638,7 +652,6 @@
                     '</td>' +
                     '</tr>';
             var cntFirstMenu = $(".wechat-menuTab > tbody").children(".first-menu").length;
-            console.info(cntFirstMenu);
             if(cntFirstMenu == 3){
                 return;
             }
@@ -665,10 +678,17 @@
         $(".body-menu").on("click", ".addBtn01", function(event){
             var theParent = $(this).parents(".first-menu");
             var nextParent = theParent.nextAll(".first-menu:first");
-            var nextSndNum = parseInt(nextParent.prev().find(".second-menu-num").val());
-            var nextLastNum = (nextParent.length == 0)?0:nextSndNum;
+            var sndItem = theParent.nextAll(".second-menu");
+            var nextSndNum = 0;
+            if(nextParent.length == 0 && sndItem.length != 0){
+                nextSndNum = parseInt(sndItem.last().find(".second-menu-num").val());
+            }
+            if(nextParent.length != 0 && sndItem.length != 0){
+                nextSndNum = parseInt(nextParent.prev().find(".second-menu-num").val());
+            }
+            var sndMenuNum = (nextParent.length == 0 && sndItem.length == 0)?0:nextSndNum;
             var secondMenu = '<tr class="second-menu">' +
-                    '<td><input class="second-menu-num" type="text" value='+(nextLastNum+1)+'></td>' +
+                    '<td><input class="second-menu-num" type="text" value='+(sndMenuNum+1)+'></td>' +
                     '<td>' +
                     '<i class="second-last-line"></i><input class="second-menu-name" type="text" value="二级子菜单">' +
                     '</td>' +
@@ -689,7 +709,7 @@
                     '</td>' +
                     '<td>' +
                     '<div class="checkboxContent checkboxAction">' +
-                    '<label class="checkboxInfo active">' +
+                    '<label class="checkboxInfo">' +
                     '<span class="checkboxIcon"></span>' +
                     '</label>' +
                     '</div>' +
@@ -700,28 +720,23 @@
                     '</tr>';
 
             if(nextParent.length == 0){
-                var SndLeng = $(theParent).nextAll(".second-menu").length;
-                var sndNumVal = parseInt(theParent.nextAll(".second-menu").find(":last").find(".second-menu-num").val());
-                if(SndLeng == 0){
+                if(sndItem.length == 0){
                     $(".wechat-menuTab > tbody").append(secondMenu);
-                }else if(SndLeng == 5){
-                    return;
-                }else{
-                    var lastItem = $(theParent).nextAll(".second-menu:last").find(".second-last-line");
-                    console.info(lastItem);
+                }else if(sndItem.length < 5){
+                    var lastItem = theParent.nextAll(".second-menu:last").find(".second-last-line");
                     lastItem.removeClass("second-last-line").addClass("second-item-line");
                     $(".wechat-menuTab > tbody").append(secondMenu);
+                }else if(sndItem.length == 5){
+                    return false;
                 }
-
             }else{
                 if((nextParent.index() - theParent.index()) == 6){
-                    return;
+                    return false;
                 }
-                var lastLine = $(nextParent.prev()).find(".second-last-line");
+                var lastLine = nextParent.prev().find(".second-last-line");
                 lastLine.removeClass("second-last-line").addClass("second-item-line");
                 $(nextParent).before(secondMenu);
             }
-
         });
 
         //改变响应动作
@@ -731,7 +746,6 @@
             var linkItem = '<input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">';
             var teleItem = '<a href="javascript:void(0);" class="teleText">选择图文信息</a>';
             var nextItem = $(this).parents("td").next();
-            console.info(nextItem.children());
             if($(this).is(firstItem)){
                 if(nextItem.children().is("input[class='first-menu-response']")){
                     return;
@@ -745,8 +759,19 @@
                 nextItem.empty().html(teleItem);
             }
         });
-
-
+        //保存提示
+        $(".wechat-saveBtn").click(function(){
+            //显示提示窗
+            clickActionPopup("dlg-saveMenu");
+        });
+        //生成提示
+        $(".wechat-customMenu").click(function(){
+            clickActionPopup("dlg-bliudMenu");
+        });
+        //撤销提示
+        $(".wechat-revokeMenu").click(function(){
+            clickActionPopup("dlg-cancelMenu");
+        });
     });
 </script>
 </body>

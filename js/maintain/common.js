@@ -179,3 +179,11 @@ function isOuterTrigger(event, $ele) {
         return true;
     }
 }
+
+/** 保存操作完成后提示窗 **/
+function clickActionPopup(id){
+    $("#"+id).fadeIn();
+    setTimeout(function(){
+        $("#"+id).fadeOut();
+    }, 2000);
+}
