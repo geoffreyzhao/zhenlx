@@ -32,6 +32,7 @@
 .container-menu{
     margin-top:20px;
     padding-top:50px;
+    padding-bottom: 28px;
     border-top:3px #f1f1f1 solid;
 }
 .container-menu .wechat-addMainBtn{
@@ -146,7 +147,7 @@
 .first-menu-op{
     color:#3db99a;
 }
-.first-menu-op:hover{
+.first-menu-op:hover, .first-menu-op:focus{
     color: #3db99a;
     text-decoration: underline;
 }
