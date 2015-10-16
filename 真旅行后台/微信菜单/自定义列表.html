@@ -538,7 +538,7 @@
                     <h4 class="modal-title">操作提示</h4>
                 </div>
                 <div class="modal-body">
-                    <p style="text-align: center"><span class="notice-icon"></span>确定删除所选消息？</p>
+                    <p style="text-align: center"><span class="notice-icon"></span>确定要删除选中的内容吗？</p>
                 </div>
                 <div class="modal-footer">
                     <a href="javascript:void(0);" class="commonNoticeBtn confirmBtn">确认</a>
@@ -618,6 +618,31 @@
         $(".body-menu").on("click", ".first-menu-op", function(event){
             $("#deleModal").modal("show");
             event.stopPropagation();
+            var parentItem = $(event.target).closest("tr");
+            var startInd = parentItem.index();
+            var nextParentItem = parentItem.nextAll(".first-menu");
+            $(".confirmBtn").click(function(){
+                if(parentItem.is(".first-menu")){
+                    if(nextParentItem.length == 0){
+                        $("tbody[class='body-menu']").empty();
+                    }else{
+                        var endInd = nextParentItem.first().index();
+                        $("tbody tr").slice(startInd, endInd).remove();
+
+                    }
+                }
+                if(parentItem.is(".second-menu")){
+                    var prevSndItem = parentItem.prev(".second-menu");
+                    var nextSndItem = parentItem.next(".second-menu");
+                    if(prevSndItem.length != 0 && nextSndItem.length == 0){
+                        prevSndItem.find(".second-item-line").removeClass("second-item-line").addClass("second-last-line");
+                        parentItem.remove();
+                    }else{
+                        parentItem.remove();
+                    }
+                }
+                $("#deleModal").modal("hide");
+            });
         });
 
         //添加一级菜单行
