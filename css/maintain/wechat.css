@@ -119,6 +119,8 @@
     padding-right:10px;
     overflow: hidden;
 }
+
+
 .cuRadioTxt{
     width:318px;
     height: 35px;
@@ -141,8 +143,29 @@
 .cuRadioTxt .wechat-close:hover{
 
 }
+.checkboxAction .checkboxIcon{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../../images/commonIcon.png") no-repeat -23px -62px;
+    margin: 0;
+    vertical-align: middle;
+}
+.checkboxAction .checkboxInfo.active .checkboxIcon{
+    background-position: 0 -62px;
+}
 .checkboxAction{
+    display: inline-block;
     margin-left:39px;
+}
+.checkboxAction .checkboxInfo{
+    display: inline-block;
+    color: #666;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.checkboxAction .checkboxInfo .checkboxIcon{
+    margin-right: 5px;
 }
 .first-menu-op{
     color:#3db99a;

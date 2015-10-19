@@ -245,7 +245,7 @@
                                 <input type="text" class="first-menu-response hidden" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
                             </td>
                             <td>
-                                <div class="checkboxContent checkboxAction">
+                                <div class="checkboxAction">
                                     <label class="checkboxInfo">
                                         <span class="checkboxIcon"></span>
                                     </label>
@@ -276,7 +276,7 @@
                                 <a href="javascript:void(0);" class="teleText">选择图文信息</a>
                             </td>
                             <td>
-                                <div class="checkboxContent checkboxAction">
+                                <div class="checkboxAction">
                                     <label class="checkboxInfo active">
                                         <span class="checkboxIcon"></span>
                                     </label>
@@ -307,7 +307,7 @@
                                 <input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
                             </td>
                             <td>
-                                <div class="checkboxContent checkboxAction">
+                                <div class="checkboxAction">
                                     <label class="checkboxInfo">
                                         <span class="checkboxIcon"></span>
                                     </label>
@@ -338,7 +338,7 @@
                                 <a href="javascript:void(0);" class="teleText">选择图文信息</a>
                             </td>
                             <td>
-                                <div class="checkboxContent checkboxAction">
+                                <div class="checkboxAction">
                                     <label class="checkboxInfo">
                                         <span class="checkboxIcon"></span>
                                     </label>
@@ -367,7 +367,7 @@
                                 <input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
                             </td>
                             <td>
-                                <div class="checkboxContent checkboxAction">
+                                <div class="checkboxAction">
                                     <label class="checkboxInfo">
                                         <span class="checkboxIcon"></span>
                                     </label>
@@ -650,6 +650,12 @@
             });
         });
 
+        //"启用"复选框的选中与取消
+        $(".body-menu").on("click", ".checkboxAction .checkboxInfo", function(event){
+            $(this).toggleClass("active");
+            event.stopPropagation();
+        });
+
         //添加一级菜单行
         $(".wechat-addMainBtn").click(function(){
             var lastFistMenu = $(".wechat-menuTab > tbody").find(".first-menu").last();
@@ -671,7 +677,7 @@
                     '</td>' +
                     '<td><input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU"></td>' +
                     '<td>' +
-                    '<div class="checkboxContent checkboxAction">' +
+                    '<div class="checkboxAction">' +
                     '<label class="checkboxInfo">' +
                     '<span class="checkboxIcon"></span>' +
                     '</label>' +
@@ -738,7 +744,7 @@
                     '<a href="javascript:void(0);" class="teleText">选择图文信息</a>' +
                     '</td>' +
                     '<td>' +
-                    '<div class="checkboxContent checkboxAction">' +
+                    '<div class="checkboxAction">' +
                     '<label class="checkboxInfo">' +
                     '<span class="checkboxIcon"></span>' +
                     '</label>' +
