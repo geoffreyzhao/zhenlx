@@ -311,7 +311,7 @@
     background-color:#2ebacf;
 }
 .wechat-teleText{
-    width:100%;
+    width:748px;
     border:1px #dadada solid;
 }
 .teleText-header{
@@ -402,10 +402,6 @@
 }
 .teleTxt-detail .teleTxt-detail{
     line-height:18px;
-}
-.teleTxt-right p{
-    margin:0;
-    vertical-align: middle;
 }
 .wechat-dlg-foot{
     width:100%;
