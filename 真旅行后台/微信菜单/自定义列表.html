@@ -582,29 +582,30 @@
             show: false
         });
         //选择弹窗
+        var dlgParent = "";
         $(".body-menu").on("click", ".teleText", function(event){
             $("#dlg-teleText").modal("show");
             event.stopPropagation();
-            var dlgParent = $(this).parent();
-
-            //选中微信图文
-            $(".wechat-dlg-confirm").click(function(e){
-                var cuRadio = $("#dlg-teleText").find("label[class='radio active']").parents("li");
-                var cuRadioTxt = cuRadio.find(".teleTxt-detail:first").text();
-                if(cuRadioTxt.length > 15){
-                    cuRadioTxt = cuRadioTxt.substring(0, 15)+"...";
-                }
-                var addTxt = '<div class="cuRadioTxt clearfix"><span>'+cuRadioTxt+'</span><a href="javascript:void(0);" class="wechat-close"></a></div>';
-                dlgParent.children(".teleText").addClass("hidden");
-                if(dlgParent.children().hasClass("cuRadioTxt")){
-                    dlgParent.children(".cuRadioTxt").remove();
-                }
-                dlgParent.append(addTxt);
-
-                $("#dlg-teleText").modal("hide");
-                e.stopPropagation();
-            });
+            dlgParent = $(this).parent();
         });
+        //选中微信图文
+        $(".wechat-dlg-confirm").click(function(e){
+            var cuRadio = $("#dlg-teleText").find("label[class='radio active']").parents("li");
+            var cuRadioTxt = cuRadio.find(".teleTxt-detail:first").text();
+
+            if(cuRadioTxt.length > 15){
+                cuRadioTxt = cuRadioTxt.substring(0, 15)+"...";
+            }
+            var addTxt = '<div class="cuRadioTxt clearfix"><span>'+cuRadioTxt+'</span><a href="javascript:void(0);" class="wechat-close"></a></div>';
+            dlgParent.children(".teleText").addClass("hidden");
+            if(dlgParent.children().hasClass("cuRadioTxt")){
+                dlgParent.children(".cuRadioTxt").remove();
+            }
+            dlgParent.append(addTxt);
+            $("#dlg-teleText").modal("hide");
+            e.stopPropagation();
+        });
+
 
         //删除文本
         $(".body-menu").on("click", ".wechat-close", function(event){
