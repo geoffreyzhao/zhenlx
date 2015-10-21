@@ -294,7 +294,7 @@
                             <td>
                                 <div class="dropdown first-menu-action">
                                     <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                        <span class="activeFonts">发送消息</span>
+                                        <span class="activeFonts">跳转链接</span>
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -781,11 +781,16 @@
 
         //改变响应动作
         $(".body-menu").on("click", ".dropdown-menu li", function(){
+            var dropItem = $(this).children("a").html();
             var firstItem = $(this).parent().find("li:first");
             var secondItem = $(this).parent().find("li:last");
             var linkItem = '<input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">';
             var teleItem = '<a href="javascript:void(0);" class="teleText">选择图文信息</a>';
             var nextItem = $(this).parents("td").next();
+
+            $(this).closest(".first-menu-action").find(".activeFonts").html(dropItem);
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
             if($(this).is(firstItem)){
                 if(nextItem.children().is("input[class='first-menu-response']")){
                     return;
@@ -799,6 +804,7 @@
                 nextItem.empty().html(teleItem);
             }
         });
+
         //保存提示
         $(".wechat-saveBtn").click(function(){
             //显示提示窗
