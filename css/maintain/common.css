@@ -1043,7 +1043,6 @@ input[type="text"].verifyBox:focus{
     left: 50%;
     top:50%;
     margin-left: -205px;
-    margin-top:-60px;
     z-index: 10;
 }
 .popup-saveBox .saveBox-wrapper{

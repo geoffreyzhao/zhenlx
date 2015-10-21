@@ -182,6 +182,10 @@ function isOuterTrigger(event, $ele) {
 
 /** 保存操作完成后提示窗 **/
 function clickActionPopup(id){
+    var screenHeight = $(window).height();
+    var scrollTop = $(document).scrollTop();
+    var objTop = (screenHeight - 120)/2 + scrollTop;
+    $("#"+id).css("top", objTop+"px");
     $("#"+id).fadeIn();
     setTimeout(function(){
         $("#"+id).fadeOut();
