@@ -139,7 +139,13 @@
                     <div class="wrap-cover-bg"></div>
                     <div class="common-tab-bar">
                         <div class="tab-top"></div>
-                        <ul class="common-tab calendar-month-tab clearfix"></ul>
+                        <div class="cal-mon-tab-container">
+                            <ul class="common-tab calendar-month-tab clearfix"></ul>
+                            <div class="mon-nav-btns">
+                                <span class="pre-mon-btn"></span>
+                                <span class="next-mon-btn"></span>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="calendarTables">
@@ -1098,12 +1104,31 @@
                 },
                 { month : "2015/08/01",  
                   info : []
+                },
+                { month : "2015/09/01",  
+                  info : []
+                },
+                { month : "2015/10/01",  
+                  info : []
+                },
+                { month : "2016/01/01",  
+                  info : []
+                },
+                { month : "2016/03/01",  
+                  info : []
                 }
             ];
             setCalendar(data, ".calendarTables");
 
         //  生成月份标题
         $(".custom-price-calendar-container ul.common-tab").append(geneTabSwitchMonth(data));
+
+        var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
+
+        if (data.length > 6) {
+            $("ul.calendar-month-tab").css("width", w * data.length + $(".calendar-month-tab .placement").outerWidth() + "px");
+            $(".cal-mon-tab-container").addClass("limit-width");
+        }
             
             $(".calendar-month-tab .tab-item").eq(0).addClass("current");
             $(".common-tab").tabBar();
@@ -1219,9 +1244,18 @@
 
             liStr += "<li class='placement'></li>";
             liStr += "<li name='" + data[i].month + "' class='tab-item'>" + temp.getFullYear() + "年" +
-                        (temp.getMonth() + 1) + "月</li>";
+                        (temp.getMonth() + 1 < 10 ? '0' + (temp.getMonth() + 1) : (temp.getMonth() + 1)) + "月</li>";
         }
-        liStr += "<li class='placement'></li><li class='rest'></li>";
+
+        if (data.length > 6) {
+            $(".mon-nav-btns").show();
+            liStr += "<li class='placement'></li>";
+        } else if (data.length == 6) {
+            liStr += "<li class='placement'></li>";
+        } else {
+            liStr += "<li class='placement'></li><li class='rest'></li>";
+        }
+
         return liStr;
     }
     </script>
@@ -2074,6 +2108,34 @@
                     $(".wishedTip").fadeOut();
                 }, 1500);
             });
+        }
+    });
+
+    $(".pre-mon-btn").click(function(){
+        if ($(".tab-item.current").prevAll('.tab-item').length > 0) {
+
+            var offsetLeft = $(".calendar-month-tab .tab-item.current").offset().left,
+                curOff = $(".calendar-month-tab").css("left") != "auto" ? parseInt($(".calendar-month-tab").css("left")) : 0;
+
+            if (offsetLeft < 400) {
+                var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
+                $(".calendar-month-tab").css("left", curOff + w + "px");
+            }
+            $(".tab-item.current").prevAll('.tab-item').eq(0).trigger("click");
+        }
+    });
+
+    $(".next-mon-btn").click(function(){
+        if ($(".tab-item.current").nextAll('.tab-item').length > 0) {
+
+            var offsetLeft = $(".calendar-month-tab .tab-item.current").offset().left,
+                curOff = $(".calendar-month-tab").css("left") != "auto" ? parseInt($(".calendar-month-tab").css("left")) : 0;
+
+            if (offsetLeft > 800) {
+                var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
+                $(".calendar-month-tab").css("left", curOff - w + "px");                
+            }
+            $(".tab-item.current").nextAll('.tab-item').eq(0).trigger("click");
         }
     });
 </script>

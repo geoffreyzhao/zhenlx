@@ -1182,7 +1182,10 @@ ul.common-tab {
 }
 ul.common-tab > li {
     float: left;
-    padding: 15px 23px;
+    width: 116px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
     background-color: #11b9b7;
 }
 ul.common-tab > li:hover {
@@ -1197,7 +1200,7 @@ ul.common-tab > li.current {
 }
 ul.common-tab > li.placement {
     height: 50px;
-    width: 9px;
+    width: 8px;
     padding: 0;
 }
 ul.common-tab > li.placement.left-active {
@@ -2524,4 +2527,59 @@ ul.common-tab > li.rest {
 .interestedTipText p {
     margin: 10px 0;
     font-size: 16px;
+}
+
+.calendar-month-tab {
+    height: 50px;
+    overflow: hidden;
+}
+
+.mon-nav-btns {
+    background-color: #11b9b7;
+    width: 124px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    display: none;
+}
+
+.pre-mon-btn {
+    background: url(../../images/client/cal-nav-icons.png) no-repeat 0 0;
+    width: 15px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.next-mon-btn {
+    background: url(../../images/client/cal-nav-icons.png) no-repeat -17px 0;
+    width: 15px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cal-mon-tab-container {
+    width: 752px;
+    overflow: hidden;
+}
+
+.cal-mon-tab-container.limit-width {
+    width: 630px;
 }

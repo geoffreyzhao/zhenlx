@@ -131,13 +131,15 @@
 			    $that.find("li.current").prev(".placement").addClass("left-active");
 			    $that.find("li.current").next(".placement").addClass("right-active");
 
-			    var h = $that.height(),
-			        w = $that.width() - $that.find("li.rest").position().left;
+			    if ($that.find("li.rest").length != 0) {
+				    var h = $that.height(),
+				        w = $that.width() - $that.find("li.rest").position().left;
 
-			    $that.find("li.rest").css({
-			        height: h + "px",
-			        width: w + "px"
-			    });
+				    $that.find("li.rest").css({
+				        height: h + "px",
+				        width: w + "px"
+				    });
+			    }
 			}
 		});
 	}
