@@ -1,6 +1,7 @@
 @charset "utf-8";
 /** 微信菜单 start **/
 .whiteBg{
+    min-width:1380px;
     min-height:830px;
     background-color: #fff;
     margin:0 10px;
@@ -62,6 +63,7 @@
     margin-right:7px;
 }
 .wechat-menuTab{
+    min-width:1330px;
     border-top:1px #eaeaea solid;
     border-left:1px #eaeaea solid;
 }
