@@ -141,6 +141,9 @@
 .wechatNumberContent td{
     position: relative;
 }
+.wechatNumberContent .tooltip {
+    z-index: 1049!important;
+}
 .wechatQRIcon{
     width:24px;
     height:24px;
