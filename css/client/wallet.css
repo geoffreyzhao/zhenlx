@@ -98,7 +98,7 @@
 }
 .inst-table{
 	width:310px;
-	border:0px;
+	border:0;
 	margin-right:13px;
 }
 .inst-td-right{
@@ -220,6 +220,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: inline-block;
+	line-height: 20px;
 }
 
 .voucherItem .middle {
