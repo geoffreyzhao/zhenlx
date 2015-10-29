@@ -154,7 +154,7 @@
     width: 168px;
     height: 168px;
     border: 1px solid #f1f1f1;
-    margin-top: 150px;
+    margin-top: 80px;
 }
 .twoDimensionFonts{
     font-size: 14px;
@@ -162,13 +162,13 @@
     margin: 10px 0 20px;
 }
 .loadingHint{
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
     color: #333333;
-    text-align: left;
+    text-align: center;
     margin-top: 40px;
     max-height: 300px;
     overflow: hidden;
+    line-height: 26px;
 }
 
 
