@@ -19,8 +19,9 @@
     <title>产品详情</title>
 
     <script type="text/javascript">
-        var root = document.getElementsByTagName("html")[0],
-                w = window.screen.width >= 640 ? 640 : window.screen.width;
+        var root = document.getElementsByTagName("html")[0];
+        var _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+        var w = _w >= 640 ? 640 : _w;
 
         root.style.fontSize = (w / 320) * 20 + "px";
         root.style.minHeight = window.innerHeight + "px";
