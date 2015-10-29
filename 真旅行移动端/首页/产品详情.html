@@ -20,10 +20,10 @@
 
     <script type="text/javascript">
         var root = document.getElementsByTagName("html")[0],
-                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+                w = window.screen.width >= 640 ? 640 : window.screen.width;
 
         root.style.fontSize = (w / 320) * 20 + "px";
-        root.style.minHeight = window.innerHeight + "px";
+        root.style.minHeight = window.screen.width + "px";
 
     </script>
 </head>
