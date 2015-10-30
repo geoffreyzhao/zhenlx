@@ -20,55 +20,54 @@
 
     <script type="text/javascript">
         $(function(){
-            screenchange();
-            window.addEventListener('orientationchange', function(event){
-               if ( window.orientation == 180 || window.orientation==0 ) {
-                    alert("竖屏11");
-                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
-                    w = _w >= 640 ? 640 : _w;
 
-                    alert(w);
-
-                    root.style.fontSize = (w / 320) * 20 + "px";
-                    root.style.minHeight = window.innerHeight + "px";
-                    alert(root.style.fontSize);
-                    /*window.location.reload();*/
-                }else{
-                    alert("横屏111");
-                    alert(root.style.fontSize);
-                    /*root.style.fontSize = (w / 320) * 20 + "px";
-                    root.style.minHeight = window.innerHeight + "px";
-                    window.location.reload();*/
-                }
-            });
             var root;
             var _w;
             var w;
+
+            screenchange();
+
+            window.addEventListener('orientationchange', function(event){
+                /*旋转至竖屏*/
+               if ( (window.orientation == 180 || window.orientation==0)&&(sessionStorage.s_fontsize==undefined)) {/*初始横屏加载切换至竖屏*/
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                    sessionStorage.s_fontsize = root.style.fontSize;
+                }
+
+                root.style.minHeight = window.innerHeight + "px";
+            });
+
             function screenchange(){
                 root = document.getElementsByTagName("html")[0];
-                if ( window.orientation == 180 || window.orientation==0 ) {
-                alert("竖屏");
-                _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
-                w = _w >= 640 ? 640 : _w;
 
-                alert(_w);
+                if ( window.orientation == 180 || window.orientation==0 ) {  /*竖屏加载*/
 
-                root.style.fontSize = (w / 320) * 20 + "px";
-                root.style.minHeight = window.innerHeight + "px";
-                alert(root.style.fontSize);
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                    sessionStorage.s_fontsize = root.style.fontSize;
+
                 }
-                if( window.orientation == 90 || window.orientation == -90 ) {
-                    alert("横屏");
+                
+                if( window.orientation == 90 || window.orientation == -90 ) {  /*横屏加载*/ 
+
+                    if(sessionStorage.s_fontsize==undefined){   /*初始横屏加载*/
+                        var w1 = window.innerHeight<= window.screen.height ? window.innerHeight : window.screen.height;
+                        var w2 = w1 >= 640 ? 640 : w1;
+
+                        root.style.fontSize = (w2 / 320) * 20 + "px";
+
+                    }else{
+                        root.style.fontSize = sessionStorage.s_fontsize;
+                    }
                     
-                    var w1 = window.innerHeight<= window.screen.height ? window.innerHeight : window.screen.height;
-                    var w2 = w1 >= 640 ? 640 : w1;
-
-                    alert(w1);
-
-                    root.style.fontSize = (w2 / 320) * 20 + "px";
-                    root.style.minHeight = window.innerHeight + "px";
-                    alert(root.style.fontSize);
                 }
+
+                root.style.minHeight = window.innerHeight + "px";
             }
 
         });
