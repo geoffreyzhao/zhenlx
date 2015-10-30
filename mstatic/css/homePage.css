@@ -1160,7 +1160,8 @@
 .menu-row{
     width:100%;
     max-height:10rem;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .menu-row .ui-grid-c{
     margin:0.25rem 0;
