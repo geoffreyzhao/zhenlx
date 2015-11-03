@@ -412,33 +412,32 @@
             $(".material-info-list-container").append("<div class='material-info-item changeWidth clearfix'>" + copyTemplateHtml + "</div>");
 //            getGroupNum();
             getOrderNum();
+
+            $(".groupListContent").sortable({
+                placeholder: "material-tr-sortable-placeholder",
+                stop: function(){ // 拖拽效果结束时，重新生成排序数字
+                    getOrderNum();
+                }
+            });
         });
                 
         //清空内容
-        $(".clearContent").click(function(){
-            var clearUpLoad = $(".instantUploadContent").html();
-            $(this).parents(".commonStyle").siblings(".row02,.row03,.row04").find("input").val("");
-            $(this).parents(".commonStyle").siblings(".upLoadProductImg").html(clearUpLoad);
+
+        $("body").delegate(".clearContent", "click", function(){
+                var clearUpLoad = $(".instantUploadContent").html();
+                $(this).parents(".commonStyle").siblings(".row02,.row03,.row04").find("input").val("");
+                $(this).parents(".commonStyle").siblings(".upLoadProductImg").html(clearUpLoad);
+            });
+            
         });
-        
-    });
+
 
     // 重新计算模块排序
     function getOrderNum() {
         $(".groupList").each(function(index){
-            $(this).find(".number").html(index + 1);
+            $(this).find(".number").html(index%3 + 1);
         });
-
-        /*$("body").delegate("groupList", "each", function(){
-            $(this).find(".number").html(index + 1);
-        });*/
     }
-    
-    /*function getGroupNum() {
-        $(".material-info-item.changeWidth").not($(".material-info-item.changeWidth.copyTemplate")).each(function(index){
-            $(this).find(".groupNum").html(index + 1);
-        });
-    }*/
     
 </script>
 
