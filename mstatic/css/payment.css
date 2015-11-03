@@ -466,7 +466,7 @@ input[type="radio"]:checked + .pay-check{
     color:#999;
 }
 .order-row{
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color:#333;
     background-color:#fff;
     padding:0.6rem 0.5rem;
@@ -601,7 +601,7 @@ input[type="radio"]:checked + .pay-check{
     background-color:#fff;
 }
 .order-hotel-til{
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color:#666;
     padding:0.6rem 0;
 }
@@ -650,7 +650,7 @@ input[type="radio"]:checked + .pay-check{
     border-bottom: 1px #dcdcdc solid;
 }
 .order-hotel-bedTil{
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     line-height:1rem;
     padding:0.6rem 0;
 }
@@ -670,7 +670,7 @@ input[type="radio"]:checked + .pay-check{
     margin-left:1.9rem;
 }
 .order-traveler-til{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     background-color:#fff;
     color:#333;
     padding:0.6rem 0.5rem;
@@ -789,7 +789,7 @@ input[type="radio"]:checked + .pay-check{
     vertical-align: middle;
 }
 .order-mark-til{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color:#333;
     padding:0.6rem 0;
 }

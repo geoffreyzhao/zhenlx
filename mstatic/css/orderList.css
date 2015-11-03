@@ -656,7 +656,7 @@
 .row-til{
     padding:0.5rem;
     background-color:#fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color:#333;
     border-bottom:1px #dcdcdc solid;
 }
@@ -702,7 +702,7 @@
 }
 .row-val{
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color:#333;
 }
 .tkt-agenda{
@@ -805,7 +805,7 @@
     background-color:#fff;
 }
 .order-hotel-til{
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color:#666;
     padding:0.6rem 0;
     border-bottom:1px #d5efee dashed;
@@ -874,12 +874,14 @@
 }
 .hotel-bed{
     height:2rem;
-    padding-top:0.5rem;
+    line-height: 2rem;
     background-color:#fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color:#333;
+    vertical-align: middle;
 }
 .hotel-bed-type{
+    height:2rem;
     padding-left:1rem;
 }
 .hotel-bed-op{
@@ -923,7 +925,7 @@
     line-height:1.3rem;
 }
 .row-box-til{
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color:#666;
 }
 .row-box-til ol li span {
@@ -956,7 +958,7 @@
     color:#fd1934;
 }
 .order-price-type{
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color:#333;
     line-height:1.5rem;
 }

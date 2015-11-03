@@ -69,7 +69,7 @@
     width:25%;
 }
 .prd-sum .ui-grid-a .ui-block-b{
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     line-height:1.2rem;
     width:75%;
 }
@@ -120,11 +120,14 @@
 
 .navWrap-val{
     padding:0 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     line-height:1.3rem;
     word-wrap: break-word;
     word-break: break-all;
     margin-bottom: 0.5rem;
+}
+.navWrap-val p{
+    font-size: 0.65rem !important;
 }
 .navWrap-val ol {
     font-size: 0.7rem!important;
@@ -428,9 +431,11 @@
 
 .path-til{
     padding:0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color:#333;
     border-bottom: 1px #dcdcdc solid;
+    background-color:#fff;
+    line-height:1.2rem;
 }
 .path-box .ui-grid-a{
     padding:0.5rem 0;
@@ -466,6 +471,7 @@
 }
 .present-list ul li{
     line-height:1.4rem;
+    font-size: 0.65rem;
 }
 .disc{
     color:#3fc0ae;
@@ -526,6 +532,9 @@
     word-wrap: break-word;
     word-break: break-all;
 }
+.navWrap-path > ul > li > p{
+    font-size: 0.65rem;
+}
 .navWrap-til{
     padding:0.5rem 0;
     color:#3fc0ae;
@@ -583,6 +592,7 @@
 .wuge-txt{
     line-height:1.2rem;
     margin-top:0.5rem;
+    font-size: 0.65rem;
 }
 .tips-top{
     width:13.475rem;
@@ -678,7 +688,9 @@
     word-wrap: break-word;
     word-break: break-all;
 }
-
+.tips-content .tips-detail{
+    font-size: 0.65rem;
+}
 .com-bot0{
     width: 0;
     height: 0;
@@ -949,7 +961,7 @@
     vertical-align: middle;
 }
 .pop-name{
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color:#333;
     margin-left:0.9rem;
 }
@@ -1426,7 +1438,7 @@
     bottom: 0;
     left:0;
     padding:0.3rem;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
 }
 /** end **/
 
@@ -1482,13 +1494,6 @@
     height:0.7rem;
     background-color:#f0f0f0;
     border-bottom: 1px #dcdcdc solid;
-}
-.path-til{
-    background-color:#fff;
-    padding:0.5rem;
-    font-size: 0.8rem;
-    color:#333;
-    line-height:1.2rem;
 }
 /** end **/
 
