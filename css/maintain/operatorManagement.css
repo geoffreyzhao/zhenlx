@@ -880,7 +880,8 @@ textarea.inputUserTextarea {
 .tabTitle .title02,
 .tabTitle .title03,
 .tabTitle .title04,
-.tabTitle .title05{
+.tabTitle .title05,
+.tabTitle .title06{
     float: left;
     padding: 17px;
     border-left: 1px solid #eaeaea;
@@ -914,6 +915,7 @@ textarea.inputUserTextarea {
 }
 .material-info-item:hover{
     background-color: #eefaff;
+    cursor: url(../../images/cursor-crosshair.png), default;
 }
 .material-info-item a{
     color: #3db99a;
@@ -931,7 +933,8 @@ textarea.inputUserTextarea {
 .material-info-item .row03{
     font-size: 14px;
 }
-.commonStyle.row04{
+.commonStyle.row04,
+.upLoadProductImg{
     position: relative;
 }
 .commonStyle.row04 .uploadImg{
@@ -957,20 +960,19 @@ textarea.inputUserTextarea {
     vertical-align: middle;
     margin-right: 10px;
 }
-.againUploadContent{
+form .showUpload{
     display: none;
-    position: absolute;
-    left: 17px;
-    top: 20px;
 }
 .againUpload{
+    font-size: 0;
     width: 222px;
     height: 74px;
     opacity: 0;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 17px;
+    top: 20px;
     z-index: 2;
+    cursor: pointer;
 }
 .againUploadFonts{
     display: block;
@@ -980,12 +982,119 @@ textarea.inputUserTextarea {
     background: rgba(0,0,0,0.7);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 17px;
+    top: 20px;
     z-index: 1;
 }
-.uploadImg:hover + .againUploadContent{
+.commonStyle.row04:hover .showUpload,
+.upLoadProductImg:hover .showUpload{
     display: block;
 }
-
+.lineBetween{
+    height: 1px;
+    border-top: 2px solid #f1f1f1;
+    margin: 20px 0;
+}
+.redHintFonts{
+    color: #ff6666;    
+}
+.tabHintContent .hintList{
+    margin: 10px 0;
+}
+.hintList li{
+    list-style-type: none;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+#deleteWindow .popupContainer .warnIcon{
+    left: 75px;
+    top: 25%;
+}
+#deleteWindow .popupContainer-fonts{
+    margin-left: 120px;
+}
 /*  广告位管理 end  */
+
+/*  推荐产品管理 start   */
+.tabTitle.changeWidth .title02,
+.material-info-item.changeWidth .row02{
+    width: 32%;
+}
+.tabTitle.changeWidth .title03,
+.material-info-item.changeWidth .row03{
+    width: 24%;
+}
+.tabTitle.changeWidth .title04,
+.material-info-item.changeWidth .row04{
+    width: 14%;
+}
+.tabTitle.changeWidth .title05,
+.material-info-item.changeWidth .row05{
+    width: 14%;
+    text-align: left;
+}
+.tabTitle.changeWidth .title06,
+.material-info-item.changeWidth .row06{
+    width: 8%;
+    text-align: center;
+}
+.groupTitle{
+    padding: 17px;
+    background-color: #f5f5f5;
+    border: 1px solid #eaeaea;
+}
+.groupList{
+    border-top: 1px solid #eaeaea;
+}
+.groupTitle .leftTitle{
+    width: 92%;
+    float: left;
+}
+.groupTitle .rightBtn{
+    width: 8%;
+    text-align: right;
+    float: left;
+    color: #fe6869;
+}
+.groupTitle .rightBtn:hover{
+    color: #fe6869;
+    text-decoration: underline;
+}
+.instantUploadStyle.changeImgWidth,
+.commonStyle.row04.changeWidth .uploadImg,
+.groupList .uploadImg,
+.groupList .againUpload,
+.groupList .againUploadFonts{
+    width: 130px;
+    height: 104px;
+}
+.instantUploadStyle.changeImgWidth{
+    position: relative;
+}
+.instantUploadStyle.changeImgWidth span{
+    display: block;
+}
+.instantUploadStyle.changeImgWidth .instantUploadIcon{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+}
+.material-info-item.changeWidth .commonStyle{
+    line-height: 104px;
+}
+.material-info-item.changeWidth{
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+.material-info-item.changeWidth:hover{
+    background: none;
+}
+.material-info-item.changeWidth .groupList:hover{
+    background-color: #eefaff;
+}
+ 
+
+
+
+
+/*  推荐产品管理 end   */

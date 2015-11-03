@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>B2C 真旅行后台 广告位管理</title>
+    <title>B2C 真旅行后台 推荐产品管理</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -100,13 +100,13 @@
                                         <li>
                                             <a href="javascript:void(0);">网站活动</a>
                                         </li>
-                                        <li class="currentSecondLevelMenu">
+                                        <li>
                                             <a href="javascript:void(0);">广告位管理</a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0);">基础数据</a>
                                         </li>
-                                        <li>
+                                        <li class="currentSecondLevelMenu">
                                             <a href="javascript:void(0);">推荐产品管理</a>
                                         </li>
                                     </ul>
@@ -181,7 +181,7 @@
             <section class="whiteBg">
                 <div  class="btnDiv clearfix">
                     <div class="leftBtn">
-                        <button class="commonButton blue-45c8dcButton changeBtn addContentItem"><i class="whiteAddIcon"></i>添加首页Banner</button>
+                        <button class="commonButton blue-45c8dcButton changeBtn addContentItem"><i class="whiteAddIcon"></i>添加推荐产品组</button>
                     </div>
                     <div class="rightBtn">
                         <button class="commonButton red-fe6869Button">预 览</button>
@@ -189,116 +189,163 @@
                     </div>
                 </div>
                 <div class="material-table-container">
-                    <div class="tabTitle clearfix">
+                    <div class="tabTitle clearfix changeWidth">
                         <span class="title01">显示顺序</span>
-                        <span class="title02">Banner标题</span>
-                        <span class="title03">跳转页面</span>
-                        <span class="title04">操作</span>
-                        <span class="title05">Banner</span>
+                        <span class="title02">主标题</span>
+                        <span class="title03">副标题</span>
+                        <span class="title04">产品ID</span>
+                        <span class="title05">产品图片</span>
+                        <span class="title06">操作</span>
                     </div>
                     
                     <div class="material-info-list-container">
-                        <div class="material-info-item clearfix">
-                            <div class="number commonStyle">1</div>
-                            <div class="commonStyle row02">
-                                <input type="text" value="真旅行招行分期活动，0元出境游即刻出发" style="width: 98%;">
+                        <div class="material-info-item changeWidth clearfix">
+                            <div class="groupTitle clearfix"> 
+                                <div class="leftTitle">第<span class="groupNum">1</span>组：推荐产品</div>
+                                <a href="javascript:void(0);" class="rightBtn deleteBtn">删除该组</a>
                             </div>
-                            <div class="commonStyle row03">
-                                <input type="text" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU" style="width: 98%;">
-                            </div>
-                            <div class="commonStyle row04">
-                                <span class="instantUploadStyle">
-                                    <span class="instantUploadIcon"></span>
-                                    <span>立即上传</span>
-                                </span>
-                            </div>
-                            <div class="commonStyle row05">
-                                <a href="javascript:void(0);" class="deleteBtn">删除</a>
-                            </div>
-                        </div>
-
-                        <div class="material-info-item clearfix">
-                            <div class="number commonStyle">2</div>
-                            <div class="commonStyle row02">
-                                <input type="text" value="真旅行招行分期活动，0元出境游即刻出发" style="width: 98%;">
-                            </div>
-                            <div class="commonStyle row03">
-                                <input type="text" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU" style="width: 98%;">
-                            </div>
-                            <div class="commonStyle row04">
-                                <span class="instantUploadStyle">
-                                    <span class="instantUploadIcon"></span>
-                                    <span>立即上传</span>
-                                </span>
-                            </div>
-                            <div class="commonStyle row05">
-                                <a href="javascript:void(0);" class="deleteBtn">删除</a>
-                            </div>
-                        </div>
-
-                        <div class="material-info-item clearfix">
-                            <div class="number commonStyle">3</div>
-                            <div class="commonStyle row02">
-                                <input type="text" value="真旅行招行分期活动，0元出境游即刻出发" style="width: 98%;">
-                            </div>
-                            <div class="commonStyle row03">
-                                <input type="text" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU" style="width: 98%;">
-                            </div>
-                            <div class="commonStyle row04">
-                                <img src="../../images/upload01.jpg" class="uploadImg">
-                                <form>
-                                    <div class="showUpload">
-                                        <input type="file" class="againUpload">
-                                        <a href="javascript:void(0);" class="againUploadFonts">重新上传</a>
+                            <div class="groupListContent">
+                                <div class="groupList clearfix">
+                                    <div class="number commonStyle">1</div>
+                                    <div class="commonStyle row02">
+                                        <input type="text" value="我在西贡风情和美奈海风中放个空" style="width: 98%;">
                                     </div>
-                                </form>
-                            </div>
-                            <div class="commonStyle row05">
-                                <a href="javascript:void(0);" class="deleteBtn">删除</a>
+                                    <div class="commonStyle row03">
+                                        <input type="text" value="上海—越南 6天5晚" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row04">
+                                        <input type="text" value="z434201" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row05">
+                                        <span class="instantUploadStyle changeImgWidth">
+                                            <span class="instantUploadIcon"></span>
+                                            <span style="padding-top: 23px;">立即上传</span>
+                                        </span>
+                                    </div>
+                                    <div class="commonStyle row06">
+                                        <a href="javascript:void(0);" class="clearContent">清空内容</a>
+                                    </div>
+                                </div>
+                                <div class="groupList clearfix">
+                                    <div class="number commonStyle">2</div>
+                                    <div class="commonStyle row02">
+                                        <input type="text" value="早鸟飞 北京出发暑假大促" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row03">
+                                        <input type="text" value="副标题" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row04">
+                                        <input type="text" value="z434201" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row05 instantUploadContent">
+                                        <span class="instantUploadStyle changeImgWidth">
+                                            <span class="instantUploadIcon"></span>
+                                            <span style="padding-top: 23px;">立即上传</span>
+                                        </span> 
+                                    </div>
+                                    <div class="commonStyle row06">
+                                        <a href="javascript:void(0);" class="clearContent">清空内容</a>
+                                    </div>
+                                </div>
+                                <div class="groupList clearfix">
+                                    <div class="number commonStyle">3</div>
+                                    <div class="commonStyle row02">
+                                        <input type="text" value="我在西贡风情和美奈海风中放个空" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row03">
+                                        <input type="text" value="上海—越南 6天5晚" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row04">
+                                        <input type="text" value="z434201" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row05 upLoadProductImg">
+                                        <img src="../../images/uploadProduct01.jpg" class="uploadImg">
+                                        <form>
+                                            <div class="showUpload">
+                                                <input type="file" class="againUpload">
+                                                <a href="javascript:void(0);" class="againUploadFonts">重新上传</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="commonStyle row06">
+                                        <a href="javascript:void(0);" class="clearContent">清空内容</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="material-info-item clearfix">
-                            <div class="number commonStyle">4</div>
-                            <div class="commonStyle row02">
-                                <input type="text" value="真旅行招行分期活动，0元出境游即刻出发" style="width: 98%;">
+                        <div class="material-info-item changeWidth clearfix copyTemplate" style="display: none;">
+                            <div class="groupTitle clearfix">
+                                <div class="leftTitle">第<span class="groupNum">2</span>组：推荐产品</div>
+                                <a href="javascript:void(0);" class="rightBtn deleteBtn">删除该组</a>
                             </div>
-                            <div class="commonStyle row03">
-                                <input type="text" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU" style="width: 98%;">
-                            </div>
-                            <div class="commonStyle row04">
-                                <img src="../../images/upload01.jpg" class="uploadImg">
-                                <form>
-                                    <div class="showUpload">
-                                        <input type="file" class="againUpload">
-                                        <a href="javascript:void(0);" class="againUploadFonts">重新上传</a>
+                            <div class="groupListContent">
+                                <div class="groupList clearfix">
+                                    <div class="number commonStyle">1</div>
+                                    <div class="commonStyle row02">
+                                        <input type="text" value="我在西贡风情和美奈海风中放个空" style="width: 98%;">
                                     </div>
-                                </form>
-                            </div>
-                            <div class="commonStyle row05">
-                                <a href="javascript:void(0);" class="deleteBtn">删除</a>
-                            </div>
-                        </div>
-
-                        <div class="material-info-item clearfix copyTemplate" style="display: none;">
-                            <div class="number commonStyle">4</div>
-                            <div class="commonStyle row02">
-                                <input type="text" value="真旅行招行分期活动，0元出境游即刻出发" style="width: 98%;">
-                            </div>
-                            <div class="commonStyle row03">
-                                <input type="text" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU" style="width: 98%;">
-                            </div>
-                            <div class="commonStyle row04">
-                                <img src="../../images/upload01.jpg" class="uploadImg">
-                                <form>
-                                    <div class="showUpload">
-                                        <input type="file" class="againUpload">
-                                        <a href="javascript:void(0);" class="againUploadFonts">重新上传</a>
+                                    <div class="commonStyle row03">
+                                        <input type="text" value="上海—越南 6天5晚" style="width: 98%;">
                                     </div>
-                                </form>
-                            </div>
-                            <div class="commonStyle row05">
-                                <a href="javascript:void(0);" class="deleteBtn">删除</a>
+                                    <div class="commonStyle row04">
+                                        <input type="text" value="z434201" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row05">
+                                        <span class="instantUploadStyle changeImgWidth">
+                                            <span class="instantUploadIcon"></span>
+                                            <span style="padding-top: 23px;">立即上传</span>
+                                        </span>
+                                    </div>
+                                    <div class="commonStyle row06">
+                                        <a href="javascript:void(0);" class="clearContent">清空内容</a>
+                                    </div>
+                                </div>
+                                <div class="groupList clearfix">
+                                    <div class="number commonStyle">2</div>
+                                    <div class="commonStyle row02">
+                                        <input type="text" value="早鸟飞 北京出发暑假大促" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row03">
+                                        <input type="text" value="副标题" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row04">
+                                        <input type="text" value="z434201" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row05 instantUploadContent">
+                                        <span class="instantUploadStyle changeImgWidth">
+                                            <span class="instantUploadIcon"></span>
+                                            <span style="padding-top: 23px;">立即上传</span>
+                                        </span>
+                                    </div>
+                                    <div class="commonStyle row06">
+                                        <a href="javascript:void(0);" class="clearContent">清空内容</a>
+                                    </div>
+                                </div>
+                                <div class="groupList clearfix">
+                                    <div class="number commonStyle">3</div>
+                                    <div class="commonStyle row02">
+                                        <input type="text" value="我在西贡风情和美奈海风中放个空" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row03">
+                                        <input type="text" value="上海—越南 6天5晚" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row04">
+                                        <input type="text" value="z434201" style="width: 98%;">
+                                    </div>
+                                    <div class="commonStyle row05 upLoadProductImg">
+                                        <img src="../../images/uploadProduct01.jpg" class="uploadImg">
+                                        <form>
+                                            <div class="showUpload">
+                                                <input type="file" class="againUpload">
+                                                <a href="javascript:void(0);" class="againUploadFonts">重新上传</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="commonStyle row06">
+                                        <a href="javascript:void(0);" class="clearContent">清空内容</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -332,7 +379,7 @@
                 <div class="modal-body">
                     <div class="popupContainer">
                         <i class="warnIcon"></i>
-                        <span class="popupContainer-fonts">确认删除所选Banner？</span>
+                        <span class="popupContainer-fonts">确认删除该组推荐产品？</span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -351,29 +398,47 @@
             $("#deleteWindow").modal("show");
         });
 
-        /* 添加Banner模块 */
-        $(".addContentItem").click(function(){
-            $(".material-info-list-container").append("<div class='material-info-item clearfix'>" + $(".material-info-item.copyTemplate").html() + "</div>");
-            getOrderNum();
-        });
-        
-        
         //  拖拽效果
-        $(".material-info-list-container").sortable({
+        $(".groupListContent").sortable({
             placeholder: "material-tr-sortable-placeholder",
             stop: function(){ // 拖拽效果结束时，重新生成排序数字
                 getOrderNum();
             }
         });
         
+        /* 添加推荐产品组模块 */
+        $(".addContentItem").click(function(){
+            var copyTemplateHtml = $(".material-info-item.copyTemplate").html();
+            $(".material-info-list-container").append("<div class='material-info-item changeWidth clearfix'>" + copyTemplateHtml + "</div>");
+//            getGroupNum();
+            getOrderNum();
+        });
+                
+        //清空内容
+        $(".clearContent").click(function(){
+            var clearUpLoad = $(".instantUploadContent").html();
+            $(this).parents(".commonStyle").siblings(".row02,.row03,.row04").find("input").val("");
+            $(this).parents(".commonStyle").siblings(".upLoadProductImg").html(clearUpLoad);
+        });
+        
     });
 
     // 重新计算模块排序
     function getOrderNum() {
-        $(".material-info-item").not($(".material-info-item.copyTemplate")).each(function(index){
+        $(".groupList").each(function(index){
             $(this).find(".number").html(index + 1);
         });
+
+        /*$("body").delegate("groupList", "each", function(){
+            $(this).find(".number").html(index + 1);
+        });*/
     }
+    
+    /*function getGroupNum() {
+        $(".material-info-item.changeWidth").not($(".material-info-item.changeWidth.copyTemplate")).each(function(index){
+            $(this).find(".groupNum").html(index + 1);
+        });
+    }*/
     
 </script>
 
