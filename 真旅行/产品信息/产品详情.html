@@ -141,10 +141,10 @@
                         <div class="tab-top"></div>
                         <div class="cal-mon-tab-container">
                             <ul class="common-tab calendar-month-tab clearfix"></ul>
-                            <div class="mon-nav-btns">
-                                <span class="pre-mon-btn"></span>
-                                <span class="next-mon-btn"></span>
-                            </div>
+                        </div>
+                        <div class="mon-nav-btns">
+                            <span class="pre-mon-btn"></span>
+                            <span class="next-mon-btn"></span>
                         </div>
                     </div>
                     
@@ -2114,12 +2114,12 @@
     $(".pre-mon-btn").click(function(){
         if ($(".tab-item.current").prevAll('.tab-item').length > 0) {
 
-            var offsetLeft = $(".calendar-month-tab .tab-item.current").offset().left,
-                curOff = $(".calendar-month-tab").css("left") != "auto" ? parseInt($(".calendar-month-tab").css("left")) : 0;
+            var offsetLeft = $(".calendar-month-tab .tab-item.current").position().left,
+                curOff = $(".calendar-month-tab").css("margin-left") != "auto" ? parseInt($(".calendar-month-tab").css("margin-left")) : 0;
 
-            if (offsetLeft < 400) {
+            if (offsetLeft < 100) {
                 var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
-                $(".calendar-month-tab").css("left", curOff + w + "px");
+                $(".calendar-month-tab").css("margin-left", curOff + w + "px");
             }
             $(".tab-item.current").prevAll('.tab-item').eq(0).trigger("click");
         }
@@ -2128,12 +2128,12 @@
     $(".next-mon-btn").click(function(){
         if ($(".tab-item.current").nextAll('.tab-item').length > 0) {
 
-            var offsetLeft = $(".calendar-month-tab .tab-item.current").offset().left,
-                curOff = $(".calendar-month-tab").css("left") != "auto" ? parseInt($(".calendar-month-tab").css("left")) : 0;
+            var offsetLeft = $(".calendar-month-tab .tab-item.current").position().left,
+                curOff = $(".calendar-month-tab").css("margin-left") != "auto" ? parseInt($(".calendar-month-tab").css("margin-left")) : 0;
 
-            if (offsetLeft > 800) {
+            if (offsetLeft > 500) {
                 var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
-                $(".calendar-month-tab").css("left", curOff - w + "px");                
+                $(".calendar-month-tab").css("margin-left", curOff - w + "px");                
             }
             $(".tab-item.current").nextAll('.tab-item').eq(0).trigger("click");
         }

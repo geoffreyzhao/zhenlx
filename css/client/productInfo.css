@@ -1178,7 +1178,7 @@ ul.common-tab {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     margin: 0;
-    position: relative;
+    /*position: relative;*/
 }
 ul.common-tab > li {
     float: left;
@@ -2582,4 +2582,5 @@ ul.common-tab > li.rest {
 
 .cal-mon-tab-container.limit-width {
     width: 630px;
+    position: relative;
 }
