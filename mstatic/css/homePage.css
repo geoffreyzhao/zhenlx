@@ -187,6 +187,9 @@
     height: 10rem;
     margin: 0 auto;
 }
+.swiper-wrapper {
+    width: 100%!important;
+}
 .swiper-slide {
     text-align: center;
     font-size: 18px;
