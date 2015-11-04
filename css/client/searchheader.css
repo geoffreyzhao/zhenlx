@@ -144,9 +144,9 @@
     display: inline-block;
     position: relative;
 }
-.top-right-block{
+/*.top-right-block{
     margin:5px 0 0 0;
-}
+}*/
 .addIcon .commonIcon{
     position: absolute;
     top: 30%;

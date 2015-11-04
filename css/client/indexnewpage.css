@@ -847,10 +847,14 @@ body {
 /* V3 新首页 S */
 
 /* 顶部 banner */
+.banner_v3 {
+    position: relative;
+}
 .innerBannerWrapper {
     width:100%;
     position:absolute;
     height: 620px;
+    z-index: 10000;
 }
 .innerBanner {
     width:1130px;
@@ -887,21 +891,53 @@ body {
 .swiper-slide {
     height: 620px;
 }
+/*轮播图片*/
+.slider_nav {
+    z-index: 10;
+    position: absolute;
+}
+.slider_nav a {
+    float: left;
+    text-indent: -1000em;
+    margin: 0 6px;
+    border: none;
+    background: url(../../images/client/rotate.png) no-repeat -16px 0;
+    display: block;
+    width: 13px;
+    height: 13px;
+    overflow: hidden;
+}
+.slider_nav .activeSlide {
+    background-position: 0 0;
+}
+.fullscreen {
+    width: 100% !important;
+    height: 100%;
+    margin: 0 auto;
+}
+.indexTopBanner01 {
+    background:url(../../images/client/top-banner-background.jpg) no-repeat 50% 50%;
+}
+
+
+
+
+
+
 /* 搜索条 */
 .indexSearchBar {
     margin:300px auto 0 auto;
+    text-align: center;
 }
-.indexSearchBar .searchModel{
-    width:686px;
-    float: none;
-    margin: 0 auto;
+.index_searchModel {
+    width: 686px!important;
+    float: none!important;
+    margin: 0 162px!important;
 }
-.searchModel .searchContent{
-    background: #fff;
-    width:686px;
+.index_searchModel .searchContent {
     height: 49px!important;
+    background: #fff;
     padding:4px;
-
 }
 
 .innerModel {
@@ -992,48 +1028,74 @@ body {
     position: relative;
 }
 .hot_route li a .bgShade {
-    display: none;
-}
-.hot_route li a:hover .bgShade {
+    /*display: none;*/
+    visibility: hidden;
     width: 100%;
     height: 100%;
     background: #24cbc9;
     filter: alpha(opacity=90);
     opacity: 0.9;
-    display: inline-block;
+    /*display: inline-block;*/
     position: absolute;
-    top: 0;
+    /*top: 0;*/
     left: 0;
     z-index: 10;
+    top: -100%;
+}
+.hot_route li a:hover .bgShade {
+    visibility: visible;
+    top: 0;
 }
 .hot_route .hovercon {
     color: #fff;
     text-align: center;
-    padding:10px 40px;
+    padding:10px 40px 0 40px;
+    position:relative;
 }
 .hot_route .hovercon h4 {
     font-size: 16px;
     font-weight: normal;
     border-bottom: 1px solid #fff;
-    padding:0 0 12px 0;
-    margin-bottom: 25px;
+    padding:5px 0 12px 0;
+    margin:0 0 25px 0;
 }
 .hot_route .hovercon p {
     font-size: 14px;
     padding:0 0 9px 0;
     margin: 0;
+    line-height: 24px;
+}
+.hot_route .innerContent {
+    padding:0 10px;
+    width:260px;
+    min-height: 142px;
+}
+.hot_route .innerContent.limitHeight {
+    height: 142px;
+    overflow: hidden;
+}
+.hot_route .ellipsis_P {
+    position:absolute;
+    bottom:65px;
+    right:175px;
 }
 .hot_route .minBox {
     border-top:1px solid #fff;
-    padding: 15px 0 0 0;
+    padding: 2px 0 0 0;
     font-size: 12px;
-    margin-top: 15px;
+    margin-top: 20px;
+    width:280px;
+    height: 40px;
+    overflow: hidden;
+    text-align: left;
 }
 .hot_route .minBox i {
     border:1px solid #fff;
     border-radius: 3px;
     padding:4px 6px;
-    margin-right: 5px;
+    margin: 10px 5px 0 0;
+    display: inline-block;
+    text-align: center;
 }
 .hot_route .minBox i:last-child {
     margin-right: 0;
