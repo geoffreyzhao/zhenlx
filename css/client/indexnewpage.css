@@ -654,7 +654,7 @@ body {
     height: 650px;
 }
 .banner-image-1 {
-    background: url(../../images/client/top-banner-background.jpg) center center;
+    background: url(../../images/client/art-background.jpg) center center;
 }
 .banner-image-1 .image-bottom-text {
     background: url(../../images/client/art-words.png) center center;
@@ -889,11 +889,12 @@ body {
 }
 /* 搜索条 */
 .indexSearchBar {
-    margin:300px 220px 0 220px;
+    margin:300px auto 0 auto;
 }
 .indexSearchBar .searchModel{
     width:686px;
-
+    float: none;
+    margin: 0 auto;
 }
 .searchModel .searchContent{
     background: #fff;
