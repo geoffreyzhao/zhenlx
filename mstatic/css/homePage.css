@@ -141,7 +141,7 @@
     color: #3fc0ae!important
 }
 .hotel-til{
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color:#333;
     padding:0.6rem 0.5rem;
     border-bottom: 1px #dcdcdc solid;
@@ -262,11 +262,13 @@
 }
 .hotel-room ul li{
     position: relative;
-    font-size: 0.6rem;
-    margin:0.6rem 0;
+    font-size: 0.65rem;
+    margin-top:0.5rem;
+    margin-bottom: 0.5rem;
 }
 .hotel-room ul li p{
     min-height:1rem;
+    padding-left:0.2rem;
 }
 .room-type{
     display: inline-block;
@@ -312,7 +314,7 @@
 }
 .inst-til h3{
     padding:0.8rem 0;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color:#3fbfae;
 }
 .inst-til p{
@@ -884,6 +886,7 @@
 }
 .travel-one .ui-grid-a .ui-block-b{
     width:85%;
+    font-size: 0.65rem;
 }
 .travel-spot{
     width:13.6rem;
