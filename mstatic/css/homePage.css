@@ -36,7 +36,7 @@
     margin-top:0.5rem;
 }
 .prd-block{
-    padding-top:0.3rem;
+    padding-top:0.15rem;
 }
 .prd-price{
     color:#fe460e;
@@ -814,7 +814,7 @@
     height:1.05rem;
     margin-right:0.5rem !important;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: text-bottom;
 }
 .travel-hotel{
     background: url("../../mstatic/images/travel-hotel.png") no-repeat;
