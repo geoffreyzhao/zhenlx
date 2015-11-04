@@ -190,14 +190,10 @@
     height: 10rem;
     margin: 0 auto;
 }
-.swiper-wrapper {
-    width: 100%!important;
-}
 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    width: 100%!important;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;

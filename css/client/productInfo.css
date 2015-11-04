@@ -2575,6 +2575,12 @@ ul.common-tab > li.rest {
     user-select: none;
 }
 
+.pre-mon-btn.disabled, .next-mon-btn.disabled {
+    opacity: 0.4;
+    filter: Alpha(opacity=40);
+    cursor: default;
+}
+
 .cal-mon-tab-container {
     width: 752px;
     overflow: hidden;

@@ -1135,6 +1135,8 @@
             $(".calTable").hide();
             $(".calTable").eq(0).show();
 
+            checkMonthNav();
+
             $(".calendar-month-tab").find("li.tab-item").each(function(index){
                 $(this).click(function(){
                     $(".calTable").hide();
@@ -1145,10 +1147,27 @@
                     } else {
                         $(".wrap-cover-bg").show();         
                     }
+
+                    checkMonthNav();
                 });
             });
             
-        });
+        });    
+
+    //  按钮置灰不可点
+    function checkMonthNav() {
+        if ($(".tab-item.current").nextAll('.tab-item').length == 0) {
+            $(".next-mon-btn").addClass("disabled");
+        } else {
+            $(".next-mon-btn").removeClass("disabled");
+        }
+
+        if ($(".tab-item.current").prevAll('.tab-item').length == 0) {
+            $(".pre-mon-btn").addClass("disabled");
+        } else {
+            $(".pre-mon-btn").removeClass("disabled");
+        }
+    }
 
     function setCalendar(data, ele) {
         for (var i = 0; i < data.length; i++) {
@@ -2112,30 +2131,42 @@
     });
 
     $(".pre-mon-btn").click(function(){
-        if ($(".tab-item.current").prevAll('.tab-item').length > 0) {
 
-            var offsetLeft = $(".calendar-month-tab .tab-item.current").position().left,
-                curOff = $(".calendar-month-tab").css("margin-left") != "auto" ? parseInt($(".calendar-month-tab").css("margin-left")) : 0;
+        var $this = $(this);
 
-            if (offsetLeft < 100) {
-                var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
-                $(".calendar-month-tab").css("margin-left", curOff + w + "px");
+        if (!$this.hasClass("disabled")) {
+
+            if ($(".tab-item.current").prevAll('.tab-item').length > 0) {
+
+                var offsetLeft = $(".calendar-month-tab .tab-item.current").position().left,
+                    curOff = $(".calendar-month-tab").css("margin-left") != "auto" ? parseInt($(".calendar-month-tab").css("margin-left")) : 0;
+
+                if (offsetLeft < 100) {
+                    var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
+                    $(".calendar-month-tab").css("margin-left", curOff + w + "px");
+                }
+                $(".tab-item.current").prevAll('.tab-item').eq(0).trigger("click");
             }
-            $(".tab-item.current").prevAll('.tab-item').eq(0).trigger("click");
         }
     });
 
     $(".next-mon-btn").click(function(){
-        if ($(".tab-item.current").nextAll('.tab-item').length > 0) {
 
-            var offsetLeft = $(".calendar-month-tab .tab-item.current").position().left,
-                curOff = $(".calendar-month-tab").css("margin-left") != "auto" ? parseInt($(".calendar-month-tab").css("margin-left")) : 0;
+        var $this = $(this);
 
-            if (offsetLeft > 500) {
-                var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
-                $(".calendar-month-tab").css("margin-left", curOff - w + "px");                
+        if (!$this.hasClass("disabled")) {
+
+            if ($(".tab-item.current").nextAll('.tab-item').length > 0) {
+
+                var offsetLeft = $(".calendar-month-tab .tab-item.current").position().left,
+                    curOff = $(".calendar-month-tab").css("margin-left") != "auto" ? parseInt($(".calendar-month-tab").css("margin-left")) : 0;
+
+                if (offsetLeft > 500) {
+                    var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
+                    $(".calendar-month-tab").css("margin-left", curOff - w + "px");                
+                }
+                $(".tab-item.current").nextAll('.tab-item').eq(0).trigger("click");
             }
-            $(".tab-item.current").nextAll('.tab-item').eq(0).trigger("click");
         }
     });
 </script>
