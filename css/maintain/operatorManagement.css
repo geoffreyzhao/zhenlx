@@ -934,7 +934,8 @@ textarea.inputUserTextarea {
     font-size: 14px;
 }
 .commonStyle.row04,
-.upLoadProductImg{
+.upLoadProductImg,
+.instantUpload{
     position: relative;
 }
 .commonStyle.row04 .uploadImg{
@@ -963,6 +964,7 @@ textarea.inputUserTextarea {
 form .showUpload{
     display: none;
 }
+.instantUpload .instantUploadFile,
 .againUpload{
     font-size: 0;
     width: 222px;
@@ -1064,7 +1066,8 @@ form .showUpload{
 .commonStyle.row04.changeWidth .uploadImg,
 .groupList .uploadImg,
 .groupList .againUpload,
-.groupList .againUploadFonts{
+.groupList .againUploadFonts,
+.instantUpload .instantUploadFile.changeWidth{
     width: 130px;
     height: 104px;
 }
@@ -1093,8 +1096,4 @@ form .showUpload{
     background-color: #eefaff;
 }
  
-
-
-
-
 /*  推荐产品管理 end   */
