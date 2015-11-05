@@ -39,8 +39,8 @@ input[type="password"]:focus{
     display: inline-block;
     vertical-align: middle;
     background: url("../../images/client/commonIcon.png") no-repeat;
-    margin-left: 5px;
-    margin-right: 10px;
+    margin-left: 13px;
+    margin-right: 2px;
 }
 .commonIcon.errorIcon{
     width: 18px;
