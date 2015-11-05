@@ -120,7 +120,7 @@
 
 .navWrap-val{
     padding:0 0.5rem;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     line-height:1.3rem;
     word-wrap: break-word;
     word-break: break-all;
@@ -209,8 +209,7 @@
     align-items: center;
 }
 .slide-img{
-    width: 16rem;
-    height:10rem;
+    width: 100%!important;
     display: block;
 }
 .swiper-container .swiper-pagination-bullet {

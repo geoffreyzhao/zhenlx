@@ -481,6 +481,13 @@
 }
 .timePlaceFonts .timeFonts{
     color: #484848;
+    position: relative;
+}
+.timePlaceFonts .timeFonts em {
+    color: #e46c14;
+    position: absolute;
+    font-size: 14px;
+    right: -23px;
 }
 .timePlaceAirport .airportFonts{
     font-size: 16px;

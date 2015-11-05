@@ -16,6 +16,7 @@
     <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="../../mstatic/js/common.js"></script>
     <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <script src="http://10.3.40.191:8080/target/target-script-min.js#anonymous"></script>
     <title>产品详情</title>
 
     <script type="text/javascript">
@@ -1034,18 +1035,20 @@
              }*/
         });
 
+        var imgWidth = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+
         var mySwiper01 = new Swiper('#swiper-container01', {
             pagination: '#swiper-container01 > .swiper-pagination',
             paginationClickable: true,
             spaceBetween: 5,
-            width: window.innerWidth
+            width: imgWidth
         });
 
         var mySwiper02 = new Swiper('#swiper-container02', {
             pagination: '#swiper-container02 > .swiper-pagination',
             paginationClickable: true,
             spaceBetween: 5,
-            width: window.innerWidth
+            width: imgWidth
         });
 
         var pressArr = ["tips-sun-press", "tips-bag-press", "tips-tower-press", "tips-loca-press", "tips-list-press"];
