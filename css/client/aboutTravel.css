@@ -700,3 +700,97 @@ input[type="text"], input[type="password"]{
     height: 142px;
     margin-left: -10px;
 }
+/* 真旅行团队 */
+.aboutUs{
+    margin: 40px 0 0 0;
+    padding-bottom: 40px;
+    background: url("../../images/client/imgBgMap-min.png") no-repeat;
+}
+.aboutUs > li{
+    margin: 0 30px 25px;
+}
+.aboutUs > li.secondLi{
+    margin: 0 93px 25px;
+}
+.aboutUs > li.thirdLi{
+    margin: 0 154px 25px;
+}
+.aboutUs > li.fourthLi{
+    margin: 0 280px 25px;
+}
+.aboutUs > li.fifthLi{
+    margin: 0 380px 25px;
+}
+.aboutUs .aboutUsImg li{
+    display: inline-block;
+    width: 116px;
+    text-align: center;
+}
+.aboutUs .aboutUsImg img{
+    width: 108px;
+    height: 127px;
+}
+.aboutUs .aboutUsImg li div {
+    color: #7f7f7f;
+    margin-top: 10px;
+}
+.aboutUs .workmate-img {
+    width: 85px;
+    height: 99px;
+    background: url(../../images/client/workmates-img-min.png) no-repeat;
+    margin: 0 auto!important;
+}
+.aboutUs .workmate-img.img-1 {
+    background-position: 0 0;
+}
+.aboutUs .workmate-img.img-2 {
+    background-position: -89px 0;
+}
+.aboutUs .workmate-img.img-3 {
+    background-position: -178px 0;
+}
+.aboutUs .workmate-img.img-4 {
+    background-position: -267px 0;
+}
+.aboutUs .workmate-img.img-5 {
+    background-position: -356px 0;
+}
+.aboutUs .workmate-img.img-6 {
+    background-position: 0 -104px;
+}
+.aboutUs .workmate-img.img-7 {
+    background-position: -89px -104px;
+}
+.aboutUs .workmate-img.img-8 {
+    background-position: -178px -104px;
+}
+.aboutUs .workmate-img.img-9 {
+    background-position: -267px -104px;
+}
+.aboutUs .workmate-img.img-10 {
+    background-position: -356px -104px;
+}
+.aboutUs .workmate-img.img-11 {
+    background-position: 0 -208px;
+}
+.aboutUs .workmate-img.img-12 {
+    background-position: -89px -208px;
+}
+.aboutUs .workmate-img.img-13 {
+    background-position: -178px -208px;
+}
+.aboutUs .workmate-img.img-14 {
+    background-position: -267px -208px;
+}
+.aboutUs .workmate-img.img-15 {
+    background-position: -356px -208px;
+}
+.aboutUs .workmate-img.img-16 {
+    background-position: 0 -311px;
+}
+.aboutUs .workmate-img.img-17 {
+    background-position: -89px -311px;
+}
+.aboutUs .workmate-img.img-18 {
+    background-position: -178px -311px;
+}

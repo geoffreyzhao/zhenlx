@@ -854,7 +854,7 @@ body {
     width:100%;
     position:absolute;
     height: 620px;
-    z-index: 10000;
+    z-index: 20;
 }
 .innerBanner {
     width:1130px;
@@ -872,9 +872,6 @@ body {
     height: 51px;
 }
 .innerBanner .operate {
-    float: right;
-    display: inline-block;
-    margin-top: 16px;
 }
 .innerBanner .operate a {
     color:#fff;
@@ -882,6 +879,35 @@ body {
     font-size: 16px;
     margin: 0 0 0 20px;
 }
+.index_top-right-block {
+    float: right;
+    margin:16px 0 0 0;
+}
+.index_after-login {
+    display: none;
+}
+/*.index_after-login {
+    position: relative;
+}*/
+.index_after-login .userName {
+    cursor: pointer;
+    vertical-align: middle;
+}
+.index_after-login .userName .commonIcon {
+    margin-right: 3px;
+}
+.index_after-login .userName em {
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+.index_login-entrance > a {
+   }
 .banner .product{
     height: 620px;
 }
@@ -918,16 +944,10 @@ body {
 .indexTopBanner01 {
     background:url(../../images/client/top-banner-background.jpg) no-repeat 50% 50%;
 }
-
-
-
-
-
-
 /* 搜索条 */
 .indexSearchBar {
     margin:300px auto 0 auto;
-    text-align: center;
+    /*text-align: center;*/
 }
 .index_searchModel {
     width: 686px!important;
