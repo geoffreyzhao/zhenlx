@@ -1542,3 +1542,21 @@ a.ke-insertfile {
 .pre-order-btn.btn-cancel:active {
     background-color: #d0d0d0;
 } 
+
+/*  重置产品详情页 文字样式 行距  */
+
+.present-list ol,
+.wuge-txt,
+.travel-one .ui-block-b p,
+.tips-content .tips-detail,
+.nav-content pre,
+.hotel-room .room-txt,
+.inst-til p,
+.navWrap-val,
+.navWrap-val p,
+.navWrap-val ol li span,
+.judge-txt {
+    font-family: Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei!important;
+    font-size: 0.65rem!important;
+    line-height: 1.1rem!important;
+}
