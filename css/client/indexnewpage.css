@@ -849,6 +849,7 @@ body {
 /* 顶部 banner */
 .banner_v3 {
     position: relative;
+    margin-bottom: 6px;
 }
 .innerBannerWrapper {
     width:100%;
