@@ -689,3 +689,7 @@ input[type="checkbox"] + span {
 .confirm-ui-content .btn-cancel:active{
 	background-color: #ccc;
 }
+
+.lazyload-img {
+	background: url(../images/default-img.png) no-repeat scroll 50% 50% #f5f5f5;
+}
