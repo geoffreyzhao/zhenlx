@@ -21,7 +21,8 @@
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/underscore.js"></script>   
     <script type="text/javascript" src="../../js/global/global.js"></script>
-    <script type="text/javascript" src="../../js/client/common.js"></script>   
+    <script type="text/javascript" src="../../js/client/common.js"></script>
+    <script type="text/javascript" src="../../js/vendor/jquery.lazyload.js"></script>   
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../../js/base/html5.js"></script>
@@ -430,23 +431,23 @@
                                 </div>
                             </div>
                             <div class="hotelBigImg">
-                                <img src="../../images/client/detailHotelImg01.jpg">
+                                <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=56027840e4b0ec3a2f48d625" class="lazyload-img">
                             </div>
                             <ul class="hotelSmallImg clearfix">
                                 <li class="active">
-                                    <img src="../../images/client/detailHotelImg01.jpg">
+                                    <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=56027840e4b0ec3a2f48d625" class="lazyload-img">
                                 </li>
                                 <li>
-                                    <img src="../../images/client/detailHotelImg02.jpg">
+                                    <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=5602788be4b07828da175c56" class="lazyload-img">
                                 </li>
                                 <li>
-                                    <img src="../../images/client/detailHotelImg01.jpg">
+                                    <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=5602788fe4b0ec3a2f48d62d" class="lazyload-img">
                                 </li>
                                 <li>
-                                    <img src="../../images/client/detailHotelImg02.jpg">
+                                    <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=56027891e4b07828da175c57" class="lazyload-img">
                                 </li>
                                 <li>
-                                    <img src="../../images/client/detailHotelImg01.jpg">
+                                    <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=56027895e4b07828da175c58" class="lazyload-img">
                                 </li>
                             </ul>
                         </div>
@@ -612,7 +613,7 @@
                         </ul>
                         <div style="float: right;">
                         <!-- <div class="link" id="overview"></div> -->
-                        <img src="../../images/client/overviewImg.jpg" class="overviewImg" />
+                        <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=5602700fe4b0ec3a2f48d5db" class="overviewImg lazyload-img"/>
                         <ul class="journeyRecommendList">
                         <li class="active">
                             <div class="link" id="overview"></div>
@@ -689,13 +690,13 @@
                                 </li>
                             </ul>
                             <div class="daysImg">
-                                <img src="../../images/client/dayNumberImg01.jpg">
-                                <img src="../../images/client/dayNumberImg02.jpg">
+                                <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=56027019e4b07828da175c08" class="lazyload-img">
+                                <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=56027022e4b0ec3a2f48d5dc" class="lazyload-img">
                             </div>
                             <p class="daysImgDescCont">这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述</p>
                             <div class="daysImg">
-                                <img src="../../images/client/dayNumberImg01.jpg">
-                                <img src="../../images/client/dayNumberImg02.jpg">
+                                <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=56027027e4b07828da175c09" class="lazyload-img">
+                                <img data-original="http://media.zhenlx.com/imageservice?mediaImageId=56027031e4b0ec3a2f48d5dd" class="lazyload-img">
                             </div>
                             <p class="daysImgDescCont">这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述</p>
                         </li>
@@ -2169,6 +2170,8 @@
             }
         }
     });
+
+    $("img.lazyload-img").lazyload();
 </script>
 </body>
 </html>

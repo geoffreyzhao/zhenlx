@@ -1284,3 +1284,7 @@ input[type='text'].datepicker.hasIcon {
     width:100%;
 }
 /** end **/
+
+.lazyload-img {
+    background: url(../../images/client/default-img.png) no-repeat scroll 50% 50% #f5f5f5;
+}
