@@ -889,9 +889,6 @@
     height:8.5rem;
     margin-bottom: 0.25rem;
     position: relative;
-    background-repeat: no-repeat;
-    -webkit-background-size: 13.6rem 8.5rem;
-    background-size: 13.6rem 8.5rem;
 }
 .spot1{
     background-image: url("../../mstatic/images/spot01.png");
