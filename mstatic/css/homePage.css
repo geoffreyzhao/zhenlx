@@ -1160,6 +1160,46 @@
     background-color:#3fc0ae;
     color:#fff;
 }
+.changemenu{
+    overflow:hidden;
+}
+.changemenu .monthtab{
+    width:11.4rem;
+    height:1.76rem;
+    overflow:hidden;
+   float:left;
+}
+.changemenu .monthtab ul{
+    width:50rem;
+}
+.changemenu ul li{
+    border:0!important;
+    border-radius:0!important;
+    background-color:#f5fefd;
+}
+.left-month-btn,.right-month-btn{
+    width:1.8rem;
+    height:1.75rem;
+    display:inline-block;
+    border:2px solid #3fc0ae;
+}
+.left-month-btn.disable,.right-month-btn.disable{
+    background-color:#ccc;
+}
+.left-month-btn{
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius:0.25rem;
+    background:#fff url(../../mstatic/images/left-arrow.png) center center no-repeat;
+    background-size:0.5rem 0.9rem;
+    float:left;
+}
+.right-month-btn{
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius:0.25rem;
+    background:#fff url(../../mstatic/images/right-arrow.png) center center no-repeat;
+    background-size:0.5rem 0.9rem;
+    float:right;
+}
 .menu-list ul .list-cut:active{
     background-color:#1a9d9c;
 }
@@ -1247,15 +1287,14 @@
 }
 .menu-sum-box{
     position: relative;
-    margin-top:0.5rem;
-    padding-top:0.2rem;
-    border-top: 1px #3fc0ae dashed;
+    margin-top:1rem;
+    margin-bottom:1rem;
 }
 .menu-sum{
-    background-color:#fff;
     padding:0 0.5rem;
     line-height: 2rem;
     margin:0.25rem 0;
+    color:#3fc0ae;
 }
 .count-tips{
     display: none;
@@ -1272,29 +1311,38 @@
     float: right;
 }
 .counter-item{
-    width:2.5rem;
+    width:1.4rem;
+    height:1.4rem;
+    line-height:1.4rem;
     display: inline-block;
-    line-height: 2.25rem;
     text-align: center;
     vertical-align: middle;
 }
-.counter-minus, .counter-add{
-    background-color:#a4ebe1;
-    color:#fff;
-    font-size: 1.5rem;
+.counter-minus{
+    background:url(../../mstatic/images/minusIcon.png) no-repeat center center;
+    background-size:cover;
+}
+.counter-add{
+    background:url(../../mstatic/images/addIcon.png) no-repeat center center;
+    background-size:cover;
 }
 .counter-minus:active, .counter-add:active{
     background-color:#89d3c9;
 }
 .counter-disable, .counter-disable:active{
-    background-color:#e7e7e7;
+    /* background-color:#e7e7e7; */
+    background-color:none;
     color:#fff;
     font-size: 1.5rem;
 }
 .counter-num{
+    width:3rem;
+    border-radius:0.2rem;
+    border:2px solid #3fc0ae;
     background-color:#fff;
-    color:#ffa200;
+    color:#333;
     font-size: 0.75rem;
+    margin:0 0.7rem;
 }
 /** end **/
 

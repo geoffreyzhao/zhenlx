@@ -848,12 +848,22 @@
 
     <!--底部弹窗-->
     <div class="menu-dlg" id="popupMenu" data-role="popup" data-transition="slideup" data-position-to="window" data-theme="a" data-overlay-theme="b" data-corners="false">
-        <div class="menu-list">
-            <ul class="clearfix">
-                <li class="list-cut">6月季</li>
-                <li>7月季</li>
-                <li>8月季</li>
-            </ul>
+        <div class="menu-list changemenu">
+                <span class="left-month-btn disable"></span>
+                <div class="monthtab">
+                    <ul class="clearfix">
+                        <li class="list-cut">6月</li>
+                        <li>7月</li>
+                        <li>8月</li>
+                        <li>9月</li>
+                        <li>10月</li>
+                        <li>11月</li>
+                        <li>12月</li>
+                        <li>1月</li>
+                        <li>2月</li>
+                    </ul>
+                </div>
+                <span class="right-month-btn"></span>
         </div>
         <div id="menu-row-box">
             <div class="menu-row">
@@ -960,22 +970,22 @@
             </div>
         </div>
         <div class="menu-sum-box">
-            <i class="left-semicircle"></i>
-            <i class="right-semicircle"></i>
-            <div class="menu-sum clearfix">成人
+            <!-- <i class="left-semicircle"></i>
+            <i class="right-semicircle"></i> -->
+            <div class="menu-sum clearfix">成人数
                 <div class="counter">
                     <span class="count-tips">还剩下<span class="popNum">11</span></span>
-                    <span class="counter-item counter-minus">－</span>
+                    <span class="counter-item counter-minus"></span>
                     <span class="counter-item counter-num">1</span>
-                    <span class="counter-item counter-add">＋</span>
+                    <span class="counter-item counter-add"></span>
                 </div>
             </div>
             <div class="menu-sum clearfix">儿童数
                 <div class="counter">
                     <span class="count-tips">还剩下<span class="popNum">9</span></span>
-                    <span class="counter-item counter-minus">－</span>
+                    <span class="counter-item counter-minus"></span>
                     <span class="counter-item counter-num">1</span>
-                    <span class="counter-item counter-add">＋</span>
+                    <span class="counter-item counter-add"></span>
                 </div>
             </div>
         </div>
@@ -999,6 +1009,7 @@
 
 <script>
     $(function(){
+
         FastClick.attach(document.body);
 
         $(window).scroll(function(){
@@ -1121,6 +1132,16 @@
             if(rowboxObj.hasClass("hidden")){
                 rowboxObj.removeClass("hidden");
             }
+
+            currentmonth=$('.monthtab ul').find('.list-cut').index();
+            if(currentmonth!=0||currentmonth!=($('.monthtab ul li').length-1)){
+                $('.left-month-btn').removeClass('disable');
+                $('.right-month-btn').removeClass('disable');
+            }else{
+                $('.left-month-btn').addClass('disable');
+                $('.right-month-btn').addClass('disable');
+            }
+
         });
 
         $(".menu-row > .ui-grid-c").click(function(){
@@ -1234,7 +1255,7 @@
                 setTimeout(function(){
                     $("#wantgoWindow").popup("open");
                 }, 600);
-            } else {
+            }else {
                 $("#wantgoWindow").popup("open");
             }
         });
@@ -1243,7 +1264,70 @@
             threshold: 500,
             placeholder: ''
         });        
+
+        var monthtab_marL=0;
+        var ml_max_dis;
+        var currentmonth;
+        $('.right-month-btn').click(function(){
+            if(!($(this).hasClass('disable'))){
+
+                console.log($('.monthtab ul').find('.list-cut').offset().left+'  '+($('.monthtab').offset().left+3*$('.monthtab li').width()-1));
+
+                if($('.monthtab ul').find('.list-cut').offset().left < ($('.monthtab').offset().left+3*$('.monthtab li').width()-1)){
+                currentmonth=$('.monthtab ul').find('.list-cut').index();
+                $('.monthtab li').eq(currentmonth+1).trigger('click');
+                    
+                }else{
+
+                    monthtab_marL = monthtab_marL - $('.monthtab li').width();
+                    ml_max_dis=-$('.monthtab li').width()*($('.monthtab li').length-4);
+                    if(monthtab_marL>=ml_max_dis){
+                        $('.monthtab ul').css('margin-left',monthtab_marL);
+                        $('.left-month-btn').removeClass('disable');
+                    }
+                    if(monthtab_marL==ml_max_dis){
+                        $('.right-month-btn').addClass('disable');
+                    }
+
+                    currentmonth=$('.monthtab ul').find('.list-cut').index();
+                    $('.monthtab li').eq(currentmonth+1).trigger('click');
+                }
+
+
+            }
+        });
+
+        $('.left-month-btn').click(function(){/*parseInt($('.monthtab ul').css('margin-left'))*/
+            if(!($(this).hasClass('disable'))){
+
+                if($('.monthtab ul').find('.list-cut').offset().left < ($('.monthtab').offset().left)){
+                    
+                    currentmonth=$('.monthtab ul').find('.list-cut').index();
+                    $('.monthtab li').eq(currentmonth-1).trigger('click');
+
+                }else{
+                    monthtab_marL = monthtab_marL + $('.monthtab li').width();
+                    if(monthtab_marL<=0){
+                        $('.monthtab ul').css('margin-left',monthtab_marL);
+                        $('.right-month-btn').removeClass('disable');
+                    }
+                    if(monthtab_marL==0){
+                        $('.left-month-btn').addClass('disable');
+                    }
+
+                    currentmonth=$('.monthtab ul').find('.list-cut').index();
+                    $('.monthtab li').eq(currentmonth-1).trigger('click');
+                } 
+            }
+
+        });
     });
+
+    window.onload=function(){
+        var monthtab_li_w = $('.monthtab').width()/4;   //底部弹窗 月份内 每月宽度定义
+        $('.monthtab ul li').css('width',monthtab_li_w);
+    }
+
 </script>
 </body>
 </html>
