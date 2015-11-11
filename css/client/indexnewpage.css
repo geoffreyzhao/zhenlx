@@ -945,6 +945,16 @@ body {
 .indexTopBanner01 {
     background:url(../../images/client/top-banner-background.jpg) no-repeat 50% 50%;
 }
+#scrollImg a {
+    display: block;
+    width:100%;
+    height: 100%;
+    z-index: 10000;
+    top:0;
+    left:0;
+    position: absolute;
+
+}
 /* 搜索条 */
 .indexSearchBar {
     margin:300px auto 0 auto;

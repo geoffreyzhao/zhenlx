@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 广告位预览</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/client/indexnewpage.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="../../js/vendor/swiper.jquery.min.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        a:focus{outline: none;}
+        body{margin: 0}
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+        <div class="banner_v3">
+            <div >
+                <div id="scrollImg" style="height:620px;z-index:5;" >
+                    <div class="fullscreen indexTopBanner01"></div>
+                    <div class="fullscreen indexTopBanner01"></div>
+                    <div class="fullscreen indexTopBanner01"></div>
+                    <div class="fullscreen indexTopBanner01"></div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        window.onload = function() {
+
+            $(function(){
+                $('#scrollImg').before('<div id="nav" class="slider_nav" style="left:47%;top:93%;">').cycle({fx:"fade",timeout: 2000,center:true,pause:true,pager:"#nav",pagerEvent: "click.cycle"});
+            });
+
+        };
+    });
+</script>
+
+</body>
+</html>
+
