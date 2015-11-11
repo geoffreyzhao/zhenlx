@@ -184,9 +184,47 @@
 	            </span>
 			</div>
 		</div>
-<div style="height:1000px;"></div>
+<div style="height:200px;"></div>
+        
+        <!--合并小图片 S-->
+        <div class="total">尝试合并小图标</div>
+        <div class="smallIcon01">
+            <span class="icon01"></span> 我是第一个小图标哟
+        </div>
+        <div class="smallIcon02">
+            <span class="icon02"></span> 第二个小图标哟
+        </div>
+        <!--合并小图片 S-->
+        
 	</div>
 
+    <style type="text/css">
+        .total{
+            margin: 0.5rem;
+            font-size: 0.75rem;
+        }
+        .smallIcon01,
+        .smallIcon02{
+            font-size: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        .smallIcon01 .icon01,
+        .smallIcon02 .icon02{
+            display: inline-block;
+            width: 1.05rem;
+            height: 1.05rem;
+            background: url("../mstatic/images/icons.png") no-repeat;
+            background-size: cover;
+            vertical-align: middle;
+        }
+        .smallIcon01 .icon01{
+            background-position: 0 0;
+        }
+        .smallIcon02 .icon02{
+            background-position: -1.05rem 0;
+        }
+    </style>
+    
 <script type="text/javascript">
 	$(function(){
 		
