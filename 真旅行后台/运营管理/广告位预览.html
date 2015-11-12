@@ -7,33 +7,140 @@
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/indexnewpage.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/workplatform.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/searchheader.css">
 
     <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/client/common.js"></script>
     <script type="text/javascript" src="../../js/vendor/jquery.cycle.all.js"></script>
-    <script type="text/javascript" src="../../js/vendor/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/client/searchheader.js"></script>
 
     <!--[if lte IE 9]>
-    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../js/base/html5.js"></script>
     <![endif]-->
-    <style type="text/css">
-        a:focus{outline: none;}
-        body{margin: 0}
-    </style>
+
 </head>
 <body>
 
 <div class="main-container">
-        <div class="banner_v3">
-            <div >
-                <div id="scrollImg" style="height:620px;z-index:5;" >
-                    <div class="fullscreen indexTopBanner01"></div>
-                    <div class="fullscreen indexTopBanner01"></div>
-                    <div class="fullscreen indexTopBanner01"></div>
-                    <div class="fullscreen indexTopBanner01"></div>
+    <div class="banner_v3">
+        <!-- logo -->
+        <a href="http://www.zhenlx.com/" class="index_logo"></a>
+        <!-- login -->
+        <div class="index_top-right-block">
+            <div class="operate index_login-entrance" >
+                <a class="login" href="javascript:;">登录</a><a class="register" href="javascript:;">注册</a>
+            </div>
+            <div class="index_after-login">
+                                <span class="userName">
+                                  <span class="commonIcon userIcon"></span>
+                                  <em>Dorian zhou</em>
+                                </span>
+            </div>
+        </div>
+        <!-- searchBar -->
+        <div class="indexSearchBar">
+            <div class="searchModel index_searchModel">
+                <div class="searchContent">
+                    <table class="searchTab">
+                        <colgroup>
+                            <col width="98">
+                            <col width="142">
+                            <col width="100">
+                            <col width="424">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th class="addIcon"><span class="commonIcon startOffIcon"></span><span class="startPlace-title">出发地:</span></th>
+                            <td>
+                                <div class="startOffPlaceModel">
+                                    <div class="startOffPlace">
+                                        <input type="text" class="startOffInput" value="上海" style="width: 141px;" readonly="readonly">
+                                        <span class="caret"></span>
+                                    </div>
+                                    <ul class="selectStartOffPlace">
+                                        <li class="active">上海</li>
+                                        <li>苏州</li>
+                                        <li>杭州</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <th class="addIcon"><span class="commonIcon destinationIcon"></span><span class="destination-title">目的地:</span></th>
+                            <td>
+                                <div class="destinationModel">
+                                    <div class="destination">
+                                        <input type="text" class="destinationInput" value="" style="width:466px;" placeholder="看世界" readonly="readonly">
+                                        <span class="caret"></span>
+                                    </div>
+                                    <div class="selectDestination">
+                                        <ul class="cityList ul-dest-first-level">
+                                            <li class="destSelect-first-level">
+                                                <span class="fl-destName">国内精选</span>
+                                                <span class="nav-tree-arrow"></span>
+                                                <ul class="second-level">
+                                                    <li class="sl-destName">九寨沟</li>
+                                                    <li class="sl-destName">北京</li>
+                                                    <li class="sl-destName">海南岛</li>
+                                                    <li class="sl-destName">杭州</li>
+                                                    <li class="sl-destName">丽江</li>
+                                                </ul>
+                                            </li>
+                                            <li class="destSelect-first-level">
+                                                <span class="fl-destName">日韩</span>
+                                                <span class="nav-tree-arrow"></span>
+                                                <ul class="second-level">
+                                                    <li class="sl-destName">首尔</li>
+                                                    <li class="sl-destName">济州岛</li>
+                                                    <li class="sl-destName">东京</li>
+                                                </ul>
+                                            </li>
+                                            <li class="destSelect-first-level">
+                                                <span class="fl-destName">东南亚</span>
+                                                <span class="nav-tree-arrow"></span>
+                                                <ul class="second-level">
+                                                    <li class="sl-destName">泰国</li>
+                                                    <li class="sl-destName">新加坡</li>
+                                                    <li class="sl-destName">柬埔寨</li>
+                                                    <li class="sl-destName">普吉岛</li>
+                                                    <li class="sl-destName">马尔代夫</li>
+                                                </ul>
+                                            </li>
+                                            <li class="destSelect-first-level">
+                                                <span class="fl-destName">欧洲</span>
+                                                <span class="nav-tree-arrow"></span>
+                                                <ul class="second-level">
+                                                    <li class="sl-destName">意大利</li>
+                                                    <li class="sl-destName">法国</li>
+                                                </ul>
+                                            </li>
+                                            <li class="empty"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="searchbtn">
+                                <a href="javascript:void(0);"></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+
+        <!-- 轮播图片 start -->
+        <div id="scrollImg" style="height:620px;z-index:5;" >
+            <a href="#" class="fullscreen indexTopBanner01"></a>
+            <a href="#" class="fullscreen indexTopBanner01"></a>
+            <a href="#" class="fullscreen indexTopBanner01"></a>
+            <a href="#" class="fullscreen indexTopBanner01"></a>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -46,6 +153,27 @@
 
         };
     });
+
+    //logo login search 居中定位
+    $(window).resize(function(){
+        resetPos();
+    });
+
+    function resetPos() {
+        var logo_left = ($(window).width()-1130)/2 + 1;
+        $(".index_logo").css({
+            left: logo_left + "px"
+        });
+        var login_right = ($(window).width()-1130)/2 + 1;
+        $(".index_top-right-block").css({
+            right: login_right + "px"
+        });
+        var s_left = ($(window).width() - $(".indexSearchBar").outerWidth()) / 2;
+        $(".indexSearchBar").css({
+            left: s_left + "px"
+        });
+    }
+    resetPos();
 </script>
 
 </body>
