@@ -1285,8 +1285,9 @@
 }
 .menu-sum-box{
     position: relative;
-    margin-top:0.4rem;
+    padding-top:0.4rem;
     margin-bottom:0.4rem;
+    border-top: 2px solid #3fc0ae;
 }
 .menu-sum{
     padding:0 0.5rem;
