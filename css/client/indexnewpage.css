@@ -850,6 +850,7 @@ body {
 .banner_v3 {
     position: relative;
     margin-bottom: 6px;
+    width:100%;
 }
 .innerBannerWrapper {
     width:100%;
@@ -857,32 +858,24 @@ body {
     height: 620px;
     z-index: 20;
 }
-.innerBanner {
-    width:1130px;
-    margin: 0 auto;
-    z-index: 10001;
-}
-.innerBanner .innerTop {
-    margin-top: 12px;
-}
-.innerBanner .logo {
-    float:left;
-    display: inline-block;
+.index_logo {
     background: url("../../images/client/logoV3.png") no-repeat;
     width:135px;
     height: 51px;
+    position:absolute;
+    top:12px;
+    z-index: 100;
 }
-.innerBanner .operate {
+.index_top-right-block {
+    position:absolute;
+    top:30px;
+    z-index: 100;
 }
-.innerBanner .operate a {
+.index_top-right-block a {
     color:#fff;
     text-decoration: none;
     font-size: 16px;
     margin: 0 0 0 20px;
-}
-.index_top-right-block {
-    float: right;
-    margin:16px 0 0 0;
 }
 .index_after-login {
     display: none;
@@ -908,7 +901,7 @@ body {
     vertical-align: middle;
 }
 .index_login-entrance > a {
-   }
+}
 .banner .product{
     height: 620px;
 }
@@ -957,20 +950,19 @@ body {
 }
 /* 搜索条 */
 .indexSearchBar {
-    margin:300px auto 0 auto;
-    /*text-align: center;*/
+    position:absolute;
+    top:340px;
+    z-index: 100;
 }
 .index_searchModel {
-    width: 686px!important;
-    float: none!important;
-    margin: 0 162px!important;
+    margin: 0;
+    float: none;
 }
 .index_searchModel .searchContent {
     height: 49px!important;
     background: #fff;
     padding:4px;
 }
-
 .innerModel {
     width:1130px;
     margin:0 auto;
