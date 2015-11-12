@@ -1275,10 +1275,12 @@
             currentmonth=$('.monthtab ul').find('.list-cut').index();
             if(currentmonth==0){
                 $('.left-month-btn').addClass('disable');
+                $('.right-month-btn').removeClass('disable');
             }else if(0<currentmonth&&currentmonth<($('.monthtab ul li').length-1)){
                 $('.left-month-btn').removeClass('disable');
                 $('.right-month-btn').removeClass('disable');
             }else if(currentmonth==($('.monthtab ul li').length-1)){
+                $('.left-month-btn').removeClass('disable');
                 $('.right-month-btn').addClass('disable');
             }
 
@@ -1428,10 +1430,6 @@
                     ml_max_dis=-$('.monthtab li').width()*($('.monthtab li').length-4);
                     if(monthtab_marL>=ml_max_dis){
                         $('.monthtab ul').css('margin-left',monthtab_marL);
-                        $('.left-month-btn').removeClass('disable');
-                    }
-                    if(monthtab_marL==ml_max_dis){
-                        $('.right-month-btn').addClass('disable');
                     }
 
                     currentmonth=$('.monthtab ul').find('.list-cut').index();
@@ -1448,19 +1446,14 @@
                 currentmonthL=parseInt($('.monthtab ul').find('.list-cut').offset().left);
                 monthtabL=parseInt($('.monthtab').offset().left);
                 //console.log(currentmonthL+'  '+monthtabL);
-                if(currentmonthL > monthtabL){//&& ($('.monthtab ul').css('margin-left')!=0)
+                if(currentmonthL > monthtabL){
                     
                     currentmonth=$('.monthtab ul').find('.list-cut').index();
                     $('.monthtab li').eq(currentmonth-1).trigger('click');
-
                 }else{
                     monthtab_marL = monthtab_marL + $('.monthtab li').width();
                     if(monthtab_marL<=0){
                         $('.monthtab ul').css('margin-left',monthtab_marL);
-                        $('.right-month-btn').removeClass('disable');
-                    }
-                    if(monthtab_marL==0){
-                        $('.left-month-btn').addClass('disable');
                     }
 
                     currentmonth=$('.monthtab ul').find('.list-cut').index();
@@ -1472,8 +1465,15 @@
     });
 
     window.onload=function(){
-        var monthtab_li_w = $('.monthtab').width()/4;   //底部弹窗 月份内 每月宽度定义
-        $('.monthtab ul li').css('width',monthtab_li_w);
+        var monthtab_li_lenght = $('.monthtab ul li').length;
+        var monthtab_li_w;   //底部弹窗 月份内 每月宽度定义
+        if(monthtab_li_lenght<4){
+            monthtab_li_w = $('.monthtab').width()/monthtab_li_lenght;
+        }else{
+            monthtab_li_w = $('.monthtab').width()/4;
+        }
+        //console.log(monthtab_li_w);
+        $('.monthtab ul li').css('width',monthtab_li_w+'px');
     }
 
 </script>
