@@ -1150,6 +1150,10 @@ body {
     font-size: 16px;
     color: #7f7f7f;
 }
+.hot_route li img {
+    height:289px;
+    width:360px;
+}
 .line_article {
     float: left;
     display: inline-block;
