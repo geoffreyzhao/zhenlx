@@ -1129,8 +1129,8 @@
     width:15rem;
 }
 .menu-list ul li{
-    padding-top:0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top:0.45rem;
+    padding-bottom: 0.45rem;
     text-align: center;
     float: left;
     display: inline-block;
@@ -1139,23 +1139,6 @@
 }
 .menu-list ul li:active{
     background-color:#f7f7f7;
-}
-.menu-list ul li:first-child{
-    width:33%;
-    border: 1px #3fc0ae solid;
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-}
-.menu-list ul li:nth-child(2){
-    width:34%;
-    border-top:1px #3fc0ae solid;
-    border-bottom:1px #3fc0ae solid;
-}
-.menu-list ul li:last-child{
-    width:33%;
-    border: 1px #3fc0ae solid;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
 }
 .menu-list ul .list-cut{
     background-color:#3fc0ae;
@@ -1174,9 +1157,12 @@
     width:50rem;
 }
 .changemenu ul li{
-    border:0!important;
+    /*border:0!important;*/
+    border-top: 1px solid #3fc0ae;
+    border-bottom: 1px solid #3fc0ae;
     border-radius:0!important;
     background-color:#f5fefd;
+    color: #3fc0ae;
 }
 .left-month-btn,.right-month-btn{
     width:1.8rem;
