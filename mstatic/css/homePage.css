@@ -259,8 +259,8 @@
 .hotel-room ul li{
     position: relative;
     font-size: 0.65rem;
-    margin-top:0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top:0.15rem;
+    margin-bottom: 0.15rem;
 }
 .hotel-room ul li p{
     min-height:1rem;
@@ -872,13 +872,14 @@
     background-size: 100%;
 }
 .travel-one > div{
-    margin-top:0.5rem;
+    margin-top:0.1rem;
 }
 .travel-one .travel-spot:nth-child(odd) {
     margin-top: 0.25rem;
 }
 .travel-one .ui-grid-a .ui-block-a{
-    width:15%;
+    /*width:15%;*/
+    width: 1.4rem;
 }
 .travel-one .ui-grid-a .ui-block-b{
     width:85%;
@@ -1183,7 +1184,7 @@
     display:inline-block;
     border:2px solid #3fc0ae;
 }
-.left-month-btn.disable,.right-month-btn.disable{
+.left-month-btn:active,.right-month-btn:active{
     background-color:#ccc;
     /* opacity:0.6; */
 }
@@ -1200,6 +1201,16 @@
     background:#fff url(../../mstatic/images/right-arrow.png) center center no-repeat;
     background-size:0.5rem 0.9rem;
     float:right;
+}
+.left-month-btn.disable {
+    border-color: #aaa;
+    background:#fff url(../../mstatic/images/left-arrow-disable.png) center center no-repeat;
+    background-size:0.5rem 0.9rem;
+}
+.right-month-btn.disable {
+    border-color: #aaa;
+    background:#fff url(../../mstatic/images/right-arrow-disable.png) center center no-repeat;
+    background-size:0.5rem 0.9rem;
 }
 .menu-list ul .list-cut:active{
     background-color:#1a9d9c;
@@ -1288,13 +1299,13 @@
 }
 .menu-sum-box{
     position: relative;
-    margin-top:1rem;
-    margin-bottom:1rem;
+    margin-top:0.4rem;
+    margin-bottom:0.4rem;
 }
 .menu-sum{
     padding:0 0.5rem;
     line-height: 2rem;
-    margin:0.25rem 0;
+    margin:0.1rem 0;
     color:#3fc0ae;
 }
 .count-tips{
@@ -1311,26 +1322,25 @@
     display: inline-block;
     vertical-align: middle;
     float: right;
+    width: 12.5rem;
+    text-align: right;
 }
 .counter-item{
-    width:1.4rem;
-    height:1.4rem;
-    line-height:1.4rem;
+    width:1.45rem;
+    height:1.45rem;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
 }
 .counter-minus{
-    width:1.4rem;
     background:url(../../mstatic/images/minusIcon.png) no-repeat center center;
-    background-size:cover;
+    background-size:100%;
 }
 .counter-add{
     background:url(../../mstatic/images/addIcon.png) no-repeat center center;
-    background-size:cover;
+    background-size:100%;
 }
 .counter-disable, .counter-disable:active{
-    /* background-color:#e7e7e7; */
     background-color:none;
     color:#fff;
     font-size: 1.5rem;
@@ -1343,6 +1353,7 @@
     color:#333;
     font-size: 0.75rem;
     margin:0 0.7rem;
+    line-height: 1.45rem;
 }
 /** end **/
 
