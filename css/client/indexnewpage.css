@@ -955,8 +955,8 @@ body {
     z-index: 100;
 }
 .index_searchModel {
-    margin: 0;
-    float: none;
+    margin: 0!important;
+    float: none!important;
 }
 .index_searchModel .searchContent {
     height: 49px!important;

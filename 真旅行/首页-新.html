@@ -774,11 +774,11 @@ $(window).resize(function(){
 });
 
 function resetPos() {
-    var logo_left = ($(window).width()-1130)/2;
+    var logo_left = ($(window).width()-1130)/2 + 1;
     $(".index_logo").css({
         left: logo_left + "px"
     });
-    var login_right = ($(window).width()-1130)/2;
+    var login_right = ($(window).width()-1130)/2 + 1;
     $(".index_top-right-block").css({
         right: login_right + "px"
     });
