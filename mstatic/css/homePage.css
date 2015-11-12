@@ -1185,6 +1185,7 @@
 }
 .left-month-btn.disable,.right-month-btn.disable{
     background-color:#ccc;
+    /* opacity:0.6; */
 }
 .left-month-btn{
     border-top-left-radius: 0.25rem;
@@ -1300,6 +1301,7 @@
     display: none;
     font-size: 0.6rem;
     color:#666;
+    line-height: 0.5rem;
 }
 .popNum{
     padding:0 0.1rem;
@@ -1319,15 +1321,13 @@
     vertical-align: middle;
 }
 .counter-minus{
+    width:1.4rem;
     background:url(../../mstatic/images/minusIcon.png) no-repeat center center;
     background-size:cover;
 }
 .counter-add{
     background:url(../../mstatic/images/addIcon.png) no-repeat center center;
     background-size:cover;
-}
-.counter-minus:active, .counter-add:active{
-    background-color:#89d3c9;
 }
 .counter-disable, .counter-disable:active{
     /* background-color:#e7e7e7; */
