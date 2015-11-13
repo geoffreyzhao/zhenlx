@@ -1114,16 +1114,16 @@ body {
 .hot_route .minBox i {
     border:1px solid #fff;
     border-radius: 3px;
-    padding:4px 6px;
+    padding:0 6px;
     margin: 10px 5px 0 0;
     display: inline-block;
     text-align: center;
-    line-height: 16px;
+    height: 27px;
+    line-height: 27px;
 }
 .hot_route .minBox i:last-child {
     margin-right: 0;
 }
-
 .hot_route li a .priceTips {
     background: #24cbc9;
     width:128px;
