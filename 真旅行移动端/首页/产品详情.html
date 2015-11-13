@@ -17,7 +17,7 @@
     <script type="text/javascript" src="../../mstatic/js/common.js"></script>
     <script type="text/javascript" src="../../mstatic/js/vendor/jquery.lazyload.js"></script>
     <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
-    <script src="http://10.3.40.3:8080/target/target-script-min.js#anonymous"></script>
+    <!-- <script src="http://10.3.40.3:8080/target/target-script-min.js#anonymous"></script> -->
     <title>产品详情</title>
 
     <script type="text/javascript">
@@ -1418,18 +1418,22 @@
                 //console.log($('.monthtab ul').find('.list-cut').offset().left+'  '+($('.monthtab').offset().left+3*$('.monthtab li').width()));
                 
                 currentmonthL=parseInt($('.monthtab ul').find('.list-cut').offset().left);
-                monthtabL=parseInt($('.monthtab').offset().left+3*$('.monthtab li').width());
+                monthtabL=parseInt($('.monthtab').offset().left+3*$('.monthtab li').width()-4);
 
-                //console.log(currentmonthL+'  '+monthtabL);
+                /*currentmonthL= $('.monthtab ul').find('.list-cut').offset().left;
+                monthtabL= $('.monthtab').offset().left+3*$('.monthtab li').width();*/
+
+                console.log((currentmonthL+1)+'  '+monthtabL);
                 if(currentmonthL+1 < monthtabL){
                     currentmonth=$('.monthtab ul').find('.list-cut').index();
                     $('.monthtab li').eq(currentmonth+1).trigger('click');
                 }else{
 
                     monthtab_marL = monthtab_marL - $('.monthtab li').width();
-                    ml_max_dis=-$('.monthtab li').width()*($('.monthtab li').length-4);
+                    ml_max_dis=-$('.monthtab li').width()*($('.monthtab li').length);
                     if(monthtab_marL>=ml_max_dis){
-                        $('.monthtab ul').css('margin-left',monthtab_marL);
+                        console.log(monthtab_marL);
+                        $('.monthtab ul').css('margin-left',monthtab_marL+'px');
                     }
 
                     currentmonth=$('.monthtab ul').find('.list-cut').index();
@@ -1445,6 +1449,9 @@
 
                 currentmonthL=parseInt($('.monthtab ul').find('.list-cut').offset().left);
                 monthtabL=parseInt($('.monthtab').offset().left);
+
+                /*currentmonthL= $('.monthtab ul').find('.list-cut').offset().left;
+                monthtabL= $('.monthtab').offset().left;*/
                 //console.log(currentmonthL+'  '+monthtabL);
                 if(currentmonthL > monthtabL){
                     
@@ -1453,7 +1460,7 @@
                 }else{
                     monthtab_marL = monthtab_marL + $('.monthtab li').width();
                     if(monthtab_marL<=0){
-                        $('.monthtab ul').css('margin-left',monthtab_marL);
+                        $('.monthtab ul').css('margin-left',monthtab_marL+'px');
                     }
 
                     currentmonth=$('.monthtab ul').find('.list-cut').index();
@@ -1465,6 +1472,10 @@
     });
 
     window.onload=function(){
+        var monthtab_w = parseInt($('.menu-list.changemenu').width()-$('.left-month-btn').outerWidth()*2);
+        console.log($('.menu-list.changemenu').width()+"  "+$('.left-month-btn').outerWidth()*2);
+        console.log(monthtab_w);
+        $('.monthtab').css('width',monthtab_w);
         var monthtab_li_lenght = $('.monthtab ul li').length;
         var monthtab_li_w;   //底部弹窗 月份内 每月宽度定义
         if(monthtab_li_lenght<4){

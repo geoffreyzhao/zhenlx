@@ -1148,8 +1148,8 @@
     overflow:hidden;
 }
 .changemenu .monthtab{
-    width:11.4rem;
-    height:1.76rem;
+    /* width:11.4rem; */
+    height:1.775rem;
     overflow:hidden;
    float:left;
 }
@@ -1161,7 +1161,8 @@
     border-top: 1px solid #3fc0ae;
     border-bottom: 1px solid #3fc0ae;
     border-radius:0!important;
-    background-color:#f5fefd;
+    /* background-color:#f5fefd; */
+    background-color:red;
     color: #3fc0ae;
 }
 .left-month-btn,.right-month-btn{
