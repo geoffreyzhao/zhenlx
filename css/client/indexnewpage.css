@@ -1118,6 +1118,7 @@ body {
     margin: 10px 5px 0 0;
     display: inline-block;
     text-align: center;
+    line-height: 16px;
 }
 .hot_route .minBox i:last-child {
     margin-right: 0;
