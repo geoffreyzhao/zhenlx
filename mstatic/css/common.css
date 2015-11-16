@@ -32,6 +32,10 @@ div[data-role="page"] {
 	background-color: #f0f0f0!important;
 }
 
+div[data-role="page"].viewport {
+	min-height: 100%!important;
+}
+
 table{border-collapse:collapse;border-spacing:0;}
 h1,h2,h3,h4,h5,h6{font-size:100%;font-weight: normal;}
 ul,ol,li{list-style:none;}
