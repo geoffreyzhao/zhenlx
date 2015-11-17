@@ -651,7 +651,11 @@ $(function(){
     window.onload = function() {
 
         $(function(){
-            $('#scrollImg').before('<div id="nav" class="slider_nav" style="left:47%;top:93%;">').cycle({fx:"fade",timeout: 2000,center:true,pause:true,pager:"#nav",pagerEvent: "click.cycle"});
+            $('#scrollImg').before('<div id="nav" class="slider_nav" style="top:93%;">').cycle({fx:"fade",timeout: 2000,center:true,pause:true,pager:"#nav",pagerEvent: "click.cycle"});
+
+            $("#nav").css({
+              left: ($(window).width() - $("#nav").outerWidth()) / 2 + "px"
+            });
         });
 
       //banner轮播
@@ -688,42 +692,10 @@ $(function(){
     };
 
     window.onresize = function(){
-      // window.location.reload();
       resizeBannerTextPos();
     }
 
     resizeBannerTextPos();
-
-    /*  fx 效果参数：
-blindX
-blindY
-blindZ
-cover
-curtainX
-curtainY
-fade
-fadeZoom
-growX
-growY
-none
-scrollUp
-scrollDown
-scrollLeft
-scrollRight
-scrollHorz
-scrollVert
-shuffle
-slideX
-slideY
-toss
-turnUp
-turnDown
-turnLeft
-turnRight
-uncover
-wipe
-zoom
-    */
 
     $(".special .erweima").hover(function(){
       $('.special .scanQR').stop().animate({'top':'0'},400);
@@ -785,6 +757,10 @@ function resetPos() {
     var s_left = ($(window).width() - $(".indexSearchBar").outerWidth()) / 2;
     $(".indexSearchBar").css({
         left: s_left + "px"
+    });
+    var nav_left = ($(window).width() - $("#nav").outerWidth()) / 2;
+    $("#nav").css({
+      left: nav_left + "px"
     });
 }
 resetPos();
