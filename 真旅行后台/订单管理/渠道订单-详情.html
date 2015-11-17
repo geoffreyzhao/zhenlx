@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 订单管理 渠道订单-详情</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.tagsinput.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/orderManagement.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+    <script type="text/javascript" src="../../js/vendor/jquery.tagsinput.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+        
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header hoveringModel">
+            <div class="stairMenuContent">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel headBtn clearfix">
+                <span class="leftBtn">
+                    <a href="javascript:void(0);" class="returnBtn">< 返回</a>
+                </span>
+            </div>
+        </header>
+        <div class="main-container changeMainContent">
+            <section class="whiteBg">
+                <div class="moduleContent">
+                    <table class="noBorderTabStyle">
+                        <colgroup>
+                            <col width="100">
+                            <col width="130">
+                            <col width="100">
+                            <col width="130">
+                            <col width="120">
+                            <col width="140">
+                            <col width="90">
+                            <col width="130">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th colspan="8">
+                                <label class="orderFonts">
+                                    <span class="orderNumFonts">订单号</span>
+                                    <span>1505081352</span>
+                                </label>
+                            </th>
+                            <th class="textAlignRight">
+                                <label class="statusFonts">
+                                    <span>当前状态：</span>
+                                    <span class="orangeFonts">已确认</span>
+                                </label>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="first">
+                            <td class="trTitle">团号：</td>
+                            <td colspan="7">12456987</td>
+                            <td rowspan="2" class="textAlignRight">
+                                <span class="orderSpan cancelOrderTd">
+                                    <button class="commonButton blue-45c8dcButton ac-cancelOrder">取消</button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trTitle">渠道：</td>
+                            <td>穷游</td>
+                            <td class="trTitle">渠道单号：</td>
+                            <td>342342344</td>
+                            <td class="trTitle">渠道支付日期：</td>
+                            <td>2015-11-12</td>
+                            <td class="trTitle">下单人：</td>
+                            <td>j.Bond</td>
+                        </tr>
+                        <tr class="last">
+                            <td class="trTitle">需求备注：</td>
+                            <td colspan="8">备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息备注信息</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="moduleContent">
+                    <div class="titleContent clearfix">
+                        <h3 class="titleFonts blue2fb0c4">联系人信息</h3>
+                    </div>
+                    <table class="grayThead">
+                        <colgroup>
+                            <col width="80">
+                            <col width="110">
+                            <col width="190">
+                            <col width="270">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>电话</th>
+                            <th>邮箱</th>
+                            <th>地址</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="fontSize16">小红</td>
+                            <td>18681834307</td>
+                            <td class="fontSize16">nan.zhao@travelzen.com</td>
+                            <td>上海市宝山区呼兰路123号4号楼4楼技术部</td>
+                        </tr>
+                        <tr>
+                            <td class="fontSize16">张三丰</td>
+                            <td>18681834307</td>
+                            <td class="fontSize16">sanfeng.zhang@163.com</td>
+                            <td>上海市宝山区呼兰路123号</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="moduleContent">
+                    <div class="titleContent clearfix">
+                        <h3 class="titleFonts blue2fb0c4">旅客信息</h3>
+                        <div class="titleRight">
+                            <span class="grayBgFonts current">中</span>
+                            <span class="grayBgFonts">外</span>
+                        </div>
+                    </div>
+                    <table class="grayThead ChinaForeignCountries">
+                        <colgroup>
+                            <col width="150">
+                            <col width="160">
+                            <col width="200">
+                            <col width="220">
+                            <col width="150">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>旅客中文名</th>
+                            <th>乘客类型</th>
+                            <th>证件类型</th>
+                            <th>证件号</th>
+                            <th>出生年月</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="fontSize16">小红</td>
+                            <td class="fontSize16">成人</td>
+                            <td class="fontSize16">身份证</td>
+                            <td>61052119886240135</td>
+                            <td>1988-06-24</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="grayThead ChinaForeignCountries" style="display: none;">
+                        <colgroup>
+                            <col width="150">
+                            <col width="120">
+                            <col width="55">
+                            <col width="85">
+                            <col width="100">
+                            <col width="160">
+                            <col width="100">
+                            <col width="100">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>拼音/英文名</th>
+                            <th>国籍</th>
+                            <th>性别</th>
+                            <th>乘客类型</th>
+                            <th>证件类型</th>
+                            <th>证件号</th>
+                            <th>证件有效期</th>
+                            <th>出生年月</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="fontSize16">xiao/hong</td>
+                            <td class="fontSize16">马来西亚</td>
+                            <td class="fontSize16">女</td>
+                            <td class="fontSize16">成人</td>
+                            <td class="fontSize16">身份证</td>
+                            <td>61052119886240135</td>
+                            <td>2020-2-22</td>
+                            <td>1988-06-24</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="moduleContent">
+                    <div class="titleContent clearfix">
+                        <h3 class="titleFonts blue2fb0c4">产品信息</h3>
+                    </div>
+                    <table class="grayThead">
+                        <colgroup>
+                            <col width="150">
+                            <col width="350">
+                            <col width="150">
+                            <col width="130">
+                            <col width="150">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>产品标题</th>
+                            <th>出发日期</th>
+                            <th>行程天数</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="fontSize16">Z12344</td>
+                            <td class="fontSize16">上海-巴黎12日</td>
+                            <td>1988-06-24</td>
+                            <td>12</td>
+                            <td>
+                                <a href="javascript:void(0);">查看详情</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fontSize16">Z12346</td>
+                            <td class="fontSize16">上海-泰国5日</td>
+                            <td>1986-04-28</td>
+                            <td>5</td>
+                            <td>
+                                <a href="javascript:void(0);">查看详情</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="moduleContent">
+                    <div class="titleContent clearfix">
+                        <h3 class="titleFonts blue2fb0c4">价格明细</h3>
+                    </div>
+                    <table class="leftGrayTh">
+                        <colgroup>
+                            <col width="150">
+                            <col width="140">
+                            <col width="140">
+                            <col width="140">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>渠道成交价</th>
+                            <td class="textAlignRight">成人价</td>
+                            <td>￥1000.00 X 1</td>
+                            <td class="textAlignRight orangeFonts">￥1000.00</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3"></th>
+                            <td class="textAlignRight">儿童价</td>
+                            <td>￥1000.00 X 1</td>
+                            <td class="textAlignRight orangeFonts">￥1000.00</td>
+                        </tr>
+                        <tr>
+                            <td class="textAlignRight">单房差</td>
+                            <td>￥500.00 X 1</td>
+                            <td class="textAlignRight orangeFonts">￥500.00</td>
+                        </tr>
+                        <tr>
+                            <td class="textAlignRight">优惠券优惠</td>
+                            <td>春季欧洲券</td>
+                            <td class="textAlignRight orangeFonts">-￥50.00</td>
+                        </tr>
+                        <tr>
+                            <th>渠道成交总价</th>
+                            <td colspan="3" class="textAlignRight orangeFonts">
+                                <b class="fontsWeight16">￥2450.00</b>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="moduleContent">
+                    <div class="titleContent clearfix">
+                        <h3 class="titleFonts blue2fb0c4">备注信息</h3>
+                    </div>
+                    <div class="costDetails">
+                        <textarea class="channel_textareaText" placeholder="添加备注"></textarea>
+                    </div>
+                </div>
+                
+            </section>
+            
+        </div>
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+    
+    <div class="modal fade commonInitialize" id="ac-cancelOrder">
+        <div class="modal-dialog" style="width: 360px;height:185px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">操作提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="popupContainer">
+                        <i class="warnIcon"></i>
+                        <span class="popupContainer-fonts">是否取消该渠道订单？</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="commonButton red-fe6869Button">确 认</button>
+                    <button type="button" class="commonButton blue-45c8dcButton">取 消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(function(){
+            //旅客信息中、外
+            $(".titleRight .grayBgFonts").each(function(index){
+                $(this).click(function(){
+                    $(".moduleContent .ChinaForeignCountries").hide();
+                    $(".moduleContent .ChinaForeignCountries:eq(" + index + ")").show();
+                    $(".titleRight .grayBgFonts").removeClass("current");
+                    $(this).addClass("current");
+                });
+            });
+            
+            //弹窗初始化
+            $(".commonInitialize").modal({
+                backdrop:"static",
+                keyboard: false,
+                show: false
+            });
+            //取消订单弹窗
+            $(".ac-cancelOrder").click(function(){
+                $("#ac-cancelOrder").modal("show");
+            });
+
+            //点击确认关闭弹窗
+            $(".modal-footer .red-fe6869Button").click(function(){
+                $("#ac-cancelOrder").modal("hide");
+                $(".statusFonts .orangeFonts").text("已取消");
+                $(".ac-cancelOrder").hide();
+            });
+            //点击取消关闭弹窗
+            $(".modal-footer .blue-45c8dcButton").click(function(){
+                $("#ac-cancelOrder").modal("hide");
+            });
+            
+        })
+    </script>
+
+</body>
+</html>
