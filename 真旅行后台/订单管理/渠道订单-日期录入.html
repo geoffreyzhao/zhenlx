@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 产品管理 新增产品-价格日历</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/productManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/priceCalendar.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/global/global.js"></script>
+    <script type="text/javascript" src="../../js/vendor/underscore.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+    <script type="text/javascript" src="../../js/maintain/customValidator.js"></script>
+    <script type="text/javascript" src="../../js/vendor/jquery.lazyload.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+       
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <header class="main-header hoveringModel">
+            <div class="stairMenuContent topMenuFonts">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                        <!-- <ul class="stairMenu haveTopFonts">
+                            <li class="editFonts">&lt;冰岛7晚9日自由行&gt; 极近天然，情迷北欧 多地出发</li>
+                            <li class="routeTipsFonts">编号:15041501</li>
+                            <li class="routeTipsFonts">类型：自由行</li>
+                        </ul> -->
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel headBtn clearfix">
+                <span class="leftBtn">
+                    <a href="javascript:void(0);" class="returnBtn">< 返回</a>
+                </span>
+                <ul class="middleContent">
+                    <li>
+                        <a href="javascript:void(0);">产品选择</a>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:void(0);">日期选择</a>
+                        <i class="downArrowIcon"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">乘客及支付信息</a>                        
+                    </li>
+                </ul>
+                <span class="rightBtn">
+                    <button class="commonButton red-fe6869Button">保 存</button>
+                    <button class="commonButton whiteBtn" onclick="window.location.href='#渠道订单-乘客及支付信息录入.html'">下一步</button>
+                </span>
+            </div>
+        </header>
+        <div class="main-container changeMainContent">
+            <section class="whiteBg">
+                <div class="price-order-block clearfix">
+                    <div class="custom-price-calendar-container left-price-info">
+                        <ul class="week-day-title top clearfix">
+                            <li>日</li>
+                            <li>一</li>
+                            <li>二</li>
+                            <li>三</li>
+                            <li>四</li>
+                            <li>五</li>
+                            <li>六</li>
+                        </ul>
+                        <div class="wrap-cover-bg"></div>
+                        <div class="common-tab-bar">
+                            <div class="tab-top"></div>
+                            <div class="cal-mon-tab-container">
+                                <ul class="common-tab calendar-month-tab clearfix"></ul>
+                            </div>
+                            <div class="mon-nav-btns">
+                                <span class="pre-mon-btn"></span>
+                                <span class="next-mon-btn"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="calendarTables">
+                            <ul class="week-day-title clearfix">
+                                <li>日</li>
+                                <li>一</li>
+                                <li>二</li>
+                                <li>三</li>
+                                <li>四</li>
+                                <li>五</li>
+                                <li>六</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-cont-block" style="margin-top:6px;">
+                        <div class="set-price-container" style="min-height:555px;margin-left:15px;">
+                            <div class="sub-title" style="margin-top:0;">团号</div>
+                            <div class="rightdate">
+                                请于左侧选择出行日期
+                            </div>
+                            <div class="sub-title">出行人数</div>
+                            <table style="margin-top:20px;">
+                                <colgroup>
+                                    <col width="40"/>
+                                    <col width=""/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>成人:</th>
+                                        <td>
+                                            <div class="dropdown" style="width: 56px;margin:0 8px 0 5px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false" style="padding:0 5px;">
+                                                    <span class="activeFonts">1人</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">1人</a></li>
+                                                    <li><a href="javascript:void(0);">2人</a></li>
+                                                    <li><a href="javascript:void(0);">3人</a></li>
+                                                    <li><a href="javascript:void(0);">4人</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <th>儿童:</th>
+                                        <td>
+                                            <div class="dropdown" style="width: 56px;margin:0 10px;">
+                                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false" style="padding:0 5px;">
+                                                    <span class="activeFonts">1人</span>
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="active"><a href="javascript:void(0);">1人</a></li>
+                                                    <li><a href="javascript:void(0);">2人</a></li>
+                                                    <li><a href="javascript:void(0);">3人</a></li>
+                                                    <li><a href="javascript:void(0);">4人</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>    
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+
+    <script>
+        $(function(){
+    
+            // 触发验证
+            $(".oper-btn .save").click(function(){
+                $(".set-price-container").customValidate({
+                    validateAll: true
+                });
+            });
+    
+            //  定义日期数据格式
+    
+            var data = [{
+                month: "2015-09",
+                    monthData: [{
+                        day: 22,
+                        soldNum: 3,
+                        totalNum: 10,
+                        adultPrice: 1250,
+                        childPrice: 850,
+                        flightFlag: true,
+                        hotelFlag: true,
+                        isClosed: true,
+                        canOrder: true
+                    }, {
+                        day: 23,
+                        soldNum: 10,
+                        totalNum: 10,
+                        adultPrice: 1250,
+                        childPrice: 850,
+                        flightFlag: false,
+                        hotelFlag: true,
+                        isClosed: true,
+                        canOrder: false
+                    }, {
+                        day: 24,
+                        soldNum: 3,
+                        totalNum: 10,
+                        adultPrice: 1250,
+                        childPrice: null,
+                        flightFlag: true,
+                        hotelFlag: false,
+                        isClosed: false,
+                        canOrder: false
+                    }, {
+                        day: 25,
+                        soldNum: 3,
+                        totalNum: 10,
+                        adultPrice: 1250,
+                        childPrice: 850,
+                        flightFlag: true,
+                        hotelFlag: true,
+                        isClosed: false,
+                        canOrder: true
+                    }]
+                },
+                {
+                month: "2015-10",
+                monthData: [{
+                    day: 3,
+                    soldNum: 3,
+                    totalNum: 10,
+                    adultPrice: 1250,
+                    childPrice: 850,
+                    flightFlag: true,
+                    hotelFlag: true,
+                    isClosed: false,
+                    canOrder: true
+                }, {
+                    day: 6,
+                    soldNum: 10,
+                    totalNum: 10,
+                    adultPrice: 1250,
+                    childPrice: 850,
+                    flightFlag: false,
+                    hotelFlag: true,
+                    isClosed: false,
+                    canOrder: true
+                }]
+            }];
+    
+            //  调用方法
+            //  param1: 包裹日历的外层容器元素;  param2: 填充日历所需要数据
+            //  以下独立出的 funntion 可自行封装在js文件中，引入js文件
+            genePriceCalendar(".price-calendar", data);            
+            
+        });
+    
+    function genePriceCalendar(ele, data) {
+    
+        $(ele).datepicker({
+            format: "yyyy-mm-dd",
+            language: "zh-CN",
+            weekStart: 0,
+            beforeShowDay: function(){
+                $(ele).find("td .active").removeClass("active");             
+            }
+        });
+    
+        var date = new Date();
+    
+        setCalendarTitle(ele, date);
+        geneCalendarTdContent(date, data);
+        
+        $(ele).find("tbody td").click(function(){
+            return false;  //  解除默认的td点击事件，否则会重写日历结构
+        });
+    
+        $(".tdCont").click(function(event){
+            console.log('click tdCont');
+            $(this).parents("table").find(".tdCont").removeClass("current");
+            $(this).addClass("current");
+            event.stopPropagation();
+        });
+    
+        $(".tdCont .left-btn").click(function(event){
+            console.log('delete');
+            event.stopPropagation();
+        });
+    
+        $(".tdCont .right-btn").click(function(event){
+            console.log('open/close');
+            event.stopPropagation();
+        });
+    
+        $(ele).find(".change-calendar").click(function(){
+            if ($(this).hasClass("prev-year")) {    //  前一年
+                date = moveMonth(date, -12);
+    
+            } else if ($(this).hasClass("next-year")) {  //  后一年
+                date = moveMonth(date, 12);
+    
+            } else if ($(this).hasClass("prev-month")) {  //  前一月
+                date = moveMonth(date, -1);
+    
+            } else if ($(this).hasClass("next-month")) {  //  后一月
+                date = moveMonth(date, 1);
+    
+            }
+    
+            $(ele).datepicker("setDate", date);
+    
+            /*  这部分代码可以封装成一个单独的方法， 初始化和每次日历翻动都需要用*/
+            /* wrap  start */
+            setCalendarTitle(ele, date);
+            geneCalendarTdContent(date, data);
+    
+            $(ele).find("td.active").removeClass("active");  //  默认会选中日期，active会有样式
+            $(ele).find("tbody td").click(function(){
+                return false;  //  解除默认的td点击事件，否则会重写日历结构
+            });
+    
+            $(".tdCont").click(function(event){
+                console.log('click tdCont');
+                $(this).parents("table").find(".tdCont").removeClass("current");
+                $(this).addClass("current");
+                event.stopPropagation();    //  同一个td内的很多元素都绑定点击事件，注意阻止事件冒泡
+            });
+    
+            $(".tdCont .left-btn").click(function(event){
+                console.log('delete');
+                event.stopPropagation();
+            });
+    
+            $(".tdCont .right-btn").click(function(event){
+                console.log('open/close');
+                event.stopPropagation();
+            });
+    
+            /* wrap  end */
+        });
+    }
+    
+    // 每次切换月份（含年份）都需要重新生成TD的内容
+    function geneCalendarTdContent(date, data) {  
+    
+        var y = date.getFullYear(),
+            m = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1),
+            monthStr = y + "-" + m,
+            monthDataArr = [];
+    
+        //  如果没有数据，返回undefined
+        var monthDataObject = _.findWhere(data, {month: monthStr}); 
+    
+        if (!!monthDataObject) {
+            monthDataArr = _.findWhere(data, {month: monthStr}).monthData;
+        }
+    
+        $(".price-calendar .datepicker-days").find("tbody td").each(function(){
+            var dayText = $(this).html();
+    
+            if ($(this).hasClass("old") || $(this).hasClass("new")) {
+                $(this).html("<div class='tdCont disabled'></div>");
+            } else {
+                $(this).html(geneTdContTemplate(y, m, dayText, monthDataArr));
+            }
+        });        
+    }
+    
+    
+    // year, month 参数只为了给当前td确定具体的日期值  "year-month-day"
+    function geneTdContTemplate(year, month, day, monthDataArr) {
+    
+        var template = "";
+    
+        var tmp = _.findWhere(monthDataArr, {day: day*1});
+    
+        if (tmp === undefined) {
+    
+            template += "<div class='tdCont add'><div class='top-block clearfix'><span data-dayNum='" + year + "-" + month + "-" + day + "'>" + day +"</span></div>";
+        } else {
+    
+            template += "<div class='tdCont edit'><div class='top-block clearfix'><span class='day' data-dayNum='" + year + "-" + month + "-" + day + "'>" + day +"</span>";
+    
+            if (tmp.isClosed) {  //  显示关闭图标
+                template += "<span class='closed-icon'>关闭</span>";
+            } else {
+                template += "";
+            }
+    
+            if (tmp.soldNum < tmp.totalNum) {  //  显示售卖数量
+                template += "<span class='stock'><em class='sold-num'>" + tmp.soldNum + "</em><em>/</em><em class='total-num'>" + tmp.totalNum +"</em></span></div>";
+            } else if (tmp.soldNum == tmp.totalNum) {  //  显示售完图标
+                template += "<span class='stock'><i class='stock-icon'>售完</i></span></div>";
+            }            
+    
+            if (tmp.adultPrice != 0 && !!tmp.adultPrice) {  //  显示成人价格
+                template += "<div class='middle-block'><span class='adult-price'>￥" + tmp.adultPrice + "</span>";
+            } else {
+                template += "<div class='middle-block'><span class='adult-price'></span>";
+            }
+    
+            if (tmp.childPrice != 0 && !!tmp.childPrice) {   //  显示儿童价格
+                template += "<span class='child-price'>￥" + tmp.childPrice + "</span></div>";
+            } else {
+                template += "<span class='child-price'></span></div>";
+            }
+    
+            if (tmp.flightFlag) {   //  显示机票图标              
+                template += "<div class='bottom-block'><span class='flight-icon'></span>";
+            } else {
+                template += "<div class='bottom-block'>";
+            }
+    
+            if (tmp.hotelFlag) {   //   显示酒店图标
+                template += "<span class='hotel-icon'></span>";
+            }
+    
+            template += "<div class='oper-btn'><span class='left-btn'>删除</span><span class='right-btn'>";
+    
+            if (tmp.isClosed) {
+                template += "上线</span></div></div>";
+            } else {
+                template += "关闭</span></div></div>";
+            }
+    
+        }
+    
+        template += "</div>";
+        return template;
+    }
+    
+    function moveMonth(date, dir) {
+    
+        if (!(date instanceof Date)) {   //  如果date不是日期类型
+            return undefined;
+        }
+    
+        if (!dir) {   // 如果 dir 参数为空，返回date
+            return (date instanceof Date) ? date : undefined;
+        }
+    
+        var dir_num = parseInt(dir),
+            dir_absNum = Math.abs(dir_num),
+            year = date.getFullYear(),
+            month = date.getMonth(),
+            day = date.getDate(),
+            result_date;
+    
+        if (dir_num < 0) {   //  日期往前滚
+            result_date = new Date(year, month - dir_absNum);
+    
+        } else if (dir_num > 0) {  // 日期往后滚
+            result_date = new Date(year, month + dir_absNum);
+        }
+        return result_date;
+    }
+    
+    function setCalendarTitle(ele, date) {
+    
+        $(ele).find(".cal-year-text .num").html(date.getFullYear());
+        if (date.getFullYear() == new Date().getFullYear()) {
+            $(ele).find(".cal-year-text .num").addClass("current");
+        } else {
+            $(ele).find(".cal-year-text .num").removeClass("current");
+        }
+    
+        $(ele).find(".cal-month-text .num").html(date.getMonth() + 1);
+        if (date.getMonth() == new Date().getMonth()) {
+            $(ele).find(".cal-month-text .num").addClass("current");
+        } else {
+            $(ele).find(".cal-month-text .num").removeClass("current");
+        }
+    }
+    </script>
+
+<script>
+        $(function(){  
+
+            /*$(".want-order-btn, .fixed-want-order-btn").click(function(){
+                $("#interestedTip").modal("show");
+            });*/
+
+            /*$(".fixedList").affix({
+                offset: {
+                    top: function(){
+                        return this.top = $(".fixedList").offset().top;
+                    }
+                }
+            });*/
+
+            /*$(".asideFixed").affix({
+                offset: {
+                    top: $(".asideFixed").offset().top - 70,
+                    bottom: $("body").height() - $(".journeyRecommendModel").offset().top - 
+                                $(".journeyRecommendModel").outerHeight(true) + 80
+                }
+            });*/
+            
+            //滚动监听有蒙版效果
+           /* $(window).scroll(function(){
+                $(".journeyRecommendList").children("li").each(function(index){
+                    showLi(this);
+                    if ($(this).hasClass("active")) {
+                        $(".asideFixed > li").removeClass("active");
+                        $(".asideFixed > li").eq(index).addClass("active");
+                    }
+                });
+                //  概览位置 取消变白效果
+                // $(".journeyRecommendList > li:eq(0)").addClass("active");
+
+            });*/
+            // $(".journeyRecommendList > li").addClass("active");
+
+            /*function showLi(ele) {
+                var top = $(ele).offset().top,
+                    eleHeight = $(ele).height(),
+                    scrollTop = $(window).scrollTop(),
+                    clientHeight = document.documentElement.clientHeight,
+                    nextEleTop;
+
+                if ($(ele).next("li").length == 0) {
+                    nextEleTop = top + eleHeight;
+                } else {
+                    nextEleTop = $(ele).next("li").offset().top;
+                }
+                if (scrollTop > (top - clientHeight*0.5) && scrollTop < (nextEleTop - clientHeight*0.5)) {
+                    $(ele).addClass("active");
+                    $(ele).siblings("li").removeClass("active");
+                }
+            }*/
+            
+            
+            /*//酒店图片mouseover效果
+            $(".hotelSmallImg li").mouseover(function(){
+                var changeSrc = $(this).parents(".hotelSmallImg").siblings(".hotelBigImg").find("img");
+                var thisSrc = $(this).find("img").attr("src");
+                changeSrc.attr("src",thisSrc);
+                $(this).addClass("active");
+                $(this).siblings("li").removeClass("active");
+            });*/
+            
+
+            //  生成初始日历结构---只包含价格信息没有交互
+
+            var data = [
+                { month : "2015/05/01",   //  数据月份
+                  info : [
+                    //  几号       剩余库存      售价
+                    {dayDate: 1, leftNum: 10, price: 2000, canOrder: true},   //  当月下的每天数据
+                    {dayDate: 3, leftNum: 22, price: 998, canOrder: true},
+                    {dayDate: 9, leftNum: 0, price: 20000, canOrder: true},
+                    {dayDate: 22, leftNum: 10, price: 20000, canOrder: true},
+                    {dayDate: 23, leftNum: 0, price: 88888, canOrder: false},
+                    {dayDate: 26, leftNum: 12, price: 1999, canOrder: true},
+                    {dayDate: 31, leftNum: 22, price: 2499, canOrder: false}
+                  ]
+                },
+                { month : "2015/06/01",   
+                  info : [{dayDate: 1, leftNum: 10, price: 2000, canOrder: false}]
+                },
+                { month : "2015/07/01",   
+                  info : [{dayDate: 31, leftNum: 10, price: 2000, canOrder: false}]
+                },
+                { month : "2015/08/01",  
+                  info : []
+                },
+                { month : "2015/09/01",  
+                  info : []
+                },
+                { month : "2015/10/01",  
+                  info : []
+                },
+                { month : "2016/01/01",  
+                  info : []
+                },
+                { month : "2016/03/01",  
+                  info : []
+                }
+            ];
+            setCalendar(data, ".calendarTables");
+
+        //  生成月份标题
+        $(".custom-price-calendar-container ul.common-tab").append(geneTabSwitchMonth(data));
+
+        var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
+
+        if (data.length > 6) {
+            $("ul.calendar-month-tab").css("width", w * data.length + $(".calendar-month-tab .placement").outerWidth() + "px");
+            $(".cal-mon-tab-container").addClass("limit-width");
+        }
+            
+            $(".calendar-month-tab .tab-item").eq(0).addClass("current");
+            /*$(".common-tab").tabBar();*/
+            $(".calTable").hide();
+            $(".calTable").eq(0).show();
+
+            checkMonthNav();
+
+            $(".calendar-month-tab").find("li.tab-item").each(function(index){
+                $(this).click(function(){
+                    $(".calTable").hide();
+                    $(".calTable").eq(index).show();
+                    
+                    if (!$(".calTable").eq(index).find(".tripCover").length > 0) {
+                        $(".wrap-cover-bg").hide();     
+                    } else {
+                        $(".wrap-cover-bg").show();         
+                    }
+
+                    checkMonthNav();
+                });
+            });
+            
+        });    
+
+    //  按钮置灰不可点
+    function checkMonthNav() {
+        if ($(".tab-item.current").nextAll('.tab-item').length == 0) {
+            $(".next-mon-btn").addClass("disabled");
+        } else {
+            $(".next-mon-btn").removeClass("disabled");
+        }
+
+        if ($(".tab-item.current").prevAll('.tab-item').length == 0) {
+            $(".pre-mon-btn").addClass("disabled");
+        } else {
+            $(".pre-mon-btn").removeClass("disabled");
+        }
+    }
+
+    function setCalendar(data, ele) {
+        for (var i = 0; i < data.length; i++) {
+            var monthInfo = data[i];  // 获得当前月份的数据信息
+
+            var calStr = "<table class='calTable ct-" + data[i].month.split('/')[0] + "-" +
+                            data[i].month.split('/')[1] + "'><tr>";  // 拼接字符串生成表格日期内容
+
+            var curentMonthDate = new Date(monthInfo.month);
+            var nextMonthDate = new Date(curentMonthDate.getFullYear(), curentMonthDate.getMonth() + 1,
+                curentMonthDate.getDate());
+            var monthDays = (nextMonthDate - curentMonthDate)/(1000*60*60*24);  // 获得当前月天数
+
+            var firstWeekDay = curentMonthDate.getDay();  // 获得当前月1号是周几, 范围0-6
+            var lastWeekDay = nextMonthDate.getDay() - 1 < 0 ? 6 : nextMonthDate.getDay() - 1; 
+            // 计算当月最后一天是周几，填补日历最后的空格
+
+            var currentDay = 1;  // 从1号开始排列当月的日期
+
+            for (var j = 0; j < firstWeekDay; j++) {  // 当月1号之前td为空
+                calStr += "<td class='empty'><div class='tdCont'></div></td>";
+            }
+
+            for (; currentDay <= monthDays; currentDay++) {
+
+                var w1 = firstWeekDay == 0 ? 7 : firstWeekDay;
+
+                if (currentDay % 7 == (7 - w1) && currentDay != monthDays) {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td></tr><tr>";
+                } else if (currentDay == monthDays) {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td>";
+                    for (var t = 0; t < 6 - lastWeekDay; t++) {
+                        calStr += "<td class='empty'><div class='tdCont'></div></td>";
+                    }
+                    calStr += "</tr></table>";
+                } else {
+                    calStr += "<td>" + geneTdContent(currentDay, monthInfo) + "</td>";
+                }
+            }
+            $(ele).append(calStr);
+        }
+    }
+
+    function getDayInfo(currentDay, monthInfo) {
+        for (var i = 0; i < monthInfo.info.length; i++) {
+            if (monthInfo.info[i].dayDate == currentDay) {
+                return monthInfo.info[i];
+            }
+        }
+        return null;
+    }
+
+    function geneTdContent(currentDay, monthInfo) {
+        var dayInfo = getDayInfo(currentDay, monthInfo);
+        var tdCont = "";
+
+        var d = currentDay < 10 ? '0' + currentDay : currentDay;
+        var dateStr = monthInfo.month.slice(0, 7) + "/" + d;
+        
+        if (!!dayInfo) {  
+
+            if (!dayInfo.canOrder) {   //  不可预订, 显示未开放状态
+
+                tdCont += "<div class='tdCont'><div class='priceCover canntorder clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+                tdCont += "<div class='right-block'><div class='leftNum'>未开放</div>";
+                tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+
+            } else {   //   可预订，显示库存状态
+
+                if (dayInfo.leftNum == 0) {
+                    tdCont += "<div class='tdCont'><div class='priceCover soldout clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+                    tdCont += "<div class='right-block'><div class='leftNum'>售完</div>";
+                    tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+                } else {
+                    tdCont += "<div class='tdCont'><div class='priceCover onsale clearfix'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + dayInfo.dayDate + "</div>";
+
+                    tdCont += "<div class='right-block'><div class='leftNum'>余" + dayInfo.leftNum + "</div>";
+
+                    tdCont += "<div class='price'>￥" + dayInfo.price + "</div></div></div></div>";
+                    
+                }
+            }    
+        } else {
+            tdCont += "<div class='tdCont'><div class='priceCover noPrice'><div class='dateDay' data-dayvalue='" + dateStr + "'>" + currentDay + "</div></div></div>";
+        }
+        return tdCont;
+    }
+
+    function geneTabSwitchMonth(data) {
+        var liStr = "";
+        for (var i = 0; i < data.length; i++) {
+            var temp = new Date(data[i].month);
+
+            liStr += "<li class='placement'></li>";
+            liStr += "<li name='" + data[i].month + "' class='tab-item'>" + temp.getFullYear() + "年" +
+                        (temp.getMonth() + 1 < 10 ? '0' + (temp.getMonth() + 1) : (temp.getMonth() + 1)) + "月</li>";
+        }
+
+        if (data.length > 6) {
+            $(".mon-nav-btns").show();
+            liStr += "<li class='placement'></li>";
+        } else if (data.length == 6) {
+            liStr += "<li class='placement'></li>";
+        } else {
+            liStr += "<li class='placement'></li><li class='rest'></li>";
+        }
+
+        return liStr;
+    }
+    </script>
+    
+    <!--  日历交互结构及样式  -->
+    <script type="text/javascript">
+    $(function(){
+
+        var tripDataList = [{
+            startDate: "2015/05/01",
+            dataList: [  //  根据数组长度 表示要显示的天数
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '1上海上海上',
+                            toCity: '1金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '1金边金边金边',
+                            toCity: '1新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '1吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '1吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '1吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '1吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    flightInfos:[
+                        {
+                            fromCity: '1新罗',
+                            toCity: '1金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '1金边',
+                            toCity: '1上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            startDate: "2015/05/03",
+            dataList: [  //  根据数组长度 表示要显示的天数
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '2上海上海上',
+                            toCity: '2金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '2金边金边金边',
+                            toCity: '2新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '2吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '2吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '2吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '2吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    flightInfos:[
+                        {
+                            fromCity: '2新罗',
+                            toCity: '2金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '金边',
+                            toCity: '上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            startDate: "2015/05/09",
+            dataList: [  //  根据数组长度 表示要显示的天数
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '上海上海上',
+                            toCity: '金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '金边金边金边',
+                            toCity: '新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第六天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第七天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第八天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第九天
+                    hotelInfo:{
+                        hotelNameCn: '吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第十天
+                    flightInfos:[
+                        {
+                            fromCity: '新罗',
+                            toCity: '金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '金边',
+                            toCity: '上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            startDate: "2015/05/31",
+            dataList: [  //  根据数组长度 表示要显示的天数
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '3上海上海上',
+                            toCity: '3金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '3金边金边金边',
+                            toCity: '3新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第五天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第六天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第七天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第八天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第九天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第十天
+                    flightInfos:[
+                        {
+                            fromCity: '3新罗',
+                            toCity: '3金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '3金边',
+                            toCity: '3上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            startDate: "2015/06/01",
+            dataList: [ 
+                {  // 第一天
+                    flightInfos:[
+                        {
+                            fromCity: '3上海上海上',
+                            toCity: '3金边金边金',
+                            departureTime: '07:10',
+                            arrivalTime: '12:15',
+                            flightNo: 'K555'
+                        },
+                        {
+                            fromCity: '3金边金边金边',
+                            toCity: '3新罗新罗新罗',
+                            departureTime: '14:12',
+                            arrivalTime: '15:15',
+                            flightNo: 'K666'
+                        }
+                    ],
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & SpaAngkor Miracle Resort & SpaAngkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第二天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第三天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '2'
+                    }
+                },
+                {   //  第四天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '3'
+                    }
+                },
+                {   //  第五天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '4'
+                    }
+                },
+                {   //  第六天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '5'
+                    }
+                },
+                {   //  第七天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '3.5'
+                    }
+                },
+                {   //  第八天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '4.5'
+                    }
+                },
+                {   //  第九天
+                    hotelInfo:{
+                        hotelNameCn: '3吴哥奇迹温泉度假酒店',
+                        hotelNameEn: 'Angkor Miracle Resort & Spa',
+                        rating: '6'
+                    }
+                },
+                {   //  第十天
+                    flightInfos:[
+                        {
+                            fromCity: '3新罗',
+                            toCity: '3金边',
+                            departureTime: '16:10',
+                            arrivalTime: '17:15',
+                            flightNo: 'K666'
+                        },
+                        {
+                            fromCity: '3金边',
+                            toCity: '3上海',
+                            departureTime: '18:12',
+                            arrivalTime: '19:15',
+                            flightNo: 'K555'
+                        }
+                    ]
+                }
+            ]
+        }
+        ];
+
+        $(".priceCover").not(".noPrice").click(function(){
+
+            var $thisTd = $(this).closest("td"),
+                $thisTable = $(this).closest('table'),
+                tdIndex = $thisTable.find("td").index($thisTd),
+                restValidTdNum = $thisTable.find("td:gt("+tdIndex+")").not(".empty").length;
+
+            for (var td = 0; td < tripDataList.length; td++) {
+                var tripData = tripDataList[td];
+
+                if (tripData.startDate == $(this).find(".dateDay").data("dayvalue")) {
+                    $(".wrap-cover-bg").show();
+                    $(".week-day-title.top").show();
+
+                    geneTripCover($(this), tripData);
+                }
+            }
+        });
+
+        $("body").delegate(".wrap-cover-bg", "click", function(event){
+            $(this).hide();
+            $(".week-day-title.top").hide();
+            $(".calTable .tripCover").remove();
+            $(".calTable .popover-trip-container").remove();
+            $(".calTable tr.append").remove();
+            event.stopPropagation();
+        });
+    });
+
+    /*
+        分三步：
+        1. 找到需要重新覆盖的td元素，如果不够，则创建新元素
+        2. 根据数据生成所有的覆盖层和弹出层结构
+        3. 依此遍历，将生成的结构依此填充至表格内
+    */
+    function geneTripCover($ele, tripData) {
+
+        //  找到需要重新覆盖的td元素，如果不够，则创建新元素
+        var isCoveredEleTd = [];
+        isCoveredEleTd.push($ele.closest("td"));
+
+        var curTdNextEleArr = $ele.closest("td").nextAll("td");      
+
+        //  往下一行追加
+        if (curTdNextEleArr.length < (tripData.dataList.length - 1)) {  
+
+            isCoveredEleTd = _.union(isCoveredEleTd, _.map(curTdNextEleArr, function(value){ return $(value); }));
+
+            var s_tr = parseInt((tripData.dataList.length - curTdNextEleArr.length - 1) / 7),
+                s_td = (tripData.dataList.length - curTdNextEleArr.length - 1) % 7;
+
+            var $tr = $ele.closest("tr");
+
+            for (var i = s_tr; i >= 0; i--) {
+
+                if ($tr.next("tr").length == 0) {  //  跨月情况，表格需要追加行数
+                    $ele.closest('tbody').append("<tr class='append'><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td><td class='empty'><div class='tdCont'></div></td></tr>");
+                }
+
+                $tr = $tr.next("tr");
+
+                var tdList;
+
+                if (i == 0) {
+                    tdList = $tr.find("td:lt("+s_td+")");
+                    
+                } else {
+                    tdList = $tr.find("td");
+                }
+                isCoveredEleTd = _.union(isCoveredEleTd, _.map(tdList, function(value){ return $(value); }));
+            }
+        } else {
+            for (var i = 0; i < tripData.dataList.length - 1; i++) {
+                isCoveredEleTd.push($(curTdNextEleArr[i]));
+            }
+        }
+
+        // ======================  isCoveredEleTd  填充完毕
+
+        var eleArr = []; //  生成覆盖元素节点  存放在该数组中（只有右侧部分，左侧复用原来priceCover的结构）
+        var popoverEleArr = [];   //  存放弹窗层结构
+
+        for (var i = 0; i < tripData.dataList.length; i++) {
+
+            var coverEleStr = "<div class='right-block'><div class='trip-day' data-tripday='"+(i+1)+"'>";
+            var popoverEleStr = "<div class='popover-trip-container'>"
+                                    + "<div class='top-block clearfix'><div class='left-block'>"
+                                    +   "<span class='day-icon'></span></div><div class='right-block'>";
+
+            coverEleStr += parseNumToString(i+1) + "</div><div class='icon'>";
+
+            var dayData = tripData.dataList[i],
+                fi = dayData.flightInfos,
+                hi = dayData.hotelInfo;
+
+            if (!!fi) {  //  有航班信息,显示飞机icon，popover上显示航班信息
+                coverEleStr += "<span class='flight-icon'></span>";
+                if (!!hi) {  //  有航程并且有酒店，如果没有酒店，则航程是晚上的返程,白天自由活动
+                    popoverEleStr += "<table class='flight-info'><tbody><tr><td class='city'>"+fi[0].fromCity+"→"
+                                    +fi[0].toCity+"</td>"
+                                    +"<td>"+fi[0].departureTime+"-"+fi[0].arrivalTime+"</td>"
+                                    +"<td>"+fi[0].flightNo+"</td></tr>"
+                                    +"<tr><td class='city'>"+fi[1].fromCity+"→"
+                                    +fi[1].toCity+"</td>"
+                                    +"<td>"+fi[1].departureTime+"-"+fi[1].arrivalTime+"</td>"
+                                    +"<td>"+fi[1].flightNo+"</td></tr></tbody></table></div></div>";
+                } else {
+                    popoverEleStr += "<div class='freetime'>自由活动</div></div></div>";
+                    popoverEleStr += "<div class='bottom-block clearfix'>"
+                                +"<div class='left-block'><span class='night-icon'></span></div>"
+                                +"<div class='right-block clearfix'><table class='flight-info'>"
+                                +"<tbody><tr><td class='city'>"+fi[0].fromCity+"→"
+                                +fi[0].toCity+"</td>"
+                                +"<td>"+fi[0].departureTime+"-"+fi[0].arrivalTime+"</td>"
+                                +"<td>"+fi[0].flightNo+"</td></tr>"
+                                +"<tr><td class='city'>"+fi[1].fromCity+"→"
+                                +fi[1].toCity+"</td>"
+                                +"<td>"+fi[1].departureTime+"-"+fi[1].arrivalTime+"</td>"
+                                +"<td>"+fi[1].flightNo+"</td></tr></tbody></table></div></div>";
+                }
+            } else {  //  popover 上显示自由活动
+                popoverEleStr += "<div class='freetime'>自由活动</div></div></div>";
+            }
+
+            if (!!hi) {  //  有酒店信息,显示酒店icon，popover上显示酒店信息
+                coverEleStr += "<span class='hotel-icon'></span>";
+                popoverEleStr += "<div class='bottom-block clearfix'>"
+                                +"<div class='left-block'><span class='night-icon'></span></div>"
+                                +"<div class='right-block clearfix'><div class='hotel-name'>"
+                                +"<div class='ch-name'>"+hi.hotelNameCn+"</div>"
+                                +"<div class='en-name'>"+hi.hotelNameEn+"</div>"
+                                +"</div><div class='star-rating'><div class='commonStarLevelIcon starLevelIcon starLevel-"+getStarLevelClass(hi.rating)+" noLeftStar'><span class='commonStarLevelIcon'></span></div></div></div>";
+            }
+            coverEleStr += "</div></div>";
+            popoverEleStr += "</div>";
+
+            eleArr.push($(coverEleStr));
+            popoverEleArr.push($(popoverEleStr));
+        }
+
+        //  ====================  覆盖元素右侧部分及弹层信息  填充完毕
+
+        //  依次追加节点，填充覆盖
+        var overDayCount = 0;  //  记录跨月的天数
+        for (var i = 0; i < isCoveredEleTd.length; i++) {
+            var day = isCoveredEleTd[i].find(".dateDay").eq(0);
+            var day_value = isCoveredEleTd[i].find(".dateDay").eq(0).data("dayvalue");
+
+            if (!day.html() && overDayCount == 0) {
+                overDayCount = isCoveredEleTd.length - i + 1;
+            }
+
+            isCoveredEleTd[i].find(".tdCont").append("<div class='tripCover clearfix'><div class='dateDay' data-dayvalue='" + day_value + "'>" + (day.html() || overDayCount + i - isCoveredEleTd.length) + "</div><div class='right-block'>" + eleArr[i].html() + "</div></div>");
+
+            isCoveredEleTd[i].find(".tdCont").append("<div class='popover-trip-container'>" + popoverEleArr[i].html() + "</div>");
+        }
+
+        $(".calTable .tripCover").click(function(){
+
+            if ($(this).hasClass("current")) {
+                $(this).removeClass("current");
+            } else {
+                $(this).closest(".calTable").find(".tripCover").removeClass("current");
+                $(this).addClass("current");
+                $(this).closest(".calTable").find(".priceCover").removeClass("current");
+                $(this).siblings(".priceCover").addClass("current");
+            }
+
+            var $popover = $(this).closest("td").find(".popover-trip-container"),
+                trIndex = $(this).closest("tr").index(),
+                tdIndex = $(this).closest("td").index();
+
+            if ($popover.is(":visible")) {
+                $popover.hide();
+                return;
+            } else {
+                $(this).closest(".calTable").find(".popover-trip-container").hide();
+            }
+
+            var tdHeight = $(this).closest("td").outerHeight(),
+                popoverHeight = $(this).closest("td").find(".popover-trip-container").outerHeight();
+
+            if (trIndex <= 0) { //  第一行向下显示
+                if (tdIndex <= 3) {  //  向右显示
+                    $popover.css({
+                        left: 0,
+                        top: tdHeight + "px"
+                    }).toggle();
+                } else {  //  向左显示
+                    $popover.css({
+                        right: 0,
+                        top: tdHeight + "px"
+                    }).toggle();
+                }   
+            } else {  //  其他向上显示
+                if (tdIndex <= 3) {  //  向右显示
+                    $popover.css({
+                        left: 0,
+                        top: -popoverHeight-1 + "px"
+                    }).toggle();
+                } else {  //  向左显示
+                    $popover.css({
+                        right: 0,
+                        top: -popoverHeight-1 + "px"
+                    }).toggle();
+                }   
+            }                    
+        });
+        
+        //  默认触发第一天
+        $(".calTable .tripCover").eq(0).trigger("click");
+    }
+
+    function parseNumToString(num) {
+        var result = "";
+        switch(num) {
+            case 1:
+                result = "第一天";
+                break;
+            case 2:
+                result = "第二天";
+                break;
+            case 3:
+                result = "第三天";
+                break;
+            case 4:
+                result = "第四天";
+                break;
+            case 5:
+                result = "第五天";
+                break;
+            case 6:
+                result = "第六天";
+                break;
+            case 7:
+                result = "第七天";
+                break;
+            case 8:
+                result = "第八天";
+                break;
+            case 9:
+                result = "第九天";
+                break;
+            case 10:
+                result = "第十天";
+                break;
+            case 11:
+                result = "第十一天";
+                break;
+            case 12:
+                result = "第十二天";
+                break;
+            case 13:
+                result = "第十三天";
+                break;
+            case 14:
+                result = "第十四天";
+                break;
+            case 15:
+                result = "第十五天";
+                break;
+        }
+        return result;
+    }
+
+    function getStarLevelClass(num) {
+        var arr = (num + '').split('.');
+        if (arr.length > 1) {  //  有半星  准星级
+            return arr[0] + "-" + arr[1];
+        } else {   // 星级
+            return arr[0];
+        }
+    }
+
+</script>
+
+<!--  经停提示信息模板  -->
+    <script type="text/html" id="stop_flight_template">
+        <table class="flight_tip_table">
+            <tr>
+                <th>经停：</th>
+                <td>阿布扎比阿布扎比</td>
+            </tr>
+            <tr>
+                <th>到达：</th>
+                <td>10:20</td>
+            </tr>
+            <tr>
+                <th>起飞：</th>
+                <td>14:30</td>
+            </tr>
+            <tr>
+                <th>停留：</th>
+                <td>2h30m</td>
+            </tr>
+        </table>
+    </script>
+
+    <!--  中转提示信息模板  -->
+    <script type="text/html" id="transfer_flight_template">
+        <table class="flight_tip_table">
+            <tr>
+                <th>中转：</th>
+                <td>阿布扎比</td>
+            </tr>
+            <tr>
+                <th>到达：</th>
+                <td>10:20</td>
+            </tr>
+            <tr>
+                <th>起飞：</th>
+                <td>14:30</td>
+            </tr>
+            <tr>
+                <th>停留：</th>
+                <td>2h30m</td>
+            </tr>
+        </table>       
+    </script>
+
+
+    <script type="text/html" id="qrCode_template">
+        <img src="../../images/client/wechat-qrcode.jpg" style="width:183px;height:183px;"/>
+    </script>
+
+<script type="text/javascript">
+    $(function(){
+        $(".price-tooltip").tooltip({
+            html: true,
+            placement: 'bottom',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+
+        $(".qrCode-icon").attr("title", $("#qrCode_template").html());
+        $(".qrCode-tooltip").tooltip({
+            html: true,
+            placement: 'bottom',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+
+        // $(".tab-cont").hide();
+        $(".tab-cont").eq(0).show();
+        $(".hotel-info-tab li").each(function(index){
+            $(this).click(function(){
+                $(".tab-cont").hide();
+                $(".tab-cont").eq(index).show();
+                $(".hotel-info-tab li").removeClass("current");
+                $(this).addClass("current");
+            });
+        });
+
+        $(".stoppingPoint.transfer").attr("title", $("#transfer_flight_template").html());
+        $(".stoppingPoint.stop").attr("title", $("#stop_flight_template").html());
+        
+
+        $(".green-border-tooltip").tooltip({
+            html: true,
+            placement: 'bottom',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+
+        $(".tripTipsIcon").each(function(index){
+            $(".tripTipsIcon").removeClass("current");
+            $(".tripTipsIcon").eq(0).addClass("current");
+            $(".tipsContentBlock > div").hide();
+            $(".tipsContentBlock > div").eq(0).show();
+
+            $(this).mouseover(function(){
+                $(".tripTipsIcon").removeClass("current");
+                $(this).addClass("current");
+                $(".tipsContentBlock > div").hide();
+                $(".tipsContentBlock > div").eq(index).show();
+            });
+
+        });
+
+        $("a[href^=tel]").click(function(){
+            return false;
+        });
+    });
+
+    function setBannerBgColor(color) {
+        $(".bannerBottomList .middleListContent").css({
+            "background-color": "#" + color
+        });
+
+        $(".productDetailModel").css({
+            "border-bottom-color": "#" + color
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    $(".wishlist").click(function(){
+        if (!$(this).hasClass("actived")) {
+            $(this).addClass("actived");
+        } else {
+            $(".wishedTip").fadeIn(function(){
+                setTimeout(function(){
+                    $(".wishedTip").fadeOut();
+                }, 1500);
+            });
+        }
+    });
+
+    $(".pre-mon-btn").click(function(){
+
+        var $this = $(this);
+
+        if (!$this.hasClass("disabled")) {
+
+            if ($(".tab-item.current").prevAll('.tab-item').length > 0) {
+
+                var offsetLeft = $(".calendar-month-tab .tab-item.current").position().left,
+                    curOff = $(".calendar-month-tab").css("margin-left") != "auto" ? parseInt($(".calendar-month-tab").css("margin-left")) : 0;
+
+                if (offsetLeft < 100) {
+                    var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
+                    $(".calendar-month-tab").css("margin-left", curOff + w + "px");
+                }
+                $(".tab-item.current").prevAll('.tab-item').eq(0).trigger("click");
+            }
+        }
+    });
+
+    $(".next-mon-btn").click(function(){
+
+        var $this = $(this);
+
+        if (!$this.hasClass("disabled")) {
+
+            if ($(".tab-item.current").nextAll('.tab-item').length > 0) {
+
+                var offsetLeft = $(".calendar-month-tab .tab-item.current").position().left,
+                    curOff = $(".calendar-month-tab").css("margin-left") != "auto" ? parseInt($(".calendar-month-tab").css("margin-left")) : 0;
+
+                if (offsetLeft > 500) {
+                    var w = $(".calendar-month-tab .tab-item").outerWidth() + $(".calendar-month-tab .placement").outerWidth();
+                    $(".calendar-month-tab").css("margin-left", curOff - w + "px");                
+                }
+                $(".tab-item.current").nextAll('.tab-item').eq(0).trigger("click");
+            }
+        }
+    });
+
+   /* $("img.lazyload-img").lazyload();*/
+</script>
+</body>
+</html>
