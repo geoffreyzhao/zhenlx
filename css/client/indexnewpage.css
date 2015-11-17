@@ -1091,6 +1091,7 @@ body {
 .hot_route .innerContent {
     padding:0 10px;
     min-height: 138px;
+    text-align: left;
 }
 .hot_route .innerContent.limitHeight {
     height: 138px;
@@ -1099,7 +1100,7 @@ body {
 .hot_route .ellipsis_P {
     position:absolute;
     bottom:65px;
-    right:175px;
+    left: 52px;
 }
 .hot_route .minBox {
     border-top:1px solid #fff;
