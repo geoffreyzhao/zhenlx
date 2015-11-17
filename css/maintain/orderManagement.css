@@ -405,3 +405,25 @@
     margin-top:30px;
     margin-bottom:35px;
 }
+
+
+/*  渠道信息录入 S  */
+.channelTitle{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+}
+.thRight{
+    font-size: 14px;
+}
+.thRight tbody th{
+    text-align: right;
+    padding: 8px 5px;
+}
+.thRight tbody td{
+    padding: 8px 5px;
+}
+.borderBottom{
+    border-bottom: 3px solid #f1f1f1;
+}
+/*  渠道信息录入 E  */

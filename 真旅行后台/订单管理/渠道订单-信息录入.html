@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 渠道订单-信息录入</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/orderManagement.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+        
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header hoveringModel">
+            <div class="stairMenuContent topMenuFonts">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel headBtn clearfix" style="bottom: -48px;">
+                <span class="leftBtn">
+                    <a href="javascript:void(0);" class="returnBtn">< 返回</a>
+                </span>
+                <ul class="middleContent">
+                    <li class="active">
+                        <a href="javascript:void(0);">产品选择</a>
+                        <i class="downArrowIcon"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">日期选择</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">乘客及支付信息</a>
+                    </li>
+                </ul>
+                <span class="rightBtn">
+                    <button class="commonButton red-fe6869Button">保 存</button>
+                    <button class="commonButton whiteBtn" onclick="window.location.href='#渠道订单-日期录入.html'">下一步</button>
+                </span>
+            </div>
+        </header>
+        <div class="main-container changeMainContent">
+            <section class="whiteBg">
+                <div class="channelTitle">渠道信息录入</div>
+                <table class="thRight">
+                    <colgroup>
+                        <col width="110">
+                        <col width="">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>产品ID</th>
+                        <td>
+                            <input type="text" style="width: 390px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>渠道</th>
+                        <td>
+                            <div class="dropdown" style="width: 390px;">
+                                <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                    <span class="activeFonts">请选择</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="javascript:void(0);">请选择</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>渠道订单号</th>
+                        <td>
+                            <input type="text" style="width: 390px;">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+        </div>
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+
+
+</body>
+</html>
