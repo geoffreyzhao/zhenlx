@@ -55,6 +55,51 @@
         <div class="main-container changeMainContent">
             <section class="whiteBg">
                 <div class="moduleContent">
+                    <div class="titleContent clearfix">
+                        <h3 class="titleFonts">操作日志</h3>
+                        <div class="titleRight">
+                            <span class="flexible unfold">展开</span>
+                            <span class="flexible packUp">收起</span>
+                        </div>
+                    </div>
+                    <table class="grayThead flexibleContent">
+                        <colgroup>
+                            <col width="180">
+                            <col width="110">
+                            <col width="110">
+                            <col width="500">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>操作日期</th>
+                            <th>操作内容</th>
+                            <th>操作员</th>
+                            <th>操作备注</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2015-05-13 &nbsp; 07:52:12</td>
+                            <td class="fontSize16">创建</td>
+                            <td class="fontSize16">用户</td>
+                            <td>用户备注巴拉巴拉某某某操作记录很多很多很多字用户备注巴拉巴拉某某某操作记录很多很多很多字</td>
+                        </tr>
+                        <tr>
+                            <td>2015-05-13 &nbsp; 07:52:12</td>
+                            <td class="fontSize16">查看</td>
+                            <td class="fontSize16">nan.zhao</td>
+                            <td></td>
+                        </tr>
+                        <tr class="addTr">
+                            <td>2015-05-13 &nbsp; 07:52:12</td>
+                            <td class="fontSize16">支付</td>
+                            <td class="fontSize16">管理员</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="moduleContent">
                     <table class="noBorderTabStyle">
                         <colgroup>
                             <col width="100">
@@ -309,6 +354,9 @@
                     </div>
                     <div class="costDetails">
                         <textarea class="channel_textareaText" placeholder="添加备注"></textarea>
+                        <div class="saveRemark">
+                            <button class="commonButton blue-45c8dcButton">保  存</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -343,6 +391,17 @@
     
     <script>
         $(function(){
+            //操作日志伸缩
+            $(".titleRight .unfold").click(function(){
+                $(this).hide();
+                $(this).siblings(".packUp").show();
+                $(".flexibleContent").show();
+            });
+            $(".titleRight .packUp").click(function(){
+                $(this).hide();
+                $(this).siblings(".unfold").show();
+                $(".flexibleContent").hide();
+            });
             //旅客信息中、外
             $(".titleRight .grayBgFonts").each(function(index){
                 $(this).click(function(){
