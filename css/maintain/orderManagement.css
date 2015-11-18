@@ -423,7 +423,47 @@
 .thRight tbody td{
     padding: 8px 5px;
 }
-.borderBottom{
+.moduleContent.borderBottom{
     border-bottom: 3px solid #f1f1f1;
+    padding-bottom: 20px;
+}
+.marginLeft30{
+    margin-left: 30px;
+}
+.moduleContent .noBorderInput{
+    border: none;
+}
+.moduleContent .delBtn{
+    color: #59aad7;
+    font-size: 16px;
+    margin-left: 50px;
+}
+.moduleContent .delBtn:hover{
+    text-decoration: underline;
+}
+.secondLevelTitle{
+    margin: 20px 10px 20px 50px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.secondLevelTitle .titleLeft{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.moduleContent .borderTop{
+    margin: 20px 10px 20px 0;
+    padding-top: 15px;
+    border-top: 1px solid #f1f1f1;
+}
+.borderTop .fontsWeight{
+    font-weight: bold;
+}
+.moduleContent .thRight{
+    font-size: 16px;
+}
+.popupContainer .passIcon{
+    left: 55px;
+    top: 22%;
 }
 /*  渠道信息录入 E  */
