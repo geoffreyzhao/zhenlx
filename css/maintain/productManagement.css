@@ -1,4 +1,4 @@
-/*  真旅行后台管理  产品管理样式  */
+.tab-item.current/*  真旅行后台管理  产品管理样式  */
 @charset "utf-8";
 
 /* 产品列表 S */
@@ -1543,14 +1543,11 @@ input[type="text"].tagInput {
 }
 
 
-.mainContent .mainWrapper {
-  
-}
 .price-order-block {
     width: 1130px;
-  margin: 50px auto;
-  overflow:hidden;
-  /* margin: 115px 0 40px 0; */
+    /* margin: 50px auto; */
+    overflow:hidden;
+    margin: 5px 0 40px 120px;
 }
 .custom-price-calendar-container {
   position: relative;
@@ -1624,9 +1621,6 @@ ul.common-tab {
   height: 50px;
   overflow: hidden;
 }
-ul.common-tab > li.placement.left-active {
-  border-bottom-right-radius: 5px;
-}
 ul.common-tab > li.placement {
   height: 50px;
   width: 8px;
@@ -1650,33 +1644,14 @@ ul.common-tab > li.current {
   border-top-right-radius: 4px;
   position: relative;
 }
-ul.common-tab > li {
-  float: left;
-  width: 116px;
-  text-align: center;
-  height: 50px;
-  line-height: 50px;
-  background-color: #11b9b7;
-}
-ul.common-tab > li.placement.right-active {
-  border-bottom-left-radius: 5px;
-}
 ul.common-tab > li.placement {
   height: 50px;
   width: 8px;
   padding: 0;
 }
-ul.common-tab > li {
-  float: left;
-  width: 116px;
-  text-align: center;
-  height: 50px;
-  line-height: 50px;
-  background-color: #11b9b7;
-}
 .mon-nav-btns {
   background-color: #11b9b7;
-  width: 124px;
+  width: 125px;
   text-align: center;
   height: 50px;
   line-height: 50px;
@@ -1685,7 +1660,6 @@ ul.common-tab > li {
   top: 15px;
   display: none;
 }
-
 .pre-mon-btn {
   background: url(../../images/client/cal-nav-icons.png) no-repeat 0 0;
   width: 15px;
@@ -1740,25 +1714,6 @@ ul.common-tab > li {
   text-align: center;
 }
 .calTable {
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-table {
-  background-color: transparent;
-}
-.calTable tr:first-child td {
-  border-top: 1px solid #cceeed;
-}
-.calTable td {
-  border-right: 1px solid #cceeed;
-  border-bottom: 1px solid #cceeed;
-}
-.calTable .tdCont {
-  width: 106px;
-  height: 75px;
-  position: relative;
 }
 .calTable tr:first-child td {
   border-top: 1px solid #cceeed;
@@ -1918,6 +1873,9 @@ table {
   background-color: #337ab7;
   outline: 0;
 }
+.calTable .tdCont .onsale:hover, .calTable .tdCont .soldout:hover, .calTable .tdCont .canntorder:hover {
+  cursor: pointer;
+}
 .dropdown-menu>li>a {
   display: block;
   padding: 3px 20px;
@@ -1934,6 +1892,9 @@ a:link, a:visited, ins {
     padding:10px;
     line-height:40px;
     color:#ababab;
+}
+.rightdate.datecolor{
+    color:#333;
 }
 .common-tab-bar {
 }
@@ -1987,3 +1948,6 @@ ul.common-tab > li.rest {
     cursor: default;
     padding: 0;
 }
+/* .calTable td{
+    cursor:pointer;
+} */
