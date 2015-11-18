@@ -868,7 +868,7 @@ body {
 }
 .index_top-right-block {
     position:absolute;
-    top:30px;
+    top:15px;
     z-index: 10001;
 }
 .index_top-right-block a {
@@ -985,6 +985,7 @@ body {
 }
 .procuctOverview li:first-child {
     border-left: none;
+    margin-left: 8px;
 }
 .procuctOverview .li_icon {
     background: url("../../images/client/broadcastIcon.png") no-repeat;
