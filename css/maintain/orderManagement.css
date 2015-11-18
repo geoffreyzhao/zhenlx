@@ -467,3 +467,356 @@
     top: 22%;
 }
 /*  渠道信息录入 E  */
+
+/* 渠道信息 日期录入 */
+
+.price-order-block {
+    width: 1130px;
+    overflow:hidden;
+    margin: 5px 0 40px 120px;
+}
+.custom-price-calendar-container {
+  position: relative;
+}
+.left-price-info {
+  float: left;
+}
+.week-day-title.top {
+  background-color: #11b9b7;
+  padding: 0 2px;
+  border-radius: 4px;
+  position: absolute;
+  top: -42px;
+  width: 100%;
+  display: none;
+}
+.week-day-title {
+  margin: 0;
+}
+.week-day-title.top li {
+  color: #fff;
+  background-color: #11b9b7;
+  height: 48px;
+  line-height: 48px;
+}
+.week-day-title li {
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  width: 106px;
+  background-color: #fbfbfb;
+  color: #999;
+  text-align: center;
+}
+.cal-mon-tab-container.limit-width {
+  width: 630px;
+  position: relative;
+}
+.cal-mon-tab-container {
+  width: 752px;
+  overflow: hidden;
+}
+.calendar-month-tab {
+  height: 50px;
+  overflow: hidden;
+}
+.left-price-info ul.common-tab > li.current {
+  background-color: #fbfbfb;
+}
+.mon-nav-btns {
+  background-color: #11b9b7;
+  width: 125px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  display: none;
+}
+.pre-mon-btn {
+  background: url(../../images/client/cal-nav-icons.png) no-repeat 0 0;
+  width: 15px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.next-mon-btn {
+  background: url(../../images/client/cal-nav-icons.png) no-repeat -17px 0;
+  width: 15px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.pre-mon-btn.disabled, .next-mon-btn.disabled {
+  opacity: 0.4;
+  filter: Alpha(opacity=40);
+  cursor: default;
+}
+.calendarTables {
+  background-color: #fbfbfb;
+  color: #999;
+  font-size: 15px;
+  border: 2px solid #11b9b7;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.week-day-title {
+  margin: 0;
+}
+.week-day-title li {
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  width: 106px;
+  background-color: #fbfbfb;
+  color: #999;
+  text-align: center;
+}
+.calTable {
+}
+.calTable tr:first-child td {
+  border-top: 1px solid #cceeed;
+}
+.calTable td {
+  border-right: 1px solid #cceeed;
+  border-bottom: 1px solid #cceeed;
+}
+.calTable .tdCont {
+  width: 106px;
+  height: 75px;
+  position: relative;
+}
+.calTable .tdCont .priceCover {
+  position: relative;
+  padding: 10px 8px 0 10px;
+  height: 100%;
+}
+.calTable .tdCont .priceCover .dateDay {
+  float: left;
+}
+.calTable .tdCont .priceCover .right-block {
+  float: right;
+  text-align: right;
+}
+.calTable .tdCont .onsale .leftNum {
+  color: #e46c14;
+  line-height: 20px;
+}
+.calTable .tdCont .onsale .price {
+  color: #e46c14;
+  line-height: 20px;
+}
+.right-order-info {
+  float: right;
+  width: 355px;
+  background-color: #f9f9f9;
+  padding: 18px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.dropdown {
+  display: inline-block;
+}
+.dropdown .dropdownBtn, .dropdown .dropdownBtn .activeFonts, .dropdown .dropdownBtn:hover, .dropdown .dropdownBtn .activeFonts:hover {
+  color: #484848;
+}
+.dropdown .dropdownBtn .activeFonts {
+  display: inline-block;
+  text-align: left;
+  width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.dropdown .dropdownBtn .caret, .dropdown .dropdownBtn .caret:hover {
+  color: #11b9b7;
+}
+.dropdown .dropdownBtn .caret {
+  position: absolute;
+  right: 7px;
+  top: 45%;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.dropdown .dropdown-menu {
+  width: 100%;
+  min-width: 0;
+  border-top: none;
+  margin: 0;
+  padding: 0;
+  max-height: 245px;
+  overflow-y: auto;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.dropdown .dropdown-menu>li {
+  width: 100%;
+}
+.dropdown .dropdown-menu>.active>a, .dropdown .dropdown-menu>.active>a:hover {
+  color: #333;
+  background-color: #f2f2f2;
+}
+.dropdown .dropdown-menu>li>a {
+  padding: 8px 5px;
+  color: #666666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #337ab7;
+  outline: 0;
+}
+.calTable .tdCont .onsale:hover, .calTable .tdCont .soldout:hover, .calTable .tdCont .canntorder:hover {
+  cursor: pointer;
+}
+.dropdown-menu>li>a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+a:link, a:visited, ins {
+  text-decoration: none;
+}
+.rightdate{
+    padding:10px;
+    line-height:40px;
+    color:#ababab;
+}
+.rightdate.datecolor{
+    color:#333;
+}
+.common-tab-bar .tab-top {
+    width: 100%;
+    height: 15px;
+    background-color: #11b9b7;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    top: 5px;
+}
+ul.common-tab {
+  color: #fff;
+  font-size: 14px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin: 0;
+}
+ul.common-tab > li {
+    float: left;
+    width: 116px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color: #11b9b7;
+}
+ul.common-tab > li.current {
+  background-color: #f9f9f9;
+  color: #11b9b7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+}
+ul.common-tab > li.placement {
+  height: 50px;
+  width: 8px;
+  padding: 0;
+}
+ul.common-tab > li:hover {
+    cursor: pointer;
+}
+ul.common-tab > li.placement.left-active {
+    border-bottom-right-radius: 5px;
+}
+ul.common-tab > li.placement.right-active {
+    border-bottom-left-radius: 5px;
+}
+ul.common-tab > li.rest {
+    cursor: default;
+    padding: 0;
+}
+.right-cont-block {
+  float: left;
+  margin-left: 10px;
+}
+.set-price-container {
+  border: 1px solid #9bc9e7;
+  background-color: #fff;
+  font-size: 14px;
+  padding-left: 10px;
+  min-width: 320px;
+}
+.set-price-container .sub-title {
+  height: 28px;
+  line-height: 28px;
+  background-color: #eaeaea;
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 3px 0 3px -10px;
+  padding-left: 10px;
+}
+.rightdate {
+  padding: 10px;
+  line-height: 40px;
+  color: #ababab;
+}
+.set-price-container table th, .set-price-container table td {
+  height: 30px;
+  line-height: 30px;
+  color: #666;
+}
+/* 渠道订单日期录入end */
