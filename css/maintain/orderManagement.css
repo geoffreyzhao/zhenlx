@@ -346,14 +346,6 @@
     padding: 10px;
     resize: none;
 }
-.channel_textareaText{
-    width:100%;
-    font-size: 14px;
-    color: #666666;
-    height: 100px;
-    padding: 10px;
-    resize: none;
-}
 .leftGrayTh{
     margin: 10px 0;
 }
@@ -385,8 +377,22 @@
 .saveRemark{
     margin-top: 7px;
 }
-
 /*  自由行-订单详情 E  */
+
+/* 渠道订单详情 S */
+.channel_textareaText{
+    width:100%;
+    font-size: 14px;
+    color: #666666;
+    height: 100px;
+    padding: 10px;
+    resize: none;
+}
+.popupContainer .warnIcon {
+    top:22%;
+    left:15%;
+}
+/* 渠道订单详情 E */
 
 /* 兑换订单 */
 .exchangeTable {
