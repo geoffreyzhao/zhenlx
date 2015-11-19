@@ -1687,6 +1687,15 @@ ul.common-tab > li.rest {
     cursor: default;
     margin-left: 5px;
 }
+.price-tip-info {
+
+}
+.price-tip-info p.title {
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #11b9b7;
+    font-size: 14px;
+}
 .cur-price .green-border-tooltip .tooltip-inner{
     max-width:335px;
     text-align:left;

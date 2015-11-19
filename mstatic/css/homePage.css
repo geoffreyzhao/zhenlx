@@ -1295,6 +1295,13 @@
     margin:0.1rem 0;
     color:#3fc0ae;
 }
+.menu-sum .child-state {
+    font-size: 0.6rem;
+    display: inline-block;
+    position: absolute;
+    left: 0.5rem;
+    bottom: -0.9rem;
+}
 .count-tips{
     display: none;
     font-size: 0.6rem;
