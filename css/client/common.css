@@ -767,8 +767,28 @@ header .head {
     margin-top: -2px;
 }
 
+.after-login .userName .avatar-ct {
+    position: absolute;
+    display: inline-block;
+    background: url(../../images/client/yuan2.png);
+    width: 46px;
+    height: 46px;
+    vertical-align: middle;
+    margin-right: 5px;
+    z-index: 2;
+}
+
+.after-login .userName .avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
 .after-login .userName em {
-    color: #7f7f7f;
+    color: #fff;
     font-size: 14px;
     display: inline-block;
     max-width: 120px;
