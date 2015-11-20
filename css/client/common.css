@@ -788,7 +788,7 @@ header .head {
 }
 
 .after-login .userName em {
-    color: #fff;
+    color: #7f7f7f;
     font-size: 14px;
     display: inline-block;
     max-width: 120px;
@@ -796,6 +796,10 @@ header .head {
     overflow: hidden;
     text-overflow: ellipsis;
     vertical-align: middle;
+}
+
+.index_after-login .userName em {
+    color: #fff;
 }
 
 .userInfo-box {
