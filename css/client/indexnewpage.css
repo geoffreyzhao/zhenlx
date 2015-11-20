@@ -952,7 +952,7 @@ body {
 .indexSearchBar {
     position:absolute;
     top:340px;
-    z-index: 10001;
+    z-index: 15;
 }
 .index_searchModel {
     margin: 0!important;
