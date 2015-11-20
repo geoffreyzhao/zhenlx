@@ -798,8 +798,8 @@ header .head {
     vertical-align: middle;
 }
 
-.index_after-login .userName em {
-    color: #fff;
+.index_top-right-block .after-login .userName em {
+    color: #fff!important;
 }
 
 .userInfo-box {
