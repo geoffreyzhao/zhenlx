@@ -11,7 +11,7 @@
 	font-size:0;
 }
 .feedback .modal ,.modal-backdrop{
-	z-index:8;
+	z-index:20;
 	background:rgba(0,0,0,0.6);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000099,endColorstr=#00000099);
 }
