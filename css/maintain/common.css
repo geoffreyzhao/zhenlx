@@ -794,8 +794,8 @@ div.datepicker table tr td span.active {
     vertical-align: bottom;
     background: url("../../images/popupIcon.png") no-repeat;
     position: absolute;
-    left: 30px;
-    top: 10%;
+    left: 45px;
+    top: 18px;
 }
 .popupContainer .warnIcon {
     background-position: 0 0;

@@ -1097,3 +1097,43 @@ form .showUpload{
 }
  
 /*  推荐产品管理 end   */
+
+/* 代金券明细 */
+.ticketStatusItem .searchTab {
+
+}
+
+.ticketStatusItem .searchTab th {
+    text-align: right;
+}
+
+.ticketStatusItem .searchTab th,
+.ticketStatusItem .searchTab td {
+    padding: 5px 3px;
+}
+
+.ticketStatusTab {
+    margin: 30px;
+}
+
+.ticketStatusTab ul {
+    border-bottom: 1px solid #59aad7;
+    border-left: 1px solid #59aad7;
+}
+
+.ticketStatusTab li {
+    float: left;
+    padding: 10px 25px;    
+    border-top: 1px solid #59aad7;
+    border-right: 1px solid #59aad7;
+}
+
+.ticketStatusTab li:hover {
+    color: #59aad7;
+    cursor: pointer;
+}
+
+.ticketStatusTab li.current {
+    color: #fff;
+    background-color: #59aad7;
+}
