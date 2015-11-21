@@ -35,8 +35,11 @@ img:focus{
 }
 
 /*  泰国专题页 S  */
+.wrapperSpecial {
+    min-width: 1130px;
+}
 .taiguoBanner{
-    background: #006925 url("../images/webShowSpecial/taiguoBanner.jpg") no-repeat 50% 50%;
+    background: #006925 url("../images/webShowSpecial/taiguoBanner.jpg") no-repeat center center;
     height: 627px;
 }
 .taiguoModel01{
