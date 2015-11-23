@@ -38,6 +38,27 @@ img:focus{
 .wrapperSpecial {
     min-width: 1200px;
 }
+.positionA{
+    width:1130px;
+    margin:0 auto;    
+    z-index: 10;
+    position: relative;
+    height: 100%;
+}
+.positionA .leftLink,
+.positionA .rightLink{
+    display: block;
+    position: absolute;
+    bottom: -75px;
+    width: 530px;
+    height: 135px;
+}
+.positionA .leftLink{
+    left: 3%;
+}
+.positionA .rightLink{
+    right: -2%;
+}
 .taiguoBanner{
     background: #006925 url("../images/webShowSpecial/taiguoBanner.jpg") no-repeat 50% 50%;
     height: 627px;
@@ -47,11 +68,11 @@ img:focus{
 }
 .taiguoBlock01{    
     background: url("../images/webShowSpecial/taiguo01.jpg") no-repeat 50% 50%;
-    height: 1109px;
+    height: 1110px;
 }
 .taiguoBlock02{    
     background: url("../images/webShowSpecial/taiguo02.jpg") no-repeat 50% 50%;
-    height: 830px;
+    height: 829px;
 }
 .taiguoModel02{
     background-color: #99cc66;
