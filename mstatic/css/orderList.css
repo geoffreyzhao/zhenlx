@@ -774,6 +774,7 @@
     line-height:1.8rem;
     color:#484848;
     font-weight: bold;
+    position: relative;
 }
 .plane-stop em {
     position: absolute;

@@ -68,7 +68,7 @@
 .voucher-switch li.current {
 	color: #11b9b7;
 }
-.voucher-switch .voucher-instruction{
+.voucher-top-right .voucher-instruction{
 	float: right;
 	font-size: 16px;
 	color: #11b9b7;
@@ -82,15 +82,15 @@
 	display: inline-block;
 	vertical-align: middle;
 }
-.voucher-switch .tooltip{
+.voucher-top-right .tooltip{
 	left:790px !important;
 }
-.voucher-switch .tooltip .tooltip-inner{
+.voucher-top-right .tooltip .tooltip-inner{
 	max-width: none;
 	width:330px;
 	padding:6px 10px;
 }
-.voucher-switch .tooltip .tooltip-arrow{
+.voucher-top-right .tooltip .tooltip-arrow{
 	left:72% !important;
 }
 .voucherListContainer {
@@ -211,16 +211,25 @@
 
 .voucherItem .top {
 	font-size: 15px;
-	padding: 9px 18px 9px 22px;
+	padding: 9px 5px 9px 22px;
 }
 
 .voucherItem .top .title {
-	width: 100%;
+	width: 320px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: inline-block;
 	line-height: 20px;
+}
+
+.voucherItem .top .star-icon {
+	background: url(../../images/client/voucher-star-icon.png) no-repeat;
+	width: 15px;
+	height: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -12px;
 }
 
 .voucherItem .middle {
@@ -253,6 +262,10 @@
 
 .voucherItem .bottom a:last-child {
 	padding-left: 10px;
+}
+
+.voucherItem .bottom a.refund-link {
+	float: left;
 }
 
 .voucherItem .price {
@@ -338,6 +351,22 @@
 	background-color: #ccc;
 }
 
+.voucherList.expired .voucherItem.primary.voucher-bg-0 {
+	background-color: #1ddd89;
+}
+
+.voucherList.expired .voucherItem.primary.voucher-bg-1 {
+	background-color: #2dd3e7;
+}
+
+.voucherList.expired .voucherItem.primary.voucher-bg-2 {
+	background-color: #f683ac;
+}
+
+.voucherList.expired .voucherItem.primary.voucher-bg-3 {
+	background-color: #f5b75e;
+}
+
 .voucherList.expired .voucherItem .rightBorder {
 	display: inline-block;
 	position: absolute;
@@ -374,6 +403,16 @@
 .voucherList.expired .bottom a:hover {
 	cursor: default;
 	text-decoration: none;
+}
+
+.voucherList.expired .refund .flag {
+	position: absolute;
+	right: -2px;
+	top: -1px;
+	background: url(../../images/client/voucher-refund.png) no-repeat 0 0;
+	width: 168px;
+	height: 140px;
+	opacity: 1!important;
 }
 
 .voucherItem.small {
@@ -567,3 +606,48 @@
 	margin-top:20px;
 }
 /*  账户余额  end  */
+
+.voucher-top-right {
+	margin-top: -44px;
+	float: right;
+}
+
+.voucher-top-right a {
+	color: #11b9b7;
+	display: inline-block;
+	float: right;
+	margin-right: 35px;
+}
+
+.voucher-top-right a:hover {
+	color: #11b9b7;
+	text-decoration: underline;
+}
+
+.modal-body .input-wrapper {
+	text-align: center;
+	padding: 20px 0;
+	font-size: 16px;
+}
+
+.exchange-voucher-footer .commonBtn {
+	width: 140px;
+}
+
+.exchange-voucher-footer .commonBtn.grayBtn {
+	margin-right: 30px;
+}
+
+.voucher-refund-footer .commonBtn {
+	width: 230px;
+}
+
+.voucher-refund-footer .commonBtn.grayBtn {
+	margin-right: 30px;
+}
+
+.modal-tip-wrap {
+	font-size: 16px;
+	text-align: center;
+	margin: 20px;
+}
