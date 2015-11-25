@@ -101,14 +101,14 @@
 	font-size: 0.8rem;
 	color: #3fc0ae;
 }
-.mloginTab .mregisterBtn {
+.mloginTab .mloginBtn {
 	border-top: 1px solid #3fc0ae;
 	border-bottom: 1px solid #3fc0ae;
 	border-left: 1px solid #3fc0ae;
 	border-top-left-radius: 0.25rem;
 	border-bottom-left-radius: 0.25rem;
 }
-.mloginTab .mloginBtn {
+.mloginTab .mregisterBtn {
 	border-top: 1px solid #3fc0ae;
 	border-bottom: 1px solid #3fc0ae;
 	border-right: 1px solid #3fc0ae;
