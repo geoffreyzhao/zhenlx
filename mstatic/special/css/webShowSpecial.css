@@ -49,7 +49,7 @@ img:focus{
 .positionA .rightLink{
     display: block;
     position: absolute;
-    bottom: -75px;
+    bottom: 8px;
     width: 530px;
     height: 135px;
 }
@@ -57,65 +57,65 @@ img:focus{
     left: 3%;
 }
 .positionA .rightLink{
-    right: -2%;
+    right: 0;
 }
 .taiguoBanner{
-    background: #006925 url("../images/webShowSpecial/taiguoBanner.jpg") no-repeat 50% 50%;
-    height: 627px;
+    background: #116c38 url("../images/webShowSpecial/taiguoBanner.jpg") no-repeat 50% 50%;
+    height: 710px;
 }
 .taiguoModel01{
-    background-color: #ecd65b;
+    background-color: #116c38;
 }
 .taiguoBlock01{    
     background: url("../images/webShowSpecial/taiguo01.jpg") no-repeat 50% 50%;
-    height: 1110px;
+    height: 1112px;
 }
 .taiguoBlock02{    
     background: url("../images/webShowSpecial/taiguo02.jpg") no-repeat 50% 50%;
-    height: 829px;
+    height: 835px;
 }
 .taiguoModel02{
-    background-color: #99cc66;
+    background-color: #116c38;
 }
 .taiguoBlock03{    
     background: url("../images/webShowSpecial/taiguo03.jpg") no-repeat 50% 50%;
-    height: 1012px;
+    height: 965px;
 }
 .taiguoBlock04{    
     background: url("../images/webShowSpecial/taiguo04.jpg") no-repeat 50% 50%;
-    height: 785px;
+    height: 790px;
 }
 .taiguoBlock05{    
-    background: #52b4e5 url("../images/webShowSpecial/taiguo05.jpg") no-repeat 50% 50%;
-    height: 1404px;
+    background: #116c38 url("../images/webShowSpecial/taiguo05.jpg") no-repeat 50% 50%;
+    height: 1382px;
 }
 .taiguoModel03{
-    background-color: #d1eb56;
+    background-color: #116c38;
 }
 .taiguoBlock06{    
     background: url("../images/webShowSpecial/taiguo06.jpg") no-repeat 50% 50%;
-    height: 1063px;
+    height: 1050px;
 }
 .taiguoBlock07{    
     background: url("../images/webShowSpecial/taiguo07.jpg") no-repeat 50% 50%;
-    height: 651px;
+    height: 700px;
 }
 .taiguoModel04{
-    background-color: #f16a5f;
+    background-color: #116c38;
 }
 .taiguoBlock08{    
     background: url("../images/webShowSpecial/taiguo08.jpg") no-repeat 50% 50%;
-    height: 869px;
+    height: 822px;
 }
 .taiguoBlock09{    
     background: url("../images/webShowSpecial/taiguo09.jpg") no-repeat 50% 50%;
-    height: 840px;
+    height: 826px;
 }
 .marginBottom20px{
     margin-bottom: 20px;
 }
 .taiguoBottomImg{
-    background-color: #343351;
+    background-color: #106535;
     padding: 20px 0;
     text-align: center;
 }
