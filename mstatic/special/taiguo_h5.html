@@ -39,8 +39,8 @@
         <div class="commonTaiGuoStyle taiguoM01"></div>
         <div class="commonTaiGuoStyle taiguoM02"></div>
         <div class="twoLinkImg">
-            <a href="http://www.zhenlx.com/product/front/detail/Z10025" target="_blank" class="taiguoM03"></a>
-            <a href="http://www.zhenlx.com/product/front/detail/Z10023" target="_blank" class="taiguoM04"></a>
+            <a href="http://m.zhenlx.com/product/weixin/detail/Z10025" target="_blank" class="taiguoM03"></a>
+            <a href="http://m.zhenlx.com/product/weixin/detail/Z10023" target="_blank" class="taiguoM04"></a>
         </div>
         <div class="commonTaiGuoStyle taiguoM05"></div>
         <div class="commonTaiGuoStyle taiguoM06"></div>
@@ -59,8 +59,11 @@
     </div>
 
 	<script type="text/javascript">
-	
-		$(function(){
+        if (location.href.indexOf('?') != -1) {    //  从朋友圈点开的链接默认会加参数 “？”是分隔符
+            window.location.href="http://static.zhenlx.com/mstatic/special/taiguo_h5.html";           
+        }
+
+        $(function(){
 
 			var link='http://static.zhenlx.com/mstatic/special/taiguo_h5.html';
 			var imgUrl='http://static.zhenlx.com/mstatic/special/images/taiguo_share.jpg';
