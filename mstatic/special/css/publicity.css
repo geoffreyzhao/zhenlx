@@ -2256,3 +2256,109 @@ from{transform:rotateZ(-4deg);}
     color: #e04313;
     margin: 0.25rem 0;
 }
+
+
+/*  泰国专题页 S  */
+.taiguoM01{
+    height: 9.825rem;
+    background: url("../images/mShowSpecial/taiguoM01.jpg") no-repeat 50% 50%;
+}
+.taiguoM02{
+    height: 6.65rem;
+    background: url("../images/mShowSpecial/taiguoM02.jpg") no-repeat 50% 50%;
+}
+.taiguoM03,
+ .taiguoM04{
+     display: block;
+     width: 17.75rem;
+     height: 4.45rem;
+ }
+.taiguoM03{
+    margin: 0 0.5rem 0.25rem;
+    background: url("../images/mShowSpecial/taiguoM03.jpg") no-repeat 50% 50%;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size:cover;
+}
+.taiguoM04{
+    margin: 0 0.5rem;
+    background: url("../images/mShowSpecial/taiguoM04.jpg") no-repeat 50% 50%;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size:cover;
+}
+
+.taiguoM05{
+    height: 7.85rem;
+    background: url("../images/mShowSpecial/taiguoM05.jpg") no-repeat 50% 50%;
+}
+.taiguoM06{
+    height: 21.125rem;
+    background: url("../images/mShowSpecial/taiguoM06.jpg") no-repeat 50%;
+}
+.taiguoM07{
+    height: 24.65rem;
+    background: url("../images/mShowSpecial/taiguoM07.jpg") no-repeat 50% 50%;
+}
+.taiguoM08{
+    height: 26.425rem;
+    background: url("../images/mShowSpecial/taiguoM08.jpg") no-repeat 50% 50%;
+}
+.taiguoM09{
+    height: 25.625rem;
+    background: url("../images/mShowSpecial/taiguoM09.jpg") no-repeat 50% 50%;
+}
+.taiguoM10{
+    height: 20.05rem;
+    background: url("../images/mShowSpecial/taiguoM10.jpg") no-repeat 50% 50%;
+}
+.taiguoM11{
+    height: 24.625rem;
+    background: url("../images/mShowSpecial/taiguoM11.jpg") no-repeat 50% 50%;
+}
+.taiguoM12{
+    height: 22rem;
+    background: url("../images/mShowSpecial/taiguoM12.jpg") no-repeat 50% 50%;
+}
+.taiguoM13{
+    height: 10.925rem;
+    background: url("../images/mShowSpecial/taiguoM13.jpg") no-repeat 50% 50%;
+}
+.taiguoM14{
+    height: 18.6rem;
+    background: url("../images/mShowSpecial/taiguoM14.jpg") no-repeat 50% 50%;
+}
+.taiguoM15{
+    height: 19.35rem;
+    background: url("../images/mShowSpecial/taiguoM15.jpg") no-repeat 50% 50%;
+}
+.taiguoM16{
+    height: 21.575rem;
+    background: url("../images/mShowSpecial/taiguoM16.jpg") no-repeat 50% 50%;
+}
+.taiguoM17{
+    height: 20.575rem;
+    background: url("../images/mShowSpecial/taiguoM17.jpg") no-repeat 50% 50%;
+}
+.taiguoM18{
+    height: 11.45rem;
+    background: url("../images/mShowSpecial/taiguoM18.jpg") no-repeat 50% 50%;
+}
+.commonTaiGuoStyle{
+    width: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size:cover;
+}
+.twoLinkImg{
+    background-color: #116c38;
+    text-align: center;
+}
+
+/*  泰国专题页 E  */
