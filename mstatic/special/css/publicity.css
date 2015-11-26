@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+body{ font-family: "Arial", "Helvetic", "sans-serif","microsoft yahei"}
 head,html,body,img,span,div,ul,li,audio,source{
     margin:0;
     padding:0;
@@ -2260,96 +2261,122 @@ from{transform:rotateZ(-4deg);}
 
 /*  泰国专题页 S  */
 .taiguoM01{
+    width: 100%;
     height: 9.825rem;
     background: url("../images/mShowSpecial/taiguoM01.jpg") no-repeat 50% 50%;
 }
 .taiguoM02{
+    width: 100%;
     height: 6.65rem;
     background: url("../images/mShowSpecial/taiguoM02.jpg") no-repeat 50% 50%;
 }
 .taiguoM03,
- .taiguoM04{
+.taiguoM04{
      display: block;
-     width: 17.75rem;
-     height: 4.45rem;
+     height: 4.05rem;
+     border: 3px solid #119d48;
  }
 .taiguoM03{
     margin: 0 0.5rem 0.25rem;
     background: url("../images/mShowSpecial/taiguoM03.jpg") no-repeat 50% 50%;
-    background-size:cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size:cover;
 }
 .taiguoM04{
     margin: 0 0.5rem;
     background: url("../images/mShowSpecial/taiguoM04.jpg") no-repeat 50% 50%;
-    background-size:cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size:cover;
 }
-
 .taiguoM05{
     height: 7.85rem;
     background: url("../images/mShowSpecial/taiguoM05.jpg") no-repeat 50% 50%;
 }
 .taiguoM06{
-    height: 21.125rem;
-    background: url("../images/mShowSpecial/taiguoM06.jpg") no-repeat 50%;
+    height: 10.1rem;
+    background: url("../images/mShowSpecial/taiguoM06.jpg") no-repeat 50% 50%;
 }
 .taiguoM07{
-    height: 24.65rem;
+    height: 2.525rem;
     background: url("../images/mShowSpecial/taiguoM07.jpg") no-repeat 50% 50%;
 }
 .taiguoM08{
-    height: 26.425rem;
+    height: 10.1rem;
     background: url("../images/mShowSpecial/taiguoM08.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
 }
 .taiguoM09{
-    height: 25.625rem;
+    height: 9.95rem;
     background: url("../images/mShowSpecial/taiguoM09.jpg") no-repeat 50% 50%;
 }
 .taiguoM10{
-    height: 20.05rem;
+    height: 10.1rem;
     background: url("../images/mShowSpecial/taiguoM10.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
 }
 .taiguoM11{
-    height: 24.625rem;
+    height: 2.525rem;
     background: url("../images/mShowSpecial/taiguoM11.jpg") no-repeat 50% 50%;
 }
 .taiguoM12{
-    height: 22rem;
+    height: 10.1rem;
     background: url("../images/mShowSpecial/taiguoM12.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
 }
 .taiguoM13{
-    height: 10.925rem;
+    height: 9.35rem;
     background: url("../images/mShowSpecial/taiguoM13.jpg") no-repeat 50% 50%;
 }
 .taiguoM14{
-    height: 18.6rem;
+    height: 10.1rem;
     background: url("../images/mShowSpecial/taiguoM14.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
 }
 .taiguoM15{
-    height: 19.35rem;
+    height: 10.1rem;
     background: url("../images/mShowSpecial/taiguoM15.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
 }
 .taiguoM16{
-    height: 21.575rem;
+    height: 11.35rem;
     background: url("../images/mShowSpecial/taiguoM16.jpg") no-repeat 50% 50%;
 }
 .taiguoM17{
-    height: 20.575rem;
+    height: 10.1rem;
     background: url("../images/mShowSpecial/taiguoM17.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
 }
 .taiguoM18{
-    height: 11.45rem;
+    height: 10.1rem;
     background: url("../images/mShowSpecial/taiguoM18.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
+}
+.taiguoM19{
+    height: 8.375rem;
+    background: url("../images/mShowSpecial/taiguoM19.jpg") no-repeat 50% 50%;
+}
+.taiguoM20{
+    height: 10.05rem;
+    background: url("../images/mShowSpecial/taiguoM20.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
+}
+.taiguoM21{
+    height: 10.05rem;
+    background: url("../images/mShowSpecial/taiguoM21.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
+}
+.taiguoM22{
+    height: 10.05rem;
+    background: url("../images/mShowSpecial/taiguoM22.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
+}
+.taiguoM23{
+    height: 10.05rem;
+    background: url("../images/mShowSpecial/taiguoM23.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
+}
+.taiguoM24{
+    height: 4.075rem;
+    background: url("../images/mShowSpecial/taiguoM24.jpg") no-repeat 50% 50%;
+    margin-top: 0.65rem;
 }
 .commonTaiGuoStyle{
-    width: 100%;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -2359,6 +2386,49 @@ from{transform:rotateZ(-4deg);}
 .twoLinkImg{
     background-color: #116c38;
     text-align: center;
+}
+.taiguoBg{
+    background-color: #cfe2d7;
+}
+.imgFontsContent{
+    margin: 0 1.375rem;
+    padding-bottom: 0.75rem;
+}
+.taiguoFonts{
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+    margin: 0.75rem 0 0;
+    color: #444444;
+}
+.taiguoFonts p{
+    margin: 0;
+}
+.taiguoFonts .titleFonts{
+    font-size: 0.65rem;
+    font-weight: bold;
+    margin: 0.25rem 0;
+}
+.footer{
+    font-size: 0.6rem;
+    padding: 0.5rem 0;
+    color: #8efff5;
+    background-color: #1dafae;
+    text-align: center;
+    line-height: 1rem;
+}
+.returnTop{
+    width:2.8rem;
+    height:2.8rem;
+    display:inline-block;
+    background:url("../images/mShowSpecial/returnTop.png") center center no-repeat;
+    background-size: cover;
+    position: fixed;
+    right: 2%;
+    bottom: 4.7rem;
+    z-index: 10;
+}
+.returnTop{
+    display:none;
 }
 
 /*  泰国专题页 E  */
