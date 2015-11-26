@@ -119,16 +119,16 @@
 
 		setBodyMinHeight();
 
-		$(".mregisterBtn").click(function(){
-			$(this).addClass("current").siblings("span").removeClass("current");
-			$('.registerFrame').show();
-			$('.loginFrame').hide();
-		});
-
 		$(".mloginBtn").click(function(){
 			$(this).addClass("current").siblings("span").removeClass("current");
 			$('.registerFrame').hide();
 			$('.loginFrame').show();
+		});
+
+		$(".mregisterBtn").click(function(){
+			$(this).addClass("current").siblings("span").removeClass("current");
+			$('.loginFrame').hide();
+			$('.registerFrame').show();
 		});
 
 		window.resize = function() {
