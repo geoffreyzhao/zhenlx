@@ -2432,3 +2432,90 @@ from{transform:rotateZ(-4deg);}
 }
 
 /*  泰国专题页 E  */
+
+/*  跨年之旅 H5页面 S */
+.page_slide1 {
+    background: url(../images/knzl_01.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.countDownBlock {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    text-align: center;
+}
+.countDownBlock span {
+    background: #dc3b2f;
+    color: #fff;
+    border-radius: 0.25rem;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4.875rem;
+    padding:0 0.4rem;
+    display: inline-block;
+}
+.countDownBlock span:last-child {
+    margin-right: 0;
+}
+.page_slide2 {
+    background: url(../images/knzl_02.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.page_slide3 {
+    background: url(../images/knzl_03.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.page_slide4 {
+    background: url(../images/knzl_04.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.page_slide5 {
+    background: url(../images/knzl_05.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.page_slide6 {
+    background: url(../images/knzl_06.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.page_slide7 {
+    background: url(../images/knzl_07.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.pageLinkBlock {
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    top: 34%;
+    text-align: center;
+}
+.pageLinkBlock a {
+    background-color: #f3324e;
+    opacity: 0.83;
+    color: #fff;
+    width: 100%;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-size: 1.2rem;
+}
+.page_slide8 {
+    background: url(../images/knzl_08.jpg) no-repeat top center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.page_slide8 .qrcode {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+}
+/*  跨年之旅 H5页面  E*/

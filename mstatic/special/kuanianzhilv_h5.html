@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>真旅行-跨年之约 大海和Ta一起陪你迎接2016</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/publicity.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+	<script type="text/javascript">
+		var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 750 ? 750 : window.innerWidth,
+                h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
+                base_ratio = 750 / 1334,
+                actual_ratio = window.innerWidth / window.innerHeight;
+
+        // if (actual_ratio >= base_ratio) {  // 宽屏，按高度算
+
+        //     root.style.fontSize = (h / 667) * 20 + "px";
+
+        // } else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+        //     root.style.fontSize = (w / 375) * 20 + "px";
+        // }
+
+        root.style.fontSize = (w / 375) * 20 + "px";
+        root.style.height = window.innerHeight + "px";
+	</script>
+</head>
+<body>
+
+	<audio loop preload="auto" id="music01">
+        <source src="knzl_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <a href="javascript:;" class="p-music-btn"></a>
+
+    <div class="simple-swiper swiper-container">
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide page_slide1">
+            <div class="countDownBlock">
+                <span class="tensBox"></span>
+                <span class="unitBox"></span>
+            </div>
+        </div>
+	    <div class="swiper-slide page_slide2"></div>
+	    <div class="swiper-slide page_slide3"></div>
+	    <div class="swiper-slide page_slide4"></div>
+	    <div class="swiper-slide page_slide5"></div>
+	    <div class="swiper-slide page_slide6"></div>
+	    <div class="swiper-slide page_slide7">
+            <div class="pageLinkBlock">
+                <a href="http://m.zhenlx.com/product/weixin/detail/Z10002">名额有限 马上报名</a>
+            </div>
+        </div>
+	    <div class="swiper-slide page_slide8">
+            <img class="qrcode" src="images/page_slide8_qrcode.png" alt="">
+        </div>
+	  </div>
+	</div>
+
+	<script type="text/javascript">
+        if (location.href.indexOf('?') != -1) {    //  从朋友圈点开的链接默认会加参数 “？”是分隔符
+            window.location.href="http://static.zhenlx.com/mstatic/special/kuanianzhilv_h5.html";
+        }
+
+		$(function(){
+
+			var link='http://static.zhenlx.com/mstatic/special/kuanianzhilv_h5.html';
+			var imgUrl='http://static.zhenlx.com/mstatic/special/images/knzl.jpg';
+
+			$.ajax({
+			   type: "GET",
+			   dataType: 'jsonp',
+			   jsonp: 'callback',
+			   url: "http://m.zhenlx.com/weixinShareServlet?url="+link,
+			   success: function(data){
+			     wx.config({
+			         debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+			         appId: 'wxe9ed2ca46ee5bd4d', // 必填，公众号的唯一标识
+			         timestamp: data.timestamp, // 必填，生成签名的时间戳
+			         nonceStr: data.nonceStr, // 必填，生成签名的随机串
+			         signature: data.signature,// 必填，签名，见附录1
+			         jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+			     });			     
+			   }
+			});
+
+			wx.ready(function(){
+					wx.onMenuShareTimeline({
+					    title:'想跟你一起迎接2016，可以吗？', // 分享标题
+					    link: link, // 分享链接
+					    imgUrl: imgUrl, // 分享图标
+					    success: function () { 
+					        // 用户确认分享后执行的回调函数
+					        _paq.push(['trackEvent', 'weixinShare', 'kuanianzhilv_h5', 'timeLine']);
+					    },
+					    cancel: function () { 
+					        // 用户取消分享后执行的回调函数
+					        _paq.push(['trackEvent', 'weixinShareCancel', 'kuanianzhilv_h5', 'timeLine']);
+					    }
+					});
+
+					wx.onMenuShareAppMessage({
+					    title: '真旅行-跨年之旅', // 分享标题
+					    desc: '那些愿望都实现了吗？那些没实现的愿望还要继续坚持吗？大海和Ta一起陪你迎接2016', // 分享描述
+					    link: link, // 分享链接
+					    imgUrl: imgUrl, // 分享图标
+					    success: function () { 
+					        // 用户确认分享后执行的回调函数
+					         _paq.push(['trackEvent', 'weixinShare', 'kuanianzhilv_h5', 'appMessage']);
+					    },
+					    cancel: function () { 
+					        // 用户取消分享后执行的回调函数
+					        _paq.push(['trackEvent', 'weixinShareCancel', 'kuanianzhilv_h5', 'appMessage']);
+					    }
+					});
+				});
+
+		var audio = document.getElementById("music01");
+
+		window.onload = function(){
+
+			var mySwiper = new Swiper('.swiper-container', {
+				direction : 'vertical',
+	            mousewheelControl : true
+			});
+			
+			audio.play();
+		};
+
+		$(".p-music-btn").click(function(e){
+			e.preventDefault();
+			$(this).toggleClass("pause");
+
+			if (audio.paused) {
+				audio.play();
+			} else {
+				audio.pause();
+			}
+		});
+	});
+	</script>
+
+	<script type="text/javascript">
+        var _paq = _paq || [];
+        (function(){ var u=(("https:" == document.location.protocol) ? "https://" : "http://");
+            _paq.push(['setSiteId', 4]);
+            _paq.push(['setTrackerUrl', u+'pangu.tdxinfo.com/tracker.do']);
+            _paq.push(['setCookieDomain', '*.zhenlx.com']);
+            _paq.push(['setDomains', '*.zhenlx.com']);
+            var account = '';
+            if(account)_paq.push(['setUserId', account]);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript';
+            g.defer=true;
+            g.async=true;
+            g.src=u+'scpg.tdxinfo.com/js/pangumini.js?v=1.0.6';
+            s.parentNode.insertBefore(g,s); })();
+    </script>
+    <script>
+        $(function(){
+            show_time();
+        });
+
+        function show_time(){
+            var time_start = new Date().getTime();
+            var time_end =  new Date("2016/01/01 00:00:00").getTime();
+
+            var time_distance = time_end - time_start;
+
+            var int_day = parseInt(time_distance/86400000);
+
+            var arr = ((int_day + 1) + "").split('');
+
+            $(".tensBox").html(arr[0]);
+            $(".unitBox").html(arr[1]);
+
+        }
+    </script>
+</body>
+</html>
