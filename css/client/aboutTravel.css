@@ -570,6 +570,32 @@ input[type="text"], input[type="password"]{
     line-height: 24px;
     border-bottom: 1px dashed #bbdde1;
 }
+.travel-question{
+    overflow:hidden;
+    margin-top:20px;
+    padding-left:46px;
+    margin-bottom:20px;
+}
+.travel-question li{
+    float:left;
+    cursor:pointer;
+    margin-right:1px;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    padding:3px 12px;
+    font-size:16px;
+    color:#666666;
+}
+.travel-question li:hover{
+    color:#11b9b7;
+    /* background-color:#11b9b7;
+    color:#fff; */
+}
+.travel-question li.current{
+    background-color:#11b9b7;
+    color:#fff;
+}
 /**底部导航栏**/
 .bottomMenu{
     width: 1130px;
