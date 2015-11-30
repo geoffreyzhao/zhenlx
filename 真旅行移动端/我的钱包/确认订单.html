@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/myWallet.css">
+	<link rel="stylesheet" type="text/css" href="../../mstatic/css/myCoupon.css">
+
+	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+	<!-- <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script> -->
+	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll-probe.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+	<title>代金券确认订单</title>
+
+	<script type="text/javascript">
+		// 设置页面根字大小
+		var root = document.getElementsByTagName("html")[0],
+			w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+		root.style.fontSize = (w / 320) * 20 + "px";
+		root.style.minHeight = window.innerHeight + "px";
+	</script>
+</head>
+<body>
+	<div data-role="page">
+		<div class="headerBar">
+			<div class="header">
+				<a href="javascript:;" class="back">
+					<i class="back-arrow"></i>
+					<em class="back-border"></em>
+				</a>
+				<span class="title">确认订单</span>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="couponOrderCon">
+                <div class="orderView" style="height: 7.4rem;">
+
+                </div>
+                <div class="totalPriceBlock clearfix">
+                    <div class="priceDiv">总计<span><i>¥</i>300</span></div>
+                    <div class="amountDiv">数量 <span>×3</span></div>
+                </div>
+			</div>
+            <div class="paymentCon">
+                <h3 class="paymentTitle">支付方式</h3>
+                <div class="prg_payType">
+                    <div class="prg-payOp clearfix">
+                        <img class="prg-payImg" src="../../mstatic/images/wechat.png"><span class="prg-payName">微信支付</span>
+                        <label>
+                            <input type="radio" name="type" value="wechat" data-role="none" checked>
+                        </label>
+                    </div>
+                    <div class="prg-payOp choice-bed clearfix">
+                        <img class="prg-payImg" src="../../mstatic/images/mypayNew.png"><span class="prg-payName">支付宝支付</span>
+                        <label>
+                            <input type="radio" name="type" value="mypay" data-role="none" >
+                        </label>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <div class="payment-foot">
+            <a href="javascript:;" data-rel="popup" data-transition="pop" data-position-to="window">立即支付</a>
+        </div>
+	</div>
+
+<script type="text/javascript">
+	$(function(){
+		FastClick.attach(document.body);
+	});
+</script>
+</body>
+</html>
