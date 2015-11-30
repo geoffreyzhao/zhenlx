@@ -171,17 +171,33 @@
 
         function show_time(){
             var time_start = new Date().getTime();
-            var time_end =  new Date("2016/01/01 00:00:00").getTime();
+            var time_end = new Date("2016/01/01 00:00:00").getTime();
 
             var time_distance = time_end - time_start;
 
-            var int_day = parseInt(time_distance/86400000);
+            if (time_distance <= 0) {   //  过期去掉第一个slider
 
-            var arr = ((int_day + 1) + "").split('');
+            	$(".page_slide1").hide();
+            } else {
 
-            $(".tensBox").html(arr[0]);
-            $(".unitBox").html(arr[1]);
+	            var int_day = parseInt(time_distance/86400000);
+	            int_day = int_day + 1;
 
+	            if (int_day < 10) {		//  10天以内的，显示一位数
+
+		            if (int_day < 1) {   	//  过期去掉第一个slider
+		            	$(".page_slide1").hide();
+		            } else {
+		            	$(".tensBox").remove();
+			            $(".unitBox").html(int_day);
+		            }
+	            } else {
+
+		            var arr = (int_day + "").split('');
+		            $(".tensBox").html(arr[0]);
+		            $(".unitBox").html(arr[1]);
+	            }
+            }
         }
     </script>
 </body>
