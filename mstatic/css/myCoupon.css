@@ -551,3 +551,230 @@
 }
 
 /* 支付成功 E */
+
+/* 活动购买页 S */
+.warn-info{
+    height:1.75rem;
+    margin-bottom: 0.5rem;
+    background-color:#c2ecf3;
+    padding:0.5rem;
+    text-align: center;
+}
+.warn-info a{
+    font-size: 0.6rem;
+    line-height:0.75rem;
+    color:#3fc0ae !important;
+    vertical-align: top;
+}
+.btn-close{
+    width:0.75rem;
+    height:0.75rem;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    background:url("../../mstatic/images/btn-close.png") no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.couponBuyCon {
+    padding:0.5rem;
+    background-color:#fff;
+    margin-top: 0.5rem;
+}
+.productsDesc {
+    color: #666;
+    background: #fff;
+    padding:0.75rem 0.75rem;
+}
+.productsDesc h3 {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.productsDesc p {
+    font-size: 0.6rem;
+    line-height: 1rem;
+}
+.productsPicBlock {
+    text-align: center;
+    margin: 0 auto 1rem auto;
+}
+.productsPic {
+    width:13.675rem;
+    height:7.55rem;
+}
+.operProductsBlock {
+    padding:0;
+    margin:0.1rem 0;
+    color:#666;
+    font-size: 0.75rem;
+}
+.operProductsBlock .counter {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    width: 10rem;
+    text-align: left;
+}
+.operProductsBlock .counter-item{
+    width:1.45rem;
+    height:1.45rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+.operProductsBlock .counter-minus{
+    background:url(../../mstatic/images/minusIcon.png) no-repeat center center;
+    background-size:100%;
+}
+.operProductsBlock .counter-add{
+    background:url(../../mstatic/images/addIcon.png) no-repeat center center;
+    background-size:100%;
+}
+.counter-disable, .counter-disable:active{
+    background-color:none;
+    color:#fff;
+    font-size: 1.5rem;
+}
+.operProductsBlock .counter-num{
+    width:3rem;
+    border-radius:0.2rem;
+    border:2px solid #3fc0ae;
+    background-color:#fff;
+    color:#333;
+    font-size: 0.75rem;
+    margin:0 0.5rem;
+    line-height: 1.45rem;
+}
+.orange_buy {
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+    background-color:#efc524;
+    font-size: 0.75rem;
+    color:#fff !important;
+    padding:0.45rem 0.4rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    min-width: 5rem;
+    text-align: center;
+}
+.orange_buy:active{
+    background-color:#dc8e06;
+}
+.submit-dlg{
+    width:12.5rem;
+    padding:0.5rem;
+    line-height:1.2rem;
+    background-color: #fff;
+}
+.submit-dlg .input-box{
+    position: relative;
+}
+.submit-dlg .ui-grid-a{
+    padding:0.4rem 0;
+    border-bottom: 1px #ccc solid;
+}
+.submit-dlg .ui-grid-a:last-child{
+    border-bottom: 0;
+}
+.submit-dlg .ui-grid-a .ui-block-a{
+    width:15%;
+    text-align: center;
+}
+.submit-dlg .ui-grid-a .ui-block-b{
+    width:85%;
+}
+.verify-block{
+    padding-top:0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left:0.5rem;
+    border-bottom: 1px #ccc solid;
+}
+.input-txt{
+    width:4.5rem;
+    margin-right:0.2rem;
+    padding-top:0.2rem;
+    font-size: 0.7rem;
+    color:#333;
+    vertical-align: middle;
+}
+.btn-vld{
+    display: inline-block;
+    background-color:#fff;
+    float: right;
+    color:#11b9b7 !important;
+    font-weight: normal !important;
+    padding:0.2rem 0.3rem;
+    font-size: 0.7rem;
+    border:1px #11b9b7 solid;
+    -webkit-border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+    text-decoration: none;
+}
+.btn-vld:active{
+    background-color:#f7f7f7;
+}
+.person-icon {
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.975rem;
+    background: url(../images/telicon.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.lock-icon {
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.95rem;
+    background: url(../images/passwordicon.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.dlg-foot{
+    margin-top: 0.8rem;
+    text-align: center;
+}
+.submit-dlg-confirm{
+    width:8rem;
+    height:1.8rem;
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.8rem;
+    color:#fff !important;
+    display: inline-block;
+    font-weight: normal !important;
+    text-decoration: none;
+    -webkit-border-radius: 0.0125rem;
+    -moz-border-radius: 0.0125rem;
+    border-radius: 0.125rem;
+    background-color:#ffa200;
+}
+.submit-dlg-confirm:active{
+    background-color:#dc8e06;
+}
+.traveler-val, .submit-dlg-val{
+    width: 100%;
+    height:1.3rem;
+    line-height:1.3rem;
+    font-size: 0.7rem;
+    color:#333;
+    display: inline-block;
+    overflow: hidden;
+}
+.safe-icon {
+    display: inline-block;
+    width: 0.875rem;
+    height: 1.1rem;
+    background: url(../images/checkicon.png) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    vertical-align: middle;
+    margin: 0.3rem 0.4rem 0 0;
+}
+
+/* 活动购买页 E */
