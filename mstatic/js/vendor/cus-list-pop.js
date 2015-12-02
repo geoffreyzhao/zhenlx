@@ -138,7 +138,7 @@
 			}
 
 
-			$(".pop-ul-list li").on("click", function(){
+			$(".pop-ul-list li").on("tap", function(){
 				$(this).closest("#scroller").find("li").removeClass("current");
 				$(this).addClass("current");
 			});
