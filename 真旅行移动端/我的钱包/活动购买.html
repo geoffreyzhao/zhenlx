@@ -11,23 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/myWallet.css">
 	<link rel="stylesheet" type="text/css" href="../../mstatic/css/myCoupon.css">
-
-	<!--<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+	<script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/iscroll/iscroll-probe.js"></script>
 	<script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
     <script type="text/javascript" src="../../mstatic/js/common.js"></script>
--->
-
-
-    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
-    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
-    <script type="text/javascript" src="../../mstatic/js/vendor/swiper.jquery.min.js"></script>
-    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
-    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
-    <script type="text/javascript" src="../../mstatic/js/vendor/jquery.lazyload.js"></script>
-    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
 	<title>活动购买页</title>
 	<script type="text/javascript">
 		// 设置页面根字大小
@@ -39,7 +28,7 @@
 	</script>
 </head>
 <body>
-	<div data-role="page">
+	<div class="viewport" data-role="page">
         <div class="headerBar">
             <div class="header">
                 <a href="javascript:;" class="back">
@@ -52,6 +41,13 @@
 						<a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
                             <img class="acut-img" src="../../mstatic/images/acut-img.png">
                         </a>
+                        <div class="menu-pop-container">
+                            <i class="arrow-up"></i>
+                            <ul>
+                                <li><a data-role="none" href="javascript:;">用户中心</a></li>
+                                <li><a data-role="none" href="javascript:;">退出账号</a></li>
+                            </ul>
+                        </div>
 					</span>
 	                <span class="menu-btn">
 	                	<span class="menu-img"></span>
@@ -141,11 +137,70 @@
 <script type="text/javascript">
 	$(function(){
 		FastClick.attach(document.body);
-
+        //用户操作
+        $(".menu-pop").click(function(){
+            var btn = $(this).next().find(".menu-list-container");
+            if(btn.is(":visible")){
+                btn.slideUp("fast");
+            }
+            $(this).find(".menu-pop-container").toggle();
+            if($(".menu-pop-container").is(":visible")){
+                $(document).click(function(){
+                    $(".menu-pop-container").fadeOut("fast");
+                });
+            }
+            event.stopPropagation();
+        });
+        //产品列表
+        $(".menu-btn").click(function(event){
+            var pop = $(this).prev().find(".menu-pop-container");
+            if(pop.is(":visible")){
+                pop.slideUp("fast");
+            }
+            $(this).find(".menu-list-container").toggle();
+            if($(".menu-list-container").is(":visible")){
+                $(document).click(function(){
+                    $(".menu-list-container").fadeOut("fast");
+                });
+            }
+            event.stopPropagation();
+        });
+        //文本框数量加减
+        var least = 0;
+        var most = 0;
+        $(".counter > .counter-minus").click(function(){
+            var minus_num = parseInt($(this).next().text());
+            minus_num--;
+            if(minus_num <= least){
+                $(this).addClass("counter-disable");
+                $(this).next().text(least);
+                return false;
+            }else{
+                if($(this).hasClass("counter-disable")){
+                    $(this).removeClass("counter-disable");
+                }
+                var obj = $(this).parent().find(".counter-add");
+                if(obj.hasClass("counter-disable")){
+                    obj.removeClass("counter-disable");
+                }
+            }
+            $(this).next().text(minus_num);
+        });
+        $(".counter > .counter-add").click(function(){
+            var add_num = parseInt($(this).prev().text());
+            add_num++;
+            if(add_num > least){
+                var obj = $(this).parent().find(".counter-minus");
+                if(obj.hasClass("counter-disable")){
+                    obj.removeClass("counter-disable");
+                }
+            }
+            $(this).prev().text(add_num);
+        });
+        //购买
         $(".orange_buy").click(function(){
             $("#submit-dlg").popup("open");
         });
-
 	});
 </script>
 </body>
