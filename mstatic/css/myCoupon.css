@@ -599,9 +599,14 @@
     text-align: center;
     margin: 0 auto 1rem auto;
 }
-.productsPic {
+.voucherImg-300-500 {
+    background: url("../../mstatic/images/Invitation_ticket.png") no-repeat;
+    background-size: 100%;
+    -webkit-background-size: 100%;
     width:13.675rem;
     height:7.55rem;
+    display: inline-block;
+    vertical-align: middle;
 }
 .operProductsBlock {
     padding:0;
