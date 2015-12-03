@@ -420,6 +420,14 @@
     color: #3895cf;
     text-decoration: underline;
 }
+.commonTab .blueFontsLink.disabled {
+    color: #808080;
+    cursor: default;
+}
+.commonTab .blueFontsLink.disabled:hover {
+    color: #808080;
+    text-decoration: none;
+}
 
 /*   网站活动   end  
 
