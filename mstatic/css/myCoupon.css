@@ -577,49 +577,70 @@
     background-size: 100%;
 }
 .couponBuyCon {
-    padding:0.5rem;
     background-color:#fff;
     margin-top: 0.5rem;
 }
-.productsDesc {
-    color: #666;
+.forWardSaleImgBlock {
     background: #fff;
-    padding:0.75rem 0.75rem;
+}
+.forWardSaleImgBlock img {
+    width:16rem;
+    height: 10.675rem;
+}
+.productsDesc {
+    color: #333;
+    background: #fff;
+    padding-bottom: 0.5rem;
 }
 .productsDesc h3 {
     font-size: 0.75rem;
-    line-height: 1.2rem;
+    padding:0.75rem 0.5rem 0.6rem 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
     margin-bottom: 0.5rem;
 }
 .productsDesc p {
     font-size: 0.6rem;
     line-height: 1rem;
+    padding:0 0.5rem;
 }
 .productsPicBlock {
     text-align: center;
     margin: 0 auto 1rem auto;
 }
-.voucherImg-300-500 {
-    background: url("../../mstatic/images/Invitation_ticket.png") no-repeat;
-    background-size: 100%;
-    -webkit-background-size: 100%;
-    width:13.675rem;
-    height:7.55rem;
+.voucherImg {
     display: inline-block;
     vertical-align: middle;
+    float: left;
+    margin-right: 0.4rem;
+    width:4.65rem;
+    height:1.65rem;
+}
+.voucherImg-1-300 {
+    background: url("../../mstatic/images/voucherImg-1-300.png") no-repeat;
+    background-size: 100%;
+    -webkit-background-size: 100%;
+}
+.voucherImg-500-1000 {
+    background: url("../../mstatic/images/voucherImg-500-1000.png") no-repeat;
+    background-size: 100%;
+    -webkit-background-size: 100%;
 }
 .operProductsBlock {
-    padding:0;
+    border-bottom: 1px solid #f0f0f0;
+    padding:0.5rem;
     margin:0.1rem 0;
-    color:#666;
-    font-size: 0.75rem;
+    color:#333;
+    font-size: 0.7rem;
+}
+.operProductsBlock:last-child {
+    border-bottom: none;
 }
 .operProductsBlock .counter {
     display: inline-block;
     vertical-align: middle;
     float: left;
-    width: 10rem;
-    text-align: left;
+    width: 7rem;
+    text-align: center;
 }
 .operProductsBlock .counter-item{
     width:1.45rem;
@@ -648,25 +669,36 @@
     background-color:#fff;
     color:#333;
     font-size: 0.75rem;
-    margin:0 0.5rem;
+    margin:0 0.2rem;
     line-height: 1.45rem;
 }
-.orange_buy {
+.limitedOne {
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+.orange_buy, .orange_soonSale {
     display: inline-block;
     float: right;
     vertical-align: middle;
-    background-color:#efc524;
+    background-color:#f9993c;
     font-size: 0.75rem;
     color:#fff !important;
-    padding:0.45rem 0.4rem;
+    padding:0.45rem 0.2rem;
     -webkit-border-radius: 0.25rem;
     -moz-border-radius: 0.25rem;
     border-radius: 0.25rem;
-    min-width: 5rem;
+    width: 2.75rem;
     text-align: center;
 }
-.orange_buy:active{
+.orange_buy:active, .orange_soonSale:active {
     background-color:#dc8e06;
+}
+.orange_soonSale {
+    font-size: 0.6rem;
+    padding:0.45rem 0;
+}
+.orange_soonSale.disabled {
+    background-color: #fccc9e;
 }
 .submit-dlg{
     width:12.5rem;
@@ -780,6 +812,46 @@
     background-size: 100%;
     vertical-align: middle;
     margin: 0.3rem 0.4rem 0 0;
+}
+.buyerReading {
+    padding:0.75rem 0.5rem;
+    color: #666;
+    font-size: 0.6rem;
+}
+.buyerReading h4 {
+    color: #333;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding-bottom: 0.75rem;
+}
+.buyerReading div {
+    margin-bottom: 0.75rem;
+}
+.buyerReading p {
+    margin-bottom: 0.4rem;
+    line-height: 0.7rem;
+}
+.buyerReading p a {
+    color: #5ad1c0;
+}
+.buyerReading .smallDot {
+    width:0.25rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+    background-color: #5ad1c0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.3rem;
+}
+.forWardSaleBottom {
+    background-color: #1cafad;
+    color: #fff;
+    font-size: 0.5rem;
+    text-align: center;
+    padding:0.8rem 0 0.5rem 0;
+}
+.forWardSaleBottom p {
+    padding:0 0 0.5rem 0;
 }
 
 /* 活动购买页 E */
