@@ -831,17 +831,19 @@
     margin-bottom: 0.4rem;
     line-height: 0.7rem;
 }
-.buyerReading p a {
+.buyerReading p a, .buyerReading p a:hover, .buyerReading p a:visited {
     color: #5ad1c0;
 }
 .buyerReading .smallDot {
     width:0.25rem;
     height: 0.25rem;
     border-radius: 0.125rem;
+    -moz-border-radius: 0.125rem;
+    -webkit-border-radius: 0.125rem;
     background-color: #5ad1c0;
     display: inline-block;
     vertical-align: middle;
-    margin-right: 0.3rem;
+    margin:-0.1rem 0.3rem 0 0.2rem;
 }
 .forWardSaleBottom {
     background-color: #1cafad;
