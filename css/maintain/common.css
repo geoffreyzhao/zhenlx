@@ -783,7 +783,7 @@ div.datepicker table tr td span.active {
     color: #666;
     font-size: 16px;
     padding-top: 10px;
-    /*position: relative;*/
+    text-align: center;
 }
 .popupContainer .warnIcon,
 .popupContainer .passIcon{
@@ -791,11 +791,8 @@ div.datepicker table tr td span.active {
     width: 41px;
     height: 41px;
     margin-right: 10px;
-    vertical-align: bottom;
+    vertical-align: middle;
     background: url("../../images/popupIcon.png") no-repeat;
-    position: absolute;
-    left: 45px;
-    top: 18px;
 }
 .popupContainer .warnIcon {
     background-position: 0 0;
@@ -805,9 +802,9 @@ div.datepicker table tr td span.active {
 }
 .popupContainer-fonts {
     display: inline-block;
-    line-height: 30px;
-    margin-left: 92px;
     text-align: left;
+    vertical-align: middle;
+    max-width: 320px;
 }
 /* 弹窗 E */
 

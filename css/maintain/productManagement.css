@@ -760,6 +760,72 @@ input[type="text"].tagInput {
     margin-right: 0;
 }
 
+.stock-block {
+    min-height: 80px;
+}
+
+.stock-block .commonButton {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.stock-block .stock-num {
+    padding: 5px 0;
+}
+
+.stock-block .stock-num span{
+    float: left;
+}
+
+.stock-block .stock-num input {
+    line-height: 30px;
+    height: 30px;
+}
+
+.stock-block .stock-num button {
+    float: right;
+    margin-right: 10px;
+}
+
+.prod-item {
+    border-top: 1px dashed #f8864e;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+
+.prod-item p {
+    margin-bottom: 0;
+}
+
+.prod-item .prod-title {
+    line-height: 25px;
+}
+
+.prod-item .price {
+    line-height: 30px;
+}
+
+.prod-item .commonButton {
+    width: 60px;
+    min-width: 60px;
+    float: right;
+    margin-right: 10px;
+}
+
+.prodType-table th {
+    text-align: right;
+}
+
+.prodType-table th,
+.prodType-table td {
+    padding: 5px 3px;
+}
+
+.prodType-table .gray-font {
+    color: #999;
+}
+
 /*  价格日历   end  */
 
 /* 价格双日历--日历样式 start */
