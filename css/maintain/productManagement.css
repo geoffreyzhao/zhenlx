@@ -817,6 +817,10 @@ input[type="text"].tagInput {
     text-align: right;
 }
 
+.prodType-table td {
+    text-align: left;
+}
+
 .prodType-table th,
 .prodType-table td {
     padding: 5px 3px;
