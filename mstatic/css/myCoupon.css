@@ -831,8 +831,12 @@
     margin-bottom: 0.4rem;
     line-height: 0.7rem;
 }
-.buyerReading p a, .buyerReading p a:hover, .buyerReading p a:visited {
-    color: #5ad1c0;
+.buyerReading p a {
+    color: #5ad1c0!important;
+}
+.buyerReading p a:hover,
+.buyerReading p a:visited {
+    color: #5ad1c0!important;
 }
 .buyerReading .smallDot {
     width:0.25rem;
