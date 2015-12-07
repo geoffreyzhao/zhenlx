@@ -862,5 +862,26 @@
 .forWardSaleBottom p {
     padding:0 0 0.5rem 0;
 }
+.check-error-tip {
+    color: red;
+    font-size: 0.6rem;
+    text-align: center;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease;
+       -moz-transition: opacity .5s ease;
+        -ms-transition: opacity .5s ease;
+         -o-transition: opacity .5s ease;
+            transition: opacity .5s ease;
+}
+.check-error-tip.show {
+    opacity: 1;
+    -webkit-transition: opacity .5s ease;
+       -moz-transition: opacity .5s ease;
+        -ms-transition: opacity .5s ease;
+         -o-transition: opacity .5s ease;
+            transition: opacity .5s ease;
+}
 
 /* 活动购买页 E */

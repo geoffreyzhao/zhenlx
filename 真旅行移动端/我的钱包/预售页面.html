@@ -86,9 +86,10 @@
 
     <!-- 购买弹窗 -->
     <div class="submit-dlg" id="submit-dlg" data-role="popup" data-transition="pop" data-position-to="window" data-theme="a" data-overlay-theme="b">
+        <div class="check-error-tip">请输入手机号码</div>
         <div class="ui-grid-a">
             <div class="ui-block-a"><i class="person-icon"></i></div>
-            <div class="ui-block-b"><input class="submit-dlg-val" type="text" placeholder="手机号" data-role="none"></div>
+            <div class="ui-block-b"><input class="submit-dlg-val" type="tel" placeholder="手机号" data-role="none"></div>
         </div>
         <div class="ui-grid-a hidden">
             <div class="ui-block-a"><i class="lock-icon"></i></div>
@@ -96,8 +97,8 @@
         </div>
         <div class="verify-block clearfix">
             <i class="safe-icon fl"></i>
-            <input class="input-txt" type="text" placeholder="验证码" data-role="none" style="width: 3rem;">
-            <a class="btn-vld" data-role="none" href="javascript:void(0);">获取短信验证码</a>
+            <input class="input-txt" type="password" placeholder="验证码" data-role="none" style="width: 3rem;">
+            <a class="btn-vld" data-role="none" href="javascript:void(0);">获取验证码</a>
         </div>
         <div class="dlg-foot">
             <a class="submit-dlg-confirm" data-role="none" href="javascript:void(0);">确 认</a>
@@ -107,6 +108,12 @@
 <script type="text/javascript">
 	$(function(){
 		FastClick.attach(document.body);
+        $(".btn-vld").click(function(){
+            $(".check-error-tip").addClass("show");
+            setTimeout(function(){
+                $(".check-error-tip").removeClass("show");
+            },2000);
+        });
         //用户操作
         $(".menu-pop").click(function(){
             var btn = $(this).next().find(".menu-list-container");
