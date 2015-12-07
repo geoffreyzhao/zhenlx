@@ -398,10 +398,13 @@
 .couponOrderCon .orderView {
     padding: 0 0.5rem;
 }
+.orderView .voucherItem {
+    height: 6rem;
+}
 .totalPriceBlock {
     border-top:1px solid #dcdcdc;
     font-size: 0.6rem;
-    margin: 0.5rem 0;
+    margin: 0 0 0.5rem 0;
     padding: 0.5rem 0.7rem;
 }
 .totalPriceBlock .priceDiv {
