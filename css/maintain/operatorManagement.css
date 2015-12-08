@@ -511,17 +511,26 @@
 
 .voucherItem .top {
     font-size: 15px;
-    padding: 9px 18px 9px 22px;
+    padding: 9px 5px 9px 22px;
 }
 
 .voucherItem .top .title {
-    width: 100%;
+    width: 320px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
     word-break: break-all;
     display: inline-block;
+}
+
+.voucherItem .top .star-icon {
+    background: url(../../images/client/voucher-star-icon.png) no-repeat;
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -12px;
 }
 
 .voucherItem .middle {
