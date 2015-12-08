@@ -74,7 +74,7 @@
             });
 
             $this.cusListPop({
-                title: "请选择证件类型",
+                title: "请选择证件类型2",
                 scrollId: $this.get(0).id,
                 data: cardData,
                 currentData: currentName,
@@ -83,6 +83,7 @@
 
                     $("#" + $this.get(0).id + "Wrapper").find("li").click(function(){
 
+                        console.log('2');
                         setTimeout(function(){
                             $("#" + $this.get(0).id + "PopContainer").popup("close");
                         }, 300);
