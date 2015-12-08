@@ -918,3 +918,33 @@
 }
 
 /* 活动购买页 E */
+.tip-foot .btn {
+    width: 4.5rem;
+    height: 1.8rem;
+    text-align: center;
+    font-size: 0.7rem;
+    line-height: 1.8rem;
+    color: #fff !important;
+    display: inline-block;
+    font-weight: normal !important;
+    text-decoration: none;
+    border-radius: 0.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.tip-foot .btn.btn-cancel {
+    background-color: #d4d4d4;
+}
+
+.tip-foot .btn.btn-confirm {
+    background-color: #11b9b7;
+}
+
+.tip-win-cnt {
+    text-align: left;
+}
+
+.tip-win-cnt p {
+    margin: 0 auto;
+    width: 85%;
+}

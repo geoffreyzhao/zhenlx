@@ -126,11 +126,31 @@
         <div class="payment-foot">
             <a href="javascript:;" data-rel="popup" data-transition="pop" data-position-to="window">立即支付</a>
         </div>
-	</div>
+
+        <!-- 提示弹窗 -->
+        <div class="ui-content" data-role="popup" id="backPageWindow" data-transition="none" data-history="false" data-position-to="window" data-theme="a" data-overlay-theme="b" data-dismissible="true">
+            <div class="dlg-cnt tip-win-cnt">
+                <p>离开当前页面您的订单将立即取消，确定离开？</p>
+            </div>
+            <div class="dlg-foot tip-foot">
+                <a class="btn btn-cancel" data-role="none" data-rel="back" href="javascript:void(0);">取消</a>
+                <a class="btn btn-confirm" data-role="none" href="javascript:void(0);">确定</a>
+            </div>
+        </div>
+    </div>
+
 
 <script type="text/javascript">
 	$(function(){
 		FastClick.attach(document.body);
+
+        $(".back").click(function(){
+            $("#backPageWindow").popup("open");
+
+            $(".btn-confirm").click(function(){
+                window.location.href = "http://www.baidu.com";
+            });
+        });
 	});
 </script>
 </body>
