@@ -129,8 +129,9 @@
 <script type="text/javascript">
 	$(function(){
         $(".viewDetailSpan").click(function(){
-            $(".detailBox").slideToggle();
-            $(".couponOrderTitle").css("border-bottom","none")
+            // $(".detailBox").slideToggle();
+            $(".detailBox").toggleClass("hide");
+            // $(".couponOrderTitle").toggleClass('hideBorder');
         });
 
 		FastClick.attach(document.body);
