@@ -933,15 +933,15 @@
 }
 
 .tip-foot .btn.btn-cancel {
-    background-color: #d4d4d4;
-}
-
-.tip-foot .btn.btn-confirm {
     background-color: #11b9b7;
 }
 
+.tip-foot .btn.btn-confirm {
+    background-color: #d4d4d4;
+}
+
 .tip-win-cnt {
-    text-align: left;
+    text-align: center;
 }
 
 .tip-win-cnt p {

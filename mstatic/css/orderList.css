@@ -775,6 +775,7 @@
     color:#484848;
     font-weight: bold;
     position: relative;
+    font-family: Arial;
 }
 .plane-stop em {
     position: absolute;
