@@ -2519,3 +2519,79 @@ from{transform:rotateZ(-4deg);}
     width: 100%;
 }
 /*  跨年之旅 H5页面  E*/
+
+/* 购买流程 大宁活动 S */
+div[data-role="page"] {
+    background-color: #fff;
+}
+div[data-role="page"].viewport {
+    min-height: 100%;
+}
+.wrapper {
+    z-index: 1;
+    width: 100%;
+}
+.innerWrapperCon {
+    padding:0.5rem 0.75rem 0 0.75rem;
+}
+.conTitle {
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: #1cafad;
+    color: #fff;
+    font-size: 0.75rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    padding:0 0 0 0.6rem;
+    margin: 0;
+}
+.flowTitle {
+    color: #1cafad;
+    position: relative;
+    padding:0 0 0 1.3rem;
+    margin-top: 1.4rem;
+}
+.flowTitle .numberIcon {
+    position: absolute;
+    top:-0.4rem;
+    left:0.2rem;
+}
+.flowTitle .numberIcon01 {
+    background: url("../images/serialNo1.png") no-repeat;
+    display: inline-block;
+    width:2.3rem;
+    height: 2.275rem;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.flowTitle .numberIcon02 {
+    background: url("../images/serialNo2.png") no-repeat;
+    display: inline-block;
+    width:2.3rem;
+    height: 2.275rem;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+.flowTitle h3, .flowTitle p {
+    font-size: 0.75rem;
+    margin:0 0 0.25rem 0;
+    position: relative;
+    z-index: 3;
+}
+.flowTitle p {
+    font-size: 0.6rem;
+}
+.zlxImgBlock {
+    text-align: center;
+    margin: 0.5rem auto;
+}
+.img_zlxPublic {
+    width:13.575rem;
+    height: 9.175rem;
+}
+.img_zlxForwardSale {
+    width:13.475rem;
+    height: 9.525rem;
+}
+/* 购买流程 大宁活动 E */
