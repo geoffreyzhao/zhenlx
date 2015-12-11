@@ -655,7 +655,7 @@ input[type="text"].tagInput {
     background-color: #fff;
     font-size: 14px;
     padding-left: 10px;
-    min-width: 320px;
+    min-width: 380px;
 }
 
 .set-price-container .sub-title {
@@ -786,6 +786,13 @@ input[type="text"].tagInput {
 .stock-block .stock-num button {
     float: right;
     margin-right: 10px;
+    margin-top: 10px;
+}
+
+.stock-block .stock-num .market-price {
+    margin-top: 10px;
+    display: inline-block;
+    clear: both;
 }
 
 .prod-item {

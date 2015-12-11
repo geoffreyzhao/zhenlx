@@ -208,8 +208,9 @@
                             <div class="sub-title">库存与套餐类型</div>
                             <div class="stock-block">
                                 <div class="stock-num clearfix">
-                                    <span>总库存数：<input type="text" style="width:50px;"></span>
-                                    <span style="line-height: 30px;margin-left:5px;">已用<em style="font-weight:bold;"> 2 </em>人</span>
+                                    <span>总库存数：<input type="text" style="width:60px;"></span>
+                                    <span style="line-height: 30px;margin-left:5px;">已用<em style="font-weight:bold;"> 2 </em>人</span><br>
+                                    <span class="market-price">市场均价：<input type="text" style="width:60px;"> 元</span>
                                     <button class="commonButton blue-45c8dcButton addPriceType">新增套餐类型</button>
                                 </div>
                                 <div class="stock-cont">
@@ -338,19 +339,19 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th>套餐名称</th>
+                                    <th>套餐名称：</th>
                                     <td colspan="3">
                                         <input type="text" name="" value="" placeholder="套餐名称" style="width: 400px;">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th style="vertical-align: top;">套餐介绍</th>
+                                    <th style="vertical-align: top;">套餐介绍：</th>
                                     <td colspan="3">
                                         <textarea placeholder="套餐介绍" style="height:80px;width:400px;"></textarea>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>成人</th>
+                                    <th>成人：</th>
                                     <td>
                                         <div class="dropdown" style="width: 100px;">
                                             <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
@@ -367,7 +368,7 @@
                                             </ul>
                                         </div>
                                     </td>
-                                    <th>儿童</th>
+                                    <th>儿童：</th>
                                     <td>
                                         <div class="dropdown" style="width: 100px;">
                                             <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
@@ -386,7 +387,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>套餐售价</th>
+                                    <th>套餐售价：</th>
                                     <td colspan="3">
                                         <input type="text" style="width:100px;" data-cv="required" data-ct="市场价" data-cp="top"/>
                                         <span class="checkboxContent">       
@@ -395,12 +396,16 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <th>人均单价：</th>
+                                    <td colspan="3">3999</td>
+                                </tr>
+                                <!-- <tr>
                                     <th>市场价</th>
                                     <td colspan="3">
                                         <input type="text" style="width:100px;" data-cv="required" data-ct="市场价" data-cp="top"/>
                                         <span class="gray-font">仅展示用</span>
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>

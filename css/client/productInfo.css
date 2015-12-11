@@ -1674,7 +1674,7 @@ ul.common-tab > li.rest {
 }
 
 .cur-price .price-text {
-    font-size: 42px;
+    font-size: 36px;
     color: #e46c14;
 }
 
@@ -1687,6 +1687,32 @@ ul.common-tab > li.rest {
     cursor: default;
     margin-left: 5px;
 }
+
+.menu-price {
+    padding-left: 34px;
+    margin-top: 15px;
+}
+
+.menu-price .menu-price-text {
+    color: #e46c14;
+    font-size: 20px;
+    padding-left: 8px;
+}
+
+.menu-price .menu-price-tooltip {
+    color: #e46c14;
+    border: 1px solid #e46c14;
+    border-radius: 3px;
+    padding: 2px 4px;
+    float: right;
+    margin-right: 10px;
+    cursor: default;
+}
+
+.menu-price .menu-price-tooltip + .tooltip .tooltip-inner {
+    max-width: 205px;
+}
+
 .price-tip-info {
 
 }
