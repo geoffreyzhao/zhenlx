@@ -55,6 +55,10 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
+.menu-price-grid .prd-price {
+    color: #363636;
+    font-size: 0.9rem;
+}
 .prd-mart{
     color:#999;
 }

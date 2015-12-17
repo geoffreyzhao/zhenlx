@@ -135,15 +135,29 @@
                 <div class="ui-block-b">上海-暹粒，[爆款2688]年轻人第一次治愈小清新之旅</div>
             </div>
             <div class="ui-grid-b prd-grid">
-                <div class="ui-block-a prd-block">真旅价：</div>
-                <div class="ui-block-b"><span class="prd-price">￥2888</span>起<br/><del class="prd-mart">市场价：￥3335</del></div>
-                <div class="ui-block-c prd-block"><a href="#inst-dialog" data-rel="popup" data-role="none"><label class="icon-qus"></label>起价说明</a></div>
+                <div class="ui-block-a prd-block">人均单价：</div>
+                <div class="ui-block-b"><span class="prd-price">￥2888</span></div>
+                <div class="ui-block-c prd-block"><a href="#inst-dialog" data-rel="popup" data-role="none"><label class="icon-qus"></label>价格说明</a></div>
             </div>
-            <!--协议书弹窗-->
+            <div class="ui-grid-b prd-grid menu-price-grid">
+                <div class="ui-block-a prd-block">套餐总价：</div>
+                <div class="ui-block-b"><span class="prd-price">￥2888</span></div>
+                <div class="ui-block-c prd-block"><a href="#inst-menu-dialog" data-rel="popup" data-role="none"><label class="icon-qus"></label>共省300元</a></div>
+            </div>
+            <!--价格说明弹窗-->
             <div class="inst-dialog" id="inst-dialog" data-role="popup" data-position-to="window" data-theme="a" data-overlay-theme="b">
                 <div class="inst-dialog-content">
                     <p>1、本起价是按2位成人出行所核算的单人价格。</p>
                     <p>2、您最终提交的价格会根据您所选择的出发日期、出行人数以及所选附加服务的不同而有所差别。</p>
+                </div>
+                <div class="inst-dialog-foot">
+                    <a class="btn-com btn-close" data-role="none" href="javascript:void(0);" data-rel="back">关 闭</a>
+                </div>
+            </div>
+            <!--价格说明弹窗-->
+            <div class="inst-dialog" id="inst-menu-dialog" data-role="popup" data-position-to="window" data-theme="a" data-overlay-theme="b">
+                <div class="inst-dialog-content">
+                    <p>本产品当日市场单价为M，真旅行一共给您省了X元不谢</p>
                 </div>
                 <div class="inst-dialog-foot">
                     <a class="btn-com btn-close" data-role="none" href="javascript:void(0);" data-rel="back">关 闭</a>

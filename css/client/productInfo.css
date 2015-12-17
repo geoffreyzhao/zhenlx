@@ -1694,14 +1694,13 @@ ul.common-tab > li.rest {
 }
 
 .menu-price .menu-price-text {
-    color: #e46c14;
-    font-size: 20px;
+    font-size: 22px;
     padding-left: 8px;
 }
 
 .menu-price .menu-price-tooltip {
-    color: #e46c14;
-    border: 1px solid #e46c14;
+    color: #11b9b7;
+    border: 1px solid #11b9b7;
     border-radius: 3px;
     padding: 2px 4px;
     float: right;
