@@ -1718,6 +1718,7 @@ ul.common-tab > li.rest {
 
 .menu-price .menu-price-tooltip + .tooltip .tooltip-inner {
     max-width: 205px;
+    text-align: left;
 }
 
 .price-tip-info {
