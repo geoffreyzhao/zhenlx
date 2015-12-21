@@ -1674,7 +1674,7 @@ ul.common-tab > li.rest {
 }
 
 .cur-price .price-text {
-    font-size: 36px;
+    font-size: 34px;
     color: #e46c14;
 }
 
@@ -1686,6 +1686,12 @@ ul.common-tab > li.rest {
     color: #11b9b7;
     cursor: default;
     margin-left: 5px;
+    border: 1px solid #11b9b7;
+    padding: 2px 4px;
+    float: right;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .menu-price {
@@ -1696,6 +1702,7 @@ ul.common-tab > li.rest {
 .menu-price .menu-price-text {
     font-size: 22px;
     padding-left: 8px;
+    color: #696969;
 }
 
 .menu-price .menu-price-tooltip {
@@ -1706,6 +1713,7 @@ ul.common-tab > li.rest {
     float: right;
     margin-right: 10px;
     cursor: default;
+    margin-top: 3px;
 }
 
 .menu-price .menu-price-tooltip + .tooltip .tooltip-inner {
