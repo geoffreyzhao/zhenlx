@@ -1645,6 +1645,12 @@ ul.common-tab > li.rest {
     padding-left: 6px;
 }
 
+.trip-info-table .menu-intr-text {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
 .buy-icon {
     display: inline-block;
     background: url(../../images/client/productInfoIcon.png) no-repeat -169px 0;
