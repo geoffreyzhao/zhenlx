@@ -1690,7 +1690,7 @@ ul.common-tab > li.rest {
     padding: 2px 4px;
     float: right;
     border-radius: 3px;
-    margin-right: 10px;
+    margin-right: 0px;
     margin-top: 10px;
 }
 
@@ -1711,7 +1711,7 @@ ul.common-tab > li.rest {
     border-radius: 3px;
     padding: 2px 4px;
     float: right;
-    margin-right: 10px;
+    margin-right: 0px;
     cursor: default;
     margin-top: 3px;
 }
@@ -1719,6 +1719,45 @@ ul.common-tab > li.rest {
 .menu-price .menu-price-tooltip + .tooltip .tooltip-inner {
     max-width: 220px;
     text-align: left;
+}
+
+.expand-hotel-block {
+    position: relative;
+    width: 100%;    
+    color: #7ecfce;
+    text-align: center;
+}
+
+.expand-hotel-block .line {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #11b9b7;
+}
+
+.expand-hotel-block .expand-btn {
+    font-size: 16px;
+    padding: 0 50px;
+    background-color: #fff;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+.expand-hotel-block .expand-btn:hover {
+    color: #11b9b7;
+}
+
+.expand-hotel-block .expand-btn .arrow {
+    width: 17px;
+    height: 15px;
+    display: inline-block;
+    background: url(../../images/client/expand-arrow-icon.png) no-repeat;
+    background-position: 0 0;
+}
+
+.expand-hotel-block .expand-btn.collapse .arrow {
+    background-position: 0 -17px;    
 }
 
 .price-tip-info {

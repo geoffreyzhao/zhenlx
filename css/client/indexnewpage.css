@@ -969,6 +969,20 @@ body {
     height: 100%;
     overflow: hidden;
 }
+.innerModel .view-more {
+    color: #999;
+    float: right;
+    font-size: 18px;
+}
+.innerModel .view-more em {
+    font-size: 30px;
+    vertical-align: middle;
+    margin-top: -8px;
+    display: inline-block;
+}
+.innerModel .view-more:hover {
+    color: #11b9b7;
+}
 .procuctOverview {
     height: auto;
     overflow: hidden;
