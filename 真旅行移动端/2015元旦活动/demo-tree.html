@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
+
+    <script src="../../mstatic/js/base/jquery.min.js"></script>
+    <script src="../../mstatic/js/base/fastclick.js"></script>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 750 ? 750 : window.innerWidth,
+                h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
+                base_ratio = 750 / 1334,
+                actual_ratio = window.innerWidth / window.innerHeight;
+
+        if (actual_ratio >= base_ratio) {  // 宽屏，按高度算
+
+            root.style.fontSize = (h / 667) * 20 + "px";
+
+        } else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+            root.style.fontSize = (w / 375) * 20 + "px";
+        }
+
+        root.style.height = window.innerHeight + "px";
+
+
+
+        window.onload = function(){
+
+            var leafnum = 40;
+            for(var i=0;i< leafnum;i++){
+                $('div').append('<span class="leaf"></span>');
+                $('div .leaf').hide();
+            }
+
+            var flag = false;
+            var clicknum=0;   //点击次数计数
+            var num = 10 ;   //点击次数
+            $('.static').click(function(){
+                if (clicknum < num) {
+                    $('.tree').addClass('big' + (clicknum+1));
+                    clicknum++;
+                }else{
+                    console.log('叶子出现 flag=' + flag);
+                    if(flag == true){
+                        console.log(flag);
+                        /*$("div.static").addClass("shake");*/
+                        $("body").removeClass("shake");
+                        $("body").addClass("shake");
+
+                        $('div .leaf').eq(clicknum - num).fadeIn(500);
+                        $('div .leaf').eq(clicknum - num).addClass('leaf'+(clicknum- ( num-1 )));
+                        clicknum++;
+                        /*flag = false;*/
+                    }
+                }
+            });
+
+
+            $('body').on("webkitTransitionEnd", function(e) {
+//                alert('123');
+                flag = true;
+
+                if ($("body").hasClass("shake")) {
+                    $(this).removeClass("shake");
+                }
+            });
+
+
+        }
+    </script>
+</head>
+<body>
+    <div class="static">
+        <span class="tree"></span>
+    </div>
+</body>
+</html>
