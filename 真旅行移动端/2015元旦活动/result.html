@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
+
+    <script src="../../mstatic/js/base/jquery.min.js"></script>
+    <script src="../../mstatic/js/base/fastclick.js"></script>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 750 ? 750 : window.innerWidth,
+                h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
+                base_ratio = 750 / 1334,
+                actual_ratio = window.innerWidth / window.innerHeight;
+
+        if (actual_ratio >= base_ratio) {  // 宽屏，按高度算
+
+            root.style.fontSize = (h / 667) * 20 + "px";
+
+        } else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+            root.style.fontSize = (w / 375) * 20 + "px";
+        }
+
+        root.style.height = window.innerHeight + "px";
+
+        window.onload = function(){
+            var getprize_btn = document.getElementById('getprize_btn');
+            var popwindow = document.getElementById('getpricePopWindow');
+            getprize_btn.onclick=function(){
+                alert("ok");
+                popwindow.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="redbg">
+        <img class="prize_bag" src="../../mstatic/images/activity/prize_bag.png" alt=""/>
+        <div class="getprizeBtn">
+            <a id="getprize_btn" class="getprize_btn" href="javascript:void(0);"></a>
+            <a class="other_getprize_btn" href="javascript:void(0);"></a>
+        </div>
+        <div id="getpricePopWindow">
+            <div class="greybg">
+                <img class="getprize_qr" src="../../mstatic/images/activity/getprize_qr.png" alt=""/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
