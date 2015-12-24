@@ -1711,6 +1711,10 @@ ul.common-tab > li.rest {
     color: #696969;
 }
 
+.menu-price .menu-price-text em {
+    font-size: 14px;
+}
+
 .menu-price .menu-price-tooltip {
     color: #11b9b7;
     border: 1px solid #11b9b7;
