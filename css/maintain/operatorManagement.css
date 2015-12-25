@@ -1154,3 +1154,18 @@ form .showUpload{
     color: #fff;
     background-color: #59aad7;
 }
+
+.commonTab.setGameParams {
+    width: 800px;
+}
+
+.commonTab.setGameParams .noEdit {
+    background-color: #f5f5f5;
+}
+
+.commonTab.setGameParams input[readonly='readonly'],
+.commonTab.setGameParams input[readonly='readonly']:focus {
+    border: none!important;
+    outline: none;
+    background: transparent;
+}
