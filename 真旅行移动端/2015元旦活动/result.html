@@ -28,26 +28,71 @@
         root.style.height = window.innerHeight + "px";
 
         window.onload = function(){
-            var getprize_btn = document.getElementById('getprize_btn');
+            var getprize_btn_0 = document.getElementsByClassName('getprize_btn')[0];
+            var getprize_btn_1 = document.getElementsByClassName('getprize_btn')[1];
             var popwindow = document.getElementById('getpricePopWindow');
-            getprize_btn.onclick=function(){
-                alert("ok");
+            /*getprize_btn_0.onclick=function(){
+                *//*alert("ok");*//*
                 popwindow.style.display = 'block';
-            }
+            }*/
+
+            getprize_btn_0.addEventListener('click',function(){
+                popwindow.style.display = 'block';
+            },false);
+
+            getprize_btn_1.addEventListener('click',function(){
+                popwindow.style.display = 'block';
+            },false);
+
+
+            var submitebtn = document.getElementsByClassName('submitebtn')[0];
+            submitebtn.addEventListener('click',function(){
+                popwindow.style.display = 'none';
+            },false);
+
+            var blackcover = document.getElementById('blackcover');
+            blackcover.addEventListener('click',function(){
+                popwindow.style.display = 'none';
+            },false);
+
+            var closebtn = document.getElementsByClassName('closebtn')[0];
+            closebtn.addEventListener('click',function(){
+                popwindow.style.display = 'none';
+            },false);
         }
     </script>
 </head>
-<body>
-    <div class="redbg">
+<body class="redbg">
+    <div id="getPrizeBag" style="display:block;">
         <img class="prize_bag" src="../../mstatic/images/activity/prize_bag.png" alt=""/>
         <div class="getprizeBtn">
-            <a id="getprize_btn" class="getprize_btn" href="javascript:void(0);"></a>
+            <a class="getprize_btn" href="javascript:void(0);"></a><br/>
             <a class="other_getprize_btn" href="javascript:void(0);"></a>
         </div>
-        <div id="getpricePopWindow">
+    </div>
+    <div id="getPrizeCalendar" style="display:none;">
+        <img class="prize_calendar" src="../../mstatic/images/activity/prize_calender.png" alt=""/>
+        <div class="getprizeBtn">
+            <a class="getprize_btn" href="javascript:void(0);"></a><br/>
+            <a class="other_getprize_btn" href="javascript:void(0);"></a>
+        </div>
+    </div>
+    <div id="getpricePopWindow">
+        <div id="blackcover"></div>
+        <div class="getpricecontent">
             <div class="greybg">
                 <img class="getprize_qr" src="../../mstatic/images/activity/getprize_qr.png" alt=""/>
+                <div class="message">
+                    <form class="message_form" action="">
+                        <input type="text"/>
+                        <input type="text"/>
+                        <input type="text"/>
+                    </form>
+                    <a class="submitebtn" href="javascript:void(0);"></a>
+                </div>
+                <a class="closebtn" href="javascript:void(0);"></a>
             </div>
+
         </div>
     </div>
 </body>

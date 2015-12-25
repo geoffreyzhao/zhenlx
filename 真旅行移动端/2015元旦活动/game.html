@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
+
+    <script src="../../mstatic/js/base/jquery.min.js"></script>
+    <script src="../../mstatic/js/base/fastclick.js"></script>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 750 ? 750 : window.innerWidth,
+                h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
+                base_ratio = 750 / 1334,
+                actual_ratio = window.innerWidth / window.innerHeight;
+
+        if (actual_ratio >= base_ratio) {  // 宽屏，按高度算
+
+            root.style.fontSize = (h / 667) * 20 + "px";
+
+        } else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+            root.style.fontSize = (w / 375) * 20 + "px";
+        }
+
+        root.style.height = window.innerHeight + "px";
+
+        window.onload = function(){
+            var getprize_btn_0 = document.getElementsByClassName('getprize_btn')[0];
+            /*getprize_btn_0.addEventListener('click',function(){
+                popwindow.style.display = 'block';
+            },false);*/
+        }
+    </script>
+</head>
+<body class="redbg">
+    <div class="gameDescribe">
+        <span class="avater"></span>
+        <div class="game_describe"></div>
+        <div class="getprize_list_contain">
+            <ul class="getprize_list">
+                <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">昵称。。。。</span>
+                    </div>
+                    <span class="prize_kinds_calender"></span>
+                </li>
+                <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">fasfdddddddddddasdfasf。。。</span>
+                    </div>
+                    <span class="prize_kinds_bag"></span>
+                </li>
+                <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">1333333333324123。。。。</span>
+                    </div>
+                    <span class="prize_kinds_voucher"></span>
+                </li>
+                <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">昵称昵称昵称</span>
+                    </div>
+                    <span class="prize_kinds_calender"></span>
+                </li>
+                <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">昵称。。。。</span>
+                    </div>
+                    <span class="prize_kinds_bag"></span>
+                </li>
+                <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">昵称。。。。</span>
+                    </div>
+                    <span class="prize_kinds_voucher"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="playgame">
+            <!--<div class="playgamebtnbg"></div>-->
+            <a class="playgamebtn" href="javascript:void(0);"></a>
+        </div>
+    </div>
+</body>
+</html>

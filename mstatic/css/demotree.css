@@ -4,6 +4,11 @@ html, body {
   margin: 0;
   padding: 0; }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .static {
   width: 100%;
   height: 100%;
@@ -149,8 +154,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 13.84488rem;
-  left: 7.60576rem;
+  top: 7.35979rem;
+  left: 0.16229rem;
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   top: 13.5rem;
@@ -161,8 +166,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 9.2093rem;
-  left: 2.89129rem;
+  top: 12.21251rem;
+  left: 17.60195rem;
   top: 4.2rem;
   left: 14.9rem;
   /*background:url(../images/new/leaf1.png) no-repeat;
@@ -173,8 +178,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 11.56454rem;
-  left: 8.07313rem;
+  top: 18.50392rem;
+  left: 9.22817rem;
   top: -0.5rem;
   left: 6.75rem;
   /* background:url(../images/new/leaf2.png) no-repeat;
@@ -185,8 +190,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.9446rem;
-  left: 9.95336rem;
+  top: 1.89922rem;
+  left: 0.35304rem;
   top: 4.2rem;
   left: 8.9rem;
   /*background:url(../images/new/leaf1.png) no-repeat;
@@ -197,8 +202,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 11.4943rem;
-  left: 11.94371rem;
+  top: 2.65618rem;
+  left: 0.61838rem;
   top: 17.5rem;
   left: 1.3rem;
   /*background:url(../images/new/leaf2.png) no-repeat;
@@ -209,8 +214,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 6.49018rem;
-  left: 18.10102rem;
+  top: 12.00436rem;
+  left: 0.43889rem;
   top: -0.8rem;
   left: 0.8rem;
   /*background:url(../images/new/leaf1.png) no-repeat;
@@ -221,8 +226,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 7.55969rem;
-  left: 17.79941rem;
+  top: 19.44069rem;
+  left: 4.77239rem;
   top: 11.925rem;
   left: 8.75rem;
   /*background:url(../images/new/leaf2.png) no-repeat;
@@ -233,8 +238,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.31881rem;
-  left: 12.88195rem;
+  top: 17.63769rem;
+  left: 9.50451rem;
   top: 9.5rem;
   left: 2.5rem;
   /*background:url(../images/new/leaf1.png) no-repeat;
@@ -245,8 +250,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 11.8051rem;
-  left: 9.93911rem;
+  top: 7.39444rem;
+  left: 3.50685rem;
   top: 8.7rem;
   left: 14.4rem;
   /*background:url(../images/new/leaf2.png) no-repeat;
@@ -257,8 +262,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 18.7141rem;
-  left: 2.7515rem;
+  top: 0.625rem;
+  left: 12.81304rem;
   top: 2.5rem;
   left: 0.25rem;
   background: url(../images/activity/leaf2.png) no-repeat;
@@ -269,8 +274,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 12.26324rem;
-  left: 0.78752rem;
+  top: 17.73068rem;
+  left: 10.82912rem;
   top: 4.2rem;
   left: 3.95rem;
   background: url(../images/activity/leaf1.png) no-repeat;
@@ -281,8 +286,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 17.91878rem;
-  left: 15.03684rem;
+  top: 1.70273rem;
+  left: 5.13427rem;
   top: 2.875rem;
   left: 11.2rem;
   background: url(../images/activity/leaf2.png) no-repeat;
@@ -293,8 +298,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 3.59274rem;
-  left: 0.08179rem;
+  top: 19.72971rem;
+  left: 16.53064rem;
   top: 6.25rem;
   left: 6.2rem;
   /*background:url(../images/new/leaf2.png) no-repeat;
@@ -305,8 +310,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 3.06447rem;
-  left: 5.40871rem;
+  top: 13.44717rem;
+  left: 5.55411rem;
   top: 11.85rem;
   left: 12.5rem;
   /*background:url(../images/new/leaf1.png) no-repeat;
@@ -317,288 +322,288 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 14.31788rem;
-  left: 18.42598rem; }
+  top: 11.80159rem;
+  left: 6.56863rem; }
 
 .leaf16 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 4.14193rem;
-  left: 1.68482rem; }
+  top: 3.29013rem;
+  left: 5.94695rem; }
 
 .leaf17 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 6.73742rem;
-  left: 13.58381rem; }
+  top: 15.03405rem;
+  left: 4.24645rem; }
 
 .leaf18 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 18.72471rem;
-  left: 15.60756rem; }
+  top: 4.01212rem;
+  left: 1.38935rem; }
 
 .leaf19 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 14.32117rem;
-  left: 17.3419rem; }
+  top: 6.58614rem;
+  left: 6.3686rem; }
 
 .leaf20 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 18.37907rem;
-  left: 8.8249rem; }
+  top: 2.05381rem;
+  left: 5.75179rem; }
 
 .leaf21 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 7.9078rem;
-  left: 1.47878rem; }
+  top: 18.13711rem;
+  left: 6.02262rem; }
 
 .leaf22 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 18.7649rem;
-  left: 2.06846rem; }
+  top: 18.60001rem;
+  left: 17.62639rem; }
 
 .leaf23 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 1.37607rem;
-  left: 14.01894rem; }
+  top: 6.9051rem;
+  left: 0.02527rem; }
 
 .leaf24 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 19.91708rem;
-  left: 8.79604rem; }
+  top: 13.08056rem;
+  left: 11.50253rem; }
 
 .leaf25 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 12.58232rem;
-  left: 12.02965rem; }
+  top: 13.00637rem;
+  left: 16.72869rem; }
 
 .leaf26 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 8.73466rem;
-  left: 2.34631rem; }
+  top: 7.93357rem;
+  left: 12.58148rem; }
 
 .leaf27 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 6.09888rem;
-  left: 10.11014rem; }
+  top: 2.91472rem;
+  left: 4.49039rem; }
 
 .leaf28 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 4.99981rem;
-  left: 4.01707rem; }
+  top: 13.71331rem;
+  left: 6.71047rem; }
 
 .leaf29 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.78366rem;
-  left: 16.56046rem; }
+  top: 11.23223rem;
+  left: 7.43343rem; }
 
 .leaf30 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 18.47255rem;
-  left: 9.52726rem; }
+  top: 17.38883rem;
+  left: 6.13399rem; }
 
 .leaf31 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.39682rem;
-  left: 7.72929rem; }
+  top: 1.72682rem;
+  left: 5.8451rem; }
 
 .leaf32 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 18.97604rem;
-  left: 3.89686rem; }
+  top: 0.40007rem;
+  left: 2.81465rem; }
 
 .leaf33 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.75832rem;
-  left: 12.80469rem; }
+  top: 8.68293rem;
+  left: 4.9448rem; }
 
 .leaf34 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 1.34954rem;
-  left: 12.419rem; }
+  top: 1.95046rem;
+  left: 12.89487rem; }
 
 .leaf35 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 18.4997rem;
-  left: 7.41132rem; }
+  top: 12.69284rem;
+  left: 12.38459rem; }
 
 .leaf36 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 2.00011rem;
-  left: 17.83683rem; }
+  top: 8.15033rem;
+  left: 7.84625rem; }
 
 .leaf37 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 17.38976rem;
-  left: 2.71098rem; }
+  top: 2.24286rem;
+  left: 2.81513rem; }
 
 .leaf38 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 9.30065rem;
-  left: 13.86466rem; }
+  top: 4.35305rem;
+  left: 14.58644rem; }
 
 .leaf39 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 13.41146rem;
-  left: 11.58409rem; }
+  top: 10.04114rem;
+  left: 6.20118rem; }
 
 .leaf40 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 8.31576rem;
-  left: 2.3848rem; }
+  top: 0.18417rem;
+  left: 1.48187rem; }
 
 .leaf41 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 3.07632rem;
-  left: 17.44037rem; }
+  top: 4.11988rem;
+  left: 9.45089rem; }
 
 .leaf42 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 2.82181rem;
-  left: 3.24227rem; }
+  top: 8.86686rem;
+  left: 2.75582rem; }
 
 .leaf43 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 8.46006rem;
-  left: 12.38503rem; }
+  top: 7.59216rem;
+  left: 6.00946rem; }
 
 .leaf44 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 13.93053rem;
-  left: 12.844rem; }
+  top: 16.8254rem;
+  left: 14.69597rem; }
 
 .leaf45 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 18.52751rem;
-  left: 3.24382rem; }
+  top: 12.66335rem;
+  left: 6.02942rem; }
 
 .leaf46 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 12.5152rem;
-  left: 7.93461rem; }
+  top: 15.39068rem;
+  left: 5.34257rem; }
 
 .leaf47 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 17.87837rem;
-  left: 15.84545rem; }
+  top: 18.3497rem;
+  left: 6.65705rem; }
 
 .leaf48 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 8.92507rem;
-  left: 3.90422rem; }
+  top: 17.49471rem;
+  left: 4.77394rem; }
 
 .leaf49 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 6.3156rem;
-  left: 17.43558rem; }
+  top: 8.85891rem;
+  left: 1.00729rem; }
 
 .leaf50 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 6.03062rem;
-  left: 5.57352rem; }
+  top: 15.55016rem;
+  left: 10.25643rem; }
 
 .redbg {
   width: 100%;
@@ -613,9 +618,17 @@ body.shake {
   display: inline-block;
   margin-top: 1.75rem; }
 
+.prize_calendar {
+  width: 17.875rem;
+  height: 17.7rem;
+  display: inline-block;
+  margin-top: 1.75rem; }
+
 .getprizeBtn {
+  width: 100%;
   position: absolute;
-  bottom: 1.25rem; }
+  bottom: 1.25rem;
+  text-align: center; }
 
 .getprize_btn, .other_getprize_btn {
   width: 15.825rem;
@@ -638,21 +651,183 @@ body.shake {
 #getpricePopWindow {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
   position: absolute;
   left: 0;
   top: 0;
-  padding: 1.2rem;
-  box-sizing: border-box; }
+  display: none; }
+
+.getpricecontent {
+  position: absolute;
+  left: 1.2rem;
+  top: 1.2rem;
+  right: 1.2rem;
+  bottom: 1.2rem; }
+
+#blackcover {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0; }
 
 .greybg {
   width: 100%;
   height: 100%;
   background: #ebebeb url(../images/activity/prize_window.png) center top no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  position: relative; }
 
 .getprize_qr {
   width: 100%; }
+
+.message {
+  width: 14.7rem;
+  height: 10.5rem;
+  /*margin:0 auto;*/
+  position: absolute;
+  bottom: 0.925rem;
+  left: 50%;
+  margin-left: -7.35rem; }
+
+.message_form {
+  width: 14.7rem;
+  height: 7.1rem;
+  border-radius: 0.25rem;
+  padding: 1rem 0 0 4.2rem;
+  background: #ff8417 url(../images/activity/message.png) no-repeat;
+  background-size: 14.7rem 7.1rem;
+  text-align: left;
+  box-sizing: border-box; }
+
+.submitebtn {
+  width: 14.7rem;
+  height: 2.925rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  background: #ff8417 url(../images/activity/submitebtn.png) center center no-repeat;
+  background-size: 2.175rem 1.025rem; }
+
+.submitebtn:active {
+  opacity: 0.9; }
+
+.message_form input {
+  width: 9.675rem;
+  height: 1.4rem;
+  border: 0;
+  margin-bottom: 0.5rem;
+  outline: none;
+  background: #ebebeb;
+  padding: 0 0.25rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.4rem; }
+
+.avater {
+  width: 3.35rem;
+  height: 3.35rem;
+  display: inline-block;
+  margin: 1rem auto;
+  background: #e6d6bd;
+  border-radius: 0.25rem; }
+
+.game_describe {
+  width: 100%;
+  height: 25.7rem;
+  background: url("../images/activity/game_describe.png") center center no-repeat;
+  background-size: 15.825rem 25.7rem; }
+
+.getprize_list_contain {
+  margin-bottom: 3.5rem; }
+
+.getprize_list {
+  height: 26rem;
+  overflow: hidden;
+  margin-top: 0.625rem; }
+
+.getprize_list li {
+  padding: 0 2rem 0.875rem 2.4rem;
+  text-align: left;
+  color: #e6d6bd;
+  overflow: hidden;
+  font-size: 0.8rem; }
+
+.user_getprize {
+  float: left; }
+
+.avater_user_getprize {
+  width: 2.825rem;
+  height: 2.825rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  background: #e6d6bd; }
+
+.name_user_getprize {
+  width: 5rem;
+  height: 1rem;
+  display: inline-block;
+  margin-top: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.prize_kinds_calender {
+  width: 5.3rem;
+  height: 0.85rem;
+  background: url("../images/activity/getcalender.png") no-repeat;
+  background-size: 5.3rem 0.825rem;
+  margin-top: 1.1rem;
+  float: right; }
+
+.prize_kinds_bag {
+  width: 5.3rem;
+  height: 0.85rem;
+  background: url("../images/activity/getbag.png") no-repeat;
+  background-size: 5.3rem 0.825rem;
+  margin-top: 1.1rem;
+  float: right; }
+
+.prize_kinds_voucher {
+  width: 6.2rem;
+  height: 0.9rem;
+  background: url("../images/activity/getvoucher.png") no-repeat;
+  background-size: 6.2rem 0.875rem;
+  margin-top: 1.1rem;
+  float: right; }
+
+.playgame {
+  width: 100%;
+  height: 3.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: -0.1rem;
+  left: 0; }
+
+/*.playgamebtnbg{
+
+}*/
+.playgamebtn {
+  width: 15.825rem;
+  height: 2.225rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-top: 0.625rem;
+  background: #e6d6bd url(../images/activity/playgame.png) center center no-repeat;
+  background-size: 5.7rem 1.05rem; }
+
+.closebtn, .closebtn:link, .closebtn:visited {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: url(../images/activity/closebtn.png) right center no-repeat;
+  background-size: 2.25rem 2.25rem;
+  display: inline-block;
+  border-bottom-left-radius: 100%;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.closebtn:active {
+  opacity: 0.5; }
 
 /*# sourceMappingURL=demotree.css.map */
