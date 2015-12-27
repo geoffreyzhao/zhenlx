@@ -10,29 +10,209 @@ ul,li{
   padding:0;
   list-style:none;
 }
-.static{
+
+/*loading页*/
+.loading{
   width:100%;
   height:100%;
-  margin:auto;
-  background:url("../images/activity/flowerpot.png") center bottom no-repeat;
-  background-size:9.275rem 6.425rem;
-  position:relative;
+}
+.loadingpagebg{
+  width:100%;
+  margin-top:4rem;
+}
+.lodingtext{
+  width:4.55rem;
+  height:0.7rem;
+  margin-top:0.5rem;
+}
+#loadingcanvas{
+  width:15.825rem;
+  height:1.225rem;
+  background:#5c2d28;
+  border-radius:1.225rem;
+}
+.loadingprogress{
+  margin-top:3.5rem;
 }
 
+/*游戏说明页*/
+.avater{
+  width:3.35rem;
+  height:3.35rem;
+  display:inline-block;
+  margin:1rem auto;
+  background:#e6d6bd;
+  border-radius:0.25rem;
+}
+.game_describe{
+  width:100%;
+  height:25.7rem;
+  background:url("../images/activity/game_describe.png") center center no-repeat;
+  background-size:15.825rem 25.7rem;
+}
+.getprize_list_contain{
+  margin-bottom:3.5rem;
+  overflow:hidden;
+}
+.getprize_list{
+  height: 26rem;
+  margin-top:0.625rem;
+  overflow: hidden;
+}
+.getprize_list li{
+  padding:0 2rem 0.875rem 2.4rem;
+  text-align: left;
+  color:#e6d6bd;
+  overflow:hidden;
+  font-size:0.8rem;
+}
+.user_getprize{
+  float:left;
+}
+.avater_user_getprize{
+  width:2.825rem;
+  height:2.825rem;
+  display:inline-block;
+  border-radius: 0.25rem;
+  background:#e6d6bd;
+}
+.name_user_getprize {
+  width: 5rem;
+  height:1rem;
+  display: inline-block;
+  margin-top: 0.3rem;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.prize_kinds_calender{
+  width:5.3rem;
+  height:0.85rem;
+  background:url("../images/activity/getcalender.png") no-repeat;
+  background-size: 5.3rem 0.825rem;
+  margin-top:1.1rem;
+  float:right;
+}
+.prize_kinds_bag{
+  width:5.3rem;
+  height:0.85rem;
+  background:url("../images/activity/getbag.png") no-repeat;
+  background-size: 5.3rem 0.825rem;
+  margin-top:1.1rem;
+  float:right;
+}
+.prize_kinds_voucher{
+  width:6.2rem;
+  height:0.9rem;
+  background:url("../images/activity/getvoucher.png") no-repeat;
+  background-size: 6.2rem 0.875rem;
+  margin-top:1.1rem;
+  float:right;
+}
+.playgame{
+  width:100%;
+  height:3.5rem;
+  background:rgba(0,0,0,0.5);
+  position: fixed;
+  bottom:-0.1rem;
+  left:0;
+}
+.playgamebtn {
+  width: 15.825rem;
+  height: 2.225rem;
+  border-radius: 0.25rem;
+  display:inline-block;
+  margin-top:0.625rem;
+  background:#e6d6bd url(../images/activity/playgame.png) center center no-repeat;
+  background-size: 5.7rem 1.05rem;
+}
+
+/*游戏页*/
+.game{
+  width:100%;
+  height:100%;
+}
+.gamebg{
+  width:100%;
+  height:100%;
+  position:relative;
+  background:#e6d6bd url("../images/activity/flowerpot.png") center 103% no-repeat;
+  background-size:7.75rem 7.625rem ;
+  overflow:hidden;
+}
+#gamerule{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  z-index:1000;
+}
+.rule{
+  width:15.775rem;
+  height:6.75rem;
+  margin-top:5.35rem;
+}
+#startgame{
+  width:15.775rem;
+  height:2.95rem;
+  display:inline-block;
+  border-radius:0.25rem;
+  background:#af3e2f url(../images/activity/startgame.png) center center no-repeat;
+  background-size: 10.25rem 1.1rem;
+  margin-top:0.4rem;
+}
+.startgame:active{
+  opacity:0.9;
+}
+.time{
+  width:14.25rem;
+  height:12.25rem;
+  line-height:12.25rem;
+  display:inline-block;
+  background:url(../images/activity/timebg.png) center center no-repeat;
+  background-size:14.25rem 12.25rem;
+  position:absolute;
+  top:7.5rem;
+  left:50%;
+  margin-left:-7.125rem;
+  font-size:6rem;
+  font-weight:bold;
+  text-align:center;
+  color:#ffa200;
+  z-index:600;
+}
+.timeprogress{
+  position:absolute;
+  left:0;
+  bottom:1.625rem;
+  text-align:center;
+}
+#timecanvas{
+  width:15.825rem;
+  height:1.225rem;
+  background:#5c2d28;
+  border-radius:1.225rem;
+}
+.timetext{
+  width:3.6rem;
+  height:0.75rem;
+}
 .tree {
-  /* width: 157px;
-   height:181px;*/
-  /*width: 3.925rem;
-  height:4.525rem;*/
-  width: 6.7875rem;
-  height:6.4rem;
+ /* width: 6.7875rem;
+  height:6.4rem;*/
+  /*width: 13.575rem;
+  height:24.05rem;
+  transform:scale(0.36,0.36);*/
+   width: 4.9rem;
+  height:8.675rem;
   display:inline-block;
   background:url(../images/activity/tree.png) no-repeat;
   background-size: 100% 100%;
   position:absolute;
-  bottom:5.55rem;
+  bottom:5.8rem;
   left:50%;
-  margin-left:-3.4rem;
+  margin-left:-2.45rem;
   -webkit-transform-origin:50% 100%;
   -moz-transform-origin:50% 100%;
   -o-transform-origin:50% 100%;
@@ -41,14 +221,6 @@ ul,li{
   -moz-transition: all 2s linear;
   -webkit-transition: all 2s linear;
   -o-transition: all 2s linear;
-}
-
-.leaf{
-  /*  width:184px;
-    height:182px;*/
-  width:4.6rem;
-  height:4.55rem;
-  display:inline-block;
 }
 
 @-webkit-keyframes bodyShake {
@@ -71,9 +243,17 @@ body.shake {
   -webkit-animation: bodyShake 0.1s 3;
 }
 
+.leaf{
+  /*  width:184px;
+    height:182px;*/
+  width:4.6rem;
+  height:4.55rem;
+  display:inline-block;
+}
+
 $num:10;    //点击次数
-$addx:(2.4-1) /$num;
-$addy:(4.3-1) /$num;
+$addx:(2.77-1) /$num;
+$addy:(2.77-1) /$num;
 @for $i from 1 through $num+1 {
   .#{big}#{$i} {
       -webkit-transform: scale(1+$addx*$i,1+$addy*$i);
@@ -187,7 +367,92 @@ $list-leftvalue:-0.5rem 14.9rem 6.75rem 8.9rem 1.3rem 0.8rem 8.75rem 2.5rem 14.4
     }
   }
 }
-
+#success{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:2000;
+  overflow:hiddden;
+  text-align:center;
+}
+#egg{
+  width:16.875rem;
+  height:16.775rem;
+  display:inline-block;
+  background:url(../images/activity/egg.png) no-repeat center center;
+  background-size:16.875rem 16.775rem;
+  margin-top:1.25rem;
+}
+.takeprize{
+  width:15.775rem;
+  height:4.4rem;
+  display:inline-block;
+  background:url(../images/activity/takeprizetext.png) center center no-repeat;
+  background-size:15.775rem 4.4rem;
+  position:absolute;
+  left:50%;
+  bottom:1.5rem;
+  margin-left:-7.8875rem;
+}
+#success_noprize,#success_takedprize,#fail,#tooManyPeople{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:3000;
+  overflow:hiddden;
+  text-align:center;
+}
+.noprize_text{
+  width:15.775rem;
+  height:8.15rem;
+  display:inline-block;
+  background:url(../images/activity/noprize_text.png) center center no-repeat;
+  background-size:15.775rem 8.15rem;
+  margin-top:5.75rem;
+}
+.noprize_qr{
+  width:15.775rem;
+  height:8.275rem;
+  display: inline-block;
+  background:url(../images/activity/noprize_qr.png) center center no-repeat;
+  background-size:15.775rem 8.275rem;
+  position:absolute;
+  left:50%;
+  bottom:1.5rem;
+  margin-left:-7.8875rem;
+}
+.takedprize_text{
+  width:15.775rem;
+  height:6.925rem;
+  display:inline-block;
+  background:url(../images/activity/takedprizetext.png) center center no-repeat;
+  background-size:15.775rem 6.925rem;
+  margin-top:6.25rem;
+}
+.fail_text{
+  width:15.775rem;
+  height:9.875rem;
+  display:inline-block;
+  background:url(../images/activity/failtext.png) center center no-repeat;
+  background-size:15.775rem 9.875rem;
+  margin-top:5.75rem;
+}
+.manypeople_text{
+  width:15.775rem;
+  height:7.7rem;
+  display:inline-block;
+  background:url(../images/activity/manypeopletext.png) center center no-repeat;
+  background-size:15.775rem 7.7rem;
+  margin-top:5.75rem;
+}
+.replay_btn {
+  background: #af3e2f url(../images/activity/replay.png) no-repeat center center;
+  background-size: 2.175rem 1.075rem;
+}
 .redbg{
   width:100%;
   height:100%;
@@ -213,7 +478,7 @@ $list-leftvalue:-0.5rem 14.9rem 6.75rem 8.9rem 1.3rem 0.8rem 8.75rem 2.5rem 14.4
   bottom:1.25rem;
   text-align:center;
 }
-.getprize_btn,.other_getprize_btn{
+.getprize_btn,.other_getprize_btn,.replay_btn{
   width: 15.825rem;
   height: 2.925rem;
   display: inline-block;
@@ -309,98 +574,7 @@ $list-leftvalue:-0.5rem 14.9rem 6.75rem 8.9rem 1.3rem 0.8rem 8.75rem 2.5rem 14.4
   line-height:1.4rem;
 }
 
-.avater{
-  width:3.35rem;
-  height:3.35rem;
-  display:inline-block;
-  margin:1rem auto;
-  background:#e6d6bd;
-  border-radius:0.25rem;
-}
-.game_describe{
-  width:100%;
-  height:25.7rem;
-  background:url("../images/activity/game_describe.png") center center no-repeat;
-  background-size:15.825rem 25.7rem;
-}
-.getprize_list_contain{
-  margin-bottom:3.5rem;
-}
-.getprize_list{
-  height: 26rem;
-  overflow: hidden;
-  margin-top:0.625rem;
-}
-.getprize_list li{
-  padding:0 2rem 0.875rem 2.4rem;
-  text-align: left;
-  color:#e6d6bd;
-  overflow:hidden;
-  font-size:0.8rem;
-}
-.user_getprize{
-  float:left;
-}
-.avater_user_getprize{
-  width:2.825rem;
-  height:2.825rem;
-  display:inline-block;
-  border-radius: 0.25rem;
-  background:#e6d6bd;
-}
-.name_user_getprize {
-  width: 5rem;
-  height:1rem;
-  display: inline-block;
-  margin-top: 0.3rem;
-  overflow:hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.prize_kinds_calender{
-  width:5.3rem;
-  height:0.85rem;
-  background:url("../images/activity/getcalender.png") no-repeat;
-  background-size: 5.3rem 0.825rem;
-  margin-top:1.1rem;
-  float:right;
-}
-.prize_kinds_bag{
-  width:5.3rem;
-  height:0.85rem;
-  background:url("../images/activity/getbag.png") no-repeat;
-  background-size: 5.3rem 0.825rem;
-  margin-top:1.1rem;
-  float:right;
-}
-.prize_kinds_voucher{
-  width:6.2rem;
-  height:0.9rem;
-  background:url("../images/activity/getvoucher.png") no-repeat;
-  background-size: 6.2rem 0.875rem;
-  margin-top:1.1rem;
-  float:right;
-}
-.playgame{
-  width:100%;
-  height:3.5rem;
-  background:rgba(0,0,0,0.5);
-  position: fixed;
-  bottom:-0.1rem;
-  left:0;
-}
-/*.playgamebtnbg{
 
-}*/
-.playgamebtn {
-  width: 15.825rem;
-  height: 2.225rem;
-  border-radius: 0.25rem;
-  display:inline-block;
-  margin-top:0.625rem;
-  background:#e6d6bd url(../images/activity/playgame.png) center center no-repeat;
-  background-size: 5.7rem 1.05rem;
-}
 .closebtn,.closebtn:link,.closebtn:visited{
   width:2.25rem;
   height:2.25rem;
@@ -415,3 +589,49 @@ $list-leftvalue:-0.5rem 14.9rem 6.75rem 8.9rem 1.3rem 0.8rem 8.75rem 2.5rem 14.4
 .closebtn:active {
   opacity:0.5;
 }
+.voucher_title{
+  width:8.85rem;
+  height:2.5rem;
+  display:inline-block;
+  background:url(../images/activity/voucher_text.png) no-repeat;
+  background-size:8.85rem 2.5rem;
+  margin-top:1.5rem;
+  margin-bottom:1.125rem;
+}
+.voucher{
+  width:15.775rem;
+  height:7.9rem;
+  margin-bottom:0.25rem;
+}
+.exchange{
+  margin-bottom:1.9rem;
+}
+.exchange_code{
+  height:1.5rem;
+  line-height:1.5rem;
+  padding-left:3.8rem;
+  display:inline-block;
+  background:url(../images/activity/exchangecode.png) no-repeat 0 center;
+  background-size:3.3rem 1.05rem;
+  text-align:left;
+  color:#e6d6bd;
+  font-size:1.2rem;
+  font-weight:bold;
+}
+.exchange_method{
+  width:17.65rem;
+  height:48.125rem;
+  display: inline-block;
+  background:url(../images/activity/exchangemethod.png) no-repeat center center;
+  background-size:17.65rem 48.125rem;
+}
+#getPrizeVoucher .other_getprize_btn{
+    margin-top:1.5rem;
+    margin-bottom:1rem;
+}
+
+
+
+
+
+

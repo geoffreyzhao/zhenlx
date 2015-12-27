@@ -6,8 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
 
-    <script src="../../mstatic/js/base/jquery.min.js"></script>
-    <script src="../../mstatic/js/base/fastclick.js"></script>
+    <!--<script src="../../mstatic/js/base/jquery.min.js"></script>
+    <script src="../../mstatic/js/base/fastclick.js"></script>-->
 
     <script type="text/javascript">
         var root = document.getElementsByTagName("html")[0],
@@ -28,15 +28,152 @@
         root.style.height = window.innerHeight + "px";
 
         window.onload = function(){
-            var getprize_btn_0 = document.getElementsByClassName('getprize_btn')[0];
-            /*getprize_btn_0.addEventListener('click',function(){
-                popwindow.style.display = 'block';
-            },false);*/
+            /*加载页*/
+            var canvas=document.getElementById('loadingcanvas');
+            var ctx = canvas.getContext('2d');
+
+            /*canvas.width=+'rem';
+             canvas.height=+'rem';*/
+
+            /*游戏说明页*/
+            var getprize_list = document.getElementsByClassName('getprize_list')[0];
+            var lis = document.getElementsByTagName('li');
+            for(var i = 0;i < 5; i++){
+                var li = document.createElement('li');
+                li.innerHTML = lis[i].innerHTML;
+                getprize_list.appendChild(li);
+            }
+
+            var speed = 30;
+            var stop = 3000;
+            var stoptime = 4000;
+            var liheight = document.getElementsByTagName('li')[0].offsetHeight;
+
+            function scroll(){
+                    if(getprize_list.scrollTop>=(getprize_list.scrollHeight-getprize_list.offsetHeight-1)){
+                        getprize_list.scrollTop = 0;
+                    }else{
+                        getprize_list.scrollTop ++;
+                    }
+            }
+            var timer = setInterval(function(){
+                scroll();
+            },speed);
+
+            clearInterval(timer);
+
+            /*游戏*/
+            /*开始给小树施肥按钮点击*/
+            var startgame = document.getElementById('startgame');
+            var gamerule = document.getElementById('gamerule');
+            var timeprogress = document.getElementsByClassName('timeprogress')[0];
+            var time = document.getElementsByClassName('time')[0];
+            var success = document.getElementById('success');
+            var fail = document.getElementById('fail');
+            startgame.addEventListener('click',function(){
+                gamerule.style.display = 'none';
+                timeprogress.style.display = 'block';
+            },false);
+
+            var leafnum = 40;
+            var treebox = document.getElementById('treebox');
+            for(var i=0;i< leafnum;i++){
+                var spanleaf = document.createElement('span');
+                spanleaf.setAttribute('class','leaf');
+                treebox.appendChild(spanleaf);
+                spanleaf.style.display = "none";
+            }
+
+            var flag = false;
+            var clicknum=0;   //点击次数计数
+            var num = 10 ;   //点击次数
+            var spanleafs = document.getElementsByClassName('leaf');
+            var tree = document.getElementsByClassName('tree')[0];
+            var body = document.getElementsByTagName('body')[0];
+            treebox.addEventListener('click',function(){
+                if (clicknum < num) {
+                    var treeclass = tree.className + ' big' + (clicknum + 1);
+                    console.log(treeclass);
+                    tree.setAttribute('class',treeclass);
+                    clicknum++;
+                }else{
+                    console.log('叶子出现 flag=' + flag);
+                    if(flag == true&&(clicknum - num+1)<=leafnum){
+                        console.log(flag);
+
+                        body.setAttribute('class','');
+
+                        body.setAttribute('class','shake');
+                        spanleafs[clicknum - num].style.display = 'inline-block';
+
+                        spanleafs[clicknum - num].setAttribute('class','leaf leaf'+(clicknum- ( num-1 )));
+                        time.innerHTML = clicknum-num+1;
+                        if(time.innerHTML == leafnum){
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            success.style.display = 'block';
+                        }
+                        /*if(timenum<0){
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            fail.style.display = 'block';
+                        }else{
+                            if(time.innerHTML == leafnum){
+                                time.style.display = 'none';
+                                timeprogress.style.display = 'none';
+                                success.style.display = 'block';
+                            }
+                        }*/
+                        /*if(time.innerHTML == leafnum&&timenum>=0){
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            success.style.display = 'block';
+                        }else if(time.innerHTML != leafnum&&timenum<0){
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            fail.style.display = 'block';
+                        }*/
+                        clicknum++;
+                    }
+                }
+            },false)
+
+            var timenum=5;
+            function timeCalculation(){
+                timenum--;
+            }
+            setInterval(timeCalculation,1000);
+
+            body.addEventListener("webkitTransitionEnd", function(e) {
+//                alert('123');
+                flag = true;
+
+                time.style.display = 'block';
+
+                if (body.className="shake") {
+                    body.setAttribute('class','');
+                }
+            },false);
+
+            var egg = document.getElementById('egg');
+            var success_noprize = document.getElementById('success_noprize');
+            egg.addEventListener('click',function(){
+                success.style.display = 'none';
+                success_noprize.style.display = 'block';
+            },false);
+
         }
     </script>
 </head>
 <body class="redbg">
-    <div class="gameDescribe">
+    <div class="loading" style="display:none;">
+        <img class="loadingpagebg" src="../../mstatic/images/activity/loadingpagebg.png" alt=""/>
+        <div class="loadingprogress">
+            <canvas id="loadingcanvas"></canvas>
+            <img class="lodingtext" src="../../mstatic/images/activity/loading.png" alt=""/>
+        </div>
+    </div>
+    <div class="gameDescribe" style="display:none;">
         <span class="avater"></span>
         <div class="game_describe"></div>
         <div class="getprize_list_contain">
@@ -44,25 +181,45 @@
                 <li>
                     <div class="user_getprize">
                         <span class="avater_user_getprize"></span><br/>
-                        <span class="name_user_getprize">昵称。。。。</span>
+                        <span class="name_user_getprize">昵称1。。。。</span>
                     </div>
                     <span class="prize_kinds_calender"></span>
                 </li>
                 <li>
                     <div class="user_getprize">
                         <span class="avater_user_getprize"></span><br/>
-                        <span class="name_user_getprize">fasfdddddddddddasdfasf。。。</span>
+                        <span class="name_user_getprize">2fasfdddddddddddasdfasf。。。</span>
                     </div>
                     <span class="prize_kinds_bag"></span>
                 </li>
                 <li>
                     <div class="user_getprize">
                         <span class="avater_user_getprize"></span><br/>
-                        <span class="name_user_getprize">1333333333324123。。。。</span>
+                        <span class="name_user_getprize">31333333333324123。。。。</span>
                     </div>
                     <span class="prize_kinds_voucher"></span>
                 </li>
                 <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">4昵称昵称昵称</span>
+                    </div>
+                    <span class="prize_kinds_calender"></span>
+                </li>
+                <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">5蓝天</span>
+                    </div>
+                    <span class="prize_kinds_bag"></span>
+                </li>
+                <li>
+                    <div class="user_getprize">
+                        <span class="avater_user_getprize"></span><br/>
+                        <span class="name_user_getprize">6rale。。。。</span>
+                    </div>
+                    <span class="prize_kinds_voucher"></span>
+                </li><li>
                     <div class="user_getprize">
                         <span class="avater_user_getprize"></span><br/>
                         <span class="name_user_getprize">昵称昵称昵称</span>
@@ -89,6 +246,50 @@
             <!--<div class="playgamebtnbg"></div>-->
             <a class="playgamebtn" href="javascript:void(0);"></a>
         </div>
+    </div>
+    <div class="game">
+        <div id="treebox" class="gamebg">
+            <span class="time" style="display:none;">23</span>
+            <div class="timeprogress" style="display:none;">
+                <img class="timetext" src="../../mstatic/images/activity/surplus.png" alt=""/>
+                <canvas id="timecanvas"></canvas>
+            </div>
+            <span class="tree"></span>
+        </div>
+        <div id="gamerule" style="display:block;">
+            <img class="rule" src="../../mstatic/images/activity/gamerule.png" alt=""/>
+            <a id="startgame" href="javascript:void(0);"></a>
+        </div>
+        <div id="success" style="display:none;">
+            <img id="egg" src="../../mstatic/images/activity/egg.png" alt=""/>
+            <span class="takeprize"></span>
+        </div>
+        <div id="success_noprize" style="display:none;">
+            <span class="noprize_text"></span>
+            <span class="noprize_qr"></span>
+        </div>
+        <div id="success_takedprize" style="display:none;">
+            <span class="takedprize_text"></span>
+            <div class="getprizeBtn">
+                <a class="replay_btn" href="javascript:void(0);"></a><br/>
+                <a class="other_getprize_btn" href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <div id="fail" style="display:none;">
+            <span class="fail_text"></span>
+            <div class="getprizeBtn">
+                <a class="replay_btn" href="javascript:void(0);"></a><br/>
+                <a class="other_getprize_btn" href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <div id="tooManyPeople" style="display:none;">
+            <span class="manypeople_text"></span>
+            <div class="getprizeBtn">
+                <a class="replay_btn" href="javascript:void(0);"></a><br/>
+                <a class="other_getprize_btn" href="javascript:void(0);"></a>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
