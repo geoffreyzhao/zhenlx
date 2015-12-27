@@ -44,6 +44,7 @@
                 getprize_list.appendChild(li);
             }
 
+            /*游戏说明页 获奖人员名单*/
             var speed = 30;
             var stop = 3000;
             var stoptime = 4000;
@@ -75,6 +76,7 @@
                 timeprogress.style.display = 'block';
             },false);
 
+            /*游戏中屏幕点击*/
             var leafnum = 40;
             var treebox = document.getElementById('treebox');
             for(var i=0;i< leafnum;i++){
@@ -138,11 +140,45 @@
                 }
             },false)
 
-            var timenum=5;
+            /*游戏倒计时*/
+            /*var timenum=5;
             function timeCalculation(){
                 timenum--;
+                *//*if(timenum<0){
+                    time.style.display = 'none';
+                    timeprogress.style.display = 'none';
+                    fail.style.display = 'block';
+                }*//*
             }
-            setInterval(timeCalculation,1000);
+            setInterval(timeCalculation,1000);*/
+
+            var timenum=5;
+            /*var timecanvasContainer = document.getElementById('timecanvasContainer');*/
+            var timecanvas = document.getElementById('timecanvas');
+            var ctxtimecanvas = timecanvas.getContext('2d');
+
+            /*console.log(timecanvasContainer.clientWidth,timecanvasContainer.clientHeight);*/
+            ctxtimecanvas.width = document.getElementById('timecanvasContainer').clientWidth;
+            ctxtimecanvas.height = document.getElementById('timecanvasContainer').clientHeight;
+
+            ctxtimecanvas.beginPath();
+            /*ctxtimecanvas.strokeStyle = '#333333';*/
+            ctxtimecanvas.fillStyle = '#333333';
+            /*ctxtimecanvas.lineWidth = ctxtimecanvas.height;*/
+            ctxtimecanvas.fillRect(0,0,ctxtimecanvas.width,ctxtimecanvas.height);
+           /* ctxtimecanvas.moveTo(0,0);
+            ctxtimecanvas.lineTo(ctxtimecanvas.width,0);*/
+            ctxtimecanvas.fill();/*ctxtimecanvas.stroke();*/
+            ctxtimecanvas.closePath();
+            /*function timeCalculation(){
+                timenum--;
+                if(timenum<0){
+                    time.style.display = 'none';
+                    timeprogress.style.display = 'none';
+                    fail.style.display = 'block';
+                }
+            }
+            setInterval(timeCalculation,1000);*/
 
             body.addEventListener("webkitTransitionEnd", function(e) {
 //                alert('123');
@@ -162,6 +198,14 @@
                 success_noprize.style.display = 'block';
             },false);
 
+            var playgamebtn = document.getElementsByClassName('playgamebtn')[0];
+            var gameDescribe = document.getElementsByClassName('gameDescribe')[0];
+            var game = document.getElementsByClassName('game')[0];
+            playgamebtn.addEventListener('click',function(){
+                gameDescribe.style.display = 'none';
+                game.style.display = 'block';
+            },false);
+
         }
     </script>
 </head>
@@ -173,7 +217,7 @@
             <img class="lodingtext" src="../../mstatic/images/activity/loading.png" alt=""/>
         </div>
     </div>
-    <div class="gameDescribe" style="display:none;">
+    <div class="gameDescribe" style="display:blcok;">
         <span class="avater"></span>
         <div class="game_describe"></div>
         <div class="getprize_list_contain">
@@ -247,21 +291,23 @@
             <a class="playgamebtn" href="javascript:void(0);"></a>
         </div>
     </div>
-    <div class="game">
+    <div class="game" style="display:none;">
         <div id="treebox" class="gamebg">
             <span class="time" style="display:none;">23</span>
             <div class="timeprogress" style="display:none;">
                 <img class="timetext" src="../../mstatic/images/activity/surplus.png" alt=""/>
-                <canvas id="timecanvas"></canvas>
+                <div id="timecanvasContainer">
+                    <canvas id="timecanvas"></canvas>
+                </div>
             </div>
             <span class="tree"></span>
         </div>
         <div id="gamerule" style="display:block;">
-            <img class="rule" src="../../mstatic/images/activity/gamerule.png" alt=""/>
+            <img class="rule" src="../../mstatic/images/activity/gamerule.png" alt=""/><br/>
             <a id="startgame" href="javascript:void(0);"></a>
         </div>
         <div id="success" style="display:none;">
-            <img id="egg" src="../../mstatic/images/activity/egg.png" alt=""/>
+            <img id="egg" src="../../mstatic/images/activity/egg.png" alt=""/><br/>
             <span class="takeprize"></span>
         </div>
         <div id="success_noprize" style="display:none;">

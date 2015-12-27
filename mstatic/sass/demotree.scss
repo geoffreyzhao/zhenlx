@@ -183,16 +183,21 @@ ul,li{
   z-index:600;
 }
 .timeprogress{
+  width:100%;
   position:absolute;
   left:0;
   bottom:1.625rem;
   text-align:center;
 }
-#timecanvas{
+#timecanvasContainer{
   width:15.825rem;
   height:1.225rem;
   background:#5c2d28;
   border-radius:1.225rem;
+  margin:0 auto;
+}
+#timecanvas{
+
 }
 .timetext{
   width:3.6rem;
