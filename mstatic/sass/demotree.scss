@@ -57,7 +57,7 @@ ul,li{
 .getprize_list{
   height: 26rem;
   margin-top:0.625rem;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .getprize_list li{
   padding:0 2rem 0.875rem 2.4rem;
@@ -196,9 +196,6 @@ ul,li{
   border-radius:1.225rem;
   margin:0 auto;
 }
-#timecanvas{
-
-}
 .timetext{
   width:3.6rem;
   height:0.75rem;
@@ -222,10 +219,10 @@ ul,li{
   -moz-transform-origin:50% 100%;
   -o-transform-origin:50% 100%;
   transform-origin:50% 100%;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear;
-  -webkit-transition: all 2s linear;
-  -o-transition: all 2s linear;
+  transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 @-webkit-keyframes bodyShake {

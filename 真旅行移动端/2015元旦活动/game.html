@@ -45,23 +45,22 @@
             }
 
             /*游戏说明页 获奖人员名单*/
-            var speed = 30;
-            var stop = 3000;
-            var stoptime = 4000;
+            var speed = 15;
             var liheight = document.getElementsByTagName('li')[0].offsetHeight;
-
+            var listtranslatey = 0;
             function scroll(){
-                    if(getprize_list.scrollTop>=(getprize_list.scrollHeight-getprize_list.offsetHeight-1)){
-                        getprize_list.scrollTop = 0;
+                    if(listtranslatey <= (-(getprize_list.scrollHeight-getprize_list.offsetHeight-1))){
+                        /*getprize_list.style.webkitTransform = 'translateY(0)';*/
+                        listtranslatey = -10;
                     }else{
-                        getprize_list.scrollTop ++;
+                        listtranslatey -- ;
                     }
+                getprize_list.style.webkitTransform  = 'translate3D(0,'+listtranslatey+'px,0)';
             }
             var timer = setInterval(function(){
                 scroll();
             },speed);
 
-            /*clearInterval(timer);*/
 
             /*游戏*/
             /*开始给小树施肥按钮点击*/
@@ -110,6 +109,7 @@
 
                         spanleafs[clicknum - num].setAttribute('class','leaf leaf'+(clicknum- ( num-1 )));
                         time.innerHTML = clicknum-num+1;
+                        time.style.display = 'block';
                         if(time.innerHTML == leafnum){
                             time.style.display = 'none';
                             timeprogress.style.display = 'none';
@@ -184,7 +184,7 @@
 //                alert('123');
                 flag = true;
 
-                time.style.display = 'block';
+
 
                 if (body.className="shake") {
                     body.setAttribute('class','');
@@ -194,8 +194,10 @@
             var egg = document.getElementById('egg');
             var success_noprize = document.getElementById('success_noprize');
             egg.addEventListener('click',function(){
-                success.style.display = 'none';
-                success_noprize.style.display = 'block';
+                setTimeout(function(){
+                    success.style.display = 'none';
+                    success_noprize.style.display = 'block';
+                },1000);
             },false);
 
             var playgamebtn = document.getElementsByClassName('playgamebtn')[0];
@@ -297,7 +299,7 @@
             <div class="timeprogress" style="display:none;">
                 <img class="timetext" src="../../mstatic/images/activity/surplus.png" alt=""/>
                 <div id="timecanvasContainer">
-                    <canvas id="timecanvas"></canvas>
+                    <span id="timecanvas"></span>
                 </div>
             </div>
             <span class="tree"></span>
