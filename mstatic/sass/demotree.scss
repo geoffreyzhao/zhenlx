@@ -10,11 +10,38 @@ ul,li{
   padding:0;
   list-style:none;
 }
+a:focus {
+  outline: none;
+}
 
 /*loading页*/
 .loading{
   width:100%;
   height:100%;
+}
+#loadingContainer {
+  width:15.825rem;
+  height:1.225rem;
+  background:#5c2d28;
+  border-radius:1.225rem;
+  position: relative;
+  margin: 0 auto;
+}
+#loadingInnerBar {
+  width: 0;
+  height: 100%;
+  background-color: #f9ebc6;
+  position: absolute;
+  left: 0;
+  border-radius: 1.225rem;
+  -webkit-transition: width 3s ease-in-out;
+  -moz-transition: width 3s ease-in-out;
+  -ms-transition: width 3s ease-in-out;
+  -o-transition: width 3s ease-in-out;
+  transition: width 3s ease-in-out;
+}
+#loadingInnerBar.loaded {
+  width: 100%;
 }
 .loadingpagebg{
   width:100%;
@@ -195,28 +222,22 @@ ul,li{
   background:#5c2d28;
   border-radius:1.225rem;
   margin:0 auto;
+  position: relative;
 }
 #timecanvas{
   width:15.825rem;
   height:1.225rem;
-  display:inline-block;
-  background:#af3e2f;
-  border-radius:1.225rem;
-  transition: all 5s linear;
-  -moz-transition: all 5s linear;
-  -webkit-transition: all 5s linear;
-  -o-transition: all 5s linear;
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  border-radius: 1.225rem;
+  background-color: #af3e2f;
 }
 .timetext{
   width:3.6rem;
   height:0.75rem;
 }
 .tree {
- /* width: 6.7875rem;
-  height:6.4rem;*/
-  /*width: 13.575rem;
-  height:24.05rem;
-  transform:scale(0.36,0.36);*/
    width: 4.9rem;
   height:8.675rem;
   display:inline-block;
@@ -224,7 +245,7 @@ ul,li{
   background-size: 100% 100%;
   position:absolute;
   bottom:5.8rem;
-  left:50%;
+  left:49%;
   margin-left:-2.45rem;
   -webkit-transform-origin:50% 100%;
   -moz-transform-origin:50% 100%;
@@ -238,16 +259,16 @@ ul,li{
 
 @-webkit-keyframes bodyShake {
   0% { -webkit-transform: translate3d(0, 0, 0); -webkit-transform-origin: 50% 100%; }
-  25% { -webkit-transform: translate3d(-10px, -5px, -10px); -webkit-transform-origin: 50% 100%; }
-  50% { -webkit-transform: translate3d(0, 10px, 0); -webkit-transform-origin: 50% 100%; }
-  75% { -webkit-transform: translate3d(10px, 5px, 10px); -webkit-transform-origin: 50% 100%; }
+  25% { -webkit-transform: translate3d(-6px, -3px, -6px); -webkit-transform-origin: 50% 100%; }
+  50% { -webkit-transform: translate3d(0, 6px, 0); -webkit-transform-origin: 50% 100%; }
+  75% { -webkit-transform: translate3d(6px, 3px, 6px); -webkit-transform-origin: 50% 100%; }
   100% { -webkit-transform: translate3d(0, 0, 0); -webkit-transform-origin: 50% 100%; }
 }
 @keyframes bodyShake {
   0% { transform: translate3d(0, 0, 0); transform-origin: 50% 100%; }
-  25% { transform: translate3d(-10px, -5px, -10px); transform-origin: 50% 100%; }
-  50% { transform: translate3d(0, 10px, 0); transform-origin: 50% 100%; }
-  75% { transform: translate3d(10px, 5px, 10px); transform-origin: 50% 100%; }
+  25% { transform: translate3d(-6px, -3px, -6px); transform-origin: 50% 100%; }
+  50% { transform: translate3d(0, 6px, 0); transform-origin: 50% 100%; }
+  75% { transform: translate3d(6px, 3px, 6px); transform-origin: 50% 100%; }
   100% { transform: translate3d(0, 0, 0); transform-origin: 50% 100%; }
 }
 

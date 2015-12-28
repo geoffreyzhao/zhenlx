@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Document</title>
+    <title>结果</title>
     <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
 
     <script src="../../mstatic/js/base/jquery.min.js"></script>
@@ -28,6 +28,8 @@
         root.style.height = window.innerHeight + "px";
 
         window.onload = function(){
+            FastClick.attach(document.body);
+
             var getprize_btn_0 = document.getElementsByClassName('getprize_btn')[0];
             var getprize_btn_1 = document.getElementsByClassName('getprize_btn')[1];
             var popwindow = document.getElementById('getpricePopWindow');
@@ -63,7 +65,7 @@
     </script>
 </head>
 <body class="redbg">
-    <div id="getPrizeVoucher">
+    <div id="getPrizeVoucher" style="display: none;">
         <span class="voucher_title"></span>
         <div class="exchange">
             <img class="voucher" src="../../mstatic/images/activity/voucher.png" alt=""/><br/>
@@ -72,7 +74,7 @@
         <span class="exchange_method"></span><br/>
         <a class="other_getprize_btn" href="javascript:void(0);"></a>
     </div>
-    <div id="getPrizeBag" style="display:none;">
+    <div id="getPrizeBag" style="display:block;">
         <img class="prize_bag" src="../../mstatic/images/activity/prize_bag.png" alt=""/>
         <div class="getprizeBtn">
             <a class="getprize_btn" href="javascript:void(0);"></a><br/>

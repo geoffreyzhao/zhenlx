@@ -9,33 +9,6 @@
     <!-- <script src="../../mstatic/js/base/jquery.min.js"></script> -->
     <!-- <script src="../../mstatic/js/base/fastclick.js"></script> -->
 
-    <style type="text/css" media="screen">
-        #timecanvasContainer {
-            position: relative;
-        }
-        #timecanvas {
-            background-color: #af3e2f;
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            left: 0;
-            position: absolute;
-            border-radius: 1.225rem;
-            /*-webkit-transform: translate3d(0, 0, 0);
-               -moz-transform: translate3d(0, 0, 0);
-                -ms-transform: translate3d(0, 0, 0);
-                 -o-transform: translate3d(0, 0, 0);
-                    transform: translate3d(0, 0, 0);
-            -webkit-transition: width 5s linear;
-               -moz-transition: width 5s linear;
-                -ms-transition: width 5s linear;
-                 -o-transition: width 5s linear;
-                    transition: width 5s linear;*/
-        }
-        #timecanvas.stop {
-            /*width: 0;*/
-        }
-    </style>
 
     <script type="text/javascript">
         var root = document.getElementsByTagName("html")[0],
@@ -55,13 +28,16 @@
 
         root.style.height = window.innerHeight + "px";
 
+        function loadingBar() {
+            document.getElementById("loadingInnerBar").className = "loaded";
+        }
+
         window.onload = function(){
             /*加载页*/
-            var canvas=document.getElementById('loadingcanvas');
-            var ctx = canvas.getContext('2d');
-
-            /*canvas.width=+'rem';
-             canvas.height=+'rem';*/
+            document.getElementById("loadingInnerBar").addEventListener("webkitTransitionEnd", function(){
+                document.getElementsByClassName("loading")[0].style.display = "none";
+                document.getElementsByClassName("gameDescribe")[0].style.display = "block";
+            }, false);
 
             /*游戏说明页*/
             var getprize_list = document.getElementsByClassName('getprize_list')[0];
@@ -105,7 +81,7 @@
             var timerNumInterval;
 
             /*游戏中屏幕点击*/
-            var leafnum = 40;
+            var leafnum = 15;
             var treebox = document.getElementById('treebox');
             for(var i=0;i< leafnum;i++){
                 var spanleaf = document.createElement('span');
@@ -138,7 +114,6 @@
                         spanleafs[clicknum - num].style.display = 'inline-block';
                         spanleafs[clicknum - num].className = 'leaf leaf' + (clicknum - ( num - 1 ));
                         time.innerHTML = clicknum-num+1;
-                        // time.textContent = clicknum-num+1;
                         
                         clicknum++;
                     }
@@ -153,27 +128,25 @@
                 timeprogress.style.display = 'block';
 
                 setTimeout(function(){
-
-                    timecanvas.className = 'stop';
                     var timeWidthStep = timecanvas.clientWidth / 100;
-
                     timerNumInterval = setInterval(function(){
-
                         timerNum--;
-
                         if (timecanvas.style.width == "") {
                             timeWidth = timecanvas.clientWidth;
                         } else {
                             timeWidth = parseFloat(timecanvas.style.width);
                         }
-
-                        timecanvas.style.width = (timeWidth-timeWidthStep) + "px";
-                        console.log(timerNum);
+                        timecanvas.style.width = (timeWidth - timeWidthStep) + "px";
+                        if (timerNum == 10) {
+                            debugger;
+                        }
 
                         if (time.innerHTML == leafnum && timerNum >= 0) {
-                            time.style.display = 'none';
-                            timeprogress.style.display = 'none';
-                            success.style.display = 'block';
+                            setTimeout(function(){
+                                time.style.display = 'none';
+                                timeprogress.style.display = 'none';
+                                success.style.display = 'block';
+                            }, 1000);
 
                             clearInterval(timerNumInterval);
                         } else if (time.innerHTML < leafnum && timerNum == 0) {                            
@@ -215,14 +188,15 @@
     </script>
 </head>
 <body class="redbg">
-    <div class="loading" style="display:none;">
-        <img class="loadingpagebg" src="../../mstatic/images/activity/loadingpagebg.png" alt=""/>
+    <div class="loading" style="display:block;">
+        <img class="loadingpagebg" src="../../mstatic/images/activity/loadingpagebg.png" alt="" onload="loadingBar()"/>
         <div class="loadingprogress">
-            <canvas id="loadingcanvas"></canvas>
+            <!--<canvas id="loadingcanvas"></canvas>-->
+            <div id="loadingContainer"><span id="loadingInnerBar"></span></div>
             <img class="lodingtext" src="../../mstatic/images/activity/loading.png" alt=""/>
         </div>
     </div>
-    <div class="gameDescribe" style="display:blcok;">
+    <div class="gameDescribe" style="display:none;">
         <span class="avater"></span>
         <div class="game_describe"></div>
         <div class="getprize_list_contain">
