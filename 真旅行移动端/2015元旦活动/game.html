@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Document</title>
+    <title>游戏</title>
     <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
 
-    <!--<script src="../../mstatic/js/base/jquery.min.js"></script>
-    <script src="../../mstatic/js/base/fastclick.js"></script>-->
+    <!-- <script src="../../mstatic/js/base/jquery.min.js"></script> -->
+    <!-- <script src="../../mstatic/js/base/fastclick.js"></script> -->
+
+    <style type="text/css" media="screen">
+        #timecanvasContainer {
+            position: relative;
+        }
+        #timecanvas {
+            background-color: #af3e2f;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            left: 0;
+            position: absolute;
+            border-radius: 1.225rem;
+            /*-webkit-transform: translate3d(0, 0, 0);
+               -moz-transform: translate3d(0, 0, 0);
+                -ms-transform: translate3d(0, 0, 0);
+                 -o-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+            -webkit-transition: width 5s linear;
+               -moz-transition: width 5s linear;
+                -ms-transition: width 5s linear;
+                 -o-transition: width 5s linear;
+                    transition: width 5s linear;*/
+        }
+        #timecanvas.stop {
+            /*width: 0;*/
+        }
+    </style>
 
     <script type="text/javascript">
         var root = document.getElementsByTagName("html")[0],
@@ -66,14 +94,15 @@
             /*开始给小树施肥按钮点击*/
             var startgame = document.getElementById('startgame');
             var gamerule = document.getElementById('gamerule');
+            var timecanvas = document.getElementById("timecanvas");
             var timeprogress = document.getElementsByClassName('timeprogress')[0];
             var time = document.getElementsByClassName('time')[0];
             var success = document.getElementById('success');
             var fail = document.getElementById('fail');
-            startgame.addEventListener('click',function(){
-                gamerule.style.display = 'none';
-                timeprogress.style.display = 'block';
-            },false);
+
+            // 倒计时变量
+            var timerNum = 100;
+            var timerNumInterval;
 
             /*游戏中屏幕点击*/
             var leafnum = 40;
@@ -91,75 +120,77 @@
             var spanleafs = document.getElementsByClassName('leaf');
             var tree = document.getElementsByClassName('tree')[0];
             var body = document.getElementsByTagName('body')[0];
-            treebox.addEventListener('click',function(){
+            treebox.addEventListener('touchstart',function(){
                 if (clicknum < num) {
                     var treeclass = tree.className + ' big' + (clicknum + 1);
-                    console.log(treeclass);
                     tree.setAttribute('class',treeclass);
                     clicknum++;
                 }else{
-                    console.log('叶子出现 flag=' + flag);
+                    flag = true;
                     if(flag == true&&(clicknum - num+1)<=leafnum){
-                        console.log(flag);
-
-                        body.setAttribute('class','');
-
-                        body.setAttribute('class','shake');
-                        spanleafs[clicknum - num].style.display = 'inline-block';
-
-                        spanleafs[clicknum - num].setAttribute('class','leaf leaf'+(clicknum- ( num-1 )));
-                        time.innerHTML = clicknum-num+1;
-                        time.style.display = 'block';
-                        if(time.innerHTML == leafnum){
-                            time.style.display = 'none';
-                            timeprogress.style.display = 'none';
-                            success.style.display = 'block';
+                        if (time.innerHTML > 0 && time.style.display == 'none') {
+                            time.style.display = 'block';
                         }
-                        /*if(timenum<0){
-                            time.style.display = 'none';
-                            timeprogress.style.display = 'none';
-                            fail.style.display = 'block';
-                        }else{
-                            if(time.innerHTML == leafnum){
-                                time.style.display = 'none';
-                                timeprogress.style.display = 'none';
-                                success.style.display = 'block';
-                            }
-                        }*/
-                        /*if(time.innerHTML == leafnum&&timenum>=0){
-                            time.style.display = 'none';
-                            timeprogress.style.display = 'none';
-                            success.style.display = 'block';
-                        }else if(time.innerHTML != leafnum&&timenum<0){
-                            time.style.display = 'none';
-                            timeprogress.style.display = 'none';
-                            fail.style.display = 'block';
-                        }*/
+
+                        body.className = "";
+                        body.className = "shake";
+
+                        spanleafs[clicknum - num].style.display = 'inline-block';
+                        spanleafs[clicknum - num].className = 'leaf leaf' + (clicknum - ( num - 1 ));
+                        time.innerHTML = clicknum-num+1;
+                        // time.textContent = clicknum-num+1;
+                        
                         clicknum++;
                     }
                 }
             },false)
 
-            /*游戏倒计时*/
-            /*var timenum=5;
-            function timeCalculation(){
-                timenum--;
-                *//*if(timenum<0){
-                    time.style.display = 'none';
-                    timeprogress.style.display = 'none';
-                    fail.style.display = 'block';
-                }*//*
-            }
-            setInterval(timeCalculation,1000);*/
+            var timeWidth;          
 
-            body.addEventListener("webkitTransitionEnd", function(e) {
-//                alert('123');
+            // 开始游戏逻辑
+            startgame.addEventListener('click',function(){
+                gamerule.style.display = 'none';
+                timeprogress.style.display = 'block';
+
+                setTimeout(function(){
+
+                    timecanvas.className = 'stop';
+                    var timeWidthStep = timecanvas.clientWidth / 100;
+
+                    timerNumInterval = setInterval(function(){
+
+                        timerNum--;
+
+                        if (timecanvas.style.width == "") {
+                            timeWidth = timecanvas.clientWidth;
+                        } else {
+                            timeWidth = parseFloat(timecanvas.style.width);
+                        }
+
+                        timecanvas.style.width = (timeWidth-timeWidthStep) + "px";
+                        console.log(timerNum);
+
+                        if (time.innerHTML == leafnum && timerNum >= 0) {
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            success.style.display = 'block';
+
+                            clearInterval(timerNumInterval);
+                        } else if (time.innerHTML < leafnum && timerNum == 0) {                            
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            fail.style.display = 'block';
+
+                            clearInterval(timerNumInterval);
+                        }
+                    }, 50);
+                }, 10);                
+            },false);
+
+            body.addEventListener("webkitAnimationEnd", function(e) {
                 flag = true;
-
-
-
-                if (body.className="shake") {
-                    body.setAttribute('class','');
+                if (body.className == "shake") {
+                    body.className = "";
                 }
             },false);
 
@@ -267,9 +298,9 @@
     </div>
     <div class="game" style="display:none;">
         <div id="treebox" class="gamebg">
-            <span class="time" style="display:none;">23</span>
+            <span class="time" style="display:none;">0</span>
             <div class="timeprogress" style="display:none;">
-                <img class="timetext" src="../../mstatic/images/activity/surplus.png" alt=""/>
+                <!-- <img class="timetext" src="../../mstatic/images/activity/surplus.png" alt=""/> -->
                 <div id="timecanvasContainer">
                     <span id="timecanvas"></span>
                 </div>
