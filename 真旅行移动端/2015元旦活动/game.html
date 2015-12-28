@@ -152,34 +152,6 @@
             }
             setInterval(timeCalculation,1000);*/
 
-            var timenum=5;
-            /*var timecanvasContainer = document.getElementById('timecanvasContainer');*/
-            var timecanvas = document.getElementById('timecanvas');
-            var ctxtimecanvas = timecanvas.getContext('2d');
-
-            /*console.log(timecanvasContainer.clientWidth,timecanvasContainer.clientHeight);*/
-            ctxtimecanvas.width = document.getElementById('timecanvasContainer').clientWidth;
-            ctxtimecanvas.height = document.getElementById('timecanvasContainer').clientHeight;
-
-            ctxtimecanvas.beginPath();
-            /*ctxtimecanvas.strokeStyle = '#333333';*/
-            ctxtimecanvas.fillStyle = '#333333';
-            /*ctxtimecanvas.lineWidth = ctxtimecanvas.height;*/
-            ctxtimecanvas.fillRect(0,0,ctxtimecanvas.width,ctxtimecanvas.height);
-           /* ctxtimecanvas.moveTo(0,0);
-            ctxtimecanvas.lineTo(ctxtimecanvas.width,0);*/
-            ctxtimecanvas.fill();/*ctxtimecanvas.stroke();*/
-            ctxtimecanvas.closePath();
-            /*function timeCalculation(){
-                timenum--;
-                if(timenum<0){
-                    time.style.display = 'none';
-                    timeprogress.style.display = 'none';
-                    fail.style.display = 'block';
-                }
-            }
-            setInterval(timeCalculation,1000);*/
-
             body.addEventListener("webkitTransitionEnd", function(e) {
 //                alert('123');
                 flag = true;
