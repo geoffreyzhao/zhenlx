@@ -61,11 +61,24 @@
             closebtn.addEventListener('click',function(){
                 popwindow.style.display = 'none';
             },false);
+
+            var other_getprize_btn = document.getElementsByClassName('other_getprize_btn');
+            var clickShare = document.getElementsByClassName('clickShare')[0];
+            var redbg = document.getElementsByClassName('redbg')[0];
+            for(var i = 0;i < other_getprize_btn.length;i++){
+                other_getprize_btn[i].addEventListener('click',function(){
+                    clickShare.style.display = 'block';
+                },false);
+            }
+
+            clickShare.addEventListener('click',function(){
+                clickShare.style.display = 'none';
+            },false);
         }
     </script>
 </head>
 <body class="redbg">
-    <div id="getPrizeVoucher" style="display: none;">
+    <div id="getPrizeVoucher" style="display: block;">
         <span class="voucher_title"></span>
         <div class="exchange">
             <img class="voucher" src="../../mstatic/images/activity/voucher.png" alt=""/><br/>
@@ -74,7 +87,7 @@
         <span class="exchange_method"></span><br/>
         <a class="other_getprize_btn" href="javascript:void(0);"></a>
     </div>
-    <div id="getPrizeBag" style="display:block;">
+    <div id="getPrizeBag" style="display:none;">
         <img class="prize_bag" src="../../mstatic/images/activity/prize_bag.png" alt=""/>
         <div class="getprizeBtn">
             <a class="getprize_btn" href="javascript:void(0);"></a><br/>
@@ -87,6 +100,9 @@
             <a class="getprize_btn" href="javascript:void(0);"></a><br/>
             <a class="other_getprize_btn" href="javascript:void(0);"></a>
         </div>
+    </div>
+    <div class="clickShare">
+        <img src="../../mstatic/images/activity/shareImg.png" class="shareImg">
     </div>
     <div id="getpricePopWindow">
         <div id="blackcover"></div>

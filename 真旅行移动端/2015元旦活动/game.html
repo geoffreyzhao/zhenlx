@@ -137,9 +137,6 @@
                             timeWidth = parseFloat(timecanvas.style.width);
                         }
                         timecanvas.style.width = (timeWidth - timeWidthStep) + "px";
-                        if (timerNum == 10) {
-                            debugger;
-                        }
 
                         if (time.innerHTML == leafnum && timerNum >= 0) {
                             setTimeout(function(){
@@ -182,6 +179,18 @@
             playgamebtn.addEventListener('click',function(){
                 gameDescribe.style.display = 'none';
                 game.style.display = 'block';
+            },false);
+
+            var other_getprize_btn = document.getElementsByClassName('other_getprize_btn');
+            var clickShare = document.getElementsByClassName('clickShare')[0];
+            for(var i = 0;i < other_getprize_btn.length;i++){
+                other_getprize_btn[i].addEventListener('click',function(){
+                    clickShare.style.display = 'block';
+                },false);
+            }
+
+            clickShare.addEventListener('click',function(){
+                clickShare.style.display = 'none';
             },false);
 
         }
@@ -291,7 +300,7 @@
         </div>
         <div id="success_noprize" style="display:none;">
             <span class="noprize_text"></span>
-            <span class="noprize_qr"></span>
+            <span class="noprize_qr"><img src="../../mstatic/images/activity/no_prizeqr.png" alt=""/></span>
         </div>
         <div id="success_takedprize" style="display:none;">
             <span class="takedprize_text"></span>
@@ -313,6 +322,9 @@
                 <a class="replay_btn" href="javascript:void(0);"></a><br/>
                 <a class="other_getprize_btn" href="javascript:void(0);"></a>
             </div>
+        </div>
+        <div class="clickShare">
+            <img src="../../mstatic/images/activity/shareImg.png" class="shareImg">
         </div>
 
     </div>
