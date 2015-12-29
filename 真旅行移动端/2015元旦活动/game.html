@@ -6,8 +6,8 @@
     <title>游戏</title>
     <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
 
-    <!-- <script src="../../mstatic/js/base/jquery.min.js"></script> -->
-    <!-- <script src="../../mstatic/js/base/fastclick.js"></script> -->
+    <script src="../../mstatic/js/base/jquery.min.js"></script>
+    <script src="../../mstatic/js/base/fastclick.js"></script>
 
 
     <script type="text/javascript">
@@ -28,9 +28,43 @@
 
         root.style.height = window.innerHeight + "px";
 
+        // loading 加载动画（假的）
         function loadingBar() {
             document.getElementById("loadingInnerBar").className = "loaded";
         }
+
+        // 全局参数        
+        var leafnum = 15,   //  出现总叶子数
+            flag = false,   // 叶子出现标志
+            clicknum = 0,   //点击次数计数
+            num = 10,       //点击次数
+            timerNum = 100,
+            timecanvas_W;   
+
+        // 重置游戏
+        function resetGame() {
+
+            leafnum = 15;
+            flag = false;
+            clicknum = 0;
+            timerNum = 100;
+
+            $("#treebox").find(".time").html(0).hide();
+            $("#treebox").find("#timecanvas").css("width", timecanvas_W + "px");
+            $("#treebox").find(".timeprogress").show();
+            $("#treebox").find(".tree").removeClass().addClass("tree");
+            $("#treebox").find(".leaf").removeClass().addClass("leaf").hide();
+
+            document.getElementById("gamerule").style.display = "none";
+            document.getElementById("success").style.display = "none";
+            document.getElementById("success_noprize").style.display = "none";
+            document.getElementById("success_takedprize").style.display = "none";
+            document.getElementById("fail").style.display = "none";
+            document.getElementById("tooManyPeople").style.display = "none";
+
+            $("#gamerule").show();
+            document.getElementById("treebox").style.display = "block";
+        }        
 
         window.onload = function(){
             /*加载页*/
@@ -38,6 +72,10 @@
                 document.getElementsByClassName("loading")[0].style.display = "none";
                 document.getElementsByClassName("gameDescribe")[0].style.display = "block";
             }, false);
+
+            $("body").delegate(".replay_btn", "click", function(){
+                resetGame();
+            });
 
             /*游戏说明页*/
             var getprize_list = document.getElementsByClassName('getprize_list')[0];
@@ -77,11 +115,9 @@
             var fail = document.getElementById('fail');
 
             // 倒计时变量
-            var timerNum = 100;
             var timerNumInterval;
 
             /*游戏中屏幕点击*/
-            var leafnum = 15;
             var treebox = document.getElementById('treebox');
             for(var i=0;i< leafnum;i++){
                 var spanleaf = document.createElement('span');
@@ -89,16 +125,13 @@
                 treebox.appendChild(spanleaf);
                 spanleaf.style.display = "none";
             }
-
-            var flag = false;
-            var clicknum=0;   //点击次数计数
-            var num = 10 ;   //点击次数
+            
             var spanleafs = document.getElementsByClassName('leaf');
             var tree = document.getElementsByClassName('tree')[0];
             var body = document.getElementsByTagName('body')[0];
             treebox.addEventListener('touchstart',function(){
                 if (clicknum < num) {
-                    var treeclass = tree.className + ' big' + (clicknum + 1);
+                    var treeclass = tree.className + ' transition big' + (clicknum + 1);
                     tree.setAttribute('class',treeclass);
                     clicknum++;
                 }else{
@@ -120,7 +153,7 @@
                 }
             },false)
 
-            var timeWidth;          
+            var timeWidth;            
 
             // 开始游戏逻辑
             startgame.addEventListener('click',function(){
@@ -128,6 +161,7 @@
                 timeprogress.style.display = 'block';
 
                 setTimeout(function(){
+                    timecanvas_W = timecanvas.clientWidth;
                     var timeWidthStep = timecanvas.clientWidth / 100;
                     timerNumInterval = setInterval(function(){
                         timerNum--;

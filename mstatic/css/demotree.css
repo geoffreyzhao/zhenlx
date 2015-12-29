@@ -170,7 +170,9 @@ a:focus {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 1000; }
+  z-index: 1000;
+  text-align: center;
+}
 
 .rule {
   width: 15.775rem;
@@ -248,10 +250,14 @@ a:focus {
   -moz-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
+}
+
+.tree.transition {
   transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear; }
+  -o-transition: all 0.5s linear;
+}
 
 @-webkit-keyframes bodyShake {
   0% {

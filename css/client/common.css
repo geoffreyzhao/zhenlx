@@ -521,7 +521,7 @@ header .head {
     border-bottom:1px solid #51c2c0;
 }
 .erweima{
-    width:35%;
+    width:35%!important;
     float:left;
 }
 .erweima img{
