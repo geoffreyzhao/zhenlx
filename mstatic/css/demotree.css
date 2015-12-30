@@ -102,7 +102,7 @@ a:focus {
   background: #e6d6bd; }
 
 .name_user_getprize {
-  width: 5rem;
+  width: 4rem;
   height: 1rem;
   display: inline-block;
   margin-top: 0.3rem;
@@ -126,11 +126,35 @@ a:focus {
   margin-top: 1.1rem;
   float: right; }
 
-.prize_kinds_voucher {
-  width: 6.2rem;
-  height: 0.9rem;
-  background: url("../images/activity/getvoucher.png") no-repeat;
+/*.prize_kinds_voucher{
+  width:6.2rem;
+  height:0.9rem;
+  background:url("../images/activity/getvoucher.png") no-repeat;
   background-size: 6.2rem 0.875rem;
+  margin-top:1.1rem;
+  float:right;
+}*/
+.prize_kinds_voucher50 {
+  width: 8.125rem;
+  height: 0.9rem;
+  background: url("../images/activity/getvoucher50.png") no-repeat;
+  background-size: 8.125rem 0.875rem;
+  margin-top: 1.1rem;
+  float: right; }
+
+.prize_kinds_voucher100 {
+  width: 8.625rem;
+  height: 0.9rem;
+  background: url("../images/activity/getvoucher100.png") no-repeat;
+  background-size: 8.625rem 0.875rem;
+  margin-top: 1.1rem;
+  float: right; }
+
+.prize_kinds_voucher800 {
+  width: 8.625rem;
+  height: 0.9rem;
+  background: url("../images/activity/getvoucher800.png") no-repeat;
+  background-size: 8.625rem 0.875rem;
   margin-top: 1.1rem;
   float: right; }
 
@@ -170,9 +194,7 @@ a:focus {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 1000;
-  text-align: center;
-}
+  z-index: 1000; }
 
 .rule {
   width: 15.775rem;
@@ -250,14 +272,10 @@ a:focus {
   -moz-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
-}
-
-.tree.transition {
   transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-}
+  -o-transition: all 0.5s linear; }
 
 @-webkit-keyframes bodyShake {
   0% {
@@ -373,8 +391,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 4.95615rem;
-  left: 0.54244rem;
+  top: 9.62248rem;
+  left: 6.65571rem;
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   top: 15.25rem;
@@ -385,8 +403,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 17.4466rem;
-  left: 16.82423rem;
+  top: 12.77378rem;
+  left: 15.77848rem;
   top: 6.2rem;
   left: 14.9rem; }
 
@@ -395,8 +413,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 11.67497rem;
-  left: 8.40963rem;
+  top: 17.69028rem;
+  left: 2.20322rem;
   top: 1.5rem;
   left: 6.75rem; }
 
@@ -405,8 +423,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 17.53775rem;
-  left: 8.42104rem;
+  top: 6.36141rem;
+  left: 17.89178rem;
   top: 6.2rem;
   left: 8.9rem; }
 
@@ -415,8 +433,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 6.72725rem;
-  left: 14.80087rem;
+  top: 12.11384rem;
+  left: 8.13632rem;
   top: 19.5rem;
   left: 1.3rem; }
 
@@ -425,8 +443,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 5.14495rem;
-  left: 0.66498rem;
+  top: 6.00176rem;
+  left: 10.15206rem;
   top: 1.5rem;
   left: 0.8rem; }
 
@@ -435,8 +453,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 10.87296rem;
-  left: 2.46669rem;
+  top: 7.62646rem;
+  left: 16.29692rem;
   top: 13.925rem;
   left: 8.75rem; }
 
@@ -445,8 +463,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 4.15187rem;
-  left: 17.19669rem;
+  top: 8.34293rem;
+  left: 6.62024rem;
   top: 10.5rem;
   left: 2.5rem; }
 
@@ -455,8 +473,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 7.87482rem;
-  left: 15.76851rem;
+  top: 13.03011rem;
+  left: 3.01187rem;
   top: 10rem;
   left: 14rem; }
 
@@ -465,8 +483,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 6.41769rem;
-  left: 5.01628rem;
+  top: 16.38079rem;
+  left: 10.38275rem;
   top: 4.5rem;
   left: 0.25rem;
   background: url(../images/activity/leaf2.png) no-repeat;
@@ -477,8 +495,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 5.43531rem;
-  left: 6.39825rem;
+  top: 11.17737rem;
+  left: 1.23077rem;
   top: 6.2rem;
   left: 3.95rem;
   background: url(../images/activity/leaf1.png) no-repeat;
@@ -489,8 +507,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.0073rem;
-  left: 15.12906rem;
+  top: 18.26207rem;
+  left: 5.64008rem;
   top: 3.875rem;
   left: 11.2rem;
   background: url(../images/activity/leaf2.png) no-repeat;
@@ -501,8 +519,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 17.62748rem;
-  left: 10.54323rem;
+  top: 15.92758rem;
+  left: 5.94952rem;
   top: 9.25rem;
   left: 6.2rem; }
 
@@ -511,8 +529,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 7.75923rem;
-  left: 16.24428rem;
+  top: 2.94605rem;
+  left: 13.38724rem;
   top: 15.85rem;
   left: 12.5rem; }
 
@@ -521,8 +539,8 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 11.81695rem;
-  left: 16.79395rem;
+  top: 15.25833rem;
+  left: 2.87897rem;
   top: 14.5rem;
   left: 4.2rem; }
 
@@ -531,280 +549,280 @@ body.shake {
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 8.37582rem;
-  left: 0.12289rem; }
+  top: 9.9046rem;
+  left: 1.28067rem; }
 
 .leaf17 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 6.21305rem;
-  left: 7.20448rem; }
+  top: 17.45968rem;
+  left: 8.84663rem; }
 
 .leaf18 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 1.96819rem;
-  left: 17.7761rem; }
+  top: 9.4716rem;
+  left: 3.45531rem; }
 
 .leaf19 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 16.21274rem;
-  left: 18.34058rem; }
+  top: 3.17818rem;
+  left: 14.5443rem; }
 
 .leaf20 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 5.6087rem;
-  left: 9.24005rem; }
+  top: 10.79925rem;
+  left: 7.3735rem; }
 
 .leaf21 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 3.37615rem;
-  left: 5.17429rem; }
+  top: 12.3049rem;
+  left: 16.75837rem; }
 
 .leaf22 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 7.95271rem;
-  left: 0.12174rem; }
+  top: 18.47291rem;
+  left: 14.85703rem; }
 
 .leaf23 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 3.97527rem;
-  left: 4.83237rem; }
+  top: 15.3734rem;
+  left: 13.11416rem; }
 
 .leaf24 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 2.76649rem;
-  left: 13.91713rem; }
+  top: 16.81955rem;
+  left: 11.96595rem; }
 
 .leaf25 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 11.45416rem;
-  left: 17.75135rem; }
+  top: 1.3731rem;
+  left: 14.52266rem; }
 
 .leaf26 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 1.84227rem;
-  left: 8.41394rem; }
+  top: 7.45159rem;
+  left: 2.44907rem; }
 
 .leaf27 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 15.48227rem;
-  left: 12.07091rem; }
+  top: 16.3255rem;
+  left: 3.52633rem; }
 
 .leaf28 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 17.54029rem;
-  left: 2.08138rem; }
+  top: 0.06164rem;
+  left: 8.26048rem; }
 
 .leaf29 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 12.24652rem;
-  left: 4.04215rem; }
+  top: 1.86864rem;
+  left: 9.67117rem; }
 
 .leaf30 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 2.32847rem;
-  left: 15.77759rem; }
+  top: 12.59728rem;
+  left: 12.98398rem; }
 
 .leaf31 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 10.56311rem;
-  left: 13.56809rem; }
+  top: 13.64093rem;
+  left: 16.63455rem; }
 
 .leaf32 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 4.72489rem;
-  left: 17.44417rem; }
+  top: 7.41188rem;
+  left: 8.80698rem; }
 
 .leaf33 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 9.22161rem;
-  left: 6.63366rem; }
+  top: 12.29898rem;
+  left: 2.28851rem; }
 
 .leaf34 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 4.7807rem;
-  left: 1.33387rem; }
+  top: 12.51084rem;
+  left: 13.703rem; }
 
 .leaf35 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 2.92025rem;
-  left: 4.42584rem; }
+  top: 10.72578rem;
+  left: 4.13104rem; }
 
 .leaf36 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 15.52789rem;
-  left: 16.81522rem; }
+  top: 0.28459rem;
+  left: 13.48253rem; }
 
 .leaf37 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 13.81585rem;
-  left: 3.74067rem; }
+  top: 2.35138rem;
+  left: 5.59471rem; }
 
 .leaf38 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.36136rem;
-  left: 15.45856rem; }
+  top: 5.15237rem;
+  left: 10.83456rem; }
 
 .leaf39 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 4.70311rem;
-  left: 13.61153rem; }
+  top: 7.21323rem;
+  left: 4.63801rem; }
 
 .leaf40 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 2.59491rem;
-  left: 10.99604rem; }
+  top: 16.36152rem;
+  left: 0.79746rem; }
 
 .leaf41 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 2.88806rem;
-  left: 15.24655rem; }
+  top: 17.67132rem;
+  left: 3.32297rem; }
 
 .leaf42 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 16.21207rem;
-  left: 16.56681rem; }
+  top: 13.19252rem;
+  left: 12.85224rem; }
 
 .leaf43 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 3.83487rem;
-  left: 0.15835rem; }
+  top: 9.29511rem;
+  left: 16.98811rem; }
 
 .leaf44 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 16.47302rem;
-  left: 13.77167rem; }
+  top: 12.88209rem;
+  left: 12.44954rem; }
 
 .leaf45 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 17.87881rem;
-  left: 2.34571rem; }
+  top: 15.20718rem;
+  left: 17.96817rem; }
 
 .leaf46 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 13.48744rem;
-  left: 11.53045rem; }
+  top: 11.10799rem;
+  left: 17.58816rem; }
 
 .leaf47 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.61618rem;
-  left: 15.8404rem; }
+  top: 0.49524rem;
+  left: 15.63947rem; }
 
 .leaf48 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 4.07383rem;
-  left: 5.37272rem; }
+  top: 2.01912rem;
+  left: 5.9702rem; }
 
 .leaf49 {
   background: url(../images/activity/leaf2.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 0.40336rem;
-  left: 3.94321rem; }
+  top: 17.4144rem;
+  left: 4.7254rem; }
 
 .leaf50 {
   background: url(../images/activity/leaf1.png) no-repeat;
   background-size: cover;
   position: absolute;
   z-index: 1;
-  top: 11.56659rem;
-  left: 16.86058rem; }
+  top: 13.3445rem;
+  left: 6.6642rem; }
 
 #success {
   width: 100%;
