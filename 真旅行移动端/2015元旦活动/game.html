@@ -80,29 +80,32 @@
             /*游戏说明页*/
             var getprize_list = document.getElementsByClassName('getprize_list')[0];
             var lis = document.getElementsByTagName('li');
-            for(var i = 0;i < 5; i++){
-                var li = document.createElement('li');
-                li.innerHTML = lis[i].innerHTML;
-                getprize_list.appendChild(li);
-            }
-
-            /*游戏说明页 获奖人员名单*/
             var speed = 15;
             var liheight = document.getElementsByTagName('li')[0].offsetHeight;
             var listtranslatey = 0;
+
+            if(lis.length>5){
+                for(var i = 0;i < 5; i++){
+                    var li = document.createElement('li');
+                    li.innerHTML = lis[i].innerHTML;
+                    getprize_list.appendChild(li);
+                }
+
+                /*游戏说明页 获奖人员名单*/
+
+                var timer = setInterval(function(){
+                    scroll();
+                },speed);
+            }
             function scroll(){
-                    if(listtranslatey <= (-(getprize_list.scrollHeight-getprize_list.offsetHeight-1))){
-                        /*getprize_list.style.webkitTransform = 'translateY(0)';*/
-                        listtranslatey = -10;
-                    }else{
-                        listtranslatey -- ;
-                    }
+                if(listtranslatey <= (-(getprize_list.scrollHeight-getprize_list.offsetHeight-1))){
+                    /*getprize_list.style.webkitTransform = 'translateY(0)';*/
+                    listtranslatey = -10;
+                }else{
+                    listtranslatey -- ;
+                }
                 getprize_list.style.webkitTransform  = 'translate3D(0,'+listtranslatey+'px,0)';
             }
-            var timer = setInterval(function(){
-                scroll();
-            },speed);
-
 
             /*游戏*/
             /*开始给小树施肥按钮点击*/
