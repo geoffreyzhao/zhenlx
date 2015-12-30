@@ -8,9 +8,11 @@
 
     <script src="../../mstatic/js/base/jquery.min.js"></script>
     <script src="../../mstatic/js/base/fastclick.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
 
     <script type="text/javascript">
+
         var root = document.getElementsByTagName("html")[0],
                 w = window.innerWidth >= 750 ? 750 : window.innerWidth,
                 h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
@@ -38,8 +40,9 @@
             flag = false,   // 叶子出现标志
             clicknum = 0,   //点击次数计数
             num = 10,       //点击次数
-            timerNum = 100,
-            timecanvas_W;   
+            timecanvas_W,
+            gameTimeEndFlag = false,
+            startTouchFlag = false;   //  游戏时间结束表示
 
         // 重置游戏
         function resetGame() {
@@ -47,11 +50,12 @@
             leafnum = 40;
             flag = false;
             clicknum = 0;
-            timerNum = 100;
+            gameTimeEndFlag = false;
+            startTouchFlag = false;
 
             $("#treebox").find(".time").html(0).hide();
             $("#treebox").find("#timecanvas").css("width", timecanvas_W + "px");
-            $("#treebox").find(".timeprogress").show();
+            $("#treebox").find(".timeprogress").hide();
             $("#treebox").find(".tree").removeClass().addClass("tree");
             $("#treebox").find(".leaf").removeClass().addClass("leaf").hide();
 
@@ -98,12 +102,11 @@
                 },speed);
             }
             function scroll(){
-                if(listtranslatey <= (-(getprize_list.scrollHeight-getprize_list.offsetHeight-1))){
-                    /*getprize_list.style.webkitTransform = 'translateY(0)';*/
-                    listtranslatey = -10;
-                }else{
-                    listtranslatey -- ;
-                }
+                    if(listtranslatey <= (-(getprize_list.scrollHeight-getprize_list.offsetHeight-1))){
+                        listtranslatey = -10;
+                    }else{
+                        listtranslatey -- ;
+                    }
                 getprize_list.style.webkitTransform  = 'translate3D(0,'+listtranslatey+'px,0)';
             }
 
@@ -111,6 +114,7 @@
             /*开始给小树施肥按钮点击*/
             var startgame = document.getElementById('startgame');
             var gamerule = document.getElementById('gamerule');
+            var timecanvascontainer = document.getElementById("timecanvascontainer");
             var timecanvas = document.getElementById("timecanvas");
             var timeprogress = document.getElementsByClassName('timeprogress')[0];
             var time = document.getElementsByClassName('time')[0];
@@ -132,31 +136,65 @@
             var spanleafs = document.getElementsByClassName('leaf');
             var tree = document.getElementsByClassName('tree')[0];
             var body = document.getElementsByTagName('body')[0];
+            var codeFinished = true;
+
             treebox.addEventListener('touchstart',function(){
-                if (clicknum < num) {
-                    var treeclass = tree.className + ' transition big' + (clicknum + 1);
-                    tree.setAttribute('class',treeclass);
-                    clicknum++;
-                }else{
-                    flag = true;
-                    if(flag == true&&(clicknum - num+1)<=leafnum){
-                        if (time.innerHTML > 0 && time.style.display == 'none') {
-                            time.style.display = 'block';
+
+                startTouchFlag = true;
+
+                if (codeFinished) {
+
+                    codeFinished = false;
+
+                    if (clicknum < num) {
+
+                        if (!gameTimeEndFlag) {
+
+                            var treeclass = tree.className + ' transition big' + (clicknum + 1);
+                            tree.setAttribute('class',treeclass);
+                            clicknum++;
+                        } else {
+
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            fail.style.display = 'block';
                         }
+                    }else{
 
-                        body.className = "";
-                        body.className = "shake";
+                        if(!gameTimeEndFlag && (clicknum - num + 1) <= leafnum){
+                            if (time.innerHTML > 0 && time.style.display == 'none') {
+                                time.style.display = 'block';
+                            }
 
-                        spanleafs[clicknum - num].style.display = 'inline-block';
-                        spanleafs[clicknum - num].className = 'leaf leaf' + (clicknum - ( num - 1 ));
-                        time.innerHTML = clicknum-num+1;
-                        
-                        clicknum++;
+                            // body.className = "";
+                            // body.className = "shake";
+
+                            spanleafs[clicknum - num].style.display = 'inline-block';
+                            spanleafs[clicknum - num].className = 'leaf leaf' + (clicknum - ( num - 1 ));
+                            time.innerHTML = clicknum - num + 1;
+                            
+                            clicknum++;
+
+                        } else if (!gameTimeEndFlag && (clicknum - num + 1) >= leafnum) {
+
+                            setTimeout(function(){
+                                time.style.display = 'none';
+                                timeprogress.style.display = 'none';
+                                success.style.display = 'block';
+                            }, 1000);
+                        } else if (gameTimeEndFlag && (clicknum - num + 1) < leafnum) {
+
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            fail.style.display = 'block';
+                        }
                     }
+                    codeFinished = true;
                 }
+
             },false)
 
-            var timeWidth;            
+            var timeWidth;
 
             // 开始游戏逻辑
             startgame.addEventListener('click',function(){
@@ -165,9 +203,21 @@
 
                 setTimeout(function(){
                     timecanvas_W = timecanvas.clientWidth;
-                    var timeWidthStep = timecanvas.clientWidth / 100;
+                    var timeWidthStep = timecanvas.clientWidth / 5;
+
+                    setTimeout(function(){
+
+                        gameTimeEndFlag = true;
+
+                        if (!startTouchFlag || (clicknum - num + 1) < leafnum) {
+
+                            time.style.display = 'none';
+                            timeprogress.style.display = 'none';
+                            fail.style.display = 'block';
+                        }
+                    }, 5000);
                     timerNumInterval = setInterval(function(){
-                        timerNum--;
+
                         if (timecanvas.style.width == "") {
                             timeWidth = timecanvas.clientWidth;
                         } else {
@@ -175,30 +225,35 @@
                         }
                         timecanvas.style.width = (timeWidth - timeWidthStep) + "px";
 
-                        if (time.innerHTML == leafnum && timerNum >= 0) {
-                            setTimeout(function(){
-                                time.style.display = 'none';
-                                timeprogress.style.display = 'none';
-                                success.style.display = 'block';
-                            }, 1000);
-
-                            clearInterval(timerNumInterval);
-                        } else if (time.innerHTML < leafnum && timerNum == 0) {                            
-                            time.style.display = 'none';
-                            timeprogress.style.display = 'none';
-                            fail.style.display = 'block';
-
+                        if (gameTimeEndFlag) {
                             clearInterval(timerNumInterval);
                         }
-                    }, 50);
+
+                        // if (time.innerHTML == leafnum && timerNum >= 0) {
+                        //     setTimeout(function(){
+                        //         time.style.display = 'none';
+                        //         timeprogress.style.display = 'none';
+                        //         success.style.display = 'block';
+                        //     }, 1000);
+
+                        //     clearInterval(timerNumInterval);
+                        // } else if (time.innerHTML < leafnum && timerNum == 0) {                            
+                        //     time.style.display = 'none';
+                        //     timeprogress.style.display = 'none';
+                        //     fail.style.display = 'block';
+
+                        //     clearInterval(timerNumInterval);
+                        // }
+                    }, 1000);
                 }, 10);                
             },false);
 
             body.addEventListener("webkitAnimationEnd", function(e) {
-                flag = true;
-                if (body.className == "shake") {
-                    body.className = "";
-                }
+                // flag = true;
+                // if (body.className == "shake") {
+                //     body.className = "";
+                // }
+
             },false);
 
             var egg = document.getElementById('egg');
@@ -365,5 +420,91 @@
         </div>
 
     </div>
+
+    <script type="text/javascript">
+
+        if (location.href.indexOf('?') != -1) {    //  从朋友圈点开的链接默认会加参数 “？”是分隔符
+            // window.location.href="http://static.zhenlx.com/mstatic/special/taiguo_h5.html";           
+        }
+
+        $(function(){
+
+            // var link='http://static.zhenlx.com/mstatic/special/taiguo_h5.html';
+            var imgUrl = 'http://static.zhenlx.com/mstatic/images/activity/yuandan_thumb.jpg';
+
+            $.ajax({
+               type: "GET",
+               dataType: 'jsonp',
+               jsonp: 'callback',
+               url: "http://m.zhenlx.com/weixinShareServlet?url="+link,
+               success: function(data){
+                 wx.config({
+                     debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                     appId: 'wxe9ed2ca46ee5bd4d', // 必填，公众号的唯一标识
+                     timestamp: data.timestamp, // 必填，生成签名的时间戳
+                     nonceStr: data.nonceStr, // 必填，生成签名的随机串
+                     signature: data.signature,// 必填，签名，见附录1
+                     jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                 });                 
+               }
+            });
+
+            /*
+                有结果分享：呦嚯！XXX手速突破10啪/秒，种出一颗圆蛋。来试试你的手速呗，种出圆蛋100%有奖！
+
+                无结果分享：妈淡！手都戳抖了连颗蛋都种不出来。看什么看，不服你来~
+            */
+
+            wx.ready(function(){
+                wx.onMenuShareTimeline({
+                    title:'真旅行-敢是FUN-泰国走起', // 分享标题
+                    link: link, // 分享链接
+                    imgUrl: imgUrl, // 分享图标
+                    success: function () { 
+                        // 用户确认分享后执行的回调函数
+                        _paq.push(['trackEvent', 'weixinShare', '2016yuandan_game', 'timeLine']);
+                    },
+                    cancel: function () { 
+                        // 用户取消分享后执行的回调函数
+                        _paq.push(['trackEvent', 'weixinShareCancel', '2016yuandan_game', 'timeLine']);
+                    }
+                });
+
+                wx.onMenuShareAppMessage({
+                    title: '真旅行-敢是FUN-泰国走起', // 分享标题
+                    desc: '冬天这么冷，什么知觉都冷淡了，要去热闹的地方开荤', // 分享描述
+                    link: link, // 分享链接
+                    imgUrl: imgUrl, // 分享图标
+                    success: function () { 
+                        // 用户确认分享后执行的回调函数
+                         _paq.push(['trackEvent', 'weixinShare', '2016yuandan_game', 'appMessage']);
+                    },
+                    cancel: function () { 
+                        // 用户取消分享后执行的回调函数
+                        _paq.push(['trackEvent', 'weixinShareCancel', '2016yuandan_game', 'appMessage']);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        (function(){ var u=(("https:" == document.location.protocol) ? "https://" : "http://");
+            _paq.push(['setSiteId', 4]);
+            _paq.push(['setTrackerUrl', u+'pangu.tdxinfo.com/tracker.do']);
+            _paq.push(['setCookieDomain', '*.zhenlx.com']);
+            _paq.push(['setDomains', '*.zhenlx.com']);
+            var account = '';
+            if(account)_paq.push(['setUserId', account]);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript';
+            g.defer=true;
+            g.async=true;
+            g.src=u+'scpg.tdxinfo.com/js/pangumini.js?v=1.0.6';
+            s.parentNode.insertBefore(g,s); })();
+    </script>
 </body>
 </html>

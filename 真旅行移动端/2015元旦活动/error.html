@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>游戏</title>
+    <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
+
+    <script src="../../mstatic/js/base/jquery.min.js"></script>
+    <script src="../../mstatic/js/base/fastclick.js"></script>
+
+
+    <script type="text/javascript">
+
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 750 ? 750 : window.innerWidth,
+                h = window.innerHeight >= 1334 ? 1334 : window.innerHeight,
+                base_ratio = 750 / 1334,
+                actual_ratio = window.innerWidth / window.innerHeight;
+
+        if (actual_ratio >= base_ratio) {  // 宽屏，按高度算
+
+            root.style.fontSize = (h / 667) * 20 + "px";
+
+        } else if (actual_ratio < base_ratio) {  //  长屏，按宽度算
+
+            root.style.fontSize = (w / 375) * 20 + "px";
+        }
+
+        root.style.height = window.innerHeight + "px";
+    </script>
+</head>
+<body style="background-color: #e6d6bd;">
+    <div class="game">
+        <div id="tooManyPeople">
+            <span class="manypeople_text"></span>
+            <div class="getprizeBtn">
+                <a class="replay_btn" href="javascript:void(0);"></a><br/>
+                <a class="other_getprize_btn" id="other_getprize_btn" href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <div class="clickShare" id="clickShare">
+            <img src="../../mstatic/images/activity/shareImg.png" class="shareImg">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var btn = document.getElementById("other_getprize_btn"),
+            clickShare = document.getElementById("clickShare");
+
+        btn.addEventListener('click',function(){
+            clickShare.style.display = 'block';
+        },false);
+
+        clickShare.addEventListener('click',function(){
+            clickShare.style.display = 'none';
+        },false);
+    </script>
+</body>
+</html>
