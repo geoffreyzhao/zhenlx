@@ -271,11 +271,14 @@ a:focus {
   -webkit-transform-origin: 50% 100%;
   -moz-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
-  transform-origin: 50% 100%;
+  transform-origin: 50% 100%;  
+}
+.tree.transition {
   transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear; }
+  -o-transition: all 0.5s linear;
+}
 
 @-webkit-keyframes bodyShake {
   0% {
