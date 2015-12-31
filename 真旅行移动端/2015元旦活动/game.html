@@ -33,6 +33,11 @@
         // loading 加载动画（假的）
         function loadingBar() {
             document.getElementById("loadingInnerBar").className = "loaded";
+
+            setTimeout(function(){
+                document.getElementsByClassName("loading")[0].style.display = "none";
+                document.getElementsByClassName("gameDescribe")[0].style.display = "block";
+            }, 3000);
         }
 
         // 全局参数        
@@ -72,10 +77,10 @@
 
         window.onload = function(){
             /*加载页*/
-            document.getElementById("loadingInnerBar").addEventListener("webkitTransitionEnd", function(){
-                document.getElementsByClassName("loading")[0].style.display = "none";
-                document.getElementsByClassName("gameDescribe")[0].style.display = "block";
-            }, false);
+            // document.getElementById("loadingInnerBar").addEventListener("webkitTransitionEnd", function(){
+            //     document.getElementsByClassName("loading")[0].style.display = "none";
+            //     document.getElementsByClassName("gameDescribe")[0].style.display = "block";
+            // }, false);
 
             $("body").delegate(".replay_btn", "click", function(){
                 resetGame();
@@ -175,7 +180,7 @@
                             
                             clicknum++;
 
-                        } else if (!gameTimeEndFlag && (clicknum - num + 1) >= leafnum) {
+                        } else if ((clicknum - num + 1) >= leafnum) {
 
                             setTimeout(function(){
                                 time.style.display = 'none';
@@ -187,6 +192,7 @@
                             time.style.display = 'none';
                             timeprogress.style.display = 'none';
                             fail.style.display = 'block';
+
                         }
                     }
                     codeFinished = true;
