@@ -13,6 +13,9 @@ ul,li{
 a:focus {
   outline: none;
 }
+* {
+  -webkit-user-select: none;
+}
 
 /*loading页*/
 .loading{
@@ -75,7 +78,7 @@ a:focus {
   width:100%;
   height:25.7rem;
   background:url("../images/activity/game_describe.png") center center no-repeat;
-  background-size:15.825rem 25.7rem;
+  background-size:16rem 25.7rem;
 }
 .getprize_list_contain{
   margin-bottom:3.5rem;
@@ -201,8 +204,52 @@ a:focus {
 }
 .rule{
   width:15.775rem;
-  height:6.75rem;
-  margin-top:5.35rem;
+  height:7.375rem;
+  margin-top:4.75rem;
+}
+#count-down-3s {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  z-index:1000;
+  text-align: center;
+  display: none;
+  z-index: 101;
+}
+#cd-3,
+#cd-2,
+#cd-1 {
+  color: #af3e2f;
+  font-size: 6.5rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  font-family: Arial;
+}
+@-webkit-keyframes cdStart {
+  from { opacity: 1;  }
+  to { opacity: 0; -webkit-transform: scale(1.8, 2); }
+}
+#cd-3.start,
+#cd-2.start,
+#cd-1.start {
+  -webkit-animation: cdStart 1s 1;
+}
+#water {
+  display: inline-block;
+  width: 9.1rem;
+  height: 9.075rem;
+  background: url(../images/activity/water.png) center center no-repeat;
+  background-size: 9.1rem 9.075rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 7rem;
+  z-index: 100;
+  display: none;
 }
 #startgame{
   width:15.775rem;
@@ -224,7 +271,7 @@ a:focus {
   background:url(../images/activity/timebg.png) center center no-repeat;
   background-size:14.25rem 12.25rem;
   position:absolute;
-  top:7.5rem;
+  top:4.5rem;
   left:50%;
   margin-left:-7.125rem;
   font-size:6rem;
@@ -274,7 +321,9 @@ a:focus {
   -webkit-transform-origin:50% 100%;
   -moz-transform-origin:50% 100%;
   -o-transform-origin:50% 100%;
-  transform-origin:50% 100%;
+  transform-origin:50% 100%;  
+}
+.tree.transition {
   transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
@@ -321,7 +370,7 @@ $addy:(2.77-1) /$num;
   }
 }
 
-$leafnum:50;    //叶子数量
+$leafnum:60;    //叶子数量
 @for $i from 1 through $leafnum {
   $topvalue:random()*18.5+rem;
   $leftvalue:random()*18.75+rem;
@@ -406,13 +455,19 @@ $leafnum:50;    //叶子数量
   overflow:hiddden;
   text-align:center;
 }
+#egg_container {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 4rem;
+  z-index: 601;
+}
 #egg{
   width:16.875rem;
   height:16.775rem;
   display:inline-block;
   background:url(../images/activity/egg.png) no-repeat center center;
   background-size:16.875rem 16.775rem;
-  margin-top:1.25rem;
 }
 .takeprize{
   width:15.775rem;
@@ -653,10 +708,10 @@ $leafnum:50;    //叶子数量
 }
 .exchange_method{
   width:17.65rem;
-  height:48.125rem;
+  height:51.25rem;
   display: inline-block;
   background:url(../images/activity/exchangemethod.png) no-repeat center center;
-  background-size:17.65rem 48.125rem;
+  background-size:17.65rem 51.25rem;
 }
 #getPrizeVoucher .other_getprize_btn{
     margin-top:1.5rem;

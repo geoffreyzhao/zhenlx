@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>游戏</title>
-    <link rel="stylesheet" href="../../mstatic/css/demotree.css"/>
+    <!-- <link rel="stylesheet" href="../../mstatic/css/demotree.css"/> -->
+    <link rel="stylesheet" href="../../mstatic/sass/demotree.css"/>
 
     <script src="../../mstatic/js/base/jquery.min.js"></script>
     <script src="../../mstatic/js/base/fastclick.js"></script>
@@ -73,14 +74,19 @@
 
             $("#gamerule").show();
             document.getElementById("treebox").style.display = "block";
+
+            document.getElementById("water").style.display = 'none';
+
+            document.getElementById("count-down-3s").style.display = "none";
+            document.getElementById("cd-3").style.opacity = 0;
+            document.getElementById("cd-3").className = "";
+            document.getElementById("cd-2").style.opacity = 0;
+            document.getElementById("cd-2").className = "";
+            document.getElementById("cd-1").style.opacity = 0;
+            document.getElementById("cd-1").className = "";
         }        
 
         window.onload = function(){
-            /*加载页*/
-            // document.getElementById("loadingInnerBar").addEventListener("webkitTransitionEnd", function(){
-            //     document.getElementsByClassName("loading")[0].style.display = "none";
-            //     document.getElementsByClassName("gameDescribe")[0].style.display = "block";
-            // }, false);
 
             $("body").delegate(".replay_btn", "click", function(){
                 resetGame();
@@ -125,13 +131,15 @@
             var time = document.getElementsByClassName('time')[0];
             var success = document.getElementById('success');
             var fail = document.getElementById('fail');
+            var countdown = document.getElementById("count-down-3s");
+            var water = document.getElementById("water");
 
             // 倒计时变量
             var timerNumInterval;
 
             /*游戏中屏幕点击*/
             var treebox = document.getElementById('treebox');
-            for(var i=0;i< leafnum;i++){
+            for(var i=0;i< 50;i++){
                 var spanleaf = document.createElement('span');
                 spanleaf.setAttribute('class','leaf');
                 treebox.appendChild(spanleaf);
@@ -143,7 +151,7 @@
             var body = document.getElementsByTagName('body')[0];
             var codeFinished = true;
 
-            treebox.addEventListener('touchstart',function(){
+            water.addEventListener('touchstart',function(){
 
                 startTouchFlag = true;
 
@@ -166,7 +174,7 @@
                         }
                     }else{
 
-                        if(!gameTimeEndFlag && (clicknum - num + 1) <= leafnum){
+                        if(!gameTimeEndFlag){
                             if (time.innerHTML > 0 && time.style.display == 'none') {
                                 time.style.display = 'block';
                             }
@@ -180,10 +188,9 @@
                             
                             clicknum++;
 
-                        } else if ((clicknum - num + 1) >= leafnum) {
+                        } else if (gameTimeEndFlag && (clicknum - num + 1) >= leafnum) {
 
                             setTimeout(function(){
-                                time.style.display = 'none';
                                 timeprogress.style.display = 'none';
                                 success.style.display = 'block';
                             }, 1000);
@@ -206,60 +213,69 @@
             startgame.addEventListener('click',function(){
                 gamerule.style.display = 'none';
                 timeprogress.style.display = 'block';
+                countdown.style.display = 'block';
+
+                var cd1 = document.getElementById("cd-1"),
+                    cd2 = document.getElementById("cd-2"),
+                    cd3 = document.getElementById("cd-3");
 
                 setTimeout(function(){
+                    
                     timecanvas_W = timecanvas.clientWidth;
+                    cd3.className = 'start';
+                    water.style.display = 'block';
+
+                    cd3.addEventListener("webkitAnimationEnd", function(){
+                        cd2.className = "start";
+                    }, false);
+
+                    cd2.addEventListener("webkitAnimationEnd", function(){
+                        cd1.className = "start";
+                    }, false);
+                    
                     var timeWidthStep = timecanvas.clientWidth / 5;
 
-                    setTimeout(function(){
+                    cd1.addEventListener("webkitAnimationEnd", function(){
 
-                        gameTimeEndFlag = true;
+                        countdown.style.display = 'none';                        
 
-                        if (!startTouchFlag || (clicknum - num + 1) < leafnum) {
+                        setTimeout(function(){
+                            gameTimeEndFlag = true;
+                            if (!startTouchFlag || (clicknum - num + 1) < leafnum) {
 
-                            time.style.display = 'none';
-                            timeprogress.style.display = 'none';
-                            fail.style.display = 'block';
+                                time.style.display = 'none';
+                                timeprogress.style.display = 'none';
+                                fail.style.display = 'block';
+                            } else if (startTouchFlag && (clicknum - num + 1) >= leafnum) {
+
+                                setTimeout(function(){
+                                    timeprogress.style.display = 'none';
+                                    success.style.display = 'block';
+                                }, 1000);
+                            }
+                        }, 5000);
+
+                        if (timerNumInterval == undefined) {
+
+                            timerNumInterval = setInterval(function(){
+
+                                if (timecanvas.style.width == "") {
+                                    timeWidth = timecanvas.clientWidth;
+                                } else {
+                                    timeWidth = parseFloat(timecanvas.style.width);
+                                }
+                                timecanvas.style.width = (timeWidth - timeWidthStep) + "px";
+
+                                if (gameTimeEndFlag) {                                
+                                    clearInterval(timerNumInterval);
+                                    timerNumInterval = undefined;
+                                }
+                            }, 1000);
                         }
-                    }, 5000);
-                    timerNumInterval = setInterval(function(){
 
-                        if (timecanvas.style.width == "") {
-                            timeWidth = timecanvas.clientWidth;
-                        } else {
-                            timeWidth = parseFloat(timecanvas.style.width);
-                        }
-                        timecanvas.style.width = (timeWidth - timeWidthStep) + "px";
+                    }, false);
 
-                        if (gameTimeEndFlag) {
-                            clearInterval(timerNumInterval);
-                        }
-
-                        // if (time.innerHTML == leafnum && timerNum >= 0) {
-                        //     setTimeout(function(){
-                        //         time.style.display = 'none';
-                        //         timeprogress.style.display = 'none';
-                        //         success.style.display = 'block';
-                        //     }, 1000);
-
-                        //     clearInterval(timerNumInterval);
-                        // } else if (time.innerHTML < leafnum && timerNum == 0) {                            
-                        //     time.style.display = 'none';
-                        //     timeprogress.style.display = 'none';
-                        //     fail.style.display = 'block';
-
-                        //     clearInterval(timerNumInterval);
-                        // }
-                    }, 1000);
                 }, 10);                
-            },false);
-
-            body.addEventListener("webkitAnimationEnd", function(e) {
-                // flag = true;
-                // if (body.className == "shake") {
-                //     body.className = "";
-                // }
-
             },false);
 
             var egg = document.getElementById('egg');
@@ -386,14 +402,22 @@
                     <span id="timecanvas"></span>
                 </div>
             </div>
+            <div id="water"></div>
             <span class="tree"></span>
+        </div>
+        <div id="count-down-3s">
+            <p id="cd-3">3</p>
+            <p id="cd-2">2</p>
+            <p id="cd-1">1</p>
         </div>
         <div id="gamerule" style="display:block;">
             <img class="rule" src="../../mstatic/images/activity/gamerule.png" alt=""/><br/>
             <a id="startgame" href="javascript:void(0);"></a>
         </div>
         <div id="success" style="display:none;">
-            <img id="egg" src="../../mstatic/images/activity/egg.png" alt=""/><br/>
+            <div id="egg_container">
+                <img id="egg" src="../../mstatic/images/activity/egg.png" alt=""/><br/>
+            </div>
             <span class="takeprize"></span>
         </div>
         <div id="success_noprize" style="display:none;">
