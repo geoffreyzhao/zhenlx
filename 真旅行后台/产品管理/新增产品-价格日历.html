@@ -205,12 +205,75 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="sub-title">库存与套餐类型</div>
+                            <div class="sub-title">售价与库存</div>                            
+                            <div class="menu-block">
+                                <div class="pro-type-radio">
+                                    <span class="pro-type-title">类型</span>
+                                    <label class="radio active">
+                                        <span class="radioIcon"></span>
+                                        <span class="labelFonts">单人份</span>
+                                    </label>
+                                </div>
+                                <table class="stock-table">
+                                    <colgroup>
+                                        <col width="65"/>
+                                        <col width="110"/>
+                                        <col width=""/>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td><em class="red-star">*</em>成人</td>
+                                            <td><input type="text" style="width:100px;" readonly="readonly" value="1350" /></td>
+                                            <td>
+                                                <div class="checkboxContent">
+                                                    <label class="checkboxInfo active">
+                                                        <span class="checkboxIcon"></span>含税
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkboxContent">
+                                                    <label class="checkboxInfo active">
+                                                        <span class="checkboxIcon"></span>儿童
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td><input type="text" style="width:100px;"/></td>
+                                            <td>
+                                                <div class="checkboxContent">
+                                                    <label class="checkboxInfo active">
+                                                        <span class="checkboxIcon"></span>含税
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><em class="red-star">*</em>单房差</td>
+                                            <td><input type="text" style="width:100px;" data-cv="required" data-ct="单房差" data-cp="right"/></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><em class="red-star">*</em>可用库存</td>
+                                            <td colspan="2">
+                                                <input type="text" style="width:100px;" data-cv="required" data-ct="可用库存" data-cp="left"/>人
+                                                <span style="margin-left:10px;">已用<em>0</em>人</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><em class="red-star">*</em>市场价</td>
+                                            <td><input type="text" style="width:100px;" data-cv="required" data-ct="市场价" data-cp="top"/></td>
+                                            <td>
+                                                <span class="gray-font">仅展示用</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="sub-title">套餐设置</div>
                             <div class="stock-block">
                                 <div class="stock-num clearfix">
-                                    <span>总库存数：<input type="text" style="width:60px;"></span>
-                                    <span style="line-height: 30px;margin-left:5px;">已用<em style="font-weight:bold;"> 2 </em>人</span><br>
-                                    <span class="market-price">市场均价：<input type="text" style="width:60px;"> 元</span>
                                     <button class="commonButton blue-45c8dcButton addPriceType">新增套餐类型</button>
                                 </div>
                                 <div class="stock-cont">
@@ -231,70 +294,7 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- <div class="pro-type-radio">
-                                <span class="pro-type-title">类型</span>
-                                <label class="radio active">
-                                    <span class="radioIcon"></span>
-                                    <span class="labelFonts">单人份</span>
-                                </label>
-                            </div>
-                            <table class="stock-table">
-                                <colgroup>
-                                    <col width="65"/>
-                                    <col width="110"/>
-                                    <col width=""/>
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <td><em class="red-star">*</em>成人</td>
-                                        <td><input type="text" style="width:100px;" readonly="readonly" value="1350" /></td>
-                                        <td>
-                                            <div class="checkboxContent">
-                                                <label class="checkboxInfo active">
-                                                    <span class="checkboxIcon"></span>含税
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="checkboxContent">
-                                                <label class="checkboxInfo active">
-                                                    <span class="checkboxIcon"></span>儿童
-                                                </label>
-                                            </div>
-                                        </td>
-                                        <td><input type="text" style="width:100px;"/></td>
-                                        <td>
-                                            <div class="checkboxContent">
-                                                <label class="checkboxInfo active">
-                                                    <span class="checkboxIcon"></span>含税
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><em class="red-star">*</em>单房差</td>
-                                        <td><input type="text" style="width:100px;" data-cv="required" data-ct="单房差" data-cp="right"/></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><em class="red-star">*</em>可用库存</td>
-                                        <td colspan="2">
-                                            <input type="text" style="width:100px;" data-cv="required" data-ct="可用库存" data-cp="left"/>人
-                                            <span style="margin-left:10px;">已用<em>0</em>人</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><em class="red-star">*</em>市场价</td>
-                                        <td><input type="text" style="width:100px;" data-cv="required" data-ct="市场价" data-cp="top"/></td>
-                                        <td>
-                                            <span class="gray-font">仅展示用</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table> -->
+                            </div>                          
                             <div class="sub-title">预订条件</div>
                             <div class="order-condition">
                                 <span><em class="red-star">*</em>提前</span>
@@ -386,7 +386,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="commonButton blue-45c8dcButton" data-dismiss="modal">取消</button>
-                    <button type="button" class="commonButton red-fe6869Button" data-dismiss="modal">保存</button>
+                    <button type="button" class="commonButton red-fe6869Button" data-dismiss="modal">新增</button>
                 </div>
             </div>
         </div>
