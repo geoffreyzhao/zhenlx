@@ -1354,7 +1354,12 @@ ul.common-tab > li.rest {
 
 .calTable .tdCont .onsale .price {
     color: #e46c14;
-    line-height: 20px;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.calTable .tdCont .onsale .price em {
+    font-size: 12px;
 }
 
 .calTable .tdCont .soldout .leftNum {
@@ -1621,7 +1626,7 @@ ul.common-tab > li.rest {
 }
 
 .trip-info-block {
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #d4efee;
 }
 
@@ -1637,8 +1642,8 @@ ul.common-tab > li.rest {
 
 .trip-info-table tr:last-child th,
 .trip-info-table tr:last-child td {
-    padding-top: 0;
-    padding-bottom: 0;
+    /*padding-top: 0;*/
+    /*padding-bottom: 0;*/
 }
 
 .trip-info-table td:last-child {
@@ -2690,4 +2695,66 @@ ul.common-tab > li.rest {
 .cal-mon-tab-container.limit-width {
     width: 630px;
     position: relative;
+}
+
+.prod-type-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #d4efee;
+}
+
+.prod-type-block .title {
+    color: #ababab;
+}
+
+.present-icon {
+    display: inline-block;
+    background: url(../../images/client/icon_tc.png) no-repeat 0 0;
+    width: 18px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+.prod-by-menu label.radio {
+    margin-left: 0;
+    display: inline-block;
+}
+
+.prod-by-menu label.radio.active {
+    color: #e46c14;
+}
+
+.prod-by-menu label.radio.disabled {
+    color: #ababab;
+}
+
+.prod-by-menu label.radio .radioIcon {
+    margin-left: 2px;
+    margin-top: -2px;
+}
+
+.prod-by-menu label.radio .menu-title {
+    width: 210px;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.prod-type-item {
+    border: 1px solid #f9f9f9;
+    padding: 10px;
+    margin: 0 -10px;
+}
+
+.prod-type-item.current {
+    border: 1px solid #e46c14;
+}
+
+.prod-by-menu .more {
+    color: #ababab;
+    cursor: pointer;
+    float: right;
+    margin-top: -15px;
 }

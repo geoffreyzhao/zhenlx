@@ -196,9 +196,9 @@
                                     <th>目的地:</th>
                                     <td>暹粒</td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td><span class="person-icon"></span></td>
-                                    <!-- <th colspan="2">
+                                    <th colspan="2">
                                         <span>成人:</span>
                                         <div class="dropdown" style="width: 56px;">
                                             <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
@@ -225,7 +225,7 @@
                                                 <li><a href="javascript:void(0);">4</a></li>
                                             </ul>
                                         </div>
-                                    </th> -->
+                                    </th>
                                     <th>选择套餐:</th>
                                     <td>
                                         <div class="dropdown" style="width: 196px;">
@@ -246,9 +246,72 @@
                                     <td colspan="3">
                                         <div class="menu-intr-text">套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套餐描述套</div>
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
+                    </div>
+                    <div class="prod-type-block">
+                        <div class="prod-type-item current">
+                            <div class="prod-by-person">
+                                <span class="person-icon"></span>
+                                <span class="title" style="margin-left:8px;">成人:</span>
+                                <div class="dropdown" style="width: 56px;">
+                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                        <span class="activeFonts">2</span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">1</a></li>
+                                        <li class="active"><a href="javascript:void(0);">2</a></li>
+                                        <li><a href="javascript:void(0);">3</a></li>
+                                        <li><a href="javascript:void(0);">4</a></li>
+                                    </ul>
+                                </div>
+                                <span class="title" style="margin-left:10px;">儿童(2-12周岁):</span>
+                                <div class="dropdown" style="width: 56px;">
+                                    <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                        <span class="activeFonts">0</span>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="active"><a href="javascript:void(0);">0</a></li>
+                                        <li><a href="javascript:void(0);">1</a></li>
+                                        <li><a href="javascript:void(0);">2</a></li>
+                                        <li><a href="javascript:void(0);">3</a></li>
+                                        <li><a href="javascript:void(0);">4</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prod-type-item">
+                            <div class="prod-by-menu" style="margin-top: 5px;">
+                                <span class="present-icon" style="margin-top:-5px;"></span>
+                                <span class="title" style="margin-left:8px;">选择套餐:</span>
+                                <div class="radioContent">
+                                    <label class="radio active">
+                                        <span class="commonIcon radioIcon"></span>
+                                        <span class="price">￥2099 - </span>
+                                        <span class="menu-title">闺蜜行，温馨双人间双人间</span>
+                                    </label>
+                                    <label class="radio">
+                                        <span class="commonIcon radioIcon"></span>
+                                        <span class="price">￥2299 - </span>
+                                        <span class="menu-title">couple出游，豪华大床房</span>
+                                    </label>
+                                    <label class="radio disabled">
+                                        <span class="commonIcon radioIcon"></span>
+                                        <span class="price">￥2999 - </span>
+                                        <span class="menu-title">一家出游，baby不占床</span>
+                                    </label>
+                                    <label class="radio" style="display: none;">
+                                        <span class="commonIcon radioIcon"></span>
+                                        <span class="price">￥2999 - </span>
+                                        <span class="menu-title">okokokokokokokokokokokokokokokokok</span>
+                                    </label>
+                                </div>
+                                <span class="more">+ 更多</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="order-block">
                         <div class="cur-price">
@@ -2593,6 +2656,34 @@
                     $(this).show();
                 }
             });
+        }
+    });
+
+    // 选择人数 or 套餐
+    $(".prod-type-item").click(function(){
+        $(".prod-type-item").removeClass("current");
+        $(this).addClass("current");
+    });
+
+    // 更多套餐展示
+    $(".prod-by-menu .more").click(function(){
+
+        if (!$(this).hasClass("fold")) {    //  展开操作
+
+            $(".prod-by-menu .radioContent label").show(); 
+            $(this).html("- 收起");
+            $(this).addClass("fold");           
+        } else {    //  收起操作
+
+            $(".prod-by-menu .radioContent label").each(function(index){
+                if (index < 3) {    //  只显示前三个
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+            $(this).html("+ 更多");
+            $(this).removeClass("fold");
         }
     });
 </script>
