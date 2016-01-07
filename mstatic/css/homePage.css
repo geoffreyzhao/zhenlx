@@ -1140,6 +1140,7 @@
     display: inline-block;
     cursor: pointer;
     background-color:#fff;
+    box-sizing: border-box;
 }
 .menu-list ul li:active{
     background-color:#f7f7f7;
@@ -1150,6 +1151,11 @@
 }
 .changemenu{
     overflow:hidden;
+}
+.changemenu ul li{
+    padding:0;
+     height: 1.75rem;
+      line-height: 1.75rem;
 }
 .changemenu .monthtab{
     /* width:11.4rem; */
@@ -1291,13 +1297,19 @@
     position: relative;
     padding-top:0.4rem;
     margin-bottom:0.4rem;
+    padding-bottom:0.4rem;
     border-top: 2px solid #3fc0ae;
+    background-color:#fff;
 }
 .menu-sum{
     padding:0 0.5rem;
     line-height: 2rem;
     margin:0.1rem 0;
-    color:#3fc0ae;
+    /* color:#3fc0ae; */
+    color:#333;
+}
+.menu-sum-box.current{
+    background-color:#e4fbf8 !important;
 }
 .menu-sum .child-state {
     font-size: 0.6rem;
@@ -1318,64 +1330,91 @@
 }
 .counter{
     display: inline-block;
-    vertical-align: middle;
     float: right;
     width: 12.5rem;
     text-align: right;
+      margin: 1px;
 }
 .counter-item{
-    width:1.45rem;
-    height:1.45rem;
+    width:1.55rem;
+    height:1.5rem;
+    line-height: 1.5rem;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
+    margin-bottom:0.2rem;
 }
 .counter-minus{
-    background:url(../../mstatic/images/minusIcon.png) no-repeat center center;
-    background-size:100%;
+    color:#3fc0ae;
+    font-size:0.7rem;
+    border:1px solid #3fc0ae;
+    border-right: 0;
+    cursor:pointer;
 }
 .counter-add{
-    background:url(../../mstatic/images/addIcon.png) no-repeat center center;
-    background-size:100%;
+    color:#3fc0ae;
+    font-size:0.85rem;
+    border:1px solid #3fc0ae;
+    border-left: 0;
+    cursor:pointer;
+}
+.counter-add:hover,.counter-add:active,.counter-minus:hover,.counter-minus:active{
+    color:#fff;
+    background-color:#3fc0ae; 
 }
 .counter-disable, .counter-disable:active{
-    background-color:none;
-    color:#fff;
-    font-size: 1.5rem;
+    background-color:#eee!important;
+    color:#999!important;
 }
 .counter-num{
     width:3rem;
-    border-radius:0.2rem;
-    border:2px solid #3fc0ae;
+    border:1px solid #3fc0ae;
     background-color:#fff;
     color:#333;
     font-size: 0.75rem;
-    margin:0 0.7rem;
-    line-height: 1.45rem;
+    box-sizing: border-box;
 }
 .moduleTitle{
     font-size: 0.75rem;
     background-color: #3fc0ae;
-    padding: 0.625rem 0;
-    text-align: center;
+    padding: 0.625rem 0 0.625rem 0.75rem;
+    /* text-align: center; */
     color: #ffffff;
     cursor: pointer;
 }
-.setMeal02List{
+/* .setMeal02List{
     max-height: 11.375rem;
     overflow-y: auto;
     overflow-x: hidden;
+} */
+.setMeal02List li.disable .liTitle{
+    color:#ababab;
+}
+.red{
+    color:#f93434;
+}
+.setMeal02List li.disable .liTitle .red{
+    color:#ababab;
+}
+.setMealTitle{
+    text-align:center;
+    color:#3fc0ae;
+    line-height:1.5rem;
 }
 .setMeal02List li{
     width: 99.2%;
     margin: 0.375rem 0;  
     cursor: pointer;
+    background-color: #ffffff;
 }
 .setMeal02List .liTitle{
     font-size: 0.65rem;
     padding: 0.5rem 1.25rem;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     color: #333333;
+}
+.setMeal02List .current{
+    background:#e4fbf8;
 }
 .setMeal02List .current .liTitle{
     color: #049a85;
@@ -1384,7 +1423,9 @@
 .setMeal02List .liDetails{
     font-size: 0.6rem;
     color: #666666;
-    margin: 0.5rem 1.25rem 0.75rem;
+    /* margin: 0.5rem 1.25rem 0.75rem; */
+    margin: 0.5rem 1.25rem 0;
+    padding-bottom:0.75rem;
     line-height: 0.9rem;
     display: none;
 }
@@ -1392,13 +1433,21 @@
     display: block;
 }
 .windowContent{
-    margin: 0.5rem 0;
+    margin-bottom: 0.5rem;
 }
 .windowContent .changeModule{
     display: none;
 }
 .windowContent.current .changeModule{
     display: block;
+}
+.font1rem{
+    font-size:1rem;
+    margin-right:0.1rem;
+}
+.redf05{
+    color:#f93434;
+    font-size:0.5rem;
 }
 /** end **/
 

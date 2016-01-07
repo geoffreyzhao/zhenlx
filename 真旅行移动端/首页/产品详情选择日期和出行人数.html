@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/swiper.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/homePage.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <!-- <script src="http://10.3.40.3:8080/target/target-script-min.js#anonymous"></script> -->
+    <title>产品详情选择日期和出行人数</title>
+
+    <script type="text/javascript">
+        $(function(){
+
+            var root;
+            var _w;
+            var w;
+
+            screenchange();
+
+            window.addEventListener('orientationchange', function(event){
+                /*旋转至竖屏*/
+               if ( (window.orientation == 180 || window.orientation==0)&&(sessionStorage.s_fontsize==undefined)) {/*初始横屏加载切换至竖屏*/
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                    sessionStorage.s_fontsize = root.style.fontSize;
+                }
+
+                root.style.minHeight = window.innerHeight + "px";
+            });
+
+            function screenchange(){
+                root = document.getElementsByTagName("html")[0];
+
+                if(window.orientation==undefined){
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                }else{
+                        if ( window.orientation == 180 || window.orientation==0 ) {  /*竖屏加载*/
+                            _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                            w = _w >= 640 ? 640 : _w;
+
+                            root.style.fontSize = (w / 320) * 20 + "px";
+                            sessionStorage.s_fontsize = root.style.fontSize;
+                        }
+                        
+                        if( window.orientation == 90 || window.orientation == -90 ) {  /*横屏加载*/ 
+                            if(sessionStorage.s_fontsize==undefined){   /*初始横屏加载*/
+                                var w1 = window.innerHeight<= window.screen.height ? window.innerHeight : window.screen.height;
+                                var w2 = w1 >= 640 ? 640 : w1;
+
+                                root.style.fontSize = (w2 / 320) * 20 + "px";
+
+                            }else{
+                                root.style.fontSize = sessionStorage.s_fontsize;
+                            }
+                        }
+                }
+                
+                root.style.minHeight = window.innerHeight + "px";
+            }
+
+        });
+        
+        
+
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div class="headerBar">
+        <div class="header">
+            <a href="javascript:;" class="back">
+                <i class="back-arrow"></i>
+                <em class="back-border"></em>
+            </a>
+            <span class="title">选择日期和出行人数</span>
+                <span class="acut-menu">
+                    <span class="menu-pop">
+                        <a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+                            <img class="acut-img" src="../../mstatic/images/acut-img.png">
+                        </a>
+                        <div class="menu-pop-container">
+                            <i class="arrow-up"></i>
+                            <ul>
+                                <li><a data-role="none" href="javascript:;">用户中心</a></li>
+                                <li><a data-role="none" href="javascript:;">退出账号</a></li>
+                            </ul>
+                        </div>
+                    </span>
+                    <span class="menu-btn">
+                        <span class="menu-img"></span>
+                        <div class="menu-list-container">
+                            <i class="arrow-up"></i>
+                            <ul class="menu-list">
+                                <li>
+                                    <a data-role="none" href="javascript:;">产品列表</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的订单</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的钱包</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">私信</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </span>
+                </span>
+        </div>
+    </div>
+    <div class="detail-content" style="margin-bottom:2.575rem;background-color:transparent;">
+        <div class="bottomWindowModule">
+            <div class="windowContent current">
+                    <div class="moduleTitle">请选择出行日期</div>
+                    <div class="">
+                        <div class="menu-list changemenu">
+                            <span class="left-month-btn disable"></span>
+                            <div class="monthtab">
+                                <ul class="clearfix">
+                                    <li class="list-cut">06月</li>
+                                    <li>07月</li>
+                                    <li>08月</li>
+                                    <li>09月</li>
+                                    <li>10月</li>
+                                    <li>11月</li>
+                                    <li>12月</li>
+                                    <li>01月</li>
+                                    <li>02月</li>
+                                    <li>03月</li>
+                                    <li>04月</li>
+                                    <li>05月</li>
+                                    <li>07月</li>
+                                    <li>08月</li>
+                                </ul>
+                            </div>
+                            <span class="right-month-btn"></span>
+                        </div>
+                        <div id="menu-row-box">
+                            <div class="menu-row">
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">6月1日</div>
+                                    <div class="ui-block-b">周四</div>
+                                    <div class="ui-block-c">余票10</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">6月4日</div>
+                                    <div class="ui-block-b">周五</div>
+                                    <div class="ui-block-c sold-out">售罄</div>
+                                    <div class="ui-block-d">￥1978</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">6月5日</div>
+                                    <div class="ui-block-b">周六</div>
+                                    <div class="ui-block-c">余票6</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">6月5日</div>
+                                    <div class="ui-block-b">周日</div>
+                                    <div class="ui-block-c">余票3</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">6月5日</div>
+                                    <div class="ui-block-b">周一</div>
+                                    <div class="ui-block-c">余票7</div>
+                                    <div class="ui-block-d">
+                                        <p><span class="menu-row-til">成人：</span>￥99999</p>
+                                        <p><span class="menu-row-til">儿童：</span><span class="nenu-row-num">￥99999</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-row hidden">
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">7月2日</div>
+                                    <div class="ui-block-b">周三</div>
+                                    <div class="ui-block-c">余票20</div>
+                                    <div class="ui-block-d">￥1988</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">7月3日</div>
+                                    <div class="ui-block-b">周四</div>
+                                    <div class="ui-block-c sold-out">售罄</div>
+                                    <div class="ui-block-d">￥2199</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">7月4日</div>
+                                    <div class="ui-block-b">周五</div>
+                                    <div class="ui-block-c">余票11</div>
+                                    <div class="ui-block-d">￥3888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">7月5日</div>
+                                    <div class="ui-block-b">周六</div>
+                                    <div class="ui-block-c">余票21</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">7月6日</div>
+                                    <div class="ui-block-b">周日</div>
+                                    <div class="ui-block-c sold-out">售罄</div>
+                                    <div class="ui-block-d">￥2199</div>
+                                </div>
+                            </div>
+                            <div class="menu-row hidden">
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">8月1日</div>
+                                    <div class="ui-block-b">周四</div>
+                                    <div class="ui-block-c">余票28</div>
+                                    <div class="ui-block-d">￥2008</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">8月2日</div>
+                                    <div class="ui-block-b">周五</div>
+                                    <div class="ui-block-c sold-out">余票12</div>
+                                    <div class="ui-block-d">
+                                        <p><span class="menu-row-til">成人：</span>￥99999</p>
+                                        <p><span class="menu-row-til">儿童：</span><span class="nenu-row-num">￥99999</span></p>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">8月3日</div>
+                                    <div class="ui-block-b">周六</div>
+                                    <div class="ui-block-c">余票6</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">8月4日</div>
+                                    <div class="ui-block-b">周日</div>
+                                    <div class="ui-block-c">余票14</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">8月5日</div>
+                                    <div class="ui-block-b">周一</div>
+                                    <div class="ui-block-c sold-out">售罄</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                            </div>
+                            <div class="menu-row hidden">
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">9月1日</div>
+                                    <div class="ui-block-b">周四</div>
+                                    <div class="ui-block-c">余票28</div>
+                                    <div class="ui-block-d">￥2008</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">9月2日</div>
+                                    <div class="ui-block-b">周五</div>
+                                    <div class="ui-block-c sold-out">余票12</div>
+                                    <div class="ui-block-d">
+                                        <p><span class="menu-row-til">成人：</span>￥99999</p>
+                                        <p><span class="menu-row-til">儿童：</span><span class="nenu-row-num">￥99999</span></p>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">9月3日</div>
+                                    <div class="ui-block-b">周六</div>
+                                    <div class="ui-block-c">余票6</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">9月4日</div>
+                                    <div class="ui-block-b">周日</div>
+                                    <div class="ui-block-c">余票14</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">9月5日</div>
+                                    <div class="ui-block-b">周一</div>
+                                    <div class="ui-block-c sold-out">售罄</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                            </div>
+                            <div class="menu-row hidden">
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">10月1日</div>
+                                    <div class="ui-block-b">周四</div>
+                                    <div class="ui-block-c">余票28</div>
+                                    <div class="ui-block-d">￥2008</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">10月2日</div>
+                                    <div class="ui-block-b">周五</div>
+                                    <div class="ui-block-c sold-out">余票12</div>
+                                    <div class="ui-block-d">
+                                        <p><span class="menu-row-til">成人：</span>￥99999</p>
+                                        <p><span class="menu-row-til">儿童：</span><span class="nenu-row-num">￥99999</span></p>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">10月3日</div>
+                                    <div class="ui-block-b">周六</div>
+                                    <div class="ui-block-c">余票6</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">10月4日</div>
+                                    <div class="ui-block-b">周日</div>
+                                    <div class="ui-block-c">余票14</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">10月5日</div>
+                                    <div class="ui-block-b">周一</div>
+                                    <div class="ui-block-c sold-out">售罄</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                            </div>
+                            <div class="menu-row hidden">
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">11月1日</div>
+                                    <div class="ui-block-b">周四</div>
+                                    <div class="ui-block-c">余票28</div>
+                                    <div class="ui-block-d">￥2008</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">11月2日</div>
+                                    <div class="ui-block-b">周五</div>
+                                    <div class="ui-block-c sold-out">余票12</div>
+                                    <div class="ui-block-d">
+                                        <p><span class="menu-row-til">成人：</span>￥99999</p>
+                                        <p><span class="menu-row-til">儿童：</span><span class="nenu-row-num">￥99999</span></p>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">11月3日</div>
+                                    <div class="ui-block-b">周六</div>
+                                    <div class="ui-block-c">余票6</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">11月4日</div>
+                                    <div class="ui-block-b">周日</div>
+                                    <div class="ui-block-c">余票14</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">11月5日</div>
+                                    <div class="ui-block-b">周一</div>
+                                    <div class="ui-block-c sold-out">售罄</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                            </div>
+                            <div class="menu-row hidden">
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">12月1日</div>
+                                    <div class="ui-block-b">周四</div>
+                                    <div class="ui-block-c">余票28</div>
+                                    <div class="ui-block-d">￥2008</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">12月2日</div>
+                                    <div class="ui-block-b">周五</div>
+                                    <div class="ui-block-c sold-out">余票12</div>
+                                    <div class="ui-block-d">
+                                        <p><span class="menu-row-til">成人：</span>￥99999</p>
+                                        <p><span class="menu-row-til">儿童：</span><span class="nenu-row-num">￥99999</span></p>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">12月3日</div>
+                                    <div class="ui-block-b">周六</div>
+                                    <div class="ui-block-c">余票6</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">12月4日</div>
+                                    <div class="ui-block-b">周日</div>
+                                    <div class="ui-block-c">余票14</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a">12月5日</div>
+                                    <div class="ui-block-b">周一</div>
+                                    <div class="ui-block-c sold-out">售罄</div>
+                                    <div class="ui-block-d">￥2888</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="windowContent">
+                    <div class="moduleTitle">请选择出行人数或套餐</div>
+                    <div class="menu-sum-box">
+                        <div class="menu-sum clearfix current">成人数
+                            <div class="counter">
+                                <span class="count-tips">还剩下<span class="popNum">11</span></span>
+                                <span class="counter-item counter-minus">—</span><span class="counter-item counter-num">1</span><span class="counter-item counter-add">+</span>
+                            </div>
+                        </div>
+                        <div class="menu-sum clearfix">儿童数
+                            <!-- <span class="child-state">(2-12周岁)</span> -->
+                            <div class="counter">
+                                <span class="count-tips">还剩下<span class="popNum">9</span></span>
+                                <span class="counter-item counter-minus">—</span><span class="counter-item counter-num">1</span><span class="counter-item counter-add">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setMealTitle">──────── 或以下优惠套餐 ────────</div>
+                    <ul class="setMeal02List">
+                        <li class="current">
+                            <div class="liTitle"><span class="red">¥2199</span> - 单身出游，单身汪奇葩阁楼星空房</div>
+                            <div class="liDetails">套餐说明套餐说明套餐说明套餐说明套餐说明套餐说明套餐说明</div>
+                        </li>
+                        <li>
+                            <div class="liTitle"><span class="red">¥2199</span> - 情侣出游,浪漫海景大床</div>
+                            <div class="liDetails">套餐说明套餐说明套餐说明套餐说</div>
+                        </li>
+                        <li class="disable">
+                            <div class="liTitle"><span class="red">¥2199</span> - 一家三口（儿童不占床）</div>
+                            <div class="liDetails">套餐说明套餐说明套餐说明套餐说明套餐说明套餐说明套餐说明</div>
+                        </li>
+                        <li>
+                            <div class="liTitle"><span class="red">¥2199</span> - 一家三口（儿童占床）</div>
+                            <div class="liDetails">套餐说明套餐说明套餐说明套餐说明套</div>
+                        </li>
+                        <li>
+                            <div class="liTitle"><span class="red">¥2199</span> - 全家出动，5人套餐</div>
+                            <div class="liDetails">套餐说明套餐说明套餐说明套餐说明套餐说明套餐说明套餐说明</div>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <div class="menu-order" style="position:fixed;bottom:0; width:100%;">
+            <div style="width:65%;line-height:1;display:inline-block;float:left;padding:0.7rem 0 0 1rem;font-size:0.8rem;">
+               总价：<span class="red font1rem">¥2199</span><em class="redf05">起</em>
+            </div>
+            <div style="width:35%;float:right;text-align:center;">
+                 <a class="order-link" href="javascript:void(0);">确认</a> 
+                 <!--<a class="wantgo-link" data-rel="popup" >想去</a>-->
+            </div>
+    </div>
+
+</div>
+
+<script>
+    $(function(){
+
+        FastClick.attach(document.body);
+
+        $(".menu-list ul li").click(function(){
+            var listInd = $(this).index();
+            var listObj = $(".menu-list ul li").eq(listInd);
+
+            listObj.siblings().removeClass("list-cut");
+            if(!listObj.hasClass("list-cut")){
+                listObj.addClass("list-cut");
+            }
+
+            var rowboxObj = $("#menu-row-box .menu-row").eq(listInd);
+            rowboxObj.siblings().addClass("hidden");
+            if(rowboxObj.hasClass("hidden")){
+                rowboxObj.removeClass("hidden");
+            }
+
+            currentmonth=$('.monthtab ul').find('.list-cut').index();
+            if(currentmonth==0){
+                $('.left-month-btn').addClass('disable');
+                $('.right-month-btn').removeClass('disable');
+            }else if(0<currentmonth&&currentmonth<($('.monthtab ul li').length-1)){
+                $('.left-month-btn').removeClass('disable');
+                $('.right-month-btn').removeClass('disable');
+            }else if(currentmonth==($('.monthtab ul li').length-1)){
+                $('.left-month-btn').removeClass('disable');
+                $('.right-month-btn').addClass('disable');
+            }
+
+        });
+
+        $(".menu-row > .ui-grid-c").click(function(){
+            $(".menu-row > .ui-grid-c").removeClass("menu-row-focus");
+            $(this).toggleClass("menu-row-focus");
+        });
+
+        var least = 0;
+        var most = 0;
+        $(".counter > .counter-minus").click(function(){
+            var minus_num = parseInt($(this).next().text());
+            minus_num--;
+            if(minus_num <= least){
+                $(this).addClass("counter-disable");
+                $(this).next().text(least);
+                return false;
+            }else{
+                if($(this).hasClass("counter-disable")){
+                    $(this).removeClass("counter-disable");
+                }
+                var obj = $(this).parent().find(".counter-add");
+                if(obj.hasClass("counter-disable")){
+                    obj.removeClass("counter-disable");
+                }
+            }
+            $(this).next().text(minus_num);
+        });
+        $(".counter > .counter-add").click(function(){
+
+            var row = $("#menu-row-box > .menu-row > .ui-grid-c").filter(".menu-row-focus");
+            var txt = row.children(".ui-block-c").text();
+            var num = parseInt(txt.replace(/[^0-9]/ig, ""));
+
+            var temp = $(this).parent().find(".count-tips");
+            if(row.length == 0){
+                temp.html("<span class='popNum'>请先选择日期</span>");
+                temp.fadeIn("normal", function(){
+                    setTimeout(function(){
+                        temp.fadeOut("fast");
+                    }, 2000);
+                });
+                return;
+            }
+            if(isNaN(num)){
+                temp.html("<span class='popNum'>售罄</span>");
+                temp.fadeIn("normal", function(){
+                    setTimeout(function(){
+                        temp.fadeOut("fast");
+                    }, 2000);
+                });
+                return;
+            }else{
+                most = num;
+            }
+            if($(this).hasClass("counter-disable")){
+                $(this).removeClass("counter-disable");
+            }
+            var add_num = parseInt($(this).prev().text());
+            add_num++;
+            if(add_num > least){
+                var obj = $(this).parent().find(".counter-minus");
+                if(obj.hasClass("counter-disable")){
+                    obj.removeClass("counter-disable");
+                }
+
+                if(add_num > most){
+                    temp.html('库存只有<span class="popNum">'+most+'</span>张');
+                    temp.fadeIn("normal", function(){
+                        setTimeout(function(){
+                            temp.fadeOut("fast");
+                        }, 2000);
+                    });
+                    $(this).addClass("counter-disable");
+                    return;
+                }
+            }
+            $(this).prev().text(add_num);
+
+        });
+        $(".menu-btn").click(function(event){
+            var pop = $(this).prev().find(".menu-pop-container");
+            if(pop.is(":visible")){
+                pop.slideUp("fast");
+            }
+            $(this).find(".menu-list-container").toggle();
+            if($(".menu-list-container").is(":visible")){
+                $(document).click(function(){
+                    $(".menu-list-container").fadeOut("fast");
+                });
+            }
+            event.stopPropagation();
+        });
+
+        $(".menu-pop").click(function(){
+            var btn = $(this).next().find(".menu-list-container");
+            if(btn.is(":visible")){
+                btn.slideUp("fast");
+            }
+            $(this).find(".menu-pop-container").toggle();
+            if($(".menu-pop-container").is(":visible")){
+                $(document).click(function(){
+                    $(".menu-pop-container").fadeOut("fast");
+                });
+            }
+            event.stopPropagation();
+        });
+
+        $(".lazyload-img").lazyload({
+            threshold: 500,
+            placeholder: ''
+        });        
+
+        var monthtab_marL=0;
+        var ml_max_dis;
+        var currentmonth;
+        var currentmonthL;
+        var monthtabL;
+        $('.right-month-btn').click(function(){
+            if(!($(this).hasClass('disable'))){
+
+                //console.log($('.monthtab ul').find('.list-cut').offset().left+'  '+($('.monthtab').offset().left+3*$('.monthtab li').width()));
+                
+                currentmonthL=parseInt($('.monthtab ul').find('.list-cut').offset().left);
+                monthtabL=parseInt($('.monthtab').offset().left+3*$('.monthtab li').width()-4);
+
+                /*currentmonthL= $('.monthtab ul').find('.list-cut').offset().left;
+                monthtabL= $('.monthtab').offset().left+3*$('.monthtab li').width();*/
+
+                console.log((currentmonthL+1)+'  '+monthtabL);
+                if(currentmonthL+1 < monthtabL){
+                    currentmonth=$('.monthtab ul').find('.list-cut').index();
+                    $('.monthtab li').eq(currentmonth+1).trigger('click');
+                }else{
+
+                    monthtab_marL = monthtab_marL - $('.monthtab li').width();
+                    ml_max_dis=-$('.monthtab li').width()*($('.monthtab li').length);
+                    if(monthtab_marL>=ml_max_dis){
+                        console.log(monthtab_marL);
+                        $('.monthtab ul').css('margin-left',monthtab_marL+'px');
+                    }
+
+                    currentmonth=$('.monthtab ul').find('.list-cut').index();
+                    $('.monthtab li').eq(currentmonth+1).trigger('click');
+                }
+
+
+            }
+        });
+
+        $('.left-month-btn').click(function(){
+            if(!($(this).hasClass('disable'))){
+
+                currentmonthL=parseInt($('.monthtab ul').find('.list-cut').offset().left);
+                monthtabL=parseInt($('.monthtab').offset().left);
+
+                /*currentmonthL= $('.monthtab ul').find('.list-cut').offset().left;
+                monthtabL= $('.monthtab').offset().left;*/
+                //console.log(currentmonthL+'  '+monthtabL);
+                if(currentmonthL > monthtabL){
+                    
+                    currentmonth=$('.monthtab ul').find('.list-cut').index();
+                    $('.monthtab li').eq(currentmonth-1).trigger('click');
+                }else{
+                    monthtab_marL = monthtab_marL + $('.monthtab li').width();
+                    if(monthtab_marL<=0){
+                        $('.monthtab ul').css('margin-left',monthtab_marL+'px');
+                    }
+
+                    currentmonth=$('.monthtab ul').find('.list-cut').index();
+                    $('.monthtab li').eq(currentmonth-1).trigger('click');
+                } 
+            }
+
+        });
+        
+        $(".windowContent").click(function(){
+            $(this).addClass("current");
+            $(this).siblings(".windowContent").removeClass("current");
+        });
+        
+        $(".setMeal02List li").click(function(){
+            if(!$(this).hasClass('disable')){
+                $(".menu-sum-box").removeClass("current");
+                var liTitleVal = $(this).find(".liTitle").text();
+                $(this).addClass("current");
+                $(this).siblings("li").removeClass("current");
+                $(".setMealVal").text(liTitleVal);
+            }
+        });
+        $(".menu-sum").click(function(){
+            $(".menu-sum-box").addClass('current');
+            $(".setMeal02List li").removeClass("current");
+        });
+        
+        
+    });
+
+    window.onload=function(){
+        var monthtab_w = parseInt($('.menu-list.changemenu').width()-$('.left-month-btn').outerWidth()*2);
+        console.log($('.menu-list.changemenu').width()+"  "+$('.left-month-btn').outerWidth()*2);
+        console.log(monthtab_w);
+        $('.monthtab').css('width',monthtab_w);
+        var monthtab_li_lenght = $('.monthtab ul li').length;
+        var monthtab_li_w;   //底部弹窗 月份内 每月宽度定义
+        if(monthtab_li_lenght<4){
+            monthtab_li_w = $('.monthtab').width()/monthtab_li_lenght;
+        }else{
+            monthtab_li_w = $('.monthtab').width()/4;
+        }
+        //console.log(monthtab_li_w);
+        $('.monthtab ul li').css('width',monthtab_li_w+'px');
+    }
+
+</script>
+</body>
+</html>
