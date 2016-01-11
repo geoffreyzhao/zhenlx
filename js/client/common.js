@@ -10,7 +10,7 @@ $(function(){
         });
     
     //单选框
-    $(".radioContent .radio:not('.disabled')").click(function(){
+    $("body").delegate(".radioContent .radio:not('.disabled')", "click", function(){
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
     });

@@ -2660,14 +2660,13 @@
     });
 
     // 选择人数 or 套餐
-    $(".prod-type-item").click(function(){
+    $("body").delegate('.prod-type-item', 'click', function(event) {
         $(".prod-type-item").removeClass("current");
         $(this).addClass("current");
     });
 
     // 更多套餐展示
-    $(".prod-by-menu .more").click(function(){
-
+    $("body").delegate(".prod-by-menu .more", "click", function(){
         if (!$(this).hasClass("fold")) {    //  展开操作
 
             $(".prod-by-menu .radioContent label").show(); 
@@ -2685,7 +2684,7 @@
             $(this).html("+ 更多");
             $(this).removeClass("fold");
         }
-    });
+    });    
 </script>
 </body>
 </html>
