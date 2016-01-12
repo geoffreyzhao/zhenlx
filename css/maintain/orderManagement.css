@@ -826,3 +826,57 @@ ul.common-tab > li.rest {
   color: #666;
 }
 /* 渠道订单日期录入end */
+
+/*  OP确认单 start  */
+.bigTitleModel{
+    font-size: 28px;
+    color: #484848;
+    text-align: center;
+    margin: 15px 0;
+}
+.orderNoBorderTab{
+    padding: 20px 0;
+    border-bottom: 1px dashed #bbdde1;
+}
+.orderNoBorderTab table{ width: 100%;}
+.orderNoBorderTab th{
+    text-align: right;
+    padding: 10px 5px;
+    color: #848484;
+    vertical-align: top;
+}
+.orderNoBorderTab td{
+    padding: 10px 3px;
+    color: #484848;
+    vertical-align: top;
+}
+.commonOrderModel.commonOPOrderModel,
+.commonOPOrderModel{
+    padding: 10px 20px 0;
+    border-bottom: none;
+}
+.commonOPOrderModel .commonSmallTitleModel{
+    font-size: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcf5f4;
+    position: relative;
+}
+.commonSmallTitleModel .leftTitleFonts{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #11b9b7;
+}
+.editContactInfo, .editTouristInfo{
+    top: 15px;
+}
+.commonOPOrderModel .commonStyle{
+    margin: 15px 0;
+}
+.commonEditBtn{
+    font-size: 14px;
+    color: #11b9b7;
+    position: absolute;
+    right: 3%;
+    top: 15px;
+}
+
+/*  OP确认单 end  */

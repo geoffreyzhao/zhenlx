@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>真旅行 订单管理 OP确认单</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/navHeader.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/flight_logo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/client/orderInfo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/orderManagement.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="../../js/client/common.js"></script>    
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header>
+    <div class="head clearfix">
+        <div class="logo"></div>
+        <div class="top-nav">
+            <ul class="top-nav-list clearfix">
+                <li class="top-nav-item">
+                    <a href="javascript:;">个人中心</a></li>
+                <li class="top-nav-item current">
+                    <a href="javascript:;">我的订单</a></li>
+                <li class="top-nav-item">
+                    <a href="javascript:;">心愿清单</a></li>
+                <li class="top-nav-item">
+                    <a href="javascript:;">我的钱包</a></li>
+                <li class="top-nav-item">
+                    <a href="javascript:;">网站消息</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="main-container">
+    <div class="main-wrapper" id="main-wrapper">        
+        <section class="onLinePayContent">
+            <div class="top-border"></div>
+             <div class="commonOrderModel">
+                <i class="left-semicircle"></i>
+                <i class="right-semicircle"></i>
+                <div class="bigTitleModel">行程确认单</div>
+            </div> 
+            <div class="orderNoBorderTab">
+                <table>
+                    <colgroup>
+                        <col width="13%">
+                        <col width="27%">
+                        <col width="10%">
+                        <col width="24%">
+                        <col width="10%">
+                        <col width="16%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>订单号:</th>
+                            <td>1505125213</td>
+                            <th>下单日期:</th>
+                            <td>2015-04-15</td>
+                            <th>出游日期:</th>
+                            <td>2015-04-15</td>
+                        </tr>
+                        <tr>
+                            <th>产品标题:</th>
+                            <td>上海至巴黎五晚13天话色彩国度</td>
+                            <th>套餐名称:</th>
+                            <td>情侣双人游</td>
+                            <th> </th>
+                            <td> </td>
+                        </tr>
+                    </tbody>                    
+                </table>
+            </div>
+            
+            <div class="commonOPOrderModel">
+                <div class="commonSmallTitleModel blueFonts">
+                    <span class="leftTitleFonts">联系人信息</span>
+                    <label class="editContactInfo">
+                        <span class="commonIcon editIcon"></span>
+                    </label>
+                </div>
+                <div class="commonStyle">
+                    <table class="commonLightBlueThead contactInfoTab">
+                        <colgroup>
+                            <col width="135">
+                            <col width="150">
+                            <col width="220">
+                            <col width="490">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>电话</th>
+                            <th>邮箱</th>
+                            <th>地址</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>周文哲</td>
+                            <td>13852665987</td>
+                            <td>dorianzhou@126.com</td>
+                            <td>上海市宝山区胡兰路123号4号楼4楼技术部</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="editContactInfoContent">
+                        <table class="commonEditTab editContactInfoTab">
+                            <colgroup>
+                                <col width="150">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>姓名:</th>
+                                <td>
+                                    <input type="text" style="width: 225px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>手机号:</th>
+                                <td>
+                                    <input type="text" style="width: 225px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>邮箱:</th>
+                                <td>
+                                    <input type="text" style="width: 225px;" placeholder="接收行程单和航班信息">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>详细地址:</th>
+                                <td>
+                                    <div class="dropdown" style="width: 95px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                            <span class="activeFonts">省份</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="javascript:void(0);">省份</a></li>
+                                            <li><a href="javascript:void(0);">上海市</a></li>
+                                            <li><a href="javascript:void(0);">北京市</a></li>
+                                            <li><a href="javascript:void(0);">河北省</a></li>
+                                            <li><a href="javascript:void(0);">河南省</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown" style="width: 95px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                            <span class="activeFonts">区县</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="javascript:void(0);">区县</a></li>
+                                            <li><a href="javascript:void(0);">闸北区</a></li>
+                                            <li><a href="javascript:void(0);">宝山区</a></li>
+                                            <li><a href="javascript:void(0);">虹口区</a></li>
+                                            <li><a href="javascript:void(0);">静安区</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" style="width: 350px;" placeholder="填写详细通讯地址，好签收我们为您寄出的真旅礼盒哦">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <a href="javascript:void(0);" class="commonBtn blueBtn">保 存</a>
+                                    <a href="javascript:void(0);" class="cancelBtn">取消</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="commonOPOrderModel">
+                <div class="commonSmallTitleModel blueFonts">
+                    <span class="leftTitleFonts">游客信息</span>
+                    <label class="editTouristInfo">
+                        <span>(出行日15天之内不可更改)</span>
+                        <span class="commonIcon editIcon"></span>
+                    </label>
+                </div>
+                <div class="commonStyle">
+                    <table class="commonLightBlueThead touristInfoTab">
+                        <colgroup>
+                            <col width="150">
+                            <col width="85">
+                            <col width="65">
+                            <col width="80">
+                            <col width="85">
+                            <col width="190">
+                            <col width="115">
+                            <col width="115">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>拼音/英文名</th>
+                            <th>国籍</th>
+                            <th>性别</th>
+                            <th>乘客类型</th>
+                            <th>证件类型</th>
+                            <th>证件号</th>
+                            <th>证件有效期</th>
+                            <th>出生年月</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Dorian zhou</td>
+                            <td>中国</td>
+                            <td>男</td>
+                            <td>成人</td>
+                            <td>护照</td>
+                            <td>SH0J880765367</td>
+                            <td>2020-2-5</td>
+                            <td>1987-10-25</td>
+                        </tr>
+                        <tr>
+                            <td>Lin zhi xuan</td>
+                            <td>中国</td>
+                            <td>女</td>
+                            <td>成人</td>
+                            <td>护照</td>
+                            <td>SH0J880765367</td>
+                            <td>2020-02-05</td>
+                            <td>1988-09-15</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="editTouristInfoContent">
+                        <table class="commonEditTab editTouristInfoTab">
+                            <colgroup>
+                                <col width="90">
+                                <col width="100">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                            <tr class="first">
+                                <td rowspan="5" class="numberFonts">1</td>
+                                <th>旅客姓名:</th>
+                                <td>
+                                    <input type="text" style="width: 220px;" placeholder="与证件名保持一致">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>旅客类型:</th>
+                                <td>
+                                    <span class="radioContent">
+                                        <label class="radio active">
+                                            <span class="commonIcon radioIcon"></span>
+                                            <span class="genderSelect">成人</span>
+                                        </label>
+                                        <label class="radio">
+                                            <span class="commonIcon radioIcon"></span>
+                                            <span class="genderSelect">儿童（2-12岁）</span>
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>证件类型:</th>
+                                <td>
+                                    <div class="dropdown" style="width: 95px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                            <span class="activeFonts">身份证</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="javascript:void(0);">身份证</a></li>
+                                            <li><a href="javascript:void(0);">护照</a></li>
+                                            <li><a href="javascript:void(0);">港澳通行证</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" style="width: 200px;" placeholder="证件号">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>出生日期:</th>
+                                <td>
+                                    <input type="text" style="width: 200px;" placeholder="yyyy-mm-dd">
+                                </td>
+                            </tr>
+                            <tr class="last">
+                                <th>旅客性别:</th>
+                                <td>
+                                    <span class="radioContent">
+                                        <label class="radio active">
+                                            <span class="commonIcon radioIcon"></span>
+                                            <span class="genderSelect">男</span>
+                                        </label>
+                                        <label class="radio">
+                                            <span class="commonIcon radioIcon"></span>
+                                            <span class="genderSelect">女</span>
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="commonEditTab editTouristInfoTab">
+                            <colgroup>
+                                <col width="90">
+                                <col width="100">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                            <tr class="first">
+                                <td rowspan="8" class="numberFonts">2</td>
+                                <th>旅客姓名:</th>
+                                <td>
+                                    <input type="text" style="width: 110px;" placeholder="First Name">
+                                    <input type="text" style="width: 110px;" placeholder="Last Name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>英文/拼音:</th>
+                                <td>
+                                    <input type="text" style="width: 110px;" placeholder="姓(拼音或英文)">
+                                    <input type="text" style="width: 110px;" placeholder="名(拼音或英文)">
+                                    <span class="inputTip">为确保出行，请仔细核对拼音名</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>旅客类型:</th>
+                                <td>
+                                    <span class="radioContent">
+                                        <label class="radio active">
+                                            <span class="commonIcon radioIcon"></span>
+                                            <span class="genderSelect">成人</span>
+                                        </label>
+                                        <label class="radio">
+                                            <span class="commonIcon radioIcon"></span>
+                                            <span class="genderSelect">儿童（2-12岁）</span>
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>证件类型:</th>
+                                <td>
+                                    <div class="dropdown" style="width: 95px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn" aria-expanded="false">
+                                            <span class="activeFonts">身份证</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="javascript:void(0);">身份证</a></li>
+                                            <li><a href="javascript:void(0);">护照</a></li>
+                                            <li><a href="javascript:void(0);">港澳通行证</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" style="width: 200px;" placeholder="证件号">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>证件有效期:</th>
+                                <td>
+                                    <input type="text" style="width: 200px;" placeholder="yyyy-mm-dd">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>旅客国籍:</th>
+                                <td>
+                                    <input type="text" style="width: 200px;" placeholder="中文或英文">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>出生日期:</th>
+                                <td>
+                                    <input type="text" style="width: 200px;" placeholder="yyyy-mm-dd">
+                                </td>
+                            </tr>
+                            <tr class="last">
+                                <th>旅客性别:</th>
+                                <td>
+                                    <span class="radioContent">
+                                        <label class="radio active">
+                                            <span class="commonIcon radioIcon"></span>
+                                            <span class="genderSelect">男</span>
+                                        </label>
+                                        <label class="radio">
+                                            <span class="commonIcon radioIcon"></span>
+                                            <span class="genderSelect">女</span>
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <!-- <tr class="last">
+                                <td></td>
+                                <td>
+                                    <a href="javascript:void(0);" class="commonBtn blueBtn">保 存</a>
+                                    <a href="javascript:void(0);" class="cancelBtn">取消</a>
+                                </td>
+                            </tr> -->                            
+                            </tbody>
+                        </table>
+                        <table class="commonEditTab operTab">
+                            <colgroup>
+                                <col width="90">
+                                <col width="100">
+                                <col width="">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="2" style="padding-left: 30px;">
+                                        <a href="javascript:void(0);" class="commonBtn blueBtn">保 存</a>
+                                        <a href="javascript:void(0);" class="cancelBtn">取消</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="commonOrderModel commonOPOrderModel">
+                <div class="commonSmallTitleModel blueFonts">
+                    <span class="leftTitleFonts">机票信息</span>
+                    <label class="commonEditBtn">
+                        <span class="commonIcon editIcon"></span>
+                    </label>
+                </div>
+                <div class="commonStyle changeCommonStyle">
+                    <ul class="airInfoList clearfix">
+                        <em class="dashedLine firstLine"></em>
+                        <em class="dashedLine secondLine"></em>
+                        <li class="leftGoBack">
+                            <div class="lightBlue18Fonts">第一天</div>
+                            <div class="goBackCommonStyle greenBg">去程</div>
+                        </li>
+                        <li class="timePlaceAirport">
+                            <span class="flyToIcon"></span>
+                            <div class="timePlaceInfo">
+                                <div class="timePlaceFonts">
+                                    <span class="placeFonts">上海</span>
+                                    <span class="timeFonts">07:30</span>
+                                </div>
+                                <div class="airportFonts">上海浦东国际机场</div>
+                            </div>
+                            <div class="timePlaceInfo rightPlaceInfo">
+                                <div class="timePlaceFonts">
+                                    <span class="placeFonts">金边</span>
+                                    <span class="timeFonts">12:45<em>+1</em></span>
+                                </div>
+                                <div class="color9f9f9fFonts">金边国际机场</div>
+                            </div>
+                        </li>
+                        <li class="shippingSpaceInfo">
+                            <div class="lightBlue18Fonts">K 6999 / 头等舱 / 波音787</div>
+                            <div class="airLogo">
+                                <span class="pubFlights_MU verticalAlignMiddle"></span>
+                                <span class="color9f9f9fFonts">吴哥航空</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="airInfoList clearfix">
+                        <em class="dashedLine firstLine"></em>
+                        <em class="dashedLine secondLine"></em>
+                        <li class="leftGoBack">
+                            <div class="lightBlue18Fonts">第二天</div>
+                            <div class="goBackCommonStyle greenBg">第二程</div>
+                        </li>
+                        <li class="timePlaceAirport">
+                            <i class="stoppingPoint stop green-border-tooltip">经停</i>
+                            <div class="timePlaceInfo">
+                                <div class="timePlaceFonts">
+                                    <span class="placeFonts">上海</span>
+                                    <span class="timeFonts">07:30</span>
+                                </div>
+                                <div class="airportFonts">上海浦东国际机场</div>
+                            </div>
+                            <div class="timePlaceInfo rightPlaceInfo">
+                                <div class="timePlaceFonts">
+                                    <span class="placeFonts">金边</span>
+                                    <span class="timeFonts">12:45</span>
+                                </div>
+                                <div class="color9f9f9fFonts">金边国际机场</div>
+                            </div>
+                        </li>
+                        <li class="shippingSpaceInfo">
+                            <div class="lightBlue18Fonts">K 6999 / 头等舱 / 波音787</div>
+                            <div class="airLogo">
+                                <span class="pubFlights_MU verticalAlignMiddle"></span>
+                                <span class="color9f9f9fFonts">吴哥航空</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="airInfoList clearfix">
+                        <em class="dashedLine firstLine"></em>
+                        <em class="dashedLine secondLine"></em>
+                        <li class="leftGoBack">
+                            <div class="lightBlue18Fonts">第五天</div>
+                            <div class="goBackCommonStyle blueBg">返程</div>
+                        </li>
+                        <li class="timePlaceAirport">
+                            <i class="stoppingPoint transfer green-border-tooltip">中转</i>
+                            <div class="timePlaceInfo">
+                                <div class="timePlaceFonts">
+                                    <span class="placeFonts">金边</span>
+                                    <span class="timeFonts">07:30</span>
+                                </div>
+                                <div class="airportFonts">上海浦东国际机场</div>
+                            </div>
+                            <div class="timePlaceInfo rightPlaceInfo">
+                                <div class="timePlaceFonts">
+                                    <span class="placeFonts">上海</span>
+                                    <span class="timeFonts">12:45</span>
+                                </div>
+                                <div class="color9f9f9fFonts">金边国际机场</div>
+                            </div>
+                        </li>
+                        <li class="shippingSpaceInfo">
+                            <div class="lightBlue18Fonts">K 6999 / 头等舱 / 波音787</div>
+                            <div class="airLogo">
+                                <span class="pubFlights_MU verticalAlignMiddle"></span>
+                                <span class="color9f9f9fFonts">吴哥航空</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="airInfoList last clearfix">
+                        <em class="dashedLine firstLine"></em>
+                        <em class="dashedLine secondLine"></em>
+                        <li class="leftGoBack">
+                            <div class="lightBlue18Fonts">第六天</div>
+                            <div class="goBackCommonStyle blueBg">第二程</div>
+                        </li>
+                        <li class="timePlaceAirport">
+                            <span class="flyToIcon"></span>
+                            <div class="timePlaceInfo">
+                                <div class="timePlaceFonts">
+                                    <span class="placeFonts">金边</span>
+                                    <span class="timeFonts">07:30</span>
+                                </div>
+                                <div class="airportFonts">上海浦东国际机场</div>
+                            </div>
+                            <div class="timePlaceInfo rightPlaceInfo">
+                                <div class="timePlaceFonts">
+                                    <span class="placeFonts">上海</span>
+                                    <span class="timeFonts">12:45</span>
+                                </div>
+                                <div class="color9f9f9fFonts">金边国际机场</div>
+                            </div>
+                        </li>
+                        <li class="shippingSpaceInfo">
+                            <div class="lightBlue18Fonts">K 6999 / 头等舱 / 波音787</div>
+                            <div class="airLogo">
+                                <span class="pubFlights_MU verticalAlignMiddle"></span>
+                                <span class="color9f9f9fFonts">吴哥航空</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="commonOPOrderModel">
+                <div class="commonSmallTitleModel blueFonts">
+                    <span class="leftTitleFonts">酒店信息</span>
+                    <label class="commonEditBtn">
+                        <span class="commonIcon editIcon"></span>
+                    </label>
+                </div>
+                <div class="commonStyle changeCommonStyle">
+                    <table class="hotelInfoTab">
+                        <colgroup>
+                            <col width="170">
+                            <col width="170">
+                            <col width="470">
+                            <col width="230">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <em class="solidLine hotelFirstLine"></em>
+                                <em class="solidLine hotelSecondLine"></em>
+                                <span class="blueBgFonts">入住</span>
+                                <div class="blueFontsWeight">2015-05-05</div>
+                            </td>
+                            <td>
+                                <span class="orangeBgFonts">离店</span>
+                                <div class="blueFontsWeight">2015-05-05</div>
+                            </td>
+                            <td class="textAlignLeft">马赛中央喜来登度假酒店</td>
+                            <td>
+                                <span class="commonIcon roomsIcon"></span>
+                                <div>豪华景观房</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="hotelInfoTab">
+                        <colgroup>
+                            <col width="170">
+                            <col width="170">
+                            <col width="470">
+                            <col width="230">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <em class="solidLine hotelFirstLine"></em>
+                                <em class="solidLine hotelSecondLine"></em>
+                                <span class="blueBgFonts">入住</span>
+                                <div class="blueFontsWeight">2015-05-05</div>
+                            </td>
+                            <td>
+                                <span class="orangeBgFonts">离店</span>
+                                <div class="blueFontsWeight">2015-05-05</div>
+                            </td>
+                            <td class="textAlignLeft">马赛中央喜来登度假酒店</td>
+                            <td>
+                                <span class="commonIcon roomsIcon"></span>
+                                <div>豪华景观房</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="bedType">
+                        <span class="color9f9f9f">偏好的酒店床型:  </span>
+                        <label class="editBedType">
+                            <span>优先大床房</span>
+                            <span class="commonIcon editIcon"></span>
+                        </label>
+                        <span class="editBedTypeContent">
+                            <span class="radioContent">
+                                <label class="radio active">
+                                    <span class="commonIcon radioIcon"></span>
+                                    <span class="genderSelect">优先大床房</span>
+                                </label>
+                                <label class="radio">
+                                    <span class="commonIcon radioIcon"></span>
+                                    <span class="genderSelect">优先双床房</span>
+                                </label>
+                            </span>
+                            <span class="sureBtn">确定</span>
+                            <span class="cancelBtn">取消</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="commonOrderModel">
+                <i class="left-semicircle"></i>
+                <i class="right-semicircle"></i>
+                <div class="titleModel blueFonts">
+                    <span>费用说明</span>
+                    <i class="left-semicircle"></i>
+                    <i class="right-semicircle"></i>
+                </div>
+                <div class="commonStyle">
+                    <table class="commonLightBlueThead leftTh costTab">
+                        <colgroup>
+                            <col width="170">
+                            <col width="">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>费用包含</th>
+                            <td>1.  上海往返暹粒机票（含税）<br>
+                                2.  四晚五星度假酒店（含早）<br>
+                                3.  机场至酒店接机<br>
+                                4.  7X24小时自由行大管家
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>费用不含</th>
+                            <td>1.  单房差<br>
+                                2.  签证费；护照费、申请签证中准备相关材料所需的制作费及手续费等（如未成年人所需的公证书、认证费）<br>
+                                3.  洗衣、理发、电话、饮料、烟酒、付费电视、行李搬运、自由活动期间等个人消费<br>
+                                4.  出入境的行李海关课税、超重行李的托运费及管理费等<br>
+                                5.  不可抗力：因交通延阻、罢工、大风、大雾、航班取消或延期等不可抗拒因素所产生的额外费用<br>
+                                6.  (费用包含)中未提及的任何费用
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>赠送项目</th>
+                            <td>1.  柬埔寨当地3G上网卡（每间房一张）<br>
+                                2.  出国人员旅游意外伤害保险<br>
+                                3.  <span class="blueFonts">专属真旅卷轴指南</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="commonOrderModel">
+                <i class="left-semicircle"></i>
+                <i class="right-semicircle"></i>
+                <div class="titleModel blueFonts">
+                    <span>价格明细</span>
+                    <i class="left-semicircle"></i>
+                    <i class="right-semicircle"></i>
+                </div>
+                <div class="commonStyle">
+                    <table class="commonLightBlueThead leftTh">
+                        <colgroup>
+                            <col width="160">
+                            <col width="230">
+                            <col width="320">
+                            <col width="310">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>必选产品</th>
+                            <td>套餐名称</td>
+                            <td>¥ 2500.00</td>
+                            <td class="orangeWeight16">¥ 2500.00</td>
+                        </tr>
+                        <tr>
+                            <th>网站优惠</th>
+                            <td>优惠抵扣券</td>
+                            <td>春季欧洲券</td>
+                            <td class="orangeWeight16">-¥ 50.00</td>
+                        </tr>
+                        <tr>
+                            <th>应付金额</th>
+                            <td colspan="3" class="orangeWeight22">¥ 3950.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="commonOrderModel">
+                <div class="titleModel blueFonts">
+                    <span>支付信息</span>
+                    <i class="left-semicircle"></i>
+                    <i class="right-semicircle"></i>
+                </div>
+                <div class="commonStyle">
+                    <table class="commonLightBlueThead">
+                        <colgroup>
+                            <col width="290">
+                            <col width="360">
+                            <col width="360">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>支付类型</th>
+                            <th>金额</th>
+                            <th>规则</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>转账</td>
+                            <td class="orangeWeight14">¥ 1550.00</td>
+                            <td>支付宝转账</td>
+                        </tr>
+                        <tr>
+                            <td>代金券</td>
+                            <td class="orangeWeight14">¥ 50.00</td>
+                            <td>五一代金券</td>
+                        </tr>
+                        <tr>
+                            <td>支付总额</td>
+                            <td colspan="2" class="orangeWeight20">¥ 1600.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    <div class="foot clearfix">
+        <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
+        <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
+    </div>
+</div>
+
+<script type="text/html" id="whiteOrder_template">
+    <div class="statusHint">出行前请仔细填写游客信息</div>
+</script>
+<script type="text/html" id="payOrder_template">
+    <div class="statusHint">打开荷包，来一场说走就走的旅行吧</div>
+</script>
+<script type="text/html" id="paySuccess_template">
+    <div class="statusHint">支付成功，请提前备好行囊准备踏上您的自由之旅</div>
+</script>
+<script type="text/html" id="box_template">
+    <div class="statusHint">我们将于出发前两周给您邮寄心意盒子，作为您随身的助手它将为您提供……信息</div>
+</script>
+<script type="text/html" id="travelInform_template">
+    <div class="statusHint">真旅管家将于您出发前48小时发送出行提醒</div>
+</script>
+<script type="text/html" id="steward_template">
+    <div class="statusHint">我们提供n*24小时的管家服务，出行中您可以在任意时刻致电或联系我们的客服获取信息及帮助</div>
+</script>
+<script type="text/html" id="evaluate_template">
+    <div class="statusHint">您的评价是我们不断改进的动力，同时也是其他游客出行的参考，成功推荐新的游客我们将赠送可抵现金券于您的账户。</div>
+</script>
+
+    <!--  经停提示信息模板  -->
+    <script type="text/html" id="stop_flight_template">
+        <table class="flight_tip_table">
+            <tr>
+                <th>经停：</th>
+                <td>阿布扎比阿布扎比</td>
+            </tr>
+            <tr>
+                <th>到达：</th>
+                <td>10:20</td>
+            </tr>
+            <tr>
+                <th>起飞：</th>
+                <td>14:30</td>
+            </tr>
+            <tr>
+                <th>停留：</th>
+                <td>2h30m</td>
+            </tr>
+        </table>
+    </script>
+
+    <!--  中转提示信息模板  -->
+    <script type="text/html" id="transfer_flight_template">
+        <table class="flight_tip_table">
+            <tr>
+                <th>中转：</th>
+                <td>阿布扎比</td>
+            </tr>
+            <tr>
+                <th>到达：</th>
+                <td>10:20</td>
+            </tr>
+            <tr>
+                <th>起飞：</th>
+                <td>14:30</td>
+            </tr>
+            <tr>
+                <th>停留：</th>
+                <td>2h30m</td>
+            </tr>
+        </table>       
+    </script>
+
+<script>
+    $(function(){
+        //导航状态浮层
+        $(".orderStatus .whiteOrder").attr("title", $("#whiteOrder_template").html());
+        $(".orderStatus .payOrder").attr("title", $("#payOrder_template").html());
+        $(".orderStatus .paySuccess").attr("title", $("#paySuccess_template").html());
+        $(".orderStatus .box").attr("title", $("#box_template").html());
+        $(".orderStatus .travelInform").attr("title", $("#travelInform_template").html());
+        $(".orderStatus .steward").attr("title", $("#steward_template").html());
+        $(".orderStatus .evaluate").attr("title", $("#evaluate_template").html());
+
+        $(".stoppingPoint.transfer").attr("title", $("#transfer_flight_template").html());
+        $(".stoppingPoint.stop").attr("title", $("#stop_flight_template").html());
+
+        $(".green-border-tooltip").tooltip({
+            html: true,
+            placement: 'bottom',
+            template: '<div class="tooltip green-border-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+
+        //编辑联系人信息
+        $(".editContactInfo").click(function(){
+            $(".contactInfoTab").hide();
+            $(".editContactInfoContent").slideDown(function(){
+                $(window).trigger("resize");
+            });
+        });
+        $(".editContactInfoTab .cancelBtn").click(function(){
+            $(this).parents(".editContactInfoContent").slideUp(function(){
+                $(".contactInfoTab").show();
+                $(window).trigger("resize");
+            });
+        });
+
+        //编辑游客信息
+        $(".editTouristInfo").click(function(){
+            $(".touristInfoTab").hide();
+            $(".editTouristInfoContent").slideDown(function(){
+                $(window).trigger("resize");
+            });
+        });
+        $(".editTouristInfoContent .cancelBtn").click(function(){
+            $(this).parents(".editTouristInfoContent").slideUp(function(){
+                $(".touristInfoTab").show();
+                $(window).trigger("resize");
+            });
+        });
+        
+        //编辑床型
+        $(".bedType .editBedType").click(function(){
+            $(this).hide();
+            $(".editBedTypeContent").show();
+        });
+
+        $(".editBedTypeContent .cancelBtn").click(function(){
+            $(".editBedTypeContent").hide();
+            $(".editBedType").show();
+        });
+
+    });
+</script>
+
+</body>
+</html>
