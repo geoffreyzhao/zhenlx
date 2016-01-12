@@ -1360,7 +1360,8 @@ ul.common-tab > li.rest {
     font-size: 14px;
 }
 
-.calTable .tdCont .onsale .price em {
+.calTable .tdCont .onsale .price em,
+.calTable .tdCont .onsale .childPrice em {
     font-size: 12px;
 }
 
