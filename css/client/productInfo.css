@@ -1360,8 +1360,8 @@ ul.common-tab > li.rest {
     font-size: 14px;
 }
 
-.calTable .tdCont .onsale .price em,
-.calTable .tdCont .onsale .childPrice em {
+.calTable .tdCont .price em,
+.calTable .tdCont .childPrice em {
     font-size: 12px;
 }
 
@@ -1370,7 +1370,8 @@ ul.common-tab > li.rest {
     line-height: 20px;
 }
 
-.calTable .tdCont .soldout .price {
+.calTable .tdCont .soldout .price,
+.calTable .tdCont .soldout .childPrice {
     color: #cacaca;
     line-height: 20px;
 }
@@ -1380,7 +1381,8 @@ ul.common-tab > li.rest {
     line-height: 20px;
 }
 
-.calTable .tdCont .canntorder .price {
+.calTable .tdCont .canntorder .price,
+.calTable .tdCont .canntorder .childPrice {
     color: #11b9b7;
     line-height: 20px;
 }
