@@ -2752,7 +2752,9 @@ ul.common-tab > li.rest {
 }
 
 .prod-type-item.current {
-    border: 1px solid #e46c14;
+    border: 1px solid #e56c14;
+    border-radius: 3px;
+    background-color: #fffdf5;
 }
 
 .prod-by-menu .more {
