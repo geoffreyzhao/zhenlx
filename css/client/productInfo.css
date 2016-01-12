@@ -1340,11 +1340,13 @@ ul.common-tab > li.rest {
 
 .calTable .tdCont .priceCover .dateDay {
     float: left;
+    margin-left: -8px;
 }
 
 .calTable .tdCont .priceCover .right-block {
     float: right;
     text-align: right;
+    margin-right: -5px;
 }
 
 .calTable .tdCont .onsale .leftNum {
