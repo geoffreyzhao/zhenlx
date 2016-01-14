@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>真旅行-九州</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/client/common.css">  
+    <link rel="stylesheet" type="text/css" href="/css/client/indexnewpage.css">
+    <link rel="stylesheet" type="text/css" href="css/webShowSpecial.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="head clearfix">
+            <a href="http://www.zhenlx.com">
+                <div class="logoImg"></div>
+            </a>
+        </div>
+    </header>
+    <section class="wrapperSpecial">
+        <div class="jiuzhouBanner">
+            <a href="javascript:void(0);" target="_blank" class="jiuzhouPositionA"></a>
+        </div>
+        <div class="jiuzhouContent">
+            <div class="jiuzhouBlock01">
+                <span class="changeImg02"></span>
+                <span class="changeImg03"></span>
+                <div class="img01"></div>
+                <div class="img02"></div>
+                <div class="img03"></div>
+            </div>
+            <div class="jiuzhouBlock02"></div>
+            <div class="jiuzhouBlock03"></div>
+            <div class="jiuzhouBlock04"></div>
+            <div class="jiuzhouBlock05"></div>
+            <div class="jiuzhouBlock06"></div>
+            <div class="jiuzhouBottomImg">
+                <div>
+                    <img src="images/webShowSpecial/kumamoto.gif">
+                </div>
+                <div class="marginTop20px">
+                    <a href="javascript:void(0);" target="_blank">
+                        <img src="images/webShowSpecial/jiuzhou07.jpg" style="width: 1103px; height: 288px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+  <div class="footer-wrap" style="min-width: 1200px;">
+      <div class="foot clearfix">
+          <div class="footer-nav">
+              <div class="erweima">
+                  <img src="//static.zhenlx.com/images/client/erweima.jpg" alt="">
+                  <div class="contact-info">
+                      <span class="info-title">关注我们</span><br>
+                      <span>微信公众号: zhenlx2015</span><br>
+                      <span class="info-title">服务热线</span><br>
+                      <span class="info-tell">400-620-6266 转6</span><br>
+                      <span>service@zhenlx.com</span>
+                  </div>
+              </div>
+              <div class="quick-nav">
+                  <dl>
+                      <dt>关于真旅行</dt>
+                      <dd><a href="javascript:toabout('about_us','关于真旅行','关于我们');">关于我们</a></dd>
+                      <dd><a href="javascript:toabout('call_me','联系我们','联系我们');">联系我们</a></dd>
+                  </dl>
+                  <dl>
+                      <dt>服务说明</dt>
+                      <dd><a href="javascript:toabout('user_protocol','真旅行用户协议','用户协议');">用户协议</a></dd>
+                  </dl>
+                  <dl style="margin-right:45px;">
+                      <dt>网站条款</dt>
+                      <dd><a href="javascript:toabout('reserve_protocol','真旅行产品预订协议','预订协议');">预定协议</a></dd>
+                  </dl>
+              </div>
+          </div>
+          <div class="footer-copyright">
+              <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号-5</span>
+			<span class="service-tel">
+				<span class="tellIcon"></span>服务热线：
+				<span class="telnum">400-620-6266 转6</span>
+			</span>
+          </div>          
+      </div>
+  </div>
+    
+  <script type="text/javascript">
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?bcf5ba51430753b5b7138a1ff3f8b534";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+
+  <script type="text/javascript">
+      var memberServer = "http://www.zhenlx.com" ;
+      function toabout(selector, title, menuName){
+          window.open(memberServer + "/about?selector="+selector+"&title="+encodeURI(encodeURI(title))+"&menuName="+encodeURI(encodeURI(menuName))) ;
+      }
+  </script>
+
+<!--  九州hover切换  -->
+<script type="text/javascript">
+    $(function(){
+        $(".changeImg02").hover(
+            function () {
+                $(this).siblings(".img01").hide();
+                $(this).siblings(".img02").show();
+            },
+            function () {
+                $(this).siblings(".img01").show();
+                $(this).siblings(".img02").hide();
+            }
+        );
+        $(".changeImg03").hover(
+            function () {
+                $(this).siblings(".img01").hide();
+                $(this).siblings(".img03").show();
+            },
+            function () {
+                $(this).siblings(".img01").show();
+                $(this).siblings(".img03").hide();
+            }
+        );
+    })
+</script>
+
+</body>
+</html>
+

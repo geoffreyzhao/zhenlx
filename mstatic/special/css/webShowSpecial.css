@@ -163,3 +163,80 @@ img:focus{
     background-color: #6dbf04;
 }
 /*  泰国专题页 E  */
+
+/*  九州专题页 S  */
+.jiuzhouBanner{
+    background: url("../images/webShowSpecial/jiuzhouBanner.jpg") no-repeat 50% 50%;
+    height: 718px;
+    position: relative;
+}
+.jiuzhouBanner .jiuzhouPositionA{
+    width: 440px;
+    height: 140px;
+    position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    top: 580px;
+}
+.jiuzhouBlock01{
+    position: relative;
+}
+.jiuzhouBlock01 .changeImg02,
+.jiuzhouBlock01 .changeImg03{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    cursor: pointer;
+}
+.jiuzhouBlock01 .changeImg02{
+    margin-left: -108px;
+}
+.jiuzhouBlock01 .changeImg03{
+    margin-left: 203px;
+}
+.jiuzhouBlock01 .img01{
+    background: url("../images/webShowSpecial/jiuzhou01.jpg") no-repeat 50% 50%;
+    height: 495px;    
+}
+.jiuzhouBlock01 .img02{
+    background: url("../images/webShowSpecial/jiuzhou01-2.jpg") no-repeat 50% 50%;
+    height: 495px;
+    display: none;
+}
+.jiuzhouBlock01 .img03{
+    background: url("../images/webShowSpecial/jiuzhou01-3.jpg") no-repeat 50% 50%;
+    height: 495px;
+    display: none;
+}
+.jiuzhouBlock02{
+    background: url("../images/webShowSpecial/jiuzhou02.jpg") no-repeat 50% 50%;
+    height: 642px;
+}
+.jiuzhouBlock03{
+    background: url("../images/webShowSpecial/jiuzhou03.jpg") no-repeat 50% 50%;
+    height: 769px;
+}
+.jiuzhouBlock04{
+    background: url("../images/webShowSpecial/jiuzhou04.jpg") no-repeat 50% 50%;
+    height: 1065px;
+}
+.jiuzhouBlock05{
+    background: url("../images/webShowSpecial/jiuzhou05.jpg") no-repeat 50% 50%;
+    height: 622px;
+}
+.jiuzhouBlock06{
+    background: url("../images/webShowSpecial/jiuzhou06.jpg") no-repeat 50% 50%;
+    height: 757px;
+}
+.jiuzhouBottomImg{
+    background-color: #ecf2ee;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.marginTop20px{
+    margin-top: 20px;
+}
+/*  九州专题页 E  */
