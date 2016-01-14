@@ -1308,6 +1308,16 @@
     /* color:#3fc0ae; */
     color:#333;
 }
+.menu-sum.disable{
+    color:#ababab!important;
+}
+.menu-sum.disable .counter-minus,.menu-sum.disable .counter-add{
+    background-color:#eee!important;
+    color:#999!important;
+}
+.menu-sum.disable .counter-num{
+    color:#ababab!important;
+}
 .menu-sum-box.current{
     background-color:#e4fbf8 !important;
 }
