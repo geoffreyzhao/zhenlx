@@ -878,5 +878,162 @@ ul.common-tab > li.rest {
     right: 3%;
     top: 15px;
 }
+.blueFonts{
+    color: #11b9b7;
+}
+.ke-container.ke-container-default,
+.costTab .editorText{
+    width: 650px;
+    height: 140px;
+    max-width: 880px;
+}
+.costTab .editorText{
+    color: #484848;
+    border: 1px solid #CCCCCC;
+}
+.costContainEdit,
+.commonSave,
+.additionEditContent,
+.requiredAdd,
+.requiredEditContent,
+.addAdditionTr{
+    display: none;
+}
+.commonSave{
+    margin: 20px 0;    
+}
+.commonSave a.cancelBtn{
+    font-size: 18px;
+    color: #484848;
+    margin-left: 30px;
+}
+.commonSave a.cancelBtn:hover{
+    color: #484848;
+    text-decoration: underline;
+}
+.addAndSubtract{
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #d6d6d6;
+    vertical-align: middle;
+    text-align: center;
+}
+.addAndSubtract .numberFonts{
+    display: inline-block;
+    width: 50px;
+    height: 36px;
+    border-bottom: none;
+    border-top: none;
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+    vertical-align: top;
+    text-align: center;
+    padding-left: 0;
+}
+.addAndSubtract .subtractBtn,
+.addAndSubtract .addBtn{
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    width: 25px;
+    height: 36px;
+    color: #606060;
+    background-color: #eaeaea;
+    vertical-align: top;
+}
+.addAndSubtract .subtractBtn{
+    margin-right: -5px;
+}
+.addAndSubtract .addBtn{
+    margin-left: -4px;
+}
+.addAndSubtract .subtractBtn:hover,
+.addAndSubtract .addBtn:hover{
+    color: #606060;
+}
+.additionContent{
+    display: inline-block;
+    min-height: 20px;
+}
+.commonLightBlueThead.contactInfoTab{
+    width: 90%;
+}
+.commonStyle .editable{
+    position: relative;
+}
+.totalPrice{
+    display: inline-block;
+}
+.commonAddDelete{
+    display: none;
+}
+.commonAddDelete .commonAdd,
+.commonAddDelete .commonDelete{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url("../../images/client/commonIcon.png") no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: absolute;
+    top: 10%;
+    right: -50px;
+    cursor: pointer;
+}
+.commonAddDelete .commonAdd{
+    background-position: -173px -24px;
+}
+.commonAddDelete .commonDelete{
+    background-position: -173px 0;
+}
+.commonStyle .textAlignRight{
+    text-align: right;
+}
+.commonLightBlueThead.width90{
+    width: 90%;
+}
+.paddingBottom20{
+    padding-bottom: 20px;
+}
+.upLoadFile,
+.fileName{
+    position: relative;
+}
+.upLoadFile .inputFile{
+    font-size: 0;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 40px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.commonStyle .fileNameList{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dcf5f4;
+}
+.commonStyle .fileName{
+    margin: 15px 30px 15px 0;
+}
+.fileName .fileNameFonts{
+    font-size: 14px;
+    display: inline-block;
+    color: #484848;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.fileName .deleteFileName{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("../../images/client/commonIcon.png") no-repeat -91px -190px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
 
 /*  OP确认单 end  */

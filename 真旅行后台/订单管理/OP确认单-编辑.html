@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/navHeader.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/flight_logo.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/orderInfo.css">
@@ -21,7 +22,8 @@
     <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="../../js/vendor/bootstrap-datepicker.zh-CN.min.js"></script>
-    <script type="text/javascript" src="../../js/client/common.js"></script>    
+    <script type="text/javascript" src="../../js/client/common.js"></script>
+    <script type="text/javascript" src="../../js/vendor/kindeditor.js"></script>
 
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../../js/base/html5.js"></script>
@@ -51,7 +53,7 @@
 </header>
 
 <div class="main-container">
-    <div class="main-wrapper" id="main-wrapper">        
+    <div class="main-wrapper" id="main-wrapper" style="margin-bottom: 20px;">        
         <section class="onLinePayContent">
             <div class="top-border"></div>
              <div class="commonOrderModel">
@@ -191,6 +193,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="commonOPOrderModel">
                 <div class="commonSmallTitleModel blueFonts">
                     <span class="leftTitleFonts">游客信息</span>
@@ -432,6 +435,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="commonOrderModel commonOPOrderModel">
                 <div class="commonSmallTitleModel blueFonts">
                     <span class="leftTitleFonts">机票信息</span>
@@ -570,6 +574,7 @@
                     </ul>
                 </div>
             </div>
+            
             <div class="commonOPOrderModel">
                 <div class="commonSmallTitleModel blueFonts">
                     <span class="leftTitleFonts">酒店信息</span>
@@ -632,36 +637,111 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div class="bedType">
-                        <span class="color9f9f9f">偏好的酒店床型:  </span>
-                        <label class="editBedType">
-                            <span>优先大床房</span>
-                            <span class="commonIcon editIcon"></span>
-                        </label>
-                        <span class="editBedTypeContent">
-                            <span class="radioContent">
-                                <label class="radio active">
-                                    <span class="commonIcon radioIcon"></span>
-                                    <span class="genderSelect">优先大床房</span>
-                                </label>
-                                <label class="radio">
-                                    <span class="commonIcon radioIcon"></span>
-                                    <span class="genderSelect">优先双床房</span>
-                                </label>
-                            </span>
-                            <span class="sureBtn">确定</span>
-                            <span class="cancelBtn">取消</span>
-                        </span>
+                </div>
+            </div>
+
+            <div class="commonOPOrderModel">
+                <div class="commonSmallTitleModel blueFonts">
+                    <span class="leftTitleFonts">附加产品</span>
+                    <label class="commonEditBtn additionEditBtn">
+                        <span class="commonIcon editIcon"></span>
+                    </label>
+                </div>
+                <div class="commonStyle">
+                    <table class="commonLightBlueThead contactInfoTab">
+                        <colgroup>
+                            <col width="40%">
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="20%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>
+                                <div class="editable">
+                                    <span>合计</span>
+                                    <span class="commonAddDelete additionAddDelete">
+                                        <em class="commonAdd additionAdd"></em>
+                                    </span>
+                                </div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <span class="additionContent"></span>
+                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入名称">
+                            </td>
+                            <td>
+                                <span class="additionContent"></span>
+                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入单价">
+                            </td>
+                            <td>
+                                <span class="additionContent"></span>
+                                <div class="additionEditContent">
+                                    <span class="addAndSubtract">
+                                        <a href="javascript:void(0);" class="subtractBtn">-</a>
+                                        <input type="text" class="numberFonts" value="1">
+                                        <a href="javascript:void(0);" class="addBtn">+</a>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="editable">
+                                    <span class="totalPrice"></span>
+                                    <span class="commonAddDelete additionAddDelete">
+                                        <em class="commonDelete additionDelete"></em>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="addAdditionTr">
+                            <td>
+                                <span class="additionContent"></span>
+                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入名称">
+                            </td>
+                            <td>
+                                <span class="additionContent"></span>
+                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入单价">
+                            </td>
+                            <td>
+                                <span class="additionContent"></span>
+                                <div class="additionEditContent">
+                                    <span class="addAndSubtract">
+                                        <a href="javascript:void(0);" class="subtractBtn">-</a>
+                                        <input type="text" class="numberFonts" value="1">
+                                        <a href="javascript:void(0);" class="addBtn">+</a>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="editable">
+                                    <span class="totalPrice"></span>
+                                    <span class="commonAddDelete additionAddDelete">
+                                        <em class="commonDelete additionDelete"></em>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="commonSave additionSave">
+                        <a href="javascript:void(0);" class="commonBtn blueBtn">保 存</a>
+                        <a href="javascript:void(0);" class="cancelBtn">取消</a>
                     </div>
                 </div>
             </div>
-            <div class="commonOrderModel">
-                <i class="left-semicircle"></i>
-                <i class="right-semicircle"></i>
-                <div class="titleModel blueFonts">
-                    <span>费用说明</span>
-                    <i class="left-semicircle"></i>
-                    <i class="right-semicircle"></i>
+            
+            <div class="commonOPOrderModel">
+                <div class="commonSmallTitleModel blueFonts">
+                    <span class="leftTitleFonts">费用说明</span>
+                    <label class="commonEditBtn costContainEditBtn">
+                        <span class="commonIcon editIcon"></span>
+                    </label>
                 </div>
                 <div class="commonStyle">
                     <table class="commonLightBlueThead leftTh costTab">
@@ -672,43 +752,71 @@
                         <tbody>
                         <tr>
                             <th>费用包含</th>
-                            <td>1.  上海往返暹粒机票（含税）<br>
-                                2.  四晚五星度假酒店（含早）<br>
-                                3.  机场至酒店接机<br>
-                                4.  7X24小时自由行大管家
+                            <td>
+                                <div class="costContainContent">
+                                    1.  上海往返暹粒机票（含税）<br>
+                                    2.  四晚五星度假酒店（含早）<br>
+                                    3.  机场至酒店接机<br>
+                                    4.  7X24小时自由行大管家
+                                </div>
+                                <div class="costContainEdit">
+                                    <form>
+                                        <textarea name="content" class="editorText"></textarea>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <th>费用不含</th>
-                            <td>1.  单房差<br>
-                                2.  签证费；护照费、申请签证中准备相关材料所需的制作费及手续费等（如未成年人所需的公证书、认证费）<br>
-                                3.  洗衣、理发、电话、饮料、烟酒、付费电视、行李搬运、自由活动期间等个人消费<br>
-                                4.  出入境的行李海关课税、超重行李的托运费及管理费等<br>
-                                5.  不可抗力：因交通延阻、罢工、大风、大雾、航班取消或延期等不可抗拒因素所产生的额外费用<br>
-                                6.  (费用包含)中未提及的任何费用
+                            <td>
+                                <div class="costContainContent">
+                                    1.  单房差<br>
+                                    2.  签证费；护照费、申请签证中准备相关材料所需的制作费及手续费等（如未成年人所需的公证书、认证费）<br>
+                                    3.  洗衣、理发、电话、饮料、烟酒、付费电视、行李搬运、自由活动期间等个人消费<br>
+                                    4.  出入境的行李海关课税、超重行李的托运费及管理费等<br>
+                                    5.  不可抗力：因交通延阻、罢工、大风、大雾、航班取消或延期等不可抗拒因素所产生的额外费用<br>
+                                    6.  (费用包含)中未提及的任何费用
+                                </div>
+                                <div class="costContainEdit">
+                                    <form>
+                                        <textarea name="content" class="editorText"></textarea>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <th>赠送项目</th>
-                            <td>1.  柬埔寨当地3G上网卡（每间房一张）<br>
-                                2.  出国人员旅游意外伤害保险<br>
-                                3.  <span class="blueFonts">专属真旅卷轴指南</span>
+                            <td>
+                                <div class="costContainContent">
+                                    1.  柬埔寨当地3G上网卡（每间房一张）<br>
+                                    2.  出国人员旅游意外伤害保险<br>
+                                    3.  <span class="blueFonts">专属真旅卷轴指南</span>
+                                </div>
+                                <div class="costContainEdit">
+                                    <form>
+                                        <textarea name="content" class="editorText"></textarea>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                         </tbody>
                     </table>
+                    <div class="commonSave costContainSave">
+                        <a href="javascript:void(0);" class="commonBtn blueBtn">保 存</a>
+                        <a href="javascript:void(0);" class="cancelBtn">取消</a>
+                    </div>
                 </div>
             </div>
-            <div class="commonOrderModel">
-                <i class="left-semicircle"></i>
-                <i class="right-semicircle"></i>
-                <div class="titleModel blueFonts">
-                    <span>价格明细</span>
-                    <i class="left-semicircle"></i>
-                    <i class="right-semicircle"></i>
+            
+            <div class="commonOPOrderModel">
+                <div class="commonSmallTitleModel blueFonts">
+                    <span class="leftTitleFonts">价格明细</span>
+                    <label class="commonEditBtn priceEditBtn">
+                        <span class="commonIcon editIcon"></span>
+                    </label>
                 </div>
                 <div class="commonStyle">
-                    <table class="commonLightBlueThead leftTh">
+                    <table class="commonLightBlueThead leftTh width90">
                         <colgroup>
                             <col width="160">
                             <col width="230">
@@ -716,63 +824,108 @@
                             <col width="310">
                         </colgroup>
                         <tbody>
+                        <tr class="defaultRowSpan">
+                            <th rowspan="1">必选产品</th>
+                            <td>
+                                <span class="requiredContent">单身套餐</span>
+                                <input class="requiredEditContent" type="text" style="width: 90%;" value="单身套餐">
+                            </td>
+                            <td>
+                                <span class="requiredContent">¥ 2500.00 * 1人</span>
+                                <span class="requiredEditContent">
+                                    <input type="text" style="width: 100px;" value="¥1000">
+                                    <span> x </span>
+                                    <span class="addAndSubtract">
+                                        <a href="javascript:void(0);" class="subtractBtn">-</a>
+                                        <input type="text" class="numberFonts" value="1">
+                                        <a href="javascript:void(0);" class="addBtn">+</a>
+                                    </span>
+                                    <span> 人</span>
+                                </span>
+                            </td>
+                            <td>
+                                <div class="editable">
+                                    <span class="orangeWeight16">¥ 2500.00</span>
+                                    <span class="commonAddDelete requiredAddDelete">
+                                        <em class="commonAdd requiredAdd"></em>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="requiredAdd">
+                            <td>
+                                <span class="requiredContent">单身套餐</span>
+                                <input class="requiredEditContent" type="text" style="width: 90%;" value="单身套餐">
+                            </td>
+                            <td>
+                                <span class="requiredContent">¥ 2500.00 * 1人</span>
+                                <span class="requiredEditContent">
+                                    <input type="text" style="width: 100px;" value="¥1000">
+                                    <span> x </span>
+                                    <span class="addAndSubtract">
+                                        <a href="javascript:void(0);" class="subtractBtn">-</a>
+                                        <input type="text" class="numberFonts" value="1">
+                                        <a href="javascript:void(0);" class="addBtn">+</a>
+                                    </span>
+                                    <span> 人</span>
+                                </span>
+                            </td>
+                            <td>
+                                <div class="editable">
+                                    <span class="orangeWeight16">¥ 2500.00</span>
+                                    <span class="commonAddDelete requiredAddDelete">
+                                        <em class="commonDelete requiredDelete"></em>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
                         <tr>
-                            <th>必选产品</th>
-                            <td>套餐名称</td>
-                            <td>¥ 2500.00</td>
-                            <td class="orangeWeight16">¥ 2500.00</td>
+                            <th>当地游产品</th>
+                            <td>A类门票</td>
+                            <td>¥ 1000.00 * 1人</td>
+                            <td class="orangeWeight16">¥ 1000.00</td>
                         </tr>
                         <tr>
                             <th>网站优惠</th>
-                            <td>优惠抵扣券</td>
-                            <td>春季欧洲券</td>
-                            <td class="orangeWeight16">-¥ 50.00</td>
+                            <td>优惠折扣卷</td>
+                            <td></td>
+                            <td class="orangeWeight16">-¥ 500.00</td>
                         </tr>
                         <tr>
-                            <th>应付金额</th>
-                            <td colspan="3" class="orangeWeight22">¥ 3950.00</td>
+                            <th>更后单价</th>
+                            <td colspan="3" class="textAlignRight">
+                                <span>（原订单价: ¥3450）</span>
+                                <span class="orangeWeight22">¥ 3950.00</span>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
+                    <div class="commonSave requiredSave">
+                        <a href="javascript:void(0);" class="commonBtn blueBtn">保 存</a>
+                        <a href="javascript:void(0);" class="cancelBtn">取消</a>
+                    </div>
                 </div>
             </div>
-            <div class="commonOrderModel">
-                <div class="titleModel blueFonts">
-                    <span>支付信息</span>
-                    <i class="left-semicircle"></i>
-                    <i class="right-semicircle"></i>
+
+            <div class="commonOPOrderModel paddingBottom20">
+                <div class="commonSmallTitleModel blueFonts">
+                    <span class="leftTitleFonts">其他</span>
                 </div>
                 <div class="commonStyle">
-                    <table class="commonLightBlueThead">
-                        <colgroup>
-                            <col width="290">
-                            <col width="360">
-                            <col width="360">
-                        </colgroup>
-                        <thead>
-                        <tr>
-                            <th>支付类型</th>
-                            <th>金额</th>
-                            <th>规则</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>转账</td>
-                            <td class="orangeWeight14">¥ 1550.00</td>
-                            <td>支付宝转账</td>
-                        </tr>
-                        <tr>
-                            <td>代金券</td>
-                            <td class="orangeWeight14">¥ 50.00</td>
-                            <td>五一代金券</td>
-                        </tr>
-                        <tr>
-                            <td>支付总额</td>
-                            <td colspan="2" class="orangeWeight20">¥ 1600.00</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="upLoadFile">
+                        <button class="commonButton gray-bbbButton">+ 添加附件</button>
+                        <input type="file" class="inputFile">
+                    </div>
+                    <div class="fileNameList">
+                        <label class="fileName">
+                            <span class="fileNameFonts">柬埔寨旅游景点门票价目表.pdf</span>
+                            <i class="deleteFileName"></i>
+                        </label>
+                        <label class="fileName">
+                            <span class="fileNameFonts">柬埔寨旅游景点门票价目表.pdf</span>
+                            <i class="deleteFileName"></i>
+                        </label>
+                    </div>
                 </div>
             </div>
             
@@ -785,27 +938,6 @@
     </div>
 </div>
 
-<script type="text/html" id="whiteOrder_template">
-    <div class="statusHint">出行前请仔细填写游客信息</div>
-</script>
-<script type="text/html" id="payOrder_template">
-    <div class="statusHint">打开荷包，来一场说走就走的旅行吧</div>
-</script>
-<script type="text/html" id="paySuccess_template">
-    <div class="statusHint">支付成功，请提前备好行囊准备踏上您的自由之旅</div>
-</script>
-<script type="text/html" id="box_template">
-    <div class="statusHint">我们将于出发前两周给您邮寄心意盒子，作为您随身的助手它将为您提供……信息</div>
-</script>
-<script type="text/html" id="travelInform_template">
-    <div class="statusHint">真旅管家将于您出发前48小时发送出行提醒</div>
-</script>
-<script type="text/html" id="steward_template">
-    <div class="statusHint">我们提供n*24小时的管家服务，出行中您可以在任意时刻致电或联系我们的客服获取信息及帮助</div>
-</script>
-<script type="text/html" id="evaluate_template">
-    <div class="statusHint">您的评价是我们不断改进的动力，同时也是其他游客出行的参考，成功推荐新的游客我们将赠送可抵现金券于您的账户。</div>
-</script>
 
     <!--  经停提示信息模板  -->
     <script type="text/html" id="stop_flight_template">
@@ -853,14 +985,6 @@
 
 <script>
     $(function(){
-        //导航状态浮层
-        $(".orderStatus .whiteOrder").attr("title", $("#whiteOrder_template").html());
-        $(".orderStatus .payOrder").attr("title", $("#payOrder_template").html());
-        $(".orderStatus .paySuccess").attr("title", $("#paySuccess_template").html());
-        $(".orderStatus .box").attr("title", $("#box_template").html());
-        $(".orderStatus .travelInform").attr("title", $("#travelInform_template").html());
-        $(".orderStatus .steward").attr("title", $("#steward_template").html());
-        $(".orderStatus .evaluate").attr("title", $("#evaluate_template").html());
 
         $(".stoppingPoint.transfer").attr("title", $("#transfer_flight_template").html());
         $(".stoppingPoint.stop").attr("title", $("#stop_flight_template").html());
@@ -899,17 +1023,110 @@
             });
         });
         
-        //编辑床型
-        $(".bedType .editBedType").click(function(){
+        //富文本初始化
+        KindEditor.ready(function(K) {
+            K.options = {
+             minWidth: 650
+            };
+            K.options.items = ['forecolor', 'insertorderedlist'];
+            /*K.options.minWidth = 650;*/
+             K.create('textarea[name="content"]', {
+             afterCreate : function() {
+                    this.loadPlugin('autoheight');
+                }
+            });
+        });
+
+        //费用编辑
+        $(".costContainEditBtn").click(function(){
+            $that = $(this).parents(".commonSmallTitleModel").siblings(".commonStyle");
             $(this).hide();
-            $(".editBedTypeContent").show();
+            $that.find(".costContainContent").hide();
+            $that.find(".costContainEdit").show();
+            $that.find(".costContainSave").show();
+        });
+        $(".costContainSave").click(function(){
+            $(this).hide();
+            $cancel = $(this).siblings(".costTab");
+            $cancel.find(".costContainContent").show();
+            $cancel.find(".costContainEdit").hide();
+            $(this).parents(".commonStyle").siblings(".commonSmallTitleModel").find(".costContainEditBtn").show();
         });
 
-        $(".editBedTypeContent .cancelBtn").click(function(){
-            $(".editBedTypeContent").hide();
-            $(".editBedType").show();
+        //添加或减少数量
+        var least = 1;
+        var most = 1;
+        $(".addAndSubtract > .subtractBtn").click(function(){
+            var minus_num = parseInt($(this).next(".numberFonts").val());
+            minus_num--;
+            if(minus_num < least){
+                $(this).next().val(least);
+                return false;
+            }
+            $(this).next(".numberFonts").val(minus_num);
+        });
+        $(".addAndSubtract > .addBtn").click(function(){
+            var add_num = parseInt($(this).prev(".numberFonts").val());
+            add_num++;
+            $(this).prev(".numberFonts").val(add_num);
+        });
+        
+        //附加产品编辑
+        $(".additionEditBtn").click(function(){
+            $that = $(this).parents(".commonSmallTitleModel").siblings(".commonStyle");
+            $(this).hide();
+            $that.find(".additionContent").hide();
+            $that.find(".additionEditContent").show();
+            $that.find(".additionSave").show();
+            $that.find(".additionAddDelete").show();
+        });
+        $(".cancelBtn").click(function(){
+            $(this).parents(".additionSave").hide();
+            $cancel = $(this).parents(".additionSave").siblings(".contactInfoTab");
+            $cancel.find(".additionContent").show();
+            $cancel.find(".additionEditContent").hide();
+            $cancel.find(".additionAddDelete").hide();
+            $(this).parents(".commonStyle").siblings(".commonSmallTitleModel").find(".additionEditBtn").show();
+        });
+        $(".commonOPOrderModel").delegate(".additionAdd","click",function(){
+            $additionAdd = $(this).parents("thead").siblings("tbody").find(".addAdditionTr").html();
+            $(this).parents("thead").siblings("tbody").find(".addAdditionTr").after("<tr>"+ $additionAdd + "</tr>");
+        });
+        $(".commonOPOrderModel").delegate(".additionDelete","click",function(){
+            $(this).parents("tr").remove();
+        });
+        
+        //必选产品
+        $(".priceEditBtn").click(function(){
+            $(this).hide();
+            $priceEdit = $(this).parents(".commonSmallTitleModel").siblings(".commonStyle");
+            $priceEdit.find(".requiredContent").hide();
+            $priceEdit.find(".requiredEditContent").show();
+            $priceEdit.find(".requiredSave").show();
+            $priceEdit.find(".requiredAddDelete").show();
+        });
+        $(".requiredSave").click(function(){
+            $(this).hide();
+            $requiredCcancel = $(this).siblings(".leftTh");
+            $requiredCcancel.find(".requiredContent").show();
+            $requiredCcancel.find(".requiredEditContent").hide();
+            $requiredCcancel.find(".requiredAddDelete").hide();
+            $(this).parents(".commonStyle").siblings(".commonSmallTitleModel").find(".priceEditBtn").show();
         });
 
+        var row = 1;
+        $(".requiredAdd").click(function(){
+            $requireAdd = $(this).parents("tr").siblings(".requiredAdd").html();
+            $(this).parents("tr").after("<tr>" + $requireAdd + "</tr>");
+            row++;
+            $(this).parents("td").siblings("th").prop("rowspan",row);
+        });
+        $(".commonOPOrderModel").delegate(".requiredDelete","click",function(){
+            row--;
+            $(this).parents("tr").siblings(".defaultRowSpan").find("th").prop("rowspan",row);
+            $(this).parents("tr").remove();
+        });
+        
     });
 </script>
 
