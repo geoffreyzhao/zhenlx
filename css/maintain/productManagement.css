@@ -1618,3 +1618,32 @@ input[type="text"].tagInput {
 .dropdown.disabled .dropdownBtn:focus {
     border: 1px solid #dadada;
 }
+
+.oper-desc-block {
+    text-align: right;
+}
+
+.oper-desc-block .add-btn {
+    display: inline-block;
+    margin-right: 20px;
+    background: url(../../images/add-del-icons.png) no-repeat 0 -57px;
+    width: 100px;
+    height: 40px;
+}
+
+.oper-desc-block .add-btn:hover {
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+.oper-desc-block .remove-btn {
+    display: inline-block;
+    background: url(../../images/add-del-icons.png) no-repeat -139px -59px;
+    width: 100px;
+    height: 40px;
+}
+
+.oper-desc-block .remove-btn:hover {
+    background-position: -139px 0;
+    cursor: pointer;
+}
