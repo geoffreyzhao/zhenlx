@@ -178,38 +178,132 @@ img:focus{
     margin-left: -220px;
     top: 580px;
 }
-.jiuzhouBlock01{
+.jiuzhouChange{
+    background-color: #ecf2ee;
+}
+.jiuzhouChangeImg{
+    width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    background-color: #ffffff;
     position: relative;
 }
-.jiuzhouBlock01 .changeImg02,
-.jiuzhouBlock01 .changeImg03{
+.jiuzhouChangeImg .changeLeftImgStyle{
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    z-index: 3;
+}
+.jiuzhouChangeImg .changeLeftImg01{
+    width: 299px;
+    height: 159px;
+    background: url("../images/webShowSpecial/jiuzhouLeftImg01.png") no-repeat;
+    left: 30px;
+    top: 0;
+}
+.jiuzhouChangeImg .changeLeftImg02{
+    opacity: 0;
+    width: 279px;
+    height: 200px;
+    background: url("../images/webShowSpecial/jiuzhouLeftImg02.png") no-repeat;
+    left: 50px;
+    top: -20px;
+}
+.jiuzhouRightPlaces{
+    margin-left: 180px;
+}
+.jiuzhouRightPlaces .placesName{
+    margin-left: 200px;
+}
+.jiuzhouRightPlaces .bottomLines{
+    width: 820px;
+    margin-top: 40px;
+    margin-left: 30px;
+    border-bottom: 2px solid #589736;
+    position: relative;
+}
+.bottomLines .lines{
+    width: 100%;
+    height: 3px;
+    background-color: #fef6e3;
+}
+.bottomLines .commonChangeIcon{
+    display: inline-block;
+    width: 100px;
+    height: 130px;
+    background: url("../images/webShowSpecial/smallIcon.png") no-repeat 0 0;
+    position: absolute;
+    top: -112px;
+    z-index: 5;
+    cursor: pointer;
+}
+.commonChangeIcon.changeIcon01{
+    right: 510px;
+}
+.commonChangeIcon.changeIcon02{
+    right: 340px;
+}
+.commonChangeIcon.changeIcon03{
+    right: 200px;
+}
+.commonChangeIcon.changeIcon04{
+    right: 45px;
+}
+.commonChangeIcon.changeIcon01.current,
+.commonChangeIcon.changeIcon02.current,
+.commonChangeIcon.changeIcon03.current,
+.commonChangeIcon.changeIcon04.current{
+    background-position: -87px 0;
+    z-index: 6;
+}
+.commonFloater{
+    opacity: 0;
+    width: 658px;
+    height: 298px;
+    position: absolute;
+    left: 350px;
+    top: -185px;
+}
+.hoverFloater01{
+    background: url("../images/webShowSpecial/jiuzhouPositionImg01.png") no-repeat;
+}
+.hoverFloater02{
+    background: url("../images/webShowSpecial/jiuzhouPositionImg02.png") no-repeat;
+}
+
+
+/*.jiuzhouChange .changeImg02,
+.jiuzhouChange .changeImg03{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 380px;
     left: 50%;
     cursor: pointer;
 }
-.jiuzhouBlock01 .changeImg02{
+.jiuzhouChange .changeImg02{
     margin-left: -108px;
 }
-.jiuzhouBlock01 .changeImg03{
+.jiuzhouChange .changeImg03{
     margin-left: 203px;
 }
-.jiuzhouBlock01 .img01{
+.jiuzhouChange .img01{
     background: url("../images/webShowSpecial/jiuzhou01.jpg") no-repeat 50% 50%;
     height: 495px;    
 }
-.jiuzhouBlock01 .img02{
+.jiuzhouChange .img02{
     background: url("../images/webShowSpecial/jiuzhou01-2.jpg") no-repeat 50% 50%;
     height: 495px;
     display: none;
 }
-.jiuzhouBlock01 .img03{
+.jiuzhouChange .img03{
     background: url("../images/webShowSpecial/jiuzhou01-3.jpg") no-repeat 50% 50%;
     height: 495px;
     display: none;
+}*/
+.jiuzhouBlock01{
+    background: url("../images/webShowSpecial/jiuzhou01.jpg") no-repeat 50% 50%;
+    height: 252px;
 }
 .jiuzhouBlock02{
     background: url("../images/webShowSpecial/jiuzhou02.jpg") no-repeat 50% 50%;

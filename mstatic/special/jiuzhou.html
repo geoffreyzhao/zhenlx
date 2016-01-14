@@ -29,12 +29,35 @@
             <a href="javascript:void(0);" target="_blank" class="jiuzhouPositionA"></a>
         </div>
         <div class="jiuzhouContent">
-            <div class="jiuzhouBlock01">
-                <span class="changeImg02"></span>
+            <div class="jiuzhouBlock01"></div>
+            <div class="jiuzhouChange">
+                <!--<span class="changeImg02"></span>
                 <span class="changeImg03"></span>
                 <div class="img01"></div>
                 <div class="img02"></div>
-                <div class="img03"></div>
+                <div class="img03"></div>-->
+                <div class="jiuzhouChangeImg">
+                    <div class="leftImg">
+                        <span class="changeLeftImgStyle changeLeftImg01"></span>
+                        <span class="changeLeftImgStyle changeLeftImg02"></span>
+                    </div>
+                    <div class="topFloater">
+                        <span class="commonFloater hoverFloater01"></span>
+                        <span class="commonFloater hoverFloater02"></span>
+                    </div>
+                    <div class="jiuzhouRightPlaces">
+                        <div class="placesName">
+                            <img src="images/webShowSpecial/placeImg.jpg">
+                        </div>
+                        <div class="bottomLines">
+                            <div class="lines"></div>
+                            <div class="commonChangeIcon changeIcon01"></div>
+                            <div class="commonChangeIcon changeIcon02"></div>
+                            <div class="commonChangeIcon changeIcon03"></div>
+                            <div class="commonChangeIcon changeIcon04"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="jiuzhouBlock02"></div>
             <div class="jiuzhouBlock03"></div>
@@ -113,24 +136,44 @@
 <!--  九州hover切换  -->
 <script type="text/javascript">
     $(function(){
-        $(".changeImg02").hover(
+        $(".changeIcon01").hover(
             function () {
-                $(this).siblings(".img01").hide();
-                $(this).siblings(".img02").show();
+                $(this).addClass("current");
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater01").animate({
+                    opacity:1
+                });
             },
             function () {
-                $(this).siblings(".img01").show();
-                $(this).siblings(".img02").hide();
+                $(this).removeClass("current");
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater01").animate({
+                    opacity:0
+                });
             }
         );
-        $(".changeImg03").hover(
+        $(".changeIcon03").hover(
             function () {
-                $(this).siblings(".img01").hide();
-                $(this).siblings(".img03").show();
+                $(this).addClass("current");
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater02").animate({
+                    opacity:1
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg02").animate({
+                    opacity:1
+                });
             },
             function () {
-                $(this).siblings(".img01").show();
-                $(this).siblings(".img03").hide();
+                $(this).removeClass("current");
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater02").animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").animate({
+                    opacity:1
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg02").animate({
+                    opacity:0
+                });
             }
         );
     })
