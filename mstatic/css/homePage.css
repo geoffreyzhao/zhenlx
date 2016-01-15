@@ -1264,6 +1264,9 @@
     font-size: 0.8rem;
     line-height:0.9rem;
 }
+.menu-row .ui-grid-c .ui-block-d p.nolineheight{
+    line-height:inherit;
+}
 .menu-row-til{
     font-size: 0.6rem;
     color:#999;
@@ -1326,7 +1329,7 @@
     display: inline-block;
     position: absolute;
     left: 0.5rem;
-    bottom: -0.9rem;
+    bottom: 0.3rem;
 }
 .count-tips{
     display: none;

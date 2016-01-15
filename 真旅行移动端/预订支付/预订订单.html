@@ -516,6 +516,11 @@
             });
         });
 
+        $("body").delegate(".pop-ul-list li","touchstart",function(){
+          $(this).closest("#scroller").find("li").removeClass("current");
+            $(this).addClass("current");
+        });
+
         $(".order-hotel-op label").click(function(){
             $(this).siblings().removeClass("order-checkbox-checked");
             $(this).addClass("order-checkbox-checked");
