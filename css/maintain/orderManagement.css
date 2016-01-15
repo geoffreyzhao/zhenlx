@@ -1038,6 +1038,11 @@ ul.common-tab > li.rest {
 .main-container.changeBg{
     background: #e5f6fe;
     background: -webkit-linear-gradient(top, #e5f6fe, #e5f6fe);
+    background: -moz-linear-gradient(top, #e5f6fe, #e5f6fe);
+    background: -o-linear-gradient(top, #e5f6fe, #e5f6fe);
+    background: -ms-linear-gradient(top, #e5f6fe, #e5f6fe);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e5f6fe, endColorstr=#e5f6fe);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#e5f6fe, endColorstr=#e5f6fe);
 }
 .emailTab{
     margin: 20px 0;
