@@ -1259,6 +1259,7 @@
     font-size: 1rem;
     line-height:1.8rem;
     vertical-align: middle;
+    margin-top:0.1rem;
 }
 .menu-row .ui-grid-c .ui-block-d p{
     font-size: 0.8rem;
