@@ -1034,6 +1034,9 @@ ul.common-tab > li.rest {
     vertical-align: middle;
     cursor: pointer;
 }
-
+.main-container.changeBg{
+    background: #e5f6fe;
+    background: -webkit-linear-gradient(top, #e5f6fe, #e5f6fe);
+}
 
 /*  OP确认单 end  */
