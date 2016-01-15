@@ -171,12 +171,16 @@ img:focus{
     position: relative;
 }
 .jiuzhouBanner .jiuzhouPositionA{
-    width: 440px;
-    height: 140px;
+    width: 437px;
+    height: 133px;
+    background: url("../images/webShowSpecial/jiuzhouEntranceImg.png") no-repeat;
     position: absolute;
     left: 50%;
-    margin-left: -220px;
+    margin-left: -219px;
     top: 580px;
+}
+.jiuzhouBanner .jiuzhouPositionA:hover{
+    background: url("../images/webShowSpecial/jiuzhouEntranceImgHover.png") no-repeat;
 }
 .jiuzhouChange{
     background-color: #ecf2ee;
@@ -207,6 +211,22 @@ img:focus{
     background: url("../images/webShowSpecial/jiuzhouLeftImg02.png") no-repeat;
     left: 50px;
     top: -20px;
+}
+.jiuzhouChangeImg .changeLeftImg03{
+    opacity: 0;
+    width: 289px;
+    height: 182px;
+    background: url("../images/webShowSpecial/jiuzhouLeftImg03.png") no-repeat;
+    left: 30px;
+    top: -5px;
+}
+.jiuzhouChangeImg .changeLeftImg04{
+    opacity: 0;
+    width: 323px;
+    height: 288px;
+    background: url("../images/webShowSpecial/jiuzhouLeftImg04.png") no-repeat;
+    left: 30px;
+    top: -120px;
 }
 .jiuzhouRightPlaces{
     margin-left: 180px;
@@ -269,38 +289,13 @@ img:focus{
 .hoverFloater02{
     background: url("../images/webShowSpecial/jiuzhouPositionImg02.png") no-repeat;
 }
+.hoverFloater03{
+    background: url("../images/webShowSpecial/jiuzhouPositionImg03.png") no-repeat;
+}
+.hoverFloater04{
+    background: url("../images/webShowSpecial/jiuzhouPositionImg04.png") no-repeat;
+}
 
-
-/*.jiuzhouChange .changeImg02,
-.jiuzhouChange .changeImg03{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 380px;
-    left: 50%;
-    cursor: pointer;
-}
-.jiuzhouChange .changeImg02{
-    margin-left: -108px;
-}
-.jiuzhouChange .changeImg03{
-    margin-left: 203px;
-}
-.jiuzhouChange .img01{
-    background: url("../images/webShowSpecial/jiuzhou01.jpg") no-repeat 50% 50%;
-    height: 495px;    
-}
-.jiuzhouChange .img02{
-    background: url("../images/webShowSpecial/jiuzhou01-2.jpg") no-repeat 50% 50%;
-    height: 495px;
-    display: none;
-}
-.jiuzhouChange .img03{
-    background: url("../images/webShowSpecial/jiuzhou01-3.jpg") no-repeat 50% 50%;
-    height: 495px;
-    display: none;
-}*/
 .jiuzhouBlock01{
     background: url("../images/webShowSpecial/jiuzhou01.jpg") no-repeat 50% 50%;
     height: 252px;

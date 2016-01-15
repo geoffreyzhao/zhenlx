@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="../../css/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/common.css">
     <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
-    <link rel="stylesheet" type="text/css" href="../../css/client/navHeader.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/flight_logo.css">
     <link rel="stylesheet" type="text/css" href="../../css/client/orderInfo.css">
     <link rel="stylesheet" type="text/css" href="../../css/maintain/orderManagement.css">
@@ -32,27 +31,35 @@
 </head>
 <body>
 
-<header>
-    <div class="head clearfix">
-        <div class="logo"></div>
-        <div class="top-nav">
-            <ul class="top-nav-list clearfix">
-                <li class="top-nav-item">
-                    <a href="javascript:;">个人中心</a></li>
-                <li class="top-nav-item current">
-                    <a href="javascript:;">我的订单</a></li>
-                <li class="top-nav-item">
-                    <a href="javascript:;">心愿清单</a></li>
-                <li class="top-nav-item">
-                    <a href="javascript:;">我的钱包</a></li>
-                <li class="top-nav-item">
-                    <a href="javascript:;">网站消息</a></li>
-            </ul>
+<header class="main-header hoveringModel">
+    <div class="stairMenuContent topMenuFonts">
+        <div class="wrap clearfix">
+            <div class="navLeft">
+                <a class="logo" href="/"></a>
+            </div>
+            <div class="headRightOperate">
+                <span class="userContent">Hi，千颂伊</span>
+                <label class="emailContent">
+                    <i class="emailIcon"></i>
+                    <span class="emailFonts">99</span>
+                </label>
+                <a href="javascript:void(0);" class="exitFonts">退出</a>
+            </div>
         </div>
+    </div>
+    <div class="headSecondLevel headBtn clearfix" style="bottom: -48px;">
+        <span class="leftBtn">
+            <a href="javascript:void(0);" class="returnBtn">< 返回</a>
+        </span>
+        <span class="rightBtn">
+            <button class="commonButton orange-f79767Btn">完成确认</button>
+            <button class="commonButton blue-45c8dcButton">保存</button>
+            <button class="commonButton whiteBtn ac-generateOrderWindowBtn">取 消</button>
+        </span>
     </div>
 </header>
 
-<div class="main-container">
+<div class="main-container changeBg" style="margin-top: 110px;">
     <div class="main-wrapper" id="main-wrapper" style="margin-bottom: 20px;">        
         <section class="onLinePayContent">
             <div class="top-border"></div>
@@ -932,11 +939,10 @@
         </section>
     </div>
 
-    <div class="foot clearfix">
-        <span class="copyright">Copyright © 2015 真旅行 All Rights Reserved. 沪ICP备08004120号</span>
-        <span class="service-tel">服务热线：<span class="telnum">400-888-666</span></span>
-    </div>
 </div>
+
+
+<footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
 
 
     <!--  经停提示信息模板  -->
@@ -1029,7 +1035,6 @@
              minWidth: 650
             };
             K.options.items = ['forecolor', 'insertorderedlist'];
-            /*K.options.minWidth = 650;*/
              K.create('textarea[name="content"]', {
              afterCreate : function() {
                     this.loadPlugin('autoheight');

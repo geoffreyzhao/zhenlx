@@ -31,19 +31,18 @@
         <div class="jiuzhouContent">
             <div class="jiuzhouBlock01"></div>
             <div class="jiuzhouChange">
-                <!--<span class="changeImg02"></span>
-                <span class="changeImg03"></span>
-                <div class="img01"></div>
-                <div class="img02"></div>
-                <div class="img03"></div>-->
                 <div class="jiuzhouChangeImg">
                     <div class="leftImg">
                         <span class="changeLeftImgStyle changeLeftImg01"></span>
                         <span class="changeLeftImgStyle changeLeftImg02"></span>
+                        <span class="changeLeftImgStyle changeLeftImg03"></span>
+                        <span class="changeLeftImgStyle changeLeftImg04"></span>
                     </div>
                     <div class="topFloater">
                         <span class="commonFloater hoverFloater01"></span>
                         <span class="commonFloater hoverFloater02"></span>
+                        <span class="commonFloater hoverFloater03"></span>
+                        <span class="commonFloater hoverFloater04"></span>
                     </div>
                     <div class="jiuzhouRightPlaces">
                         <div class="placesName">
@@ -139,43 +138,96 @@
         $(".changeIcon01").hover(
             function () {
                 $(this).addClass("current");
-                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater01").animate({
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater01").stop().animate({
                     opacity:1
                 });
             },
             function () {
                 $(this).removeClass("current");
-                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater01").animate({
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater01").stop().animate({
                     opacity:0
+                });
+            }
+        );
+        $(".changeIcon02").hover(
+            function () {
+                $(this).addClass("current");
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").stop().animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater03").stop().animate({
+                    opacity:1
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg03").stop().animate({
+                    opacity:1
+                },1000);
+            },
+            function () {
+                $(this).removeClass("current");
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg03").stop().animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater03").stop().animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").stop().animate({
+                    opacity:1
                 });
             }
         );
         $(".changeIcon03").hover(
             function () {
                 $(this).addClass("current");
-                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater02").animate({
-                    opacity:1
-                });
-                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").animate({
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").stop().animate({
                     opacity:0
                 });
-                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg02").animate({
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater02").stop().animate({
                     opacity:1
                 });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg02").stop().animate({
+                    opacity:1
+                },1000);
             },
             function () {
                 $(this).removeClass("current");
-                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater02").animate({
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg02").stop().animate({
                     opacity:0
                 });
-                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").animate({
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater02").stop().animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").stop().animate({
                     opacity:1
-                });
-                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg02").animate({
-                    opacity:0
                 });
             }
         );
+        $(".changeIcon04").hover(
+            function () {
+                $(this).addClass("current");
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").stop().animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater04").stop().animate({
+                    opacity:1
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg04").stop().animate({
+                    opacity:1
+                },1000);
+            },
+            function () {
+                $(this).removeClass("current");
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg04").stop().animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".topFloater").find(".hoverFloater04").stop().animate({
+                    opacity:0
+                });
+                $(this).parents(".jiuzhouRightPlaces").siblings(".leftImg").find(".changeLeftImg01").stop().animate({
+                    opacity:1
+                });
+            }
+        );
+        
     })
 </script>
 
