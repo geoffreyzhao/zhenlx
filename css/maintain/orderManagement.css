@@ -1125,3 +1125,14 @@ ul.common-tab > li.rest {
   margin-top: 32px;
 }
 /*  OP确认单 end  */
+
+
+/* 退款申请单 S */
+.notPassTab tbody td{
+    padding: 6px 5px;
+}
+.notPassTab textarea {
+    width:458px;
+    height: 68px;
+}
+/* 退款申请单 E */
