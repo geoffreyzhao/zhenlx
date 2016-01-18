@@ -287,6 +287,11 @@
     font-size: 18px;
     color: #ed6003;
 }
+.noBorderTabStyle a {
+  font-size: 14px;
+  color: #3895cf;
+  margin-right: 10px;
+}
 .noBorderTabStyle .cancelOrder{
     font-size: 14px;
     color: #3895cf;
@@ -1085,5 +1090,38 @@ ul.common-tab > li.rest {
     position: absolute;
     right: 2%;
     top: 33px;
+}
+.backFillMoneyBlock {
+  float: right;
+  border-top: 1px solid #eaeaea;
+}
+.backFillMoneyBlock table  {
+  float: right;
+}
+.backFillMoneyBlock table tbody {
+  border-bottom: 0;
+}
+.backFillMoneyBlock table tbody a {
+  margin-right: 0;
+}
+.backFillMoneyBlock table tbody a:hover {
+  text-decoration: underline;
+}
+.backFillMoney .fill {
+  color: #ff6600;
+}
+.backFillMoney .refund {
+  color: #2ebacf;
+}
+.backFillMoney th {
+  text-align: right;
+}
+.backFillMoneyBlock .status {
+  display: inline-block;
+  float: right;
+  font-size: 16px;
+  color: #ed6003;
+  margin-right: 50px;
+  margin-top: 32px;
 }
 /*  OP确认单 end  */
