@@ -1124,6 +1124,12 @@ ul.common-tab > li.rest {
   margin-right: 50px;
   margin-top: 32px;
 }
+.hotelInfoTab .solidLine.hotelSecondLine{
+    left: 710px;
+}
+.hotelInfoTab .solidLine.hotelThirdLine{
+    right: 180px;
+}
 /*  OP确认单 end  */
 
 
