@@ -486,6 +486,9 @@
 .journeyRecommendList .wrapperList{
     margin: 30px 0;
 }
+.journeyRecommendList li p {
+    line-height: 28px;
+}
 .wrapperList.overviewBlock {
     border-bottom: none;
 }
