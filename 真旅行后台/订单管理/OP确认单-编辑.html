@@ -24,6 +24,8 @@
     <script type="text/javascript" src="../../js/client/common.js"></script>
     <script type="text/javascript" src="../../js/vendor/kindeditor.js"></script>
 
+    <script type="text/javascript" src="../../js/vendor/jquery.tmpl.js"></script>
+
     <!--[if lte IE 9]>
     <script type="text/javascript" src="../../js/base/html5.js"></script>
     <script type="text/javascript" src="../../js/base/respond.js"></script>
@@ -662,7 +664,7 @@
                     </label>
                 </div>
                 <div class="commonStyle">
-                    <table class="commonLightBlueThead contactInfoTab">
+                    <table class="commonLightBlueThead contactInfoTab" id="addiProTable">
                         <colgroup>
                             <col width="40%">
                             <col width="15%">
@@ -687,40 +689,12 @@
                         <tbody>
                         <tr>
                             <td>
-                                <span class="additionContent"></span>
-                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入名称">
+                                <span class="additionContent">123</span>
+                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入名称" value="123">
                             </td>
                             <td>
-                                <span class="additionContent"></span>
-                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入单价">
-                            </td>
-                            <td>
-                                <span class="additionContent"></span>
-                                <div class="additionEditContent">
-                                    <span class="addAndSubtract">
-                                        <a href="javascript:void(0);" class="subtractBtn">-</a>
-                                        <input type="text" class="numberFonts" value="1">
-                                        <a href="javascript:void(0);" class="addBtn">+</a>
-                                    </span>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="editable">
-                                    <span class="totalPrice"></span>
-                                    <span class="commonAddDelete additionAddDelete">
-                                        <em class="commonDelete additionDelete"></em>
-                                    </span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="addAdditionTr">
-                            <td>
-                                <span class="additionContent"></span>
-                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入名称">
-                            </td>
-                            <td>
-                                <span class="additionContent"></span>
-                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入单价">
+                                <span class="additionContent">123</span>
+                                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入单价" value="123">
                             </td>
                             <td>
                                 <span class="additionContent"></span>
@@ -740,12 +714,12 @@
                                     </span>
                                 </div>
                             </td>
-                        </tr>
+                        </tr>                        
                         </tbody>
                     </table>
                     <div class="commonSave additionSave">
-                        <a href="javascript:void(0);" class="commonBtn blueBtn">保 存</a>
-                        <a href="javascript:void(0);" class="cancelBtn">取消</a>
+                        <a href="javascript:void(0);" class="commonBtn blueBtn" id="saveAddiPro">保 存</a>
+                        <a href="javascript:void(0);" class="cancelBtn" id="cancelAddiPro">取消</a>
                     </div>
                 </div>
             </div>
@@ -996,7 +970,75 @@
         </table>       
     </script>
 
+    <!-- 附加产品信息模板 -->
+    <script id="addiProTemplate" type="text/x-jquery-tmpl">
+        <tr>
+            <td>
+                <span class="additionContent">${name}</span>
+                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入名称" value="${name}">
+            </td>
+            <td>
+                <span class="additionContent">${price}</span>
+                <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入单价" value="${price}">
+            </td>
+            <td>
+                <span class="additionContent">${num}</span>
+                <div class="additionEditContent">
+                    <span class="addAndSubtract">
+                        <a href="javascript:void(0);" class="subtractBtn">-</a>
+                        <input type="text" class="numberFonts" value="${num}">
+                        <a href="javascript:void(0);" class="addBtn">+</a>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="editable">
+                    <span class="totalPrice"></span>
+                    <span class="commonAddDelete additionAddDelete">
+                        <em class="commonDelete additionDelete"></em>
+                    </span>
+                </div>
+            </td>
+        </tr>
+    </script>
+
+    <!-- 附加产品添加产品模板 -->
+    <script type="text/html" id="addAdditionTr">
+        <tr>
+            <td>
+                <span class="additionContent" style="display: none;"></span>
+                <input type="text" class="additionEditContent" style="width: 98%;display: inline-block;" placeholder="请输入名称">
+            </td>
+            <td>
+                <span class="additionContent" style="display: none;"></span>
+                <input type="text" class="additionEditContent" style="width: 98%;display: inline-block;" placeholder="请输入单价">
+            </td>
+            <td>
+                <span class="additionContent" style="display: none;"></span>
+                <div class="additionEditContent" style="display: block;">
+                    <span class="addAndSubtract">
+                        <a href="javascript:void(0);" class="subtractBtn">-</a>
+                        <input type="text" class="numberFonts" value="1">
+                        <a href="javascript:void(0);" class="addBtn">+</a>
+                    </span>
+                </div>
+            </td>
+            <td>
+                <div class="editable">
+                    <span class="totalPrice"></span>
+                    <span class="commonAddDelete additionAddDelete" style="display: inline-block;">
+                        <em class="commonDelete additionDelete"></em>
+                    </span>
+                </div>
+            </td>
+        </tr>
+    </script>
+
+
 <script>
+
+    var addiProData = [];   // 存放附加产品数据
+
     $(function(){
 
         $(".stoppingPoint.transfer").attr("title", $("#transfer_flight_template").html());
@@ -1068,7 +1110,7 @@
         //添加或减少数量
         var least = 1;
         var most = 1;
-        $(".addAndSubtract > .subtractBtn").click(function(){
+        $("#addiProTable").delegate(".addAndSubtract > .subtractBtn", "click", function(){
             var minus_num = parseInt($(this).next(".numberFonts").val());
             minus_num--;
             if(minus_num < least){
@@ -1077,13 +1119,15 @@
             }
             $(this).next(".numberFonts").val(minus_num);
         });
-        $(".addAndSubtract > .addBtn").click(function(){
+        $("#addiProTable").delegate(".addAndSubtract > .addBtn", "click", function(){
             var add_num = parseInt($(this).prev(".numberFonts").val());
             add_num++;
             $(this).prev(".numberFonts").val(add_num);
         });
         
-        //附加产品编辑
+        //附加产品编辑        
+        saveAddiProData();
+
         $(".additionEditBtn").click(function(){
             $that = $(this).parents(".commonSmallTitleModel").siblings(".commonStyle");
             $(this).hide();
@@ -1092,7 +1136,11 @@
             $that.find(".additionSave").show();
             $that.find(".additionAddDelete").show();
         });
-        $(".cancelBtn").click(function(){
+        // 附件产品-保存操作时记录数据到当前页面上
+        $("#saveAddiPro").click(function(){
+            saveAddiProData();
+            renderAddProTable();
+
             $(this).parents(".additionSave").hide();
             $cancel = $(this).parents(".additionSave").siblings(".contactInfoTab");
             $cancel.find(".additionContent").show();
@@ -1100,9 +1148,21 @@
             $cancel.find(".additionAddDelete").hide();
             $(this).parents(".commonStyle").siblings(".commonSmallTitleModel").find(".additionEditBtn").show();
         });
+
+        // 附件产品-取消操作时将已保存数据恢复至页面结构中
+        $("#cancelAddiPro").click(function(){
+            renderAddProTable();
+
+            $(this).parents(".additionSave").hide();
+            $cancel = $(this).parents(".additionSave").siblings(".contactInfoTab");
+            $cancel.find(".additionContent").show();
+            $cancel.find(".additionEditContent").hide();
+            $cancel.find(".additionAddDelete").hide();
+            $(this).parents(".commonStyle").siblings(".commonSmallTitleModel").find(".additionEditBtn").show();
+        });
+
         $(".commonOPOrderModel").delegate(".additionAdd","click",function(){
-            $additionAdd = $(this).parents("thead").siblings("tbody").find(".addAdditionTr").html();
-            $(this).parents("thead").siblings("tbody").find(".addAdditionTr").after("<tr>"+ $additionAdd + "</tr>");
+            $(this).parents("thead").siblings("tbody").append($("#addAdditionTr").html());
         });
         $(".commonOPOrderModel").delegate(".additionDelete","click",function(){
             $(this).parents("tr").remove();
@@ -1140,6 +1200,24 @@
         });
         
     });
+
+    function saveAddiProData() {
+        addiProData = [];
+        $("#addiProTable tbody").find('tr').each(function(){
+            var that = $(this);
+            var addiProObj = {};
+            addiProObj.name = that.find("input[type='text']").eq(0).val();
+            addiProObj.price = that.find("input[type='text']").eq(1).val();
+            addiProObj.num = that.find("input[type='text']").eq(2).val();
+            addiProData.push(addiProObj);
+        });
+    }
+
+    function renderAddProTable() {
+        $("#addiProTable tbody").html("");
+        $("#addiProTemplate").tmpl(addiProData).appendTo('#addiProTable tbody');
+    }
+
 </script>
 
 </body>
