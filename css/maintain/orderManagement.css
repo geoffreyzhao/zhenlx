@@ -1039,6 +1039,7 @@ ul.common-tab > li.rest {
     background: url("../../images/client/commonIcon.png") no-repeat -91px -190px;
     vertical-align: middle;
     cursor: pointer;
+    margin-left: 5px;
 }
 .main-container.changeBg{
     background: #e5f6fe;

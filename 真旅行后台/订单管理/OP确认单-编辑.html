@@ -688,7 +688,7 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>
+                            <!-- <td>
                                 <span class="additionContent">123</span>
                                 <input type="text" class="additionEditContent" style="width: 98%;" placeholder="请输入名称" value="123">
                             </td>
@@ -713,7 +713,7 @@
                                         <em class="commonDelete additionDelete"></em>
                                     </span>
                                 </div>
-                            </td>
+                            </td> -->
                         </tr>                        
                         </tbody>
                     </table>
@@ -902,7 +902,7 @@
                 <div class="commonStyle">
                     <div class="upLoadFile">
                         <button class="commonButton gray-bbbButton">+ 添加附件</button>
-                        <input type="file" class="inputFile">
+                        <input type="file" class="inputFile" id="addAttachment">
                     </div>
                     <div class="fileNameList">
                         <label class="fileName">
@@ -1197,6 +1197,21 @@
             row--;
             $(this).parents("tr").siblings(".defaultRowSpan").find("th").prop("rowspan",row);
             $(this).parents("tr").remove();
+        });
+
+        // 添加|删除 附件
+        $("#addAttachment").change(function(){
+            if (this.files[0] != undefined) {
+                var fileName = this.files[0].name;
+                $('.fileNameList').append('<label class="fileName">'
+                                            +'<span class="fileNameFonts">'+ fileName + '</span>'
+                                            +'<i class="deleteFileName"></i>'
+                                         +'</label>');
+            }
+        });
+
+        $('body').delegate('.deleteFileName', 'click', function(event) {
+            $(this).parents('.fileName').eq(0).remove();
         });
         
     });
