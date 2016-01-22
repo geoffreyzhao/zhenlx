@@ -1142,4 +1142,32 @@ ul.common-tab > li.rest {
     width:458px;
     height: 68px;
 }
+.table-tab {
+  border-bottom: 1px solid #dadada;
+  width: 240px;
+}
+.table-tab li {
+    display: inline-block;
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #666666;
+    cursor: pointer;
+}
+.table-tab li:first-child {
+  border-left: 1px solid #dadada;
+  border-top: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+}
+.table-tab li:last-child {
+  border-top: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+}
+.table-tab li.current {
+    color: #fff;
+    background-color: #428eb8;
+}
 /* 退款申请单 E */

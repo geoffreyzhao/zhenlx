@@ -855,6 +855,11 @@
     line-height: 18px;
     color:#c7c7c7;
 }
+.for-fill-money {
+    color: #f03434;
+    font-size: 12px;
+    line-height: 18px;
+}
 .boxHead-title{
     width:110px;
     height:23px;

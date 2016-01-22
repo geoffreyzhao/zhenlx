@@ -84,7 +84,7 @@
                                             <a href="javascript:void(0);">当地游订单</a>
                                         </li>
                                         <li class="currentSecondLevelMenu">
-                                            <a href="javascript:void(0);">退款申请单</a>
+                                            <a href="javascript:void(0);">退补款单</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -198,23 +198,6 @@
                                     <input type="text" style="width: 115px;" class="datepicker endDate hasIcon">
                                 </td>
                             </tr>
-                            <tr>
-                                <th>操作状态</th>
-                                <td>
-                                    <div class="dropdown" style="width: 255px;">
-                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
-                                            <span class="activeFonts">全部</span>
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="active"><a href="javascript:void(0);">全部</a></li>
-                                            <li><a href="javascript:void(0);">通过</a></li>
-                                            <li><a href="javascript:void(0);">未通过</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                                <td></td>
-                            </tr>
                             </tbody>
                         </table>
                     </li>
@@ -236,11 +219,19 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>订单金额</th>
+                                <th>操作状态</th>
                                 <td>
-                                    <input type="text" style="width: 115px;" value="2000.00">
-                                    <em> 至 </em>
-                                    <input type="text" style="width: 115px;" value="3500.00">
+                                    <div class="dropdown" style="width: 255px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                            <span class="activeFonts">全部</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="javascript:void(0);">全部</a></li>
+                                            <li><a href="javascript:void(0);">通过</a></li>
+                                            <li><a href="javascript:void(0);">未通过</a></li>
+                                        </ul>
+                                    </div>
                                 </td>
                                 <td></td>
                             </tr>
@@ -249,11 +240,16 @@
                     </li>
                 </ul>
             </form>
-                <section class="clearfix">
+            <ul class="table-tab clearfix">
+                <li class="back current">退款单</li>
+                <li class="fill">补款单</li>
+            </ul>
+                <section class="clearfix back-money-section">
                     <table class="commonTab">
                         <colgroup>
-                            <col width="15%">
-                            <col width="18%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
                             <col width="15%">
                             <col width="10%">
                             <col width="10%">
@@ -263,6 +259,7 @@
                         <thead>
                         <tr>
                             <th>订单号</th>
+                            <th>关联主订单</th>
                             <th>建单时间</th>
                             <th>建单会员ID</th>
                             <th>退款金额</th>
@@ -274,6 +271,7 @@
                         <tbody>
                         <tr>
                             <td>1502131523</td>
+                            <td><a href="javascript:void(0);">1502131523</a></td>
                             <td>2016-01-01 12:00:12</td>
                             <td>00001234</td>
                             <td>400.00</td>
@@ -286,6 +284,7 @@
                         </tr>
                         <tr>
                             <td>1502131523</td>
+                            <td><a href="javascript:void(0);">1502131523</a></td>
                             <td>2016-01-01 12:00:12</td>
                             <td>00001234</td>
                             <td>400.00</td>
@@ -298,6 +297,7 @@
                         </tr>
                         <tr>
                             <td>1502131523</td>
+                            <td><a href="javascript:void(0);">1502131523</a></td>
                             <td>2016-01-01 12:00:12</td>
                             <td>00001234</td>
                             <td>400.00</td>
@@ -310,6 +310,7 @@
                         </tr>
                         <tr>
                             <td>1502131523</td>
+                            <td><a href="javascript:void(0);">1502131523</a></td>
                             <td>2016-01-01 12:00:12</td>
                             <td>00001234</td>
                             <td>400.00</td>
@@ -319,6 +320,110 @@
                                 <a href="javascript:void(0);" class="notPassBtn">未通过</a>
                             </td>
                             <td>原因**************</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <span class="countNum">共 331 条记录，</span>
+                        <span class="pageNum">
+                            <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
+                            <ul class="paginationNum" style="display: none;">
+                                <li class="active">
+                                    <a href="javascript:void(0);">5</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">10</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">20</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">30</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">40</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">50</a>
+                                </li>
+                            </ul>
+                        </span>
+                        <span class="pageSize">1/10</span>
+                        <span class="pageArrow">
+                            <a href="javascript:void(0);" class="firstPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="prevPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="nextPage">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="lastPage">
+                                <i></i>
+                            </a>
+                        </span>
+                        <span>
+                            <span>跳转到</span>
+                            <input type="text" style="width: 45px;" class="pageToNum">
+                            <a href="javascript:void(0);" class="pageTo">
+                                <i></i>
+                            </a>
+                        </span>
+                    </div>
+                </section>
+                <section class="clearfix fill-money-section" style="display: none;">
+                    <table class="commonTab">
+                        <colgroup>
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>订单号</th>
+                            <th>关联主订单</th>
+                            <th>建单时间</th>
+                            <th>建单会员ID</th>
+                            <th>退款金额</th>
+                            <th>退款状态</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1502131523</td>
+                            <td><a href="javascript:void(0);">1502131523</a></td>
+                            <td>2016-01-01 12:00:12</td>
+                            <td>00001234</td>
+                            <td>400.00</td>
+                            <td>待审核</td>
+                        </tr>
+                        <tr>
+                            <td>1502131523</td>
+                            <td><a href="javascript:void(0);">1502131523</a></td>
+                            <td>2016-01-01 12:00:12</td>
+                            <td>00001234</td>
+                            <td>400.00</td>
+                            <td>已通过</td>
+                        </tr>
+                        <tr>
+                            <td>1502131523</td>
+                            <td><a href="javascript:void(0);">1502131523</a></td>
+                            <td>2016-01-01 12:00:12</td>
+                            <td>00001234</td>
+                            <td>400.00</td>
+                            <td>未通过</td>
+                        </tr>
+                        <tr>
+                            <td>1502131523</td>
+                            <td><a href="javascript:void(0);">1502131523</a></td>
+                            <td>2016-01-01 12:00:12</td>
+                            <td>00001234</td>
+                            <td>400.00</td>
+                            <td>待审核</td>
                         </tr>
                         </tbody>
                     </table>
@@ -424,6 +529,21 @@
         //未通过弹窗
         $(".notPassBtn").click(function(){
             $("#ac-notPassWindow").modal("show");
+        });
+
+        $(".table-tab li").click(function(){
+            $(".table-tab li").removeClass('current');
+            $(this).addClass("current");
+
+            if ($(this).hasClass("fill")) {
+
+                $(".fill-money-section").show();
+                $(".back-money-section").hide();
+            } else if ($(this).hasClass("back")) {
+
+                $(".fill-money-section").hide();
+                $(".back-money-section").show();
+            }
         });
     });
 </script>
