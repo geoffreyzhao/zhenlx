@@ -74,15 +74,20 @@
 	float: right;
 	/*margin:0.75rem 0 0 0.45rem;*/
 }
-.travelPrice{
+.travelPrice,
+.fillPrice {
 	display:block;
 	font-size:0.5rem;
 	color:#fe0e2a;
 	text-align: right;
 }
-.travelPrice em{
-	font-size: 0.9rem;
+.travelPrice em,
+.fillPrice em {
+	font-size: 0.6rem;
     font-family: Arial;
+}
+.travelPrice.reset {
+    margin-top: -0.4rem;
 }
 .pay,.evaluate,.completed{
 	width:3.5rem;
@@ -454,13 +459,18 @@
     line-height:1rem;
     color:#333;
 }
-.order-price{
-    display: inline-block;
+.right-price {
     float: right;
-    font-size: 0.9rem;
+    text-align: right;
+}
+.order-price,
+.order-fill-price{
+    display: block;
+    font-size: 0.7rem;
     color:#fe0e2a;
 }
-.order-price .rmb{
+.order-price .rmb,
+.order-fill-price .rmb{
     font-size: 0.5rem;
 }
 .order-start{
