@@ -2723,6 +2723,10 @@ ul.common-tab > li.rest {
     margin-left: 2px;
 }
 
+.prod-by-menu {
+    padding-bottom: 15px;
+}
+
 .prod-by-menu label.radio {
     margin-left: 0;
     display: inline-block;
@@ -2742,12 +2746,13 @@ ul.common-tab > li.rest {
 }
 
 .prod-by-menu label.radio .menu-title {
-    width: 210px;
+    width: 230px;
     display: inline-block;
     vertical-align: top;
     white-space: normal;
     word-wrap: break-word;
     word-break: break-all;
+    padding-right: 6px;
 }
 
 .prod-type-item {
@@ -2766,5 +2771,6 @@ ul.common-tab > li.rest {
     color: #ababab;
     cursor: pointer;
     float: right;
-    margin-top: -15px;
+    margin-top: -5px;
+    padding-right: 3px;
 }
