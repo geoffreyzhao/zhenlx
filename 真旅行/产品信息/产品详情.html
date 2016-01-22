@@ -287,23 +287,23 @@
                             <div class="prod-by-menu" style="margin-top: 5px;">
                                 <span class="present-icon" style="margin-top:-5px;"></span>
                                 <span class="title" style="margin-left:8px;">选择套餐:</span>
-                                <div class="radioContent">
-                                    <label class="radio active">
+                                <div class="radioContent" style="position: relative;">
+                                    <label class="radio active" data-placement="bottom" data-toggle="tooltip" title="套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情套餐详情">
                                         <span class="commonIcon radioIcon"></span>
-                                        <span class="menu-title">闺蜜行，温馨双人间双人间闺蜜行，温馨双人间双人间</span>
+                                        <span class="menu-title">闺蜜行，温馨双人间闺蜜行，温馨双人间</span>
                                         <span class="price">￥2099</span>
                                     </label>
-                                    <label class="radio">
+                                    <label class="radio" data-placement="bottom" data-toggle="tooltip" title="couple出游，豪华大床房couple出游，豪华大床房couple出游，豪华大床房couple出游，豪华大床房couple出游，豪华大床房couple出游，豪华大床房">
                                         <span class="commonIcon radioIcon"></span>
-                                        <span class="menu-title">couple出游，豪华大床房</span>
-                                        <span class="price">￥2299</span>
+                                        <span class="menu-title">couple出游，豪华大床房couple出游，豪华大床房</span>
+                                        <span class="price">￥229009</span>
                                     </label>
-                                    <label class="radio disabled">
+                                    <label class="radio disabled" data-placement="bottom" data-toggle="tooltip" title="一家出游，baby不占床一家出游，baby不占床一家出游，baby不占床一家出游，baby不占床一家出游，baby不占床">
                                         <span class="commonIcon radioIcon"></span>
                                         <span class="menu-title">一家出游，baby不占床</span>
                                         <span class="price">￥2999</span>
                                     </label>
-                                    <label class="radio" style="display: none;">
+                                    <label class="radio" style="display: none;" data-placement="bottom" data-toggle="tooltip" title="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
                                         <span class="commonIcon radioIcon"></span>
                                         <span class="menu-title">okokokokokokokokokokokokokokokokok</span>
                                         <span class="price">￥2999</span>
@@ -316,8 +316,8 @@
                     <div class="order-block">
                         <div class="cur-price">
                             <span class="buy-icon"></span>
-                            <span class="title">人均单价:</span>
-                            <span class="price-text">￥99999</span>
+                            <span class="title">价格:</span>
+                            <span class="price-text">￥99999<em>/人</em></span>
                             <span class="price-tooltip">价格说明</span>
                         </div>
                         <div class="menu-price">
@@ -2685,6 +2685,10 @@
             $(this).removeClass("fold");
         }
     });    
+
+    $(".radioContent label").tooltip(function(){
+        placement: 'bottom'
+    });
 </script>
 </body>
 </html>

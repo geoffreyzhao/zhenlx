@@ -1359,7 +1359,12 @@ ul.common-tab > li.rest {
 
 .calTable .tdCont .onsale .price {
     color: #e46c14;
-    line-height: 18px;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.calTable .tdCont .onsale .childPrice {
+    line-height: 20px;
     font-size: 14px;
 }
 
@@ -1698,7 +1703,7 @@ ul.common-tab > li.rest {
 }
 
 .cur-price .price-text em {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .cur-price .price-tooltip {
@@ -1710,7 +1715,7 @@ ul.common-tab > li.rest {
     float: right;
     border-radius: 3px;
     margin-right: 0px;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .menu-price {
@@ -2727,13 +2732,17 @@ ul.common-tab > li.rest {
     padding-bottom: 15px;
 }
 
+.prod-by-menu label.radio:first-child {
+    margin-top: 10px;
+}
+
 .prod-by-menu label.radio {
-    margin-left: 0;
     display: inline-block;
+    margin: 0 0 10px 0;
 }
 
 .prod-by-menu label.radio.active {
-    color: #e46c14;
+    color: #11b9b7;
 }
 
 .prod-by-menu label.radio.disabled {
@@ -2746,13 +2755,19 @@ ul.common-tab > li.rest {
 }
 
 .prod-by-menu label.radio .menu-title {
-    width: 230px;
+    width: 210px;
     display: inline-block;
     vertical-align: top;
     white-space: normal;
     word-wrap: break-word;
     word-break: break-all;
     padding-right: 6px;
+    font-size: 14px;
+}
+
+.prod-by-menu label.radio .price {
+    width: 68px;
+    display: inline-block;
 }
 
 .prod-type-item {
@@ -2762,7 +2777,7 @@ ul.common-tab > li.rest {
 }
 
 .prod-type-item.current {
-    border: 1px solid #e56c14;
+    border: 1px solid #11b9b7;
     border-radius: 3px;
     background-color: #fffdf5;
 }
@@ -2773,4 +2788,31 @@ ul.common-tab > li.rest {
     float: right;
     margin-top: -5px;
     padding-right: 3px;
+}
+
+.radioContent .tooltip {    
+    opacity: 1;
+    margin-top: -2px;
+    margin-left: 15px;
+}
+
+.radioContent .tooltip .tooltip-arrow {
+    border-bottom-color: #dbf7f7;
+    margin-left: -10px;
+    border-width: 0 10px 10px;
+}
+
+.radioContent .tooltip .tooltip-inner {
+    text-align: left;
+    font-size: 12px;
+    background-color: #dbf7f7;
+    color: #595555;
+    max-width: 290px;
+    min-width: 200px;
+    border-radius: 5px;
+    line-height: 18px;
+    padding: 8px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
 }
