@@ -1345,9 +1345,9 @@
 .counter{
     display: inline-block;
     float: right;
-    width: 12.5rem;
+    width: 11.8rem;
     text-align: right;
-      margin: 1px;
+    margin: 1px;
 }
 .counter-item{
     width:1.55rem;
