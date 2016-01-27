@@ -1086,8 +1086,22 @@
 .order-btn-link:active{
     background-color: #f7f7f7;
 }
+.contact-link {
+    width:32.5%;
+    height:2.225rem;
+    display: inline-block;
+    background-color: #edfbfd;
+    padding:0.7rem 0;
+    color:#11b9b7 !important;
+    font-size: 0.7rem;
+    font-weight: normal !important;
+    float: left;
+}
+.contact-link:active {
+    background-color: #dbf4f1;
+}
 .order-link{
-    width:100%;
+    width:67.5%;
     height:2.225rem;
     display: inline-block;
     background-color: #ffa200;
@@ -1095,6 +1109,21 @@
     color:#fff !important;
     font-size: 0.7rem;
     font-weight: normal !important;
+    float: left;
+}
+.wx-contact-icon {
+    display: inline-block;
+    width: 1rem;
+    height: 0.9rem;
+    background: url(../images/weixin.png) no-repeat;
+    vertical-align: middle;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    margin-right: 0.3rem;
+}
+.wxServiceImg {
+    width: 8.5rem;
+    height: 8.5rem;
 }
 .order-link:active{
     background-color: #dc8e06;
