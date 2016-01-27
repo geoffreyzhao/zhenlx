@@ -1350,6 +1350,17 @@ ul.common-tab > li.rest {
     float: right;
     text-align: right;
     margin-right: -5px;
+    position: relative;
+}
+
+.calTable .tdCont .priceCover .right-block .nianIcon {
+    position: absolute;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../../images/client/nian.png) no-repeat;
+    left: -35px;
+    top: -2px;
 }
 
 .calTable .tdCont .onsale .leftNum {
