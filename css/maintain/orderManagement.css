@@ -1125,6 +1125,14 @@ ul.common-tab > li.rest {
   margin-right: 50px;
   margin-top: 32px;
 }
+.backFillMoneyBlock .status .remark {
+  font-size: 14px;
+  color: #666;
+  width: 300px;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
 .hotelInfoTab .solidLine.hotelSecondLine{
     left: 710px;
 }
