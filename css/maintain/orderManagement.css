@@ -1178,4 +1178,10 @@ ul.common-tab > li.rest {
     color: #fff;
     background-color: #428eb8;
 }
+.commonTab tbody a.disabled_Status {
+    color: grey;
+    cursor: default;
+    text-decoration:none;
+    outline:0 none;
+}
 /* 退款申请单 E */
