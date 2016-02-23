@@ -59,7 +59,7 @@ textarea:focus {
     vertical-align: middle;
     margin-right: 2px;
 }
-.active .radioIcon{
+.radio.active .radioIcon{
     background-position: 0 -42px;
 }
 .radio .labelFonts,
