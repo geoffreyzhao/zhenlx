@@ -1185,3 +1185,9 @@ ul.common-tab > li.rest {
     outline:0 none;
 }
 /* 退款申请单 E */
+.radio .radioIcon {
+  background-position: -23px -42px;
+}
+.radio.active .radioIcon {
+  background-position: 0 -42px;
+}
