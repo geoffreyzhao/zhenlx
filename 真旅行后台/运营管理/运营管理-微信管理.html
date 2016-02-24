@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 运营管理 微信管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/operatorManagement.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+        
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="stairMenuContent">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                        <ul class="stairMenu">
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">产品管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">景点管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">国内机票</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">国际机票</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">酒店</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">文档下载</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">订单管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航11</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航22</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航33</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航44</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav currentStairMenu">
+                                <a href="javascript:void(0);">运营管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li>
+                                            <a href="javascript:void(0);">网站活动</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">基础数据</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">评价管理</a>
+                                        </li>
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">微信管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">广告位管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">推荐产品管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">查看游戏数据</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">会员管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">会员维护</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">心愿清单</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">常用旅客</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">财务&供应商系统</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航111</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航222</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航333</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航444</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">权限管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">会员维护</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">心愿清单</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">常用旅客</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel">
+                <div class="operationDiv"><i class="plusIcon"></i><a href="新增话题.html">新话题</a></div>
+            </div>
+        </header>
+        <div class="main-container clearfix">
+            <aside class="leftMenu">  <!--leftMenu 开始-->
+                <ul class="menuChange">
+                    <li>
+                        <a href="基础数据-系统POI.html">自定义菜单管理</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                    <li class="current">
+                        <a href="运营管理-微信管理.html">微信话题</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                </ul>
+            </aside> <!--leftMenu 结束-->
+            <section class="rightModelContent">
+                <ul class="searchList clearfix">
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="80">
+                                <col width="220">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>话题标题</th>
+                                <td>
+                                    <input type="text" placeholder="关键字"/>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="80">
+                                <col width="220">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>关联产品</th>
+                                <td>
+                                    <input type="text" placeholder="关键字"/>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="searchTab">
+                            <colgroup>
+                                <col width="80">
+                                <col width="160">
+                                <col width="310">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>状  态</th>
+                                <td>
+                                    <div class="dropdown" style="width: 110px;">
+                                        <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                            <span class="activeFonts">上线</span>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="javascript:void(0);">上线</a></li>
+                                            <li><a href="javascript:void(0);">关闭</a></li>
+                                            <li><a href="javascript:void(0);">草稿</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="javascript:void(0);" class="lightBlueBtn"><i class="searchIcon"></i>搜 索</a>
+                                </td>
+                            </tr>
+                            <tr class="fitToTr">
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+
+                <table class="commonTab productTab">
+                    <colgroup>
+                        <col width="16%">
+                        <col width="28%">
+                        <col width="14%">
+                        <col width="14%">
+                        <col width="9%">
+                        <col width="6%">
+                        <col width="">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>话题标题</th>
+                        <th>关联产品</th>
+                        <th>礼品标题</th>
+                        <th>上线时间</th>
+                        <th>
+                            讨论人数
+                            <i class="sortArrow upGray"></i>
+                            <!--<i class="sortArrow downGray"></i>
+                            <i class="sortArrow allGray"></i>
+                            <i class="sortArrow allOrange"></i>-->
+                        </th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>欧美轮廓韩国欧巴一较高下</td>
+                        <td>“终极自驾去冰岛”上海-冰岛11天9晚自由行</td>
+                        <td> -- --</td>
+                        <td>2016-2-22   15：22：10</td>
+                        <td>150</td>
+                        <td>上线</td>
+                        <td>
+                            <a href="javascript:void(0);" class="greenFontsLink">查看</a>
+                            <a href="javascript:void(0);" class="greenFontsLink">关闭</a>
+                            <a href="javascript:void(0);" class="greenFontsLink">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>日本代购区</td>
+                        <td>“铁道九州，美肌温泉美食花见”上海-福“铁道九州，美肌温泉美食花见”上海-福</td>
+                        <td>日本签证服务</td>
+                        <td>2016-2-22   15：22：10</td>
+                        <td>50</td>
+                        <td>关闭</td>
+                        <td>
+                            <a href="javascript:void(0);" class="greenFontsLink">查看</a>
+                            <a href="javascript:void(0);" class="greenFontsLink">上线</a>
+                            <a href="javascript:void(0);" class="greenFontsLink">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>泰国夜蒲攻略</td>
+                        <td>“以凡俗之心逛天使之城”上海-曼谷7“以凡俗之心逛天使之城”上海-曼谷7</td>
+                        <td>真旅行日历</td>
+                        <td>-- --</td>
+                        <td>0</td>
+                        <td>草稿</td>
+                        <td>
+                            <a href="javascript:void(0);" class="greenFontsLink">查看</a>
+                            <a href="javascript:void(0);" class="greenFontsLink">删除</a>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <span class="countNum">共 331 条记录，</span>
+                        <span class="pageNum">
+                            <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
+                            <ul class="paginationNum" style="display: none;">
+                                <li class="active">
+                                    <a href="javascript:void(0);">5</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">10</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">20</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">30</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">40</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">50</a>
+                                </li>
+                            </ul>
+                        </span>
+                    <span class="pageSize">1/10</span>
+                        <span class="pageArrow">
+                            <a href="javascript:void(0);" class="firstPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="prevPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="nextPage">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="lastPage">
+                                <i></i>
+                            </a>
+                        </span>
+                        <span>
+                            <span>跳转到</span>
+                            <input type="text" style="width: 45px;" class="pageToNum">
+                            <a href="javascript:void(0);" class="pageTo">
+                                <i></i>
+                            </a>
+                        </span>
+                </div>
+            </section>
+        </div>
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+
+
+</body>
+</html>

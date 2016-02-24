@@ -1169,3 +1169,35 @@ form .showUpload{
     outline: none;
     background: transparent;
 }
+
+/* webchat manage S */
+.rightModelContent .searchList {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f1f1f1;
+}
+.spaceBottom15 {
+    margin-bottom: 15px;
+}
+.tips_orangeFonts {
+    font-size: 13px;
+    color: orange;
+}
+.giftBox {
+    border-top:2px solid #f1f1f1;
+    margin-top: 8px;
+}
+.hotelImgList li .upLoading {
+    font-size: 0;
+    text-indent: -99999px;
+    width: 210px;
+    height: 140px;
+    background: #f5f5f5 url("../../images/uploadIcon.png") no-repeat 50%;
+    cursor: pointer;
+    outline: none;
+}
+.sectionTitle {
+    font-weight: bold;
+    margin: 0;
+    padding:5px 0;
+}
+/* webchat manage E */
