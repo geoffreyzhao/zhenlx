@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2C 真旅行后台 运营管理 微信管理 自定义菜单管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/maintain/operatorManagement.css">
+    <link rel="stylesheet" href="../../css/maintain/wechat.css">
+
+    <script type="text/javascript" src="../../js/base/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../js/bootdist/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/maintain/common.js"></script>
+
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="../../js/base/html5.js"></script>
+    <script type="text/javascript" src="../../js/base/respond.js"></script>
+    <![endif]-->
+        
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="stairMenuContent">
+                <div class="wrap clearfix">
+                    <div class="navLeft">
+                        <a class="logo" href="/"></a>
+                        <ul class="stairMenu">
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">产品管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">景点管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">国内机票</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">国际机票</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">酒店</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">文档下载</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">订单管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航11</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航22</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航33</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航44</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav currentStairMenu">
+                                <a href="javascript:void(0);">运营管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li>
+                                            <a href="javascript:void(0);">网站活动</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">基础数据</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">评价管理</a>
+                                        </li>
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">微信管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">广告位管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">推荐产品管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">查看游戏数据</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">会员管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">会员维护</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">心愿清单</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">常用旅客</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">财务&供应商系统</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">二级导航111</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航222</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航333</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">二级导航444</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="first-level-nav">
+                                <a href="javascript:void(0);">权限管理</a>
+                                <div class="second-level-nav">
+                                    <ul class="secondLevelList clearfix">
+                                        <li class="currentSecondLevelMenu">
+                                            <a href="javascript:void(0);">会员维护</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">心愿清单</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">常用旅客</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headRightOperate">
+                        <span class="userContent">Hi，千颂伊</span>
+                        <label class="emailContent">
+                            <i class="emailIcon"></i>
+                            <span class="emailFonts">99</span>
+                        </label>
+                        <a href="javascript:void(0);" class="exitFonts">退出</a>
+                    </div>
+                </div>
+            </div>
+            <div class="headSecondLevel">
+            </div>
+        </header>
+        <div class="main-container clearfix">
+            <aside class="leftMenu">  <!--leftMenu 开始-->
+                <ul class="menuChange">
+                    <li class="current">
+                        <a href="运营管理-微信管理-自定义菜单管理.html">自定义菜单管理</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                    <li>
+                        <a href="运营管理-微信管理.html">微信话题</a>
+                        <i class="rightArrow"></i>
+                    </li>
+                </ul>
+            </aside> <!--leftMenu 结束-->
+            <section class="rightModelContent">
+                <div class="whiteBg">
+                    <div class="container-til">自定义菜单管理</div>
+                    <div class="wechat-container">
+                        <section>
+                            <div class="notice-til">注意：</div>
+                            <p>1级菜单最多只能开启3个，2级子菜单最多开启5个!</p>
+                            <p>只有保存主菜单后才可以添加子菜单。</p>
+                            <p>生成自定义菜单,必须在已经保存的基础上进行,临时勾选启用点击生成是无效的! 第一步必须先修改保存状态！第二步点击生成!</p>
+                            <p>当您为自定义菜单填写链接地址时请填写以"http://"开头，这样可以保证用户手机浏览的兼容性更好。</p>
+                            <p>撤销自定义菜单：撤销后，您的微信公众帐号上的自定义菜单将不存在；如果您想继续在微信公众帐号上使用自定义菜单，请点击“生成自定义菜单”按钮，将重新启用！</p>
+                        </section>
+                        <div class="container-menu">
+                            <a class="wechat-addMainBtn" href="javascript:void(0);"><i class="addBtn"></i>添加主菜单</a>
+                            <table class="wechat-menuTab">
+                                <colgroup>
+                                    <col width="169" />
+                                    <col width="469" />
+                                    <col width="165" />
+                                    <col width="366" />
+                                    <col width="110" />
+                                    <col width="100" />
+                                </colgroup>
+                                <thead>
+                                <th>显示顺序</th>
+                                <th>主菜单名称</th>
+                                <th>触发动作</th>
+                                <th>响应动作</th>
+                                <th>启用</th>
+                                <th>操作</th>
+                                </thead>
+                                <tbody class="body-menu">
+                                <tr class="first-menu">
+                                    <td><input class="first-menu-num" type="text" value="1"></td>
+                                    <td><input class="first-menu-name" type="text" value="一级菜单"><a class="addBtn01" href="javascript:void(0);"></a></td>
+                                    <td>
+                                        <div class="dropdown first-menu-action hidden">
+                                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                                <span class="activeFonts">跳转链接</span>
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li class="active"><a href="javascript:void(0);">跳转链接</a></li>
+                                                <li><a href="javascript:void(0);">发送消息</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="first-menu-response hidden" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
+                                    </td>
+                                    <td>
+                                        <div class="checkboxAction">
+                                            <label class="checkboxInfo">
+                                                <span class="checkboxIcon"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a class="first-menu-op" href="javascript:void(0);">删除</a>
+                                    </td>
+                                </tr>
+                                <tr class="second-menu">
+                                    <td><input class="second-menu-num" type="text" value="1"></td>
+                                    <td>
+                                        <i class="second-item-line"></i><input class="second-menu-name" type="text" value="二级子菜单">
+                                    </td>
+                                    <td>
+                                        <div class="dropdown first-menu-action">
+                                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                                <span class="activeFonts">发送消息</span>
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:void(0);">跳转链接</a></li>
+                                                <li class="active"><a href="javascript:void(0);">发送消息</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="teleText">选择图文信息</a>
+                                    </td>
+                                    <td>
+                                        <div class="checkboxAction">
+                                            <label class="checkboxInfo active">
+                                                <span class="checkboxIcon"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a class="first-menu-op" href="javascript:void(0);">删除</a>
+                                    </td>
+                                </tr>
+                                <tr class="second-menu">
+                                    <td><input class="second-menu-num" type="text" value="2"></td>
+                                    <td>
+                                        <i class="second-item-line"></i><input class="second-menu-name" type="text" value="二级子菜单">
+                                    </td>
+                                    <td>
+                                        <div class="dropdown first-menu-action">
+                                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                                <span class="activeFonts">跳转链接</span>
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:void(0);">跳转链接</a></li>
+                                                <li class="active"><a href="javascript:void(0);">发送消息</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
+                                    </td>
+                                    <td>
+                                        <div class="checkboxAction">
+                                            <label class="checkboxInfo">
+                                                <span class="checkboxIcon"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a class="first-menu-op" href="javascript:void(0);">删除</a>
+                                    </td>
+                                </tr>
+                                <tr class="second-menu">
+                                    <td><input class="second-menu-num" type="text" value="3"></td>
+                                    <td>
+                                        <i class="second-last-line"></i><input class="second-menu-name" type="text" value="二级子菜单">
+                                    </td>
+                                    <td>
+                                        <div class="dropdown first-menu-action">
+                                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                                <span class="activeFonts">发送消息</span>
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:void(0);">跳转链接</a></li>
+                                                <li class="active"><a href="javascript:void(0);">发送消息</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="teleText">选择图文信息</a>
+                                    </td>
+                                    <td>
+                                        <div class="checkboxAction">
+                                            <label class="checkboxInfo">
+                                                <span class="checkboxIcon"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a class="first-menu-op" href="javascript:void(0);">删除</a>
+                                    </td>
+                                </tr>
+                                <tr class="first-menu">
+                                    <td><input class="first-menu-num" type="text" value="2"></td>
+                                    <td><input class="first-menu-name" type="text" value="一级菜单"><a class="addBtn01" href="javascript:void(0);"></a></td>
+                                    <td>
+                                        <div class="dropdown first-menu-action">
+                                            <a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">
+                                                <span class="activeFonts">跳转链接</span>
+                                                <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li class="active"><a href="javascript:void(0);">跳转链接</a></li>
+                                                <li><a href="javascript:void(0);">发送消息</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">
+                                    </td>
+                                    <td>
+                                        <div class="checkboxAction">
+                                            <label class="checkboxInfo">
+                                                <span class="checkboxIcon"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a class="first-menu-op" href="javascript:void(0);">删除</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a href="javascript:void(0);" class="wechat-saveBtn">保 存</a>
+                            <a href="javascript:void(0);" class="wechat-customMenu">生成自定义菜单</a>
+                            <a href="javascript:void(0);" class="wechat-revokeMenu">撤销自定义菜单</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>Copyright © 2015 天地行 All Rights Reserved. 沪ICP备08101503号</footer>
+    </div>
+    <!--选择图文信息弹窗-->
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="dlg-teleText">
+        <div class="modal-dialog" style="width:808px; height:732px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">选择图文信息</h4>
+                </div>
+                <div class="modal-body wechat-dlg-content clearfix">
+                    <div class="wechat-toolbars">
+                        <span>产品标题</span><input class="toolbars-til" type="text" value=""><a href="javascript:void(0);" class="toolbars-search"><i class="toolbars-search-btn"></i>搜 索</a>
+                    </div>
+                    <div class="wechat-teleText">
+                        <div class="teleText-header clearfix">共有<span>5</span>条符合条件<div class="teleText-header-load"><img class="wechat-load" src="../../images/wechat-loading.png" /><span class="wechat-load-txt">同步微信素材</span></div></div>
+                        <div class="teleText-content">
+                            <ul>
+                                <li>
+                                    <div class="teleTxt-left"><span class="teleTxt-cell">
+                                        <label class="radio">
+                                            <span class="radioIcon"></span>
+                                        </label>
+                                    </span></div>
+                                    <div class="teleTxt-right">
+                                        <img src="../../images/wechat01.jpg" class="teleTxt-img" data-original="" alt="" />
+                                        <div class="teleTxt-centent">
+                                            <div>
+                                                <div class="teleTxt-detail">中秋大赏，教你辨识不安于室的女性欲望。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="teleTxt-left"><span class="teleTxt-cell">
+                                        <label class="radio active">
+                                            <span class="radioIcon"></span>
+                                        </label>
+                                    </span></div>
+                                    <div class="teleTxt-right">
+                                        <img src="../../images/wechat01.jpg" class="teleTxt-img" data-original="" alt="" />
+                                        <div class="teleTxt-centent">
+                                            <div>
+                                                <div class="teleTxt-detail">1、中秋大赏，教你辨识不安于室的女性欲望。</div>
+                                                <div class="teleTxt-detail">2、中秋大赏，教你辨识不安于室的女性欲望。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="teleTxt-left"><span class="teleTxt-cell">
+                                        <label class="radio">
+                                            <span class="radioIcon"></span>
+                                        </label>
+                                    </span></div>
+                                    <div class="teleTxt-right">
+                                        <img src="../../images/wechat01.jpg" class="teleTxt-img" data-original="" alt="" />
+                                        <div class="teleTxt-centent">
+                                            <div>
+                                                <div class="teleTxt-detail">中秋大赏，教你辨识不安于室的女性欲望。中秋大赏，教你辨识不安于室的女性欲望。</div>
+                                                <div class="teleTxt-detail">中秋大赏，教你辨识不安于室的女性欲望。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="teleTxt-left">
+                                        <span class="teleTxt-cell">
+                                            <label class="radio">
+                                                <span class="radioIcon"></span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                    <div class="teleTxt-right">
+                                        <img src="../../images/wechat01.jpg" class="teleTxt-img" data-original="" alt="" />
+                                        <div class="teleTxt-centent">
+                                            <div>
+                                                <div class="teleTxt-detail">中秋大赏，教你辨识不安于室的女性欲望。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pagination" style="width:942px; text-align: right;">
+                        <span class="pageNum">
+                            <span class="pageNumClick">每页 5 条 <i class="pageNumIcon"></i></span>
+                            <ul class="paginationNum" style="display: none;">
+                                <li class="active">
+                                    <a href="javascript:void(0);">5</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">10</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">20</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">30</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">40</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">50</a>
+                                </li>
+                            </ul>
+                        </span>
+                        <span class="pageSize">1/10</span>
+                        <span class="pageArrow">
+                            <a href="javascript:void(0);" class="firstPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="prevPage disabled">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="nextPage">
+                                <i></i>
+                            </a>
+                            <a href="javascript:void(0);" class="lastPage">
+                                <i></i>
+                            </a>
+                        </span>
+                        <span>
+                            <span>跳转到</span>
+                            <input type="text" style="width: 45px;" class="pageToNum">
+                            <a href="javascript:void(0);" class="pageTo">
+                                <i></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="wechat-dlg-foot">
+                        <a href="javascript:void(0);" class="wechat-dlg-confirm">确 定</a>
+                        <a href="javascript:void(0);" class="wechat-dlg-cancle"  data-dismiss="modal">取 消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--删除操作-->
+    <div class="modal fade" id="deleModal">
+        <div class="modal-dialog" style="width: 450px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">操作提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="text-align: center"><span class="notice-icon"></span>确定要删除选中的内容吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="commonNoticeBtn confirmBtn">确认</a>
+                    <a href="javascript:void(0);" class="commonNoticeBtn cancelBtn" data-dismiss="modal">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--保存成功-->
+    <div class="popup-saveBox" id="dlg-saveMenu">
+        <div class="saveBox-wrapper">
+            <div class="saveBox-wrapperCnt">
+                <span class="popupCommonImg popupCommonImg-success"></span><span>保存成功！</span>
+            </div>
+        </div>
+    </div>
+    <!--生成成功-->
+    <div class="popup-saveBox" id="dlg-bliudMenu">
+        <div class="saveBox-wrapper">
+            <div class="saveBox-wrapperCnt">
+                <span class="popupCommonImg popupCommonImg-success"></span><span>生成成功！</span>
+            </div>
+        </div>
+    </div>
+    <!--自定义菜单已撤销-->
+    <div class="popup-saveBox" id="dlg-cancelMenu">
+        <div class="saveBox-wrapper">
+            <div class="saveBox-wrapperCnt">
+                <span class="popupCommonImg popupCommonImg-cancel"></span><span>自定义菜单已撤销！</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        $(function(){
+            $(".modal").modal({
+                backdrop: "static",
+                keyboard: false,
+                show: false
+            });
+            //选择弹窗
+            var dlgParent = "";
+            $(".body-menu").on("click", ".teleText", function(event){
+                $("#dlg-teleText").modal("show");
+                event.stopPropagation();
+                dlgParent = $(this).parent();
+            });
+            //选中微信图文
+            $(".wechat-dlg-confirm").click(function(e){
+                var cuRadio = $("#dlg-teleText").find("label[class='radio active']").parents("li");
+                var cuRadioTxt = cuRadio.find(".teleTxt-detail:first").text();
+
+                if(cuRadioTxt.length > 15){
+                    cuRadioTxt = cuRadioTxt.substring(0, 15)+"...";
+                }
+                var addTxt = '<div class="cuRadioTxt clearfix"><span>'+cuRadioTxt+'</span><a href="javascript:void(0);" class="wechat-close"></a></div>';
+                dlgParent.children(".teleText").addClass("hidden");
+                if(dlgParent.children().hasClass("cuRadioTxt")){
+                    dlgParent.children(".cuRadioTxt").remove();
+                }
+                dlgParent.append(addTxt);
+                $("#dlg-teleText").modal("hide");
+                e.stopPropagation();
+            });
+
+
+            //删除文本
+            $(".body-menu").on("click", ".wechat-close", function(event){
+                var beforeLink = $(this).parents("td").find(".teleText");
+                if(beforeLink.hasClass("hidden")){
+                    beforeLink.removeClass("hidden");
+                    $(this).parent().remove();
+                }
+                event.stopPropagation();
+            });
+            //删除行
+            $(".body-menu").on("click", ".first-menu-op", function(event){
+                $("#deleModal").modal("show");
+                event.stopPropagation();
+                var parentItem = $(event.target).closest("tr");
+                var startInd = parentItem.index();
+                var nextParentItem = parentItem.nextAll(".first-menu");
+                $(".confirmBtn").click(function(){
+                    if(parentItem.is(".first-menu")){
+                        if(nextParentItem.length == 0){
+                            $("tbody[class='body-menu']").empty();
+                        }else{
+                            var endInd = nextParentItem.first().index();
+                            $("tbody tr").slice(startInd, endInd).remove();
+                        }
+                    }
+                    if(parentItem.is(".second-menu")){
+                        var prevSndItem = parentItem.prev(".second-menu");
+                        var nextSndItem = parentItem.next(".second-menu");
+                        if(prevSndItem.length != 0 && nextSndItem.length == 0){
+                            prevSndItem.find(".second-item-line").removeClass("second-item-line").addClass("second-last-line");
+                        }
+                        if((parentItem.prev().is(".first-menu")) && (parentItem.next().is(".first-menu"))){
+                            parentItem.prev().find(".first-menu-action").removeClass("hidden");
+                            parentItem.prev().find(".first-menu-response").removeClass("hidden");
+                        }
+                        if((parentItem.prev().is(".first-menu")) && (parentItem.next().length == 0)){
+                            parentItem.prev().find(".first-menu-action").removeClass("hidden");
+                            parentItem.prev().find(".first-menu-response").removeClass("hidden");
+                        }
+                        parentItem.remove();
+                    }
+                    $("#deleModal").modal("hide");
+                });
+            });
+
+            //"启用"复选框的选中与取消
+            $(".body-menu").on("click", ".checkboxAction .checkboxInfo", function(event){
+                $(this).toggleClass("active");
+                event.stopPropagation();
+            });
+
+            //添加一级菜单行
+            $(".wechat-addMainBtn").click(function(){
+                var lastFistMenu = $(".wechat-menuTab > tbody").find(".first-menu").last();
+                var lastNum = parseInt(lastFistMenu.find(".first-menu-num").val());
+                var addTabRow = '<tr class="first-menu">' +
+                        '<td><input class="first-menu-num" type="text" value='+(lastNum+1)+'></td>' +
+                        '<td><input class="first-menu-name" type="text" value="一级菜单"><a class="addBtn01" href="javascript:void(0);"></a></td>' +
+                        '<td>' +
+                        '<div class="dropdown first-menu-action">' +
+                        '<a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">' +
+                        '<span class="activeFonts">跳转链接</span>' +
+                        '<span class="caret"></span>' +
+                        '</a>' +
+                        '<ul class="dropdown-menu">' +
+                        '<li class="active"><a href="javascript:void(0);">跳转链接</a></li>' +
+                        '<li><a href="javascript:void(0);">发送消息</a></li>' +
+                        '</ul>' +
+                        '</div>' +
+                        '</td>' +
+                        '<td><input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU"></td>' +
+                        '<td>' +
+                        '<div class="checkboxAction">' +
+                        '<label class="checkboxInfo">' +
+                        '<span class="checkboxIcon"></span>' +
+                        '</label>' +
+                        '</div>' +
+                        '</td>' +
+                        '<td style="text-align: center;">' +
+                        '<a class="first-menu-op" href="javascript:void(0);">删除</a>' +
+                        '</td>' +
+                        '</tr>';
+                var cntFirstMenu = $(".wechat-menuTab > tbody").children(".first-menu").length;
+                if(cntFirstMenu == 3){
+                    return;
+                }
+                $(".wechat-menuTab > tbody").append(addTabRow);
+            });
+
+            $(".teleTxt-left .radio").click(function(){
+                $(".teleTxt-left .radio").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            //同步微信素材
+            $(".teleText-header-load").click(function(){
+                $(".teleText-header-load .wechat-load").attr("src", "../../images/loading.gif");
+                $(".teleText-header-load .wechat-load-txt").html("正在同步数据···");
+                setTimeout(function(){
+                    $(".teleText-header-load .wechat-load").attr("src", "../../images/wechat-loading.png");
+                    $(".teleText-header-load .wechat-load-txt").html("同步微信素材");
+                }, 2000);
+
+            });
+
+            //添加二级菜单
+            $(".body-menu").on("click", ".addBtn01", function(event){
+                var theParent = $(this).parents(".first-menu");
+                var nextParent = theParent.nextAll(".first-menu:first");
+                var sndItem = theParent.nextAll(".second-menu");
+                var nextSndNum = 0;
+                if(nextParent.length == 0 && sndItem.length != 0){
+                    nextSndNum = parseInt(sndItem.last().find(".second-menu-num").val());
+                }
+                if(nextParent.length != 0 && sndItem.length != 0){
+                    nextSndNum = parseInt(nextParent.prev().find(".second-menu-num").val());
+                }
+                var sndMenuNum = (nextParent.length == 0 && sndItem.length == 0)?0:nextSndNum;
+                var secondMenu = '<tr class="second-menu">' +
+                        '<td><input class="second-menu-num" type="text" value='+(sndMenuNum+1)+'></td>' +
+                        '<td>' +
+                        '<i class="second-last-line"></i><input class="second-menu-name" type="text" value="二级子菜单">' +
+                        '</td>' +
+                        '<td>' +
+                        '<div class="dropdown first-menu-action">' +
+                        '<a href="javascript:void(0);" data-toggle="dropdown" class="dropdownBtn">' +
+                        '<span class="activeFonts">发送消息</span>' +
+                        '<span class="caret"></span>' +
+                        '</a>' +
+                        '<ul class="dropdown-menu">' +
+                        '<li><a href="javascript:void(0);">跳转链接</a></li>' +
+                        '<li class="active"><a href="javascript:void(0);">发送消息</a></li>' +
+                        '</ul>' +
+                        '</div>' +
+                        '</td>' +
+                        '<td>' +
+                        '<a href="javascript:void(0);" class="teleText">选择图文信息</a>' +
+                        '</td>' +
+                        '<td>' +
+                        '<div class="checkboxAction">' +
+                        '<label class="checkboxInfo">' +
+                        '<span class="checkboxIcon"></span>' +
+                        '</label>' +
+                        '</div>' +
+                        '</td>' +
+                        '<td style="text-align: center;">' +
+                        '<a class="first-menu-op" href="javascript:void(0);">删除</a>' +
+                        '</td>' +
+                        '</tr>';
+
+                if(nextParent.length == 0){
+                    if(sndItem.length == 0){
+                        $(".wechat-menuTab > tbody").append(secondMenu);
+                    }else if(sndItem.length < 5){
+                        var lastItem = theParent.nextAll(".second-menu:last").find(".second-last-line");
+                        lastItem.removeClass("second-last-line").addClass("second-item-line");
+                        $(".wechat-menuTab > tbody").append(secondMenu);
+                    }else if(sndItem.length == 5){
+                        return false;
+                    }
+                }else{
+                    if((nextParent.index() - theParent.index()) == 6){
+                        return false;
+                    }
+                    var lastLine = nextParent.prev().find(".second-last-line");
+                    lastLine.removeClass("second-last-line").addClass("second-item-line");
+                    $(nextParent).before(secondMenu);
+                }
+                theParent.find(".first-menu-action").addClass("hidden");
+                theParent.find(".first-menu-response").addClass("hidden");
+            });
+
+            //改变响应动作
+            $(".body-menu").on("click", ".dropdown-menu li", function(){
+                var dropItem = $(this).children("a").html();
+                var firstItem = $(this).parent().find("li:first");
+                var secondItem = $(this).parent().find("li:last");
+                var linkItem = '<input type="text" class="first-menu-response" value="http://mp.weixin.qq.com/s?__biz=MjM5MDU">';
+                var teleItem = '<a href="javascript:void(0);" class="teleText">选择图文信息</a>';
+                var nextItem = $(this).parents("td").next();
+
+                $(this).closest(".first-menu-action").find(".activeFonts").html(dropItem);
+                $(this).addClass("active");
+                $(this).siblings().removeClass("active");
+                if($(this).is(firstItem)){
+                    if(nextItem.children().is("input[class='first-menu-response']")){
+                        return;
+                    }
+                    nextItem.empty().html(linkItem);
+                }
+                if($(this).is(secondItem)){
+                    if(nextItem.children().is("a[class='teleText']")){
+                        return;
+                    }
+                    nextItem.empty().html(teleItem);
+                }
+            });
+
+            //保存提示
+            $(".wechat-saveBtn").click(function(){
+                clickActionPopup("dlg-saveMenu");
+            });
+            //生成提示
+            $(".wechat-customMenu").click(function(){
+                clickActionPopup("dlg-bliudMenu");
+            });
+            //撤销提示
+            $(".wechat-revokeMenu").click(function(){
+                clickActionPopup("dlg-cancelMenu");
+            });
+        });
+    </script>
+
+</body>
+</html>
