@@ -23,21 +23,47 @@ a:focus {
 .color565656 {
   color: #565656; }
 
-.color111, .text {
+.color111, .commonModule .titleH2 {
   color: #111; }
 
 .color11b9b7 {
   color: #11b9b7; }
 
-.borderTopE2e2e2 {
+.borderTopE2e2e2, .commonModule {
   border-top: 1px solid #e2e2e2; }
 
-.borderBottomE2e2e2 {
+.borderBottomE2e2e2, .commonModule {
   border-bottom: 1px solid #e2e2e2; }
 
+.displayInlineBlock, .labelNames .commonStyle, .labelNames .lightBlueBg {
+  display: inline-block; }
+
 /*  jenny  Start  */
-.titleH2 {
-  font-size: 14px; }
+.commonModule {
+  padding: 0 0.75rem; }
+  .commonModule.noBorderTop {
+    border-top: none; }
+  .commonModule .titleH2 {
+    font-size: 14px;
+    line-height: 0.95rem;
+    margin: 0.5rem 0; }
+
+.productBanner img {
+  width: 100%;
+  height: 8.5rem; }
+
+.labelNames {
+  margin: 0.75rem 0; }
+  .labelNames .commonStyle, .labelNames .lightBlueBg {
+    font-size: 9px;
+    padding: 0.2rem 0.25rem;
+    min-width: 1.75rem;
+    color: #fff;
+    -webkit-border-radius: 0.15rem;
+    border-radius: 0.15rem;
+    text-align: center; }
+  .labelNames .lightBlueBg {
+    background-color: #44bcda; }
 
 /*  jenny  End  */
 

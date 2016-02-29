@@ -41,15 +41,54 @@ $varFontSizeVal:2;
 .borderBottomE2e2e2{
   border-bottom: 1px solid #e2e2e2;
 }
+@mixin border-radius($radius:6rem / $fixedValue){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+.displayInlineBlock{
+  display: inline-block;
+}
 
 
 /*  jenny  Start  */
-.text{
-  @extend .color111
+.commonModule{
+  @extend .borderTopE2e2e2;
+  @extend .borderBottomE2e2e2;
+  padding: 0 30rem / $fixedValue;
+  &.noBorderTop{
+    border-top: none;
+  }
+  .titleH2{
+    font-size: 28px / $varFontSizeVal;
+    line-height: 38rem / $fixedValue;
+    @extend .color111;
+    margin: 20rem / $fixedValue 0;
+   }
 }
-.titleH2{
-  font-size: 28px / $varFontSizeVal;
+.productBanner{
+  img{
+    width: 100%;
+    height: 340rem / $fixedValue ;
+  }
 }
+.labelNames{
+  margin: 30rem / $fixedValue 0;
+  .commonStyle{
+    font-size: 18px / $varFontSizeVal;
+    padding: 8rem / $fixedValue 10rem / $fixedValue;
+    min-width: 70rem / $fixedValue;
+    color: #fff;
+    @include border-radius;
+    @extend .displayInlineBlock;
+    text-align: center;
+  }
+  .lightBlueBg{
+    @extend .commonStyle;
+    background-color: #44bcda;
+  }
+}
+
+
 
 
 
