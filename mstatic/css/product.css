@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a:focus {
+  outline: none; }
+
+.fontSize {
+  font-size: 12px; }
+
+.colorA1a1a1 {
+  color: #a1a1a1; }
+
+.color565656 {
+  color: #565656; }
+
+.color111, .text {
+  color: #111; }
+
+.color11b9b7 {
+  color: #11b9b7; }
+
+.borderTopE2e2e2 {
+  border-top: 1px solid #e2e2e2; }
+
+.borderBottomE2e2e2 {
+  border-bottom: 1px solid #e2e2e2; }
+
+/*  jenny  Start  */
+.titleH2 {
+  font-size: 14px; }
+
+/*  jenny  End  */
+
+/*# sourceMappingURL=product.css.map */
