@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/topic/topic_discuss.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>话题讨论</title>
+
+    <script type="text/javascript">
+        $(function(){
+
+            var root;
+            var _w;
+            var w;
+
+            screenchange();
+
+            window.addEventListener('orientationchange', function(event){
+                /*旋转至竖屏*/
+                if ( (window.orientation == 180 || window.orientation==0)&&(sessionStorage.s_fontsize==undefined)) {/*初始横屏加载切换至竖屏*/
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                    sessionStorage.s_fontsize = root.style.fontSize;
+                }
+
+                root.style.minHeight = window.innerHeight + "px";
+            });
+
+            function screenchange(){
+                root = document.getElementsByTagName("html")[0];
+
+                if(window.orientation==undefined){
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                }else{
+                    if ( window.orientation == 180 || window.orientation==0 ) {  /*竖屏加载*/
+                        _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                        w = _w >= 640 ? 640 : _w;
+
+                        root.style.fontSize = (w / 320) * 20 + "px";
+                        sessionStorage.s_fontsize = root.style.fontSize;
+                    }
+
+                    if( window.orientation == 90 || window.orientation == -90 ) {  /*横屏加载*/
+                        if(sessionStorage.s_fontsize==undefined){   /*初始横屏加载*/
+                            var w1 = window.innerHeight<= window.screen.height ? window.innerHeight : window.screen.height;
+                            var w2 = w1 >= 640 ? 640 : w1;
+
+                            root.style.fontSize = (w2 / 320) * 20 + "px";
+
+                        }else{
+                            root.style.fontSize = sessionStorage.s_fontsize;
+                        }
+                    }
+                }
+
+                root.style.minHeight = window.innerHeight + "px";
+            }
+
+        });
+
+
+
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div class="headerBar">
+        <div class="header">
+            <a href="javascript:;" class="back">
+                <i class="back-arrow"></i>
+                <em class="back-border"></em>
+            </a>
+            <span class="title">话题讨论</span>
+		    <!--<span class="acut-menu">
+		    	<span class="menu-pop">
+		    				<a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+                                <img class="acut-img" src="../../mstatic/images/acut-img.png">
+                            </a>
+		    				<div class="menu-pop-container">
+                                <i class="arrow-up"></i>
+                                <ul>
+                                    <li><a data-role="none" href="javascript:;">用户中心</a></li>
+                                    <li><a data-role="none" href="javascript:;">退出账号</a></li>
+                                </ul>
+                            </div>
+		    			</span>
+	            <span class="menu-btn">
+	                    	<span class="menu-img"></span>
+	                    	<div class="menu-list-container">
+                                <i class="arrow-up"></i>
+                                <ul class="menu-list">
+                                    <li>
+                                        <a data-role="none" href="javascript:;">产品列表</a>
+                                    </li>
+                                    <li>
+                                        <a data-role="none" href="javascript:;">我的订单</a>
+                                    </li>
+                                    <li>
+                                        <a data-role="none" href="javascript:;">我的钱包</a>
+                                    </li>
+                                    <li>
+                                        <a data-role="none" href="javascript:;">私信</a>
+                                    </li>
+                                </ul>
+                            </div>
+	                    </span>
+	        </span>-->
+        </div>
+    </div>
+    <div class="detail-content">
+        <div class="topicModel">
+            <h1><i class="discussIcon"></i>短途韩国釜山庆州</h1>
+            <div class="topicIntro">
+                <p>不知不觉，这已经是我第三次去韩国了。第一次借某个转机的机会在首尔玩了一天半，第二次公司team building走了一遭济州岛,都是大热门，和大家区别不大；这次又去，就想着去些不同的城市。</p>
+                <p>跨年的假期时间不多，只有4天，刨除飞行时间，只有两个整天和一个半天可以花在当地</p>
+            </div>
+        </div>
+        <div class="topicModel topicModel2">
+            <h2 class="cyan"><span class="line" style="float:left;"></span>本期奖励<span class="line"></span></h2>
+            <div class="topic_prize">
+                <img src="../../mstatic/images/topicImg.png" alt=""/>
+                <h3 class="prize_title">葡萄牙签证服务, 免签证费</h3>
+                <p>葡萄牙签证服务, 免签证费, 签证服务, 免签证费, 签证服务</p>
+                <a href="javascript:void(0);" data-role="none" class="unfold"><i class="unfoldIcon"></i><span>展开</span></a>
+            </div>
+        </div>
+        <div class="topicModel topicModel2">
+            <h2 class="cyan"><span class="line" style="float:left;"></span>讨论区<span class="line"></span></h2>
+            <div class="discuss_area">
+                <ul>
+                    <li class="discuss_list current" style="margin-top: 1rem;">
+                        <div class="avatar">
+                            <img src="../../mstatic/images/privatePhoto01.png">
+                        </div>
+                        <div class="rightDetails">
+                            <div class="nameAndTime clearfix">
+                                <span class="nameFonts">南极洲的企鹅</span>
+                                <span class="timeFonts">两小时前</span>
+                            </div>
+                            <div class="secondEllipsis">
+                                <p>上航直飞优质班，晚上出发只请三天假</p>
+                            </div>
+                        </div>
+                        <div class="cancelLike">
+                            <span></span>
+                            <em>18</em>
+                        </div>
+                    </li>
+                    <li class="discuss_list current">
+                        <div class="avatar">
+                            <img src="../../mstatic/images/privatePhoto02.png">
+                        </div>
+                        <div class="rightDetails">
+                            <div class="nameAndTime clearfix">
+                                <span class="nameFonts">南极洲的企鹅</span>
+                                <span class="timeFonts">两小时前</span>
+                            </div>
+                            <div class="secondEllipsis">
+                                <p>在这里可以在清澈温暖的水中浮潜深潜， 彩色热带水生物环绕四周，还可以享用 当地餐馆美食。</p>
+                            </div>
+                        </div>
+                        <div class="cancelLike clickLike">
+                            <span></span>
+                            <em>20</em>
+                        </div>
+                    </li>
+                    <li class="discuss_list current">
+                        <div class="avatar">
+                            <img src="../../mstatic/images/privatePhoto02.png">
+                        </div>
+                        <div class="rightDetails">
+                            <div class="nameAndTime clearfix">
+                                <span class="nameFonts">南极洲的企鹅</span>
+                                <span class="timeFonts">两小时前</span>
+                            </div>
+                            <div class="secondEllipsis">
+                                <p>上航直飞优质班，晚上出发只请三天假</p>
+                            </div>
+                        </div>
+                        <div class="cancelLike">
+                            <span></span>
+                            <em>88</em>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="topicBar">
+        <div style="width:100%;">
+            <a class="disNum" href="javascript:void(0);" data-role="none"><i class="cyan">88</i> 人参与讨论</a>
+            <a class="wantSay" href="javascript:void(0);" data-role="none">我也想说</a>
+        </div>
+    </div>
+</div>
+<script>
+$(function(){
+
+    FastClick.attach(document.body);
+
+    $(".topic_prize a").click(function(){
+        if($(this).hasClass("unfold")){
+            $(".topic_prize p").css("height","inherit");
+            $(".unfoldIcon").addClass("foldIcon");
+            $(".topic_prize a span").text("收起");
+            $(this).removeClass("unfold");
+        }else{
+            $(".topic_prize p").css("height","1rem");
+            $(".unfoldIcon").removeClass("foldIcon");
+            $(".topic_prize a span").text("展开");
+            $(this).addClass("unfold");
+        }
+    });
+
+    $(".cancelLike").click(function(){
+        var num = parseInt($(this).find("em").text());
+        if($(this).hasClass("clickLike")){
+            $(this).removeClass("clickLike");
+            num--;
+        }else{
+            $(this).addClass("clickLike");
+            num++;
+        }
+        $(this).find("em").text(num);
+    });
+
+    /*$(".rightDetails .secondEllipsis").each(function(){
+        var divH = $(this).height();
+        var $p = $("p", $(this)).eq(0);
+        while ($p.outerHeight() > divH) {
+            $p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+        }
+    });*/
+
+    $(".lazyload-img").lazyload({
+        threshold: 500,
+        placeholder: ''
+    });
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/topic/topic_discuss.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>发表讨论</title>
+
+    <script type="text/javascript">
+        $(function(){
+
+            var root;
+            var _w;
+            var w;
+
+            screenchange();
+
+            window.addEventListener('orientationchange', function(event){
+                /*旋转至竖屏*/
+                if ( (window.orientation == 180 || window.orientation==0)&&(sessionStorage.s_fontsize==undefined)) {/*初始横屏加载切换至竖屏*/
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                    sessionStorage.s_fontsize = root.style.fontSize;
+                }
+
+                root.style.minHeight = window.innerHeight + "px";
+            });
+
+            function screenchange(){
+                root = document.getElementsByTagName("html")[0];
+
+                if(window.orientation==undefined){
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                }else{
+                    if ( window.orientation == 180 || window.orientation==0 ) {  /*竖屏加载*/
+                        _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                        w = _w >= 640 ? 640 : _w;
+
+                        root.style.fontSize = (w / 320) * 20 + "px";
+                        sessionStorage.s_fontsize = root.style.fontSize;
+                    }
+
+                    if( window.orientation == 90 || window.orientation == -90 ) {  /*横屏加载*/
+                        if(sessionStorage.s_fontsize==undefined){   /*初始横屏加载*/
+                            var w1 = window.innerHeight<= window.screen.height ? window.innerHeight : window.screen.height;
+                            var w2 = w1 >= 640 ? 640 : w1;
+
+                            root.style.fontSize = (w2 / 320) * 20 + "px";
+
+                        }else{
+                            root.style.fontSize = sessionStorage.s_fontsize;
+                        }
+                    }
+                }
+
+                root.style.minHeight = window.innerHeight + "px";
+            }
+
+        });
+
+
+
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div class="headerBar">
+        <div class="header">
+            <a href="javascript:;" class="back">
+                <i class="back-arrow"></i>
+                <em class="back-border"></em>
+            </a>
+            <span class="title">发表讨论</span>
+            <!--<span class="acut-menu">
+                <span class="menu-pop">
+                            <a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+                                <img class="acut-img" src="../../mstatic/images/acut-img.png">
+                            </a>
+                            <div class="menu-pop-container">
+                                <i class="arrow-up"></i>
+                                <ul>
+                                    <li><a data-role="none" href="javascript:;">用户中心</a></li>
+                                    <li><a data-role="none" href="javascript:;">退出账号</a></li>
+                                </ul>
+                            </div>
+                        </span>
+                <span class="menu-btn">
+                            <span class="menu-img"></span>
+                            <div class="menu-list-container">
+                                <i class="arrow-up"></i>
+                                <ul class="menu-list">
+                                    <li>
+                                        <a data-role="none" href="javascript:;">产品列表</a>
+                                    </li>
+                                    <li>
+                                        <a data-role="none" href="javascript:;">我的订单</a>
+                                    </li>
+                                    <li>
+                                        <a data-role="none" href="javascript:;">我的钱包</a>
+                                    </li>
+                                    <li>
+                                        <a data-role="none" href="javascript:;">私信</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+            </span>-->
+        </div>
+    </div>
+    <div class="detail-content">
+        <div class="topicModel">
+            <h1><i class="discussIcon"></i>短途韩国釜山庆州</h1>
+            <div class="publish_discuss">
+                <textarea class="disCont" placeholder="我想说" data-role="none"></textarea>
+                <div class="publish">
+                    <em class="anonymous">匿名</em>
+                    <a class="publishBtn" href="javascript:void(0);" data-role="none">发 表</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(function(){
+
+        FastClick.attach(document.body);
+
+        $(".anonymous").click(function(){
+            if($(this).hasClass("no_anonymous")){
+                $(this).removeClass("no_anonymous");
+            }else{
+                $(this).addClass("no_anonymous");
+            }
+        });
+
+        $(".lazyload-img").lazyload({
+            threshold: 500,
+            placeholder: ''
+        });
+    });
+
+</script>
+</body>
+</html>
