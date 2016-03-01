@@ -1,133 +1,133 @@
 @charset "UTF-8";
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0; }
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
 
 ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+    margin: 0;
+    padding: 0;
+    list-style: none; }
 
 a:focus {
-  outline: none; }
+    outline: none; }
 
 *:not(input) {
-  -webkit-user-select: none; }
+    -webkit-user-select: none; }
 
 /*loading页*/
 .loading {
-  width: 100%;
-  height: 100%; }
+    width: 100%;
+    height: 100%; }
 
 #loadingContainer {
-  width: 15.825rem;
-  height: 1.225rem;
-  background: #5c2d28;
-  border-radius: 1.225rem;
-  position: relative;
-  margin: 0 auto; }
+    width: 15.825rem;
+    height: 1.225rem;
+    background: #5c2d28;
+    border-radius: 1.225rem;
+    position: relative;
+    margin: 0 auto; }
 
 #loadingInnerBar {
-  width: 0;
-  height: 100%;
-  background-color: #f9ebc6;
-  position: absolute;
-  left: 0;
-  border-radius: 1.225rem;
-  -webkit-transition: width 3s ease-in-out;
-  -moz-transition: width 3s ease-in-out;
-  -ms-transition: width 3s ease-in-out;
-  -o-transition: width 3s ease-in-out;
-  transition: width 3s ease-in-out; }
+    width: 0;
+    height: 100%;
+    background-color: #f9ebc6;
+    position: absolute;
+    left: 0;
+    border-radius: 1.225rem;
+    -webkit-transition: width 3s ease-in-out;
+    -moz-transition: width 3s ease-in-out;
+    -ms-transition: width 3s ease-in-out;
+    -o-transition: width 3s ease-in-out;
+    transition: width 3s ease-in-out; }
 
 #loadingInnerBar.loaded {
-  width: 100%; }
+    width: 100%; }
 
 .loadingpagebg {
-  width: 100%;
-  margin-top: 4rem; }
+    width: 100%;
+    margin-top: 4rem; }
 
 .lodingtext {
-  width: 4.55rem;
-  height: 0.7rem;
-  margin-top: 0.5rem; }
+    width: 4.55rem;
+    height: 0.7rem;
+    margin-top: 0.5rem; }
 
 #loadingcanvas {
-  width: 15.825rem;
-  height: 1.225rem;
-  background: #5c2d28;
-  border-radius: 1.225rem; }
+    width: 15.825rem;
+    height: 1.225rem;
+    background: #5c2d28;
+    border-radius: 1.225rem; }
 
 .loadingprogress {
-  margin-top: 3.5rem; }
+    margin-top: 3.5rem; }
 
 /*游戏说明页*/
 .avater {
-  width: 3.35rem;
-  height: 3.35rem;
-  display: inline-block;
-  margin: 1rem auto;
-  background: #e6d6bd;
-  border-radius: 0.25rem; }
+    width: 3.35rem;
+    height: 3.35rem;
+    display: inline-block;
+    margin: 1rem auto;
+    background: #e6d6bd;
+    border-radius: 0.25rem; }
 
 .game_describe {
-  width: 100%;
-  height: 25.7rem;
-  background: url("../images/activity/game_describe.png") center center no-repeat;
-  background-size: 16rem 25.7rem; }
+    width: 100%;
+    height: 25.7rem;
+    background: url("../images/activity/game_describe.png") center center no-repeat;
+    background-size: 16rem 25.7rem; }
 
 .getprize_list_contain {
-  margin-bottom: 3.5rem;
-  overflow: hidden; }
+    margin-bottom: 3.5rem;
+    overflow: hidden; }
 
 .getprize_list {
-  height: 26rem;
-  margin-top: 0.625rem;
-  /*overflow: hidden;*/ }
+    height: 26rem;
+    margin-top: 0.625rem;
+    /*overflow: hidden;*/ }
 
 .getprize_list li {
-  padding: 0 2.8rem 0.875rem 2.8rem;
-  text-align: left;
-  color: #e6d6bd;
-  overflow: hidden;
-  font-size: 0.8rem; }
+    padding: 0 2.8rem 0.875rem 2.8rem;
+    text-align: left;
+    color: #e6d6bd;
+    overflow: hidden;
+    font-size: 0.8rem; }
 
 .user_getprize {
-  float: left; }
+    float: left; }
 
 .avater_user_getprize {
-  width: 2.825rem;
-  height: 2.825rem;
-  display: inline-block;
-  border-radius: 0.25rem;
-  background: #e6d6bd; }
+    width: 2.825rem;
+    height: 2.825rem;
+    display: inline-block;
+    border-radius: 0.25rem;
+    background: #e6d6bd; }
 
 .name_user_getprize {
-  width: 4rem;
-  height: 1rem;
-  display: inline-block;
-  margin-top: 0.3rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
+    width: 4rem;
+    height: 1rem;
+    display: inline-block;
+    margin-top: 0.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
 
 .prize_kinds_calender {
-  width: 5.3rem;
-  height: 0.85rem;
-  background: url("../images/activity/getcalender.png") no-repeat;
-  background-size: 5.3rem 0.825rem;
-  margin-top: 1.1rem;
-  float: right; }
+    width: 5.3rem;
+    height: 0.85rem;
+    background: url("../images/activity/getcalender.png") no-repeat;
+    background-size: 5.3rem 0.825rem;
+    margin-top: 1.1rem;
+    float: right; }
 
 .prize_kinds_bag {
-  width: 5.3rem;
-  height: 0.85rem;
-  background: url("../images/activity/getbag.png") no-repeat;
-  background-size: 5.3rem 0.825rem;
-  margin-top: 1.1rem;
-  float: right; }
+    width: 5.3rem;
+    height: 0.85rem;
+    background: url("../images/activity/getbag.png") no-repeat;
+    background-size: 5.3rem 0.825rem;
+    margin-top: 1.1rem;
+    float: right; }
 
 /*.prize_kinds_voucher{
   width:6.2rem;
@@ -138,1109 +138,1109 @@ a:focus {
   float:right;
 }*/
 .prize_kinds_voucher50 {
-  width: 8.125rem;
-  height: 0.9rem;
-  background: url("../images/activity/getvoucher50.png") no-repeat;
-  background-size: 8.125rem 0.875rem;
-  margin-top: 1.1rem;
-  float: right; }
+    width: 8.125rem;
+    height: 0.9rem;
+    background: url("../images/activity/getvoucher50.png") no-repeat;
+    background-size: 8.125rem 0.875rem;
+    margin-top: 1.1rem;
+    float: right; }
 
 .prize_kinds_voucher100 {
-  width: 8.625rem;
-  height: 0.9rem;
-  background: url("../images/activity/getvoucher100.png") no-repeat;
-  background-size: 8.625rem 0.875rem;
-  margin-top: 1.1rem;
-  float: right; }
+    width: 8.625rem;
+    height: 0.9rem;
+    background: url("../images/activity/getvoucher100.png") no-repeat;
+    background-size: 8.625rem 0.875rem;
+    margin-top: 1.1rem;
+    float: right; }
 
 .prize_kinds_voucher800 {
-  width: 8.625rem;
-  height: 0.9rem;
-  background: url("../images/activity/getvoucher800.png") no-repeat;
-  background-size: 8.625rem 0.875rem;
-  margin-top: 1.1rem;
-  float: right; }
+    width: 8.625rem;
+    height: 0.9rem;
+    background: url("../images/activity/getvoucher800.png") no-repeat;
+    background-size: 8.625rem 0.875rem;
+    margin-top: 1.1rem;
+    float: right; }
 
 .playgame {
-  width: 100%;
-  height: 3.5rem;
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  bottom: -0.1rem;
-  left: 0; }
+    width: 100%;
+    height: 3.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: -0.1rem;
+    left: 0; }
 
 .playgamebtn {
-  width: 15.825rem;
-  height: 2.225rem;
-  border-radius: 0.25rem;
-  display: inline-block;
-  margin-top: 0.625rem;
-  background: #e6d6bd url(../images/activity/playgame.png) center center no-repeat;
-  background-size: 5.7rem 1.05rem; }
+    width: 15.825rem;
+    height: 2.225rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin-top: 0.625rem;
+    background: #e6d6bd url(../images/activity/playgame.png) center center no-repeat;
+    background-size: 5.7rem 1.05rem; }
 
 /*游戏页*/
 .game {
-  width: 100%;
-  height: 100%; }
+    width: 100%;
+    height: 100%; }
 
 .gamebg {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: #e6d6bd url("../images/activity/flowerpot.png") center 103% no-repeat;
-  background-size: 7.75rem 7.625rem;
-  overflow: hidden; }
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #e6d6bd url("../images/activity/flowerpot.png") center 103% no-repeat;
+    background-size: 7.75rem 7.625rem;
+    overflow: hidden; }
 
 #gamerule {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1000; }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1000; }
 
 .rule {
-  width: 15.775rem;
-  height: 7.375rem;
-  margin-top: 4.75rem; }
+    width: 15.775rem;
+    height: 7.375rem;
+    margin-top: 4.75rem; }
 
 #count-down-3s {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1000;
-  text-align: center;
-  display: none;
-  z-index: 101; }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    text-align: center;
+    display: none;
+    z-index: 101; }
 
 #cd-3,
 #cd-2,
 #cd-1 {
-  color: #af3e2f;
-  font-size: 6.5rem;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 0;
-  opacity: 0;
-  font-family: Arial; }
+    color: #af3e2f;
+    font-size: 6.5rem;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    opacity: 0;
+    font-family: Arial; }
 
 @-webkit-keyframes cdStart {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.8, 2); } }
+    from {
+        opacity: 1; }
+    to {
+        opacity: 0;
+        -webkit-transform: scale(1.8, 2); } }
 #cd-3.start,
 #cd-2.start,
 #cd-1.start {
-  -webkit-animation: cdStart 1s 1; }
+    -webkit-animation: cdStart 1s 1; }
 
 #water {
-  display: inline-block;
-  width: 9.1rem;
-  height: 9.075rem;
-  background: url(../images/activity/water.png) center center no-repeat;
-  background-size: 9.1rem 9.075rem;
-  position: absolute;
-  right: 1rem;
-  bottom: 7rem;
-  z-index: 100;
-  display: none; }
+    display: inline-block;
+    width: 9.1rem;
+    height: 9.075rem;
+    background: url(../images/activity/water.png) center center no-repeat;
+    background-size: 9.1rem 9.075rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 7rem;
+    z-index: 100;
+    display: none; }
 
 #startgame {
-  width: 15.775rem;
-  height: 2.95rem;
-  display: inline-block;
-  border-radius: 0.25rem;
-  background: #af3e2f url(../images/activity/startgame.png) center center no-repeat;
-  background-size: 10.25rem 1.1rem;
-  margin-top: 0.4rem; }
+    width: 15.775rem;
+    height: 2.95rem;
+    display: inline-block;
+    border-radius: 0.25rem;
+    background: #af3e2f url(../images/activity/startgame.png) center center no-repeat;
+    background-size: 10.25rem 1.1rem;
+    margin-top: 0.4rem; }
 
 .startgame:active {
-  opacity: 0.9; }
+    opacity: 0.9; }
 
 .time {
-  width: 14.25rem;
-  height: 12.25rem;
-  line-height: 12.25rem;
-  display: inline-block;
-  background: url(../images/activity/timebg.png) center center no-repeat;
-  background-size: 14.25rem 12.25rem;
-  position: absolute;
-  top: 4.5rem;
-  left: 50%;
-  margin-left: -7.125rem;
-  font-size: 6rem;
-  font-weight: bold;
-  text-align: center;
-  color: #ffa200;
-  z-index: 600; }
+    width: 14.25rem;
+    height: 12.25rem;
+    line-height: 12.25rem;
+    display: inline-block;
+    background: url(../images/activity/timebg.png) center center no-repeat;
+    background-size: 14.25rem 12.25rem;
+    position: absolute;
+    top: 4.5rem;
+    left: 50%;
+    margin-left: -7.125rem;
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffa200;
+    z-index: 600; }
 
 .timeprogress {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 1.625rem;
-  text-align: center; }
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 1.625rem;
+    text-align: center; }
 
 #timecanvasContainer {
-  width: 15.825rem;
-  height: 1.225rem;
-  background: #5c2d28;
-  border-radius: 1.225rem;
-  margin: 0 auto;
-  position: relative; }
+    width: 15.825rem;
+    height: 1.225rem;
+    background: #5c2d28;
+    border-radius: 1.225rem;
+    margin: 0 auto;
+    position: relative; }
 
 #timecanvas {
-  width: 15.825rem;
-  height: 1.225rem;
-  display: inline-block;
-  left: 0;
-  position: absolute;
-  border-radius: 1.225rem;
-  background-color: #af3e2f; }
+    width: 15.825rem;
+    height: 1.225rem;
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    border-radius: 1.225rem;
+    background-color: #af3e2f; }
 
 .timetext {
-  width: 3.6rem;
-  height: 0.75rem; }
+    width: 3.6rem;
+    height: 0.75rem; }
 
 .tree {
-  width: 4.9rem;
-  height: 8.675rem;
-  display: inline-block;
-  background: url(../images/activity/tree.png) no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  bottom: 5.8rem;
-  left: 49%;
-  margin-left: -2.45rem;
-  -webkit-transform-origin: 50% 100%;
-  -moz-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
-  transform-origin: 50% 100%; }
+    width: 4.9rem;
+    height: 8.675rem;
+    display: inline-block;
+    background: url(../images/activity/tree.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 5.8rem;
+    left: 49%;
+    margin-left: -2.45rem;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%; }
 
 .tree.transition {
-  transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear; }
+    transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear; }
 
 @-webkit-keyframes bodyShake {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 100%; }
-  25% {
-    -webkit-transform: translate3d(-6px, -3px, -6px);
-    -webkit-transform-origin: 50% 100%; }
-  50% {
-    -webkit-transform: translate3d(0, 6px, 0);
-    -webkit-transform-origin: 50% 100%; }
-  75% {
-    -webkit-transform: translate3d(6px, 3px, 6px);
-    -webkit-transform-origin: 50% 100%; }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-transform-origin: 50% 100%; } }
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-transform-origin: 50% 100%; }
+    25% {
+        -webkit-transform: translate3d(-6px, -3px, -6px);
+        -webkit-transform-origin: 50% 100%; }
+    50% {
+        -webkit-transform: translate3d(0, 6px, 0);
+        -webkit-transform-origin: 50% 100%; }
+    75% {
+        -webkit-transform: translate3d(6px, 3px, 6px);
+        -webkit-transform-origin: 50% 100%; }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-transform-origin: 50% 100%; } }
 @keyframes bodyShake {
-  0% {
-    transform: translate3d(0, 0, 0);
-    transform-origin: 50% 100%; }
-  25% {
-    transform: translate3d(-6px, -3px, -6px);
-    transform-origin: 50% 100%; }
-  50% {
-    transform: translate3d(0, 6px, 0);
-    transform-origin: 50% 100%; }
-  75% {
-    transform: translate3d(6px, 3px, 6px);
-    transform-origin: 50% 100%; }
-  100% {
-    transform: translate3d(0, 0, 0);
-    transform-origin: 50% 100%; } }
+    0% {
+        transform: translate3d(0, 0, 0);
+        transform-origin: 50% 100%; }
+    25% {
+        transform: translate3d(-6px, -3px, -6px);
+        transform-origin: 50% 100%; }
+    50% {
+        transform: translate3d(0, 6px, 0);
+        transform-origin: 50% 100%; }
+    75% {
+        transform: translate3d(6px, 3px, 6px);
+        transform-origin: 50% 100%; }
+    100% {
+        transform: translate3d(0, 0, 0);
+        transform-origin: 50% 100%; } }
 body.shake {
-  animation: bodyShake 0.1s 3;
-  -webkit-animation: bodyShake 0.1s 3; }
+    animation: bodyShake 0.1s 3;
+    -webkit-animation: bodyShake 0.1s 3; }
 
 .leaf {
-  /*  width:184px;
-    height:182px;*/
-  width: 4.6rem;
-  height: 4.55rem;
-  display: inline-block; }
+    /*  width:184px;
+      height:182px;*/
+    width: 4.6rem;
+    height: 4.55rem;
+    display: inline-block; }
 
 .big1 {
-  -webkit-transform: scale(1.177, 1.177);
-  -ms-transform: scale(1.177, 1.177);
-  -o-transform: scale(1.177, 1.177);
-  transform: scale(1.177, 1.177); }
+    -webkit-transform: scale(1.177, 1.177);
+    -ms-transform: scale(1.177, 1.177);
+    -o-transform: scale(1.177, 1.177);
+    transform: scale(1.177, 1.177); }
 
 .big2 {
-  -webkit-transform: scale(1.354, 1.354);
-  -ms-transform: scale(1.354, 1.354);
-  -o-transform: scale(1.354, 1.354);
-  transform: scale(1.354, 1.354); }
+    -webkit-transform: scale(1.354, 1.354);
+    -ms-transform: scale(1.354, 1.354);
+    -o-transform: scale(1.354, 1.354);
+    transform: scale(1.354, 1.354); }
 
 .big3 {
-  -webkit-transform: scale(1.531, 1.531);
-  -ms-transform: scale(1.531, 1.531);
-  -o-transform: scale(1.531, 1.531);
-  transform: scale(1.531, 1.531); }
+    -webkit-transform: scale(1.531, 1.531);
+    -ms-transform: scale(1.531, 1.531);
+    -o-transform: scale(1.531, 1.531);
+    transform: scale(1.531, 1.531); }
 
 .big4 {
-  -webkit-transform: scale(1.708, 1.708);
-  -ms-transform: scale(1.708, 1.708);
-  -o-transform: scale(1.708, 1.708);
-  transform: scale(1.708, 1.708); }
+    -webkit-transform: scale(1.708, 1.708);
+    -ms-transform: scale(1.708, 1.708);
+    -o-transform: scale(1.708, 1.708);
+    transform: scale(1.708, 1.708); }
 
 .big5 {
-  -webkit-transform: scale(1.885, 1.885);
-  -ms-transform: scale(1.885, 1.885);
-  -o-transform: scale(1.885, 1.885);
-  transform: scale(1.885, 1.885); }
+    -webkit-transform: scale(1.885, 1.885);
+    -ms-transform: scale(1.885, 1.885);
+    -o-transform: scale(1.885, 1.885);
+    transform: scale(1.885, 1.885); }
 
 .big6 {
-  -webkit-transform: scale(2.062, 2.062);
-  -ms-transform: scale(2.062, 2.062);
-  -o-transform: scale(2.062, 2.062);
-  transform: scale(2.062, 2.062); }
+    -webkit-transform: scale(2.062, 2.062);
+    -ms-transform: scale(2.062, 2.062);
+    -o-transform: scale(2.062, 2.062);
+    transform: scale(2.062, 2.062); }
 
 .big7 {
-  -webkit-transform: scale(2.239, 2.239);
-  -ms-transform: scale(2.239, 2.239);
-  -o-transform: scale(2.239, 2.239);
-  transform: scale(2.239, 2.239); }
+    -webkit-transform: scale(2.239, 2.239);
+    -ms-transform: scale(2.239, 2.239);
+    -o-transform: scale(2.239, 2.239);
+    transform: scale(2.239, 2.239); }
 
 .big8 {
-  -webkit-transform: scale(2.416, 2.416);
-  -ms-transform: scale(2.416, 2.416);
-  -o-transform: scale(2.416, 2.416);
-  transform: scale(2.416, 2.416); }
+    -webkit-transform: scale(2.416, 2.416);
+    -ms-transform: scale(2.416, 2.416);
+    -o-transform: scale(2.416, 2.416);
+    transform: scale(2.416, 2.416); }
 
 .big9 {
-  -webkit-transform: scale(2.593, 2.593);
-  -ms-transform: scale(2.593, 2.593);
-  -o-transform: scale(2.593, 2.593);
-  transform: scale(2.593, 2.593); }
+    -webkit-transform: scale(2.593, 2.593);
+    -ms-transform: scale(2.593, 2.593);
+    -o-transform: scale(2.593, 2.593);
+    transform: scale(2.593, 2.593); }
 
 .big10 {
-  -webkit-transform: scale(2.77, 2.77);
-  -ms-transform: scale(2.77, 2.77);
-  -o-transform: scale(2.77, 2.77);
-  transform: scale(2.77, 2.77); }
+    -webkit-transform: scale(2.77, 2.77);
+    -ms-transform: scale(2.77, 2.77);
+    -o-transform: scale(2.77, 2.77);
+    transform: scale(2.77, 2.77); }
 
 .big11 {
-  -webkit-transform: scale(2.947, 2.947);
-  -ms-transform: scale(2.947, 2.947);
-  -o-transform: scale(2.947, 2.947);
-  transform: scale(2.947, 2.947); }
+    -webkit-transform: scale(2.947, 2.947);
+    -ms-transform: scale(2.947, 2.947);
+    -o-transform: scale(2.947, 2.947);
+    transform: scale(2.947, 2.947); }
 
 .leaf1 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 1.32117rem;
-  left: 7.14293rem;
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  top: 15.25rem;
-  left: -0.5rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 1.32117rem;
+    left: 7.14293rem;
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    top: 15.25rem;
+    left: -0.5rem; }
 
 .leaf2 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 3.05724rem;
-  left: 14.19702rem;
-  top: 6.2rem;
-  left: 14.9rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 3.05724rem;
+    left: 14.19702rem;
+    top: 6.2rem;
+    left: 14.9rem; }
 
 .leaf3 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 1.97847rem;
-  left: 0.09927rem;
-  top: 1.5rem;
-  left: 6.75rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 1.97847rem;
+    left: 0.09927rem;
+    top: 1.5rem;
+    left: 6.75rem; }
 
 .leaf4 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 9.77346rem;
-  left: 10.12967rem;
-  top: 6.2rem;
-  left: 8.9rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 9.77346rem;
+    left: 10.12967rem;
+    top: 6.2rem;
+    left: 8.9rem; }
 
 .leaf5 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 2.77452rem;
-  left: 13.40258rem;
-  top: 19.5rem;
-  left: 1.3rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 2.77452rem;
+    left: 13.40258rem;
+    top: 19.5rem;
+    left: 1.3rem; }
 
 .leaf6 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 13.33182rem;
-  left: 10.56121rem;
-  top: 1.5rem;
-  left: 0.8rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 13.33182rem;
+    left: 10.56121rem;
+    top: 1.5rem;
+    left: 0.8rem; }
 
 .leaf7 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 6.07442rem;
-  left: 12.10962rem;
-  top: 13.925rem;
-  left: 8.75rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 6.07442rem;
+    left: 12.10962rem;
+    top: 13.925rem;
+    left: 8.75rem; }
 
 .leaf8 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 1.23848rem;
-  left: 6.61938rem;
-  top: 10.5rem;
-  left: 2.5rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 1.23848rem;
+    left: 6.61938rem;
+    top: 10.5rem;
+    left: 2.5rem; }
 
 .leaf9 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 8.19905rem;
-  left: 0.47483rem;
-  top: 10rem;
-  left: 14rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 8.19905rem;
+    left: 0.47483rem;
+    top: 10rem;
+    left: 14rem; }
 
 .leaf10 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 1.1286rem;
-  left: 3.19053rem;
-  top: 4.5rem;
-  left: 0.25rem;
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 1.1286rem;
+    left: 3.19053rem;
+    top: 4.5rem;
+    left: 0.25rem;
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover; }
 
 .leaf11 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 10.16236rem;
-  left: 16.18535rem;
-  top: 6.2rem;
-  left: 3.95rem;
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 10.16236rem;
+    left: 16.18535rem;
+    top: 6.2rem;
+    left: 3.95rem;
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover; }
 
 .leaf12 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 18.37235rem;
-  left: 10.05732rem;
-  top: 3.875rem;
-  left: 11.2rem;
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 18.37235rem;
+    left: 10.05732rem;
+    top: 3.875rem;
+    left: 11.2rem;
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover; }
 
 .leaf13 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 11.19914rem;
-  left: 12.46984rem;
-  top: 9.25rem;
-  left: 6.2rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 11.19914rem;
+    left: 12.46984rem;
+    top: 9.25rem;
+    left: 6.2rem; }
 
 .leaf14 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 0.6599rem;
-  left: 13.16885rem;
-  top: 15.85rem;
-  left: 12.5rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0.6599rem;
+    left: 13.16885rem;
+    top: 15.85rem;
+    left: 12.5rem; }
 
 .leaf15 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 7.08007rem;
-  left: 5.26974rem;
-  top: 14.5rem;
-  left: 4.2rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 7.08007rem;
+    left: 5.26974rem;
+    top: 14.5rem;
+    left: 4.2rem; }
 
 .leaf16 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 3.56261rem;
-  left: 12.40176rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 3.56261rem;
+    left: 12.40176rem; }
 
 .leaf17 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 12.41843rem;
-  left: 0.58087rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 12.41843rem;
+    left: 0.58087rem; }
 
 .leaf18 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 15.99531rem;
-  left: 7.25393rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 15.99531rem;
+    left: 7.25393rem; }
 
 .leaf19 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 10.18147rem;
-  left: 4.85183rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 10.18147rem;
+    left: 4.85183rem; }
 
 .leaf20 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 5.59121rem;
-  left: 10.44765rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 5.59121rem;
+    left: 10.44765rem; }
 
 .leaf21 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 7.05464rem;
-  left: 7.47742rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 7.05464rem;
+    left: 7.47742rem; }
 
 .leaf22 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 5.15424rem;
-  left: 5.8852rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 5.15424rem;
+    left: 5.8852rem; }
 
 .leaf23 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 2.55055rem;
-  left: 15.63522rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 2.55055rem;
+    left: 15.63522rem; }
 
 .leaf24 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 6.41298rem;
-  left: 0.1864rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 6.41298rem;
+    left: 0.1864rem; }
 
 .leaf25 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 11.61766rem;
-  left: 9.70578rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 11.61766rem;
+    left: 9.70578rem; }
 
 .leaf26 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 14.74305rem;
-  left: 10.68067rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 14.74305rem;
+    left: 10.68067rem; }
 
 .leaf27 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 9.31109rem;
-  left: 16.06318rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 9.31109rem;
+    left: 16.06318rem; }
 
 .leaf28 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 8.96344rem;
-  left: 16.28158rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 8.96344rem;
+    left: 16.28158rem; }
 
 .leaf29 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 10.32348rem;
-  left: 17.45842rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 10.32348rem;
+    left: 17.45842rem; }
 
 .leaf30 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 3.35846rem;
-  left: 15.18289rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 3.35846rem;
+    left: 15.18289rem; }
 
 .leaf31 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 5.26455rem;
-  left: 4.91877rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 5.26455rem;
+    left: 4.91877rem; }
 
 .leaf32 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 18.09972rem;
-  left: 11.73193rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 18.09972rem;
+    left: 11.73193rem; }
 
 .leaf33 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 14.93141rem;
-  left: 11.69718rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 14.93141rem;
+    left: 11.69718rem; }
 
 .leaf34 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 8.12825rem;
-  left: 15.66394rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 8.12825rem;
+    left: 15.66394rem; }
 
 .leaf35 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 17.45688rem;
-  left: 15.23302rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 17.45688rem;
+    left: 15.23302rem; }
 
 .leaf36 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 13.04445rem;
-  left: 0.24324rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 13.04445rem;
+    left: 0.24324rem; }
 
 .leaf37 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 6.79751rem;
-  left: 13.66186rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 6.79751rem;
+    left: 13.66186rem; }
 
 .leaf38 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 16.89718rem;
-  left: 4.54794rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 16.89718rem;
+    left: 4.54794rem; }
 
 .leaf39 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 12.58168rem;
-  left: 1.77218rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 12.58168rem;
+    left: 1.77218rem; }
 
 .leaf40 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 11.61205rem;
-  left: 8.25498rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 11.61205rem;
+    left: 8.25498rem; }
 
 .leaf41 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 17.96148rem;
-  left: 10.11809rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 17.96148rem;
+    left: 10.11809rem; }
 
 .leaf42 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 9.13783rem;
-  left: 0.81585rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 9.13783rem;
+    left: 0.81585rem; }
 
 .leaf43 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 11.95032rem;
-  left: 11.82105rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 11.95032rem;
+    left: 11.82105rem; }
 
 .leaf44 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 17.7975rem;
-  left: 7.78911rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 17.7975rem;
+    left: 7.78911rem; }
 
 .leaf45 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 3.61345rem;
-  left: 3.47577rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 3.61345rem;
+    left: 3.47577rem; }
 
 .leaf46 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 1.83417rem;
-  left: 10.13526rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 1.83417rem;
+    left: 10.13526rem; }
 
 .leaf47 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 14.13465rem;
-  left: 14.76645rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 14.13465rem;
+    left: 14.76645rem; }
 
 .leaf48 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 7.23284rem;
-  left: 6.88665rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 7.23284rem;
+    left: 6.88665rem; }
 
 .leaf49 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 7.90283rem;
-  left: 3.60019rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 7.90283rem;
+    left: 3.60019rem; }
 
 .leaf50 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 3.85276rem;
-  left: 9.40797rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 3.85276rem;
+    left: 9.40797rem; }
 
 .leaf51 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 10.79313rem;
-  left: 1.37064rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 10.79313rem;
+    left: 1.37064rem; }
 
 .leaf52 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 3.05686rem;
-  left: 13.82503rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 3.05686rem;
+    left: 13.82503rem; }
 
 .leaf53 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 12.26814rem;
-  left: 14.52235rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 12.26814rem;
+    left: 14.52235rem; }
 
 .leaf54 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 16.20742rem;
-  left: 3.18371rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 16.20742rem;
+    left: 3.18371rem; }
 
 .leaf55 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 3.80281rem;
-  left: 0.66475rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 3.80281rem;
+    left: 0.66475rem; }
 
 .leaf56 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 5.0579rem;
-  left: 17.32418rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 5.0579rem;
+    left: 17.32418rem; }
 
 .leaf57 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 1.66706rem;
-  left: 8.81834rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 1.66706rem;
+    left: 8.81834rem; }
 
 .leaf58 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 16.80079rem;
-  left: 14.79419rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 16.80079rem;
+    left: 14.79419rem; }
 
 .leaf59 {
-  background: url(../images/activity/leaf2.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 5.52741rem;
-  left: 15.72157rem; }
+    background: url(../images/activity/leaf2.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 5.52741rem;
+    left: 15.72157rem; }
 
 .leaf60 {
-  background: url(../images/activity/leaf1.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 8.13349rem;
-  left: 18.34406rem; }
+    background: url(../images/activity/leaf1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 8.13349rem;
+    left: 18.34406rem; }
 
 #success {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2000;
-  overflow: hiddden;
-  text-align: center; }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    overflow: hiddden;
+    text-align: center; }
 
 #egg_container {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 4rem;
-  z-index: 601; }
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 4rem;
+    z-index: 601; }
 
 #egg {
-  width: 16.875rem;
-  height: 16.775rem;
-  display: inline-block;
-  background: url(../images/activity/egg.png) no-repeat center center;
-  background-size: 16.875rem 16.775rem; }
+    width: 16.875rem;
+    height: 16.775rem;
+    display: inline-block;
+    background: url(../images/activity/egg.png) no-repeat center center;
+    background-size: 16.875rem 16.775rem; }
 
 .takeprize {
-  width: 15.775rem;
-  height: 4.4rem;
-  display: inline-block;
-  background: url(../images/activity/takeprizetext.png) center center no-repeat;
-  background-size: 15.775rem 4.4rem;
-  position: absolute;
-  left: 50%;
-  bottom: 1.5rem;
-  margin-left: -7.8875rem; }
+    width: 15.775rem;
+    height: 4.4rem;
+    display: inline-block;
+    background: url(../images/activity/takeprizetext.png) center center no-repeat;
+    background-size: 15.775rem 4.4rem;
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    margin-left: -7.8875rem; }
 
 #success_noprize, #success_takedprize, #fail, #tooManyPeople {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3000;
-  overflow: hidden;
-  text-align: center; }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    overflow: hidden;
+    text-align: center; }
 
 .noprize_text {
-  width: 15.775rem;
-  height: 8.15rem;
-  display: inline-block;
-  background: url(../images/activity/noprize_text.png) center center no-repeat;
-  background-size: 15.775rem 8.15rem;
-  margin-top: 5.75rem; }
+    width: 15.775rem;
+    height: 8.15rem;
+    display: inline-block;
+    background: url(../images/activity/noprize_text.png) center center no-repeat;
+    background-size: 15.775rem 8.15rem;
+    margin-top: 5.75rem; }
 
 .noprize_qr {
-  width: 15.775rem;
-  height: 8.275rem;
-  display: inline-block;
-  background: url(../images/activity/noprize_qr.png) center center no-repeat;
-  background-size: 15.775rem 8.275rem;
-  position: absolute;
-  left: 50%;
-  bottom: 1.5rem;
-  margin-left: -7.8875rem; }
+    width: 15.775rem;
+    height: 8.275rem;
+    display: inline-block;
+    background: url(../images/activity/noprize_qr.png) center center no-repeat;
+    background-size: 15.775rem 8.275rem;
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    margin-left: -7.8875rem; }
 
 .noprize_qr img {
-  width: 100%;
-  height: 100%; }
+    width: 100%;
+    height: 100%; }
 
 .takedprize_text {
-  width: 15.775rem;
-  height: 6.925rem;
-  display: inline-block;
-  background: url(../images/activity/takedprizetext.png) center center no-repeat;
-  background-size: 15.775rem 6.925rem;
-  margin-top: 6.25rem; }
+    width: 15.775rem;
+    height: 6.925rem;
+    display: inline-block;
+    background: url(../images/activity/takedprizetext.png) center center no-repeat;
+    background-size: 15.775rem 6.925rem;
+    margin-top: 6.25rem; }
 
 .fail_text {
-  width: 15.775rem;
-  height: 9.875rem;
-  display: inline-block;
-  background: url(../images/activity/failtext.png) center center no-repeat;
-  background-size: 15.775rem 9.875rem;
-  margin-top: 5.75rem; }
+    width: 15.775rem;
+    height: 9.875rem;
+    display: inline-block;
+    background: url(../images/activity/failtext.png) center center no-repeat;
+    background-size: 15.775rem 9.875rem;
+    margin-top: 5.75rem; }
 
 .manypeople_text {
-  width: 15.775rem;
-  height: 7.7rem;
-  display: inline-block;
-  background: url(../images/activity/manypeopletext.png) center center no-repeat;
-  background-size: 15.775rem 7.7rem;
-  margin-top: 5.75rem; }
+    width: 15.775rem;
+    height: 7.7rem;
+    display: inline-block;
+    background: url(../images/activity/manypeopletext.png) center center no-repeat;
+    background-size: 15.775rem 7.7rem;
+    margin-top: 5.75rem; }
 
 .replay_btn {
-  background: #af3e2f url(../images/activity/replay.png) no-repeat center center;
-  background-size: 2.175rem 1.075rem; }
+    background: #af3e2f url(../images/activity/replay.png) no-repeat center center;
+    background-size: 2.175rem 1.075rem; }
 
 .redbg {
-  width: 100%;
-  height: 100%;
-  background: #af3e2f;
-  text-align: center;
-  position: relative; }
+    width: 100%;
+    height: 100%;
+    background: #af3e2f;
+    text-align: center;
+    position: relative; }
 
 .prize_bag {
-  width: 16.375rem;
-  height: 17.8265rem;
-  display: inline-block;
-  margin-top: 1.75rem; }
+    width: 16.375rem;
+    height: 17.8265rem;
+    display: inline-block;
+    margin-top: 1.75rem; }
 
 .prize_calendar {
-  width: 17.875rem;
-  height: 17.7rem;
-  display: inline-block;
-  margin-top: 1.75rem; }
+    width: 17.875rem;
+    height: 17.7rem;
+    display: inline-block;
+    margin-top: 1.75rem; }
 
 .getprizeBtn {
-  width: 100%;
-  position: absolute;
-  bottom: 1.25rem;
-  text-align: center; }
+    width: 100%;
+    position: absolute;
+    bottom: 1.25rem;
+    text-align: center; }
 
 .getprize_btn, .other_getprize_btn, .replay_btn {
-  width: 15.825rem;
-  height: 2.925rem;
-  display: inline-block;
-  border-radius: 0.25rem; }
+    width: 15.825rem;
+    height: 2.925rem;
+    display: inline-block;
+    border-radius: 0.25rem; }
 
 .getprize_btn {
-  background: #e6d6bd url(../images/activity/getprize_text.png) no-repeat center center;
-  background-size: 5.625rem 1.125rem; }
+    background: #e6d6bd url(../images/activity/getprize_text.png) no-repeat center center;
+    background-size: 5.625rem 1.125rem; }
 
 .other_getprize_btn {
-  background: #ff8417 url(../images/activity/other_getprize_text.png) no-repeat center center;
-  background-size: 11.85rem 1.125rem;
-  margin-top: 0.625rem; }
+    background: #ff8417 url(../images/activity/other_getprize_text.png) no-repeat center center;
+    background-size: 11.85rem 1.125rem;
+    margin-top: 0.625rem; }
 
 .getprize_btn:active, .other_getprize_btn:active {
-  opacity: 0.9; }
+    opacity: 0.9; }
 
 #getpricePopWindow {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: none; }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none; }
 
 .getpricecontent {
-  position: absolute;
-  left: 1.2rem;
-  top: 1.2rem;
-  right: 1.2rem;
-  bottom: 1.2rem; }
+    position: absolute;
+    left: 1.2rem;
+    top: 1.2rem;
+    right: 1.2rem;
+    bottom: 1.2rem; }
 
 #blackcover {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 0;
-  top: 0; }
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0; }
 
 .greybg {
-  width: 100%;
-  height: 100%;
-  background: #ebebeb url(../images/activity/prize_window.png) center top no-repeat;
-  background-size: 100%;
-  position: relative; }
+    width: 100%;
+    height: 100%;
+    background: #ebebeb url(../images/activity/prize_window.png) center top no-repeat;
+    background-size: 100%;
+    position: relative; }
 
 .getprize_qr {
-  width: 100%; }
+    width: 100%; }
 
 .message {
-  width: 14.7rem;
-  height: 10.5rem;
-  /*margin:0 auto;*/
-  position: absolute;
-  bottom: 0.925rem;
-  left: 50%;
-  margin-left: -7.35rem; }
+    width: 14.7rem;
+    height: 10.5rem;
+    /*margin:0 auto;*/
+    position: absolute;
+    bottom: 0.925rem;
+    left: 50%;
+    margin-left: -7.35rem; }
 
 .message_form {
-  width: 14.7rem;
-  height: 7.1rem;
-  border-radius: 0.25rem;
-  padding: 1rem 0 0 4.2rem;
-  background: #ff8417 url(../images/activity/message.png) no-repeat;
-  background-size: 14.7rem 7.1rem;
-  text-align: left;
-  box-sizing: border-box; }
+    width: 14.7rem;
+    height: 7.1rem;
+    border-radius: 0.25rem;
+    padding: 1rem 0 0 4.2rem;
+    background: #ff8417 url(../images/activity/message.png) no-repeat;
+    background-size: 14.7rem 7.1rem;
+    text-align: left;
+    box-sizing: border-box; }
 
 .submitebtn {
-  width: 14.7rem;
-  height: 2.925rem;
-  display: inline-block;
-  margin-top: 0.5rem;
-  border-radius: 0.25rem;
-  background: #ff8417 url(../images/activity/submitebtn.png) center center no-repeat;
-  background-size: 2.175rem 1.025rem; }
+    width: 14.7rem;
+    height: 2.925rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+    border-radius: 0.25rem;
+    background: #ff8417 url(../images/activity/submitebtn.png) center center no-repeat;
+    background-size: 2.175rem 1.025rem; }
 
 .submitebtn:active {
-  opacity: 0.9; }
+    opacity: 0.9; }
 
 .message_form input {
-  width: 9.675rem;
-  height: 1.4rem;
-  border: 0;
-  margin-bottom: 0.5rem;
-  outline: none;
-  background: #ebebeb;
-  padding: 0 0.25rem;
-  box-sizing: border-box;
-  font-size: 1rem;
-  line-height: 1.4rem; }
+    width: 9.675rem;
+    height: 1.4rem;
+    border: 0;
+    margin-bottom: 0.5rem;
+    outline: none;
+    background: #ebebeb;
+    padding: 0 0.25rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.4rem; }
 
 .closebtn, .closebtn:link, .closebtn:visited {
-  width: 2.25rem;
-  height: 2.25rem;
-  background: url(../images/activity/closebtn.png) right center no-repeat;
-  background-size: 2.25rem 2.25rem;
-  display: inline-block;
-  border-bottom-left-radius: 100%;
-  position: absolute;
-  top: 0;
-  right: 0; }
+    width: 2.25rem;
+    height: 2.25rem;
+    background: url(../images/activity/closebtn.png) right center no-repeat;
+    background-size: 2.25rem 2.25rem;
+    display: inline-block;
+    border-bottom-left-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; }
 
 .closebtn:active {
-  opacity: 0.5; }
+    opacity: 0.5; }
 
 .voucher_title {
-  width: 8.85rem;
-  height: 2.5rem;
-  display: inline-block;
-  background: url(../images/activity/voucher_text.png) no-repeat;
-  background-size: 8.85rem 2.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.125rem; }
+    width: 8.85rem;
+    height: 2.5rem;
+    display: inline-block;
+    background: url(../images/activity/voucher_text.png) no-repeat;
+    background-size: 8.85rem 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.125rem; }
 
 .voucher {
-  width: 15.775rem;
-  height: 7.9rem;
-  margin-bottom: 0.25rem; }
+    width: 15.775rem;
+    height: 7.9rem;
+    margin-bottom: 0.25rem; }
 
 .exchange {
-  margin-bottom: 1.9rem; }
+    margin-bottom: 1.9rem; }
 
 .exchange_code {
-  height: 1.5rem;
-  line-height: 1.5rem;
-  padding-left: 3.8rem;
-  display: inline-block;
-  background: url(../images/activity/exchangecode.png) no-repeat 0 center;
-  background-size: 3.3rem 1.05rem;
-  text-align: left;
-  color: #e6d6bd;
-  font-size: 1.2rem;
-  font-weight: bold; }
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding-left: 3.8rem;
+    display: inline-block;
+    background: url(../images/activity/exchangecode.png) no-repeat 0 center;
+    background-size: 3.3rem 1.05rem;
+    text-align: left;
+    color: #e6d6bd;
+    font-size: 1.2rem;
+    font-weight: bold; }
 
 .exchange_method {
-  width: 17.65rem;
-  height: 51.25rem;
-  display: inline-block;
-  background: url(../images/activity/exchangemethod.png) no-repeat center center;
-  background-size: 17.65rem 51.25rem; }
+    width: 17.65rem;
+    height: 51.25rem;
+    display: inline-block;
+    background: url(../images/activity/exchangemethod.png) no-repeat center center;
+    background-size: 17.65rem 51.25rem; }
 
 #getPrizeVoucher .other_getprize_btn {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem; }
+    margin-top: 1.5rem;
+    margin-bottom: 1rem; }
 
 .clickShare {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3000; }
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#C8ffffff,endColorstr=#C8ffffff);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000; }
 
 .clickShare .shareImg {
-  width: 10.2rem;
-  height: 4.725rem;
-  position: absolute;
-  right: 7%;
-  top: 1%;
-  z-index: 1; }
+    width: 10.2rem;
+    height: 4.725rem;
+    position: absolute;
+    right: 7%;
+    top: 1%;
+    z-index: 1; }
 
 /*# sourceMappingURL=demotree.css.map */
