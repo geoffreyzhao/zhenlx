@@ -185,20 +185,121 @@ $varFontSizeVal:2;
     top: 30rem/$fixedValue;
   }
 }
-
+.haveIcon{  
+  .commonIconStyle{
+    @extend .displayInlineBlock;
+    width: 30rem/$fixedValue;
+    height: 30rem/$fixedValue;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat;
+    background-size: 320px 170px;
+    vertical-align: middle;
+    margin-right: 10rem/$fixedValue;
+  }
+  .planeIcon{
+    @extend .commonIconStyle;
+    background-position: 0 0;
+  }
+  .hotelIcon{
+    @extend .commonIconStyle;
+    background-position: -20px 0;
+  }
+}
+.airInfoContent{
+  margin: 20rem/$fixedValue 25rem/$fixedValue 35rem/$fixedValue 45rem/$fixedValue;  
+  position: relative;
+  .commonLabelStyle{
+    font-size: 18px/$varFontSizeVal;
+    @extend .displayInlineBlock;
+    @include border-radius;
+    width: 30rem/$fixedValue;
+    height: 30rem/$fixedValue;
+    line-height: 30rem/$fixedValue;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: -45rem/$fixedValue;
+    top: 0;
+  }
+  .blueBg{
+    @extend .commonLabelStyle;
+    background-color: #11b9b7;
+  }
+  .orangeBg{
+    @extend .commonLabelStyle;
+    background-color: #ff9416;
+  }
+  .airPFonts{
+    font-size: 20px/$varFontSizeVal;
+    line-height: 32px/$varFontSizeVal;
+    margin: 15rem/$fixedValue 0;
+  }
+}
+.dayNumber{
+  margin-bottom: 15rem/$fixedValue;
+  .days{
+    font-size: 26px/$varFontSizeVal;
+    @extend .color111;
+  }
+}
+.timePlaceContent{
+  position: relative;
+  .placeBlueFonts{
+    @extend .color11b9b7;
+  }
+  .timeFonts{
+    font-size: 34px/$varFontSizeVal;
+    @extend .color111;
+    margin: 10rem/$fixedValue 0;
+    position: relative;
+    .addDayName{
+      font-size: 14px/$varFontSizeVal;
+      color: #ff9416;
+      position: absolute;
+      top: 0;
+      right: -32rem/$fixedValue;
+    }
+  }
+}
+.timePlaceLeft{
+  float: left;
+  width: 40%;
+}
+.timePlaceRight{
+  float: right;
+  width: 40%;
+  text-align: right;
+}
+.totalTimeContent{
+  margin-left: -120rem/$fixedValue;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  .dottedIcon{
+    @extend .displayInlineBlock;
+    width: 12rem/$fixedValue;
+    height: 12rem/$fixedValue;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat -196px 0;
+    background-size: 320px 170px;
+    vertical-align: middle;
+    margin-top: 3rem/$fixedValue;
+    &.leftDotted{
+      margin-right: -10rem/$fixedValue;
+    }
+    &.rightDotted{
+      margin-left: -10rem/$fixedValue;
+    }
+  }
+  .dashLine{
+    @extend .displayInlineBlock;
+    width: 60rem/$fixedValue;
+    height: 1px;
+    border-top: 1px dashed #bbbbbb;
+  }
+  .totalTimeFonts{
+    margin: 0 7rem/$fixedValue;
+  }
+}
 
 
 /*  jenny  End  */
-
-
-/* route recommend S */
-.routeRecommendTitle {
-  @extend .borderBottomE2e2e2;
-  padding-bottom:20rem / $fixedValue;
-}
-.routeRecommendContent {
-  @extend .color565656;
-
-}
-/* route recommend E */
 
