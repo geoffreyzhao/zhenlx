@@ -1,6 +1,5 @@
-* {
-  margin: 0;
-  padding: 0; }
+body {
+  font-family: "microsoft yahei", Verdana, Arial, Helvetica, sans-serif !important; }
 
 html, body {
   width: 100%;
@@ -14,7 +13,7 @@ ul, li {
 a:focus {
   outline: none; }
 
-.fontSize {
+.fontSize, body {
   font-size: 12px; }
 
 .colorA1a1a1 {
@@ -35,35 +34,41 @@ a:focus {
 .borderBottomE2e2e2, .commonModule {
   border-bottom: 1px solid #e2e2e2; }
 
-.displayInlineBlock, .labelNames .commonStyle, .labelNames .lightBlueBg {
+.displayInlineBlock, .labelNames .commonStyle, .labelNames .lightBlueBg, .labelNames .purpleBg, .labelNames .orangeBg, .labelNames .deepBlueBg {
   display: inline-block; }
 
 /*  jenny  Start  */
 .commonModule {
-  padding: 0 0.75rem; }
+  background-color: #fff;
+  padding: 0.375rem 0.75rem; }
   .commonModule.noBorderTop {
     border-top: none; }
   .commonModule .titleH2 {
     font-size: 14px;
-    line-height: 0.95rem;
-    margin: 0.5rem 0; }
+    line-height: 0.95rem; }
 
 .productBanner img {
   width: 100%;
   height: 8.5rem; }
 
 .labelNames {
-  margin: 0.75rem 0; }
-  .labelNames .commonStyle, .labelNames .lightBlueBg {
+  margin: 0.25rem 0 0.5rem; }
+  .labelNames .commonStyle, .labelNames .lightBlueBg, .labelNames .purpleBg, .labelNames .orangeBg, .labelNames .deepBlueBg {
     font-size: 9px;
     padding: 0.2rem 0.25rem;
-    min-width: 1.75rem;
+    min-width: 1.375rem;
     color: #fff;
     -webkit-border-radius: 0.15rem;
     border-radius: 0.15rem;
     text-align: center; }
   .labelNames .lightBlueBg {
     background-color: #44bcda; }
+  .labelNames .purpleBg {
+    background-color: #df7eb0; }
+  .labelNames .orangeBg {
+    background-color: #ea9e26; }
+  .labelNames .deepBlueBg {
+    background-color: #11b9b7; }
 
 /*  jenny  End  */
 

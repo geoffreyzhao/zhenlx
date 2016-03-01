@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-*{
-  margin: 0;
-  padding: 0;
+body{
+  font-family: "microsoft yahei",Verdana,Arial,Helvetica,sans-serif!important;
+  @extend .fontSize;
 }
 html,body{
   width:100%;
@@ -54,7 +54,8 @@ $varFontSizeVal:2;
 .commonModule{
   @extend .borderTopE2e2e2;
   @extend .borderBottomE2e2e2;
-  padding: 0 30rem / $fixedValue;
+  background-color: #fff;
+  padding: 15rem / $fixedValue 30rem / $fixedValue;
   &.noBorderTop{
     border-top: none;
   }
@@ -62,7 +63,6 @@ $varFontSizeVal:2;
     font-size: 28px / $varFontSizeVal;
     line-height: 38rem / $fixedValue;
     @extend .color111;
-    margin: 20rem / $fixedValue 0;
    }
 }
 .productBanner{
@@ -72,11 +72,11 @@ $varFontSizeVal:2;
   }
 }
 .labelNames{
-  margin: 30rem / $fixedValue 0;
+  margin: 10rem / $fixedValue 0 20rem / $fixedValue;
   .commonStyle{
     font-size: 18px / $varFontSizeVal;
     padding: 8rem / $fixedValue 10rem / $fixedValue;
-    min-width: 70rem / $fixedValue;
+    min-width: 55rem / $fixedValue;
     color: #fff;
     @include border-radius;
     @extend .displayInlineBlock;
@@ -85,6 +85,18 @@ $varFontSizeVal:2;
   .lightBlueBg{
     @extend .commonStyle;
     background-color: #44bcda;
+  }
+  .purpleBg{
+    @extend .commonStyle;
+    background-color: #df7eb0;
+  }
+  .orangeBg{
+    @extend .commonStyle;
+    background-color: #ea9e26;
+  }
+  .deepBlueBg{
+    @extend .commonStyle;
+    background-color: #11b9b7;
   }
 }
 
