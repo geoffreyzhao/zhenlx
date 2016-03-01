@@ -3,6 +3,7 @@
 body{
   font-family: "microsoft yahei",Verdana,Arial,Helvetica,sans-serif!important;
   @extend .fontSize;
+  @extend .color565656;
 }
 html,body{
   width:100%;
@@ -56,6 +57,7 @@ $varFontSizeVal:2;
   @extend .borderBottomE2e2e2;
   background-color: #fff;
   padding: 15rem / $fixedValue 30rem / $fixedValue;
+  margin-bottom: 15rem / $fixedValue;
   &.noBorderTop{
     border-top: none;
   }
@@ -64,6 +66,12 @@ $varFontSizeVal:2;
     line-height: 38rem / $fixedValue;
     @extend .color111;
    }
+  .commonTitleH2{
+    font-size: 28px / $varFontSizeVal;
+    @extend .color111;
+    padding: 10rem/$fixedValue 0 20rem/$fixedValue;
+    @extend .borderBottomE2e2e2;
+  }
 }
 .productBanner{
   img{
@@ -72,7 +80,7 @@ $varFontSizeVal:2;
   }
 }
 .labelNames{
-  margin: 10rem / $fixedValue 0 20rem / $fixedValue;
+  margin: 15rem/$fixedValue 0 20rem/$fixedValue;
   .commonStyle{
     font-size: 18px / $varFontSizeVal;
     padding: 8rem / $fixedValue 10rem / $fixedValue;
@@ -99,8 +107,84 @@ $varFontSizeVal:2;
     background-color: #11b9b7;
   }
 }
-
-
+.lightSpotList{
+  margin: 15rem/$fixedValue 0;
+  li{
+    position: relative;
+    padding-left: 45rem/$fixedValue;
+    margin-bottom: 15rem/$fixedValue;
+    p{
+      line-height: 30rem/$fixedValue;
+    }
+  }
+  .blueTitles{
+    font-size: 26px/$varFontSizeVal;
+    @extend .color11b9b7;
+    margin: 20rem/$fixedValue 0 15rem/$fixedValue;
+  }
+  .commonIconStyle{
+    @extend .displayInlineBlock;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat;
+    background-size: 320px 170px;
+    position: absolute;
+    left: 8rem/$fixedValue;
+    top: 0;
+  }
+  .planeIcon{
+    @extend .commonIconStyle;
+    width: 30rem/$fixedValue;
+    height: 30rem/$fixedValue;
+    background-position: 0 0;
+  }
+  .hotelIcon{
+    @extend .commonIconStyle;
+    width: 30rem/$fixedValue;
+    height: 30rem/$fixedValue;
+    background-position: -20px 0;
+  }
+  .experienceIcon{
+    @extend .commonIconStyle;
+    width: 30rem/$fixedValue;
+    height: 34rem/$fixedValue;
+    background-position: -40px 0;
+  }
+  .serveIcon{
+    @extend .commonIconStyle;
+    width: 30rem/$fixedValue;
+    height: 32rem/$fixedValue;
+    background-position: -60px 0;
+  }
+}
+.commonBottomStyle{
+  position: relative;
+  .journeyIcon{
+    @extend .displayInlineBlock;
+    width: 24rem/$fixedValue;
+    height: 27rem/$fixedValue;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat -80px 0;
+    background-size: 320px 170px;
+    position: absolute;
+    left: 0;
+    top: 25rem/$fixedValue;
+  }
+  .commonBottomTitle{
+    font-size: 26px/$varFontSizeVal;
+    @extend .color111;
+    padding: 25rem/$fixedValue 0 10rem/$fixedValue 65rem/$fixedValue;
+    margin: 0 -30rem/$fixedValue;
+    @extend .borderTopE2e2e2;
+  }
+  .rightArrow{
+    @extend .displayInlineBlock;
+    width: 12rem/$fixedValue;
+    height: 21rem/$fixedValue;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat -152px 0;
+    background-size: 320px 170px;
+    position: absolute;
+    right: 10rem/$fixedValue;
+    top: 30rem/$fixedValue;
+  }
+}
 
 
 
