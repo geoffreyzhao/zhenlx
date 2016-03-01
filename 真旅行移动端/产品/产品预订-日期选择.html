@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/book.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/underscore-min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/hammer.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>选择日期及出行人数选择</title>
+
+    <script type="text/javascript">
+        $(function(){
+
+            var root;
+            var _w;
+            var w;
+
+            screenchange();
+
+            window.addEventListener('orientationchange', function(event){
+                /*旋转至竖屏*/
+                if ( (window.orientation == 180 || window.orientation==0)&&(sessionStorage.s_fontsize==undefined)) {/*初始横屏加载切换至竖屏*/
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                    sessionStorage.s_fontsize = root.style.fontSize;
+                }
+
+                root.style.minHeight = window.innerHeight + "px";
+            });
+
+            function screenchange(){
+                root = document.getElementsByTagName("html")[0];
+
+                if(window.orientation==undefined){
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                }else{
+                    if ( window.orientation == 180 || window.orientation==0 ) {  /*竖屏加载*/
+                        _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                        w = _w >= 640 ? 640 : _w;
+
+                        root.style.fontSize = (w / 320) * 20 + "px";
+                        sessionStorage.s_fontsize = root.style.fontSize;
+                    }
+
+                    if( window.orientation == 90 || window.orientation == -90 ) {  /*横屏加载*/
+                        if(sessionStorage.s_fontsize==undefined){   /*初始横屏加载*/
+                            var w1 = window.innerHeight<= window.screen.height ? window.innerHeight : window.screen.height;
+                            var w2 = w1 >= 640 ? 640 : w1;
+
+                            root.style.fontSize = (w2 / 320) * 20 + "px";
+
+                        }else{
+                            root.style.fontSize = sessionStorage.s_fontsize;
+                        }
+                    }
+                }
+                root.style.minHeight = window.innerHeight + "px";
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="viewport" data-role="page">
+        <div class="headerBar">
+            <div class="header">
+                <a href="javascript:;" class="back">
+                    <i class="back-arrow"></i>
+                    <em class="back-border"></em>
+                </a>
+                <span class="title">选择日期和出行人数</span>
+            </div>
+        </div>
+        <section class="main-container">
+            <div class="calendar-wrapper"></div>
+        </section>
+    </div>
+
+    <!--  日历模板 -->
+    <script id="calendarTemplate" type="text/template">
+        <div class="calendar-header">
+            <nav class="calendar-nav clearfix">
+                <%
+                var dateY = data.defaultShowDate[0];
+                var dateM = data.defaultShowDate[1];
+                var dateD = data.defaultShowDate[2];
+
+                var curDate = new Date([dateY, dateM, 1]);
+                var dataList = data.data;
+                var hasPrev = false;
+                var hasNext = false;
+
+                _.each(_.pluck(dataList, 'date'), function(ele, index){
+                    if (new Date(ele) < curDate) {
+                        hasPrev = true;
+                    } else if (new Date(ele) > curDate) {
+                        hasNext = true;
+                    }
+                });
+                %>
+                <div class="tab-wrapper">
+                    <ul class="tablist clearfix">
+                        <% _.each(_.pluck(dataList, 'date'), function(ele, index){ %>
+                        <li class="<%= (ele[0] == dateY && ele[1] == dateM) ? 'current' : '' %>"><%= ele[0] %>年<%= (ele[1] < 10) ? ('0'+ele[1]) : ele[1] %>月</li>
+                        <% }); %>
+                    </ul>
+                </div>
+                <div class="nav-btn">
+                    <span class="prev <%= hasPrev ? '' : 'disabled' %>"></span>
+                    <span class="next <%= hasPrev ? '' : 'disabled' %>"></span>
+                </div>
+                <span class="price-tip"><i>?</i>价格说明</span>
+            </nav>
+        </div>
+        <div class="calendar">
+            <ul class="calendar-title clearfix">
+                <li>日</li>
+                <li>一</li>
+                <li>二</li>
+                <li>三</li>
+                <li>四</li>
+                <li>五</li>
+                <li>六</li>
+            </ul>
+            <ul class="calendar-body clearfix">
+            <%_.each(dataList, function(item) {%>
+                <%
+                var monthWrapper = item;
+                var month = item.date;
+                var curMonthDate = new Date(month[0], month[1]-1, 1); // 当月1号
+                var nextMonthDate = new Date(month[0], month[1], 1);    // 下月1号
+                var curMonthDays = (nextMonthDate - curMonthDate)/(1000*60*60*24);  // 当月总天数
+                var firstWeekDay = curMonthDate.getDay();  // 当前月1号是周几, 范围0-6
+                var lastWeekDay = nextMonthDate.getDay() - 1 < 0 ? 6 : nextMonthDate.getDay() - 1;  // 计算当月最后一天是周几，填补日历最后的空格
+                %>
+                <li class="calendar-item">
+                    <table class="calTable ct-<%=month[0]%>-<%=month[1]%>">
+                        <tbody>
+                            <tr>
+                            <%
+                                for (var i = 0; i < firstWeekDay; i++) {
+                            %>
+                                <td></td>
+                            <% } %>
+                            <%
+                                var w1 = firstWeekDay == 0 ? 7 : firstWeekDay;
+                                for (var currentDay = 1; currentDay <= curMonthDays; currentDay++) {
+                                    if (currentDay % 7 == (7 - w1) && currentDay != curMonthDays) {
+                            %>
+                                <td><%= geneTdCont(item, currentDay) %></td>
+                            </tr>
+                            <tr>
+                            <%
+                                } else if (currentDay != curMonthDays) {
+                            %>
+                                <td><%= geneTdCont(item, currentDay) %></td>
+                            <%
+                                } else if (currentDay == curMonthDays) {
+                            %>
+                                <td><%= geneTdCont(item, currentDay) %></td>
+                            <%  for (var t = 0; t < 6 - lastWeekDay; t++) { %>
+                                <td></td>
+                            <%  }}} %>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            <%});%>
+            </ul>
+        </div>
+    </script>
+
+    <script>
+        var holiday = [{
+            date: '2016-04-03',
+            holiday: '清明节'
+        },{
+            date: '2016-05-01',
+            holiday: '劳动节'
+        }];
+
+        var data = {
+            defaultShowDate: [2016,7,2],
+            data: [{
+                date: [2016,3], // 有数据的月份： [年，月]
+                content: [{ // 当前月份下的数据：日，价格，是否有套餐
+                    day: 5,
+                    price: 39999,
+                    hasMenu: true
+                }, {
+                    day: 6,
+                    price: 4399,
+                    hasMenu: false
+                }]
+            }, {
+                date: [2016,4],
+                content: [{
+                    day: 4,
+                    price: 39999,
+                    hasMenu: true
+                }, {
+                    day: 5,
+                    price: 43399,
+                    hasMenu: false
+                }]
+            }, {
+                date: [2016,7],
+                content: [{
+                    day: 1,
+                    price: 3999,
+                    hasMenu: true
+                }, {
+                    day: 2,
+                    price: 4399,
+                    hasMenu: false
+                }]
+            }]
+        };
+        $(".calendar-wrapper").html(_.template($("#calendarTemplate").html(), data));
+
+        function geneTdCont(item, day) {
+            var result = "";
+            var dayCont = _.findWhere(item.content, {day: day});
+            if (dayCont === undefined) {
+                result += "<div class='tdContWrapper disabled'>";
+                result += "<p class='day'>" + day + "</p>";
+            } else {
+                result += "<div class='tdContWrapper'>";
+                result += "<p class='day'>" + dayCont.day + "</p>";
+
+                if (dayCont.hasMenu) {
+                    result += "<div class='priceWrapper menu'>";
+                    result += "<p class='menu'>套餐</p>"
+                } else {
+                    result += "<div class='priceWrapper'>";
+                }
+                result += "<p class='price'>¥" + dayCont.price + "起</p>"
+            }
+            result += "</div></div>";
+            return result;
+        }
+    </script>
+
+    <script>
+        $(function(){
+            $(".tdContWrapper").not(".disabled").click(function(){
+                $(".tdContWrapper").removeClass("current");
+                $(this).addClass("current");
+            });
+
+            //  日历翻动事件
+            var execFlag = true;
+            $(".calendar-nav .nav-btn span").click(function(){
+                if (execFlag) {
+                    execFlag = false;
+                    if ($(this).hasClass("disabled")) {
+                        execFlag = true;
+                        return;
+                    } else {
+
+                        var $wrapper = $(this).parents(".calendar-wrapper");
+                        var stepVal = $wrapper.find(".calendar").width();
+                        var calNum = $wrapper.find(".calendar-item").length;
+                        var oldLeftVal = parseInt($wrapper.find(".calendar-body").css("margin-left"));
+                        var newLeftVal;
+
+                        if ($(this).hasClass("prev")) {
+                            newLeftVal = oldLeftVal + stepVal;
+                        } else if ($(this).hasClass("next")) {
+                            newLeftVal = oldLeftVal - stepVal;
+                        }
+
+                        if (newLeftVal >= 0) {
+                            $(".calendar-nav .nav-btn .prev").addClass("disabled");
+                        } else if (newLeftVal <= -stepVal * (calNum - 1)) {
+                            $(".calendar-nav .nav-btn .next").addClass("disabled");
+                        } else {
+                            $(".calendar-nav .nav-btn span").removeClass("disabled");
+                        }
+
+                        $wrapper.find(".calendar-body").css({
+                            "margin-left": newLeftVal + "px"
+                        });
+                    }
+                } else {
+                    return;
+                }
+            });
+
+            $(".calendar-wrapper .calendar-body").on("webkitTransitionEnd", function () {
+                execFlag = true;
+//                alert(execFlag);
+            });
+        });
+
+        function showCurCal() {
+
+        }
+    </script>
+</body>
+</html>

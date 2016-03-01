@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+$baseFontSize: 28/2*1px;
+$baseRemRate: 40;
+$colorEmphatic: #111111;
+$colorNormal: #565656;
+$colorSlight: #b0b0b0;
+$colorTheme: #3fc0ae;
+$colorInverse: #ffffff;
+$colorHighlight: #e46c14;
+
+body {
+  background-color: #f5f5f5;
+  font-size: $baseFontSize;
+}
+
+.calendar-wrapper {
+  background-color: #fff;
+
+  .calendar-header {
+    position: relative;
+    padding: 0.5rem 0;
+
+    nav.calendar-nav {
+      position: relative;
+
+      .price-tip {
+        position: absolute;
+        right: 0.5rem;
+      }
+
+      .tab-wrapper {
+        width: 220/$baseRemRate*1rem;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+
+        ul.tablist {
+          width: 2000%;
+          transition: all 0.25s;
+
+          li {
+            float: left;
+            font-size: $baseFontSize+2;
+            width: 220/$baseRemRate*1rem;
+            text-align: center;
+          }
+        }
+      }
+
+      .nav-btn {
+        span {
+          border-top: 2px solid #727171;
+          border-right: 2px solid #727171;
+          width: 12px;
+          height: 12px;
+          display: inline-block;
+          top: 2px;
+        }
+        span.disabled {
+          border-color: #cbcbcb;
+        }
+        & .prev {
+          position: absolute;
+          transform: rotate(-135deg);
+          left: 4.5rem;
+        }
+        & .next {
+          position: absolute;
+          transform: rotate(45deg);
+          right: 4.5rem;
+        }
+      }
+    }
+  }
+
+  .calendar {
+    margin: 0 auto;
+
+    .calendar-title {
+      border-bottom: 1px solid #e2e2e2;
+
+      li {
+        height: 84/$baseRemRate*1rem;
+        line-height: 84/$baseRemRate*1rem;
+        float: left;
+        width: 100/7*1%;
+        text-align: center;
+        color: $colorEmphatic;
+        font-size: $baseFontSize+2;
+
+        &:first-child,
+        &:last-child {
+          color: $colorTheme;
+        }
+      }
+    }
+
+    .calendar-body {
+      padding-top: 0.5rem;
+      width: 2000%;
+      margin-left: 0;
+      transition: all 0.25s;
+      transform: translate3d(0,0,0);
+
+      .calendar-item {
+        float: left;
+        width: 16rem;
+        padding: 0 0.16rem;
+      }
+    }
+
+    table.calTable {
+      width: 100%;
+
+      td {
+        text-align: center;
+        width: 100/7*1%;
+
+        div.tdContWrapper {
+          font-size: $baseFontSize;
+          height: 88/$baseRemRate*1rem;
+          padding-top: 20/$baseRemRate*1rem;
+          border-radius: 5px;
+
+          &.disabled {
+            color: $colorSlight;
+          }
+          &.current {
+            background-color: $colorTheme;
+            color: $colorInverse;
+
+            p {
+              color: $colorInverse !important;
+            }
+          }
+          p {
+            margin: 2px 0;
+
+            &.day {
+              font-family: Arial, sans-serif;
+            }
+          }
+          .priceWrapper {
+            font-size: $baseFontSize*0.65;
+
+            .price {
+              color: #767676;
+            }
+            &.menu p {
+              color: $colorHighlight;
+            }
+          }
+        }
+      }
+    }
+  }
+}

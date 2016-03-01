@@ -1,0 +1,97 @@
+body {
+  background-color: #f5f5f5;
+  font-size: 14px; }
+
+.calendar-wrapper {
+  background-color: #fff; }
+  .calendar-wrapper .calendar-header {
+    position: relative;
+    padding: 0.5rem 0; }
+    .calendar-wrapper .calendar-header nav.calendar-nav {
+      position: relative; }
+      .calendar-wrapper .calendar-header nav.calendar-nav .price-tip {
+        position: absolute;
+        right: 0.5rem; }
+      .calendar-wrapper .calendar-header nav.calendar-nav .tab-wrapper {
+        width: 5.5rem;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative; }
+        .calendar-wrapper .calendar-header nav.calendar-nav .tab-wrapper ul.tablist {
+          width: 2000%;
+          transition: all 0.25s; }
+          .calendar-wrapper .calendar-header nav.calendar-nav .tab-wrapper ul.tablist li {
+            float: left;
+            font-size: 16px;
+            width: 5.5rem;
+            text-align: center; }
+      .calendar-wrapper .calendar-header nav.calendar-nav .nav-btn span {
+        border-top: 2px solid #727171;
+        border-right: 2px solid #727171;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        top: 2px; }
+      .calendar-wrapper .calendar-header nav.calendar-nav .nav-btn span.disabled {
+        border-color: #cbcbcb; }
+      .calendar-wrapper .calendar-header nav.calendar-nav .nav-btn .prev {
+        position: absolute;
+        transform: rotate(-135deg);
+        left: 4.5rem; }
+      .calendar-wrapper .calendar-header nav.calendar-nav .nav-btn .next {
+        position: absolute;
+        transform: rotate(45deg);
+        right: 4.5rem; }
+  .calendar-wrapper .calendar {
+    margin: 0 auto; }
+    .calendar-wrapper .calendar .calendar-title {
+      border-bottom: 1px solid #e2e2e2; }
+      .calendar-wrapper .calendar .calendar-title li {
+        height: 2.1rem;
+        line-height: 2.1rem;
+        float: left;
+        width: 14.28571%;
+        text-align: center;
+        color: #111111;
+        font-size: 16px; }
+        .calendar-wrapper .calendar .calendar-title li:first-child, .calendar-wrapper .calendar .calendar-title li:last-child {
+          color: #3fc0ae; }
+    .calendar-wrapper .calendar .calendar-body {
+      padding-top: 0.5rem;
+      width: 2000%;
+      margin-left: 0;
+      transition: all 0.25s;
+      transform: translate3d(0, 0, 0); }
+      .calendar-wrapper .calendar .calendar-body .calendar-item {
+        float: left;
+        width: 16rem;
+        padding: 0 0.16rem; }
+    .calendar-wrapper .calendar table.calTable {
+      width: 100%; }
+      .calendar-wrapper .calendar table.calTable td {
+        text-align: center;
+        width: 14.28571%; }
+        .calendar-wrapper .calendar table.calTable td div.tdContWrapper {
+          font-size: 14px;
+          height: 2.2rem;
+          padding-top: 0.5rem;
+          border-radius: 5px; }
+          .calendar-wrapper .calendar table.calTable td div.tdContWrapper.disabled {
+            color: #b0b0b0; }
+          .calendar-wrapper .calendar table.calTable td div.tdContWrapper.current {
+            background-color: #3fc0ae;
+            color: #ffffff; }
+            .calendar-wrapper .calendar table.calTable td div.tdContWrapper.current p {
+              color: #ffffff !important; }
+          .calendar-wrapper .calendar table.calTable td div.tdContWrapper p {
+            margin: 2px 0; }
+            .calendar-wrapper .calendar table.calTable td div.tdContWrapper p.day {
+              font-family: Arial, sans-serif; }
+          .calendar-wrapper .calendar table.calTable td div.tdContWrapper .priceWrapper {
+            font-size: 9.1px; }
+            .calendar-wrapper .calendar table.calTable td div.tdContWrapper .priceWrapper .price {
+              color: #767676; }
+            .calendar-wrapper .calendar table.calTable td div.tdContWrapper .priceWrapper.menu p {
+              color: #e46c14; }
+
+/*# sourceMappingURL=book.css.map */
