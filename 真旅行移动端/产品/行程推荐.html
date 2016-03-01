@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/product.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/common.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>行程推荐</title>
+
+    <script type="text/javascript">
+        $(function(){
+
+            var root;
+            var _w;
+            var w;
+
+            screenchange();
+
+            window.addEventListener('orientationchange', function(event){
+                /*旋转至竖屏*/
+               if ( (window.orientation == 180 || window.orientation==0)&&(sessionStorage.s_fontsize==undefined)) {/*初始横屏加载切换至竖屏*/
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                    sessionStorage.s_fontsize = root.style.fontSize;
+                }
+
+                root.style.minHeight = window.innerHeight + "px";
+            });
+
+            function screenchange(){
+                root = document.getElementsByTagName("html")[0];
+
+                if(window.orientation==undefined){
+                    _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                    w = _w >= 640 ? 640 : _w;
+
+                    root.style.fontSize = (w / 320) * 20 + "px";
+                }else{
+                        if ( window.orientation == 180 || window.orientation==0 ) {  /*竖屏加载*/
+                            _w = window.innerWidth <= window.screen.width ? window.innerWidth : window.screen.width;
+                            w = _w >= 640 ? 640 : _w;
+
+                            root.style.fontSize = (w / 320) * 20 + "px";
+                            sessionStorage.s_fontsize = root.style.fontSize;
+                        }
+                        
+                        if( window.orientation == 90 || window.orientation == -90 ) {  /*横屏加载*/ 
+                            if(sessionStorage.s_fontsize==undefined){   /*初始横屏加载*/
+                                var w1 = window.innerHeight<= window.screen.height ? window.innerHeight : window.screen.height;
+                                var w2 = w1 >= 640 ? 640 : w1;
+
+                                root.style.fontSize = (w2 / 320) * 20 + "px";
+
+                            }else{
+                                root.style.fontSize = sessionStorage.s_fontsize;
+                            }
+                        }
+                }
+                
+                root.style.minHeight = window.innerHeight + "px";
+            }
+
+        });
+        
+        
+
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <!--<div class="headerBar">
+        <div class="header">
+            <a href="javascript:;" class="back">
+                <i class="back-arrow"></i>
+                <em class="back-border"></em>
+            </a>
+            <span class="title">[爆款2688]年轻人第一次治愈小清新之旅</span>
+				<span class="acut-menu">
+					<span class="menu-pop">
+						<a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+                            <img class="acut-img" src="../../mstatic/images/acut-img.png">
+                        </a>
+						<div class="menu-pop-container">
+                            <i class="arrow-up"></i>
+                            <ul>
+                                <li><a data-role="none" href="javascript:;">用户中心</a></li>
+                                <li><a data-role="none" href="javascript:;">退出账号</a></li>
+                            </ul>
+                        </div>
+					</span>
+	                <span class="menu-btn">
+	                	<span class="menu-img"></span>
+	                	<div class="menu-list-container">
+                            <i class="arrow-up"></i>
+                            <ul class="menu-list">
+                                <li>
+                                    <a data-role="none" href="javascript:;">产品列表</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的订单</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的钱包</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">私信</a>
+                                </li>
+                            </ul>
+                        </div>
+	                </span>
+	        </span>
+        </div>
+    </div>-->
+    <div class="headerBar">
+            <div class="header">
+				<span class="back">
+					<i class="back-arrow"></i>
+					<em class="back-border"></em>
+				</span>
+                <span class="title">行程推荐</span>
+            </div>
+    </div>
+    
+    <section class="main">
+        <div class="productBanner">
+            <img src="../../mstatic/images/recommendRouteBanner.jpg">
+        </div>
+        <section class="commonModule noBorderTop">
+            <h2 class="titleH2 routeRecommendTitle">目的地概览</h2>
+            <div class="routeRecommendContent">
+                <p>
+                    这里是阳光灿烂的西班牙，艺术和度假的完美结合。<br>
+                    巴塞罗那，巴黎之外另一场流动的盛宴。红酒、美食建筑,艺术珍藏享用不完，是自我宠溺的最佳目的地。
+                    不可思议的马德里，现代主义与古典遗产适合白天，把傍晚留给一次浪漫的散步。多彩的夜生活则用来滋养全世界挑剔的享乐主义者。<br>
+                    塞戈维亚，灿烂的遗产。走过古老小城的一个个转角给西班牙之旅画上完满的句号。
+                </p>
+            </div>
+        </section>
+        
+    </section>
+    
+</div>
+
+<script>
+    $(function(){
+
+        FastClick.attach(document.body);
+        
+        
+    });
+</script>
+</body>
+</html>

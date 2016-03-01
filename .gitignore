@@ -18,3 +18,5 @@ local/
 /.idea
 *.mno
 .Python
+
+*.css.map

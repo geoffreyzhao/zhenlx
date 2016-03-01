@@ -190,3 +190,15 @@ $varFontSizeVal:2;
 
 /*  jenny  End  */
 
+
+/* route recommend S */
+.routeRecommendTitle {
+  @extend .borderBottomE2e2e2;
+  padding-bottom:20rem / $fixedValue;
+}
+.routeRecommendContent {
+  @extend .color565656;
+
+}
+/* route recommend E */
+

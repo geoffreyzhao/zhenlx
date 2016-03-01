@@ -19,7 +19,8 @@ a:focus {
 .colorA1a1a1 {
   color: #a1a1a1; }
 
-.color565656, body {
+
+.color565656, body, .routeRecommendContent {
   color: #565656; }
 
 .color111, .commonModule .titleH2, .commonModule .commonTitleH2, .commonBottomStyle .commonBottomTitle {
@@ -31,7 +32,7 @@ a:focus {
 .borderTopE2e2e2, .commonModule, .commonBottomStyle .commonBottomTitle {
   border-top: 1px solid #e2e2e2; }
 
-.borderBottomE2e2e2, .commonModule, .commonModule .commonTitleH2 {
+.borderBottomE2e2e2, .commonModule, .commonModule .commonTitleH2, .routeRecommendTitle {
   border-bottom: 1px solid #e2e2e2; }
 
 .displayInlineBlock, .labelNames .commonStyle, .labelNames .lightBlueBg, .labelNames .purpleBg, .labelNames .orangeBg, .labelNames .deepBlueBg, .lightSpotList .commonIconStyle, .lightSpotList .planeIcon, .lightSpotList .hotelIcon, .lightSpotList .experienceIcon, .lightSpotList .serveIcon, .commonBottomStyle .journeyIcon, .commonBottomStyle .rightArrow {
@@ -132,5 +133,10 @@ a:focus {
     top: 0.75rem; }
 
 /*  jenny  End  */
+/* route recommend S */
+.routeRecommendTitle {
+  padding-bottom: 0.5rem; }
+
+/* route recommend E */
 
 /*# sourceMappingURL=product.css.map */
