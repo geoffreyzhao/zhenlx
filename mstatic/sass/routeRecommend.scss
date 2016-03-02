@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+body{
+  font-family: "microsoft yahei",Verdana,Arial,Helvetica,sans-serif!important;
+  @extend .fontSize;
+  @extend .color565656;
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+ul,li{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+a:focus {
+  outline: none;
+}
+
+$fixedValue: 40;
+$varFontSizeVal:2;
+.fontSize{
+  font-size: 24px / $varFontSizeVal;
+}
+.colorA1a1a1{
+  color: #a1a1a1;
+}
+.color565656{
+  color: #565656;
+}
+.color111{
+  color: #111;
+}
+.color11b9b7{
+  color: #11b9b7;
+}
+.borderTopE2e2e2{
+  border-top: 1px solid #e2e2e2;
+}
+.borderBottomE2e2e2{
+  border-bottom: 1px solid #e2e2e2;
+}
+@mixin border-radius($radius:6rem / $fixedValue){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+.displayInlineBlock{
+  display: inline-block;
+}
+
+
+/*  jenny  Start  */
+.commonModule{
+  @extend .borderTopE2e2e2;
+  @extend .borderBottomE2e2e2;
+  background-color: #fff;
+  padding: 15rem / $fixedValue 30rem / $fixedValue;
+  margin-bottom: 15rem / $fixedValue;
+  &.noBorderTop{
+    border-top: none;
+  }
+  &.noLRpadding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .titleH2{
+    font-size: 28px / $varFontSizeVal;
+    line-height: 38rem / $fixedValue;
+    @extend .color111;
+   }
+  .commonTitleH2{
+    font-size: 28px / $varFontSizeVal;
+    @extend .color111;
+    padding: 10rem/$fixedValue 0 20rem/$fixedValue;
+    @extend .borderBottomE2e2e2;
+    &.paddingL {
+      padding-left: 30rem / $fixedValue;
+    }
+  }
+}
+.productBanner{
+  img{
+    width: 100%;
+    height: 340rem / $fixedValue ;
+  }
+}
+.labelNames{
+  margin: 15rem/$fixedValue 0 20rem/$fixedValue;
+  .commonStyle{
+    font-size: 18px / $varFontSizeVal;
+    padding: 8rem / $fixedValue 10rem / $fixedValue;
+    min-width: 55rem / $fixedValue;
+    color: #fff;
+    @include border-radius;
+    @extend .displayInlineBlock;
+    text-align: center;
+  }
+  .lightBlueBg{
+    @extend .commonStyle;
+    background-color: #44bcda;
+  }
+  .purpleBg{
+    @extend .commonStyle;
+    background-color: #df7eb0;
+  }
+  .orangeBg{
+    @extend .commonStyle;
+    background-color: #ea9e26;
+  }
+  .deepBlueBg{
+    @extend .commonStyle;
+    background-color: #11b9b7;
+  }
+}
+.lightSpotList{
+  margin: 15rem/$fixedValue 0;
+  li{
+    position: relative;
+    padding-left: 45rem/$fixedValue;
+    margin-bottom: 15rem/$fixedValue;
+    p{
+      line-height: 30rem/$fixedValue;
+    }
+  }
+  .blueTitles{
+    font-size: 26px/$varFontSizeVal;
+    @extend .color11b9b7;
+    margin: 20rem/$fixedValue 0 15rem/$fixedValue;
+  }
+  .commonIconStyle{
+    @extend .displayInlineBlock;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat;
+    background-size: 320px 170px;
+    position: absolute;
+    left: 8rem/$fixedValue;
+    top: 0;
+  }
+  .planeIcon{
+    @extend .commonIconStyle;
+    width: 30rem/$fixedValue;
+    height: 30rem/$fixedValue;
+    background-position: 0 0;
+  }
+  .hotelIcon{
+    @extend .commonIconStyle;
+    width: 30rem/$fixedValue;
+    height: 30rem/$fixedValue;
+    background-position: -20px 0;
+  }
+  .experienceIcon{
+    @extend .commonIconStyle;
+    width: 30rem/$fixedValue;
+    height: 34rem/$fixedValue;
+    background-position: -40px 0;
+  }
+  .serveIcon{
+    @extend .commonIconStyle;
+    width: 30rem/$fixedValue;
+    height: 32rem/$fixedValue;
+    background-position: -60px 0;
+  }
+}
+.commonBottomStyle{
+  position: relative;
+  .journeyIcon{
+    @extend .displayInlineBlock;
+    width: 24rem/$fixedValue;
+    height: 27rem/$fixedValue;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat -80px 0;
+    background-size: 320px 170px;
+    position: absolute;
+    left: 0;
+    top: 25rem/$fixedValue;
+  }
+  .commonBottomTitle{
+    font-size: 26px/$varFontSizeVal;
+    @extend .color111;
+    padding: 25rem/$fixedValue 0 10rem/$fixedValue 65rem/$fixedValue;
+    margin: 0 -30rem/$fixedValue;
+    @extend .borderTopE2e2e2;
+  }
+  .rightArrow{
+    @extend .displayInlineBlock;
+    width: 12rem/$fixedValue;
+    height: 21rem/$fixedValue;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat -152px 0;
+    background-size: 320px 170px;
+    position: absolute;
+    right: 10rem/$fixedValue;
+    top: 30rem/$fixedValue;
+  }
+}
+
+
+
+/*  jenny  End  */
+
+
+/* route recommend S */
+.colorBlock11b9b7 {
+  background-color:#11b9b7;
+}
+.verticalMiddle {
+  vertical-align: middle;
+}
+%mr10 {
+  margin-right: 10rem/$fixedValue;
+}
+%mr5 {
+  margin-right: 5rem/$fixedValue;
+}
+%mr3 {
+  margin-right: 3rem/$fixedValue;
+}
+%adjustPaddingL {
+  padding-left:0;
+}
+%adjustPaddingT20 {
+  padding-top:20rem/$fixedValue;
+}
+.routeRecommendContent {
+  @extend .color565656;
+  line-height: 40rem/$fixedValue;
+  padding:20rem/$fixedValue 0 10rem/$fixedValue 0;
+  &.hasLRpadding {
+    padding-left: 30rem / $fixedValue;
+    padding-right: 30rem / $fixedValue;
+  }
+}
+.localTipsSpan {
+  @extend .displayInlineBlock;
+  margin:0 0 0 40rem/$fixedValue;
+  @extend .verticalMiddle;
+  & a {
+    @extend .displayInlineBlock;
+    margin-right:30rem/$fixedValue;
+  }
+}
+
+.commonTipsIcon {
+  @extend .displayInlineBlock;
+  background: url("../../mstatic/images/local_tips.png") no-repeat;
+  background-size: 50px 150px;
+  @extend .verticalMiddle;
+}
+.weather {
+  @extend .commonTipsIcon;
+  background-position: 0 0;
+  width:36px/$varFontSizeVal;
+  height: 33px/$varFontSizeVal;
+}
+.weather_press {
+  @extend .weather;
+  background-position: -43px/$varFontSizeVal 0;
+}
+.shopping {
+  @extend .commonTipsIcon;
+  background-position: 0 -35px/$varFontSizeVal;
+  width:25px/$varFontSizeVal;
+  height: 33px/$varFontSizeVal;
+}
+.shopping_press {
+  @extend .shopping;
+  background-position: -43px/$varFontSizeVal -35px/$varFontSizeVal;
+}
+.communication {
+  @extend .commonTipsIcon;
+  background-position: 0 -70px/$varFontSizeVal;
+  width:27px/$varFontSizeVal;
+  height: 34px/$varFontSizeVal;
+}
+.communication_press {
+  @extend .communication;
+  background-position: -43px/$varFontSizeVal -70px/$varFontSizeVal;
+}
+.custom {
+  @extend .commonTipsIcon;
+  background-position: 0 -106px/$varFontSizeVal;
+  width:30px/$varFontSizeVal;
+  height: 34px/$varFontSizeVal;
+}
+.custom_press {
+  @extend .custom;
+  background-position: -43px/$varFontSizeVal -106px/$varFontSizeVal;
+}
+.other {
+  @extend .commonTipsIcon;
+  background-position: 0 -142px/$varFontSizeVal;
+  width:25px/$varFontSizeVal;
+  height: 32px/$varFontSizeVal;
+}
+.other_press {
+  @extend .other;
+  background-position: -43px/$varFontSizeVal -142px/$varFontSizeVal;
+}
+.dayBlock {
+  @extend .colorBlock11b9b7;
+  @extend .fontSize;
+  color: #fff;
+  text-align: center;
+  @include border-radius;
+  @extend %mr10;
+  width:41px/$varFontSizeVal;
+  height: 41px/$varFontSizeVal;
+}
+.daysArrange {
+  & li {
+    padding-left:40rem/$fixedValue;
+    margin-bottom: 20rem/$fixedValue;
+    position: relative;
+  }
+  .liPcontent {
+    @extend .fontSize;
+    @extend .color565656;
+    line-height: 40rem/$fixedValue;
+  }
+  & img {
+    width: 100%;
+    height: 328rem/$fixedValue ;
+  }
+  .adjustPaddingL {
+    @extend %adjustPaddingL;
+  }
+}
+.commonRouteIcon {
+  @extend .displayInlineBlock;
+  background: url("../../mstatic/images/routeSmallIcon.png") no-repeat;
+  background-size: 20px 100px;
+  position: absolute;
+  top:8rem/$fixedValue;
+  left:0;
+}
+.routeHotelIcon {
+  @extend .commonRouteIcon;
+  background-position: 0 0;
+  width:28px/$varFontSizeVal;
+  height: 28px/$varFontSizeVal;
+}
+.routeDinnerIcon {
+  @extend .commonRouteIcon;
+  background-position: 0 -30px/$varFontSizeVal;
+  width:30px/$varFontSizeVal;
+  height: 32px/$varFontSizeVal;
+}
+.routeTimeLagIcon {
+  @extend .commonRouteIcon;
+  background-position: 0 -64px/$varFontSizeVal;
+  width:28px/$varFontSizeVal;
+  height: 22px/$varFontSizeVal;
+}
+.yellowSmallStar {
+  @extend .displayInlineBlock;
+  background: url("../../mstatic/images/yellowSmallstar.png") no-repeat 0 0;
+  background-size: 10px 10px;
+  width:20px/$varFontSizeVal;
+  height: 20px/$varFontSizeVal;
+  @extend .verticalMiddle;
+  @extend %mr3;
+}
+.flexBlock {
+  @extend .borderTopE2e2e2;
+  @extend .color111;
+  text-align: center;
+  font-size: 26px/$varFontSizeVal;
+  padding:20rem/$fixedValue 0;
+  a {
+    @extend .color111;
+  }
+  & .arrow_up_icon {
+    @extend .displayInlineBlock;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat;
+    background-size: 320px 170px;
+    background-position: -359px/$varFontSizeVal 0;
+    width:22px/$varFontSizeVal;
+    height: 12px/$varFontSizeVal;
+    @extend .verticalMiddle;
+    @extend %mr10;
+  }
+  & .arrow_down_icon {
+    @extend .arrow_up_icon;
+    background-position: -328px/$varFontSizeVal 0;
+  }
+  & .unfoldBtn {
+    text-align: center;
+    width:90%;
+    margin:0 auto;
+    height: 30rem/$fixedValue;
+  }
+}
+.unfoldContent li.adjustPaddingL {
+  display: none;
+}
+.unfoldContent .foldDiv {
+  display: none;
+}
+
+/* route recommend E */
+
