@@ -19,5 +19,5 @@ local/
 *.mno
 .Python
 
-sass/*.map
-sass/*.css
+*.map
+*.css
