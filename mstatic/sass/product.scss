@@ -13,6 +13,7 @@ ul,li{
   margin:0;
   padding:0;
   list-style:none;
+  @extend .color565656;
 }
 a:focus {
   outline: none;
@@ -51,7 +52,7 @@ $varFontSizeVal:2;
 }
 
 
-/*  jenny  Start  */
+/*  product  Start  */
 .commonModule{
   @extend .borderTopE2e2e2;
   @extend .borderBottomE2e2e2;
@@ -114,7 +115,7 @@ $varFontSizeVal:2;
     padding-left: 45rem/$fixedValue;
     margin-bottom: 15rem/$fixedValue;
     p{
-      line-height: 30rem/$fixedValue;
+      line-height: 34rem/$fixedValue;
     }
   }
   .blueTitles{
@@ -173,17 +174,7 @@ $varFontSizeVal:2;
     padding: 25rem/$fixedValue 0 10rem/$fixedValue 65rem/$fixedValue;
     margin: 0 -30rem/$fixedValue;
     @extend .borderTopE2e2e2;
-  }
-  .rightArrow{
-    @extend .displayInlineBlock;
-    width: 12rem/$fixedValue;
-    height: 21rem/$fixedValue;
-    background: url("../../mstatic/images/smallIcon.png") no-repeat -152px 0;
-    background-size: 320px 170px;
-    position: absolute;
-    right: 10rem/$fixedValue;
-    top: 30rem/$fixedValue;
-  }
+  }  
 }
 .haveIcon{  
   .commonIconStyle{
@@ -203,6 +194,24 @@ $varFontSizeVal:2;
     @extend .commonIconStyle;
     background-position: -20px 0;
   }
+  .costIcon{
+    width: 28rem/$fixedValue;
+    height: 28rem/$fixedValue;
+    @extend .commonIconStyle;
+    background-position: -96px 0;
+  }
+  .noticeIcon{
+    width: 23rem/$fixedValue;
+    height: 28rem/$fixedValue;
+    @extend .commonIconStyle;
+    background-position: -115px 0;
+  }
+  .evaluateIcon{
+    width: 29rem/$fixedValue;
+    height: 28rem/$fixedValue;
+    @extend .commonIconStyle;
+    background-position: -132px 0;
+  }
 }
 .airInfoContent{
   margin: 20rem/$fixedValue 25rem/$fixedValue 35rem/$fixedValue 45rem/$fixedValue;  
@@ -213,7 +222,7 @@ $varFontSizeVal:2;
     @include border-radius;
     width: 30rem/$fixedValue;
     height: 30rem/$fixedValue;
-    line-height: 30rem/$fixedValue;
+    line-height: 34rem/$fixedValue;
     text-align: center;
     color: #fff;
     position: absolute;
@@ -230,7 +239,7 @@ $varFontSizeVal:2;
   }
   .airPFonts{
     font-size: 20px/$varFontSizeVal;
-    line-height: 32px/$varFontSizeVal;
+    line-height: 34px/$varFontSizeVal;
     margin: 15rem/$fixedValue 0;
   }
 }
@@ -258,6 +267,9 @@ $varFontSizeVal:2;
       top: 0;
       right: -32rem/$fixedValue;
     }
+  }
+  .airFonts{
+    @extend .color565656;
   }
 }
 .timePlaceLeft{
@@ -296,10 +308,233 @@ $varFontSizeVal:2;
     border-top: 1px dashed #bbbbbb;
   }
   .totalTimeFonts{
+    @extend .colorA1a1a1;
     margin: 0 7rem/$fixedValue;
   }
 }
+.hotelTitleH3{
+  @extend .color565656;
+  margin: 20rem/$fixedValue 0 10rem/$fixedValue;
+}
+.starsContent{
+  margin: 10rem/$fixedValue 0 20rem/$fixedValue;
+  .checkInFonts{
+    font-size: 20px/$varFontSizeVal;
+    margin-left: 20rem/$fixedValue;
+    @extend .colorA1a1a1;
+  }
+}
+.yellow-star{
+  width: 10px;
+  height: 10px;
+  @extend .displayInlineBlock;
+  background: url("../../mstatic/images/smallIcon.png") no-repeat -208px 0;
+  -webkit-background-size: 320px 170px;
+  background-size: 320px 170px;
+  margin-right: 0.25rem;
+  vertical-align: middle;
+}
+.hotelProductImg{
+  img{
+    width: 100%;
+    height: 317rem/$fixedValue;
+  }
+}
+.hotelDetails{
+  margin: 15rem/$fixedValue 0;
+  p{
+    line-height: 34rem/$fixedValue;
+    @extend .color565656;
+  }
+}
+.hotelClassify{
+  @extend .borderTopE2e2e2;
+  margin: 15rem/$fixedValue 0;
+  padding-top: 20rem/$fixedValue;
+  li{
+    margin-bottom: 10rem/$fixedValue;
+    line-height: 34rem/$fixedValue;
+  }
+  .a1a1a1Fonts{
+    @extend .colorA1a1a1;
+    float: left;
+  }
+  .classifyContent{
+    float: left;
+    width: 80%;
+  }
+}
+.hotelNotice{
+  .commonBottomTitle{
+    padding: 25rem/$fixedValue 0 10rem/$fixedValue 30rem/$fixedValue;
+  }
+}
+.arrowCommonStyle{
+  @extend .displayInlineBlock;
+  background: url("../../mstatic/images/smallIcon.png") no-repeat;
+  background-size: 320px 170px;
+  position: absolute;
+}
+.rightArrow{
+  @extend .arrowCommonStyle;
+  width: 12rem/$fixedValue;
+  height: 21rem/$fixedValue;
+  background-position:  -152px 0;
+  right: 10rem/$fixedValue;
+  top: 30rem/$fixedValue;
+}
+.bottomArrow{
+  @extend .arrowCommonStyle;
+  width: 22rem/$fixedValue;
+  height: 12rem/$fixedValue;
+  background-position: -164px 0;
+  right: 10rem/$fixedValue;
+  top: 30rem/$fixedValue;
+}
+.upRightArrow{
+  @extend .arrowCommonStyle;
+  width: 22rem/$fixedValue;
+  height: 12rem/$fixedValue;
+  background-position: -180px 0;
+  right: 10rem/$fixedValue;
+  top: 30rem/$fixedValue;
+}
 
+.dottedHotelList{
+  margin: 15rem/$fixedValue 0;
+  padding-bottom: 15rem/$fixedValue;
+  @extend .borderBottomE2e2e2;
+  li{
+    line-height: 34rem/$fixedValue;
+    margin: 0 0 5rem/$fixedValue 25rem/$fixedValue;
+    list-style-type: disc;
+  }
+}
+.facilityList{
+  margin-bottom: 20rem/$fixedValue;
+  li{    
+    line-height: 34rem/$fixedValue;
+    margin-bottom: 8rem/$fixedValue ;
+  }
+  .facilityFonts{
+    @extend .colorA1a1a1;
+  }
+}
+.hotelBottomPackUp{
+  font-size: 26px/$varFontSizeVal;
+  @extend .color111;
+  @extend .borderTopE2e2e2;
+  text-align: center;
+  padding: 20rem/$fixedValue 0;
+  position: relative;
+  .upArrow{
+    @extend .arrowCommonStyle;
+    width: 22rem/$fixedValue;
+    height: 12rem/$fixedValue;
+    background-position: -180px 0;
+    left: 40%;
+    top: 28rem/$fixedValue;
+  }
+}
+.seeDefault{
+  display: none;
+}
+.costDetails{
+  margin: 20rem/$fixedValue 0;
+  .costTitle{
+    font-size: 26px/$varFontSizeVal;
+    @extend .color111;
+    margin-bottom: 15rem/$fixedValue;
+  }
+  .costList{
+    li{
+      margin: 5rem/$fixedValue 0 5rem/$fixedValue 30rem/$fixedValue;
+      line-height: 34rem/$fixedValue;
+      list-style-type: decimal;
+    }
+    &.maxHeight{
+      height: 145px;
+      overflow: hidden;
+    }
+  }
+}
+.packUpFold{
+  text-align: center;
+  padding: 30rem/$fixedValue 0 20rem/$fixedValue;
+  margin: 30rem/$fixedValue -30rem/$fixedValue 0;
+  @extend .borderTopE2e2e2;
+  strong{
+    font-size: 26px/$varFontSizeVal;
+    @extend .color111;
+  }
+  .commonIconStyle{
+    @extend .displayInlineBlock;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat;
+    background-size: 320px 170px;
+    vertical-align: middle;
+    margin-right: 10rem/$fixedValue;
+  }
+  .downArrow{
+    @extend .commonIconStyle;
+    width: 22rem/$fixedValue;
+    height: 12rem/$fixedValue;
+    background-position: -164px 0;
+  }
+  .upArrow{
+    @extend .commonIconStyle;
+    width: 22rem/$fixedValue;
+    height: 12rem/$fixedValue;
+    background-position: -180px 0;
+  }
+}
 
-/*  jenny  End  */
+.judge-cnt{
+  margin: 30rem/$fixedValue 0 30rem/$fixedValue 80rem/$fixedValue;
+  font-size: 22px/$varFontSizeVal;
+  line-height:1rem;
+  color:#616161;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.judge-top{
+  position: relative;
+  .pop-img{
+    width: 1.5rem;
+    height: 1.5rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    position: absolute;
+    left: -80rem/$fixedValue;
+    top: 0;
+  }
+  .pop-name{
+    @extend .color111
+  }
+  .judge-date{
+    color:#9f9f9f;
+  }
+}
+.evaluateDetail{
+  height: 270px;
+  overflow: hidden;
+}
+
+.present-list ol,
+.wuge-txt,
+.travel-one .ui-block-b p,
+.tips-content .tips-detail,
+.nav-content pre,
+.hotel-room .room-txt,
+.inst-til p,
+.navWrap-val,
+.navWrap-val p,
+.navWrap-val ol li span,
+.judge-txt {
+  font-family: Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei!important;
+  font-size: 0.65rem!important;
+  line-height: 1.1rem!important;
+}
+
+/*  product  End  */
 
