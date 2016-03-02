@@ -152,14 +152,12 @@ input[type="checkbox"] + span {
 	width:8rem;
 	margin:0 auto;
 	display: inline-block;
-	position: absolute;
-	left: 2.5rem;
-	right: 4rem;
 	color:#3fc0ae;
 	font-size:0.75rem;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	margin-left: -1.6rem;
 }
 .header .acut-menu {
     margin-right: 0.5rem;

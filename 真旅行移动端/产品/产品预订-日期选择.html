@@ -123,7 +123,7 @@
                 </div>
                 <div class="nav-btn">
                     <span class="prev <%= hasPrev ? '' : 'disabled' %>"></span>
-                    <span class="next <%= hasPrev ? '' : 'disabled' %>"></span>
+                    <span class="next <%= hasNext ? '' : 'disabled' %>"></span>
                 </div>
                 <span class="price-tip"><i>?</i>价格说明</span>
             </nav>
@@ -139,7 +139,7 @@
                 <li>六</li>
             </ul>
             <ul class="calendar-body clearfix">
-            <%_.each(dataList, function(item) {%>
+            <%_.each(dataList, function(item, index) {%>
                 <%
                 var monthWrapper = item;
                 var month = item.date;
@@ -149,7 +149,7 @@
                 var firstWeekDay = curMonthDate.getDay();  // 当前月1号是周几, 范围0-6
                 var lastWeekDay = nextMonthDate.getDay() - 1 < 0 ? 6 : nextMonthDate.getDay() - 1;  // 计算当月最后一天是周几，填补日历最后的空格
                 %>
-                <li class="calendar-item">
+                <li class="calendar-item <%= (index == 0) ? 'current' : '' %>">
                     <table class="calTable ct-<%=month[0]%>-<%=month[1]%>">
                         <tbody>
                             <tr>
@@ -196,7 +196,7 @@
         }];
 
         var data = {
-            defaultShowDate: [2016,7,2],
+            defaultShowDate: [2016,3,3],    // 默认选中哪一天 TODO: 功能待完善，现在默认显示数据的第一个月份
             data: [{
                 date: [2016,3], // 有数据的月份： [年，月]
                 content: [{ // 当前月份下的数据：日，价格，是否有套餐
@@ -265,53 +265,66 @@
             });
 
             //  日历翻动事件
-            var execFlag = true;
             $(".calendar-nav .nav-btn span").click(function(){
-                if (execFlag) {
-                    execFlag = false;
-                    if ($(this).hasClass("disabled")) {
-                        execFlag = true;
-                        return;
-                    } else {
 
-                        var $wrapper = $(this).parents(".calendar-wrapper");
-                        var stepVal = $wrapper.find(".calendar").width();
-                        var calNum = $wrapper.find(".calendar-item").length;
-                        var oldLeftVal = parseInt($wrapper.find(".calendar-body").css("margin-left"));
-                        var newLeftVal;
-
-                        if ($(this).hasClass("prev")) {
-                            newLeftVal = oldLeftVal + stepVal;
-                        } else if ($(this).hasClass("next")) {
-                            newLeftVal = oldLeftVal - stepVal;
-                        }
-
-                        if (newLeftVal >= 0) {
-                            $(".calendar-nav .nav-btn .prev").addClass("disabled");
-                        } else if (newLeftVal <= -stepVal * (calNum - 1)) {
-                            $(".calendar-nav .nav-btn .next").addClass("disabled");
-                        } else {
-                            $(".calendar-nav .nav-btn span").removeClass("disabled");
-                        }
-
-                        $wrapper.find(".calendar-body").css({
-                            "margin-left": newLeftVal + "px"
-                        });
-                    }
-                } else {
+                if ($(this).hasClass("disabled")) {
                     return;
+                } else {
+
+                    var $wrapper = $(this).parents(".calendar-wrapper");
+
+                    var $calList = $wrapper.find(".calendar-body .calendar-item");
+                    var $navList = $wrapper.find(".calendar-nav .tablist li");
+
+                    var calCurIndex = $wrapper.find(".calendar-body .calendar-item.current").index();
+                    var navCurIndex = $wrapper.find(".calendar-nav .tablist li.current").index();
+
+                    $calList.removeClass("current");
+                    $navList.removeClass("current");
+
+                    if ($(this).hasClass("prev")) {
+                        $calList.eq(calCurIndex-1).addClass("current");
+                        $navList.eq(navCurIndex-1).addClass("current");
+                    } else if ($(this).hasClass("next")) {
+                        $calList.eq(calCurIndex+1).addClass("current");
+                        $navList.eq(navCurIndex+1).addClass("current");
+                    }
+
+                    var $calCur = $wrapper.find(".calendar-body .calendar-item.current");
+
+                    var _calCurIndex = $wrapper.find(".calendar-body .calendar-item.current").index();
+                    var _navCurIndex = $wrapper.find(".calendar-nav .tablist li.current").index();
+
+                    if ($calCur.prev("li").length == 0) {
+                        $(".calendar-nav .nav-btn .prev").addClass("disabled");
+                    } else if ($calCur.next("li").length == 0) {
+                        $(".calendar-nav .nav-btn .next").addClass("disabled");
+                    } else {
+                        $(".calendar-nav .nav-btn span").removeClass("disabled");
+                    }
+
+                    $wrapper.find(".calendar-body").css({
+                        "margin-left": -_calCurIndex * 100 + "%"
+                    });
+
+                    $wrapper.find(".calendar-nav .tablist").css({
+                        "margin-left": -_navCurIndex * 100 + "%"
+                    });
                 }
             });
 
-            $(".calendar-wrapper .calendar-body").on("webkitTransitionEnd", function () {
-                execFlag = true;
-//                alert(execFlag);
+            //  TODO: 日历可以滑动切换
+            var hammer = new Hammer($(".calendar-body").get(0), {});
+            hammer.on('swiperight', function(ev){
+                console.log(1);
+                console.log(ev);
             });
+            hammer.on('swipeleft', function(ev){
+                console.log(2);
+                console.log(ev);
+            });
+            //  END
         });
-
-        function showCurCal() {
-
-        }
     </script>
 </body>
 </html>
