@@ -149,11 +149,11 @@
         <section class="commonModule">
             <h2 class="commonTitleH2">当地Tips
                 <span class="localTipsSpan">
-                    <a href="javascript:;" class="common-tips weather weather_press live"></a>
-                    <a href="javascript:;" class="common-tips shopping"></a>
-                    <a href="javascript:;" class="common-tips communication"></a>
-                    <a href="javascript:;" class="common-tips custom"></a>
-                    <a href="javascript:;" class="common-tips other"></a>
+                    <a href="javascript:;" class="live"><i class="weather"></i></a>
+                    <a href="javascript:;"><i class="shopping"></i></a>
+                    <a href="javascript:;"><i class="communication"></i></a>
+                    <a href="javascript:;"><i class="custom"></i></a>
+                    <a href="javascript:;"><i class="other"></i></a>
                 </span>
             </h2>
             <div class="routeRecommendContent">
@@ -216,7 +216,8 @@
                 </ul>
             </div>
             <div class="flexBlock noLRpadding">
-                <a href="" class="" data-rel="popup"><label class="arrow_up_icon"></label></a>收起
+                <p class="unfoldBtn flexBtn" data-rel="popup" style="display: none;"><label class="arrow_down_icon"></label><span>展开</span></p>
+                <p class="foldBtn flexBtn" data-rel="popup" ><label class="arrow_up_icon"></label><span>收起</span></p>
             </div>
         </section>
         <section class="commonModule noLRpadding unfoldContent"><!-- second day -->
@@ -259,11 +260,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="flexBlock noLRpadding unfoldDiv">
-                <p class="unfoldBtn" data-rel="popup"><label class="arrow_down_icon"></label><span>展开</span></p>
-            </div>
-            <div class="flexBlock noLRpadding foldDiv">
-                <p class="foldBtn" data-rel="popup"><label class="arrow_up_icon"></label><span>收起</span></p>
+            <div class="flexBlock noLRpadding">
+                <p class="unfoldBtn flexBtn" data-rel="popup" ><label class="arrow_down_icon"></label><span>展开</span></p>
+                <p class="foldBtn flexBtn" data-rel="popup" style="display: none;"><label class="arrow_up_icon"></label><span>收起</span></p>
             </div>
         </section>
         <section class="commonModule noLRpadding thirdDay unfoldContent"><!-- third day -->
@@ -306,64 +305,54 @@
                     </li>
                 </ul>
             </div>
-            <div class="flexBlock noLRpadding unfoldDiv">
-                <p class="unfoldBtn" data-rel="popup"><label class="arrow_down_icon"></label><span>展开</span></p>
-            </div>
-            <div class="flexBlock noLRpadding foldDiv">
-                <p class="foldBtn" data-rel="popup"><label class="arrow_up_icon"></label><span>收起</span></p>
+            <div class="flexBlock noLRpadding">
+                <p class="unfoldBtn flexBtn" data-rel="popup" ><label class="arrow_down_icon"></label><span>展开</span></p>
+                <p class="foldBtn flexBtn" data-rel="popup" style="display: none;"><label class="arrow_up_icon"></label><span>收起</span></p>
             </div>
         </section>
-        
     </section>
-    
 </div>
 
 <script>
     $(function(){
         FastClick.attach(document.body);
 
-
         //tips switchover
 
-
-        //unfold
-        $(".unfoldDiv").each(function(){
+        $(".localTipsSpan a").each(function(index){
             $(this).click(function(){
-                $(this).parents(".commonModule").toggleClass("unfoldContent");
-                if($(this).parents(".commonModule").hasClass("unfoldContent")){
-                    $(this).show();
-                    $(this).siblings(".foldDiv").hide();
-                }else{
-                    $(this).hide();
-                    $(this).siblings(".foldDiv").show();
-                }
-            });
-        });
-        //fold
-        $(".foldDiv").each(function(){
-            $(this).click(function(){
-                $(this).parents(".commonModule").toggleClass("unfoldContent");
-                if($(this).parents(".commonModule").hasClass("unfoldContent")){
-                    $(this).show();
-                    $(this).siblings(".foldDiv").hide();
-                }else{
-                    $(this).hide();
-                    $(this).siblings(".foldDiv").show();
-                }
+                $(".routeRecommendContent .tips-detail").hide();
+                $(".routeRecommendContent .tips-detail:eq(" + index + ")").show();
+                $(".localTipsSpan a").removeClass("live");
+                $(this).addClass("live");
             });
         });
 
+        $("body").delegate(".unfoldBtn", "click", function(){
+            if ($(this).parents(".commonModule").hasClass("unfoldContent")) {
+                $(this).hide();
+                $(this).siblings().show();
+                $(this).parents(".commonModule").toggleClass("unfoldContent");
+            } else {
+                $(this).show();
+                $(this).siblings().hide();
+                $(this).parents(".commonModule").toggleClass("unfoldContent");
+            }
+        });
+
+        $("body").delegate(".foldBtn", "click", function(){
+            if ($(this).parents(".commonModule").hasClass("unfoldContent")) {
+                $(this).show();
+                $(this).siblings().hide();
+                $(this).parents(".commonModule").toggleClass("unfoldContent");
+            } else {
+                $(this).hide();
+                $(this).siblings().show();
+                $(this).parents(".commonModule").toggleClass("unfoldContent");
+            }
+        });
 
 
-
-
-
-
-
-
-
-        
-        
     });
 </script>
 </body>

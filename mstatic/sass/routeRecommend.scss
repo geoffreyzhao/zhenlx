@@ -234,10 +234,11 @@ $varFontSizeVal:2;
   @extend .verticalMiddle;
   & a {
     @extend .displayInlineBlock;
-    margin-right:30rem/$fixedValue;
+    margin-right:20rem/$fixedValue;
+    width:40rem/$fixedValue;
+    height: 40rem/$fixedValue;
   }
 }
-
 .commonTipsIcon {
   @extend .displayInlineBlock;
   background: url("../../mstatic/images/local_tips.png") no-repeat;
@@ -249,50 +250,50 @@ $varFontSizeVal:2;
   background-position: 0 0;
   width:36px/$varFontSizeVal;
   height: 33px/$varFontSizeVal;
-}
-.weather_press {
-  @extend .weather;
-  background-position: -43px/$varFontSizeVal 0;
+  .live & {
+    @extend .weather;
+    background-position: -43px/$varFontSizeVal 0;
+  }
 }
 .shopping {
   @extend .commonTipsIcon;
   background-position: 0 -35px/$varFontSizeVal;
   width:25px/$varFontSizeVal;
   height: 33px/$varFontSizeVal;
-}
-.shopping_press {
-  @extend .shopping;
-  background-position: -43px/$varFontSizeVal -35px/$varFontSizeVal;
+  .live & {
+    @extend .shopping;
+    background-position: -43px/$varFontSizeVal -35px/$varFontSizeVal;
+  }
 }
 .communication {
   @extend .commonTipsIcon;
   background-position: 0 -70px/$varFontSizeVal;
   width:27px/$varFontSizeVal;
   height: 34px/$varFontSizeVal;
-}
-.communication_press {
-  @extend .communication;
-  background-position: -43px/$varFontSizeVal -70px/$varFontSizeVal;
+  .live & {
+    @extend .communication;
+    background-position: -43px/$varFontSizeVal -70px/$varFontSizeVal;
+  }
 }
 .custom {
   @extend .commonTipsIcon;
   background-position: 0 -106px/$varFontSizeVal;
   width:30px/$varFontSizeVal;
   height: 34px/$varFontSizeVal;
-}
-.custom_press {
-  @extend .custom;
-  background-position: -43px/$varFontSizeVal -106px/$varFontSizeVal;
+  .live & {
+    @extend .custom;
+    background-position: -43px/$varFontSizeVal -106px/$varFontSizeVal;
+  }
 }
 .other {
   @extend .commonTipsIcon;
   background-position: 0 -142px/$varFontSizeVal;
   width:25px/$varFontSizeVal;
   height: 32px/$varFontSizeVal;
-}
-.other_press {
-  @extend .other;
-  background-position: -43px/$varFontSizeVal -142px/$varFontSizeVal;
+  .live & {
+    @extend .other;
+    background-position: -43px/$varFontSizeVal -142px/$varFontSizeVal;
+  }
 }
 .dayBlock {
   @extend .colorBlock11b9b7;
@@ -363,7 +364,9 @@ $varFontSizeVal:2;
   @extend .color111;
   text-align: center;
   font-size: 26px/$varFontSizeVal;
-  padding:20rem/$fixedValue 0;
+
+  height: 65rem/$fixedValue;
+  line-height: 65rem/$fixedValue;
   a {
     @extend .color111;
   }
@@ -381,17 +384,8 @@ $varFontSizeVal:2;
     @extend .arrow_up_icon;
     background-position: -328px/$varFontSizeVal 0;
   }
-  & .unfoldBtn {
-    text-align: center;
-    width:90%;
-    margin:0 auto;
-    height: 30rem/$fixedValue;
-  }
 }
-.unfoldContent li.adjustPaddingL {
-  display: none;
-}
-.unfoldContent .foldDiv {
+.unfoldContent li.adjustPaddingL, .unfoldContent .foldDiv {
   display: none;
 }
 

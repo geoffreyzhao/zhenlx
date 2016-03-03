@@ -34,7 +34,7 @@ a:focus {
 .borderBottomE2e2e2, .commonModule, .commonModule .commonTitleH2 {
   border-bottom: 1px solid #e2e2e2; }
 
-.displayInlineBlock, .labelNames .commonStyle, .labelNames .lightBlueBg, .labelNames .purpleBg, .labelNames .orangeBg, .labelNames .deepBlueBg, .lightSpotList .commonIconStyle, .lightSpotList .planeIcon, .lightSpotList .hotelIcon, .lightSpotList .experienceIcon, .lightSpotList .serveIcon, .commonBottomStyle .journeyIcon, .commonBottomStyle .rightArrow, .localTipsSpan, .localTipsSpan a, .commonTipsIcon, .weather, .weather_press, .shopping, .shopping_press, .communication, .communication_press, .custom, .custom_press, .other, .other_press, .commonRouteIcon, .routeHotelIcon, .routeDinnerIcon, .routeTimeLagIcon, .yellowSmallStar, .flexBlock .arrow_up_icon, .flexBlock .arrow_down_icon {
+.displayInlineBlock, .labelNames .commonStyle, .labelNames .lightBlueBg, .labelNames .purpleBg, .labelNames .orangeBg, .labelNames .deepBlueBg, .lightSpotList .commonIconStyle, .lightSpotList .planeIcon, .lightSpotList .hotelIcon, .lightSpotList .experienceIcon, .lightSpotList .serveIcon, .commonBottomStyle .journeyIcon, .commonBottomStyle .rightArrow, .localTipsSpan, .localTipsSpan a, .commonTipsIcon, .weather, .live .weather, .shopping, .live .shopping, .communication, .live .communication, .custom, .live .custom, .other, .live .other, .commonRouteIcon, .routeHotelIcon, .routeDinnerIcon, .routeTimeLagIcon, .yellowSmallStar, .flexBlock .arrow_up_icon, .flexBlock .arrow_down_icon {
   display: inline-block; }
 
 /*  jenny  Start  */
@@ -141,7 +141,7 @@ a:focus {
 .colorBlock11b9b7, .dayBlock {
   background-color: #11b9b7; }
 
-.verticalMiddle, .localTipsSpan, .commonTipsIcon, .weather, .weather_press, .shopping, .shopping_press, .communication, .communication_press, .custom, .custom_press, .other, .other_press, .yellowSmallStar, .flexBlock .arrow_up_icon, .flexBlock .arrow_down_icon {
+.verticalMiddle, .localTipsSpan, .commonTipsIcon, .weather, .live .weather, .shopping, .live .shopping, .communication, .live .communication, .custom, .live .custom, .other, .live .other, .yellowSmallStar, .flexBlock .arrow_up_icon, .flexBlock .arrow_down_icon {
   vertical-align: middle; }
 
 .dayBlock, .flexBlock .arrow_up_icon, .flexBlock .arrow_down_icon {
@@ -163,51 +163,48 @@ a:focus {
 .localTipsSpan {
   margin: 0 0 0 1rem; }
   .localTipsSpan a {
-    margin-right: 0.75rem; }
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem; }
 
-.commonTipsIcon, .weather, .weather_press, .shopping, .shopping_press, .communication, .communication_press, .custom, .custom_press, .other, .other_press {
+.commonTipsIcon, .weather, .live .weather, .shopping, .live .shopping, .communication, .live .communication, .custom, .live .custom, .other, .live .other {
   background: url("../../mstatic/images/local_tips.png") no-repeat;
   background-size: 50px 150px; }
 
-.weather, .weather_press {
+.weather, .live .weather {
   background-position: 0 0;
   width: 18px;
   height: 16.5px; }
+  .live .weather {
+    background-position: -21.5px 0; }
 
-.weather_press {
-  background-position: -21.5px 0; }
-
-.shopping, .shopping_press {
+.shopping, .live .shopping {
   background-position: 0 -17.5px;
   width: 12.5px;
   height: 16.5px; }
+  .live .shopping {
+    background-position: -21.5px -17.5px; }
 
-.shopping_press {
-  background-position: -21.5px -17.5px; }
-
-.communication, .communication_press {
+.communication, .live .communication {
   background-position: 0 -35px;
   width: 13.5px;
   height: 17px; }
+  .live .communication {
+    background-position: -21.5px -35px; }
 
-.communication_press {
-  background-position: -21.5px -35px; }
-
-.custom, .custom_press {
+.custom, .live .custom {
   background-position: 0 -53px;
   width: 15px;
   height: 17px; }
+  .live .custom {
+    background-position: -21.5px -53px; }
 
-.custom_press {
-  background-position: -21.5px -53px; }
-
-.other, .other_press {
+.other, .live .other {
   background-position: 0 -71px;
   width: 12.5px;
   height: 16px; }
-
-.other_press {
-  background-position: -21.5px -71px; }
+  .live .other {
+    background-position: -21.5px -71px; }
 
 .dayBlock {
   color: #fff;
@@ -258,7 +255,8 @@ a:focus {
 .flexBlock {
   text-align: center;
   font-size: 13px;
-  padding: 0.5rem 0; }
+  height: 1.625rem;
+  line-height: 1.625rem; }
   .flexBlock .arrow_up_icon, .flexBlock .arrow_down_icon {
     background: url("../../mstatic/images/smallIcon.png") no-repeat;
     background-size: 320px 170px;
@@ -267,16 +265,8 @@ a:focus {
     height: 6px; }
   .flexBlock .arrow_down_icon {
     background-position: -164px 0; }
-  .flexBlock .unfoldBtn {
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    height: 0.75rem; }
 
-.unfoldContent li.adjustPaddingL {
-  display: none; }
-
-.unfoldContent .foldDiv {
+.unfoldContent li.adjustPaddingL, .unfoldContent .foldDiv {
   display: none; }
 
 /* route recommend E */
