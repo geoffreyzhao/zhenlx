@@ -87,7 +87,7 @@
                 <i class="back-arrow"></i>
                 <em class="back-border"></em>
             </a>
-            <span class="title">[爆款2688]年轻人第一次治愈小清新之旅</span>
+            <span class="title">产品详情</span>
 				<span class="acut-menu">
 					<span class="menu-pop">
 						<a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
@@ -457,10 +457,19 @@
             </div>
             <div class="packUpFold evaluateFold">
                 <i class="downArrow"></i>
-                <strong>查看更多</strong>
+                <strong>查看更多评论</strong>
             </div>
         </section>
-    
+
+        <div class="bottomFixed clearfix">
+            <div class="leftPrice">
+                <div class="priceFonts">价格 <strong>¥3999</strong></div>
+                <div class="lineTrough">市场价 ¥2999</div>
+            </div>
+            <a class="rightBtn" href="javascript:void(0);">下一步</a>
+        </div>
+
+
     </section>
     
 </div>
@@ -470,20 +479,22 @@
 
         FastClick.attach(document.body);
         
-        $("body").delegate(".seeHotelNotice", "click", function(){
-            if($(this).hasClass("bottomArrow") && $(this).parents(".hotelNotice").siblings(".seeDefault").hide()){
-                $(this).removeClass("bottomArrow");
-                $(this).addClass("upRightArrow");
-                $(this).parents(".hotelNotice").siblings(".seeDefault").show(300)
-            }else if($(this).hasClass("upRightArrow") && $(this).parents(".hotelNotice").siblings(".seeDefault").show()){
-                $(this).removeClass("upRightArrow");
-                $(this).addClass("bottomArrow");
-                $(this).parents(".hotelNotice").siblings(".seeDefault").hide(300)
+        $("body").delegate(".hotelNotice", "click", function(){
+            if($(this).find("i").hasClass("bottomArrow")){
+                $(this).find("i").removeClass("bottomArrow");
+                $(this).find("i").addClass("upRightArrow");
+                $(this).siblings(".seeDefault").show(300)
+            }else if($(this).find("i").hasClass("upRightArrow")){
+                $(this).find("i").removeClass("upRightArrow");
+                $(this).find("i").addClass("bottomArrow");
+                $(this).siblings(".seeDefault").hide(300)
             }
         });
 
         $("body").delegate(".hotelBottomPackUp", "click", function(){
-            $(this).parents(".seeDefault").hide(200);
+            $(this).parents(".seeDefault").hide(300);
+            $(this).parents(".seeDefault").siblings(".hotelNotice").find("i").removeClass("upRightArrow");
+            $(this).parents(".seeDefault").siblings(".hotelNotice").find("i").addClass("bottomArrow");
         });
         
         //预订须知
@@ -520,7 +531,7 @@
             } else if ($(this).find("i").hasClass("upArrow")) {
                 $(this).find("i").removeClass("upArrow");
                 $(this).find("i").addClass("downArrow");
-                $(this).find("strong").html("查看更多");
+                $(this).find("strong").html("查看更多评论");
                 $(this).siblings(".evaluateDetail").css({
                     height: "270px",
                     overflow: "hidden"

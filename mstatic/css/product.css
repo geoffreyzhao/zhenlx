@@ -16,7 +16,7 @@ a:focus {
 .fontSize, body {
   font-size: 12px; }
 
-.colorA1a1a1, .totalTimeContent .totalTimeFonts, .starsContent .checkInFonts, .hotelClassify .a1a1a1Fonts, .facilityList .facilityFonts {
+.colorA1a1a1, .totalTimeContent .totalTimeFonts, .starsContent .checkInFonts, .hotelClassify .a1a1a1Fonts, .facilityList .facilityFonts, .bottomFixed .leftPrice .lineTrough {
   color: #a1a1a1; }
 
 .color565656, body, ul, li, .timePlaceContent .airFonts, .hotelTitleH3, .hotelDetails p {
@@ -28,7 +28,7 @@ a:focus {
 .color11b9b7, .lightSpotList .blueTitles, .timePlaceContent .placeBlueFonts {
   color: #11b9b7; }
 
-.borderTopE2e2e2, .commonModule, .commonBottomStyle .commonBottomTitle, .hotelClassify, .hotelBottomPackUp, .packUpFold {
+.borderTopE2e2e2, .commonModule, .commonBottomStyle .commonBottomTitle, .hotelClassify, .hotelBottomPackUp, .packUpFold, .bottomFixed {
   border-top: 1px solid #e2e2e2; }
 
 .borderBottomE2e2e2, .commonModule, .commonModule .commonTitleH2, .dottedHotelList {
@@ -38,6 +38,9 @@ a:focus {
   display: inline-block; }
 
 /*  product  Start  */
+.main {
+  margin-bottom: 2.375rem; }
+
 .commonModule {
   background-color: #fff;
   padding: 0.375rem 0.75rem;
@@ -183,11 +186,12 @@ a:focus {
     margin: 0.25rem 0;
     position: relative; }
     .timePlaceContent .timeFonts .addDayName {
-      font-size: 7px;
+      font-size: 9px;
+      -webkit-transform: scale(0.9);
       color: #ff9416;
       position: absolute;
-      top: 0;
-      right: -0.8rem; }
+      top: -0.075rem;
+      right: -1.125rem; }
 
 .timePlaceLeft {
   float: left;
@@ -377,6 +381,38 @@ a:focus {
   height: 270px;
   overflow: hidden; }
 
+.bottomFixed {
+  font-size: 13px;
+  height: 2rem;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; }
+  .bottomFixed .bottomCommonFixed, .bottomFixed .leftPrice, .bottomFixed .rightBtn {
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center; }
+  .bottomFixed .leftPrice strong {
+    font-weight: bold;
+    color: #e46c14; }
+  .bottomFixed .leftPrice .priceFonts {
+    margin: 0.3rem 0 0.2rem; }
+  .bottomFixed .leftPrice .lineTrough {
+    font-size: 11px;
+    text-decoration: line-through; }
+  .bottomFixed .rightBtn {
+    line-height: 2rem;
+    background-color: #3fc0ae;
+    color: #fff; }
+    .bottomFixed .rightBtn:focus {
+      color: #fff; }
+
+.ui-mobile a:active, .ui-mobile a:visited, .ui-mobile a:hover {
+  color: #fff; }
+
 .present-list ol,
 .wuge-txt,
 .travel-one .ui-block-b p,
@@ -388,8 +424,8 @@ a:focus {
 .navWrap-val p,
 .navWrap-val ol li span,
 .judge-txt {
-  font-family: Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei !important;
-  font-size: 0.65rem !important;
+  font-family: Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei !important;
+  font-size: 12px !important;
   line-height: 1.1rem !important; }
 
 /*  product  End  */

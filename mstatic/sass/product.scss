@@ -53,6 +53,9 @@ $varFontSizeVal:2;
 
 
 /*  product  Start  */
+.main{
+  margin-bottom: 95rem/$fixedValue;
+}
 .commonModule{
   @extend .borderTopE2e2e2;
   @extend .borderBottomE2e2e2;
@@ -261,11 +264,12 @@ $varFontSizeVal:2;
     margin: 10rem/$fixedValue 0;
     position: relative;
     .addDayName{
-      font-size: 14px/$varFontSizeVal;
+      font-size: 18px/$varFontSizeVal;
+      -webkit-transform: scale(0.9);
       color: #ff9416;
       position: absolute;
-      top: 0;
-      right: -32rem/$fixedValue;
+      top: -3rem/$fixedValue;
+      right: -45rem/$fixedValue;
     }
   }
   .airFonts{
@@ -519,6 +523,51 @@ $varFontSizeVal:2;
   height: 270px;
   overflow: hidden;
 }
+.bottomFixed{
+  font-size: 26px/$varFontSizeVal;
+  height: 80rem/$fixedValue;
+  @extend .borderTopE2e2e2;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:#fff;
+  .bottomCommonFixed{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+  }
+  .leftPrice{
+    @extend .bottomCommonFixed;
+    strong{
+      font-weight: bold;
+      color: #e46c14;
+    }
+    .priceFonts{
+      margin: 12rem/$fixedValue 0 8rem/$fixedValue;
+    }
+    .lineTrough{
+      font-size: 22px/$varFontSizeVal;
+      text-decoration: line-through;
+      @extend .colorA1a1a1;
+    }
+  }
+  .rightBtn{
+    line-height: 80rem/$fixedValue;
+    @extend .bottomCommonFixed;
+    background-color: #3fc0ae;
+    color: #fff;
+    &:focus{
+      color: #fff;
+    }
+  }
+}
+.ui-mobile a:active, .ui-mobile a:visited, .ui-mobile a:hover{
+  color: #fff;
+}
+
 
 .present-list ol,
 .wuge-txt,
@@ -531,9 +580,9 @@ $varFontSizeVal:2;
 .navWrap-val p,
 .navWrap-val ol li span,
 .judge-txt {
-  font-family: Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei!important;
-  font-size: 0.65rem!important;
-  line-height: 1.1rem!important;
+  font-family: Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei !important;
+  font-size: 12px !important;
+  line-height: 1.1rem !important;
 }
 
 /*  product  End  */
