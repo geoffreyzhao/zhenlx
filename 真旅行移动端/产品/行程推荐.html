@@ -328,30 +328,18 @@
             });
         });
 
-        $("body").delegate(".unfoldBtn", "click", function(){
-            if ($(this).parents(".commonModule").hasClass("unfoldContent")) {
-                $(this).hide();
-                $(this).siblings().show();
-                $(this).parents(".commonModule").toggleClass("unfoldContent");
-            } else {
-                $(this).show();
-                $(this).siblings().hide();
-                $(this).parents(".commonModule").toggleClass("unfoldContent");
-            }
+        $(".flexBlock").each(function () {
+           $(this).click(function(){
+               $(this).parent(".commonModule").toggleClass("unfoldContent");
+               if($(this).parent(".commonModule").hasClass("unfoldContent")){
+                   $(this).children(".unfoldBtn").show();
+                   $(this).children(".foldBtn").hide();
+               }else{
+                   $(this).children(".unfoldBtn").hide();
+                   $(this).children(".foldBtn").show();
+               }
+           })
         });
-
-        $("body").delegate(".foldBtn", "click", function(){
-            if ($(this).parents(".commonModule").hasClass("unfoldContent")) {
-                $(this).show();
-                $(this).siblings().hide();
-                $(this).parents(".commonModule").toggleClass("unfoldContent");
-            } else {
-                $(this).hide();
-                $(this).siblings().show();
-                $(this).parents(".commonModule").toggleClass("unfoldContent");
-            }
-        });
-
 
     });
 </script>
