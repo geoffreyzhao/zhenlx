@@ -248,8 +248,8 @@ $varFontSizeVal:2;
 .weather {
   @extend .commonTipsIcon;
   background-position: 0 0;
-  width:36px/$varFontSizeVal;
-  height: 33px/$varFontSizeVal;
+  width:round(35px/$varFontSizeVal);
+  height: round(33px/$varFontSizeVal);
   .live & {
     @extend .weather;
     background-position: -43px/$varFontSizeVal 0;
@@ -258,8 +258,8 @@ $varFontSizeVal:2;
 .shopping {
   @extend .commonTipsIcon;
   background-position: 0 -35px/$varFontSizeVal;
-  width:25px/$varFontSizeVal;
-  height: 33px/$varFontSizeVal;
+  width:round(25px/$varFontSizeVal);
+  height: round(33px/$varFontSizeVal);
   .live & {
     @extend .shopping;
     background-position: -43px/$varFontSizeVal -35px/$varFontSizeVal;
@@ -268,7 +268,7 @@ $varFontSizeVal:2;
 .communication {
   @extend .commonTipsIcon;
   background-position: 0 -70px/$varFontSizeVal;
-  width:27px/$varFontSizeVal;
+  width:round(27px/$varFontSizeVal);
   height: 34px/$varFontSizeVal;
   .live & {
     @extend .communication;
@@ -279,7 +279,7 @@ $varFontSizeVal:2;
   @extend .commonTipsIcon;
   background-position: 0 -106px/$varFontSizeVal;
   width:30px/$varFontSizeVal;
-  height: 34px/$varFontSizeVal;
+  height: round(34px/$varFontSizeVal);
   .live & {
     @extend .custom;
     background-position: -44px/$varFontSizeVal -106px/$varFontSizeVal;
@@ -288,7 +288,7 @@ $varFontSizeVal:2;
 .other {
   @extend .commonTipsIcon;
   background-position: 0 -142px/$varFontSizeVal;
-  width:25px/$varFontSizeVal;
+  width:round(25px/$varFontSizeVal);
   height: 32px/$varFontSizeVal;
   .live & {
     @extend .other;

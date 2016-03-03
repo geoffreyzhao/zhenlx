@@ -174,20 +174,20 @@ a:focus {
 .weather, .live .weather {
   background-position: 0 0;
   width: 18px;
-  height: 16.5px; }
+  height: 17px; }
   .live .weather {
     background-position: -21.5px 0; }
 
 .shopping, .live .shopping {
   background-position: 0 -17.5px;
-  width: 12.5px;
-  height: 16.5px; }
+  width: 13px;
+  height: 17px; }
   .live .shopping {
     background-position: -21.5px -17.5px; }
 
 .communication, .live .communication {
   background-position: 0 -35px;
-  width: 13.5px;
+  width: 14px;
   height: 17px; }
   .live .communication {
     background-position: -21.5px -35px; }
@@ -201,7 +201,7 @@ a:focus {
 
 .other, .live .other {
   background-position: 0 -71px;
-  width: 12.5px;
+  width: 13px;
   height: 16px; }
   .live .other {
     background-position: -21.5px -71px; }
