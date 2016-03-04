@@ -49,7 +49,7 @@
 .header .title {
     display: inline-block;
     position: absolute;
-    left: 2rem;
+    left: 3.5rem;
     right: 2rem;
     color:#3fc0ae;
     font-size:0.75rem;
@@ -657,7 +657,7 @@ input[type="radio"]:checked + .pay-check{
     /*border-bottom: 1px #dcdcdc solid;*/
 }
 .order-hotel-bedTil{
-    width:35%;
+    width:30%;
     font-size: 0.7rem;
     line-height:1rem;
     padding:0.6rem 0;
@@ -687,7 +687,7 @@ input[type="radio"]:checked + .pay-check{
     color:#333;
     padding:0.6rem 0.75rem;
     border-top: 1px #dcdcdc solid;
-    border-bottom: 1px #dcdcdc solid;
+    /*border-bottom: 1px #dcdcdc solid;*/
     margin-top:0.45rem;
 }
 .order-traveler-right{
@@ -1175,7 +1175,7 @@ padding-right:1rem;
     background-color: #fff;
     padding: 0.375rem 0.75rem;
     margin-bottom: 0.375rem;
-    font-size:12px;
+    font-size:0.65rem;
 }
 .borderBottomE2e2e2, .commonModule, .commonModule .commonTitleH2 {
     border-bottom: 1px solid #e2e2e2;
@@ -1184,7 +1184,7 @@ padding-right:1rem;
     border-top: 1px solid #e2e2e2;
 }
 .commonModule .commonTitleH2 {
-    font-size: 14px;
+    font-size:0.7rem;
     padding: 0.25rem 0 0.5rem;
 }
 .color111, .commonModule .titleH2, .commonModule .commonTitleH2, .commonBottomStyle .commonBottomTitle, .dayNumber .days, .timePlaceContent .timeFonts {
@@ -1210,7 +1210,7 @@ padding-right:1rem;
     display: inline-block;
 }
 .airInfoContent .commonLabelStyle, .airInfoContent .blueBg, .airInfoContent .orangeBg {
-    font-size: 9px;
+    font-size:0.45rem;
     -webkit-border-radius: 0.15rem;
     border-radius: 0.15rem;
     width: 0.75rem;
@@ -1223,7 +1223,7 @@ padding-right:1rem;
     top: 0;
 }
 .order-lab03,.order-lab04{
-    font-size: 9px;
+    font-size:0.45rem;
     -webkit-border-radius: 0.15rem;
     border-radius: 0.15rem;
     width: 0.75rem;
@@ -1240,11 +1240,11 @@ padding-right:1rem;
     margin-bottom: 0.375rem;
 }
 .dayNumber .days {
-    font-size: 13px;
+    font-size:0.7rem;
 }
 .airInfoContent .airPFonts {
-    font-size: 10px;
-    line-height: 16px;
+    font-size: 0.65rem;
+    line-height:0.8rem;
     margin: 0.375rem 0;
 }
 .timePlaceContent {
@@ -1258,7 +1258,7 @@ padding-right:1rem;
     color: #11b9b7;
 }
 .timePlaceContent .timeFonts {
-    font-size: 17px;
+    font-size: 0.85rem;
     margin: 0.25rem 0;
     position: relative;
 }
@@ -1286,6 +1286,8 @@ padding-right:1rem;
 }
 .totalTimeContent .totalTimeFonts {
     margin: 0 0.175rem;
+    color:#a1a1a1;
+    font-size:0.6rem;
 }
 .totalTimeContent .dottedIcon.rightDotted {
     margin-left: -0.25rem;
@@ -1299,11 +1301,12 @@ padding-right:1rem;
     background-color: #ff9416;
 }
 .timePlaceContent .timeFonts .addDayName {
-    font-size: 1px;
+    font-size:0.4rem;
     color: #ff9416;
     position: absolute;
-    top: 0;
-    right: -0.8rem;
+    top: 0rem;
+    right: -1.2rem;
+   /* transform: scale(0.8);*/
 }
 .order-row .hotelIcon{
     background-position:-20px 0;
@@ -1332,5 +1335,11 @@ padding-right:1rem;
 }
 .marginb1rem{
     margin-bottom:1rem;
+}
+.airFonts{
+    color:#565656;
+}
+.bordertop{
+    border-top: 1px #dcdcdc solid;
 }
 /** end **/

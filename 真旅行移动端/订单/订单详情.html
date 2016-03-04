@@ -69,7 +69,7 @@
 	            </span>
         </div>
     </div>
-    <div class="order-prg">
+    <!--<div class="order-prg">
         <div class="prg-bar">
             <div class="prg-bar-left">
                 <span class="prgline01"></span><span class="prg-current icon-disc"></span><span class="prgline01"></span>
@@ -126,7 +126,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <div class="order-sum">
         <div class="order-til">
             <span class="order-num">订单号:0225151515566</span><span class="order-date">2015-05-20</span>
@@ -135,30 +135,58 @@
             <span class="order-name">广州至首尔4晚5天深度游</span>
             <div class="right-price">
                 <span class="order-price"><span class="rmb">￥</span>10367</span>
-                <span class="order-fill-price"><span class="rmb">待补款: ￥</span>10367</span>
+                <!--<span class="order-fill-price"><span class="rmb">待补款: ￥</span>10367</span>-->
             </div>
         </div>
-        <div class="order-row clearfix">
+        <div class="order-row  nopaddingt clearfix">
             <span class="order-start">2015年07月24日 出发</span><a class="order-pay" href="javascript:void(0);">去支付</a>
             <!--<a class="order-judge" href="javascript:void(0);">去评价</a>-->
+        </div>
+        <div class="order-state">
+            <div class="state-title">订单状态</div>
+            <div class="state-detail">
+                <ul>
+                    <li class="state-list">
+                        <span class="list-name"><i class="done-state"></i>预定订单</span>
+                        <span class="list-time">2016-05-15 12:35</span>
+                    </li>
+                    <li class="state-list">
+                        <span class="list-name"><i class="current-state"></i>确认订单</span>
+                        <span class="list-time">2016-05-15 12:35</span>
+                    </li>
+                    <li class="state-list">
+                        <span class="list-name"><i class="undo-state"></i>支付订单</span>
+                        <span class="list-time"></span>
+                    </li>
+                    <li class="state-list">
+                        <span class="list-name"><i class="undo-state"></i>出行通知</span>
+                    </li>
+                </ul>
+            </div>
+            <a class="detailBtn" href="javascript:void(0);" data-role="none">详情</a>
         </div>
     </div>
     <div class="divide-space"></div>
     <div class="order-pop">
-        <div class="black_overlay"></div>
-        <div class="row-til clearfix">联系人信息<div class="row-edt-pop">出行15天内不可修改<span class="edt-icon"></span></div></div>
-        <div class="row-content">
-            <div><span class="row-txt">姓名：</span><span class="row-val">蓝桥</span></div>
-            <div><span class="row-txt">电话：</span><span class="row-val">18612345678</span></div>
-            <div><span class="row-txt">邮箱：</span><span class="row-val">lanqiao@gmail.com</span></div>
-            <div><span class="row-txt">地址：</span><span class="row-val">上海市黄浦区东方明珠特1号</span></div>
+       <!-- <div class="black_overlay"></div>-->
+        <div class="row-til clearfix"><i class="contactIcon"></i>联系人信息<div class="row-edt-pop">出行15天内不可修改<span class="edt-icon"></span></div></div>
+        <div class="row-content contactInfo">
+            <div><span class="row-txt">旅客姓名：</span><span class="row-val">蓝桥</span></div>
+            <div><span class="row-txt">手机号码：</span><span class="row-val">18612345678</span></div>
+            <div><span class="row-txt">邮箱地址：</span><span class="row-val">lanqiao@gmail.com</span></div>
+            <div><span class="row-txt">详细地址：</span><span class="row-val">上海市黄浦区东方明珠特1号</span></div>
         </div>
         <div class="order-pop-edt">
-            <div class="row-edt-til clearfix"><span>联系人信息</span><div class="pop-edt-btn"><span class="edt-cancel">取消</span><span class="edt-save">保存</span></div></div>
+            <div class="row-edt-til clearfix"><div class="pop-edt-btn"><span class="edt-cancel">取消</span><span class="edt-save">保存</span></div></div>
             <div class="order-edt-box">
                 <div class="ui-grid-a">
                     <div class="ui-block-a">旅客姓名</div>
-                    <div class="ui-block-b"><input class="traveler-val" type="text" placeholder="请填写姓名" value="蓝桥" data-role="none"></div>
+                    <div class="ui-block-b width50">
+                        <input class="traveler-val" type="text" placeholder="请填写姓名" value="蓝桥" data-role="none">
+                    </div>
+                    <div class="ui-block-c">
+                        <a class="travel-lab" data-role="none" href="javascript:void(0);">常旅客</a>
+                    </div>
                 </div>
                 <div class="ui-grid-a">
                     <div class="ui-block-a">手机号码</div>
@@ -169,11 +197,11 @@
                     <div class="ui-block-b"><input class="traveler-val" type="email" placeholder="请填写邮箱" value="lanqiao@gmail.com" data-role="none"></div>
                 </div>
                 <div class="ui-grid-a">
-                    <div class="ui-block-a">省、市、区</div>
+                    <div class="ui-block-a">省/市/区</div>
                     <div class="ui-block-b"><span class="traveler-val01">上海市 上海 黄浦区</span><label class="travel-arrow" data-role="none"></label>
                     </div>
                 </div>
-                <div class="ui-grid-a">
+                <div class="ui-grid-a noborderB">
                     <div class="ui-block-a">详细地址</div>
                     <div class="ui-block-b"><input class="traveler-val" type="email" placeholder="请填写详细地址" value="东方明珠特1号" data-role="none"></div>
                 </div>
@@ -182,33 +210,26 @@
         <div class="divide-space"></div>
         <div class="order-traveler">
             <div class="black_overlay-sec"></div>
-            <div class="row-til clearfix">旅客信息<div class="row-edt-traveler">出行15天内不可修改<span class="edt-icon"></span></div></div>
-            <div class="row-content">
+            <div class="row-til clearfix"><i class="travelerIcon"></i>旅客信息<div class="row-edt-traveler">出行15天内不可修改<span class="edt-icon"></span></div></div>
+            <div class="row-content travelerInfo">
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <div><span class="row-span">姓名：</span><span class="row-val">GU/LOU</span></div>
-                        <div><span class="row-span">性别：</span><span class="row-val">男</span></div>
-                        <div><span class="row-span">国籍：</span><span class="row-val">中国</span></div>
+                        <div><span class="row-span">旅客姓名：</span><span class="row-val">GU/LOU</span></div>
+                        <div><span class="row-span">旅客类型：</span><span class="row-val">成人</span></div>
+                        <div><span class="row-span">旅客国籍：</span><span class="row-val">美国</span></div>
+                        <div><span class="row-span">证件类型：</span><span class="row-val">护照</span></div>
+                        <div class="width100"><span class="row-span">证件号码：</span><span class="row-val">310108562215478</span></div>
                     </div>
                     <div class="ui-block-b">
-                        <div><span class="row-span">生日：</span><span class="row-val">1989.11.21</span></div>
-                        <div><span class="row-span">乘客类型：</span><span class="row-val">成人</span></div>
-                    </div>
-                </div>
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <div><span class="row-span">姓名：</span><span class="row-val">LABBER</span></div>
-                        <div><span class="row-span">性别：</span><span class="row-val">男</span></div>
-                        <div><span class="row-span">国籍：</span><span class="row-val">中国</span></div>
-                    </div>
-                    <div class="ui-block-b">
-                        <div><span class="row-span">生日：</span><span class="row-val">1990.10.08</span></div>
-                        <div><span class="row-span">乘客类型：</span><span class="row-val">儿童</span></div>
+                        <div><span class="row-span">英文拼音：</span><span class="row-val">LABBER</span></div>
+                        <div><span class="row-span">旅客性别：</span><span class="row-val">男</span></div>
+                        <div><span class="row-span">出生日期：</span><span class="row-val">1989-11-21</span></div>
+                        <div><span class="row-span">有效期至：</span><span class="row-val">1989-11-21</span></div>
                     </div>
                 </div>
             </div>
             <div class="order-traveler-edt">
-                <div class="row-edt-til clearfix"><span>旅客信息</span><div class="travel-edt-btn"><span class="edt-cancel">取消</span><span class="edt-save">保存</span></div></div>
+                <div class="row-edt-til clearfix"><div class="travel-edt-btn"><span class="edt-cancel">取消</span><span class="edt-save">保存</span></div></div>
                 <div class="traveler-edt-box">
                     <div class="ui-grid-b">
                         <div class="ui-block-a">旅客中文名</div>
@@ -244,8 +265,17 @@
                         <div class="ui-block-c">&nbsp;</div>
                     </div>
                     <div class="ui-grid-b">
+                        <div class="ui-block-a">证件有效期</div>
+                        <div class="ui-block-b">19/09</div>
+                        <div class="ui-block-c"><label class="travel-arrow" data-role="none"></label></div>
+                    </div>
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">旅客国籍</div>
+                        <div class="ui-block-b"><input class="traveler-val" type="text" placeholder="请输入证件号码" value="以色列" data-role="none"></div>
+                    </div>
+                    <div class="ui-grid-b">
                         <div class="ui-block-a">出生日期</div>
-                        <div class="ui-block-b">年 月 日</div>
+                        <div class="ui-block-b">年/月/日</div>
                         <div class="ui-block-c"><label class="travel-arrow" data-role="none"></label></div>
                     </div>
                     <div class="ui-grid-b">
@@ -265,7 +295,7 @@
                 </div>
             </div>
             <div class="divide-space"></div>
-            <div class="row-til">机票信息</div>
+            <!--<div class="row-til">机票信息</div>
             <div class="order-ticket">
                 <div class="tkt-cnt">
                     <div class="tkt-agenda">第一天<span class="common-agenda agenda-flag1">去程</span><span class="tkt-date">2015-08-23出发</span></div>
@@ -319,15 +349,111 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="divide-space"></div>
-            <div class="row-til">酒店信息</div>
-            <div class="order-hotel-box">
+            </div>-->
+            <section class="commonModule">
+                <h2 class="commonTitleH2 haveIcon"><i class="planeIcon"></i>机票信息</h2>
+                <div class="airInfoContent">
+                    <label class="blueBg">去</label>
+                    <div class="dayNumber">
+                        <strong class="days">第一天</strong>
+                    </div>
+                    <p class="airPFonts">芬兰航空AY058 / 经济舱 / 333</p>
+                    <div class="timePlaceContent clearfix">
+                        <div class="timePlaceLeft">
+                            <div class="placeBlueFonts">上海</div>
+                            <div class="timeFonts">09:20</div>
+                            <div class="airFonts">浦东机场T1</div>
+                        </div>
+                        <div class="totalTimeContent">
+                            <label>
+                                <i class="dottedIcon leftDotted"></i>
+                                <span class="dashLine"></span>
+                            </label>
+                            <span class="totalTimeFonts">8时25分</span>
+                            <label>
+                                <span class="dashLine"></span>
+                                <i class="dottedIcon rightDotted"></i>
+                            </label>
+                        </div>
+                        <div class="timePlaceRight">
+                            <div class="placeBlueFonts">赫尔辛基</div>
+                            <div class="timeFonts">14:35</div>
+                            <div class="airFonts">赫尔辛基机场</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="airInfoContent">
+                    <label class="orangeBg">转</label>
+                    <div class="dayNumber">
+                        <strong class="days">第二天</strong>
+                    </div>
+                    <p class="airPFonts">芬兰航空AY058 / 经济舱 / 333</p>
+                    <div class="timePlaceContent clearfix">
+                        <div class="timePlaceLeft">
+                            <div class="placeBlueFonts">赫尔辛基</div>
+                            <div class="timeFonts">15:35</div>
+                            <div class="airFonts">浦东机场T1</div>
+                        </div>
+                        <div class="totalTimeContent">
+                            <label>
+                                <i class="dottedIcon leftDotted"></i>
+                                <span class="dashLine"></span>
+                            </label>
+                            <span class="totalTimeFonts">1时10分</span>
+                            <label>
+                                <span class="dashLine"></span>
+                                <i class="dottedIcon rightDotted"></i>
+                            </label>
+                        </div>
+                        <div class="timePlaceRight">
+                            <div class="placeBlueFonts">雷克雅未克</div>
+                            <div class="timeFonts">16:00</div>
+                            <div class="airFonts">赫尔辛基机场</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="airInfoContent">
+                    <label class="blueBg">返</label>
+                    <div class="dayNumber">
+                        <strong class="days">第三天</strong>
+                    </div>
+                    <p class="airPFonts">芬兰航空AY058 / 经济舱 / 333</p>
+                    <div class="timePlaceContent clearfix">
+                        <div class="timePlaceLeft">
+                            <div class="placeBlueFonts">赫尔辛基</div>
+                            <div class="timeFonts">09:20</div>
+                            <div class="airFonts">赫尔辛基机场</div>
+                        </div>
+                        <div class="totalTimeContent">
+                            <label>
+                                <i class="dottedIcon leftDotted"></i>
+                                <span class="dashLine"></span>
+                            </label>
+                            <span class="totalTimeFonts">8时25分</span>
+                            <label>
+                                <span class="dashLine"></span>
+                                <i class="dottedIcon rightDotted"></i>
+                            </label>
+                        </div>
+                        <div class="timePlaceRight">
+                            <div class="placeBlueFonts">上海</div>
+                            <div class="timeFonts">
+                                <strong>14:35</strong>
+                                <i class="addDayName">+1天</i>
+                            </div>
+                            <div class="airFonts">浦东机场T1</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--<div class="divide-space"></div>-->
+            <div class="row-til"><i class="hotelIcon"></i>酒店信息</div>
+            <div class="order-hotel-box noborder">
                 <div class="order-hotel-til">首尔明洞地区优选五星级酒店</div>
                 <div class="ui-grid-b">
                     <div class="ui-block-a order-hotel-left">
-                        <p><span class="order-lab03">入住</span></p>
-                        <p><span class="order-lab04">离店</span></p>
+                        <p><span class="order-lab03">住</span></p>
+                        <p><span class="order-lab04">离</span></p>
                     </div>
                     <div class="ui-block-b order-hotel-center">
                         <p class="class-hotel-time">2015-03-24</p>
@@ -338,11 +464,11 @@
                         <p class="order-hotel-name">豪华观景房</p>
                     </div>
                 </div>
-                <div class="order-hotel-til">金边五星级酒店</div>
+                <div class="order-hotel-til noborder">金边五星级酒店</div>
                 <div class="ui-grid-b">
                     <div class="ui-block-a order-hotel-left">
-                        <p><span class="order-lab03">入住</span></p>
-                        <p><span class="order-lab04">离店</span></p>
+                        <p><span class="order-lab03">住</span></p>
+                        <p><span class="order-lab04">离</span></p>
                     </div>
                     <div class="ui-block-b order-hotel-center">
                         <p class="class-hotel-time">2015-03-24</p>
@@ -353,19 +479,19 @@
                         <p class="order-hotel-name">豪华观景房</p>
                     </div>
                 </div>
-                <div class="hotel-bed">偏好的酒店床型：<label class="hotel-bed-type"><span id="bed-type">优选大床房</span><span class="edt-icon"></span></label></div>
+                <div class="hotel-bed">偏好床型：<label class="hotel-bed-type"><span id="bed-type">大床房</span><span class="edt-icon"></span></label></div>
                 <div class="hotel-bed-op">
                     <div class="ui-grid-b">
                         <div class="ui-block-a">
                             <label class="choice-bed">
                                 <input type="radio" name="bed" value="bigbed" data-role="none" checked>
-                                <span>优选大床房</span>
+                                <span>大床房</span>
                             </label>
                         </div>
                         <div class="ui-block-b">
                             <label class="choice-bed">
                                 <input type="radio" name="bed" value="couplebed" data-role="none">
-                                <span>优选双床房</span>
+                                <span>双床房</span>
                             </label>
                         </div>
                         <div class="ui-block-c">
@@ -476,32 +602,30 @@
         });
 
         $(".row-edt-pop").click(function(){
-            $(".black_overlay").fadeIn("fast");
-            $(".order-traveler-edt").hide("fast");
-            $(".black_overlay-sec").hide("fast");
-            $(".order-pop-edt").slideDown("fast");
+            $(".contactInfo").hide();
+            $(".order-pop-edt").show();
 
             $(".pop-edt-btn .edt-cancel").click(function(){
-                $(".order-pop-edt").slideUp("fast");
-                $(".black_overlay").fadeOut("fast");
+                $(".contactInfo").show();
+                $(".order-pop-edt").hide();
             });
             $(".pop-edt-btn .edt-save").click(function(){
-                $(".order-pop-edt").slideUp("fast");
-                $(".black_overlay").fadeOut("fast");
+                $(".contactInfo").show();
+                $(".order-pop-edt").hide();
             })
         });
 
         $(".row-edt-traveler").click(function(){
-            $(".black_overlay-sec").fadeIn("fast");
-            $(".order-traveler-edt").slideDown("fast");
+            $(".travelerInfo").hide();
+            $(".order-traveler-edt").show();
 
             $(".travel-edt-btn .edt-cancel").click(function(){
-                $(".order-traveler-edt").slideUp("fast");
-                $(".black_overlay-sec").fadeOut("fast");
+                $(".travelerInfo").show();
+                $(".order-traveler-edt").hide();
             });
             $(".travel-edt-btn .edt-save").click(function(){
-                $(".order-traveler-edt").slideUp("fast");
-                $(".black_overlay-sec").fadeOut("fast");
+                $(".travelerInfo").show();
+                $(".order-traveler-edt").hide();
             })
         });
         $(".menu-btn").click(function(){
@@ -534,6 +658,17 @@
             $(".hotel-bed-op").fadeOut("fast");
         });
 
+        $('.detailBtn').click(function(){
+            if(!$(this).hasClass("heightInherit")){
+                $('.state-detail').css("height","inherit");
+                $(this).addClass("heightInherit");
+                $(this).text("收起");
+            }else{
+                $('.state-detail').css("height","2rem");
+                $(this).removeClass("heightInherit");
+                $(this).text("详情");
+            }
+        })
     });
 </script>
 </body>
