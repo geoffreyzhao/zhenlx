@@ -695,3 +695,7 @@ input[type="checkbox"] + span {
 .lazyload-img {
 	background: url(../images/default-img.png) no-repeat scroll 50% 50% #f5f5f5;
 }
+
+.header .acut-menu .nomarginR{
+    margin-right:0;
+}
