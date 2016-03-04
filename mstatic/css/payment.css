@@ -47,12 +47,12 @@
     margin-top: 0.675rem;
 }
 .header .title {
-    display: inline-block;
+    /*display: inline-block;
     position: absolute;
     left: 3.5rem;
     right: 2rem;
     color:#3fc0ae;
-    font-size:0.75rem;
+    font-size:0.75rem;*/
 }
 .header .acut-menu{
     margin-right:0.5rem;
