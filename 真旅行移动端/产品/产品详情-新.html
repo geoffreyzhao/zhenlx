@@ -83,32 +83,23 @@
 <div class="viewport" data-role="page">
     <div class="headerBar">
         <div class="header">
-            <a href="javascript:;" class="back">
-                <i class="back-arrow"></i>
-                <em class="back-border"></em>
-            </a>
+            <a data-role="none" href="javascript:;"><span class="logo"></span></a>
             <span class="title">产品详情</span>
 				<span class="acut-menu">
-					<span class="menu-pop">
-						<a class="acut-box ui-link" data-role="none" href="javascript:void(0);">
+	                <span class="menu-pop">
+						<a class="acut-box ui-link nomarginR" data-role="none" href="javascript:void(0);">
                             <img class="acut-img" src="../../mstatic/images/acut-img.png">
                         </a>
-						<div class="menu-pop-container">
-                            <i class="arrow-up"></i>
-                            <ul>
-                                <li><a data-role="none" href="javascript:;">用户中心</a></li>
-                                <li><a data-role="none" href="javascript:;">退出账号</a></li>
-                            </ul>
-                        </div>
-					</span>
-	                <span class="menu-btn">
-	                	<span class="menu-img"></span>
-	                	<div class="menu-list-container">
+						<!--<div class="menu-pop-container">
+							<i class="arrow-up"></i>
+							<ul>
+								<li><a data-role="none" href="javascript:;" rel="external">用户中心</a></li>
+								<li><a data-role="none" href="javascript:;" rel="external">退出账号</a></li>
+							</ul>
+						</div>-->
+                        <div class="menu-list-container">
                             <i class="arrow-up"></i>
                             <ul class="menu-list">
-                                <li>
-                                    <a data-role="none" href="javascript:;">产品列表</a>
-                                </li>
                                 <li>
                                     <a data-role="none" href="javascript:;">我的订单</a>
                                 </li>
@@ -116,11 +107,34 @@
                                     <a data-role="none" href="javascript:;">我的钱包</a>
                                 </li>
                                 <li>
-                                    <a data-role="none" href="javascript:;">私信</a>
+                                    <a data-role="none" href="javascript:;">个人中心</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">退出</a>
                                 </li>
                             </ul>
                         </div>
-	                </span>
+					</span>
+	                <!--<span class="menu-btn">
+	                	<span class="menu-img has-notice-icon"></span>
+	                	<div class="menu-list-container">
+	                		<i class="arrow-up"></i>
+		                	<ul class="menu-list">
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">产品列表</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">我的订单</a>
+		                	    </li>
+		                	    <li style="border-bottom:2px solid #666;">
+		                	    	<a data-role="none" href="javascript:;">我的钱包</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a class="has-notice-icon" data-role="none" href="javascript:;">私信</a>
+		                	    </li>
+		                	</ul>
+	                	</div>
+	                </span>-->
 	            </span>
         </div>
     </div>
@@ -482,6 +496,20 @@
     $(function(){
 
         FastClick.attach(document.body);
+
+        $(".menu-pop").click(function(event){
+            var pop = $(this).prev().find(".menu-pop-container");
+            if(pop.is(":visible")){
+                pop.slideUp("fast");
+            }
+            $(this).find(".menu-list-container").toggle();
+            if($(".menu-list-container").is(":visible")){
+                $(document).click(function(){
+                    $(".menu-list-container").fadeOut("fast");
+                });
+            }
+            event.stopPropagation();
+        });
         
         $("body").delegate(".hotelNotice", "click", function(){
             if($(this).find("i").hasClass("bottomArrow")){

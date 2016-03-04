@@ -140,25 +140,63 @@
 </head>
 <body  onload="loaded()">
 	<div data-role="page">
-		<div class="headerBar">
-			<div class="header">
-				<span class="logo"></span>
-				<!-- <span class="til"></span> -->
-				<span class="modleList">
-					<i class="headerAvator"></i><i class="headerListbtn"></i>
-				</span>
-				<div class="navlist">
-					<ul>
-						<li><a href="javascript:void(0);">首页</a></li>
-						<li><a href="javascript:void(0);">产品列表</a></li>
-						<li><a href="javascript:void(0);">我的订单</a></li>
-						<li><a href="javascript:void(0);">心愿清单</a></li>
-						<li><a href="javascript:void(0);">我的钱包</a></li>
-						<li><a href="javascript:void(0);">私信</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+        <div class="headerBar">
+            <div class="header">
+                <a data-role="none" href="javascript:;"><span class="logo"></span></a>
+                <span class="title">订单列表</span>
+				<span class="acut-menu">
+	                <span class="menu-pop">
+						<a class="acut-box ui-link nomarginR" data-role="none" href="javascript:void(0);">
+                            <img class="acut-img" src="../../mstatic/images/acut-img.png">
+                        </a>
+						<!--<div class="menu-pop-container">
+							<i class="arrow-up"></i>
+							<ul>
+								<li><a data-role="none" href="javascript:;" rel="external">用户中心</a></li>
+								<li><a data-role="none" href="javascript:;" rel="external">退出账号</a></li>
+							</ul>
+						</div>-->
+                        <div class="menu-list-container">
+                            <i class="arrow-up"></i>
+                            <ul class="menu-list">
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的订单</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的钱包</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">个人中心</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">退出</a>
+                                </li>
+                            </ul>
+                        </div>
+					</span>
+	                <!--<span class="menu-btn">
+	                	<span class="menu-img has-notice-icon"></span>
+	                	<div class="menu-list-container">
+	                		<i class="arrow-up"></i>
+		                	<ul class="menu-list">
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">产品列表</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">我的订单</a>
+		                	    </li>
+		                	    <li style="border-bottom:2px solid #666;">
+		                	    	<a data-role="none" href="javascript:;">我的钱包</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a class="has-notice-icon" data-role="none" href="javascript:;">私信</a>
+		                	    </li>
+		                	</ul>
+	                	</div>
+	                </span>-->
+	            </span>
+            </div>
+        </div>
 		<div class="wrapper">
 			<div class="orderNumber">
 				<span class="orderSum"><em>4</em>个订单</span>
@@ -257,18 +295,32 @@
 	</div>
 
 <script type="text/javascript">
-	$(function(){
-		FastClick.attach(document.body);
-	});
+	$(function() {
+        FastClick.attach(document.body);
 
-	$('.headerListbtn').click(function(event){
-		event.stopPropagation();
-		if($('.navlist').is(':visible')){
-			$('.navlist').slideUp(200);
-		}else{
-			$('.navlist').slideDown(200);
-		}
-	})
+        $(".menu-pop").click(function(event){
+            var pop = $(this).prev().find(".menu-pop-container");
+            if(pop.is(":visible")){
+                pop.slideUp("fast");
+            }
+            $(this).find(".menu-list-container").toggle();
+            if($(".menu-list-container").is(":visible")){
+                $(document).click(function(){
+                    $(".menu-list-container").fadeOut("fast");
+                });
+            }
+            event.stopPropagation();
+        });
+
+        $('.headerListbtn').click(function (event) {
+            event.stopPropagation();
+            if ($('.navlist').is(':visible')) {
+                $('.navlist').slideUp(200);
+            } else {
+                $('.navlist').slideDown(200);
+            }
+        });
+    })
 </script>
 </body>
 </html>
