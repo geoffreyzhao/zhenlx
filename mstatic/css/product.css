@@ -14,7 +14,7 @@ a:focus {
   outline: none; }
 
 .fontSize, body {
-  font-size: 12px; }
+  font-size: 13px; }
 
 .colorA1a1a1, .totalTimeContent .totalTimeFonts, .starsContent .checkInFonts, .hotelClassify .a1a1a1Fonts, .facilityList .facilityFonts, .bottomFixed .leftPrice .lineTrough {
   color: #a1a1a1; }
@@ -223,6 +223,7 @@ a:focus {
     height: 1px;
     border-top: 1px dashed #bbbbbb; }
   .totalTimeContent .totalTimeFonts {
+    font-size: 9px;
     margin: 0 0.175rem; }
 
 .hotelTitleH3 {
@@ -425,8 +426,12 @@ a:focus {
 .navWrap-val ol li span,
 .judge-txt {
   font-family: Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei !important;
-  font-size: 12px !important;
+  font-size: 13px !important;
   line-height: 1.1rem !important; }
+
+.destinationCont {
+  font-size: 11px;
+  margin: 0.25rem 0; }
 
 /*  product  End  */
 
