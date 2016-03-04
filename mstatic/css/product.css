@@ -29,10 +29,42 @@ a:focus {
   color: #11b9b7; }
 
 .borderTopE2e2e2, .commonModule, .commonBottomStyle .commonBottomTitle, .hotelClassify, .hotelBottomPackUp, .packUpFold, .bottomFixed {
-  border-top: 1px solid #e2e2e2; }
+  border-top: 1px solid #e2e2e2;
+  /*position: relative;
+  border: none;
+  &:after{
+    content: '';    
+    position: absolute;   
+    top: 0;
+    left: 0;
+    border-top: 1px solid #e2e2e2;
+    -webkit-box-sizing: border-box;    
+    box-sizing: border-box;     
+    width: 200%;     
+    height: 200%;     
+    -webkit-transform: scale(0.5);     
+    transform: scale(0.5);     
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+  }*/ }
 
 .borderBottomE2e2e2, .commonModule, .commonModule .commonTitleH2, .dottedHotelList {
-  border-bottom: 1px solid #e2e2e2; }
+  border-bottom: 1px solid #e2e2e2;
+  /*position: relative;
+  border: none;
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #e2e2e2;
+    width: 100%;
+    height: 1px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }*/ }
 
 .displayInlineBlock, .labelNames .commonStyle, .labelNames .lightBlueBg, .labelNames .purpleBg, .labelNames .orangeBg, .labelNames .deepBlueBg, .lightSpotList .commonIconStyle, .lightSpotList .planeIcon, .lightSpotList .hotelIcon, .lightSpotList .experienceIcon, .lightSpotList .serveIcon, .commonBottomStyle .journeyIcon, .haveIcon .commonIconStyle, .haveIcon .planeIcon, .haveIcon .hotelIcon, .haveIcon .costIcon, .haveIcon .noticeIcon, .haveIcon .evaluateIcon, .airInfoContent .commonLabelStyle, .airInfoContent .blueBg, .airInfoContent .orangeBg, .totalTimeContent .dottedIcon, .totalTimeContent .dashLine, .yellow-star, .arrowCommonStyle, .rightArrow, .bottomArrow, .upRightArrow, .hotelBottomPackUp .upArrow, .packUpFold .commonIconStyle, .packUpFold .downArrow, .packUpFold .upArrow {
   display: inline-block; }
