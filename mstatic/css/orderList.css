@@ -433,7 +433,7 @@
     background-color:#fff;
 }
 .order-til{
-    margin: 0 0.5rem;
+    margin: 0 0.75rem;
     /* border-top: 1px #dcdcdc solid; */
     border-bottom: 1px #dcdcdc solid;
     padding: 0.5rem 0;
@@ -452,7 +452,7 @@
     color:#999;
 }
 .order-row{
-    padding:0.5rem;
+    padding:0.5rem 0.75rem;
 }
 .order-name{
     display: inline-block;
@@ -545,7 +545,7 @@
     background-color:#fff;
 }
 .row-edt-til{
-    padding:0.5rem;
+    padding:0.5rem 0.75rem;
     background-color:#fff;
     font-size: 0.8rem;
     color:#333;
@@ -579,7 +579,7 @@
     background-color:#1a9d9c;
 }
 .order-edt-box, .traveler-edt-box{
-    padding:0 0.5rem 0.5rem;
+    padding:0 0.75rem 0.5rem;
     font-size: 0.7rem;
     color:#666;
 }
@@ -666,7 +666,7 @@ font-size: 0.75rem;
     color:#333;
 }
 .traveler-val01{
-    width: 8.5rem;
+    width: 8rem;
     display: inline-block;
     font-size: 0.75rem;
     color:#333;
@@ -680,10 +680,13 @@ font-size: 0.75rem;
     margin-left:1.2rem;
 }
 .row-til{
-    padding:0.5rem;
+    padding:0 0.75rem;
     background-color:#fff;
     font-size: 0.7rem;
     color:#333;
+}
+.borderB{
+    padding:0.5rem 0;
     border-bottom:1px #dcdcdc solid;
 }
 .row-edt-pop, .row-edt-traveler{
@@ -703,7 +706,7 @@ font-size: 0.75rem;
     vertical-align: middle;
 }
 .row-content, .order-ticket{
-    padding:0.3rem 0.5rem;
+    padding:0.3rem 0.75rem;
     background-color:#fff;
     line-height:1.3rem;
 }
@@ -836,7 +839,7 @@ font-size: 0.75rem;
     color:#484848;
 }
 .order-hotel-box{
-    padding:0 0.5rem;
+    padding:0 0.75rem;
     background-color:#fff;
 }
 .order-hotel-til{
@@ -928,26 +931,26 @@ font-size: 0.75rem;
     background-color:#f7f7f7;
 }
 .row-box{
-    padding:0.5rem;
-    font-size: 0.65rem;
+    padding:0.5rem 0.75rem;
+    font-size: 0.6rem;
     background-color:#fff;
-    color:#999;
+    color:#565656;
     line-height:1.3rem;
 }
 .row-box-til{
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color:#666;
 }
 .row-box-til ol li span {
     font-size: 0.75rem!important;
-    color: #666!important;
+    color: #010101!important;
     font-family: initial!important;
 }
 .order-price-detail{
     background-color:#fff;
-    padding:0.5rem;
+    padding:0.5rem 0.75rem;
     font-size: 0.65rem;
-    color:#666;
+    color:#565656;
     line-height:1.3rem;
 }
 .order-price-box{
@@ -965,11 +968,11 @@ font-size: 0.75rem;
 }
 .order-price-detail .ui-grid-b .ui-block-c{
     text-align: right;
-    color:#fd1934;
+    color:#e8854b;
 }
 .order-price-type{
     font-size: 0.7rem;
-    color:#333;
+    color:#010101;
     line-height:1.5rem;
 }
 .order-foot{
@@ -1014,7 +1017,7 @@ font-size: 0.75rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 1.3rem;
-    color:#fb1933;
+    color:#e46c14;
 }
 .nopaddingt{
     padding-top:0;
@@ -1033,7 +1036,7 @@ font-size: 0.75rem;
     padding-right:0.5rem;
 }
 .order-state{
-    padding:0.5rem 0.5rem 1rem;
+    padding:0.5rem 0.75rem 1rem;
 }
 .state-title{
     font-size:0.65rem;
@@ -1101,7 +1104,7 @@ font-size: 0.75rem;
 }
 .commonModule .commonTitleH2 {
     font-size:0.7rem;
-    padding: 0.25rem 0 0.5rem;
+    padding: 0.125rem 0 0.5rem;
 }
 .color111, .commonModule .titleH2, .commonModule .commonTitleH2, .commonBottomStyle .commonBottomTitle, .dayNumber .days, .timePlaceContent .timeFonts {
     color: #111;
@@ -1220,7 +1223,7 @@ font-size: 0.75rem;
     font-size:0.4rem;
     color: #ff9416;
     position: absolute;
-    top: 0rem;
+    top: 0;
     right: -1.2rem;
     /* transform: scale(0.8);*/
 }
@@ -1260,6 +1263,26 @@ font-size: 0.75rem;
 .counponIcon{
     background:url("../../mstatic/images/counpon.png") no-repeat center center;
     background-size:0.7rem 0.7rem;
+}
+.costIcon {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: url("../../mstatic/images/smallIcon.png") no-repeat;
+    background-size: 320px 170px;
+    background-position: -96px 0;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+    display:inline-block;
+}
+.priceIcon {
+    width: 0.6rem;
+    height: 0.75rem;
+    background: url("../../mstatic/images/pricedetail.png") no-repeat;
+    background-size:0.6rem 0.75rem;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+    display:inline-block;
+    margin-top:-3px;
 }
 .marginb1rem{
     margin-bottom:1rem;
