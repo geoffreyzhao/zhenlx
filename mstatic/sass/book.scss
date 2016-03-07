@@ -26,7 +26,20 @@ body {
 
       .price-tip {
         position: absolute;
-        right: 0.5rem;
+        right: 0.4rem;
+        top: 0;
+        color: $colorTheme;
+
+        i {
+          width: 0.6rem;
+          height: 0.625rem;
+          display: inline-block;
+          vertical-align: middle;
+          background: url("../../mstatic/images/icon-qus.png") no-repeat;
+          -webkit-background-size: 100%;
+          background-size: 100%;
+          margin-top: -2px;
+        }
       }
 
       .tab-wrapper {
@@ -150,9 +163,207 @@ body {
             &.menu p {
               color: $colorHighlight;
             }
+
+            &.sold-out {
+              color: $colorSlight;
+
+              .price {
+                color: $colorSlight;
+              }
+            }
           }
         }
       }
     }
+  }
+}
+
+.trip-num-wrapper {
+  margin-top: 15/$baseRemRate*1rem;
+  background-color: #fff;
+  padding: 20/$baseRemRate*1rem 30/$baseRemRate*1rem;
+  font-size: 15px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+
+  .head {
+    padding: 15/$baseRemRate*1rem 0;
+    line-height: 26px;
+
+     .title em {
+       color: $colorHighlight;
+       font-size: 12px;
+     }
+
+    .menu-select {
+      margin-top: -3px;
+    }
+  }
+}
+
+.switch-checkbox {
+  width: 44px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 12px;
+  border: 1px solid #dfdfdf;
+  background-color: #f0f0f0;
+  vertical-align: middle;
+  margin: 0 0.25rem!important;
+  position: relative;
+
+  i {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 100%;
+    left: 2px;
+    top: 1px;
+  }
+
+  &.on {
+    background-color: $colorTheme;
+    border-color: $colorTheme;
+    
+    i {
+      background-color: #fff;
+      left: 20px;
+      border-color: #fff;
+    }
+  }
+}
+
+.menu-block .menu-item {
+  padding: 25/$baseRemRate*1rem 0.25rem 25/$baseRemRate*1rem 0;
+  border-top: 1px solid #dfdfdf;
+
+  .menu-name {
+    font-size: 15px !important;
+  }
+
+  .menu-price {
+    color: $colorHighlight;
+    font-family: Arial;
+  }
+
+  .menu-short-desc {
+    font-size: 12px;
+    color: $colorSlight;
+    padding-left: 1.1rem;
+    display: none;
+  }
+}
+
+.passenger-type {
+  padding: 25/$baseRemRate*1rem 0.25rem 20/$baseRemRate*1rem 0;
+  border-top: 1px solid #dfdfdf;
+
+  > .fl {
+    line-height: 20px;
+  }
+
+  > .fr {
+    margin-top: 4px;
+  }
+
+  .price {
+    color: $colorHighlight;
+    font-family: Arial;
+  }
+}
+
+.plus-minus-comp {
+  border: 1px solid $colorSlight;
+  border-radius: 4px;
+  height: 30px;
+
+  span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    border-right: 1px solid $colorSlight;
+    float: left;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  .minus-mark, .plus-mark {
+    font-size: 24px;
+    line-height: 28px;
+    color: $colorHighlight;
+
+    &.disabled {
+      color: $colorSlight;
+    }
+  }
+
+  .result {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+.total-price-block {
+  background-color: #fff;
+  margin-top: 15/$baseRemRate*1rem;
+  border-top: 1px solid #dfdfdf;
+
+  .total-price {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 30/$baseRemRate*1rem 0;
+
+    em {
+      color: $colorHighlight;
+      font-family: Arial;
+      padding-left: 5px;
+      font-weight: bold;
+    }
+  }
+
+  .next {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    background-color: $colorTheme;
+    color: $colorInverse;
+    font-size: 16px;
+    padding: 30/$baseRemRate*1rem 0;
+  }
+}
+
+.inst-dialog {
+  font-size: 15px;
+  color: #666;
+  line-height: 1rem;
+
+  .inst-dialog-content {
+    padding: 1rem 0.5rem;
+    overflow: scroll;
+  }
+  .inst-dialog-foot {
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+  }
+  .btn-com {
+    width: 4.5rem;
+    height: 1.5rem;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: #fff !important;
+    display: inline-block;
+    font-weight: normal !important;
+    text-decoration: none;
+    border-radius: 0.125rem;
+    background-color: #11b9b7;
   }
 }
