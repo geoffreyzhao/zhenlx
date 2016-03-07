@@ -1371,4 +1371,13 @@ padding-right:1rem;
 .noborderTop{
     border-top:0;
 }
+.travelTime{
+    float:right;
+    font-size:0.7rem;
+    color:#11b9b7;
+}
+.duringStop{
+    margin:0.25rem 0;
+    color:#11b9b7;
+}
 /** end **/
