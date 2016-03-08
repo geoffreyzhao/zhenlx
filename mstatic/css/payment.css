@@ -636,7 +636,7 @@ input[type="radio"]:checked + .pay-check{
     padding-bottom: 0.25rem;
 }
 .class-hotel-time01{
-    font-size: 0.6rem;
+    font-size:12px;
     color:#666;
     vertical-align: middle;
     padding-top:0.25rem;
@@ -657,7 +657,7 @@ input[type="radio"]:checked + .pay-check{
 }
 .order-hotel-bedTil{
     width:30%;
-    font-size: 0.7rem;
+    font-size:14px;
     line-height:1rem;
     padding:0.6rem 0;
     display:inline-block;
@@ -737,16 +737,26 @@ padding-right:1rem;
 .order-traveler-box > .ui-grid-b > .ui-block-b{
     width:45%;
 }
-
+label span{
+    font-size:14px!important;
+}
+label input[type="radio"]{
+    width:0.6rem;
+    height:0.6rem;
+}
+label input[type="radio"]:checked{
+    width:0.6rem;
+    height:0.6rem;
+}
 .traveler-row{
     padding:0.5rem 0;
     border-bottom: 1px #dcdcdc solid;
-    font-size: 0.7rem;
+    font-size:14px;
 }
 .traveler-row01{
     padding:0.5rem 0;
     border-bottom: 1px #dcdcdc solid;
-    font-size: 0.7rem;
+    font-size:14px;
 }
 .traveler-shortrow{
     border-bottom: 1px #dcdcdc solid;
@@ -983,13 +993,13 @@ padding-right:1rem;
     font-weight: normal !important;
 }
 .price-icon{
-    font-size: 0.5rem;
+    font-size:12px;
     color:#e46c14;
     display:inline-block;
     vertical-align: middle;
 }
 .price-num{
-    font-size: 0.9rem;
+    font-size: 18px;
 }
 .order-detail{
     line-height:1.2rem;
