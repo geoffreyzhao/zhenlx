@@ -70,9 +70,32 @@
     background-color:#fff;
 }
 .account{
-    padding:0 0.45rem;
+    /*padding:0 0.45rem;*/
     border-bottom: 1px #dcdcdc solid;
+    position: relative;
+    height: 8.5rem;
 }
+.account.divBg {
+    background-color: #3fc0ae;
+}
+.innerAccount {
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    width:100%;
+    padding:13% 0;
+}
+.innerAccount img {
+    margin: 0 auto 0.5rem auto;
+    width:3.2rem;
+    height: 3.2rem;
+}
+.innerAccount .userName {
+    font-size: 0.7rem;
+    color: #fff;
+    font-weight: bold;
+}
+
 .account-img{
     /*width:3.75rem;*/
     /*padding:0.875rem 1rem 0.875rem 0;*/
@@ -144,7 +167,7 @@
 }
 .traveler-box{
     padding:0.5rem 0.3rem 0.5rem 0.8rem;
-    border:1px #dcdcdc solid;
+    border-top:1px #e2e2e2 solid;
     margin-bottom: 0.5rem;
 }
 .traveler-img{
@@ -157,6 +180,8 @@
 .traveler-info{
     display: inline-block;
     vertical-align: middle;
+    position: relative;
+    padding-left:2.8rem;
 }
 .trl-name{
     font-size: 0.7rem;
@@ -202,15 +227,41 @@
     float: right;
     padding-top:0.85rem;
 }
-.u-edt{
+/*.u-edt{
     width:2.55rem;
     height:1.65rem;
     padding:0 0.45rem;
-}
+}*/
 .dlg-box{
     max-width: 8.5rem;
 
 }
+.borderBottom {
+    border-bottom: 1px solid #e2e2e2;
+}
+.borderTop {
+    border-top: 1px solid #e2e2e2;
+}
+.noBorder {
+    border:none;
+}
+.noPaddingLF {
+    padding-left:0;
+    padding-right: 0;
+}
+.traveler-info .passengerUserImg {
+    width:1.85rem;
+    height: 1.85rem;
+    position: absolute;
+    left:0.2rem;
+    top:0.3rem;
+}
+.noPaddingLF .u-edt_modify {
+    /*width:0.75rem;*/
+    height:0.825rem;
+    padding:0 0.45rem;
+}
+.
 /** end **/
 
 /** 修改密码 -start **/
