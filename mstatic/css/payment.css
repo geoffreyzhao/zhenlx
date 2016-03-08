@@ -466,7 +466,7 @@ input[type="radio"]:checked + .pay-check{
     color:#999;
 }
 .order-row{
-    font-size: 0.7rem;
+    font-size:14px;
     color:#333;
     background-color:#fff;
     padding:0 0.75rem;
@@ -603,7 +603,7 @@ input[type="radio"]:checked + .pay-check{
 }
 
 .order-hotel-til{
-    font-size: 0.7rem;
+    font-size:12px;
     color:#666;
     padding:0.6rem 0;
 }
@@ -625,11 +625,11 @@ input[type="radio"]:checked + .pay-check{
     padding-top:0.2rem;
     padding-bottom: 0.4rem;
     padding-right:1rem;
-    font-size: 0.6rem;
+    font-size:12px;
     text-align: right;
 }
 .class-hotel-time{
-    font-size: 0.6rem;
+    font-size:12px;
     color:#666;
     vertical-align: middle;
     padding-top:0.4rem;
@@ -663,7 +663,7 @@ input[type="radio"]:checked + .pay-check{
     display:inline-block;
 }
 .order-hotel-op{
-    font-size: 0.6rem;
+    font-size:12px;
     /*padding-left:0.5rem;*/
     /*padding-bottom: 0.6rem;*/
     display: inline-block;
@@ -681,7 +681,7 @@ input[type="radio"]:checked + .pay-check{
     margin-left:1rem;
 }
 .order-traveler-til{
-    font-size: 0.7rem;
+    font-size:14px;
     background-color:#fff;
     color:#333;
     padding:0 0.75rem;
@@ -690,7 +690,7 @@ input[type="radio"]:checked + .pay-check{
     margin-top:0.45rem;
 }
 .order-traveler-right{
-    font-size: 0.6rem;
+    font-size:12px;
     line-height:0.8rem;
     color:#11b9b7;
     margin-top: -1px;
@@ -717,7 +717,7 @@ input[type="radio"]:checked + .pay-check{
 .order-traveler-box > .ui-grid-b{
     padding:0.5rem 0;
     border-bottom: 1px #dcdcdc solid;
-    font-size: 0.7rem;
+    font-size:14px;
 }
 .order-traveler-box > .ui-grid-b > .ui-block-a{
     width:30%;
@@ -725,6 +725,7 @@ input[type="radio"]:checked + .pay-check{
 .order-traveler-box > .ui-grid-b > .ui-block-c{
 width:20%;
 text-align: right;
+margin-top:0.25rem;
 }
 .order-traveler-box > .ui-grid-a > .ui-block-a{
 width:30%;
@@ -762,7 +763,7 @@ padding-right:1rem;
     width: 100%;
     height:1.3rem;
     line-height:1.3rem;
-    font-size: 0.7rem;
+    font-size:14px;
     color:#333;
     display: inline-block;
     overflow: hidden;
@@ -780,7 +781,7 @@ padding-right:1rem;
     /*padding-right:0.5rem;*/
 }
 .travel-lab{
-    font-size: 0.75rem;
+    font-size:14px;
     text-align: center;
     padding:0.2rem 0.2rem;
     color:#3fc0ae !important;
@@ -805,7 +806,7 @@ padding-right:1rem;
     vertical-align: middle;
 }
 .order-mark-til{
-    font-size: 0.7rem;
+    font-size: 14px;
     color:#333;
     padding:0.6rem 0;
     border-bottom: 1px #dcdcdc solid;
@@ -819,7 +820,7 @@ padding-right:1rem;
 }
 .mark-textEara{
     width:100%;
-    font-size: 0.6rem;
+    font-size:14px;
     padding:0.4rem;
     margin-bottom: 0.65rem;
     min-height:4.9rem;
@@ -831,7 +832,7 @@ padding-right:1rem;
     -webkit-appearance: none;
 }
 .order-coupon{
-    font-size: 0.7rem;
+    font-size:14px;
     background-color:#fff;
     padding:0.6rem 0.75rem;
     border-top: 1px #dcdcdc solid;
@@ -874,13 +875,13 @@ padding-right:1rem;
 }
 .agreement{
     padding:0.8rem 0.75rem;
-    font-size: 0.6rem;
+    font-size:12px;
     color:#666;
     margin-bottom: 2.2rem;
     vertical-align: middle;
 }
 .agr-dialog{
-    font-size: 0.65rem;
+    font-size:13px;
     color:#666;
     line-height:0.8rem;
 }
@@ -897,7 +898,7 @@ padding-right:1rem;
     width:4.5rem;
     height:1.5rem;
     text-align: center;
-    font-size: 0.7rem;
+    font-size:14px;
     line-height: 1.5rem;
     color:#fff !important;
     display: inline-block;
@@ -936,7 +937,7 @@ padding-right:1rem;
     bottom: -0.2rem;
     left: 0;
     right: 0;
-    font-size:0.6rem;
+    font-size:12px;
     background-color:#fff;
 }
 .order-sub .ui-grid-b .ui-block-a{
@@ -963,7 +964,7 @@ padding-right:1rem;
     display: inline-block;
     background-color: #3fc0ae;
     color:#fff !important;
-    font-size: 0.7rem;
+    font-size:14px;
     line-height:2.2rem;
     text-align: center;
     font-weight: normal !important;
@@ -995,12 +996,12 @@ padding-right:1rem;
     background-color: #fff;
 }
 .order-detail-til{
-    font-size: 0.75rem;
+    font-size:14px;
     color:#333;
 }
 .order-detail-cnt{
     padding:0.5rem;
-    font-size: 0.65rem;
+    font-size:12px;
     color:#666;
     border-bottom: 1px #ccc solid;
 }
@@ -1017,10 +1018,10 @@ padding-right:1rem;
     color:#e46c14;
 }
 .rmb-size{
-    font-size: 0.55rem;
+    font-size: 10px;
 }
 .order-foot{
-    font-size:0.6rem;
+    font-size:12px;
     background-color:#fff;
 }
 .order-foot .ui-grid-b .ui-block-a{
@@ -1084,7 +1085,7 @@ padding-right:1rem;
     width:4.5rem;
     margin-right:0.2rem;
     padding-top:0.2rem;
-    font-size: 0.7rem;
+    font-size:14px;
     color:#333;
     vertical-align: middle;
 }
@@ -1095,7 +1096,7 @@ padding-right:1rem;
     color:#11b9b7 !important;
     font-weight: normal !important;
     padding:0.2rem 0.3rem;
-    font-size: 0.7rem;
+    font-size:14px;
     border:1px #11b9b7 solid;
     -webkit-border-radius: 0.125rem;
     -moz-border-radius: 0.125rem;
@@ -1131,7 +1132,7 @@ padding-right:1rem;
     width:8rem;
     height:1.8rem;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 14px;
     line-height: 1.8rem;
     color:#fff !important;
     display: inline-block;
@@ -1149,7 +1150,7 @@ padding-right:1rem;
     width:5.5rem;
     height:1.8rem;
     text-align: center;
-    font-size: 0.6rem;
+    font-size:12px;
     line-height: 1.8rem;
     color:#fff !important;
     display: inline-block;
@@ -1176,7 +1177,7 @@ padding-right:1rem;
     background-color: #fff;
     padding: 0.375rem 0.75rem;
     margin-bottom: 0.375rem;
-    font-size:0.65rem;
+    font-size:10px;
 }
 .borderBottomE2e2e2, .commonModule, .commonModule .commonTitleH2 {
     border-bottom: 1px solid #e2e2e2;
@@ -1185,7 +1186,7 @@ padding-right:1rem;
     border-top: 1px solid #e2e2e2;
 }
 .commonModule .commonTitleH2 {
-    font-size:0.7rem;
+    font-size:14px;
     padding: 0.25rem 0 0.5rem;
 }
 .color111, .commonModule .titleH2, .commonModule .commonTitleH2, .commonBottomStyle .commonBottomTitle, .dayNumber .days, .timePlaceContent .timeFonts {
@@ -1211,7 +1212,7 @@ padding-right:1rem;
     display: inline-block;
 }
 .airInfoContent .commonLabelStyle, .airInfoContent .blueBg, .airInfoContent .orangeBg {
-    font-size:0.45rem;
+    font-size:10px;
     -webkit-border-radius: 0.15rem;
     border-radius: 0.15rem;
     width: 0.75rem;
@@ -1241,10 +1242,10 @@ padding-right:1rem;
     margin-bottom: 0.375rem;
 }
 .dayNumber .days {
-    font-size:0.7rem;
+    font-size:13px;
 }
 .airInfoContent .airPFonts {
-    font-size: 0.65rem;
+    font-size:10px;
     line-height:0.8rem;
     margin: 0.375rem 0;
 }
@@ -1256,10 +1257,11 @@ padding-right:1rem;
     width: 40%;
 }
 .color11b9b7, .lightSpotList .blueTitles, .timePlaceContent .placeBlueFonts {
+    font-size:12px;
     color: #11b9b7;
 }
 .timePlaceContent .timeFonts {
-    font-size: 0.85rem;
+    font-size:17px;
     margin: 0.25rem 0;
     position: relative;
 }
@@ -1288,7 +1290,7 @@ padding-right:1rem;
 .totalTimeContent .totalTimeFonts {
     margin: 0 0.175rem;
     color:#a1a1a1;
-    font-size:0.6rem;
+    font-size:10px;
 }
 .totalTimeContent .dottedIcon.rightDotted {
     margin-left: -0.25rem;
@@ -1302,10 +1304,10 @@ padding-right:1rem;
     background-color: #ff9416;
 }
 .timePlaceContent .timeFonts .addDayName {
-    font-size:0.4rem;
+    font-size:8px;
     color: #ff9416;
     position: absolute;
-    top: 0rem;
+    top: 0;
     right: -1.2rem;
    /* transform: scale(0.8);*/
 }
@@ -1349,7 +1351,7 @@ padding-right:1rem;
     overflow:hidden;
 }
 .startTime{
-    font-size:0.7rem;
+    font-size:14px;
     color:#565656;
     display:inline-block;
     line-height:1.2rem;
@@ -1367,13 +1369,14 @@ padding-right:1rem;
     font-weight:bold;
     display: inline-block;
     margin:0 0.25rem 0 0.6rem;
+    font-size:14px;
 }
 .noborderTop{
     border-top:0;
 }
 .travelTime{
     float:right;
-    font-size:0.7rem;
+    font-size:13px;
     color:#11b9b7;
 }
 .duringStop{

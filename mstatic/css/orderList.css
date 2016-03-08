@@ -452,23 +452,24 @@
 }
 .order-num{
     display: inline-block;
-    font-size: 0.65rem;
+    font-size: 13px;
     line-height:1rem;
     color:#1cafad;
 }
 .order-date{
     display: inline-block;
     float: right;
-    font-size: 0.65rem;
+    font-size:13px;
     line-height:1.2rem;
     color:#999;
 }
 .order-row{
     padding:0.5rem 0.75rem;
+    font-size:14px;
 }
 .order-name{
     display: inline-block;
-    font-size: 0.7rem;
+    font-size:13px;
     line-height:1rem;
     color:#000;
 }
@@ -479,9 +480,9 @@
 .order-price,
 .order-fill-price{
     display: block;
-    font-size: 0.7rem;
+    font-size:14px;
     color:#e46c14;
-    margin-top:0.25rem;
+    margin-top:0.1rem;
 }
 .order-price .rmb,
 .order-fill-price .rmb{
@@ -489,7 +490,7 @@
 }
 .order-start{
     display: inline-block;
-    font-size: 0.65rem;
+    font-size:13px;
     color:#565656;
     line-height: 1.6rem;
 }
@@ -498,7 +499,7 @@
     float: right;
     vertical-align: middle;
     background-color:#ffa200;
-    font-size: 0.75rem;
+    font-size:13px;
     color:#fff !important;
     padding:0.45rem 0.4rem;
     -webkit-border-radius: 0.125rem;
@@ -559,7 +560,7 @@
 .row-edt-til{
     padding:0.5rem 0.75rem;
     background-color:#fff;
-    font-size: 0.8rem;
+    font-size:16px;
     color:#333;
     border-bottom:1px #ebebeb solid;
 }
@@ -573,13 +574,13 @@
 }
 .edt-cancel{
     display: inline-block;
-    font-size: 0.6rem;
+    font-size:12px;
     color:#666;
     padding:0.4rem 1rem;
 }
 .edt-save{
     display: inline-block;
-    font-size: 0.6rem;
+    font-size:12px;
     color:#fff;
     padding:0.4rem 1rem;
     background-color:#3fc0ae;
@@ -592,7 +593,7 @@
 }
 .order-edt-box, .traveler-edt-box{
     padding:0 0.75rem 0.5rem;
-    font-size: 0.7rem;
+    font-size:12px;
     color:#666;
 }
 .order-edt-box .ui-grid-a{
@@ -630,7 +631,7 @@
 .traveler-edt-box .ui-grid-b .ui-block-a{
     width:35%;
     padding:0.5rem 0;
-    font-size: 0.7rem;
+    font-size:14px;
     color:#666;
 }
 .traveler-edt-box .ui-grid-b .ui-block-b{
@@ -651,7 +652,7 @@
     border-bottom:1px #ebebeb solid;
 }
 .travel-lab {
-font-size: 0.75rem;
+    font-size: 14px;
     text-align: center;
     padding: 0.2rem 0.2rem;
     color: #3fc0ae !important;
@@ -674,13 +675,13 @@ font-size: 0.75rem;
 .traveler-val{
     width:100%;
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 12px;
     color:#333;
 }
 .traveler-val01{
     width: 8rem;
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 14px;
     color:#333;
 }
 .block-val > label{
@@ -694,7 +695,7 @@ font-size: 0.75rem;
 .row-til{
     padding:0 0.75rem;
     background-color:#fff;
-    font-size: 0.7rem;
+    font-size: 14px;
     color:#333;
 }
 .borderB{
@@ -702,7 +703,7 @@ font-size: 0.75rem;
     border-bottom:1px #dcdcdc solid;
 }
 .row-edt-pop, .row-edt-traveler{
-    font-size: 0.5rem;
+    font-size:12px;
     color:#1dafae;
     float: right;
     display: inline-block;
@@ -733,22 +734,22 @@ font-size: 0.75rem;
 .row-txt{
     display: inline-block;
     margin-right:0.3rem;
-    font-size: 0.6rem;
+    font-size:12px;
     color:#666;
 }
 .row-span{
     display: inline-block;
-    font-size: 0.6rem;
+    font-size:12px;
     color:#666;
 }
 .row-val{
     display: inline-block;
-    font-size: 0.65rem;
+    font-size:12px;
     color:#333;
 }
 .tkt-agenda{
     padding:0.5rem 0;
-    font-size: 0.75rem;
+    font-size:14px;
     color:#11b9b7;
     vertical-align: middle;
     border-bottom: 1px #d5efee dashed;
@@ -756,11 +757,11 @@ font-size: 0.75rem;
 .tkt-date{
     display: inline-block;
     float: right;
-    font-size:0.6rem;
+    font-size:12px;
     color:#11b9b7;
 }
 .common-agenda{
-    font-size:0.5rem;
+    font-size:10px;
     line-height:0.5rem;
     color:#fff;
     padding:0.1rem 0.4rem;
@@ -787,7 +788,7 @@ font-size: 0.75rem;
 }
 .tkt-trip{
     padding:0.5rem 0;
-    font-size: 0.6rem;
+    font-size:12px;
     line-height:1rem;
     border-top: 1px #d5efee dashed;
 }
@@ -798,7 +799,7 @@ font-size: 0.75rem;
     color:#999;
 }
 .flt-start{
-    font-size: 0.75rem;
+    font-size:14px;
     color:#11b9b7;
 }
 .flt-icon{
@@ -811,7 +812,7 @@ font-size: 0.75rem;
     background-size: 100%;
 }
 .plane-start, .plane-stop{
-    font-size: 1.2rem;
+    font-size:12px;
     line-height:1.8rem;
     color:#484848;
     font-weight: bold;
@@ -855,7 +856,7 @@ font-size: 0.75rem;
     background-color:#fff;
 }
 .order-hotel-til{
-    font-size: 0.7rem;
+    font-size:12px;
     color:#666;
     padding:0.6rem 0;
 }
@@ -874,18 +875,18 @@ font-size: 0.75rem;
     padding-top: 0.2rem;
     padding-bottom: 0.4rem;
     padding-right:1rem;
-    font-size: 0.6rem;
+    font-size: 12px;
     text-align: right;
 }
 .class-hotel-time{
-    font-size: 0.6rem;
+    font-size:12px;
     color:#666;
     vertical-align: middle;
     padding-top:0.3rem;
     padding-bottom: 0.25rem;
 }
 .class-hotel-time01{
-    font-size: 0.6rem;
+    font-size:12px;
     color:#666;
     vertical-align: middle;
     padding-top:0.25rem;
@@ -901,13 +902,13 @@ font-size: 0.75rem;
     height:2rem;
     line-height: 2rem;
     background-color:#fff;
-    font-size: 0.7rem;
+    font-size:12px;
     color:#333;
     vertical-align: middle;
 }
 .hotel-bed-type{
     height:2rem;
-    font-size:0.7rem!important;
+    font-size:14px!important;
 }
 .hotel-bed-op{
     display: none;
@@ -915,7 +916,7 @@ font-size: 0.75rem;
 .hotel-bed-op > .ui-grid-b{
     height:2rem;
     padding:0;
-    font-size: 0.6rem;
+    font-size: 12px;
     color:#666;
     border-bottom: 0;
 }
@@ -944,24 +945,24 @@ font-size: 0.75rem;
 }
 .row-box{
     padding:0.5rem 0.75rem;
-    font-size: 0.6rem;
+    font-size: 12px;
     background-color:#fff;
     color:#565656;
     line-height:1.3rem;
 }
 .row-box-til{
-    font-size: 0.65rem;
+    font-size: 13px;
     color:#666;
 }
 .row-box-til ol li span {
-    font-size: 0.75rem!important;
+    font-size: 15px!important;
     color: #010101!important;
     font-family: initial!important;
 }
 .order-price-detail{
     background-color:#fff;
     padding:0.5rem 0.75rem;
-    font-size: 0.65rem;
+    font-size:12px;
     color:#565656;
     line-height:1.3rem;
 }
@@ -983,7 +984,7 @@ font-size: 0.75rem;
     color:#e8854b;
 }
 .order-price-type{
-    font-size: 0.7rem;
+    font-size:13px;
     color:#010101;
     line-height:1.5rem;
 }
@@ -995,8 +996,11 @@ font-size: 0.75rem;
     width:60%;
     height:2.45rem;
     padding:0.2rem 0.5rem;
-    font-size: 0.65rem;
+    font-size: 13px;
     color:#333;
+}
+.order-foot .ui-grid-a .ui-block-a div{
+    margin-top:0.7rem;
 }
 .order-foot .ui-grid-a .ui-block-b{
     width:40%;
@@ -1010,17 +1014,17 @@ font-size: 0.75rem;
     background-color: #ffa200;
     padding:0.85rem 0;
     color:#fff !important;
-    font-size: 0.85rem;
+    font-size: 14px;
 }
 .order-link:active{
     background-color: #dc8e06;
 }
 .foot-rmb{
     color:#e46c14;
-    font-size: 0.7rem;
+    font-size:14px;
 }
 .rmb-num{
-    width:7.5rem;
+    /*width:7.5rem;*/
     padding-top:0.1rem;
     display: inline-block;
     vertical-align: text-bottom;
@@ -1028,7 +1032,7 @@ font-size: 0.75rem;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 1.3rem;
+    font-size: 14px;
     color:#e46c14;
 }
 .nopaddingt{
@@ -1039,7 +1043,7 @@ font-size: 0.75rem;
     overflow:hidden;
 }
 .detailBtn{
-    font-size:0.65rem;
+    font-size:14px;
     display:inline-block;
     padding:0.2rem;
     margin-left:0.9rem;
@@ -1051,19 +1055,19 @@ font-size: 0.75rem;
     padding:0.5rem 0.75rem 1rem;
 }
 .state-title{
-    font-size:0.65rem;
+    font-size:13px;
     border-top:1px solid #e2e2e2;
     padding:0.5rem 0;
     color:#3fc0ae;
 }
 .list-name{
-    font-size:0.65rem;
+    font-size:13px;
     display:block;
     color:#565656;
     line-height:1rem;
 }
 .list-time{
-    font-size:0.65rem;
+    font-size:13px;
     display:block;
     border-left:1px solid #e6e6e6;
     color: #bbb;
@@ -1106,7 +1110,7 @@ font-size: 0.75rem;
     background-color: #fff;
     padding: 0.375rem 0.75rem;
     margin-bottom: 0.375rem;
-    font-size:0.65rem;
+    font-size:12px;
 }
 .borderBottomE2e2e2, .commonModule, .commonModule .commonTitleH2 {
     border-bottom: 1px solid #e2e2e2;
@@ -1115,7 +1119,7 @@ font-size: 0.75rem;
     border-top: 1px solid #e2e2e2;
 }
 .commonModule .commonTitleH2 {
-    font-size:0.7rem;
+    font-size:14px;
     padding: 0.125rem 0 0.5rem;
 }
 .color111, .commonModule .titleH2, .commonModule .commonTitleH2, .commonBottomStyle .commonBottomTitle, .dayNumber .days, .timePlaceContent .timeFonts {
@@ -1141,7 +1145,7 @@ font-size: 0.75rem;
     display: inline-block;
 }
 .airInfoContent .commonLabelStyle, .airInfoContent .blueBg, .airInfoContent .orangeBg {
-    font-size:0.45rem;
+    font-size:10px;
     -webkit-border-radius: 0.15rem;
     border-radius: 0.15rem;
     width: 0.75rem;
@@ -1154,7 +1158,7 @@ font-size: 0.75rem;
     top: 0;
 }
 .order-lab03,.order-lab04{
-    font-size:0.45rem;
+    font-size:10px;
     -webkit-border-radius: 0.15rem;
     border-radius: 0.15rem;
     width: 0.75rem;
@@ -1171,10 +1175,10 @@ font-size: 0.75rem;
     margin-bottom: 0.375rem;
 }
 .dayNumber .days {
-    font-size:0.7rem;
+    font-size:14px;
 }
 .airInfoContent .airPFonts {
-    font-size: 0.65rem;
+    font-size: 12px;
     line-height:0.8rem;
     margin: 0.375rem 0;
 }
@@ -1189,7 +1193,7 @@ font-size: 0.75rem;
     color: #11b9b7;
 }
 .timePlaceContent .timeFonts {
-    font-size: 0.85rem;
+    font-size:17px;
     margin: 0.25rem 0;
     position: relative;
 }
@@ -1218,7 +1222,7 @@ font-size: 0.75rem;
 .totalTimeContent .totalTimeFonts {
     margin: 0 0.175rem;
     color:#a1a1a1;
-    font-size:0.6rem;
+    font-size:12px;
 }
 .totalTimeContent .dottedIcon.rightDotted {
     margin-left: -0.25rem;
@@ -1232,7 +1236,7 @@ font-size: 0.75rem;
     background-color: #ff9416;
 }
 .timePlaceContent .timeFonts .addDayName {
-    font-size:0.4rem;
+    font-size:8px;
     color: #ff9416;
     position: absolute;
     top: 0;
@@ -1304,6 +1308,15 @@ font-size: 0.75rem;
 }
 .bordertop{
     border-top: 1px #dcdcdc solid;
+}
+.travelTime{
+    float:right;
+    font-size:13px;
+    color:#11b9b7;
+}
+.duringStop{
+    margin:0.25rem 0;
+    color:#11b9b7;
 }
 /** end **/
 
