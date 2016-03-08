@@ -11,7 +11,18 @@ body {
       position: relative; }
       .calendar-wrapper .calendar-header nav.calendar-nav .price-tip {
         position: absolute;
-        right: 0.5rem; }
+        right: 0.4rem;
+        top: 0;
+        color: #3fc0ae; }
+        .calendar-wrapper .calendar-header nav.calendar-nav .price-tip i {
+          width: 0.6rem;
+          height: 0.625rem;
+          display: inline-block;
+          vertical-align: middle;
+          background: url("../../mstatic/images/icon-qus.png") no-repeat;
+          -webkit-background-size: 100%;
+          background-size: 100%;
+          margin-top: -2px; }
       .calendar-wrapper .calendar-header nav.calendar-nav .tab-wrapper {
         width: 5.5rem;
         margin: 0 auto;
@@ -93,5 +104,148 @@ body {
               color: #767676; }
             .calendar-wrapper .calendar table.calTable td div.tdContWrapper .priceWrapper.menu p {
               color: #e46c14; }
+            .calendar-wrapper .calendar table.calTable td div.tdContWrapper .priceWrapper.sold-out {
+              color: #b0b0b0; }
+              .calendar-wrapper .calendar table.calTable td div.tdContWrapper .priceWrapper.sold-out .price {
+                color: #b0b0b0; }
+
+.trip-num-wrapper {
+  margin-top: 0.375rem;
+  background-color: #fff;
+  padding: 0.5rem 0.75rem;
+  font-size: 15px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2; }
+  .trip-num-wrapper .head {
+    padding: 0.375rem 0;
+    line-height: 26px; }
+    .trip-num-wrapper .head .title em {
+      color: #e46c14;
+      font-size: 12px; }
+    .trip-num-wrapper .head .menu-select {
+      margin-top: -3px; }
+
+.switch-checkbox {
+  width: 44px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 12px;
+  border: 1px solid #dfdfdf;
+  background-color: #f0f0f0;
+  vertical-align: middle;
+  margin: 0 0.25rem !important;
+  position: relative; }
+  .switch-checkbox i {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 100%;
+    left: 2px;
+    top: 1px; }
+  .switch-checkbox.on {
+    background-color: #3fc0ae;
+    border-color: #3fc0ae; }
+    .switch-checkbox.on i {
+      background-color: #fff;
+      left: 20px;
+      border-color: #fff; }
+
+.menu-block .menu-item {
+  padding: 0.625rem 0.25rem 0.625rem 0;
+  border-top: 1px solid #dfdfdf; }
+  .menu-block .menu-item .menu-name {
+    font-size: 15px !important; }
+  .menu-block .menu-item .menu-price {
+    color: #e46c14;
+    font-family: Arial; }
+  .menu-block .menu-item .menu-short-desc {
+    font-size: 12px;
+    color: #b0b0b0;
+    padding-left: 1.1rem;
+    display: none; }
+
+.passenger-type {
+  padding: 0.625rem 0.25rem 0.5rem 0;
+  border-top: 1px solid #dfdfdf; }
+  .passenger-type > .fl {
+    line-height: 20px; }
+  .passenger-type > .fr {
+    margin-top: 4px; }
+  .passenger-type .price {
+    color: #e46c14;
+    font-family: Arial; }
+
+.plus-minus-comp {
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  height: 30px; }
+  .plus-minus-comp span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    border-right: 1px solid #b0b0b0;
+    float: left; }
+    .plus-minus-comp span:last-child {
+      border-right: 0; }
+  .plus-minus-comp .minus-mark, .plus-minus-comp .plus-mark {
+    font-size: 24px;
+    line-height: 28px;
+    color: #e46c14; }
+    .plus-minus-comp .minus-mark.disabled, .plus-minus-comp .plus-mark.disabled {
+      color: #b0b0b0; }
+  .plus-minus-comp .result {
+    font-size: 15px;
+    line-height: 28px; }
+
+.total-price-block {
+  background-color: #fff;
+  margin-top: 0.375rem;
+  border-top: 1px solid #dfdfdf; }
+  .total-price-block .total-price {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0.75rem 0; }
+    .total-price-block .total-price em {
+      color: #e46c14;
+      font-family: Arial;
+      padding-left: 5px;
+      font-weight: bold; }
+  .total-price-block .next {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    background-color: #3fc0ae;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0.75rem 0; }
+
+.inst-dialog {
+  font-size: 15px;
+  color: #666;
+  line-height: 1rem; }
+  .inst-dialog .inst-dialog-content {
+    padding: 1rem 0.5rem;
+    overflow: scroll; }
+  .inst-dialog .inst-dialog-foot {
+    text-align: center;
+    padding: 0.5rem 1.5rem; }
+  .inst-dialog .btn-com {
+    width: 4.5rem;
+    height: 1.5rem;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: #fff !important;
+    display: inline-block;
+    font-weight: normal !important;
+    text-decoration: none;
+    border-radius: 0.125rem;
+    background-color: #11b9b7; }
 
 /*# sourceMappingURL=book.css.map */

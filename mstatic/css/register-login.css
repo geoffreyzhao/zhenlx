@@ -77,53 +77,41 @@
 .wrapper {
 	z-index: 1;
 	width: 100%;
-	background: #f0f0f0;
+	background: #f5f5f5;
 	overflow: initial;
 	margin-bottom: 0;
 }
 .mloginTab{
-	width:100%;
-	padding: 0.6rem 0.5rem;
-	background: #fff;
+	width:70%;
+	background: #f5f5f5;
 	text-align: center;
-	border-bottom: 1px solid #dcdcdc;
 	font-size: 0;
+	margin: 0 auto;
 }
 .mloginTab span {
 	display: inline-block;
 	width: 50%;
 	float:left;
 	margin:0;
-	padding:0;
-	height: 1.75rem;
-	line-height: 1.75rem;
+	padding:0.65rem 0;
 	text-align: center;
 	font-size: 0.8rem;
-	color: #3fc0ae;
+	color: #747474;
 }
 .mloginTab .mloginBtn {
-	border-top: 1px solid #3fc0ae;
-	border-bottom: 1px solid #3fc0ae;
-	border-left: 1px solid #3fc0ae;
-	border-top-left-radius: 0.25rem;
-	border-bottom-left-radius: 0.25rem;
 }
 .mloginTab .mregisterBtn {
-	border-top: 1px solid #3fc0ae;
-	border-bottom: 1px solid #3fc0ae;
-	border-right: 1px solid #3fc0ae;
-	border-top-right-radius: 0.25rem;
-	border-bottom-right-radius: 0.25rem;
 }
 .mloginTab .mloginBtn.current,
 .mloginTab .mregisterBtn.current{
-	background: #3fc0ae;
-	color:#fff;	
+	color: #3fc0ae;
+	border-bottom: 2px solid #3fc0ae;
 }
 .registerFrame{
 	display:none;
 	position: relative;
 	height: 100%;
+	border-top: 1px solid #dcdcdc;
 }
 .person-icon {
 	display: inline-block;
@@ -152,10 +140,13 @@
 	background-size: 100%;
 	vertical-align: middle;
 }
+.cont-block {
+	background-color: #fff;
+}
 .cont-block li {
-	padding: 0.5rem 0;
+	padding: 0.85rem 0;
 	border-bottom: 1px solid #dcdcdc;
-	background-color: #fafafa;
+	background-color: #fff;
 }
 .cont-block li.placeholder {
 	height: 0.7rem;
@@ -177,6 +168,9 @@
 }
 .cont-block .bottom-btn:active{
 	background-color:#dc8e06;
+}
+.cont-block .input-title {
+	font-size: 0.75rem;
 }
 .cont-block .person-icon {
 	margin-top: 0.25rem;
@@ -230,11 +224,15 @@
 .loginFrame{
 	display:block;
 	height: 100%;
+	border-top: 1px solid #dcdcdc;
+}
+.loginFrame ul {
+	padding: 0 0.75rem;
 }
 .loginFrame li.last {
 	border-bottom: none;
-	background-color: #f0f0f0;
-	padding-top: 0.75rem;;
+	background-color: #fff;
+	padding-top: 0.75rem;
 }
 .remindPwd {
 	font-size: 0.6rem!important;
