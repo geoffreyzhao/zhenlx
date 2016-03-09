@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm/jquery.mobile.theme-1.4.5.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/jqm.reset.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/homePage.css">
+    <link rel="stylesheet" type="text/css" href="../../mstatic/css/productList.css">
+    <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/vendor/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
+    <script type="text/javascript" src="../../mstatic/js/base/fastclick.js"></script>
+    <title>产品列表</title>
+
+    <script type="text/javascript">
+        var root = document.getElementsByTagName("html")[0],
+                w = window.innerWidth >= 640 ? 640 : window.innerWidth;
+
+        root.style.fontSize = (w / 320) * 20 + "px";
+        root.style.minHeight = window.innerHeight + "px";
+    </script>
+</head>
+<body>
+<div class="viewport" data-role="page">
+    <div class="headerBar">
+        <div class="header">
+            <a data-role="none" href="javascript:;"><span class="logo"></span></a>
+            <span class="title">欢迎来到真旅行</span>
+				<span class="acut-menu">
+	                <span class="menu-pop">
+						<a class="acut-box ui-link nomarginR" data-role="none" href="javascript:void(0);">
+                            <img class="acut-img" src="../../mstatic/images/acut-img.png">
+                        </a>
+						<!--<div class="menu-pop-container">
+							<i class="arrow-up"></i>
+							<ul>
+								<li><a data-role="none" href="javascript:;" rel="external">用户中心</a></li>
+								<li><a data-role="none" href="javascript:;" rel="external">退出账号</a></li>
+							</ul>
+						</div>-->
+                        <div class="menu-list-container">
+                            <i class="arrow-up"></i>
+                            <ul class="menu-list">
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的订单</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">我的钱包</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">个人中心</a>
+                                </li>
+                                <li>
+                                    <a data-role="none" href="javascript:;">退出</a>
+                                </li>
+                            </ul>
+                        </div>
+					</span>
+	                <!--<span class="menu-btn">
+	                	<span class="menu-img has-notice-icon"></span>
+	                	<div class="menu-list-container">
+	                		<i class="arrow-up"></i>
+		                	<ul class="menu-list">
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">产品列表</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a data-role="none" href="javascript:;">我的订单</a>
+		                	    </li>
+		                	    <li style="border-bottom:2px solid #666;">
+		                	    	<a data-role="none" href="javascript:;">我的钱包</a>
+		                	    </li>
+		                	    <li>
+		                	    	<a class="has-notice-icon" data-role="none" href="javascript:;">私信</a>
+		                	    </li>
+		                	</ul>
+	                	</div>
+	                </span>-->
+	            </span>
+        </div>
+    </div>
+    <div style="margin-bottom: 2.9rem;" class="list-cont-block">
+        <div class="prdlist-address">
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><a class="addresslist-org add-current" href="javascript:void(0);"><span id="origin-name">上海</span><span class="list-down down02"></span></a></div>
+                <div class="ui-block-b"><a class="addresslist-des" href="javascript:void(0);"><span id="dest-name">目的地</span><span class="list-down down01"></span></a></div>
+            </div>
+            <div class="address-origin">
+                <ul>
+                    <li>不限</li>
+                    <li>北京</li>
+                    <li class="add-current">上海</li>
+                    <li>广州</li>
+                    <li>深圳</li>
+                </ul>
+            </div>
+            <div class="address-destination">
+                <ul>
+                    <li>
+                        <span>不限</span>
+                        <ul class="add-second-menu">
+                            <li>&nbsp;</li>
+                        </ul>
+                    </li>
+                    <li class="add-current">
+                        <span>亚洲</span>
+                        <ul class="add-second-menu">
+                            <li>台湾</li>
+                            <li>日本</li>
+                            <li>泰国</li>
+                            <li>香港</li>
+                            <li>韩国</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>欧洲</span>
+                        <ul class="add-second-menu">
+                            <li>瑞典</li>
+                            <li>俄罗斯</li>
+                            <li>德国</li>
+                            <li>英国</li>
+                            <li>西班牙</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>非洲</span>
+                        <ul class="add-second-menu">
+                            <li>摩洛哥</li>
+                            <li>埃及</li>
+                            <li>突尼斯</li>
+                            <li>阿尔及利亚</li>
+                            <li>乌干达</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>美洲</span>
+                        <ul class="add-second-menu">
+                            <li>美国</li>
+                            <li>加拿大</li>
+                            <li>墨西哥</li>
+                            <li>阿根廷</li>
+                            <li>巴西</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="recom-path">
+            <div class="recom-content">
+                <p>上海-台湾 线路还未上线</p>
+                <p>推荐您以下路线</p>
+                <p><label class="path-img02"></label></p>
+                <span class="path-img01"></span>
+            </div>
+            <div class="path-space"></div>
+            <div class="path-til">推荐路线</div>
+        </div>
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide" href="javascript:void(0);"><img class="introduce" src="../../mstatic/images/banner1.png"/></a>
+                    <a class="swiper-slide" href="javascript:void(0);"><img class="introduce" src="../../mstatic/images/banner2.png"/></a>
+                    <a class="swiper-slide" href="javascript:void(0);"><img class="introduce" src="../../mstatic/images/banner3.png"/></a>
+                </div>
+            </div>
+        </div>
+        <div class="prdlist-box">
+            <ul>
+                <li>
+                    <div class="productL">
+                        <a class="prdlist-link" href="产品详情.html" rel="external" data-role="none">
+                            <img class="prdlist-img" src="../../mstatic/images/spot01.png">
+                        </a>
+                        <div class="productInfo">
+                            <p class="prdlist-tips">上海-福冈 5天4晚自由行</p>
+                            <p class="prdlist-intro">搭特色列车, 踏遍九州赏花名所</p>
+                        </div>
+                        <div class="proPrice">￥ <span>9999</span>起</div>
+                        <div class="imgIntro">
+                            <span class="imgTitle"><em></em>享乐<em></em></span><br/>
+                            <span class="imgIntroduce">搭人气列车, 慢味温泉时光</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section class="discussContain">
+            <div class="discuss">
+                <div class="discussTitle"><span>惊艳米其林，美食的极致诱惑</span></div>
+                <div class="discussNum"><em>233</em>人在讨论</div>
+            </div>
+        </section>
+        <div class="prdlist-box">
+            <ul>
+                <li>
+                    <div class="productL">
+                        <a class="prdlist-link" href="产品详情.html" rel="external" data-role="none">
+                            <img class="prdlist-img" src="../../mstatic/images/spot01.png">
+                        </a>
+                        <div class="productInfo">
+                            <p class="prdlist-tips">上海-福冈 5天4晚自由行</p>
+                            <p class="prdlist-intro">搭特色列车, 踏遍九州赏花名所</p>
+                        </div>
+                        <div class="proPrice">￥ <span>9999</span>起</div>
+                        <div class="imgIntro">
+                            <span class="imgTitle"><em></em>享乐<em></em></span><br/>
+                            <span class="imgIntroduce">搭人气列车, 慢味温泉时光</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="productL">
+                        <a class="prdlist-link" href="产品详情.html" rel="external" data-role="none">
+                            <img class="prdlist-img" src="../../mstatic/images/spot01.png">
+                        </a>
+                        <div class="productInfo">
+                            <p class="prdlist-tips">上海-福冈 5天4晚自由行5天4晚自由行5天4晚自由行</p>
+                            <p class="prdlist-intro">搭特色列车, 踏遍九州赏花名所</p>
+                        </div>
+                        <div class="proPrice">￥ <span>9999</span>起</div>
+                        <div class="imgIntro">
+                            <span class="imgTitle"><em></em>享乐<em></em></span><br/>
+                            <span class="imgIntroduce">搭人气列车, 慢味温泉时光</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="productL">
+                        <a class="prdlist-link" href="产品详情.html" rel="external" data-role="none">
+                            <img class="prdlist-img" src="../../mstatic/images/spot01.png">
+                        </a>
+                        <div class="productInfo">
+                            <p class="prdlist-tips">上海-福冈 5天4晚自由行</p>
+                            <p class="prdlist-intro">搭特色列车, 踏遍九州赏花名所</p>
+                        </div>
+                        <div class="proPrice">￥ <span>9999</span>起</div>
+                        <div class="imgIntro">
+                            <span class="imgTitle"><em></em>享乐<em></em></span><br/>
+                            <span class="imgIntroduce">搭人气列车, 慢味温泉时光</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-footer prd-footer">
+        <p>服务热线：400-888-666(9:00-21:00)</p>
+        <p>Copyright © 2015 真旅行 All Rights Reserved.</p>
+        <p>沪备注:123456</p>
+    </div>
+
+</div>
+
+<script>
+    $(function(){
+        FastClick.attach(document.body);
+
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay:1500,//可选选项，自动滑动
+            speed:1000,
+            loop : true,
+            /*effect : 'fade',   //fade效果
+            fade: {
+                crossFade: true,
+            }*/
+        });
+
+        $(".prdlist-tips").each(function(){
+            var til = $(this).text().trim();
+            var subtil = '';
+            var maxwidth = 15;
+            if (til.length > maxwidth) {
+                subtil = til.substring(0, maxwidth);
+                $(this).html(subtil + '...');
+            }
+        });
+
+
+        $(".addresslist-org").click(function(){
+            $(".address-destination").hide("fast");
+            $(".address-origin").slideToggle("fast");
+            $(".address-origin ul li").click(function(){
+                $(this).siblings().removeClass("add-current");
+                $(this).addClass("add-current");
+                $("#origin-name").text($(this).text());
+                $(".address-origin").slideUp("fast");
+            });
+
+        });
+        $(".addresslist-des").click(function(){
+            $(".address-origin").hide("fast");
+            $(".address-destination").slideToggle("fast");
+            var obj = $(".address-destination ul").find(".add-current");
+            obj.addClass("without-border-right");
+            obj.children(".add-second-menu").show();
+
+        });
+        $(".address-destination > ul > li").click(function(){
+            if($(this).index() == 0){
+                $("#dest-name").text($(this).children("span").text());
+                $(".address-destination").slideUp("fast");
+                $(this).siblings().removeClass("add-current");
+                $(this).siblings().removeClass("without-border-right");
+                $(this).addClass("add-current");
+                $(".add-second-menu").hide();
+                $(this).children(".add-second-menu").show();
+                return;
+            }
+            if(!$(this).hasClass("add-current")){
+                $(this).siblings().removeClass("add-current");
+                $(this).siblings().removeClass("without-border-right");
+                $(this).addClass("add-current").addClass("without-border-right");
+                $(".add-second-menu").hide();
+                $(this).children(".add-second-menu").show();
+            }
+        });
+        $(".add-second-menu > li").click(function(){
+            var spot = $(this).text().trim();
+            if(spot == "台湾"){
+                $(".recom-path").slideDown("normal");
+            }else{
+                $(".recom-path").slideUp("fast");
+            }
+            $(".add-second-menu li").removeClass("add-current");
+            $(this).addClass("add-current");
+            $("#dest-name").text($(this).text());
+            $(".address-destination").slideUp("fast");
+            return false;
+        });
+        $(".menu-pop").click(function(event){
+            var pop = $(this).prev().find(".menu-pop-container");
+            if(pop.is(":visible")){
+                pop.slideUp("fast");
+            }
+            $(this).find(".menu-list-container").toggle();
+            if($(".menu-list-container").is(":visible")){
+                $(document).click(function(){
+                    $(".menu-list-container").fadeOut("fast");
+                });
+            }
+            event.stopPropagation();
+        });
+
+    })
+</script>
+</body>
+</html>
