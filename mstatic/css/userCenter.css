@@ -77,13 +77,18 @@
 }
 .account.divBg {
     background-color: #3fc0ae;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 .innerAccount {
-    position: absolute;
-    margin: 0 auto;
     text-align: center;
-    width:100%;
-    padding:13% 0;
 }
 .innerAccount img {
     margin: 0 auto 0.5rem auto;
@@ -155,7 +160,7 @@
     border-right:1px #dcdcdc solid;
 }
 .some-traveler{
-    min-height:15.2rem;
+    /*min-height:15.2rem;*/
     padding:0 0.45rem;
     background-color:#fff;
 }
@@ -221,6 +226,7 @@
     vertical-align: middle;
     float: right;
     padding-top:0.6rem;
+    padding-right: 0.45rem;
 }
 .trl-edt01{
     vertical-align: middle;
@@ -257,11 +263,11 @@
     top:0.3rem;
 }
 .noPaddingLF .u-edt_modify {
-    /*width:0.75rem;*/
+    width:0.75rem;
     height:0.825rem;
-    padding:0 0.45rem;
+    display: inline-block;
 }
-.
+
 /** end **/
 
 /** 修改密码 -start **/
