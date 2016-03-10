@@ -654,13 +654,15 @@ input[type="radio"]:checked + .pay-check{
     color:#666;
     /*margin-bottom: 0.45rem;*/
     /*border-bottom: 1px #dcdcdc solid;*/
+    padding: 0.5rem 0;
 }
 .order-hotel-bedTil{
     width:30%;
     font-size:14px;
     line-height:1rem;
-    padding:0.6rem 0;
     display:inline-block;
+    vertical-align: top;
+    padding-top: 0.2rem;
 }
 .order-hotel-op{
     font-size:12px;
@@ -668,6 +670,11 @@ input[type="radio"]:checked + .pay-check{
     /*padding-bottom: 0.6rem;*/
     display: inline-block;
     vertical-align: middle;
+}
+.order-hotel-op .hotel-tip {
+    line-height: 16px;
+    max-width: 9.5rem;
+    color: #3fc0ae;
 }
 .order-hotel-name{
     line-height:1rem;
