@@ -1191,3 +1191,25 @@ ul.common-tab > li.rest {
 .radio.active .radioIcon {
   background-position: 0 -42px;
 }
+
+/*签证订单*/
+.editNum{
+    height: 26px;
+    width:60px;
+    min-width:60px;
+}
+.editBtn{
+    border:0!important;
+    vertical-align:top;
+}
+.editModel{
+    display:none;
+}
+.editModel input{
+    width:40px;
+    text-align:center;
+    margin:0 5px;
+}
+.editModel input:first-child{
+    width:75px;
+}
