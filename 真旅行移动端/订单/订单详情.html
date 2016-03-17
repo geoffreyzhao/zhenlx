@@ -177,7 +177,10 @@
                     </li>
                 </ul>
             </div>
-            <a class="detailBtn" href="javascript:void(0);" data-role="none">详情</a>
+            <label class="fold-oper">                
+                <a class="detailBtn" href="javascript:void(0);" data-role="none">详情</a>
+                <i class="arrow-icon"></i>
+            </label>
         </div>
     </div>
     <div class="divide-space"></div>
@@ -533,6 +536,9 @@
                         <div class="ui-block-c">
                             <span class="span-confirm">确定</span><span class="span-cancel">取消</span>
                         </div>
+                        <div class="hotelbed-tip">
+                            提示提示提示提示提示提示提示提示提示提示提示提示提示提示提示提示提示提示
+                        </div>
                     </div>
                 </div>
             </div>
@@ -722,10 +728,12 @@
                 $('.state-detail').css("height","inherit");
                 $(this).addClass("heightInherit");
                 $(this).text("收起");
+                $(this).siblings('.arrow-icon').addClass("up");
             }else{
                 $('.state-detail').css("height","2rem");
                 $(this).removeClass("heightInherit");
                 $(this).text("详情");
+                $(this).siblings('.arrow-icon').removeClass("up");
             }
         })
     });
