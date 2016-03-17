@@ -3,7 +3,7 @@
 
 body {
 	font-size: 16px;
-	font-family: "Microsoft Yahei", arial, sans-serif;
+	font-family: "Microsoft Yahei", arial, sans-serif!important;
     background-color: #e5f6fe;
 }
 

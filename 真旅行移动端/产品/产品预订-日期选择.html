@@ -139,6 +139,16 @@
                             <div class="menu-short-desc">适合单身汪的旅游</div>
                         </li>
                         <li class="menu-item">
+                            <div class="menu-info clearfix disabled">
+                                <label class="fl disabled">
+                                    <input type="radio" name="menu-type" value="0" data-role="none">
+                                    <span class="menu-name">单身出行</span>
+                                </label>
+                                <span class="menu-price fr">¥4999</span>
+                            </div>
+                            <div class="menu-short-desc">适合单身汪的旅游</div>
+                        </li>
+                        <li class="menu-item">
                             <div class="menu-info clearfix">
                                 <label class="fl">
                                     <input type="radio" name="menu-type" value="0" checked data-role="none">
@@ -432,11 +442,13 @@
                 }
             });
 
-            $(".menu-item label").click(function(){
-                $(this).parents(".menu-list").find(".menu-short-desc").hide();
-                if ($(this).find("input[type='radio']").prop("checked")) {
-                    $(this).parents(".menu-item").find(".menu-short-desc").show();
-                }
+            $("body").delegate('.menu-item label', 'click', function() {
+                if (!$(this).hasClass('disabled')) {
+                    $(this).parents(".menu-list").find(".menu-short-desc").hide();
+                    if ($(this).find("input[type='radio']").prop("checked")) {
+                        $(this).parents(".menu-item").find(".menu-short-desc").show();
+                    }
+                } 
             });
 
             $(".plus-minus-comp span").click(function(){

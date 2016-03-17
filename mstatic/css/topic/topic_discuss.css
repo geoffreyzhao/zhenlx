@@ -226,3 +226,23 @@
 .publishBtn:active{
     opacity:0.8;
 }
+.submit-tip{
+    position: fixed;
+    z-index: 11;
+    top: 2.25rem;
+    left: 0;
+    right: 0;
+    height:1.75rem;
+    display: none;
+    text-align: center;
+    font-size: 0.6rem;
+    line-height: 1.75rem;
+}
+.tips-cuccess{
+    background-color:#c2ecf3;
+    color: #3FC0AE;
+}
+.tips-fail{
+    background-color:#fff3de;
+    color: #fe7800;
+}

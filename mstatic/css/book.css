@@ -168,7 +168,8 @@ body {
     font-size: 15px !important; }
   .menu-block .menu-item .menu-price {
     color: #e46c14;
-    font-family: Arial; }
+    font-family: Arial;
+    margin-top: 0.2rem; }
   .menu-block .menu-item .menu-short-desc {
     font-size: 12px;
     color: #b0b0b0;
@@ -255,3 +256,7 @@ body {
     text-decoration: none;
     border-radius: 0.125rem;
     background-color: #11b9b7; }
+.menu-info.disabled .menu-name,
+.menu-info.disabled .menu-price {
+  color: #b0b0b0;
+}

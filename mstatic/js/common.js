@@ -22,9 +22,11 @@ $(function(){
     });
 
     //移动端点击<label>包围的input控件后面的文本触发相应的事件
-    $("label").click(function(){
-        $(this).find("input[type='radio']").prop("checked", true);
-        $(this).find("input[type='checkbox']").prop("checked", !$(this).find("input[type='checkbox']").prop("checked"));
+    $("body").delegate('label', 'click', function() {
+        if (!$(this).hasClass('disabled')) {
+            $(this).find("input[type='radio']").prop("checked", true);
+            $(this).find("input[type='checkbox']").prop("checked", !$(this).find("input[type='checkbox']").prop("checked"));
+        }
     });
 
 });

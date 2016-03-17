@@ -119,11 +119,20 @@
                         <tr class="verticalAlign">
                             <th>礼品图片</th>
                             <td>
-                                <ul class="hotelImgList clearfix">
+                                <!-- <ul class="hotelImgList clearfix">
                                     <li>
                                         <input type="file" class="upLoading">
                                     </li>
-                                </ul>
+                                </ul> -->
+                                <div class="instantUpload upload">
+                                    <form action="" method="get" accept-charset="utf-8">
+                                        <input type="file" class="instantUploadFile" name="picture">
+                                        <span class="instantUploadStyle changeImgWidth">
+                                            <span class="instantUploadIcon"></span>
+                                            <span class="upload-text">立即上传</span>
+                                        </span>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                         <tr>

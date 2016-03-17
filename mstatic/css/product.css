@@ -402,10 +402,13 @@ a:focus {
 .judge-cnt {
   margin: 0.75rem 0 0.75rem 2rem;
   font-size: 11px;
-  line-height: 1rem;
+  line-height: 18px;
   color: #616161;
   word-wrap: break-word;
   word-break: break-all; }
+  .judge-txt {
+    padding-top: 0.2rem;
+  }
 
 .judge-top {
   position: relative; }
@@ -422,8 +425,9 @@ a:focus {
     color: #9f9f9f; }
 
 .evaluateDetail {
-  height: 270px;
-  overflow: hidden; }
+  // height: 270px;
+  // overflow: hidden;
+   }
 
 .bottomFixed {
   font-size: 13px;
@@ -470,7 +474,7 @@ a:focus {
 .judge-txt {
   font-family: Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei !important;
   font-size: 13px !important;
-  line-height: 1.1rem !important; }
+  line-height: 18px !important; }
 
 .destinationCont {
   font-size: 11px;
@@ -483,4 +487,9 @@ a:focus {
 .duringStop {
     margin: 0.25rem 0;
     color: #11b9b7;}
+.swiper-container {
+    width: 16rem;
+    height: 10rem;
+    margin: 0 auto;
+}
 /*  product  End  */
