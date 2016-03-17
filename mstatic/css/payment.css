@@ -1008,100 +1008,100 @@ label input[type="radio"]:checked{
 .block-link:active{
     background-color:#f7f7f7;
 }
-.submit-dlg{
-    width:12.5rem;
-    padding:0.5rem;
-    line-height:1.2rem;
-    background-color: #fff;
-}
-.submit-dlg .input-box{
-    position: relative;
-}
-.submit-dlg .ui-grid-a{
-    padding:0.4rem 0;
-    border-bottom: 1px #ccc solid;
-}
-.submit-dlg .ui-grid-a:last-child{
-    border-bottom: 0;
-}
-.submit-dlg .ui-grid-a .ui-block-a{
-    width:15%;
-    text-align: center;
-}
-.submit-dlg .ui-grid-a .ui-block-b{
-    width:85%;
-}
-.verify-block{
-    padding-top:0.3rem;
-    padding-bottom: 0.3rem;
-    padding-left:0.5rem;
-    border-bottom: 1px #ccc solid;
-}
-.input-txt{
-    width:4.5rem;
-    margin-right:0.2rem;
-    padding-top:0.2rem;
-    font-size:14px;
-    color:#333;
-    vertical-align: middle;
-}
-.btn-vld{
-    display: inline-block;
-    background-color:#fff;
-    float: right;
-    color:#11b9b7 !important;
-    font-weight: normal !important;
-    padding:0.2rem 0.3rem;
-    font-size:14px;
-    border:1px #11b9b7 solid;
-    -webkit-border-radius: 0.125rem;
-    -moz-border-radius: 0.125rem;
-    border-radius: 0.125rem;
-    text-decoration: none;
-}
-.btn-vld:active{
-    background-color:#f7f7f7;
-}
-.person-icon {
-    display: inline-block;
-    width: 0.85rem;
-    height: 0.975rem;
-    background: url(../images/telicon.png) no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    vertical-align: middle;
-}
-.lock-icon {
-    display: inline-block;
-    width: 0.85rem;
-    height: 0.95rem;
-    background: url(../images/passwordicon.png) no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    vertical-align: middle;
-}
-.dlg-foot{
-    margin-top: 0.8rem;
-    text-align: center;
-}
-.submit-dlg-confirm{
-    width:8rem;
-    height:1.8rem;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.8rem;
-    color:#fff !important;
-    display: inline-block;
-    font-weight: normal !important;
-    text-decoration: none;
-    -webkit-border-radius: 0.0125rem;
-    -moz-border-radius: 0.0125rem;
-    border-radius: 0.125rem;
-    background-color:#ffa200;
-}
-.submit-dlg-confirm:active{
-    background-color:#dc8e06;
-}
+// .submit-dlg{
+//     width:12.5rem;
+//     padding:0.5rem;
+//     line-height:1.2rem;
+//     background-color: #fff;
+// }
+// .submit-dlg .input-box{
+//     position: relative;
+// }
+// .submit-dlg .ui-grid-a{
+//     padding:0.4rem 0;
+//     border-bottom: 1px #ccc solid;
+// }
+// .submit-dlg .ui-grid-a:last-child{
+//     border-bottom: 0;
+// }
+// .submit-dlg .ui-grid-a .ui-block-a{
+//     width:15%;
+//     text-align: center;
+// }
+// .submit-dlg .ui-grid-a .ui-block-b{
+//     width:85%;
+// }
+// .verify-block{
+//     padding-top:0.3rem;
+//     padding-bottom: 0.3rem;
+//     padding-left:0.5rem;
+//     border-bottom: 1px #ccc solid;
+// }
+// .input-txt{
+//     width:4.5rem;
+//     margin-right:0.2rem;
+//     padding-top:0.2rem;
+//     font-size:14px;
+//     color:#333;
+//     vertical-align: middle;
+// }
+// .btn-vld{
+//     display: inline-block;
+//     background-color:#fff;
+//     float: right;
+//     color:#11b9b7 !important;
+//     font-weight: normal !important;
+//     padding:0.2rem 0.3rem;
+//     font-size:14px;
+//     border:1px #11b9b7 solid;
+//     -webkit-border-radius: 0.125rem;
+//     -moz-border-radius: 0.125rem;
+//     border-radius: 0.125rem;
+//     text-decoration: none;
+// }
+// .btn-vld:active{
+//     background-color:#f7f7f7;
+// }
+// .person-icon {
+//     display: inline-block;
+//     width: 0.85rem;
+//     height: 0.975rem;
+//     background: url(../images/telicon.png) no-repeat;
+//     -webkit-background-size: 100%;
+//     background-size: 100%;
+//     vertical-align: middle;
+// }
+// .lock-icon {
+//     display: inline-block;
+//     width: 0.85rem;
+//     height: 0.95rem;
+//     background: url(../images/passwordicon.png) no-repeat;
+//     -webkit-background-size: 100%;
+//     background-size: 100%;
+//     vertical-align: middle;
+// }
+// .dlg-foot{
+//     margin-top: 0.8rem;
+//     text-align: center;
+// }
+// .submit-dlg-confirm{
+//     width:8rem;
+//     height:1.8rem;
+//     text-align: center;
+//     font-size: 14px;
+//     line-height: 1.8rem;
+//     color:#fff !important;
+//     display: inline-block;
+//     font-weight: normal !important;
+//     text-decoration: none;
+//     -webkit-border-radius: 0.0125rem;
+//     -moz-border-radius: 0.0125rem;
+//     border-radius: 0.125rem;
+//     background-color:#ffa200;
+// }
+// .submit-dlg-confirm:active{
+//     background-color:#dc8e06;
+// }
 .regist-dlg-common{
     width:5.5rem;
     height:1.8rem;
