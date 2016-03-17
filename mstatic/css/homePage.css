@@ -855,26 +855,26 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-.yellow-star{
-    width:0.775rem;
-    height:0.775rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right:0.3rem;
-    background: url("../../mstatic/images/yellow-star.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-}
-.half-yellow-star{
-    width:0.775rem;
-    height:0.775rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right:0.3rem;
-    background: url("../../mstatic/images/half-yellow-star.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-}
+// .yellow-star{
+//     width:0.775rem;
+//     height:0.775rem;
+//     display: inline-block;
+//     vertical-align: middle;
+//     margin-right:0.3rem;
+//     background: url("../../mstatic/images/yellow-star.png") no-repeat;
+//     -webkit-background-size: 100%;
+//     background-size: 100%;
+// }
+// .half-yellow-star{
+//     width:0.775rem;
+//     height:0.775rem;
+//     display: inline-block;
+//     vertical-align: middle;
+//     margin-right:0.3rem;
+//     background: url("../../mstatic/images/half-yellow-star.png") no-repeat;
+//     -webkit-background-size: 100%;
+//     background-size: 100%;
+// }
 .travel-one > div{
     margin-top:0.1rem;
 }

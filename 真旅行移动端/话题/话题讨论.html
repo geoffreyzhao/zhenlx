@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../mstatic/css/common.css">
     <link rel="stylesheet" type="text/css" href="../../mstatic/css/topic/topic_discuss.css">
     <script type="text/javascript" src="../../mstatic/js/base/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script> -->
+    <script type="text/javascript" src="../../mstatic/js/jqm/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="../../mstatic/js/iscroll/iscroll.js"></script>
     <script type="text/javascript" src="../../mstatic/js/common.js"></script>
     <script type="text/javascript" src="../../mstatic/js/vendor/jquery.lazyload.js"></script>
@@ -84,7 +84,6 @@
         <div class="header">
             <a data-role="none" href="javascript:;"><span class="logo"></span></a>
             <span class="title">话题讨论</span>
-            <a href="#maodian">maodian</a>
 				<span class="acut-menu">
 	                <span class="menu-pop">
 						<a class="acut-box ui-link nomarginR" data-role="none" href="javascript:void(0);">
@@ -334,8 +333,9 @@ $(function(){
 
     window.onload = function() {
         // setTimeout(function(){
-           window.scrollTo(0, $("#test").offset().top - $(".headerBar").outerHeight()); 
+           // window.scrollTo(0, $("#test").offset().top - $(".headerBar").outerHeight()); 
        // }, 30);
+       $.mobile.silentScroll($("#test").offset().top - $(".headerBar").outerHeight());
     }
 });
 

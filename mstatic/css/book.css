@@ -12,7 +12,7 @@ body {
       .calendar-wrapper .calendar-header nav.calendar-nav .price-tip {
         position: absolute;
         right: 0.4rem;
-        top: 0;
+        top: 0.1rem;
         color: #3fc0ae; }
         .calendar-wrapper .calendar-header nav.calendar-nav .price-tip i {
           width: 0.6rem;
@@ -47,11 +47,19 @@ body {
         border-color: #cbcbcb; }
       .calendar-wrapper .calendar-header nav.calendar-nav .nav-btn .prev {
         position: absolute;
-        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+           -moz-transform: rotate(-135deg);
+            -ms-transform: rotate(-135deg);
+             -o-transform: rotate(-135deg);
+                transform: rotate(-135deg);
         left: 4.5rem; }
       .calendar-wrapper .calendar-header nav.calendar-nav .nav-btn .next {
         position: absolute;
-        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+           -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+             -o-transform: rotate(45deg);
+                transform: rotate(45deg);
         right: 4.5rem; }
   .calendar-wrapper .calendar {
     margin: 0 auto; }
@@ -247,5 +255,3 @@ body {
     text-decoration: none;
     border-radius: 0.125rem;
     background-color: #11b9b7; }
-
-/*# sourceMappingURL=book.css.map */

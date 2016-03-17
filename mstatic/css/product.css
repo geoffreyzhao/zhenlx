@@ -274,7 +274,18 @@ a:focus {
   -webkit-background-size: 320px 170px;
   background-size: 320px 170px;
   margin-right: 0.25rem;
-  vertical-align: middle; }
+  vertical-align: middle; 
+  display: inline-block;}
+
+.half-yellow-star {
+  width: 10px;
+  height: 10px;
+  background: url("../../mstatic/images/half-yellow-star.png") no-repeat 0 0;
+  -webkit-background-size: 10px 10px;
+  background-size: 10px 10px;
+  margin-right: 0.25rem;
+  vertical-align: middle; 
+  display: inline-block;}
 
 .hotelProductImg img {
   width: 100%;
@@ -469,6 +480,7 @@ a:focus {
   padding-bottom: 0.5rem;
   border-bottom: 1px dashed #3fc0ae;
 }
+.duringStop {
+    margin: 0.25rem 0;
+    color: #11b9b7;}
 /*  product  End  */
-
-/*# sourceMappingURL=product.css.map */
