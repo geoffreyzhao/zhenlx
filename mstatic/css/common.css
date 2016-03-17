@@ -157,9 +157,10 @@ input[type="checkbox"] + span {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	margin-left: -1rem;
 }
 .header .acut-menu {
-    margin-right: 0.5rem;
+    margin-right: 0.1rem;
     display: inline-block;
     float: right;
 }

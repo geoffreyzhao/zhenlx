@@ -465,6 +465,10 @@ a:focus {
   font-size: 11px;
   margin: 0.25rem 0; }
 
+.hotel-item.hasborder {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #3fc0ae;
+}
 /*  product  End  */
 
 /*# sourceMappingURL=product.css.map */
