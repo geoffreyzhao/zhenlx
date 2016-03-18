@@ -1647,3 +1647,33 @@ input[type="text"].tagInput {
     background-position: -139px 0;
     cursor: pointer;
 }
+
+/* 新增签证 资源配置 S */
+.configurationDiv {
+
+}
+.configurationDiv h3 {
+    padding:0 0 10px 9px;
+    border-bottom:1px solid #e2e2e2;
+}
+.configurationDiv .edit, .configurationDiv .cancel {
+    display: none;
+}
+.sectionDiv {
+    position: relative;
+    margin-bottom: 10px;
+}
+.addRoundButton {
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+}
+.addRoundButton a {
+    color: #45c8dc;
+    text-decoration: none;
+    margin-right: 16px;
+}
+.addRoundButton a:hover {
+    text-decoration: underline;
+}
+/* 新增签证 资源配置 E */
