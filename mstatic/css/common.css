@@ -154,7 +154,7 @@ input[type="checkbox"] + span {
 	margin:0 auto;
 	display: inline-block;
 	color:#010101;
-	font-size:14px;
+	font-size:16px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
