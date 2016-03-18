@@ -10,55 +10,6 @@
 .main-contain{
     background-color:#fff;
 }
-.headerBar {
-    height: 2.25rem;
-}
-.header {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2.25rem;
-    line-height:2.25rem;
-    text-align: center;
-    border-bottom:1px solid #3fc0ae;
-    background: #fff;
-}
-.header .back{
-    width: 1.625rem;
-    display: inline-block;
-    float: left;
-}
-.header .back:active {
-    background-color: #f0f0f0;
-    height: 99.9%;
-}
-.header .back-arrow {
-    width:0.375rem;
-    height:0.625rem;
-    background:url(../images/arrowL.png) no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -0.25rem;
-}
-.header .back-border {
-    display: inline-block;
-    height: 0.875rem;
-    border-right:1px solid #3fc0ae;
-    float: right;
-    margin-top: 0.675rem;
-}
-.header .title {
-    display: inline-block;
-    position: absolute;
-    left: 2rem;
-    right: 2rem;
-    color:#3fc0ae;
-    font-size:0.75rem;
-}
 .clearFlt{
     clear: both;
 }
@@ -149,7 +100,7 @@
 .edt-info{
     width:100%;
     color:#11b9b7 !important;
-    font-size: 0.8rem;
+    font-size: 13px;
     line-height: 2.05rem;
     display: inline-block;
 }
@@ -165,7 +116,7 @@
     background-color:#fff;
 }
 .some-traveler > p{
-    font-size: 0.8rem;
+    font-size: 13px;
     color:#11b9b7;
     padding:0.6rem 0;
     margin:0;

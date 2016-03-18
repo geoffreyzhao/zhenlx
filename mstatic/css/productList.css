@@ -26,6 +26,7 @@
 .prdlist-link {
     width: 100%;
     height: 100%;
+    display: inline-block;
 }
 .prdlist-tips{
     position:inherit;
@@ -51,7 +52,7 @@
     overflow:hidden;
 }
 .productInfo{
-    width:70%;
+    width:9.5rem;
     float:left;
     padding:0.5rem 0.375rem;
     line-height:0.9rem;
@@ -93,8 +94,12 @@
     height:0.4rem;
     border:2px solid #fff;
     display:inline-block;
-    transform:rotate(45deg);
     margin:0 0.2rem;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 .discussContain{
     padding-bottom: 0.4rem ;

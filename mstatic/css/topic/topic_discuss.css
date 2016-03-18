@@ -109,6 +109,14 @@
     width:100%;
     height:100%;
 }
+.avatar .default{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../../images/avatar-default.png) no-repeat;
+    background-size: 30px 30px;
+    margin: 0;
+}
 .rightDetails{
     width:10.5rem;
     float:left;
@@ -245,4 +253,35 @@
 .tips-fail{
     background-color:#fff3de;
     color: #fe7800;
+}
+.switch-checkbox {
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    border: 1px solid #dfdfdf;
+    background-color: #f0f0f0;
+    vertical-align: middle;
+    margin: 0 0.25rem !important;
+    position: relative;
+}
+.switch-checkbox i {
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 100%;
+    left: 2px;
+    top: 1px;
+}
+.switch-checkbox.on {
+    background-color: #3fc0ae;
+    border-color: #3fc0ae;
+}
+.switch-checkbox.on i {
+    background-color: #fff;
+    left: 20px;
+    border-color: #fff;
 }

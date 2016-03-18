@@ -61,6 +61,7 @@ button,input,select,textarea {font-family: inherit;font-size: 100%;	outline: non
 button,input{-webkit-appearance: none; border-radius: 0;}
 button[disabled],html input[disabled] {cursor: default;}
 *:focus, input:focus {outline:none !important;}
+pre {font-family: Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei !important;}
 
 /*common css*/
 .clearfix:after{display:block;content:'';clear:both;visibility:hidden;}
@@ -153,7 +154,7 @@ input[type="checkbox"] + span {
 	margin:0 auto;
 	display: inline-block;
 	color:#010101;
-	font-size:0.75rem;
+	font-size:14px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -704,6 +705,12 @@ input[type="checkbox"] + span {
     padding:0.5rem;
     line-height:1.2rem;
     background-color: #fff;
+}
+.submit-dlg-title {
+	text-align: center;
+	font-size: 14px;
+	border-bottom: none !important;
+	margin-bottom: 0.2rem;
 }
 .submit-dlg .input-box{
     position: relative;

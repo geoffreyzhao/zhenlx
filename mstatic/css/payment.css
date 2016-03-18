@@ -897,6 +897,7 @@ label input[type="radio"]:checked{
     right: 0;
     font-size:12px;
     background-color:#fff;
+    border-top: 1px solid #ccc;
 }
 .order-sub .ui-grid-b .ui-block-a{
     width:42%;
@@ -983,19 +984,21 @@ label input[type="radio"]:checked{
     background-color:#fff;
 }
 .order-foot .ui-grid-b .ui-block-a{
-    width:40%;
+    width:42%;
     color:#999;
     padding-left:0.5rem;
     overflow: hidden;
+    line-height: 2.2rem;
 }
 .order-foot .ui-grid-b .ui-block-a p{
     line-height:1.1rem;
     white-space: nowrap;
+    display: inline-block;
 }
 .order-foot .ui-grid-b .ui-block-b{
-    width:30%;
+    width:28%;
     color:#666;
-    line-height: 2.5rem;
+    line-height: 2.2rem;
     text-align: center;
 }
 .order-foot .ui-grid-b .ui-block-c{

@@ -1354,13 +1354,13 @@ ul.common-tab > li.rest {
 }
 
 .calTable .tdCont .priceCover .nianIcon {
-    position: absolute;
-    display: inline-block;
-    width: 23px;
-    height: 23px;
-    background: url(../../images/client/nian.png) no-repeat;
-    left: 25px;
-    top: 7px;
+    // position: absolute;
+    // display: inline-block;
+    // width: 23px;
+    // height: 23px;
+    // background: url(../../images/client/nian.png) no-repeat;
+    // left: 25px;
+    // top: 7px;
 }
 
 .calTable .tdCont .onsale .leftNum {

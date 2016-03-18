@@ -143,7 +143,8 @@
             <div class="publish_discuss">
                 <textarea class="disCont" placeholder="我想说" data-role="none"></textarea>
                 <div class="publish">
-                    <em class="anonymous">匿名</em>
+                    <!-- <em class="anonymous">匿名</em> -->
+                    匿名<label class="switch-checkbox"><i></i></label>
                     <a class="publishBtn" href="javascript:void(0);" data-role="none">发 表</a>
                 </div>
             </div>
@@ -163,6 +164,18 @@
                 $(this).addClass("no_anonymous");
             }
         });
+
+        $(".switch-checkbox").click(function(){
+               $(this).toggleClass("on");
+
+                if ($(this).hasClass("on")) {
+                    $(".trip-num-block").hide();
+                    $(".menu-block").show();
+                } else {
+                    $(".trip-num-block").show();
+                    $(".menu-block").hide();
+                }
+            });
 
         $(".menu-pop").click(function(event){
             var pop = $(this).prev().find(".menu-pop-container");

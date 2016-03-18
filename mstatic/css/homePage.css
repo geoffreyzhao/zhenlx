@@ -1260,15 +1260,15 @@
     position: relative;
 }
 .menu-row .ui-grid-c .nianIcon {
-    display: inline-block;
-    width: 0.95rem;
-    height: 0.95rem;
-    background: url(../images/nian.png) no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
+    // display: inline-block;
+    // width: 0.95rem;
+    // height: 0.95rem;
+    // background: url(../images/nian.png) no-repeat;
+    // -webkit-background-size: 100%;
+    // background-size: 100%;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
 }
 .menu-row-focus{
     border:3px #3fc0ae solid !important;
