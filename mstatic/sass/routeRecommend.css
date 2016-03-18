@@ -193,6 +193,17 @@ a:focus {
 .unfoldContent li.adjustPaddingL {
   display: none; }
 
+.bottom-oper-bar {
+  width: 100%;
+  color: #fff!important;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  font-size: 14px;
+  background-color: #11b9b7;
+  display: block;
+}
 /* route recommend E */
 
-/*# sourceMappingURL=routeRecommend.css.map */
