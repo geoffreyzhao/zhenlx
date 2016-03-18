@@ -736,7 +736,8 @@ label input[type="radio"]:checked{
     text-align: right;
     /*padding-right:0.5rem;*/
 }
-.travel-lab{
+.travel-lab,
+.contactor-lab{
     font-size:14px;
     text-align: center;
     padding:0.2rem 0.2rem;
@@ -749,7 +750,8 @@ label input[type="radio"]:checked{
     margin-right:1px;
     display:inline-block;
 }
-.travel-lab:active{
+.travel-lab:active,
+.contactor-lab:active{
     background-color:#38aa9a;
     color:#fff!important;
 }
@@ -933,8 +935,8 @@ label input[type="radio"]:checked{
     display: inline-block;
     background-color: #e7e7e7;
     color:#666 !important;
-    font-size: 0.85rem;
-    line-height:2.5rem;
+    font-size: 14px;
+    line-height:2.2rem;
     text-align: center;
     font-weight: normal !important;
 }

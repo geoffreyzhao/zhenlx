@@ -956,8 +956,8 @@ textarea.inputUserTextarea {
     position: relative;
 }
 .upLoadProductImg .uploadImg {
-    width: 300px;
-    height: 240px;
+    width: 240px;
+    height: 180px;
 }
 .commonStyle.row04 .uploadImg{
     width: 222px;
@@ -1236,6 +1236,8 @@ form .showUpload{
     top: 0;
     background-color: #000;
     opacity: 0.6;
+    width: 240px;
+    height: 180px;
 }
 .upLoadProductImg .showUpload input {
     position: absolute;
@@ -1244,7 +1246,7 @@ form .showUpload{
     width: 240px;
     height: 180px;
 }
-.upLoadProductImg .showUpload .uploading {
+.upLoadProductImg .showUpload .againUploadFonts {
     color: #fff;
     position: absolute;
     top: 80px;
